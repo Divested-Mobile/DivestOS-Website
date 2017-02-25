@@ -1579,12 +1579,12 @@
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e44c65;
+		color: #8BC34A;
 		text-decoration: none;
 	}
 
 		a:hover {
-			color: #e44c65 !important;
+			color: #8BC34A !important;
 			border-bottom-color: transparent;
 		}
 
@@ -2133,7 +2133,7 @@
 	}
 
 		header.major:after {
-			background: #e44c65;
+			background: #8BC34A;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
@@ -2196,7 +2196,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #e44c65;
+			border-color: #8BC34A;
 		}
 
 	.select-wrapper {
@@ -2313,7 +2313,7 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #e44c65;
+			border-color: #8BC34A;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2734,8 +2734,8 @@
 		input[type="button"]:active,
 		.button:hover,
 		.button:active {
-			box-shadow: inset 0 0 0 1px #e44c65;
-			color: #e44c65 !important;
+			box-shadow: inset 0 0 0 1px #8BC34A;
+			color: #8BC34A !important;
 		}
 
 		input[type="submit"]:active,
@@ -2779,7 +2779,7 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #e44c65;
+			background-color: #8BC34A;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -3020,7 +3020,7 @@
 		}
 
 		.spotlight.style1 .content {
-			border-color: #e44c65;
+			border-color: #8BC34A;
 		}
 
 		.spotlight.style2 .content {
@@ -3082,7 +3082,7 @@
 	}
 
 		.wrapper.style2 {
-			background: #e44c65;
+			background: #8BC34A;
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
@@ -3117,7 +3117,7 @@
 			.wrapper.style2 input[type="button"].special,
 			.wrapper.style2 .button.special {
 				background-color: #ffffff;
-				color: #e44c65 !important;
+				color: #8BC34A !important;
 			}
 
 				.wrapper.style2 input[type="submit"].special:hover, .wrapper.style2 input[type="submit"].special:active,
@@ -3221,7 +3221,7 @@
 			}
 
 			.dropotron > li.active > a, .dropotron > li.active > span {
-				color: #e44c65;
+				color: #8BC34A;
 			}
 
 		.dropotron.level-0 {
@@ -3311,7 +3311,7 @@
 						}
 
 					#header nav ul li.active > a, #header nav ul li.active > span {
-						color: #e44c65;
+						color: #8BC34A;
 					}
 
 					#header nav ul li > ul {
@@ -3371,7 +3371,7 @@
 			max-width: 95%;
 			padding: 6em;
 			position: relative;
-			text-align: right;
+			text-align: center;
 			vertical-align: middle;
 			z-index: 1;
 		}
@@ -3790,7 +3790,7 @@
 					}
 
 					#titleBar .toggle:before {
-						background: #e44c65;
+						background: #8BC34A;
 						color: rgba(255, 255, 255, 0.5);
 						content: '\f0c9';
 						display: block;
