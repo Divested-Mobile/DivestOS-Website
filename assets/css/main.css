@@ -1579,12 +1579,12 @@
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #8BC34A;
+		color: #FF5722;
 		text-decoration: none;
 	}
 
 		a:hover {
-			color: #8BC34A !important;
+			color: #FF5722 !important;
 			border-bottom-color: transparent;
 		}
 
@@ -2133,7 +2133,7 @@
 	}
 
 		header.major:after {
-			background: #8BC34A;
+			background: #FF5722;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
@@ -2196,7 +2196,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #8BC34A;
+			border-color: #FF5722;
 		}
 
 	.select-wrapper {
@@ -2313,7 +2313,7 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #8BC34A;
+			border-color: #FF5722;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2734,8 +2734,8 @@
 		input[type="button"]:active,
 		.button:hover,
 		.button:active {
-			box-shadow: inset 0 0 0 1px #8BC34A;
-			color: #8BC34A !important;
+			box-shadow: inset 0 0 0 1px #FF5722;
+			color: #FF5722 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2779,7 +2779,7 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #8BC34A;
+			background-color: #FF5722;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -3020,7 +3020,7 @@
 		}
 
 		.spotlight.style1 .content {
-			border-color: #8BC34A;
+			border-color: #FF5722;
 		}
 
 		.spotlight.style2 .content {
@@ -3082,7 +3082,7 @@
 	}
 
 		.wrapper.style2 {
-			background: #8BC34A;
+			background: #FF5722;
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
@@ -3117,7 +3117,7 @@
 			.wrapper.style2 input[type="button"].special,
 			.wrapper.style2 .button.special {
 				background-color: #ffffff;
-				color: #8BC34A !important;
+				color: #FF5722 !important;
 			}
 
 				.wrapper.style2 input[type="submit"].special:hover, .wrapper.style2 input[type="submit"].special:active,
@@ -3221,7 +3221,7 @@
 			}
 
 			.dropotron > li.active > a, .dropotron > li.active > span {
-				color: #8BC34A;
+				color: #FF5722;
 			}
 
 		.dropotron.level-0 {
@@ -3311,7 +3311,7 @@
 						}
 
 					#header nav ul li.active > a, #header nav ul li.active > span {
-						color: #8BC34A;
+						color: #FF5722;
 					}
 
 					#header nav ul li > ul {
@@ -3790,7 +3790,7 @@
 					}
 
 					#titleBar .toggle:before {
-						background: #8BC34A;
+						background: #FF5722;
 						color: rgba(255, 255, 255, 0.5);
 						content: '\f0c9';
 						display: block;
