@@ -5,7 +5,6 @@
 		print("<ul>");
 		$rootdir = "devices/" . $device;
 		$files = scandir($rootdir, 1);
-
 		foreach ($files as $file) {
 			if(strlen($file) > 2) {
 				print("<li><a href=\"" . $rootdir . "/" . $file . "\" target=\"_blank\">" . $file . "</a></li>");
@@ -17,11 +16,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Deblobbed Android</title>
+		<title>Devices - Deblobbed Android</title>
 		<meta charset="utf-8" />
 		<meta name="theme-color" content="#272833">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
+		<link href="/images/favicon.png" rel="shortcut icon">
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
