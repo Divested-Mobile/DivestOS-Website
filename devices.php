@@ -46,7 +46,6 @@
 					<header class="major">
 						<h2>Device Downloads</h2>
 						<p>Releases are typically done on a weekly schedule unless there are major or security related changes. Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided <b>without</b> warranty and <b>can</b> damage your device. We are <b>not</b> liable for <b>any</b> damage done by using these, and you yourself will be at fault. Remember to <b>always</b> make a nandroid backup before flashing.</p>
-						<p><a href="#" target="_blank" rel="nofollow noopener noreferrer">Complete Changelog</a></p>
 					</header>
 
 					<section id="content">
@@ -54,10 +53,8 @@
 						<?php getDeviceDownloads("bacon"); ?>
 						<?php getDeviceDownloads("bullhead"); ?>
 						<?php getDeviceDownloads("clark"); ?>
-						<?php getDeviceDownloads("flo"); ?>
 						<?php getDeviceDownloads("hammerhead"); ?>
 						<?php getDeviceDownloads("mako"); ?>
-						<?php getDeviceDownloads("marlin"); ?>
 						<?php getDeviceDownloads("osprey"); ?>
 						<?php getDeviceDownloads("shamu"); ?>
 						<?php getDeviceDownloads("thor"); ?>
