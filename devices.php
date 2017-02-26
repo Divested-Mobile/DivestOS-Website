@@ -3,7 +3,7 @@
 		print("<h3>" . $device . "</h3>");
 		print("<p><a href=\"http://wiki.lineageos.org/" . $device . "_info.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"http://wiki.lineageos.org/" . $device . "_install.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 		print("<ul>");
-		$rootdir = "downloads/" . $device;
+		$rootdir = "devices/" . $device;
 		$files = scandir($rootdir, 1);
 
 		foreach ($files as $file) {
@@ -49,19 +49,19 @@
 					</header>
 
 					<section id="content">
-						<section id="content">
-							<?php getDeviceDownloads("angler"); ?>
-							<?php getDeviceDownloads("bacon"); ?>
-							<?php getDeviceDownloads("bullhead"); ?>
-							<?php getDeviceDownloads("clark"); ?>
-							<?php getDeviceDownloads("hammerhead"); ?>
-							<?php getDeviceDownloads("mako"); ?>
-							<?php getDeviceDownloads("osprey"); ?>
-							<?php getDeviceDownloads("shamu"); ?>
-							<?php getDeviceDownloads("thor"); ?>
-							<?php getDeviceDownloads("vs985"); ?>
-							<?php getDeviceDownloads("Z00T"); ?>
-						</section>
+						<?php getDeviceDownloads("angler"); ?>
+						<?php getDeviceDownloads("bacon"); ?>
+						<?php getDeviceDownloads("bullhead"); ?>
+						<?php getDeviceDownloads("clark"); ?>
+						<?php getDeviceDownloads("flo"); ?>
+						<?php getDeviceDownloads("hammerhead"); ?>
+						<?php getDeviceDownloads("mako"); ?>
+						<?php getDeviceDownloads("marlin"); ?>
+						<?php getDeviceDownloads("osprey"); ?>
+						<?php getDeviceDownloads("shamu"); ?>
+						<?php getDeviceDownloads("thor"); ?>
+						<?php getDeviceDownloads("vs985"); ?>
+						<?php getDeviceDownloads("Z00T"); ?>
 					</section>
 				</div>
 			</div>
