@@ -1,5 +1,17 @@
 <?php
+	$loc = 0;
 	function getDeviceDownloads($device) {
+		$four = "";
+		$six = "";
+		$twelve = "$";
+		if($GLOBALS["loc"]=='1') {
+			$six = "$";
+			$GLOBALS["loc"] = 2;
+		} else if ($GLOBALS["loc"]=='2') {
+			$four = "$";
+			$GLOBALS["loc"] = 0;
+		}
+		print("<section class=\"4u" . $four . " 6u" . $six . "(medium) 12u" . $twelve . "(xsmall)\">");
 		print("<h3>" . $device . "</h3>");
 		print("<p><a href=\"http://wiki.lineageos.org/" . $device . "_info.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"http://wiki.lineageos.org/" . $device . "_install.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 		print("<ul>");
@@ -11,6 +23,7 @@
 			}
 		}
 		print("</ul>");
+		print("</section>");
 	}
 ?>
 <!DOCTYPE html>
@@ -49,17 +62,21 @@
 					</header>
 
 					<section id="content">
-						<?php getDeviceDownloads("angler"); ?>
-						<?php getDeviceDownloads("bacon"); ?>
-						<?php getDeviceDownloads("bullhead"); ?>
-						<?php getDeviceDownloads("clark"); ?>
-						<?php getDeviceDownloads("hammerhead"); ?>
-						<?php getDeviceDownloads("mako"); ?>
-						<?php getDeviceDownloads("osprey"); ?>
-						<?php getDeviceDownloads("shamu"); ?>
-						<?php getDeviceDownloads("thor"); ?>
-						<?php getDeviceDownloads("vs985"); ?>
-						<?php getDeviceDownloads("Z00T"); ?>
+						<div class="box alt">
+							<div class="row uniform">
+								<?php getDeviceDownloads("angler"); ?>
+								<?php getDeviceDownloads("bacon"); ?>
+								<?php getDeviceDownloads("bullhead"); ?>
+								<?php getDeviceDownloads("clark"); ?>
+								<?php getDeviceDownloads("hammerhead"); ?>
+								<?php getDeviceDownloads("mako"); ?>
+								<?php getDeviceDownloads("osprey"); ?>
+								<?php getDeviceDownloads("shamu"); ?>
+								<?php getDeviceDownloads("thor"); ?>
+								<?php getDeviceDownloads("vs985"); ?>
+								<?php getDeviceDownloads("Z00T"); ?>
+							</div>
+						</div>
 					</section>
 				</div>
 			</div>
