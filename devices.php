@@ -52,8 +52,14 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="apps.html" >Apps</a></li>
-						<li><a href="devices.php" class="active">Devices</a></li>
+						<li>
+							<a href="#">Get Started</a>
+							<ul>
+								<li><a href="devices.php">Device Downloads</a></li>
+								<li><a href="apps.html">Recommended Apps</a></li>
+								<li><a href="tweaks.html">Tweaks</a></li>
+							</ul>
+						</li>
 						<li><a href="#" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
 					</ul>
 				</nav>
