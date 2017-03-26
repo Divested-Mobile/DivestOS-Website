@@ -63,7 +63,24 @@
 				<div class="container">
 					<header class="major">
 						<h2>Device Downloads</h2>
-						<p>Releases are typically done on a weekly schedule unless there are major or security related changes. Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided <b>without</b> warranty and <b>can</b> damage your device. We are <b>not</b> liable for <b>any</b> damage done by using these, and you yourself will be at fault. Remember to <b>always</b> make a nandroid backup before flashing.</p>
+						<p>Releases are typically done on a weekly schedule unless there are major or security related changes.</p>
+						<div class="box alt">
+							<div class="row uniform">
+								<section class="4u 6u(medium) 12u$(xsmall)">
+									<h3>Disclaimer</h3>
+									<p>Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided <b>without</b> warranty and <b>can</b> damage your device. We are <b>not</b> liable for <b>any</b> damage done by using these, and you yourself will be at fault. Remember to <b>always</b> make a nandroid backup before flashing.</p>
+								</section>
+								<section class="4u 6u$(medium) 12u$(xsmall)">
+									<h3>Root</h3>
+									<p>These are 'user' builds, root is not included. It is not recommended to flash any other zips alongside our builds. Root frameworks and runtime modification frameworks (like Xposed) will <b>severly decrease</b> the security of your device.</p>
+
+								</section>
+								<section class="4u$ 6u(medium) 12u$(xsmall)">
+									<h3>Signed Builds</h3>
+									<p>All builds published are signed with our signing keys (CN: Coverage), unlike other ROMs that simply use test-keys. This means that when switching to or away from our builds, you will be prompted to wipe /data.</p>
+								</section>
+							</div>
+						</div>
 					</header>
 
 					<section id="content">
