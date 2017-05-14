@@ -17,7 +17,7 @@
 			if(strlen($device) > 2) {
 				print("<section class=\"4u" . $four . " 6u" . $six . "(medium) 12u" . $twelve . "(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
-				print("<p><a href=\"http://wiki.lineageos.org/" . $device . "_info.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"http://wiki.lineageos.org/" . $device . "_install.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
+				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 				print("<ul>");
 				$files = scandir($rootdir . $device, 0);
 				foreach ($files as $file) {
