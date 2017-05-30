@@ -1,14 +1,12 @@
 {
- "id": null,
- "result": [
+  "response": [
     {
-    "url": "https://spotco.us/de/DEVICE/IMAGE",
-    "timestamp": "TIME",
-    "api_level": "23",
-    "md5sum": "HASH",
-    "filename": "IMAGE",
-    "channel": "NIGHTLY",
-    },
-  ],
- "error": null
+      "filename": "IMAGE",
+      "url": "https://spotco.us/de/DEVICE/IMAGE",
+      "md5sum": "HASH",
+      "datetime": TIME,
+      "romtype": "dsc"
+    }
+  ]
 }
+
