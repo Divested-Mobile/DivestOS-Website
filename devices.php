@@ -21,7 +21,7 @@
 				print("<ul>");
 				$files = scandir($rootdir . $device, 0);
 				foreach ($files as $file) {
-					if(strlen($file) > 2) {
+					if(strlen($file) > 30) {
 						print("<li><a href=\"" . $rootdir . $device . "/" . $file . "\" target=\"_blank\">" . $file . "</a></li>");
 					}
 				}
