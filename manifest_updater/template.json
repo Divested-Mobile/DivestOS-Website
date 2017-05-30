@@ -1,0 +1,14 @@
+{
+ "id": null,
+ "result": [
+    {
+    "url": "https://spotco.us/de/DEVICE/IMAGE",
+    "timestamp": "TIME",
+    "api_level": "23",
+    "md5sum": "HASH",
+    "filename": "IMAGE",
+    "channel": "NIGHTLY",
+    },
+  ],
+ "error": null
+}
