@@ -37,7 +37,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Devices - Deblobbed Android</title>
+		<title>Devices - DivestOS</title>
 		<meta charset="utf-8" />
 		<meta name="theme-color" content="#272833">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,7 +51,7 @@
 	<body>
 		<div id="page-wrapper">
 			<header id="header">
-				<h1 id="logo"><a href="index.html">Deblobbed Android</a></h1>
+				<h1 id="logo"><a href="index.html">DivestOS</a></h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -119,6 +119,6 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
 		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
-		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DeblobbedAndroid&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
+		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DivestOS&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
 	</body>
 </html>
