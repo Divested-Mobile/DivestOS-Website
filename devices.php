@@ -87,7 +87,7 @@
 								</section>
 								<section class="4u$ 6u(medium) 12u$(xsmall)">
 									<h3>Signed Builds</h3>
-									<p>All builds published are signed with our signing keys (CN: Coverage), unlike other ROMs that simply use test-keys. This means that when switching to or away from our builds, you will be prompted to wipe /data.</p>
+									<p>All builds published are signed with our signing keys (CN: Spot Communications), unlike other ROMs that simply use test-keys. This means that when switching to or away from our builds, you will be prompted to wipe /data.</p>
 								</section>
 							</div>
 						</div>
