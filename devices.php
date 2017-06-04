@@ -111,13 +111,13 @@
 		</div>
 
 		<script src="assets/js/jquery.min.js"></script>
-		<script async src="assets/js/jquery.scrolly.min.js"></script>
-		<script async src="assets/js/jquery.dropotron.min.js"></script>
-		<script async src="assets/js/jquery.scrollex.min.js"></script>
-		<script async src="assets/js/skel.min.js"></script>
-		<script async src="assets/js/util.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script async src="assets/js/main.js"></script>
+		<script src="assets/js/main.js"></script>
 		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
 		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DeblobbedAndroid&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
 	</body>
