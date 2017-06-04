@@ -64,6 +64,7 @@
 							</ul>
 						</li>
 						<li><a href="#" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
+						<li><a href="about.html">About</a></li>
 					</ul>
 				</nav>
 			</header>
