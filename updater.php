@@ -1,4 +1,5 @@
 <?php
+//Copyright (c) 2017 Spot Communications, Inc.
 
 $device = noHTML($_GET["device"]);
 if(!$device == '') {
@@ -13,8 +14,7 @@ if(!$device == '') {
 				print("\n\t\t\t\"filename\": \"" . $image . "\",");
 				print("\n\t\t\t\"url\": \"https://spotco.us/de/devices/" . $device . "/" . $image . "\",");
 				print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
-				//print("\n\t\t\t\"md5sum\": \"" . $md5 . "\"");
-				print("\n\t\t\t\"romtype\": \"dsc\"");
+				print("\n\t\t\t\"romtype\": \"dos\"");
 				print("\n\t\t},");
 			}
 		}
