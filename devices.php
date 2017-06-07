@@ -27,7 +27,7 @@
 				}
 				print("</ul>");
 				if(sizeof($files) == 2) {
-					print("<br><br><br><br><br><br>");
+					print("<br><br><br><br>");
 				}
 				print("</section>");
 			}
