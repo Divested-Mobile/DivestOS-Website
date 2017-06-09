@@ -164,11 +164,13 @@
 								$(".perk").each(function(){
 									this.text = "Download";
 									this.href = $(this).attr("value");
+									$(this).addClass("fa-download").removeClass("fa-lock");
 								});
 							} else {
 								$(".perk").each(function(){
 									this.text = "Purchase";
 									this.href = "javascript:checkout()";
+									$(this).addClass("fa-lock").removeClass("fa-download");
 								});
 							}
 						});
