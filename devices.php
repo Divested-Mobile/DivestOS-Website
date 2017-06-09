@@ -24,7 +24,7 @@
 						if(contains($file, "md5sum")) {
 							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button small icon fa-download\">MD5</a>");
 						} else {
-							print("<a href=\"#\" value=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special small icon fa-download\" id=\"btnDownload\">Loading...</a><br><br>");
+							print("<a href=\"#\" value=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special small icon fa-download perk\">Loading...</a><br><br>");
 						}
 					}
 				}
@@ -136,6 +136,7 @@
 								req.onreadystatechange = function() {
 									if (req.readyState == 4 && req.status == 200) {
 										setTimeout(function() {
+											$("#radPriceTwo").attr("disabled", true);
 											$("#radPriceFree").click();
 										}, 500);
 									}
@@ -160,18 +161,19 @@
 					$(document).ready(function() {
 						$('input[type=radio][name="radPrice"]').on('change', function(){
 							if(this.id=='radPriceFree') {
-								$("#btnDownload").text("Download");
-								$("#btnDownload").each(function(){
+								$(".perk").each(function(){
+									this.text = "Download";
 									this.href = $(this).attr("value");
 								});
 							} else {
-								$("#btnDownload").text("Purchase");
-								$("#btnDownload").each(function(){
+								$(".perk").each(function(){
+									this.text = "Purchase";
 									this.href = "javascript:checkout()";
 								});
 							}
 						});
-						$("#radPriceTwo").click();
+						//$("#radPriceTwo").click();
+						$("#radPriceFree").click();
 					});
 					</script>
 				</div>
