@@ -18,21 +18,29 @@
 				print("<section class=\"4u" . $four . " 6u" . $six . "(medium) 12u" . $twelve . "(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
-				print("<ul>");
 				$files = scandir($rootdir . $device, 0);
 				foreach ($files as $file) {
 					if(strlen($file) > 30) {
-						print("<li><a href=\"download.html?file=" . $rootdir . $device . "/" . $file . "\">" . $file . "</a></li>");
+						if(contains($file, "md5sum")) {
+							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button small icon fa-download\">MD5</a>");
+						} else {
+							print("<a href=\"#\" value=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special small icon fa-download\" id=\"btnDownload\">Loading...</a><br><br>");
+						}
 					}
 				}
-				print("</ul>");
 				if(sizeof($files) == 2) {
-					print("<br><br><br><br>");
+					print("<h4>Currently Unavailable</h4><br><br><br>");
 				}
 				print("</section>");
 			}
 		}
 	}
+
+	//Credit: https://stackoverflow.com/a/7112596
+	function contains($haystack, $needle) {
+		return strpos($haystack, $needle) !== false;
+	}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +55,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="assets/js/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -95,11 +104,89 @@
 
 					<section id="content">
 						<div class="box alt">
-							<div class="row uniform">
+							<div class="row uniform" style="text-align: center;">
+								<section class="4u 6u(medium) 12u$(xsmall)">
+								</section>
+								<section class="4u 6u$(medium) 12u$(xsmall)">
+									<h3>Name Your Price</h3>
+									<input type="radio" id="radPriceFree" name="radPrice">
+									<label for="radPriceFree">Free</label>
+									<input type="radio" id="radPriceTwo" name="radPrice" value=200>
+									<label for="radPriceTwo">$2</label>
+									<input type="radio" id="radPriceFive" name="radPrice" value="500">
+									<label for="radPriceFive">$5</label>
+								</section>
+								<section class="4u$ 6u(medium) 12u$(xsmall)">
+								</section>
 								<?php getDeviceDownloads(); ?>
 							</div>
 						</div>
 					</section>
+
+					<script src="https://checkout.stripe.com/checkout.js"></script>
+					<script type="text/javascript">
+					//Credit: https://stackoverflow.com/a/5448595
+					function findGetParameter(parameterName) {
+					    var result = null,
+						tmp = [];
+					    location.search
+					    .substr(1)
+						.split("&")
+						.forEach(function (item) {
+						tmp = item.split("=");
+						if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+					    });
+					    return result;
+					}
+					function checkout(price) {
+						var handler = StripeCheckout.configure({
+							key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+							image: 'images/favicon.png',
+							locale: 'auto',
+							token: function(token) {
+								var req = new XMLHttpRequest();
+								req.onreadystatechange = function() {
+									if (req.readyState == 4 && req.status == 200) {
+										setTimeout(function() {
+											$("#radPriceFree").click();
+										}, 500);
+									}
+								};
+								req.open("POST", "processor.php", true);
+								req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+								req.send("token=" + token);
+							}
+						});
+
+						handler.open({
+							name: 'DivestOS',
+							description: 'Disto Download',
+							zipCode: true,
+							amount: price
+						});
+
+						window.addEventListener('popstate', function() {
+							handler.close();
+						});
+					}
+					$(document).ready(function() {
+						$('input[type=radio][name="radPrice"]').on('change', function(){
+							if(this.id=='radPriceFree') {
+								$("#btnDownload").text("Download");
+								$("#btnDownload").each(function(){
+									this.href = $(this).attr("value");
+								});
+							} else {
+								$("#btnDownload").text("Purchase");
+								$("#btnDownload").each(function(price){
+									this.href = "javascript:checkout(" + price + ")";
+									//this.href = "javascript:checkout(" + price + ", \"" + $(this).attr("value") + "\")";
+								},[this.value]);
+							}
+						});
+						$("#radPriceTwo").click();
+					});
+					</script>
 				</div>
 			</div>
 
@@ -110,7 +197,6 @@
 			</footer>
 		</div>
 
-		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
