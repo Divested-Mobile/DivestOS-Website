@@ -143,6 +143,8 @@
 							key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
 							image: 'images/favicon.png',
 							locale: 'auto',
+							bitcoin: true,
+							allowRememberMe: false,
 							token: function(token) {
 								var req = new XMLHttpRequest();
 								req.onreadystatechange = function() {
@@ -160,7 +162,7 @@
 
 						handler.open({
 							name: 'DivestOS',
-							description: 'Disto Download',
+							description: 'Distro Download',
 							zipCode: true,
 							amount: price
 						});
