@@ -22,7 +22,7 @@
 				$files = scandir($rootdir . $device, 0);
 				foreach ($files as $file) {
 					if(strlen($file) > 30) {
-						print("<li><a href=\"" . $rootdir . $device . "/" . $file . "\" target=\"_blank\">" . $file . "</a></li>");
+						print("<li><a href=\"download.html?file=" . $rootdir . $device . "/" . $file . "\">" . $file . "</a></li>");
 					}
 				}
 				print("</ul>");

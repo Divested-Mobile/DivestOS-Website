@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Download - DivestOS</title>
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#272833">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
+		<link href="images/favicon.png" rel="shortcut icon">
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="assets/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<header id="header">
+				<h1 id="logo"><a href="index.html">DivestOS</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Get Started</a>
+							<ul>
+								<li><a href="devices.php">Device Downloads</a></li>
+								<li><a href="apps.html">Recommended Apps</a></li>
+								<li><a href="tweaks.html">Tweaks</a></li>
+							</ul>
+						</li>
+						<li><a href="https://gitea.divestos.xyz/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Download</h2>
+						<p>You're almost there...</p>
+					</header>
+
+					<section id="content">
+						<div class="box alt">
+							<div class="row uniform" style="text-align: center;">
+								<section class="4u 6u(medium) 12u$(xsmall)">
+								</section>
+								<section class="4u 6u$(medium) 12u$(xsmall)">
+									<h3>Name Your Price</h3>
+									<input type="radio" id="radPriceFree" name="radPrice">
+									<label for="radPriceFree">Free</label>
+									<input type="radio" id="radPriceTwo" name="radPrice" value=200>
+									<label for="radPriceTwo">$2</label>
+									<input type="radio" id="radPriceFive" name="radPrice" value="500">
+									<label for="radPriceFive">$5</label>
+									<a href="" class="button special icon fa-download" id="btnDownload">Loading</a>
+								</section>
+								<section class="4u$ 6u(medium) 12u$(xsmall)">
+								</section>
+								<script src="https://checkout.stripe.com/checkout.js"></script>
+								<script type="text/javascript">
+								//Credit: https://stackoverflow.com/a/5448595
+								function findGetParameter(parameterName) {
+								    var result = null,
+									tmp = [];
+								    location.search
+								    .substr(1)
+									.split("&")
+									.forEach(function (item) {
+									tmp = item.split("=");
+									if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+								    });
+								    return result;
+								}
+								function processPayment(token) {
+									var req = new XMLHttpRequest();
+									req.onreadystatechange = function() {
+										if (req.readyState == 4 && req.status == 200) {
+											setTimeout(function() {
+												window.open(findGetParameter("file"), "_blank");
+												$("#btnDownload").prop("disabled", true);
+												$("#btnDownload").text("Thanks for your support!");
+											}, 500);
+										}
+									};
+									req.open("POST", "processor.php", true);
+									req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+									req.send("token=" + token);
+								}
+								function checkout(price) {
+									var handler = StripeCheckout.configure({
+										key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+										image: 'images/favicon.png',
+										locale: 'auto',
+										token: function(token) {
+											processPayment(token);
+										}
+									});
+
+									handler.open({
+										name: 'DivestOS',
+										description: 'Disto Download',
+										zipCode: true,
+										amount: price
+									});
+									e.preventDefault();
+
+									window.addEventListener('popstate', function() {
+										handler.close();
+									});
+								}
+								$(document).ready(function() {
+									$('input[type=radio][name="radPrice"]').on('change', function(){
+										if(this.id=='radPriceFree') {
+											$("#btnDownload").text("Download");
+											$("#btnDownload").attr("href", findGetParameter("file"));
+										} else {
+											$("#btnDownload").text("Purchase");
+											$("#btnDownload").attr("href", "javascript:checkout(" + this.value + ")");
+										}
+									});
+									$("#radPriceTwo").click();
+								});
+								</script>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+			<footer id="footer">
+				<ul class="copyright">
+					<li>Spot Communications, Inc. &copy; 2017 || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
+				</ul>
+			</footer>
+		</div>
+
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
+		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DivestOS&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
+	</body>
+</html>
