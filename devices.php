@@ -24,7 +24,7 @@
 						if(contains($file, "md5sum")) {
 							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button small icon fa-download\">MD5</a>");
 						} else {
-							print("<a href=\"#\" value=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special small icon fa-download perk\">Loading...</a><br><br>");
+							print("<a href=\"#\" value=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\">Loading...</a><br><br>");
 						}
 					}
 				}
@@ -111,8 +111,9 @@
 									<h3>Name Your Price</h3>
 									<input type="radio" id="radPriceFree" name="radPrice">
 									<label for="radPriceFree">Free</label>
-									<input type="radio" id="radPriceTwo" name="radPrice" value=200>
-									<label for="radPriceTwo">$2</label>
+									<input type="radio" id="radPriceThree" name="radPrice" value=200>
+									<label for="radPriceThree">$3</label>
+									<p id="lblThanks" hidden>Thank you for your contribution!</p>
 								</section>
 								<section class="4u$ 6u(medium) 12u$(xsmall)">
 								</section>
@@ -136,7 +137,8 @@
 								req.onreadystatechange = function() {
 									if (req.readyState == 4 && req.status == 200) {
 										setTimeout(function() {
-											$("#radPriceTwo").attr("disabled", true);
+											$("#lblThanks").attr("hidden", false);
+											$("#radPriceThree").attr("disabled", true);
 											$("#radPriceFree").click();
 										}, 500);
 									}
@@ -151,7 +153,7 @@
 							name: 'Spot Communications, Inc.',
 							description: 'DivestOS Distro Download',
 							zipCode: true,
-							amount: 200
+							amount: 300
 						});
 
 						window.addEventListener('popstate', function() {
@@ -174,8 +176,8 @@
 								});
 							}
 						});
-						//$("#radPriceTwo").click();
-						$("#radPriceFree").click();
+						$("#radPriceThree").click();
+						//$("#radPriceFree").click();
 					});
 					</script>
 				</div>
