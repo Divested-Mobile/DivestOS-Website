@@ -127,7 +127,7 @@
 					function checkout() {
 						var handler = StripeCheckout.configure({
 							key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
-							image: 'images/favicon.png',
+							image: 'images/spotco.png',
 							locale: 'auto',
 							bitcoin: true,
 							allowRememberMe: false,
@@ -148,8 +148,8 @@
 						});
 
 						handler.open({
-							name: 'DivestOS',
-							description: 'Distro Download',
+							name: 'Spot Communications, Inc.',
+							description: 'DivestOS Distro Download',
 							zipCode: true,
 							amount: 200
 						});
