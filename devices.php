@@ -113,8 +113,6 @@
 									<label for="radPriceFree">Free</label>
 									<input type="radio" id="radPriceTwo" name="radPrice" value=200>
 									<label for="radPriceTwo">$2</label>
-									<input type="radio" id="radPriceFive" name="radPrice" value="500">
-									<label for="radPriceFive">$5</label>
 								</section>
 								<section class="4u$ 6u(medium) 12u$(xsmall)">
 								</section>
@@ -126,19 +124,7 @@
 					<script src="https://checkout.stripe.com/checkout.js"></script>
 					<script type="text/javascript">
 					//Credit: https://stackoverflow.com/a/5448595
-					function findGetParameter(parameterName) {
-					    var result = null,
-						tmp = [];
-					    location.search
-					    .substr(1)
-						.split("&")
-						.forEach(function (item) {
-						tmp = item.split("=");
-						if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-					    });
-					    return result;
-					}
-					function checkout(price) {
+					function checkout() {
 						var handler = StripeCheckout.configure({
 							key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
 							image: 'images/favicon.png',
@@ -156,7 +142,7 @@
 								};
 								req.open("POST", "processor.php", true);
 								req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-								req.send("token=" + token);
+								req.send("token=" + token.id);
 							}
 						});
 
@@ -164,7 +150,7 @@
 							name: 'DivestOS',
 							description: 'Distro Download',
 							zipCode: true,
-							amount: price
+							amount: 200
 						});
 
 						window.addEventListener('popstate', function() {
@@ -180,10 +166,9 @@
 								});
 							} else {
 								$("#btnDownload").text("Purchase");
-								$("#btnDownload").each(function(price){
-									this.href = "javascript:checkout(" + price + ")";
-									//this.href = "javascript:checkout(" + price + ", \"" + $(this).attr("value") + "\")";
-								},[this.value]);
+								$("#btnDownload").each(function(){
+									this.href = "javascript:checkout()";
+								});
 							}
 						});
 						$("#radPriceTwo").click();
