@@ -2741,7 +2741,7 @@
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
-			background-color: rgba(228, 76, 101, 0.15);
+			background-color: rgba(33, 92, 255, 0.15);
 		}
 
 		input[type="submit"].icon:before,
@@ -2787,14 +2787,14 @@
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			.button.special:hover {
-				background-color: #e76278;
+				background-color: #215cff;
 			}
 
 			input[type="submit"].special:active,
 			input[type="reset"].special:active,
 			input[type="button"].special:active,
 			.button.special:active {
-				background-color: #e13652;
+				background-color: #215cff;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -3023,11 +3023,11 @@
 		}
 
 		.spotlight.style2 .content {
-			border-color: #5480f1;
+			border-color: #ffc321;
 		}
 
 		.spotlight.style3 .content {
-			border-color: #39c088;
+			border-color: #cbff21;
 		}
 
 		.spotlight.inactive .content {
