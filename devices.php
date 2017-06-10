@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	$_SESSION['csrfToken'] = bin2hex(random_bytes(32));
+
 	$loc = 0;
 	function getDeviceDownloads() {
 		$four = "";
@@ -145,7 +148,7 @@
 								};
 								req.open("POST", "processor.php", true);
 								req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-								req.send("token=" + token.id);
+								req.send("token=" + token.id + "&ct=<?php print($_SESSION['csrfToken']); ?>");
 							}
 						});
 

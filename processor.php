@@ -5,8 +5,10 @@ require_once('stripe/init.php');
 \Stripe\Stripe::setApiKey("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 
 $token = noHTML($_POST['stripeToken']);
+$ct = noHTML($_POST["ct"]);
 
-if($token != '') {
+if($token != '' && $_SESSION['csrfToken'] == $ct) {
+	$_SESSION['csrfToken'] = bin2hex(random_bytes(32));
 	try {
 		$charge = \Stripe\Charge::create(array(
 			"amount" => 200,
