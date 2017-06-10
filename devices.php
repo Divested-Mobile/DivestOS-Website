@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$_SESSION['csrfToken'] = bin2hex(random_bytes(32));
+	$_SESSION['csrfToken'] = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
 
 	$loc = 0;
 	function getDeviceDownloads() {

@@ -8,7 +8,7 @@ $token = noHTML($_POST['stripeToken']);
 $ct = noHTML($_POST["ct"]);
 
 if($token != '' && $_SESSION['csrfToken'] == $ct) {
-	$_SESSION['csrfToken'] = bin2hex(random_bytes(32));
+	$_SESSION['csrfToken'] = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
 	try {
 		$charge = \Stripe\Charge::create(array(
 			"amount" => 200,
