@@ -43,11 +43,6 @@
 				);
 			});
 
-		// Scrolly links.
-			$('.scrolly').scrolly({
-				speed: 2000
-			});
-
 		// Dropdowns.
 			$('#nav > ul').dropotron({
 				alignment: 'right',
@@ -202,21 +197,6 @@
 
 									}
 
-								// Add scrollex.
-									$this.scrollex({
-										mode:		mode,
-										top:		top,
-										bottom:		bottom,
-										initialize:	function(t) { $this.addClass('inactive'); },
-										terminate:	function(t) { $this.removeClass('inactive'); },
-										enter:		function(t) { $this.removeClass('inactive'); },
-
-										// Uncomment the line below to "rewind" when this spotlight scrolls out of view.
-
-										//leave:	function(t) { $this.addClass('inactive'); },
-
-									});
-
 							}
 
 					};
@@ -225,14 +205,6 @@
 
 						// Clear spotlight's background.
 							$this.css('background-image', '');
-
-						// Disable transitions (if supported).
-							if (skel.canUse('transition')) {
-
-								// Remove scrollex.
-									$this.unscrollex();
-
-							}
 
 					};
 
@@ -255,34 +227,6 @@
 
 					var $this = $(this),
 						on, off;
-
-					on = function() {
-
-						if (skel.canUse('transition')) {
-
-							$this.scrollex({
-								top:		250,
-								bottom:		0,
-								initialize:	function(t) { $this.addClass('inactive'); },
-								terminate:	function(t) { $this.removeClass('inactive'); },
-								enter:		function(t) { $this.removeClass('inactive'); },
-
-								// Uncomment the line below to "rewind" when this wrapper scrolls out of view.
-
-								//leave:	function(t) { $this.addClass('inactive'); },
-
-							});
-
-						}
-
-					};
-
-					off = function() {
-
-						if (skel.canUse('transition'))
-							$this.unscrollex();
-
-					};
 
 					skel.on('change', function() {
 
