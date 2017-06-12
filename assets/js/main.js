@@ -11,10 +11,6 @@
 		var	$window = $(window),
 			$body = $('body');
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-
 		// Dropdowns.
 			$('#nav > ul').dropotron({
 				alignment: 'right',
