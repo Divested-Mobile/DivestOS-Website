@@ -12,7 +12,7 @@ if(!$device == '') {
 			if(!contains($image, "md5sum") && strlen($image) > 30) {
 				print("\n\t\t{");
 				print("\n\t\t\t\"filename\": \"" . $image . "\",");
-				print("\n\t\t\t\"url\": \"https://spotco.us/de/devices/" . $device . "/" . $image . "\",");
+				print("\n\t\t\t\"url\": \"https://divestos.xyz/devices/" . $device . "/" . $image . "\",");
 				print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
 				print("\n\t\t\t\"romtype\": \"dos\"");
 				print("\n\t\t},");
