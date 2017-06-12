@@ -192,7 +192,6 @@
 		</div>
 
 		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
