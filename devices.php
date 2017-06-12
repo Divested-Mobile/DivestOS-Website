@@ -27,7 +27,7 @@
 						if(contains($file, "md5sum")) {
 							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button small icon fa-download\">MD5</a>");
 						} else {
-							print("<a href=\"#\" value=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\">Loading...</a><br><br>");
+							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" value=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\">Download</a><br><br>");
 						}
 					}
 				}
@@ -112,7 +112,7 @@
 									<h3>Name Your Price</h3>
 									<input type="radio" id="radPriceFree" name="radPrice">
 									<label for="radPriceFree">Free</label>
-									<input type="radio" id="radPriceThree" name="radPrice" value=200>
+									<input type="radio" id="radPriceThree" name="radPrice">
 									<label for="radPriceThree">$3</label>
 									<p id="lblThanks" hidden>Thank you for your contribution!</p>
 								</section>
@@ -177,8 +177,8 @@
 								});
 							}
 						});
-						$("#radPriceThree").click();
-						//$("#radPriceFree").click();
+						//$("#radPriceThree").click();
+						$("#radPriceFree").click();
 					});
 					</script>
 				</div>
