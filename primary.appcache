@@ -1,0 +1,19 @@
+CACHE MANIFEST
+#Last Updated: 06/13/2017
+#Rev 1
+/assets/css/font-awesome.min.css
+/assets/css/main.css
+/assets/css/images/arrow.svg
+/assets/js/jquery.dropotron.min.js
+/assets/js/jquery.min.js
+/assets/js/main.js
+/assets/js/util.js
+/images/device.png
+/images/favicon.png
+about.html
+apps.html
+broken.html
+index.html
+tweaks.html
+NETWORK:
+*
