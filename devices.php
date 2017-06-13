@@ -86,16 +86,16 @@
 						<p>Releases are typically done on a weekly schedule unless there are major or security related changes.</p>
 						<div class="box alt">
 							<div class="row uniform">
-								<section class="4u 6u(medium) 12u$(xsmall)">
+								<section class="4u 12u(medium) 12u$(xsmall)">
 									<h3>Disclaimer</h3>
 									<p>Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided <b>without</b> warranty and <b>can</b> damage your device. We are <b>not</b> liable for <b>any</b> damage done by using these, and you yourself will be at fault. Remember to <b>always</b> make a nandroid backup before flashing.</p>
 								</section>
-								<section class="4u 6u$(medium) 12u$(xsmall)">
+								<section class="4u 12u$(medium) 12u$(xsmall)">
 									<h3>Root</h3>
 									<p>These are 'user' builds, root is not included. It is not recommended to flash any other zips alongside our builds. Root frameworks and runtime modification frameworks (like Xposed) will <b>severly decrease</b> the security of your device.</p>
 
 								</section>
-								<section class="4u$ 6u(medium) 12u$(xsmall)">
+								<section class="4u$ 12u(medium) 12u$(xsmall)">
 									<h3>Signed Builds</h3>
 									<p>All builds published are signed with our signing keys (CN: Spot Communications), unlike other ROMs that simply use test-keys. This means that when switching to or away from our builds, you will be prompted to wipe /data.</p>
 								</section>
@@ -104,20 +104,16 @@
 					</header>
 
 					<section id="content">
+						<div style="text-align:center;">
+							<h3>Name Your Price</h3>
+							<input type="radio" id="radPriceFree" name="radPrice">
+							<label for="radPriceFree">Free</label>
+							<input type="radio" id="radPriceThree" name="radPrice">
+							<label for="radPriceThree">$3</label>
+							<p id="lblThanks" hidden>Thank you for your contribution!</p>
+						</div>
 						<div class="box alt">
-							<div class="row uniform" style="text-align: center;">
-								<section class="4u 6u(medium) 12u$(xsmall)">
-								</section>
-								<section class="4u 6u$(medium) 12u$(xsmall)">
-									<h3>Name Your Price</h3>
-									<input type="radio" id="radPriceFree" name="radPrice">
-									<label for="radPriceFree">Free</label>
-									<input type="radio" id="radPriceThree" name="radPrice">
-									<label for="radPriceThree">$3</label>
-									<p id="lblThanks" hidden>Thank you for your contribution!</p>
-								</section>
-								<section class="4u$ 6u(medium) 12u$(xsmall)">
-								</section>
+							<div class="row uniform" style="text-align:center;">
 								<?php getDeviceDownloads(); ?>
 							</div>
 						</div>
@@ -125,7 +121,6 @@
 
 					<script src="https://checkout.stripe.com/checkout.js"></script>
 					<script type="text/javascript">
-					//Credit: https://stackoverflow.com/a/5448595
 					function checkout() {
 						var handler = StripeCheckout.configure({
 							key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
