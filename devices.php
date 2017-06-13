@@ -2,23 +2,12 @@
 	session_start();
 	$_SESSION['csrfToken'] = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
 
-	$loc = 0;
 	function getDeviceDownloads() {
-		$four = "";
-		$six = "";
-		$twelve = "$";
-		if($GLOBALS["loc"]=='1') {
-			$six = "$";
-			$GLOBALS["loc"] = 2;
-		} else if ($GLOBALS["loc"]=='2') {
-			$four = "$";
-			$GLOBALS["loc"] = 0;
-		}
 		$rootdir = "devices/";
 		$devices = scandir($rootdir, 0);
 		foreach ($devices as $device) {
 			if(strlen($device) > 2) {
-				print("<section class=\"4u" . $four . " 6u" . $six . "(medium) 12u" . $twelve . "(xsmall)\">");
+				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 				$files = scandir($rootdir . $device, 0);
