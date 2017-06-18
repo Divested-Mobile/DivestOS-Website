@@ -57,9 +57,9 @@
 							<a href="#">Get Started</a>
 							<ul>
 								<li><a href="devices.php">Device Downloads</a></li>
-								<li><a href="broken.html">Functionality Tables</a></li>
 								<li><a href="apps.html">Recommended Apps</a></li>
-								<li><a href="tips.html">Tips</a></li>
+								<li><a href="tweaks.html">Tweaks</a></li>
+								<li><a href="broken.html">Functionality Tables</a></li>
 							</ul>
 						</li>
 						<li><a href="https://gitea.divestos.xyz/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
