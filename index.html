@@ -20,7 +20,7 @@
 							<a href="#">Get Started</a>
 							<ul>
 								<li><a href="devices.php">Device Downloads</a></li>
-								<li><a href="apps.html">Recommended Apps</a></li>
+								<li><a href="apps.php">Recommended Apps</a></li>
 								<li><a href="tweaks.html">Tweaks</a></li>
 								<li><a href="broken.html">Functionality Tables</a></li>
 							</ul>
