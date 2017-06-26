@@ -16,7 +16,7 @@
 						if(contains($file, "md5sum")) {
 							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button small icon fa-download\">MD5</a>");
 						} else {
-							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" value=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\">Download</a><br><br>");
+							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\">Download</a><br><br>");
 						}
 					}
 				}
@@ -93,78 +93,12 @@
 					</header>
 
 					<section id="content">
-						<div style="text-align:center;">
-							<h3>Name Your Price</h3>
-							<input type="radio" id="radPriceFree" name="radPrice">
-							<label for="radPriceFree">Free</label>
-							<input type="radio" id="radPriceThree" name="radPrice">
-							<label for="radPriceThree">$3</label>
-							<p id="lblThanks" hidden>Thank you for your contribution!</p>
-						</div>
 						<div class="box alt">
 							<div class="row uniform" style="text-align:center;">
 								<?php getDeviceDownloads(); ?>
 							</div>
 						</div>
 					</section>
-
-					<script src="https://checkout.stripe.com/checkout.js"></script>
-					<script type="text/javascript">
-					function checkout() {
-						var handler = StripeCheckout.configure({
-							key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
-							image: 'images/spotco.png',
-							locale: 'auto',
-							bitcoin: true,
-							allowRememberMe: false,
-							token: function(token) {
-								var req = new XMLHttpRequest();
-								req.onreadystatechange = function() {
-									if (req.readyState == 4 && req.status == 200) {
-										setTimeout(function() {
-											$("#lblThanks").attr("hidden", false);
-											$("#radPriceThree").attr("disabled", true);
-											$("#radPriceFree").click();
-										}, 500);
-									}
-								};
-								req.open("POST", "processor.php", true);
-								req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-								req.send("token=" + token.id + "&ct=<?php print($_SESSION['csrfToken']); ?>");
-							}
-						});
-
-						handler.open({
-							name: 'Spot Communications, Inc.',
-							description: 'DivestOS Distro Download',
-							zipCode: true,
-							amount: 300
-						});
-
-						window.addEventListener('popstate', function() {
-							handler.close();
-						});
-					}
-					$(document).ready(function() {
-						$('input[type=radio][name="radPrice"]').on('change', function(){
-							if(this.id=='radPriceFree') {
-								$(".perk").each(function(){
-									this.text = "Download";
-									this.href = $(this).attr("value");
-									$(this).addClass("fa-download").removeClass("fa-lock");
-								});
-							} else {
-								$(".perk").each(function(){
-									this.text = "Purchase";
-									this.href = "javascript:checkout()";
-									$(this).addClass("fa-lock").removeClass("fa-download");
-								});
-							}
-						});
-						//$("#radPriceThree").click();
-						$("#radPriceFree").click();
-					});
-					</script>
 				</div>
 			</div>
 

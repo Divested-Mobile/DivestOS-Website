@@ -10,12 +10,13 @@ if(!$device == '') {
 		print("\n\t\"response\": [");
 		foreach ($images as $image) {
 			if(!contains($image, "md5sum") && strlen($image) > 30) {
+				$imageSplit = explode("-", $image); //name-version-date-buildtype-device.zip
 				print("\n\t\t{");
 				print("\n\t\t\t\"filename\": \"" . $image . "\",");
 				print("\n\t\t\t\"url\": \"https://divestos.xyz/devices/" . $device . "/" . $image . "\",");
 				print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
-                                print("\n\t\t\t\"romtype\": \"dos\",");
-                                print("\n\t\t\t\"version\": \"14.1\"");
+                                print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
+                                print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\"");
 				print("\n\t\t},");
 			}
 		}

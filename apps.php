@@ -43,6 +43,8 @@
 
 						<h3>On Messaging Apps</h3>
 						<p>DivestOS includes Silence, a SMS only fork of Signal, it allows sending encrypted SMS messages to other users of Silence (such as CopperheadOS users). It is not however recommended for use as your primary messaging client, and is there more as a fallback. In the future we hope we can recommended the use of Signal, but it currently bundles proprietary Google libraries and doesn't allow forcing WebSocket mode. But for now and hopefully always into the future we do wholly recommend Conversations, a top notch XMPP client, fully supports the OMEMO XEP, is easy on the battery, and doesn't force you into a walled garden. There are many apps that we do not recommend, due to being proprietary or fundamentally insecure, but they shall remain nameless. It is not the easiest thing getting your friends and family to switch apps, so at the very least any apps with end-to-end encryption support should always be preferred over apps without E2E.</p>
+						<h3>On Web Browsers</h3>
+						<p>Sadly the available browsers aren't as secure as they can be. The Chromium builds are signed with test keys, the Firefox builds are typically outdated and filled with vulnerabilities, and the WebView ones are swiss cheese when combined with an outdated WebView provider.</p>
 					</section>
 				</div>
 			</div>
