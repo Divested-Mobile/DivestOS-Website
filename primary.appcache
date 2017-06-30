@@ -1,6 +1,6 @@
 CACHE MANIFEST
-#Last Updated: 06/29/2017
-#Rev 6
+#Last Updated: 06/30/2017
+#Rev 7
 /assets/css/font-awesome.min.css
 /assets/css/main.css
 /assets/css/images/arrow.svg
@@ -8,8 +8,9 @@ CACHE MANIFEST
 /assets/js/jquery.min.js
 /assets/js/main.js
 /assets/js/util.js
-/images/device.png
 /images/favicon.png
+/images/OPO-Dark.png
+#/images/OPO-Light.png
 /index.html
 /pages/about.html
 /pages/apps.php
