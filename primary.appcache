@@ -1,6 +1,6 @@
 CACHE MANIFEST
-#Last Updated: 06/26/2017
-#Rev 5
+#Last Updated: 06/29/2017
+#Rev 6
 /assets/css/font-awesome.min.css
 /assets/css/main.css
 /assets/css/images/arrow.svg
@@ -10,10 +10,9 @@ CACHE MANIFEST
 /assets/js/util.js
 /images/device.png
 /images/favicon.png
-about.html
-apps.php
-broken.html
-index.html
-tweaks.html
+/index.html
+/pages/about.html
+/pages/apps.php
+/pages/tweaks.html
 NETWORK:
 *
