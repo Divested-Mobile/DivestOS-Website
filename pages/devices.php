@@ -32,30 +32,27 @@
 	}
 
 	function getStatus($status) {
-		$color = "";
-		$message = "";
-		if($status === false) { $status = 42; }
-		switch($status) {
-			case 0:
-				$message = "Works";
-				$color = "2ecc71";
-				break;
-			case 1:
-				$message = "Broken";
-				$color = "e74c3c";
-				break;
-			case 2:
-				$message = "Untested";
-				$color = "f1c40f";
-				break;
-			case 3:
-				$message = "Untested (Experimental)";
-				$color = "9b59b6";
-				break;
-			default:
-				$message = "Unknown";
-				$color = "3498db";
-				break;
+		$message = "Unknown";
+		$color = "3498db";
+		if(!($status === false)) {
+			switch($status) {
+				case 0:
+					$message = "Works";
+					$color = "2ecc71";
+					break;
+				case 1:
+					$message = "Broken";
+					$color = "e74c3c";
+					break;
+				case 2:
+					$message = "Untested";
+					$color = "f1c40f";
+					break;
+				case 3:
+					$message = "Untested (Experimental)";
+					$color = "9b59b6";
+					break;
+			}
 		}
 		print("<h5 style=\"color: #" . $color . ";\">" . $message . "</h5>");
 		return $color;
