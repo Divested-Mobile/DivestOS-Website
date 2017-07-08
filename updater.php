@@ -1,7 +1,7 @@
 <?php
 //Copyright (c) 2017 Spot Communications, Inc.
 
-$device = noHTML($_GET["device"]);
+$device = strtolower(noHTML($_GET["device"]));
 if(!$device == '') {
 	$rootdir = "devices/" . $device;
 	if(file_exists($rootdir)) {

@@ -14,15 +14,14 @@
 				print("<h3>" . $device . "</h3>");
 				$color = getStatus(file_get_contents($realRootdir . $device . "/status"));
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
-				$files = scandir($realRootdir . $device, 0);
+				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
+				$c = 0;
 				foreach ($files as $file) {
-					if(strlen($file) > 30) {
-						if(contains($file, "md5sum")) {
-							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button small icon fa-download\">MD5</a>");
-						} else {
-							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#" . $color . "'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>");
-						}
+					if(strlen($file) > 30 && !contains($file, "md5sum")) {
+						print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#" . $color . "'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>");
+						print("<a href=\"" . $rootdir . $device . "/" . $file . ".md5sum\" class=\"button small icon fa-download\">MD5</a>");
 					}
+					$c++; if($c == 3) { break; }
 				}
 				if(sizeof($files) == 2) {
 					print("<h4>Currently Unavailable</h4><br><br><br>");
