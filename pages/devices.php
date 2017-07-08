@@ -1,4 +1,6 @@
 <?php
+
+	error_reporting(E_ERROR | E_PARSE);
 	session_start();
 	$_SESSION['csrfToken'] = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
 
@@ -10,6 +12,7 @@
 			if(strlen($device) > 2) {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
+				print(getStatus(file_get_contents($realRootdir . $device . "/status")));
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 				$files = scandir($realRootdir . $device, 0);
 				foreach ($files as $file) {
@@ -27,6 +30,35 @@
 				print("</section>");
 			}
 		}
+	}
+
+	function getStatus($status) {
+		$color = "";
+		$message = "";
+		if($status === false) { $status = 42; }
+		switch($status) {
+			case 0:
+				$message = "Works";
+				$color = "2ecc71";
+				break;
+			case 1:
+				$message = "Broken";
+				$color = "e74c3c";
+				break;
+			case 2:
+				$message = "Untested";
+				$color = "f1c40f";
+				break;
+			case 3:
+				$message = "Untested (Experimental)";
+				$color = "9b59b6";
+				break;
+			default:
+				$message = "Unknown";
+				$color = "3498db";
+				break;
+		}
+		return "<h5 style=\"color: #" . $color . ";\">" . $message . "</h5>";
 	}
 
 	//Credit: https://stackoverflow.com/a/7112596
