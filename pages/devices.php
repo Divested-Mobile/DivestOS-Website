@@ -12,7 +12,7 @@
 			if(strlen($device) > 2) {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
-				print(getStatus(file_get_contents($realRootdir . $device . "/status")));
+				$color = getStatus(file_get_contents($realRootdir . $device . "/status"));
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 				$files = scandir($realRootdir . $device, 0);
 				foreach ($files as $file) {
@@ -20,7 +20,7 @@
 						if(contains($file, "md5sum")) {
 							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button small icon fa-download\">MD5</a>");
 						} else {
-							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\">Download</a><br><br>");
+							print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#" . $color . "'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>");
 						}
 					}
 				}
@@ -58,7 +58,8 @@
 				$color = "3498db";
 				break;
 		}
-		return "<h5 style=\"color: #" . $color . ";\">" . $message . "</h5>";
+		print("<h5 style=\"color: #" . $color . ";\">" . $message . "</h5>");
+		return $color;
 	}
 
 	//Credit: https://stackoverflow.com/a/7112596
