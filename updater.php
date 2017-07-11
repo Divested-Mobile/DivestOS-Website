@@ -13,7 +13,7 @@ if(!$device == '') {
 				$imageSplit = explode("-", $image); //name-version-date-buildtype-device.zip
 				print("\n\t\t{");
 				print("\n\t\t\t\"filename\": \"" . $image . "\",");
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/devices/" . $device . "/" . $image . "\",");
+				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?f=" . $device . "/" . $image . "\",");
 				print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
                                 print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
                                 print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\"");
@@ -24,9 +24,11 @@ if(!$device == '') {
 		print("\n}");
 	} else {
 		print("Unknown device");
+		http_response_code(404);
 	}
 } else {
-		print("Denied");
+	print("Invalid request");
+	http_response_code(400);
 }
 //Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
 function noHTML($input, $encoding = 'UTF-8') {

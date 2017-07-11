@@ -18,7 +18,7 @@
 				$c = 0;
 				foreach ($files as $file) {
 					if(strlen($file) > 30 && !contains($file, "md5sum")) {
-						print("<a href=\"" . $rootdir . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#" . $color . "'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>");
+						print("<a href=\"/mirror.php?f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#" . $color . "'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>");
 						print("<a href=\"" . $rootdir . $device . "/" . $file . ".md5sum\" class=\"button small icon fa-download\">MD5</a>");
 					}
 					$c++; if($c == 3) { break; }
