@@ -18,7 +18,7 @@ function getMirror() {
 	if($GLOBALS['numMirrors'] == 0) {
 		return "https://divestos.xyz/devices/";
 	}
-	return "https://mirror" . rand(0, $GLOBALS['numMirrors']) . ".divestosx.xyz/";
+	return "https://mirror" . rand(0, $GLOBALS['numMirrors']) . ".divestos.xyz/";
 }
 
 //Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know

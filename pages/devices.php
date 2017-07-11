@@ -65,7 +65,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en" manifest="/primary.appcache">
+<html lang="en">
 	<head>
 		<title>Devices - DivestOS</title>
 		<meta charset="utf-8" />
