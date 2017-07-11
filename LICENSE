@@ -1,0 +1,15 @@
+Copyright (c) 2017 Spot Communications, Inc.
+
+Below are the license mappings for all of the files found in this repository. All attempts have been made to ensure accuracy of the corresponding license files. If you've found an issue please file an issue or pull request.
+
+assets/
+	css/
+		font-awesome.min.css - MIT
+		images/* - CC BY 3.0
+		main.css - CC BY 3.0
+	fonts/* - SIL OFL 1.1
+	js/
+		jquery* - MIT
+		main.js - CC BY 3.0
+		util.js - CC BY 3.0
+[EVERYTHING ELSE] - NOLICENSE
