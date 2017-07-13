@@ -14,7 +14,8 @@ if(!is_null($device)) {
 			$inc = noHTML($_GET["inc"]);
 			$imagesInc = scandir($rootdirInc, 0);
 			foreach($imagesInc as $imageInc) {
-				if(startsWith($imageInc, "lineage_" . $device . "-ota-" . $inc)) {
+				$imageSplit = explode("-", $imageInc);
+				if($imageSplit[5] == $inc) {
 					getImageJson($rootdirInc, $device, $imageInc);
 				}
 			}
@@ -36,24 +37,18 @@ if(!is_null($device)) {
 
 function getImageJson($rootdir, $device, $image) {
 	if(!contains($image, "md5sum") && strlen($image) > 30) {
+		$imageSplit = explode("-", $image); //name-version-date-buildtype-device-[previnc].zip
+		print("\n\t\t{");
+		print("\n\t\t\t\"filename\": \"" . $image . "\",");
 		if(contains($rootdir, "incremental")) {
-			print("\n\t\t{");
-			print("\n\t\t\t\"filename\": \"" . $image . "\",");
 			print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?f=" . $device . "/incremental/" . $image . "\",");
-			print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
-		        print("\n\t\t\t\"romtype\": \"dos-inc\","); //TODO: Unhardcode
-		        print("\n\t\t\t\"version\": \"14.1\"");
-			print("\n\t\t},");
 		} else {
-			$imageSplit = explode("-", $image); //name-version-date-buildtype-device.zip
-			print("\n\t\t{");
-			print("\n\t\t\t\"filename\": \"" . $image . "\",");
 			print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?f=" . $device . "/" . $image . "\",");
-			print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
-		        print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
-		        print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\"");
-			print("\n\t\t},");
 		}
+	        print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\"");
+	        print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
+		print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
+		print("\n\t\t},");
 	}
 }
 
