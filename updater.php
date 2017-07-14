@@ -45,9 +45,9 @@ function getImageJson($rootdir, $device, $image) {
 		} else {
 			print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?f=" . $device . "/" . $image . "\",");
 		}
-	        print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\"");
+	        print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",");
 	        print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
-		print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
+		print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image));
 		print("\n\t\t},");
 	}
 }
