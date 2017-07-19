@@ -23,8 +23,8 @@
 					}
 					$c++; if($c == 3) { break; }
 				}
-				if(sizeof($files) == 2) {
-					print("<h4>Currently Unavailable</h4><br><br><br>");
+				if(sizeof($files) == 3) {
+					print("<h4>Currently Unavailable</h4>");
 				}
 				print("</section>");
 			}
