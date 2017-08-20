@@ -50,7 +50,7 @@
 							<br>First things first, you're going to need a pretty decent computer if you want timely builds.
 							<ul>
 								<li>For builds under 3 hours you'll want to have at least a powerful (non-mobile) quad core processor, 8GB of RAM, and a 7200RPM drive.</li>
-								<li>For builds under an hour you'll want to have a processor that gets a score of 10k+ or higher on Passmark, 16GB+ of RAM, a 7200RPM drive and a 128GB SSD for ccache.</li>
+								<li>For builds under an hour you'll want to have a processor that gets a score of 10k+ or higher on <a href="https://www.cpubenchmark.net/CPU_mega_page.html" target="_blank" rel="nofollow noopener noreferrer">Passmark</a>, 16GB+ of RAM, a 7200RPM drive and a 128GB SSD for ccache.</li>
 								<li>If you plan on building in a virtual machine, in terms of performance KVM > Hyper-V > VMWare > VirtualBox</li>
 
 								<li>You'll need a lot of available free space on your drives</li>
@@ -64,7 +64,7 @@
 									</ul>
 							</ul>
 							<br>Next you'll want to have a decent Internet connection to download the source code and OS dependencies, 100Mbps is recommended.
-							<br>Lastly you'll need to have an execellent cooling solution, your computer <b>will</b> be running full load for quite some time. Doing multiple builds in a row will remove your need for a space heater in the winter.</p>
+							<br>Lastly you'll need to have an execellent cooling solution, your computer will be running full load for quite some time. Doing multiple builds in a row will remove your need for a space heater in the winter.</p>
 						<h3>Installing Dependencies</h3>
 						<p>Run the few commands below to get your system up to date and install all necessary dependencies.</p>
 						<h4>On Arch Linux</h4>
@@ -86,7 +86,7 @@ sudo apt clean</code></pre>
 							<pre><code>echo "export TZ=:/etc/localtime" >> .bashrc
 echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc</code></pre>
 						<h3>Creating a Workspace</h3>
-							<p>Okay, now you'll want to create the workspace, doing it on a seperate drive is highly recommended.</p>
+							<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a seperate drive from your system drive.</p>
 							<pre><code>git clone https://github.com/DivestOS/DivestOS-Build.git DivestOS
 cd DivestOS
 mkdir -p Build/LineageOS-14.1/.repo/local_manifests Builds Signing_Keys
@@ -94,16 +94,27 @@ cd Build/LineageOS-14.1
 ln -s ../../Manifests/Manifest_LAOS-14.1.xml .repo/local_manifests/local_manifest.xml
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 repo sync #This part will take a while
+
+#Some systems have python3 set as default, the build scripts require python2
+virtualenv2 venv
+
 #TODO: Signing Keys
 cd ../..
-nano Scripts/*.sh #Update all relevant paths that you used, will use environment variables in the future
+nano Scripts/*.sh #Update all relevant paths that you used. Environment variables in the future
 </code></pre>
+						<h4>Setting up ccache (Optional)</h4>
+							<p>Use of ccache is highly recommended, its an easy way to reduce build time, and power usage. This is extremely recommended to be on a seperate drive from your system drive and your build drive.</p>
+							<pre><code>mkdir ccache
+echo "export USE_CCACHE=1 > .bashrc"
+echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY] > .bashrc"
+source ~/.bashrc
+ccache -M 128GB #Optionally set a size limit</code></pre>
 						<h3>About the Workspace</h3>
 							<p>You should become familar with the workspace.</p>
 							<ul>
 								<li>/Build - This is where source code and working directory is stored</li>
 								<li>/Builds - This is where you should copy signed release builds to</li>
-								<li>/Changelogs - This is used for storing changelogs and will be removed in the future</li>
+								<li>/Changelogs - This is used for storing changelogs. Will be removed in the future</li>
 								<li>/Manifests - This is where working repo manifests are stored</li>
 								<li>/Misc - This is for storing misc. snippets of anything</li>
 								<li>/Patches - This is where all repo patches are stored</li>
@@ -113,8 +124,9 @@ nano Scripts/*.sh #Update all relevant paths that you used, will use environment
 						<h3>Building</h3>
 							<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
 							<pre><code>cd Build/LineageOS-14.1
-#Due to any changes, the necessary commands are all located at the top of Scripts/LAOS-14.1_Patches.sh
-#Afterwards you should have flashable zips located in out/target/product/[device] copy them to Builds</code></pre>
+source venv/bin/activate #Only for python3 default systems
+#Due to any changes, the necessary commands are all located at the top of Scripts/LAOS-14.1_Patches.sh</code></pre>
+							<p>Afterwards you should have flashable zips located in out/target/product/[device] copy them to Builds</p>
 						<h3>Installing</h3>
 							<p>Now copy the builds to your device and flash them through your recovery.</p>
 					</section>
