@@ -1,8 +1,6 @@
 <?php
 
 	error_reporting(E_ERROR | E_PARSE);
-	session_start();
-	$_SESSION['csrfToken'] = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
 
 	function getDeviceDownloads() {
 		$rootdir = "/devices/";
@@ -109,6 +107,7 @@
 					<header class="major">
 						<h2>Device Downloads</h2>
 						<p>Releases are typically done on a weekly schedule unless there are major or security related changes.</p>
+						<p>Currently in pre-release stage, please do *not* share, file mirror servers have not been set up yet.</p>
 						<div class="box alt">
 							<div class="row uniform">
 								<section class="4u 12u(medium) 12u$(xsmall)">
