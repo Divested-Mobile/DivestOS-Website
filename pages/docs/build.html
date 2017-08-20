@@ -41,18 +41,82 @@
 				<div class="container">
 					<header class="major">
 						<h2>Build Guide</h2>
-						<p>Coming Soon!</p>
+						<p>In Progress</p>
 					</header>
 
 					<section id="content">
 						<h3>Introduction</h3>
+							<p>You want to build for yourself? Awesome!
+							<br>First things first, you're going to need a pretty decent computer if you want timely builds.
+							<ul>
+								<li>For builds under 3 hours you'll want to have at least a powerful (non-mobile) quad core processor, 8GB of RAM, and a 7200RPM drive.</li>
+								<li>For builds under an hour you'll want to have a processor that gets a score of 10k+ or higher on Passmark, 16GB+ of RAM, a 7200RPM drive and a 128GB SSD for ccache.</li>
+								<li>If you plan on building in a virtual machine, in terms of performance KVM > Hyper-V > VMWare > VirtualBox</li>
+
+								<li>You'll need a lot of available free space on your drives</li>
+									<ul>
+										<li>Source Code: 70GB + ~1-2GB per device</li>
+										<li>30GB per device for building</li>
+										<li>10GB per device for optional caching</li>
+										<li>400MB-1GB for each resulting build if you want to archive</li>
+										<li>4GB for two target-files for a device to optionally generate incremental updates</li>
+										<li>All in all having a 500GB 7200RPM drive and a 128GB SSD is a good combo</li>
+									</ul>
+							</ul>
+							<br>Next you'll want to have a decent Internet connection to download the source code and OS dependencies, 100Mbps is recommended.
+							<br>Lastly you'll need to have an execellent cooling solution, your computer <b>will</b> be running full load for quite some time. Doing multiple builds in a row will remove your need for a space heater in the winter.</p>
 						<h3>Installing Dependencies</h3>
+						<p>Run the few commands below to get your system up to date and install all necessary dependencies.</p>
 						<h4>On Arch Linux</h4>
+							<p>p4block has created a handy metapackage for installing the necessary dependencies, use your favourite AUR helper to install it. There is also a more minimal one included in our build repository that you can install with makepkg.</p>
+							<pre><code>sudo pacman -Syu
+yaourt -S lineageos-devel
+sudo paccache -rk0</code></pre>
+
 						<h4>On Ubuntu</h4>
-						<h3>Preparing the Workspace</h3>
-						<h4>Generating Signing Keys</h4>
+							<p>We recommended 16.10, newer should work fine with little change.</p>
+							<pre><code>sudo add-apt-repository ppa:cwchien/gradle
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get full-upgrade && sudo apt-get -f install && sudo apt-get autoremove
+sudo ln -s /usr/include/asm-generic /usr/include/asm;
+
+sudo apt-get install autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git-core g++-multilib gnupg gperf gradle lib32ncurses5-dev lib32z1-dev lib32z-dev libc6-dev libc6-dev-i386 libcap-dev libcloog-isl-dev libesd0-dev libexpat1-dev libgcc1:i386 libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven ncurses-dev openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo
+
+sudo apt clean</code></pre>
+						<h4>On Both</h4>
+							<pre><code>echo "export TZ=:/etc/localtime" >> .bashrc
+echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc</code></pre>
+						<h3>Creating a Workspace</h3>
+							<p>Okay, now you'll want to create the workspace, doing it on a seperate drive is highly recommended.</p>
+							<pre><code>git clone https://github.com/DivestOS/DivestOS-Build.git DivestOS
+cd DivestOS
+mkdir -p Build/LineageOS-14.1/.repo/local_manifests Builds Signing_Keys
+cd Build/LineageOS-14.1
+ln -s ../../Manifests/Manifest_LAOS-14.1.xml .repo/local_manifests/local_manifest.xml
+repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+repo sync #This part will take a while
+#TODO: Signing Keys
+cd ../..
+nano Scripts/*.sh #Update all relevant paths that you used, will use environment variables in the future
+</code></pre>
+						<h3>About the Workspace</h3>
+							<p>You should become familar with the workspace.</p>
+							<ul>
+								<li>/Build - This is where source code and working directory is stored</li>
+								<li>/Builds - This is where you should copy signed release builds to</li>
+								<li>/Changelogs - This is used for storing changelogs and will be removed in the future</li>
+								<li>/Manifests - This is where working repo manifests are stored</li>
+								<li>/Misc - This is for storing misc. snippets of anything</li>
+								<li>/Patches - This is where all repo patches are stored</li>
+								<li>/Scripts - This is where all scripts are stored</li>
+								<li>/Signing_Keys - This is the defualt signing key store, its recommended to store these using gocryptfs or similar.</li>
+							</ul>
 						<h3>Building</h3>
+							<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
+							<pre><code>cd Build/LineageOS-14.1
+#Due to any changes, the necessary commands are all located at the top of Scripts/LAOS-14.1_Patches.sh
+#Afterwards you should have flashable zips located in out/target/product/[device] copy them to Builds</code></pre>
 						<h3>Installing</h3>
+							<p>Now copy the builds to your device and flash them through your recovery.</p>
 					</section>
 				</div>
 			</div>
