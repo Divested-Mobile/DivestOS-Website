@@ -48,6 +48,7 @@ function getImageJson($rootdir, $device, $image) {
 			}
 			print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",");
 			print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
+                        print("\n\t\t\t\"id\": \"" . bin2hex(mcrypt_create_iv(8, MCRYPT_DEV_URANDOM)) . "\",");
 			print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image));
 			print("\n\t\t},");
 		}
