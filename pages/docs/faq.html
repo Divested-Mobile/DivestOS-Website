@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" manifest="/primary.appcache">
+	<head>
+		<title>FAQ - DivestOS</title>
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#272833">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
+		<link href="/images/favicon.png" rel="shortcut icon">
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<header id="header">
+				<h1 id="logo"><a href="/index.html">DivestOS</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="/index.html">Home</a></li>
+						<li>
+							<a href="#">Get Started</a>
+							<ul>
+								<li><a href="/pages/devices.php">Device Downloads</a></li>
+								<li><a href="/pages/apps.php">Recommended Apps</a></li>
+								<li><a href="/pages/tweaks.html">Tweaks</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Docs</a>
+							<ul>
+								<li><a href="/pages/docs/build.html">FAQ</a></li>
+								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
+								<li><a href="/pages/docs/build.html">Build Guide</a></li>
+							</ul>
+						</li>
+						<li><a href="https://gitea.divestos.xyz/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
+						<li><a href="/pages/about.html">About</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Frequently Asked Questions</h2>
+						<p></p>
+					</header>
+
+					<section id="content">
+						<h4>What about that gaping hole that is the baseband processor?</h4>
+						<p>Eh, we are in dire need of free hardware, but it simply doesn't exist right now. This is better then nothing.</p>
+
+						<h4>Why are you hosting on GitHub if its proprietary?</h4>
+						<p>Because a lot of people have GitHub accounts which reduces the barrier to entry for contributing. GitLab is still too slow, and Gitea/Gogs is a bit all over right now.</p>
+
+						<h4>Why isn't DivestOS based on X ROM?</h4>
+						<ul>
+							<li>CopperheadOS: Current license and PaX porting difficulty</li>
+							<li>OmniROM: Lack of device maintenance, and features</li>
+							<li>PA/AOSPA: Is barely alive and had a lot of proprietary features until recently</li>
+						</ul>
+						<p>And LineageOS has superior device compatibility.</p>
+
+						<h4>Will you add that one theme engine?</h4>
+						<p>No. Pray that der Scheff will resurrect CMTE.</p>
+
+						<h4>Why did you remove the weather providers?</h4>
+						<p>Because they all transmit your location on a somewhat fixed schedule over HTTP.</p>
+
+						<h4>Why haven't you removed Trebuchet's RemoteFolder malware?</h4>
+						<p>Because it doesn't do anything unless configured and will be eventually removed once its rebased upon the newer AOSP launcher.</p>
+
+						<h4>Can you support X device, that doesn't have a (un)official LineageOS port?</h4>
+						<p>Nope</p>
+
+						<h4>Can you support X device, that does have an official LineageOS port?</h4>
+						<p>If there is enough demand, yes.</p>
+
+						<h4>Why did you only partially remove VoLTE?</h4>
+						<p>Because it is necessary on some carriers to be able to call. It also allows you to stay on LTE longer which reduces risk of interception by malicious cell towers, due to its superior end-to-end encryption.</p>
+
+						<h4>Why haven't you changed the default DNS servers?</h4>
+						<p>We're considering switching to OpenNIC's Anycast servers, but thats a bit iffy.</p>
+
+						<h4>Why haven't you changed the captive portal check server?</h4>
+						<p>Changing it from the current Google one would allow your device to be easily picked out from others as its basically always the first network request after connecting.</p>
+
+						<h4>Why isn't root included?</h4>
+						<p>Because you don't <i>really</i> need it, and it just increases the attack surface.</p>
+
+						<h4>Why are you wasting your time with Android? Its clear that Google has been slowly killing AOSP every release!</h4>
+						<p>Android is a legitimately fantasic operating system and no other mobile platform has as many open source apps as it does.</p>
+						<h5>but but but what about TRUELIBREFONE0009? It runs GNU/Linux and [insert wm here] and lets me install any package I want!</h5>
+						<p>Cool. How is the usability? Last we checked scaling and touch screen support were still super lacking.</p>
+						<h4></h4>
+						<h4></h4>
+						<h4></h4>
+						<h4></h4>
+						<h4></h4>
+					</section>
+				</div>
+			</div>
+
+			<footer id="footer">
+				<ul class="copyright">
+					<li>Spot Communications, Inc. &copy; 2017 || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
+				</ul>
+			</footer>
+		</div>
+
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
+		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DivestOS&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
+	</body>
+</html>
