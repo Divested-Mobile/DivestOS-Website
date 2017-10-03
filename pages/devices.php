@@ -6,23 +6,23 @@
 		$rootdir = "/devices/";
 		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
 		$devices = scandir($realRootdir, 0);
-		$curMonth = date("m");
+		$curSecRelease = "20171003";
 		foreach ($devices as $device) {
 			if(strlen($device) > 2) {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
 				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
-				$latestFileMonth = "";
+				$latestFileDate = "";
 				$downloadButtons = "";
 				foreach ($files as $file) {
 					if(strlen($file) > 30 && !contains($file, "md5sum")) {
 						$downloadButtons = "<a href=\"/mirror.php?f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
 						. "<a href=\"" . $rootdir . $device . "/" . $file . ".md5sum\" class=\"button small icon fa-download\">MD5</a>";
-						$latestFileMonth = date("m", filemtime($realRootdir . $device . "/" .$file));
+						$latestFileDate = date("Ymd", filemtime($realRootdir . $device . "/" .$file));
 					}
 					$c++; if($c == 3) { break; }
 				}
-				$color = getStatus(file_get_contents($realRootdir . $device . "/status"), ($curMonth != $latestFileMonth));
+				$color = getStatus(file_get_contents($realRootdir . $device . "/status"), !($latestFileDate >= $curSecRelease));
 				$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 				$c = 0;
