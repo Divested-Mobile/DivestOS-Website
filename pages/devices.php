@@ -6,21 +6,27 @@
 		$rootdir = "/devices/";
 		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
 		$devices = scandir($realRootdir, 0);
+		$curMonth = date("m");
 		foreach ($devices as $device) {
 			if(strlen($device) > 2) {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
-				$color = getStatus(file_get_contents($realRootdir . $device . "/status"));
-				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
-				$c = 0;
+				$latestFileMonth = "";
+				$downloadButtons = "";
 				foreach ($files as $file) {
 					if(strlen($file) > 30 && !contains($file, "md5sum")) {
-						print("<a href=\"/mirror.php?f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#" . $color . "'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>");
-						print("<a href=\"" . $rootdir . $device . "/" . $file . ".md5sum\" class=\"button small icon fa-download\">MD5</a>");
+						$downloadButtons = "<a href=\"/mirror.php?f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
+						. "<a href=\"" . $rootdir . $device . "/" . $file . ".md5sum\" class=\"button small icon fa-download\">MD5</a>";
+						$latestFileMonth = date("m", filemtime($realRootdir . $device . "/" .$file));
 					}
 					$c++; if($c == 3) { break; }
 				}
+				$color = getStatus(file_get_contents($realRootdir . $device . "/status"), ($curMonth != $latestFileMonth));
+				$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
+				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
+				$c = 0;
+				print($downloadButtons);
 				if(sizeof($files) == 3) {
 					print("<h4>Currently Unavailable</h4>");
 				}
@@ -29,7 +35,7 @@
 		}
 	}
 
-	function getStatus($status) {
+	function getStatus($status, $outdated) {
 		$message = "Unknown";
 		$color = "3498db";
 		if(!($status === false)) {
@@ -51,6 +57,10 @@
 					$color = "9b59b6";
 					break;
 			}
+		}
+		if($outdated) {
+			$message = $message . " and Outdated";
+			$color = "e74c3c";
 		}
 		print("<h5 style=\"color: #" . $color . ";\">" . $message . "</h5>");
 		return $color;
