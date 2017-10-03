@@ -6,7 +6,8 @@
 		$rootdir = "/devices/";
 		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
 		$devices = scandir($realRootdir, 0);
-		$curSecRelease = "20171003";
+		$curSecRelease = "20171003"; //The date of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
+		$curDate = date("Ymd"); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) > 2) {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
@@ -22,7 +23,8 @@
 					}
 					$c++; if($c == 3) { break; }
 				}
-				$color = getStatus(file_get_contents($realRootdir . $device . "/status"), !($latestFileDate >= $curSecRelease));
+				$outdated = !(($latestFileDate >= $curSecRelease) && (($curDate - $latestFileDate) <= 40));
+				$color = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
 				$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 				$c = 0;
