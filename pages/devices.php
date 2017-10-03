@@ -6,15 +6,13 @@
 		$rootdir = "/devices/";
 		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
 		$devices = scandir($realRootdir, 0);
-		$curSecRelease = "20171003"; //The date of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
-		$curDate = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
+		$lastSecRelease = 1507028760; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
+		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) > 2) {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
 				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
-				$latestFileTime = "";
-				$downloadButtons = "";
 				foreach ($files as $file) {
 					if(strlen($file) > 30 && !contains($file, "md5sum")) {
 						$downloadButtons = "<a href=\"/mirror.php?f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
@@ -23,7 +21,7 @@
 					}
 					$c++; if($c == 3) { break; }
 				}
-				$outdated = !((date("Ymd", $latestFileTime) >= $curSecRelease) && (($curDate - $latestFileTime) <= 3456000));
+				$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
 				$color = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
 				$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
