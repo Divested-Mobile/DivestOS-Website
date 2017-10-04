@@ -21,14 +21,15 @@
 					}
 					$c++; if($c == 3) { break; }
 				}
+				$c = 0;
 				$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
 				$color = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
 				$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
-				$c = 0;
-				print($downloadButtons);
 				if(sizeof($files) == 3) {
 					print("<h4>Currently Unavailable</h4>");
+				} else {
+					print($downloadButtons);
 				}
 				print("</section>");
 			}
