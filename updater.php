@@ -6,7 +6,8 @@ error_reporting(E_ERROR | E_PARSE);
 $build = noHTML($_GET["b"]);
 $build = str_replace("&period;", ".", $build);
 $device = strtolower(noHTML($_GET["device"]));
-if(!is_null($build) && substr_count($build, '.') <= 1 && substr_count($build, '/') == 0 && !is_null($device) && substr_count($device, '.') == 0 && substr_count($device, '/') == 0) {
+if(!is_null($build) && substr_count($build, '.') <= 1 && substr_count($build, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0) 
+{
 	$rootdir = "builds/" . $build . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {
