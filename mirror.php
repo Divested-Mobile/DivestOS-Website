@@ -1,6 +1,8 @@
 <?php
 //Copyright (c) 2017 Spot Communications, Inc.
 
+error_reporting(E_ERROR | E_PARSE);
+
 $numMirrors = 0;
 
 $file = noHTML($_GET["f"]);

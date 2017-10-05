@@ -118,7 +118,7 @@
 				<div class="container">
 					<header class="major">
 						<h2>Device Downloads</h2>
-						<p>Releases are typically done on a weekly schedule unless there are major or security related changes.</p>
+						<p>Releases are typically done on a fortnightly schedule unless there are major or security related changes.</p>
 						<p>Currently in pre-release stage, please do *not* share, file mirror servers have not been set up yet.</p>
 						<div class="box alt">
 							<div class="row uniform">
