@@ -3,11 +3,14 @@
 
 error_reporting(E_ERROR | E_PARSE);
 
+$build = noHTML($_GET["b"]);
+$build = str_replace("&period;", ".", $build);
 $device = strtolower(noHTML($_GET["device"]));
-if(!is_null($device)) {
-	$rootdir = "devices/" . $device;
+if(!is_null($build) && substr_count($build, '.') <= 1 && substr_count($build, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0) 
+{
+	$rootdir = "builds/" . $build . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
-	if(file_exists($rootdir)) {
+	if(is_dir($rootdir)) {
 		print("{");
 		print("\n\t\"response\": [");
 		if(isset($_GET["inc"]) && file_exists($rootdirInc)) {
@@ -35,16 +38,16 @@ if(!is_null($device)) {
 	http_response_code(400);
 }
 
-function getImageJson($rootdir, $device, $image) {
+function getImageJson($rootdir, $build, $device, $image) {
 	if(!contains($image, "md5sum") && strlen($image) > 30) {
 		$imageSplit = explode("-", $image); //name-version-date-buildtype-device-[previnc].zip
 		if(startsWith($imageSplit[4], $device)) {
 			print("\n\t\t{");
 			print("\n\t\t\t\"filename\": \"" . $image . "\",");
 			if(contains($rootdir, "incremental")) {
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?f=" . $device . "/incremental/" . $image . "\",");
+				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?b=" . $build . "f=" . $device . "/incremental/" . $image . "\",");
 			} else {
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?f=" . $device . "/" . $image . "\",");
+				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?b=" . $build . "f=" . $device . "/" . $image . "\",");
 			}
 			print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",");
 			print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");

@@ -3,8 +3,18 @@
 	error_reporting(E_ERROR | E_PARSE);
 
 	function getDeviceDownloads() {
-		$rootdir = "/devices/";
+		$build = noHTML($_GET["b"]);
+		$build = str_replace("&period;", ".", $build);
+		if(is_null($build) || strlen($build) == 0 || !(substr_count($build, '.') <= 1) || !(substr_count($build, '/') == 0)) {
+			error();
+			return;
+		}
+		$rootdir = "/builds/" . $build . "/";
 		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
+		if(!(is_dir($realRootdir))) {
+			error();
+			return;
+		}
 		$devices = scandir($realRootdir, 0);
 		$lastSecRelease = 1507028760; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
@@ -15,7 +25,7 @@
 				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
 				foreach ($files as $file) {
 					if(strlen($file) > 30 && !contains($file, "md5sum")) {
-						$downloadButtons = "<a href=\"/mirror.php?f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
+						$downloadButtons = "<a href=\"/mirror.php?b=" . $build . "f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
 						. "<a href=\"" . $rootdir . $device . "/" . $file . ".md5sum\" class=\"button small icon fa-download\">MD5</a>";
 						$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 					}
@@ -67,9 +77,19 @@
 		return $color;
 	}
 
+	function error() {
+		print("Unknown build!");
+		http_response_code(400);
+	}
+
 	//Credit: https://stackoverflow.com/a/7112596
 	function contains($haystack, $needle) {
 		return strpos($haystack, $needle) !== false;
+	}
+
+	//Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
+	function noHTML($input, $encoding = 'UTF-8') {
+	    return htmlentities($input, ENT_QUOTES | ENT_HTML5, $encoding);
 	}
 
 ?>
@@ -95,7 +115,7 @@
 						<li>
 							<a href="#">Get Started</a>
 							<ul>
-								<li><a href="/pages/devices.php">Device Downloads</a></li>
+								<li><a href="/pages/devices.php?b=LineageOS-14.1">Device Downloads</a></li>
 								<li><a href="/pages/apps.php">Recommended Apps</a></li>
 								<li><a href="/pages/tweaks.html">Tweaks</a></li>
 							</ul>
@@ -118,7 +138,7 @@
 				<div class="container">
 					<header class="major">
 						<h2>Device Downloads</h2>
-						<p>Releases are typically done on a weekly schedule unless there are major or security related changes.</p>
+						<p>Releases are typically done on a fortnightly schedule unless there are major or security related changes.</p>
 						<p>Currently in pre-release stage, please do *not* share, file mirror servers have not been set up yet.</p>
 						<div class="box alt">
 							<div class="row uniform">

@@ -19,7 +19,7 @@
 						<li>
 							<a href="#">Get Started</a>
 							<ul>
-								<li><a href="/pages/devices.php">Device Downloads</a></li>
+								<li><a href="/pages/devices.php?b=LineageOS-14.1">Device Downloads</a></li>
 								<li><a href="/pages/apps.php">Recommended Apps</a></li>
 								<li><a href="/pages/tweaks.html">Tweaks</a></li>
 							</ul>
