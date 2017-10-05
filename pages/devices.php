@@ -16,6 +16,10 @@
 			return;
 		}
 		$devices = scandir($realRootdir, 0);
+		if(sizeof($devices) == 2) {
+			print("It appears there are no builds for this base yet...");
+			return;
+		}
 		$lastSecRelease = 1507028760; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
