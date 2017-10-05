@@ -5,15 +5,15 @@ error_reporting(E_ERROR | E_PARSE);
 
 $numMirrors = 0;
 
-$build = noHTML($_GET["b"]);
-$build = str_replace("&period;", ".", $build);
+$base = noHTML($_GET["base"]);
+$base = str_replace("&period;", ".", $base);
 $file = noHTML($_GET["f"]);
 $file = str_replace("&period;", ".", $file);
 $file = str_replace("&sol;", "/", $file);
-if(!is_null($build) && substr_count($build, '.') <= 1 && substr_count($build, '/') == 0 && !is_null($file) && strlen($file) > 0 && substr_count($file, '.') == 2 && substr_count($file, '..') == 0 && 
+if(!is_null($base) && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($file) && strlen($file) > 0 && substr_count($file, '.') == 2 && substr_count($file, '..') == 0 && 
 substr_count($file, '/') 
 <= 2) {
-	header('Location: ' . getMirror() . $build . "/" . $file);
+	header('Location: ' . getMirror() . $base . "/" . $file);
 } else {
 	print("Invalid request");
 	http_response_code(400);

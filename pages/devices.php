@@ -3,13 +3,13 @@
 	error_reporting(E_ERROR | E_PARSE);
 
 	function getDeviceDownloads() {
-		$build = noHTML($_GET["b"]);
-		$build = str_replace("&period;", ".", $build);
-		if(is_null($build) || strlen($build) == 0 || !(substr_count($build, '.') <= 1) || !(substr_count($build, '/') == 0)) {
+		$base = noHTML($_GET["base"]);
+		$base = str_replace("&period;", ".", $base);
+		if(is_null($base) || strlen($base) == 0 || !(substr_count($base, '.') <= 1) || !(substr_count($base, '/') == 0)) {
 			error();
 			return;
 		}
-		$rootdir = "/builds/" . $build . "/";
+		$rootdir = "/builds/" . $base . "/";
 		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
 		if(!(is_dir($realRootdir))) {
 			error();
@@ -25,7 +25,7 @@
 				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
 				foreach ($files as $file) {
 					if(strlen($file) > 30 && !contains($file, "md5sum")) {
-						$downloadButtons = "<a href=\"/mirror.php?b=" . $build . "f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
+						$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
 						. "<a href=\"" . $rootdir . $device . "/" . $file . ".md5sum\" class=\"button small icon fa-download\">MD5</a>";
 						$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 					}
@@ -78,7 +78,7 @@
 	}
 
 	function error() {
-		print("Unknown build!");
+		print("Unknown base!");
 		http_response_code(400);
 	}
 
@@ -115,7 +115,7 @@
 						<li>
 							<a href="#">Get Started</a>
 							<ul>
-								<li><a href="/pages/devices.php?b=LineageOS-14.1">Device Downloads</a></li>
+								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
 								<li><a href="/pages/apps.php">Recommended Apps</a></li>
 								<li><a href="/pages/tweaks.html">Tweaks</a></li>
 							</ul>
