@@ -89,7 +89,7 @@ echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc</code></pre>
 						<h3>Creating a Workspace</h3>
 							<h4>Setting up Firejail (optional)</h4>
 							<p>For extra security of your host machine, you can run the entire build process in a faily restricted sandbox with minimal performance impact. We've already upstreamed a profile for just this task.</p>
-							<pre><code>firejail --profile=/etc/filejail/aosp.profile bash</code></pre>
+							<pre><code>firejail --profile=/etc/firejail/aosp.profile bash</code></pre>
 							<h4>Checking out the code</h4>
 							<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a seperate drive from your system drive.</p>
 							<pre><code>git clone https://github.com/DivestOS_Mobile/DivestOS-Build.git DivestOS
