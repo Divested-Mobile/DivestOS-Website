@@ -21,13 +21,13 @@ if(!is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 &
 			foreach($imagesInc as $imageInc) {
 				$imageSplit = explode("-", $imageInc);
 				if($imageSplit[5] == $inc) {
-					getImageJson($rootdirInc, $device, $imageInc);
+					getImageJson($rootdirInc, $base, $device, $imageInc);
 				}
 			}
 		}
 		$images = scandir($rootdir, 0);
 		foreach($images as $image) {
-			getImageJson($rootdir, $device, $image);
+			getImageJson($rootdir, $base, $device, $image);
 		}
 		print("\n\t]");
 		print("\n}");
@@ -47,9 +47,9 @@ function getImageJson($rootdir, $base, $device, $image) {
 			print("\n\t\t{");
 			print("\n\t\t\t\"filename\": \"" . $image . "\",");
 			if(contains($rootdir, "incremental")) {
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?b=" . $base . "f=" . $device . "/incremental/" . $image . "\",");
+				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?b=" . $base . "&f=" . $device . "/incremental/" . $image . "\",");
 			} else {
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?b=" . $base . "f=" . $device . "/" . $image . "\",");
+				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?b=" . $base . "&f=" . $device . "/" . $image . "\",");
 			}
 			print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",");
 			print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
