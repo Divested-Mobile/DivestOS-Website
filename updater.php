@@ -4,7 +4,7 @@
 error_reporting(E_ERROR | E_PARSE);
 
 $device = strtolower(noHTML($_GET["device"]));
-if(!is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0) {
+if(!is_null($device) && substr_count($device, '.') == 0 && substr_count($device, '/') == 0) {
 	$rootdir = "devices/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {

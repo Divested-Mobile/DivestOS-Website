@@ -8,7 +8,7 @@ $numMirrors = 0;
 $file = noHTML($_GET["f"]);
 $file = str_replace("&period;", ".", $file);
 $file = str_replace("&sol;", "/", $file);
-if(!is_null($file) && strlen($file) > 0 && substr_count($file, '.') == 2 && substr_count($file, '..') == 0 && substr_count($file, '/') <= 2) {
+if(!is_null($file) && substr_count($file, '.') == 2 && substr_count($file, '..') == 0 && substr_count($file, '/') <= 2) {
 	header('Location: ' . getMirror() . $file);
 } else {
 	print("Invalid request");
