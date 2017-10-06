@@ -5,7 +5,7 @@ error_reporting(E_ERROR | E_PARSE);
 
 $base = noHTML($_GET["base"]);
 $base = str_replace("&period;", ".", $base);
-if(!is_null($base) && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0) {
+if(is_null($base) || substr_count($base, '.') > 0 || substr_count($base, '/') > 0) {
 	$base = "LineageOS";
 }
 $device = strtolower(noHTML($_GET["device"]));
