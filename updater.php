@@ -5,7 +5,7 @@ error_reporting(E_ERROR | E_PARSE);
 
 $base = noHTML($_GET["base"]);
 $base = str_replace("&period;", ".", $base);
-if(is_null($base) || substr_count($base, '.') > 0 || substr_count($base, '/') > 0) {
+if(is_null($base) || strlen($base) == 0 || substr_count($base, '.') > 0 || substr_count($base, '/') > 0) {
 	$base = "LineageOS";
 }
 $device = strtolower(noHTML($_GET["device"]));
@@ -47,9 +47,9 @@ function getImageJson($rootdir, $base, $device, $image) {
 			print("\n\t\t{");
 			print("\n\t\t\t\"filename\": \"" . $image . "\",");
 			if(contains($rootdir, "incremental")) {
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?b=" . $base . "&f=" . $device . "/incremental/" . $image . "\",");
+				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?base=" . $base . "&f=" . $device . "/incremental/" . $image . "\",");
 			} else {
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?b=" . $base . "&f=" . $device . "/" . $image . "\",");
+				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?base=" . $base . "&f=" . $device . "/" . $image . "\",");
 			}
 			print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",");
 			print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
