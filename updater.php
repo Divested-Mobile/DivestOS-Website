@@ -5,11 +5,8 @@ error_reporting(E_ERROR | E_PARSE);
 
 $base = noHTML($_GET["base"]);
 $base = str_replace("&period;", ".", $base);
-if(is_null($base) || strlen($base) == 0 || substr_count($base, '.') > 0 || substr_count($base, '/') > 0) {
-	$base = "LineageOS";
-}
 $device = strtolower(noHTML($_GET["device"]));
-if(!is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0) {
+if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0) {
 	$rootdir = "builds/" . $base . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {
@@ -32,7 +29,7 @@ if(!is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 &
 		print("\n\t]");
 		print("\n}");
 	} else {
-		print("Unknown device");
+		print("Unknown base/device");
 		http_response_code(404);
 	}
 } else {
