@@ -40,7 +40,7 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 function getImageJson($rootdir, $base, $device, $image) {
 	if(!contains($image, "md5sum") && strlen($image) > 30) {
 		$imageSplit = explode("-", $image); //name-version-date-buildtype-device-[previnc].zip
-		if(startsWith($imageSplit[4], $device)) {
+		if(startsWith(strtolower($imageSplit[4]), $device)) {
 			print("\n\t\t{");
 			print("\n\t\t\t\"filename\": \"" . $image . "\",");
 			if(contains($rootdir, "incremental")) {
