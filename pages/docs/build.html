@@ -105,7 +105,7 @@ virtualenv2 venv
 
 #TODO: Signing Keys
 cd ../..
-nano Scripts/*.sh #Update all relevant paths that you used. Environment variables in the future
+nano Scripts/LineageOS-14.1/00init.sh #Update all relevant paths
 </code></pre>
 						<h4>Setting up ccache (Optional)</h4>
 							<p>Use of ccache is highly recommended, its an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a seperate drive from your system drive and your build drive.</p>
@@ -130,7 +130,7 @@ ccache -M 128GB #Optionally set a size limit</code></pre>
 							<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
 							<pre><code>cd Build/LineageOS-14.1
 source venv/bin/activate #Only for python3 default systems
-#Due to any changes, the necessary commands are all located at the top of Scripts/LAOS-14.1_Patches.sh</code></pre>
+#Due to any changes, the necessary commands are all located at the top of Scripts/LineageOS-14.1/Patch.sh</code></pre>
 							<p>Afterwards you should have flashable zips located in out/target/product/[device] copy them to Builds</p>
 						<h3>Installing</h3>
 							<p>Now copy the builds to your device and flash them through your recovery.</p>
