@@ -23,7 +23,7 @@
 		$lastSecRelease = 1507028760; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
-			if(strlen($device) >= 2) {
+			if(strlen($device) >= 2 && $device != '..') {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
 				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
