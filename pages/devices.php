@@ -30,7 +30,7 @@
 				foreach ($files as $file) {
 					if(strlen($file) > 30 && !contains($file, "md5sum")) {
 						$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
-						. "<a href=\"" . $rootdir . $device . "/" . $file . ".md5sum\" class=\"button small icon fa-download\">MD5</a>";
+						. "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button small icon fa-undo\">Recovery</a>";
 						$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 					}
 					$c++; if($c == 3) { break; }
