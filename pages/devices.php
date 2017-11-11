@@ -173,6 +173,15 @@
 				</div>
 			</div>
 
+			<section id="warning" class="wrapper style2 special fade">
+				<div class="container">
+					<header>
+						<h2>Finishing Steps</h2>
+						<p>In order to achieve maximum security please do the following:<br>- Flash this signed ZIP to deblob /firmware<br>- Flash your device's recovery from above<br>- Consider relocking your bootloader<br>- Enable and verify that encryption is enabled</p>
+					</header>
+				</div>
+			</section>
+
 			<footer id="footer">
 				<ul class="copyright">
 					<li>Spot Communications, Inc. &copy; 2017 || <a href="/pages/legal/pp.html">Privacy Policy</a> || <a href="/pages/legal/tos.html">Terms of Service</a> || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
