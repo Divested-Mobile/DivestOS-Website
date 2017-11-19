@@ -43,12 +43,12 @@
 				<div class="container">
 					<header class="major">
 						<h2>Extras</h2>
-						<p>Various flashable ZIPs that allow for making advanced/experimental changes for increased privacy/security.</p>
+						<p>Various advanced/experimental goodies that allow for increased privacy/security.</p>
 					</header>
 
 					<section id="content">
 						<h3>Firmware Deblobber</h3>
-						<p>This is a simple flashable ZIP used to remove firmware from the /firmware partitions. This is necessary in order to remove untrusted proprietary code and to increase security. This for example can prevent exploitation of CVE-2015-6639, an exploit in the Google Widevine DRM TrustZone firmware.</p>
+						<p>This is a simple flashable ZIP used to remove firmware blobs from the /firmware partition. This is necessary in order to remove untrusted proprietary code and to increase security. This for example can prevent exploitation of CVE-2015-6639, an exploit in the Google Widevine DRM TrustZone firmware. WARNING: This permanently deletes these files, the only way to restore them is by flashing your device specific stock firmware image (typically called 'NON-HLOS.img').</p>
 						<div class="table-wrapper">
 							<table class="alt">
 								<thead>
@@ -65,6 +65,34 @@
 									<tr>
 										<td>firmware_deblobber-arm64-signed.zip</td>
 										<td><a href="/extras/firmware_deblobber-arm64-signed.zip" target="_blank">Link</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+
+					<section id="content">
+						<h3>F-Droid Repos</h3>
+						<p>We currently maintain two F-Droid repos for serving our apps and some other apps not packages by F-Droid. These are already included in DivestOS, and are listed here for use by others.</p>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+										<th>URL</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>DivestOS Official</td>
+										<td>This repository contains apps created by DivestOS and Spot Communications, Inc.</td>
+										<td><a href="/fdroid/official" target="_blank">Link</a></td>
+									</tr>
+									<tr>
+										<td>DivestOS Unofficial</td>
+										<td>This repository contains unofficial builds of open source apps that are not included in the official F-Droid repo or IzzySoft repo.</td>
+										<td><a href="/fdroid/unofficial" target="_blank">Link</a></td>
 									</tr>
 								</tbody>
 							</table>

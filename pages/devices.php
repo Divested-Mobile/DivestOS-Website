@@ -20,7 +20,7 @@
 			print("It appears there are no builds for this base yet...");
 			return;
 		}
-		$lastSecRelease = 1507028760; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
+		$lastSecRelease = 1510929720; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) >= 2 && $device != '..') {
@@ -33,7 +33,7 @@
 						. "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button small icon fa-undo\">Recovery</a>";
 						$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 					}
-					$c++; if($c == 3) { break; }
+					$c++; if($c == 6) { break; }
 				}
 				$c = 0;
 				$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
