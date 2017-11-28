@@ -95,6 +95,7 @@ echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc</code></pre>
 							<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a seperate drive from your system drive.</p>
 							<pre><code>git clone https://github.com/DivestOS_Mobile/DivestOS-Build.git DivestOS
 cd DivestOS
+git submodule update --init --recursive
 mkdir -p Build/LineageOS-14.1/.repo/local_manifests Builds Signing_Keys
 cd Build/LineageOS-14.1
 ln -s ../../Manifests/Manifest_LAOS-14.1.xml .repo/local_manifests/local_manifest.xml
