@@ -20,7 +20,7 @@
 			print("It appears there are no builds for this base yet...");
 			return;
 		}
-		$lastSecRelease = 1510929720; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
+		$lastSecRelease = 1512842600; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) >= 2 && $device != '..') {
@@ -52,30 +52,30 @@
 
 	function getStatus($status, $outdated) {
 		$message = "Unknown";
-		$color = "3498db";
+		$color = "03A9F4";
 		if(!($status === false)) {
 			switch($status) {
 				case 0:
 					$message = "Works";
-					$color = "2ecc71";
+					$color = "4CAF50";
 					break;
 				case 1:
 					$message = "Broken";
-					$color = "e74c3c";
+					$color = "f44336";
 					break;
 				case 2:
 					$message = "Untested";
-					$color = "f1c40f";
+					$color = "FFC107";
 					break;
 				case 3:
 					$message = "Untested (Experimental)";
-					$color = "9b59b6";
+					$color = "673AB7";
 					break;
 			}
 		}
 		if($outdated) {
 			$message = $message . " and Outdated";
-			$color = "e74c3c";
+			$color = "f44336";
 		}
 		print("<h5 style=\"color: #" . $color . ";\">" . $message . "</h5>");
 		return $color;
@@ -102,7 +102,7 @@
 	<head>
 		<title>Devices - DivestOS</title>
 		<meta charset="utf-8" />
-		<meta name="theme-color" content="#272833">
+		<meta name="theme-color" content="#212121">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
 		<link href="/images/favicon.png" rel="shortcut icon">

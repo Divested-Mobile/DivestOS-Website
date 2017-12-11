@@ -1550,7 +1550,7 @@
 /* Basic */
 
 	html, body {
-		background: #1c1d26;
+		background: #212121;
 	}
 
 	body, input, select, textarea {
@@ -1841,7 +1841,7 @@
 	}
 
 	select option {
-		background-color: #1c1d26;
+		background-color: #212121;
 		color: #ffffff;
 	}
 
@@ -2002,12 +2002,12 @@
 			}
 
 			.icon.alt:before {
-				color: #1c1d26 !important;
+				color: #212121 !important;
 				text-shadow: 1px 0 0 #ffffff, -1px 0 0 #ffffff, 0 1px 0 #ffffff, 0 -1px 0 #ffffff;
 			}
 
 		.icon.major {
-			background: #272833;
+			background: #F5F5F5;
 			border-radius: 100%;
 			cursor: default;
 			display: inline-block;
@@ -2036,7 +2036,7 @@
 				}
 
 				.icon.major.alt:before {
-					color: #272833 !important;
+					color: #212121 !important;
 					text-shadow: 1px 0 0 #ffffff, -1px 0 0 #ffffff, 0 1px 0 #ffffff, 0 -1px 0 #ffffff;
 				}
 
@@ -2560,7 +2560,7 @@
 /* Dropotron */
 
 	.dropotron {
-		background: rgba(24, 25, 32, 0.965);
+		background: rgba(66, 66, 66, 0.965);
 		border-radius: 4px;
 		box-shadow: 0 0.075em 0.35em 0 rgba(0, 0, 0, 0.125);
 		list-style: none;
@@ -2600,7 +2600,7 @@
 				-webkit-transform: rotate(45deg);
 				-ms-transform: rotate(45deg);
 				transform: rotate(45deg);
-				background: #181920;
+				background: #424242;
 				content: '';
 				display: block;
 				height: 1em;
@@ -2621,7 +2621,7 @@
 	}
 
 	#header {
-		background: rgba(39, 40, 51, 0.965);
+		background: rgba(33, 33, 33, 0.965);
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 		cursor: default;
 		height: 3.5em;
@@ -2698,7 +2698,7 @@
 
 	#banner {
 		background-attachment: fixed;
-		background-color: #272833;
+		background-color: #212121;
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -2774,7 +2774,7 @@
 /* Footer */
 
 	#footer {
-		background: #272833;
+		background: #212121;
 		padding: 6em 0;
 		text-align: center;
 	}
@@ -2793,7 +2793,7 @@
 			}
 
 			#footer .icons .icon.alt:before {
-				color: #272833 !important;
+				color: #212121 !important;
 				text-shadow: 1px 0 0 rgba(255, 255, 255, 0.5), -1px 0 0 rgba(255, 255, 255, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5), 0 -1px 0 rgba(255, 255, 255, 0.5);
 			}
 
@@ -3050,7 +3050,7 @@
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #272833;
+				background: #212121;
 				box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
 			}
 
