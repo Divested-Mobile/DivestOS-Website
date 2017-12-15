@@ -128,6 +128,7 @@
 						<li>
 							<a href="#">Docs</a>
 							<ul>
+								<li><a href="/pages/docs/screenshots.html">Screenshots</a></li>
 								<li><a href="/pages/docs/faq.html">FAQ</a></li>
 								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
 								<li><a href="/pages/docs/build.html">Build Guide</a></li>
