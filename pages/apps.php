@@ -30,6 +30,7 @@
 							<ul>
 								<li><a href="/pages/docs/screenshots.html">Screenshots</a></li>
 								<li><a href="/pages/docs/faq.html">FAQ</a></li>
+								<li><a href="/pages/docs/browsers.html">Browser Tables</a></li>
 								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
 								<li><a href="/pages/docs/build.html">Build Guide</a></li>
 							</ul>
@@ -53,126 +54,7 @@
 						<h3>On Keyboard Apps</h3>
 						<p>Do not ever use any keyboard apps that are proprietary and/or require network permission. It doesn't matter how great that autocomplete is, its garbage if its sending everything you type to a server somewhere just to be data mined. It doesn't even matter if it has a "good" privacy policy or if you trust the creator, sending it away incurs the chance of being intercepted by a less trusted party.</p>
 						<h3>On Web Browsers</h3>
-						<p>All of the available browsers have each of their own faults as documented in the table below.</p>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Score</th>
-										<th>FOSS?</th>
-										<th>Hardened?</th>
-										<th>Insecure?</th>
-										<th>Leaky?</th>
-										<th>Limited?</th>
-										<th>Private?</th>
-										<th>Unstable?</th>
-										<th>Updated</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Fennec DOS</td>
-										<td>14/16</td>
-										<td style="color:#4CAF50;">Yes</td>
-										<td style="color:#FFC107;">Kinda</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">Yes</td>
-										<td style="color:#FFC107;">Sometimes</td>
-										<td style="color:#4CAF50;">Trunk</td>
-									</tr>
-									<tr>
-										<td>Chromium (Copperhead)</td>
-										<td>12/16</td>
-										<td style="color:#FFC107;">Almost</td>
-										<td style="color:#4CAF50;">YES</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">Basically</td>
-										<td style="color:#FFC107;">No</td>
-										<td style="color:#4CAF50;">Yes</td>
-									</tr>
-									<tr>
-										<td>Fennec F-Droid</td>
-										<td>12/16</td>
-										<td style="color:#4CAF50;">Yes</td>
-										<td style="color:#673AB7;">No</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">Basically</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">Yes</td>
-									</tr>
-									<tr>
-										<td>Firefox</td>
-										<td>11/16</td>
-										<td style="color:#FFC107;">Almost</td>
-										<td style="color:#673AB7;">No</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">Basically</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">Yes</td>
-									</tr>
-									<tr>
-										<td>Chromium (getChromium)</td>
-										<td>10/16</td>
-										<td style="color:#FFC107;">Almost</td>
-										<td style="color:#4CAF50;">Yes</td>
-										<td style="color:#f44336;">Yes (test-keys)</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">Basically</td>
-										<td style="color:#FFC107;">Sometimes</td>
-										<td style="color:#4CAF50;">Trunk</td>
-									</tr>
-									<tr>
-										<td>Firefox Klar</td>
-										<td>10/16</td>
-										<td style="color:#4CAF50;">Yes</td>
-										<td style="color:#4CAF50;">Yes*</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#4CAF50;">Sure</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#FFC107;">Yes*</td>
-									</tr>
-									<tr>
-										<td>Orfox</td>
-										<td>9/16</td>
-										<td style="color:#FFC107;">Almost</td>
-										<td style="color:#673AB7;">No</td>
-										<td style="color:#f44336;">Yes (known vulns)</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#4CAF50;">Sure</td>
-										<td style="color:#4CAF50;">No</td>
-										<td style="color:#f44336;">Behind ESR</td>
-									</tr>
-									<tr>
-										<td>Jelly</td>
-										<td>7/16</td>
-										<td style="color:#4CAF50;">Yes</td>
-										<td style="color:#4CAF50;">Yes*</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#f44336;">Yes</td>
-										<td style="color:#f44336;">No</td>
-										<td style="color:#FFC107;">Eh</td>
-										<td style="color:#FFC107;">Yes*</td>
-									</tr>
-									<tr>
-										<td>* = when combined with an updated WebView</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+						<p>Please go to the browser tables page <a href="/pages/docs/browsers.html">here</a></p>
 
 						<?php print(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/pages/apps.html")); ?>
 					</section>
