@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" manifest="/primary.appcache">
 	<head>
-		<title>Tweaks - DivestOS</title>
+		<title>Post Install - DivestOS</title>
 		<meta charset="utf-8" />
 		<meta name="theme-color" content="#212121">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +21,7 @@
 							<ul>
 								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
 								<li><a href="/pages/apps.php">Recommended Apps</a></li>
-								<li><a href="/pages/tweaks.html">Tweaks</a></li>
+								<li><a href="/pages/post_install.html">Post Install</a></li>
 								<li><a href="/pages/extras.html">Extras</a></li>
 							</ul>
 						</li>
@@ -44,24 +44,32 @@
 			<div id="main" class="wrapper style1">
 				<div class="container">
 					<header class="major">
-						<h2>Tweaks</h2>
-						<p>Some tweaks to improve your experience</p>
+						<h2>Post Install</h2>
+						<p>Things you should do soon after installing</p>
 					</header>
 
 					<section id="content">
-						<h3>Settings</h3>
+						<h3>Install some apps!</h3>
+						<p>We created a list of recommended and tested apps <a href="/pages/apps.php">here</a></p>
+						<h3>Optional settings to change</h3>
 						<ul>
 							<li>Utilizing and configuring 'Profiles' for your uses/environment can increase battery life and potentially enhance security.</li>
 							<li>Disabling lockscreen shortcuts can potentially reduce potential lockscreen bypass vulnerabilities</li>
 							<li>Enable hiding of notification content for enhanced privacy</li>
 							<li>Enable 'Privacy Guard' for extra control over application permissions</li>
 							<li>Enabling 'Increasing ring volume' is very nice if you don't use it already</li>
-							<li>Setting a lockscreen pin of 6+ numbers is extremely recommended</li>
+							<li>Setting a lockscreen password of 12+ characters is extremely recommended, at the minimum please use a 6+ digit pin</li>
 						</ul>
-						<h3>Apps</h3>
+						<h3>Advanced changes</h3>
 						<ul>
-							<li>To get (proprietary) apps from the Goolge Play Store, install 'Yalp Store' from F-Droid</li>
-							<li>To pass (the proprietary) SafetyNet checks enable the microG F-Droid repo and install 'microG DroidGuard Helper' then enable it under microG Settings > SafetyNet</li>
+							<li>Flash a firmware deblobber from <a href="/pages/extras.html">here</a> to further remove proprietary code from your device</li>
+							<li>Flash the corresponding recovery for your device for extra verification of updates</li>
+							<li>Consider relocking your bootloader. Warning: Some devices (eg. Motorola) will hard brick upon relocking</li>
+						</ul>
+						<h3>To support proprietary apps</h3>
+						<ul style="color:#f44336;">
+							<li><strike>To get (proprietary) apps from the Goolge Play Store, install 'Yalp Store' from F-Droid</strike></li>
+							<li><strike>To pass (the proprietary) SafetyNet checks enable the microG F-Droid repo and install 'microG DroidGuard Helper' then enable it under microG Settings > SafetyNet</strike></li>
 						</ul>
 					</section>
 				</div>

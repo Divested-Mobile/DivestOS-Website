@@ -121,7 +121,7 @@
 							<ul>
 								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
 								<li><a href="/pages/apps.php">Recommended Apps</a></li>
-								<li><a href="/pages/tweaks.html">Tweaks</a></li>
+								<li><a href="/pages/post_install.html">Post Install</a></li>
 								<li><a href="/pages/extras.html">Extras</a></li>
 							</ul>
 						</li>
@@ -175,15 +175,6 @@
 					</section>
 				</div>
 			</div>
-
-			<section id="warning" class="wrapper style2 special fade">
-				<div class="container">
-					<header>
-						<h2>Finishing Steps</h2>
-						<p>In order to achieve maximum security please do the following:<br>- Flash a firmware deblobber from the 'Extras' page<br>- Flash your device's recovery from above<br>- Relock your bootloader (Important!)<br>- Enable and verify that encryption is enabled</p>
-					</header>
-				</div>
-			</section>
 
 			<footer id="footer">
 				<ul class="copyright">

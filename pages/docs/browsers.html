@@ -21,7 +21,7 @@
 							<ul>
 								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
 								<li><a href="/pages/apps.php">Recommended Apps</a></li>
-								<li><a href="/pages/tweaks.html">Tweaks</a></li>
+								<li><a href="/pages/post_install.html">Post Install</a></li>
 								<li><a href="/pages/extras.html">Extras</a></li>
 							</ul>
 						</li>
