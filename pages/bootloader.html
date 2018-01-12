@@ -19,9 +19,10 @@
 						<li>
 							<a href="#">Get Started</a>
 							<ul>
+								<li><a href="/pages/bootloader.html">Bootloader Unlocking</a></li>
 								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
-								<li><a href="/pages/apps.php">Recommended Apps</a></li>
 								<li><a href="/pages/post_install.html">Post Install</a></li>
+								<li><a href="/pages/apps.php">Recommended Apps</a></li>
 								<li><a href="/pages/extras.html">Extras</a></li>
 							</ul>
 						</li>
@@ -32,7 +33,6 @@
 								<li><a href="/pages/docs/screenshots.html">Screenshots</a></li>
 								<li><a href="/pages/docs/browsers.html">Browser Tables</a></li>
 								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
-								<li><a href="/pages/docs/bootloader.html">Bootloader Unlocking</a></li>
 								<li><a href="/pages/docs/build.html">Build Guide</a></li>
 							</ul>
 						</li>
@@ -57,9 +57,9 @@
 							<li>Arch Linux: sudo pacman -S android-tools android-udev</li>
 							<li>Fedora: sudo dnf install android-tools</li>
 							<li>Debian: sudo apt install android-tools-adb android-tools-fastboot</li>
-							<li>Mac OS: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">here</a> and extract it</li>
-							<li>Windows: Install UniversalADB from <a href="https://adb.clockworkmod.com/">here</a> and download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip">here</a> and extract it</li>
-							<li>You'll also need a recovery.img for your specific device. <a href="https://twrp.me">TWRP</a> is recommended for the first install</li>
+							<li>Mac OS: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
+							<li>Windows: Install UniversalADB from <a href="https://adb.clockworkmod.com/" target="_blank" rel="nofollow noopener noreferrer">here</a> and download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
+							<li>You'll also need a recovery.img for your specific device. <a href="https://twrp.me" target="_blank" rel="nofollow noopener noreferrer">TWRP</a> is recommended for the first install</li>
 						</ul>
 						<h4>On your phone</h4>
 						<ol>
@@ -76,7 +76,7 @@
 						<br>This is the easiest method, and works mostly on old retail variants.</p>
 						<ol>
 							<li>$ adb reboot bootloader</li>
-							<li>$ fastboot unlock</li>
+							<li>$ fastboot oem unlock</li>
 							<li>$ fastboot flash recovery recovery.img</li>
 							<li>Ez pz.</li>
 						</ol>
@@ -96,7 +96,7 @@
 						<p>Devices Supported: Select Motorola Phones
 						<br>Motorola has their own garbage unlocking method, and prevents some devices from being unlocked.</p>
 						<ol>
-							<li>First check <a href="https://mobilesupport.lenovo.com/us/en/solution/MS87215">here</a> to see if your device "qualifies"</li>
+							<li>First check <a href="https://mobilesupport.lenovo.com/us/en/solution/MS87215" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
 							<li>If it does, click the 'Unlock' link for your device</li>
 							<li>Create a Motorola or Google account (sorry)</li>
 							<li>$ adb reboot bootloader</li>
@@ -136,18 +136,18 @@
 
 						<h3>Bulk Mode</h3>
 						<p>Devices Supported: Kindle Fire HDX 7/8 2014 (apollo/thor)
-						<br>Credit/Source: <a href="https://forum.xda-developers.com/showpost.php?p=71430759&postcount=736">@draxie</a>
+						<br>Credit/Source: <a href="https://forum.xda-developers.com/showpost.php?p=71430759&postcount=736" target="_blank" rel="nofollow noopener noreferrer">@draxie</a>
 						<br>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is simple, but dangerous.</p>
 						<ol>
 							<li>Windows is required for this. VirtualBox USB passthrough has been confirmed to work</li>
-							<li>Download dd from <a href="http://www.chrysocome.net/downloads/dd-0.5.zip">here</a></li>
+							<li>Download dd from <a href="http://www.chrysocome.net/downloads/dd-0.5.zip" target="_blank" rel="nofollow noopener noreferrer">here</a></li>
 							<li>Connect your device</li>
 							<li>> wmic partition where index=22 get diskindex</li>
 							<li>> wmic partition where (index=17 and numberofblocks=20480) get diskindex</li>
 							<li>> wmic partition where (index=5 and numberofblocks=4096) get diskindex</li>
 							<li>The above 3 commands should all return the same DiskIndex</li>
-							<li>Apollo Specific Files: <a href="https://drive.google.com/open?id=0B2twXJIOgv-URzJDQkczNzRLaHM">download</a></li>
-							<li>Thor Specific Files: <a href="https://drive.google.com/open?id=0B2twXJIOgv-UMGxXMUZPZTlZTUk">download</a></li>
+							<li>Apollo Specific Files: <a href="https://drive.google.com/open?id=0B2twXJIOgv-URzJDQkczNzRLaHM" target="_blank" rel="nofollow noopener noreferrer">download</a></li>
+							<li>Thor Specific Files: <a href="https://drive.google.com/open?id=0B2twXJIOgv-UMGxXMUZPZTlZTUk" target="_blank" rel="nofollow noopener noreferrer">download</a></li>
 							<li>> fastboot -i 0x1949 erase aboot</li>
 							<li>> fastboot -i 0x1949 reboot</li>
 							<li>> dd of=\\?\Device\Harddisk[DiskIndex]\Partition6 if=aboot_vuln.mbn</li>
@@ -162,7 +162,7 @@
 						<p>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).
 						<br>It works by first getting root, then overriding the recovery.</p>
 						<ol>
-							<li>Download the following apps: <a href="https://towelroot.com/tr.apk">Towelroot (CVE-2014-3153)</a>, <a href="http://www.mediafire.com/file/38tyscsaxms00sa/croowt%282%29.apk">croowt (CVE-2016-5195)</a></li>
+							<li>Download the following apps: <a href="https://towelroot.com/tr.apk" target="_blank" rel="nofollow noopener noreferrer">Towelroot (CVE-2014-3153)</a>, <a href="http://www.mediafire.com/file/38tyscsaxms00sa/croowt%282%29.apk" target="_blank" rel="nofollow noopener noreferrer">croowt (CVE-2016-5195)</a></li>
 							<li>$ adb install tr.apk</li>
 							<li>$ abd install croowt.apk</li>
 							<li>$ adb push recovery.img /sdcard/recovery.img</li>

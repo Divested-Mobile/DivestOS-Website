@@ -19,9 +19,10 @@
 						<li>
 							<a href="#">Get Started</a>
 							<ul>
+								<li><a href="/pages/bootloader.html">Bootloader Unlocking</a></li>
 								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
-								<li><a href="/pages/apps.php">Recommended Apps</a></li>
 								<li><a href="/pages/post_install.html">Post Install</a></li>
+								<li><a href="/pages/apps.php">Recommended Apps</a></li>
 								<li><a href="/pages/extras.html">Extras</a></li>
 							</ul>
 						</li>
@@ -32,7 +33,6 @@
 								<li><a href="/pages/docs/screenshots.html">Screenshots</a></li>
 								<li><a href="/pages/docs/browsers.html">Browser Tables</a></li>
 								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
-								<li><a href="/pages/docs/bootloader.html">Bootloader Unlocking</a></li>
 								<li><a href="/pages/docs/build.html">Build Guide</a></li>
 							</ul>
 						</li>
