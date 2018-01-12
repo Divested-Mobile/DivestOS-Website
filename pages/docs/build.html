@@ -69,7 +69,7 @@
 								</ul>
 							</ul>
 							<br>Second you'll want to have a decent Internet connection to download the source code and OS dependencies, 100Mbps is recommended.
-							<br>Lastly you'll need to have an execellent cooling solution, your computer will be running full load for quite some time. Doing multiple builds in a row will remove your need for a space heater in the winter.</p>
+							<br>Lastly you'll need to have an excellent cooling solution, your computer will be running full load for quite some time. Doing multiple builds in a row will remove your need for a space heater in the winter.</p>
 						<h3>Installing Dependencies</h3>
 						<p>Run the few commands below to get your system up to date and install all necessary dependencies.</p>
 						<h4>On Arch Linux</h4>
@@ -95,7 +95,7 @@ echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc</code></pre>
 							<p>For extra security of your host machine, you can run the entire build process in a fairly restricted sandbox with minimal performance impact. We've already upstreamed a profile for just this task.</p>
 							<pre><code>firejail --profile=/etc/firejail/aosp.profile bash</code></pre>
 							<h4>Checking out the code</h4>
-							<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a seperate drive from your system drive.</p>
+							<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a separate drive from your system drive.</p>
 							<pre><code>git clone https://github.com/DivestOS_Mobile/DivestOS-Build.git DivestOS
 cd DivestOS
 git submodule update --init --recursive
@@ -113,14 +113,14 @@ cd ../..
 nano Scripts/LineageOS-14.1/00init.sh #Update all relevant paths
 </code></pre>
 						<h4>Setting up ccache (Optional)</h4>
-							<p>Use of ccache is highly recommended, its an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a seperate drive from your system drive and your build drive.</p>
+							<p>Use of ccache is highly recommended, its an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
 							<pre><code>mkdir ccache
 echo "export USE_CCACHE=1" >> .bashrc
 echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY]" >> .bashrc
 source ~/.bashrc
 ccache -M 128GB #Optionally set a size limit</code></pre>
 						<h3>About the Workspace</h3>
-							<p>You should become familar with the workspace.</p>
+							<p>You should become familiar with the workspace.</p>
 							<ul>
 								<li>/Build - This is where source code and working directory is stored</li>
 								<li>/Builds - This is where you should copy signed release builds to</li>
@@ -129,7 +129,7 @@ ccache -M 128GB #Optionally set a size limit</code></pre>
 								<li>/Misc - This is for storing misc. snippets of anything</li>
 								<li>/Patches - This is where all repo patches are stored</li>
 								<li>/Scripts - This is where all scripts are stored</li>
-								<li>/Signing_Keys - This is the defualt signing key store, its recommended to store these using gocryptfs or similar.</li>
+								<li>/Signing_Keys - This is the default signing key store, its recommended to store these using gocryptfs or similar.</li>
 							</ul>
 						<h3>Building</h3>
 							<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
