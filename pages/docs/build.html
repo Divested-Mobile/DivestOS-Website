@@ -73,21 +73,29 @@
 						<h3>Installing Dependencies</h3>
 						<p>Run the few commands below to get your system up to date and install all necessary dependencies.</p>
 						<h4>On Arch Linux</h4>
-							<p>p4block has created a handy metapackage for installing the necessary dependencies, use your favourite AUR helper to install it. There is also a more minimal one included in our build repository that you can install with makepkg.</p>
+							<p>@p4block has created a handy metapackage for installing the necessary dependencies, use your favourite AUR helper to install it. There is also a more minimal one included in our build repository that you can install with makepkg.</p>
 							<pre><code>sudo pacman -Syu
 yaourt -S lineageos-devel firejail
 sudo paccache -rk0</code></pre>
 
+						<h4>On Fedora</h4>
+							<p>The latest Fedora release is recommended. Some dependencies are missing.</p>
+							<pre><code>sudo dnf update
+
+sudo dnf install @development-tools java-1.8.0-openjdk java-1.8.0-openjdk-devel android-tools git gnupg flex bison gperf SDL wxGTK squashfs-tools curl zlib ncurses schedtool perl-Switch zip unzip libxslt python2-virtualenv bc rsync xml2 lzop pngcrush ImageMagick ccache maven gradle ninja-build ncurses-devel ncurses-devel.i686
+
+sudo dnf clean all</code></pre>
+
 						<h4>On Ubuntu</h4>
-							<p>We recommended 16.10, newer should work fine with little change.</p>
+							<p>We recommend 16.10, newer should work fine with little change.</p>
 							<pre><code>sudo add-apt-repository ppa:cwchien/gradle
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get full-upgrade && sudo apt-get -f install && sudo apt-get autoremove
+sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove
 sudo ln -s /usr/include/asm-generic /usr/include/asm;
 
-sudo apt-get install autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git-core g++-multilib gnupg gperf gradle lib32ncurses5-dev lib32z1-dev lib32z-dev libc6-dev libc6-dev-i386 libcap-dev libcloog-isl-dev libesd0-dev libexpat1-dev libgcc1:i386 libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven ncurses-dev openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo firejail
+sudo apt install autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git-core g++-multilib gnupg gperf gradle lib32ncurses5-dev lib32z1-dev lib32z-dev libc6-dev libc6-dev-i386 libcap-dev libcloog-isl-dev libesd0-dev libexpat1-dev libgcc1:i386 libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven ncurses-dev openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo firejail
 
 sudo apt clean</code></pre>
-						<h4>On Both</h4>
+						<h4>On Any</h4>
 							<pre><code>echo "export TZ=:/etc/localtime" >> .bashrc
 echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc</code></pre>
 						<h3>Creating a Workspace</h3>

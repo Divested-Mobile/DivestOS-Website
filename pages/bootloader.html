@@ -72,8 +72,10 @@
 						</ol>
 
 						<h3>Fastboot (Old)</h3>
-						<p>Devices Supported: Nexus 4 (mako), Nexus 5 (hammerhead), Nexus 6 (shamu), Nexus 7 (flo), OnePlus One (bacon)
-						<br>This is the easiest method, and works mostly on old retail variants.</p>
+						<ul>
+							<li>Devices Supported: Nextbit Robin (ether), Nexus 4 (mako), Nexus 5 (hammerhead), Nexus 6 (shamu), Nexus 7 (flo), OnePlus One (bacon)</li>
+							<li>This is the easiest method, and works mostly on old retail variants.</li>
+						</ul>
 						<ol>
 							<li>$ adb reboot bootloader</li>
 							<li>$ fastboot oem unlock</li>
@@ -82,8 +84,10 @@
 						</ol>
 
 						<h3>Fastboot (New)</h3>
-						<p>Devices Supported: Google Pixel (marlin/sailfish), Nexus 5X (bullhead), Nexus 6P (angler)
-						<br>This is a newer method for retail variants.</p>
+						<ul>
+							<li>Devices Supported: Google Pixel (marlin/sailfish), Nexus 5X (bullhead), Nexus 6P (angler)</li>
+							<li>This is a newer method for retail variants.</li>
+						</ul>
 						<ol>
 							<li>Enable 'Allow OEM unlocking' under 'Developer options' in Settings</li>
 							<li>$ adb reboot bootloader</li>
@@ -93,8 +97,10 @@
 						</ol>
 
 						<h3>Fastboot (Motorola)</h3>
-						<p>Devices Supported: Select Motorola Phones
-						<br>Motorola has their own garbage unlocking method, and prevents some devices from being unlocked.</p>
+						<ul>
+							<li>Devices Supported: Select Motorola Phones</li>
+							<li>Motorola has their own garbage unlocking method, and prevents some devices from being unlocked.</li>
+						</ul>
 						<ol>
 							<li>First check <a href="https://mobilesupport.lenovo.com/us/en/solution/MS87215" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
 							<li>If it does, click the 'Unlock' link for your device</li>
@@ -121,23 +127,30 @@
 					       </section>
 
 						<h3>LG UP</h3>
-						<p>Devices Supported: Most LG devices
-						<br>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</p>
+						<ul>
+							<li>Devices Supported: Most LG devices</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
+						</ul>
 						<ol>
 							<li>Windows is required for this. Using a virtual machine makes it very tricky due to all the different USB ids presented.</li>
 							<li>[TO BE COMPLETED]</li>
 						</ol>
 
 						<h3>Heimdall</h3>
-						<p>Devices Supported: Most Samsung devices</p>
+						<ul>
+							<li>Devices Supported: Most Samsung devices</li>
+						</ul>
 						<ol>
 							<li>[TO BE COMPLETED]</li>
 						</ol>
 
 						<h3>Bulk Mode</h3>
-						<p>Devices Supported: Kindle Fire HDX 7/8 2014 (apollo/thor)
-						<br>Credit/Source: <a href="https://forum.xda-developers.com/showpost.php?p=71430759&postcount=736" target="_blank" rel="nofollow noopener noreferrer">@draxie</a>
-						<br>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is simple, but dangerous.</p>
+						<ul>
+							<li>Devices Supported: Kindle Fire HDX 7/8 2014 (apollo/thor)</li>
+							<li>Credit/Source: <a href="https://forum.xda-developers.com/showpost.php?p=71430759&postcount=736" target="_blank" rel="nofollow noopener noreferrer">@draxie</a></li>
+							<li>This method is simple, but dangerous.</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).</li>
+						</ul>
 						<ol>
 							<li>Windows is required for this. VirtualBox USB passthrough has been confirmed to work</li>
 							<li>Download dd from <a href="http://www.chrysocome.net/downloads/dd-0.5.zip" target="_blank" rel="nofollow noopener noreferrer">here</a></li>
@@ -159,8 +172,10 @@
 						</ol>
 
 						<h3>Kernel Exploit</h3>
-						<p>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).
-						<br>It works by first getting root, then overriding the recovery.</p>
+						<ul>
+							<li>This method works by first getting root, then overriding the recovery.</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).</li>
+						</ul>
 						<ol>
 							<li>Download the following apps: <a href="https://towelroot.com/tr.apk" target="_blank" rel="nofollow noopener noreferrer">Towelroot (CVE-2014-3153)</a>, <a href="http://www.mediafire.com/file/38tyscsaxms00sa/croowt%282%29.apk" target="_blank" rel="nofollow noopener noreferrer">croowt (CVE-2016-5195)</a></li>
 							<li>$ adb install tr.apk</li>
