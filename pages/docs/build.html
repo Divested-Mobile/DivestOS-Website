@@ -143,7 +143,10 @@ ccache -M 128GB #Optionally set a size limit</code></pre>
 							<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
 							<pre><code>cd Build/LineageOS-14.1
 source venv/bin/activate #Only for python3 default systems
-#Due to any changes, the necessary commands are all located at the top of Scripts/LineageOS-14.1/Patch.sh</code></pre>
+source ../../Scripts/LineageOS-14.1/00init.sh
+resetWorkspace
+patchWorkspace
+buildDevice [device] #or buildAll for all supported devices</code></pre>
 							<p>Afterwards you should have flashable zips located in out/target/product/[device] copy them to Builds</p>
 						<h3>Installing</h3>
 							<p>Now copy the builds to your device and flash them through your recovery.</p>
