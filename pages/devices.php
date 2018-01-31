@@ -26,24 +26,31 @@
 			if(strlen($device) >= 2 && $device != '..') {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
 				print("<h3>" . $device . "</h3>");
-				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
-				foreach ($files as $file) {
-					if(strlen($file) > 30 && !contains($file, "md5sum")) {
-						$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>"
-						. "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button small icon fa-undo\">Recovery</a>";
-						$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
-					}
-					$c++; if($c == 6) { break; }
-				}
-				$c = 0;
-				$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
-				$color = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
-				$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
-				if(sizeof($files) == 3) {
-					print("<h4>Currently Unavailable</h4>");
+				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
+				if(sizeof($files) <= 4) {
+					print("<h4>Currently Unavailable</h4><br><br><br><br><br>");
 				} else {
+					foreach ($files as $file) {
+						if($file == "status" || $file == "recovery.img" || contains($file, "md5sum")) {
+							continue;
+						}
+						if(strlen($file) > 30) {
+							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>";
+							$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
+							break;
+						}
+					}
+					if(file_exists($realRootdir . $device . "/recovery.img")) {
+						$downloadButtons .= "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button small icon fa-undo\">Recovery</a>";
+					} else {
+						$downloadButtons .= "<br>";
+					}
+					$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
+					$color = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
+					$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
 					print($downloadButtons);
+
 				}
 				print("</section>");
 			}
@@ -152,7 +159,7 @@
 							<div class="row uniform">
 								<section class="4u 12u(medium) 12u$(xsmall)">
 									<h3>Disclaimer</h3>
-									<p>Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided <b>without</b> warranty and <b>can</b> damage your device. We are <b>not</b> liable for <b>any</b> damage done by using these, and you yourself will be at fault. Remember to <b>always</b> make a nandroid backup before flashing.</p>
+									<p>Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided <b>without</b> warranty and <b>can</b> damage your device. We are <b>not</b> liable for <b>any</b> damage done by using these, and you yourself will be at fault.</p>
 								</section>
 								<section class="4u 12u$(medium) 12u$(xsmall)">
 									<h3>Root</h3>
