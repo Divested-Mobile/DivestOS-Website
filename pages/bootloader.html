@@ -96,10 +96,31 @@
 							<li>Pretty painless...</li>
 						</ol>
 
+						<h3>Fastboot (LGE)</h3>
+						<ul>
+							<li>Devices Supported: Select LGE Phones</li>
+							<li>LGE has their own garbage unlocking method, and prevents most devices from being unlocked.</li>
+						</ul>
+						<ol>
+							<li>First check <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
+							<li>Create an LG Developer account (sorry)</li>
+							<li>Note down your IMEI (From original box or from Settings -> About -> Status)</li>
+							<li>$ adb reboot bootloader</li>
+							<li>$ fastboot oem device-id</li>
+							<li>Combine the two lines</li>
+							<li>Paste it into the site along with the IMEI</li>
+							<li>Click 'Confirm'</li>
+							<li>Wait a few minutes for an email</li>
+							<li>Save the unlock.bin from the email and keep it for future use</li>
+							<li>$ fastboot flash unlock unlock.bin</li>
+							<li>$ fastboot flash recovery recovery.img</li>
+							<li>Its a shit process, but you're done!</li>
+						</ol>
+
 						<h3>Fastboot (Motorola)</h3>
 						<ul>
 							<li>Devices Supported: Select Motorola Phones</li>
-							<li>Motorola has their own garbage unlocking method, and prevents some devices from being unlocked.</li>
+							<li>Motorola also has their own garbage unlocking method, and prevents some devices from being unlocked.</li>
 						</ul>
 						<ol>
 							<li>First check <a href="https://mobilesupport.lenovo.com/us/en/solution/MS87215" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
