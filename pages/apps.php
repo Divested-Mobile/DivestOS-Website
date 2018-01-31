@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="/primary.appcache">
+<html lang="en">
 	<head>
 		<title>Apps - DivestOS</title>
 		<meta charset="utf-8" />
@@ -64,7 +64,7 @@
 
 			<footer id="footer">
 				<ul class="copyright">
-					<li>Spot Communications, Inc. &copy; 2017 || <a href="/pages/legal/pp.html">Privacy Policy</a> || <a href="/pages/legal/tos.html">Terms of Service</a> || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
+					<li>Spot Communications, Inc. &copy; 2017-2018 || <a href="/pages/legal/pp.html">Privacy Policy</a> || <a href="/pages/legal/tos.html">Terms of Service</a> || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
 				</ul>
 			</footer>
 		</div>
