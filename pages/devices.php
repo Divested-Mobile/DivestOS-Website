@@ -25,11 +25,16 @@
 		foreach ($devices as $device) {
 			if(strlen($device) >= 2 && $device != '..') {
 				print("<section class=\"4u 6u(medium) 12u(xsmall)\">");
-				print("<h3>" . $device . "</h3>");
+				$name = $device;
+				$friendlyNamePath = $realRootdir . $device . "/friendlyName";
+				if(file_exists($friendlyNamePath)) {
+					$name = file_get_contents($friendlyNamePath) . " (" . $device . ")";
+				}
+				print("<h3>" . $name . "</h3>");
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
 				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
 				if(sizeof($files) <= 4) {
-					print("<h4>Currently Unavailable</h4><br><br><br><br><br>");
+					print("<h4>Currently Unavailable</h4><br><br><br>");
 				} else {
 					foreach ($files as $file) {
 						if($file == "status" || $file == "recovery.img" || contains($file, "md5sum")) {
