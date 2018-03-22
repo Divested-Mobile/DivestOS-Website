@@ -180,6 +180,14 @@
 					</header>
 
 					<section id="content">
+						<div style="text-align:center;">
+							<h3>Name Your Price</h3>
+							<input type="radio" id="radPriceFree" name="radPrice">
+							<label for="radPriceFree" id="lblPriceFree">Free</label>
+							<input type="radio" id="radPriceTen" name="radPrice">
+							<label for="radPriceTen">$10</label>
+							<p id="lblThanks" hidden>Thank you for your contribution!</p>
+						</div>
 						<div class="box alt">
 							<div class="row uniform" style="text-align:center;">
 								<?php getDeviceDownloads(); ?>
@@ -201,5 +209,66 @@
 		<script src="/assets/js/main.js"></script>
 		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
 		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DivestOS&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
+		<script src="https://checkout.stripe.com/checkout.js"></script>
+		<script type="text/javascript">
+		function checkout() {
+			var handler = StripeCheckout.configure({
+				key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+				image: '/images/spotco.png',
+				locale: 'auto',
+				allowRememberMe: false,
+				token: function(token) {
+					var req = new XMLHttpRequest();
+					req.onreadystatechange = function() {
+						if (req.readyState == 4 && req.status == 200) {
+							setTimeout(function() {
+								$("#lblThanks").attr("hidden", false);
+								$("#radPriceTen").attr("disabled", true);
+								$("#radPriceFree").click();
+								$("#lblPriceFree").text("Purchased");
+								$("#radPriceFree").attr("disabled", true);
+							}, 500);
+						}
+					};
+					req.open("POST", "processor.php", true);
+					req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+					req.send("token=" + token.id + "&ct=<?php print($_SESSION['csrfToken']); ?>");
+				}
+			});
+
+			handler.open({
+				name: 'Spot Communications, Inc.',
+				description: 'DivestOS Distro Download',
+				zipCode: true,
+				amount: 1000
+			});
+
+			window.addEventListener('popstate', function() {
+				handler.close();
+			});
+		}
+		$(document).ready(function() {
+			$('input[type=radio][name="radPrice"]').on('change', function(){
+				if(this.id=='radPriceFree') {
+					$(".perk").each(function(){
+						this.text = "Download";
+						this.href = $(this).attr("value");
+						$(this).addClass("fa-download").removeClass("fa-lock");
+					});
+				} else {
+					$(".perk").each(function(){
+						this.text = "Purchase";
+						this.href = "javascript:checkout()";
+						$(this).addClass("fa-lock").removeClass("fa-download");
+					});
+				}
+			});
+			$("#radPriceTen").click();
+		});
+
+		$(document).ready(function() {
+			$("#radPriceTen").click();
+		});
+		</script>
 	</body>
 </html>

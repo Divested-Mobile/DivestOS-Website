@@ -2,3 +2,4 @@ builds-clean/
 builds-test/
 builds/
 extras/
+stripe/
