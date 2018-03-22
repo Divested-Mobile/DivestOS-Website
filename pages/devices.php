@@ -34,7 +34,7 @@
 				}
 				print("<h3>" . $name . "</h3>");
 				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
-				$files = scandir($realRootdir . $device, SCANDIR_SORT_DESCENDING);
+				$files = scandir($realRootdir . $device);
 				if(sizeof($files) <= 4) {
 					print("<h4>Currently Unavailable</h4><br><br><br>");
 				} else {
@@ -43,7 +43,7 @@
 							continue;
 						}
 						if(strlen($file) > 30) {
-							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>";
+							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button special icon fa-download perk\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#ff5722'\">Download</a><br><br>";
 							$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 							break;
 						}
