@@ -1,6 +1,8 @@
 <?php
 
 	error_reporting(E_ERROR | E_PARSE);
+	session_start();
+	$_SESSION['csrfToken'] = bin2hex(random_bytes(32));
 
 	function getDeviceDownloads() {
 		$base = noHTML($_GET["base"]);
