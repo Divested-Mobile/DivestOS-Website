@@ -96,16 +96,32 @@
 								<li>How to reduce: Set the 'Automatic update interval' to 'Never' in F-Droid > Settings</li>
 								<li>How to disable: Disable the 'DivestOS' repos in F-Droid > Settings > Repositories</li>
 							</ul>
+							<li>App: Hypatia</li>
+							<ul>
+								<li>What we collect: Signature Database Request, IP Address</li>
+								<li>How often: Manually</li>
+								<li>Why we collect: Used to serve signature databases</li>
+								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
+								<li>What else will we use it for: Nothing else</li>
+							</ul>
 						</ul>
 						<h3>What data 3rd parties collect</h3>
 						<p>3rd parties are used to support specific features and apps</p>
 						<ul>
+							<li>Website Payments</li>
+							<ul>
+								<li>What they receive: Name, Bank Card, E-Mail Address, User Agent, Browser Fingerprint, IP Address</li>
+								<li>How often: When you purchase a ROM from us</li>
+								<li>Why they receive: Used to process the payment</li>
+								<li>How to anonymize: Use a fake name, debit gift card, disposable e-mail address, and connect via your local libraries computers</li>
+								<li>Privacy Policy: <a href="https://stripe.com/us/privacy/" target="_blank" rel="nofollow noopener noreferrer">Stripe Privacy Policy</a></li>
+							</ul>
 							<li>ROM: Captive Portal Check</li>
 							<ul>
 								<li>Description: Used to determine if there is a captive portal</li>
 								<li>What they receive: Default Android User Agent, IP Address</li>
 								<li>How often: On every Wi-Fi and cell connection</li>
-								<li>How to disable: $ adb shell settings put global captive_portal_detection_enabled 0; #An option to easily toggle this will be added in the future.</li>
+								<li>How to disable: $ adb shell settings put global captive_portal_mode 0; #An option to easily toggle this will be added in the future.</li>
 								<li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Google Privacy Policy</a></li>
 							</ul>
 							<li>ROM: F-Droid Official Repo</li>
@@ -116,7 +132,7 @@
 								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
 								<li>How to reduce: Set the 'Automatic update interval' to 'Never' in F-Droid > Settings</li>
 								<li>How to disable: Disable the 'F-Droid' repos in F-Droid > Settings > Repositories</li>
-								<li>Privacy Policy: <a href=https://f-droid.org/en/docs/Security_Model/" target="_blank" rel="nofollow noopener noreferrer">F-Droid Security Information</a></li>
+								<li>Privacy Policy: <a href="https://f-droid.org/en/docs/Security_Model/" target="_blank" rel="nofollow noopener noreferrer">F-Droid Security Information</a></li>
 							</ul>
 						</ul>
 					</section>
