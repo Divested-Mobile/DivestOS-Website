@@ -45,27 +45,78 @@
 			<div id="main" class="wrapper style1">
 				<div class="container">
 					<header class="major">
-						<h2>Privacy Policy (October 6th, 2017)</h2>
-						<p>In relation to both the website and the available builds</p>
+						<h2>Privacy Policy (April 11th, 2018)</h2>
+						<p>User privacy is taken very seriously. All of the data we collect, how we use, and how to disable/reduce is detailed below.</p>
 					</header>
 
 					<section id="content">
-						  <p>Your privacy is important to us.</p>
-
-						  <p>It is Spot Communications, Inc.'s policy to respect your privacy regarding any information we may collect while operating our website and servers. Accordingly, we have developed this privacy policy in order for you to understand how we collect, use, communicate, disclose and otherwise make use of personal information. We have outlined our privacy policy below.</p>
-
-						  <ul>
-						    <li>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</li>
-						    <li>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</li>
-						    <li>We will collect and use personal information solely for fulfilling those purposes specified by us and for other ancillary purposes, unless we obtain the consent of the individual concerned or as required by law.</li>
-						    <li>Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.</li>
-						    <li>We will protect personal information by using reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.</li>
-						    <li>We will make readily available to customers information about our policies and practices relating to the management of personal information.</li>
-						    <li>We will only retain personal information for as long as necessary for the fulfillment of those purposes.</li>
-						    <li>We will never share your personal information with any third-party unless required by law.</li>
-						  </ul>
-
-						  <p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. Spot Communications, Inc. may change this privacy policy from time to time at Spot Communications, Inc.'s sole discretion.</p>
+						<h3>What data we (Spot Communitcations, Inc.) collect</h3>
+						<ul>
+							<li>Website</li>
+							<ul>
+								<li>What we collect: Page Visited, User Agent, and IP Address</li>
+								<li>How often: On every page visit</li>
+								<li>Why we collect: Used to serve the webpages to users</li>
+								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
+								<li>What else will we use it for: Nothing else</li>
+								<li>How to disable: Don't visit the site</li>
+							</ul>
+							<li>Website Analytics</li>
+							<ul>
+								<li>What we collect: Page Visited, Browser Fingerprint, User Agent, IP Address</li>
+								<li>How often: On every page visit</li>
+								<li>Why we collect: Used to determine how popular and roughly how many users we have</li>
+								<li>When it will be deleted: Only the past 200 requests are stored</li>
+								<li>What else will we use it for: Nothing else</li>
+								<li>How to disable: The server will not store the request if your browser's 'Do Not Track' option is enabled. This check will be moved to the client in the future.</li>
+							</ul>
+							<li>ROM</li>
+							<ul>
+								<li>What we collect: The ROM does not contain any analytics and any requests are used only for supporting it</li>
+							</ul>
+							<li>ROM: Updater</li>
+							<ul>
+								<li>What we collect: Device Model, Default Android User Agent, Incremental Build ID, IP Address</li>
+								<li>How often: On every boot and also once per day</li>
+								<li>Why we collect: Used to serve system updates</li>
+								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
+								<li>What else will we use it for: Will be occasionally used to determine how many users we have and what percent are up-to-date or not</li>
+								<li>How to disable: Automatic checks can be disabled in Settings > About > DivestOS updates > Prefences > Auto updates check</li>
+							</ul>
+							<li>ROM: DivestOS F-Droid Repos</li>
+							<ul>
+								<li>What we collect: Repo Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
+								<li>How often: On every boot and also once per day</li>
+								<li>Why we collect: Used to serve apps and their updates</li>
+								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
+								<li>What else will we use it for: Nothing else</li>
+								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
+								<li>How to reduce: Set the 'Automatic update interval' to 'Never' in F-Droid > Settings</li>
+								<li>How to disable: Disable the 'DivestOS' repos in F-Droid > Settings > Repositories</li>
+							</ul>
+						</ul>
+						<h3>What data 3rd parties collect</h3>
+						<p>3rd parties are used to support specific features and apps</p>
+						<ul>
+							<li>ROM: Captive Portal Check</li>
+							<ul>
+								<li>Description: Used to determine if there is a captive portal</li>
+								<li>What they receive: Default Android User Agent, IP Address</li>
+								<li>How often: On every Wi-Fi and cell connection</li>
+								<li>How to disable: $ adb shell settings put global captive_portal_detection_enabled 0; #An option to easily toggle this will be added in the future.</li>
+								<li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Google Privacy Policy</a></li>
+							</ul>
+							<li>ROM: F-Droid Official Repo</li>
+							<ul>
+								<li>What they receive: Repo Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
+								<li>How often: On every boot and also once per day</li>
+								<li>Why they receive: Used to serve apps and their updates</li>
+								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
+								<li>How to reduce: Set the 'Automatic update interval' to 'Never' in F-Droid > Settings</li>
+								<li>How to disable: Disable the 'F-Droid' repos in F-Droid > Settings > Repositories</li>
+								<li>Privacy Policy: <a href=https://f-droid.org/en/docs/Security_Model/" target="_blank" rel="nofollow noopener noreferrer">F-Droid Security Information</a></li>
+							</ul>
+						</ul>
 					</section>
 				</div>
 			</div>

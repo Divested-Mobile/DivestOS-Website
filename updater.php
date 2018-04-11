@@ -50,7 +50,7 @@ function getImageJson($rootdir, $base, $device, $image) {
 			}
 			print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",");
 			print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
-                        print("\n\t\t\t\"id\": \"" . md5(file_get_contents($rootdir . "/". $image . ".md5sum")) . "\",");
+			print("\n\t\t\t\"id\": \"" . md5(file_get_contents($rootdir . "/". $image . ".md5sum")) . "\",");
 			print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
 			print("\n\t\t\t\"size\": " . filesize($rootdir . "/". $image));
 			print("\n\t\t},");
