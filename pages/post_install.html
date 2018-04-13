@@ -61,6 +61,14 @@
 							<li>Enabling 'Increasing ring volume' is very nice if you don't use it already</li>
 							<li>Setting a lockscreen password of 12+ characters is extremely recommended, at the minimum please use a 6+ digit pin</li>
 						</ul>
+						<h3>Enable a location provider or two</h3>
+						<p>In order to obtain your location without GPS a location provider is necessary. These can utilize known locations of cell towers and Wi-Fi access points in order to determine your location. Backends can either be powered by offline or online databases.</p>
+						<ul>
+							<li>For devices where GPS will be on occasionally (such as phones) we recommend simply enabling DejaVu. DejaVu is an offline local database.</li>
+							<li>For devices without GPS (such as tablets) if necessary you can enable the MozillaNLP backend. This backend sends nearby Wi-Fi access points to Mozilla's online location lookup backend.</li>
+							<li>To enable either backend: microG Settings > UnifiedNlp Settings > Configure location backends</li>
+							<li>There are additional backends avaialble via F-Droid.</li>
+						</ul>
 						<h3>Advanced changes</h3>
 						<ul>
 							<li>Flash a firmware deblobber from <a href="/pages/extras.html">here</a> to further remove proprietary code from your device</li>
