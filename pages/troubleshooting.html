@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Screenshots - DivestOS</title>
+		<title>Troubleshooting - DivestOS</title>
 		<meta charset="utf-8" />
 		<meta name="theme-color" content="#212121">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -46,32 +46,40 @@
 			<div id="main" class="wrapper style1">
 				<div class="container">
 					<header class="major">
-						<h2>Screenshots</h2>
-						<p>Various screenshots of the system and apps</p>
+						<h2>Troubleshooting</h2>
+						<p>Solutions to various problems</p>
 					</header>
 
 					<section id="content">
-						<div class="box alt">
-							<div class="row 50% uniform">
-								<div class="4u">Extirpater - Free Space Eraser<span class="image fit"><img src="/images/screenshots/Extirpater.png" alt="" /></span></div>
-								<div class="4u">Hypatia - Malware Scanner<span class="image fit"><img src="/images/screenshots/Hypatia.png" alt="" /></span></div>
-								<div class="4u">Fennec DOS - Privacy Browser<span class="image fit"><img src="/images/screenshots/Fennec_DOS.png" alt="" /></span></div>
-								<div class="4u">F-Droid Included Repos<span class="image fit"><img src="/images/screenshots/F-Droid_Repos.png" alt="" /></span></div>
-								<div class="4u">DivestOS F-Droid Repo<span class="image fit"><img src="/images/screenshots/F-Droid_Repo_Main.png" alt="" /></span></div>
-								<div class="4u">microG<span class="image fit"><img src="/images/screenshots/MicroG.png" alt="" /></span></div>
-								<div class="4u">LocalWiFiNLP<span class="image fit"><img src="/images/screenshots/LocalWiFiNLP.png" alt="" /></span></div>
-								<div class="4u">Silence + Keyboard<span class="image fit"><img src="/images/screenshots/Silence.png" alt="" /></span></div>
-								<div class="4u">Phone<span class="image fit"><img src="/images/screenshots/Phone.png" alt="" /></span></div>
-								<div class="4u">Music Player<span class="image fit"><img src="/images/screenshots/Music_Player.png" alt="" /></span></div>
-								<div class="4u">Homescreen<span class="image fit"><img src="/images/screenshots/Homescreen.png" alt="" /></span></div>
-								<div class="4u">Quick Tiles<span class="image fit"><img src="/images/screenshots/Quick_Tiles.png" alt="" /></span></div>
-								<div class="4u">Colors<span class="image fit"><img src="/images/screenshots/Battery.png" alt="" /></span></div>
-								<div class="4u">Settings<span class="image fit"><img src="/images/screenshots/Settings.png" alt="" /></span></div>
-								<div class="4u">Updater<span class="image fit"><img src="/images/screenshots/Updater.png" alt="" /></span></div>
-								<div class="4u">Privacy Guard - 1<span class="image fit"><img src="/images/screenshots/Privacy_Guard-1.png" alt="" /></span></div>
-								<div class="4u">Privacy Guard - 2<span class="image fit"><img src="/images/screenshots/Privacy_Guard-2.png" alt="" /></span></div>
-							</div>
-						</div>
+						<h3>General Issues</h3>
+
+						<h4>F-Droid repeatedly installing/updating apps</h4>
+						<p>This is a known issue in F-Droid 1.1-1.2 and will be fixed by upstream soon. As a temporary workaround you can either manually clear F-Droid's cache or reboot your device.</p>
+
+						<h4>Upon first install device gets stuck at 'Encrypting...' screen</h4>
+						<p>LineageOS adds duplicate fstab entries to most devices in order to allow the user to choose between an ext4 or F2FS /data partition. If you improperly wiped your device beforehand (erased instead of formatted /data) the system won't know what to do and will just hang there. Simply format /data via TWRP or fastboot to fix.</p>
+
+						<h3>Device Specific Issues</h3>
+
+						<h4>Clark: No mobile service</h4>
+						<p>TWRP is required for installing updates as it contains some extra tools that are needed by the special installer script. Without these tools the modem files never get extracted properly.</p>
+
+						<h4>LG G3: No radio, no sensors, no brightness control, etc.</h4>
+						<p>Please update your modem to a version extracted from an Android 5.0/V20x image. If you cannot find an image available for your specific model, you can extract a .KDZ to get the .DZ, extract that and flash the relevant files (dbi, factory, modem, rpm, tz). Please note you <i>must</i> use the aboot and laf partitions from a V10x image or else your device will end up in bulk mode. The version should show as 00053 under Settings > About > Baseband version</p>
+
+						<h4>Apollo/Thor: Wi-Fi stops working after a while</h4>
+						<p>Apollo/Thor is no longer officially supported by LineageOS and has not had any fixes by its device maintainers in a long while. As a workaround you can toggle Airplane Mode for 20 seconds.</p>
+
+						<h4>Apollo/Thor: Boot-looping into recovery</h4>
+						<p>If you installed a system update with a recovery that doesn't know where the /misc partition is the update flag will never be cleared. The fix it to run the following<br>$ fastboot format misc</p>
+
+						<h3>Issues after upgrading to 15.1 from 14.1</h3>
+
+						<h4>Black screen or only wallpaper showing</h4>
+						<p>Pull down from the notification drawer to get into Settings, enable Development Mode, and turn on ADB then run the following<br>$ adb shell am start org.lineageos.setupwizard/org.lineageos.setupwizard.SetupWizardExitActivity</p>
+
+						<h4>No mobile service</h4>
+						<p>Select the proper APN for your carrier under Settings > Network > Mobile network > Advanced > Access Point Names</p>
 					</section>
 				</div>
 			</div>
