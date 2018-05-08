@@ -46,7 +46,7 @@
 			<div id="main" class="wrapper style1">
 				<div class="container">
 					<header class="major">
-						<h2>Privacy Policy (April 11th, 2018)</h2>
+						<h2>Privacy Policy (May 8th, 2018)</h2>
 						<p>User privacy is one of the primary goals of DivestOS. Detailed below is everything you need to know about how your data is handled.</p>
 					</header>
 
@@ -90,6 +90,15 @@
 								<li>How to anonymize: Tor support via Orbot will be added in the future</li>
 								<li>How to disable: Automatic checks can be disabled in Settings > About > DivestOS updates > Preferences > Auto updates check</li>
 							</ul>
+							<li>ROM: Captive Portal Check</li>
+							<ul>
+								<li>What we collect: Static User Agent, IP Address</li>
+								<li>How often: On every Wi-Fi and cell connection</li>
+								<li>Why we collect: Used to determine if there is an Internet connection</li>
+								<li>When it will be deleted: All requests to gen204.php are never logged</li>
+								<li>What else will we use it for: Nothing else</li>
+								<li>How to disable: $ adb shell settings put global captive_portal_mode 0; #An option to easily toggle this will be added in the future.</li>
+							</ul>
 							<li>ROM: DivestOS F-Droid Repos</li>
 							<ul>
 								<li>What we collect: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
@@ -123,11 +132,11 @@
 								<li>How to anonymize: Use a fake name, debit gift card, disposable e-mail address, and connect via a computer at your local library</li>
 								<li>Privacy Policy: <a href="https://stripe.com/us/privacy/" target="_blank" rel="nofollow noopener noreferrer">Stripe Privacy Policy</a></li>
 							</ul>
-							<li>ROM: Captive Portal Check</li>
+							<li>ROM: Fallback Captive Portal Check</li>
 							<ul>
 								<li>Who: Google</li>
-								<li>Description: Used to determine if there is a captive portal</li>
-								<li>What they receive: Default Android User Agent, IP Address</li>
+								<li>Description: Used to determine if there is a captive portal, when ours is unavailable</li>
+								<li>What they receive: Static User Agent, IP Address</li>
 								<li>How often: On every Wi-Fi and cell connection</li>
 								<li>How to disable: $ adb shell settings put global captive_portal_mode 0; #An option to easily toggle this will be added in the future.</li>
 								<li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Google Privacy Policy</a></li>
