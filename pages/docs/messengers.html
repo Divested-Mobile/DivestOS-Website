@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Messengers - DivestOS</title>
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#212121">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
+		<link href="/images/favicon.png" rel="shortcut icon">
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<header id="header">
+				<h1 id="logo"><a href="/index.html">DivestOS</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="/index.html">Home</a></li>
+						<li>
+							<a href="#">Get Started</a>
+							<ul>
+								<li><a href="/pages/bootloader.html">Bootloader Unlocking</a></li>
+								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
+								<li><a href="/pages/post_install.html">Post Install</a></li>
+								<li><a href="/pages/troubleshooting.html">Troubleshooting</a></li>
+								<li><a href="/pages/apps.php">Recommended Apps</a></li>
+								<li><a href="/pages/extras.html">Extras</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Docs</a>
+							<ul>
+								<li><a href="/pages/docs/faq.html">FAQ</a></li>
+								<li><a href="/pages/docs/screenshots.html">Screenshots</a></li>
+								<li><a href="/pages/docs/messengers.html">Messenger Tables</a></li>
+								<li><a href="/pages/docs/browsers.html">Browser Tables</a></li>
+								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
+								<li><a href="/pages/docs/build.html">Build Guide</a></li>
+							</ul>
+						</li>
+						<li><a href="https://gitea.divestos.xyz/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
+						<li><a href="/pages/about.html">About</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Messenger Comparison Table</h2>
+						<p>This is not intended to be an extremely comphrensive list, but enough to get a grasp on the situation.</p>
+					</header>
+
+					<!--<section id="content">
+						<div class="table-wrapper">
+							sssh I know, its janky af
+						</div>
+					</section> -->
+				</div>
+			</div>
+
+							<table class="alt">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>FOSS Client</th>
+										<th>Non-Free Dependencies</th>
+										<th>FOSS Server</th>
+										<th>Protocol</th>
+										<th>Federated</th>
+										<th>Decentralized</th>
+										<th>Encryption</th>
+										<th>Encrypted by Default</th>
+										<th>Battery Drain</th>
+										<th>Data Usage</th>
+										<th>Desktop Client</th>
+										<th>File Sharing</th>
+										<th>Voice Calling</th>
+										<th>Video Calling</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Conversations</td>
+										<td>GPLv3</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>XMPP</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>Strong</td>
+										<td>To contacts with OMEMO</td>
+										<td>Minimal</td>
+										<td>Minimal</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Signal</td>
+										<td>GPLv3</td>
+										<td>Yes, GMS</td>
+										<td>Yes</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>No</td>
+										<td>Strong</td>
+										<td>To other Signal users</td>
+										<td>Minimal</td>
+										<td>?</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Ring</td>
+										<td>GPLv3</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>Custom</td>
+										<td>?</td>
+										<td>Yes</td>
+										<td>Okay</td>
+										<td>Yes</td>
+										<td>High</td>
+										<td>Medium</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Silence</td>
+										<td>GPLv3</td>
+										<td>No</td>
+										<td>N/A</td>
+										<td>SMS</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Strong</td>
+										<td>No</td>
+										<td>Minimal</td>
+										<td>Minimal</td>
+										<td>No</td>
+										<td>Basic</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Briar</td>
+										<td>GPLv3</td>
+										<td>No</td>
+										<td>N/A</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>Strong</td>
+										<td>Yes</td>
+										<td>High</td>
+										<td>High</td>
+										<td>No</td>
+										<td>No</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Xabber</td>
+										<td>GPLv3</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>XMPP</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>Strong</td>
+										<td>No</td>
+										<td>Low</td>
+										<td>Low</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Telegram</td>
+										<td>GPLv2</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>No</td>
+										<td>Eh*</td>
+										<td>No</td>
+										<td>?</td>
+										<td>?</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Kontalk</td>
+										<td>GPLv3</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>XMPP</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>Okay</td>
+										<td>?</td>
+										<td>?</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Delta Chat</td>
+										<td>GPLv3</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>E-Mail</td>
+										<td>Yes</td>
+										<td>?</td>
+										<td>Okay</td>
+										<td>To contacts with AutoCrypt</td>
+										<td>Low</td>
+										<td>Minimal</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Wire</td>
+										<td>GPLv3</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>No</td>
+										<td>Okay*</td>
+										<td>Yes</td>
+										<td>?</td>
+										<td>?</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>WhatsApp</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>No</td>
+										<td>Strong*</td>
+										<td>Yes</td>
+										<td>?</td>
+										<td>?</td>
+										<td>Web</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Google Allo</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>No</td>
+										<td>Strong*</td>
+										<td>No</td>
+										<td>?</td>
+										<td>?</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Threema</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>No</td>
+										<td>Eh*</td>
+										<td>Yes</td>
+										<td>?</td>
+										<td>?</td>
+										<td>Web</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>No</td>
+									</tr>
+									<tr>
+										<td>Facebook Messenger</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>No</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>No</td>
+										<td>Strong*</td>
+										<td>No</td>
+										<td>High</td>
+										<td>?</td>
+										<td>Web</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Ensichat</td>
+										<td>MPLv2</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>Yes</td>
+										<td>None</td>
+										<td>N/A</td>
+										<td>?</td>
+										<td>?</td>
+										<td>No</td>
+										<td>No</td>
+										<td>No</td>
+										<td>No</td>
+									</tr>
+								</tbody>
+							</table>
+
+			<footer id="footer">
+				<ul class="copyright">
+					<li>Spot Communications, Inc. &copy; 2017-2018 || <a href="/pages/legal/pp.html">Privacy Policy</a> || <a href="/pages/legal/tos.html">Terms of Service</a> || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
+				</ul>
+			</footer>
+		</div>
+
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
+		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DivestOS&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
+	</body>
+</html>
