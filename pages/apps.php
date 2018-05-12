@@ -53,11 +53,11 @@
 
 					<section id="content">
 						<h3>On Messaging Apps</h3>
-						<p>DivestOS includes Silence, a SMS only fork of Signal, it allows sending encrypted SMS messages to other users of Silence (such as CopperheadOS users). It is not however recommended for use as your primary messaging client, and is there more as a fallback. In the future we hope we can recommended the use of Signal, but it currently bundles proprietary Google libraries and doesn't allow forcing WebSocket mode. But for now and hopefully always into the future we do wholly recommend Conversations, a top notch XMPP client, fully supports the OMEMO XEP, is easy on the battery, and doesn't force you into a walled garden. There are many apps that we do not recommend, due to being proprietary or fundamentally insecure, but they shall remain nameless. It is not the easiest thing getting your friends and family to switch apps, so at the very least any apps with end-to-end encryption support should always be preferred over apps without E2E.</p>
+						<p>Please see the messaging tables page <a href="/pages/docs/messaging.html">here</a></p>
 						<h3>On Keyboard Apps</h3>
 						<p>Do not ever use any keyboard apps that are proprietary and/or require network permission. It doesn't matter how great that autocomplete is, its garbage if its sending everything you type to a server somewhere just to be data mined. It doesn't even matter if it has a "good" privacy policy or if you trust the creator, sending it away incurs the chance of being intercepted by a less trusted party.</p>
 						<h3>On Web Browsers</h3>
-						<p>Please go to the browser tables page <a href="/pages/docs/browsers.html">here</a></p>
+						<p>Please see the browser tables page <a href="/pages/docs/browsers.html">here</a></p>
 
 						<?php print(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/pages/apps.html")); ?>
 					</section>
