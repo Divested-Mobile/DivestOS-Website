@@ -53,6 +53,8 @@
 
 					<p>DivestOS includes Silence, a SMS only fork of Signal, it allows sending encrypted SMS messages to other users of Silence (such as CopperheadOS users). It is not however recommended for use as your primary messaging client, and is there more as a fallback. The only client for now that we recommend is Conversations, a top notch XMPP client, fully supports the OMEMO XEP, is easy on the battery, and doesn't force you into a walled garden. It is not the easiest thing getting your friends and family to switch apps, so at the very least any apps with end-to-end encryption support should always be preferred over apps without.</p>
 
+					<p>As noted below the Signal protocol (double ratchet) is the current gold standard for end-to-end asynchronous messaging encryption.</p>
+
 					<!--<section id="content">
 						<div class="table-wrapper">
 							sssh I know, its janky af
@@ -90,7 +92,7 @@
 										<td>XMPP</td>
 										<td>Yes</td>
 										<td>No</td>
-										<td>Strong</td>
+										<td>TLS + OMEMO (Signal) E2E</td>
 										<td>To contacts with OMEMO</td>
 										<td>Minimal</td>
 										<td>Minimal</td>
@@ -107,9 +109,9 @@
 										<td>Custom</td>
 										<td>No</td>
 										<td>No</td>
-										<td>Strong</td>
+										<td>TLS + Signal E2E</td>
 										<td>To contacts with Signal</td>
-										<td>Minimal</td>
+										<td>?</td>
 										<td>?</td>
 										<td>Yes</td>
 										<td>Yes</td>
@@ -124,7 +126,7 @@
 										<td>Matrix</td>
 										<td>Yes</td>
 										<td>No</td>
-										<td>Strong</td>
+										<td>TLS + Olm (Signal) E2E</td>
 										<td>Not yet</td>
 										<td>?</td>
 										<td>?</td>
@@ -141,7 +143,7 @@
 										<td>Custom</td>
 										<td>?</td>
 										<td>Yes</td>
-										<td>Okay</td>
+										<td>TLS + SRTP + Custom E2E</td>
 										<td>Yes</td>
 										<td>High</td>
 										<td>Medium</td>
@@ -158,7 +160,7 @@
 										<td>SMS</td>
 										<td>Yes</td>
 										<td>Yes</td>
-										<td>Strong</td>
+										<td>Signal E2E</td>
 										<td>No</td>
 										<td>Minimal</td>
 										<td>Minimal</td>
@@ -175,7 +177,7 @@
 										<td>Custom</td>
 										<td>No</td>
 										<td>Yes</td>
-										<td>Strong</td>
+										<td>Custom E2E</td>
 										<td>Yes</td>
 										<td>High</td>
 										<td>High</td>
@@ -192,7 +194,7 @@
 										<td>XMPP</td>
 										<td>Yes</td>
 										<td>No</td>
-										<td>Strong</td>
+										<td>TLS + OTR E2E</td>
 										<td>No</td>
 										<td>Low</td>
 										<td>Low</td>
@@ -209,7 +211,7 @@
 										<td>Custom</td>
 										<td>No</td>
 										<td>No</td>
-										<td>Eh*</td>
+										<td>Custom E2E</td>
 										<td>No</td>
 										<td>?</td>
 										<td>?</td>
@@ -226,8 +228,8 @@
 										<td>XMPP</td>
 										<td>Yes</td>
 										<td>No</td>
+										<td>TLS + OpenPGP E2E</td>
 										<td>Yes</td>
-										<td>Okay</td>
 										<td>?</td>
 										<td>?</td>
 										<td>Yes</td>
@@ -243,7 +245,7 @@
 										<td>E-Mail</td>
 										<td>Yes</td>
 										<td>?</td>
-										<td>Okay</td>
+										<td>TLS + OpenPGP E2E</td>
 										<td>To contacts with AutoCrypt</td>
 										<td>Low</td>
 										<td>Minimal</td>
@@ -260,7 +262,7 @@
 										<td>Custom</td>
 										<td>No</td>
 										<td>No</td>
-										<td>Okay*</td>
+										<td>Custom E2E</td>
 										<td>Yes</td>
 										<td>?</td>
 										<td>?</td>
@@ -277,7 +279,7 @@
 										<td>Custom</td>
 										<td>No</td>
 										<td>No</td>
-										<td>Strong*</td>
+										<td>TLS + Signal E2E</td>
 										<td>Yes</td>
 										<td>?</td>
 										<td>?</td>
@@ -294,7 +296,7 @@
 										<td>Custom</td>
 										<td>No</td>
 										<td>No</td>
-										<td>Strong*</td>
+										<td>TLS + Signal E2E</td>
 										<td>No</td>
 										<td>?</td>
 										<td>?</td>
@@ -311,7 +313,7 @@
 										<td>Custom</td>
 										<td>No</td>
 										<td>No</td>
-										<td>Eh*</td>
+										<td>Custom E2E</td>
 										<td>Yes</td>
 										<td>?</td>
 										<td>?</td>
@@ -328,7 +330,24 @@
 										<td>Custom</td>
 										<td>No</td>
 										<td>No</td>
-										<td>Strong*</td>
+										<td>TLS + Signal E2E</td>
+										<td>No</td>
+										<td>?</td>
+										<td>?</td>
+										<td>Web</td>
+										<td>Yes</td>
+										<td>Yes</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Skype</td>
+										<td>No</td>
+										<td>?</td>
+										<td>No</td>
+										<td>Custom</td>
+										<td>No</td>
+										<td>No</td>
+										<td>TLS</td>
 										<td>No</td>
 										<td>?</td>
 										<td>?</td>
