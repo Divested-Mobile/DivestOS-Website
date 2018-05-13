@@ -1,59 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Post Install - DivestOS</title>
-		<meta charset="utf-8" />
-		<meta name="theme-color" content="#212121">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
-		<link href="/images/favicon.png" rel="shortcut icon">
-		<link rel="stylesheet" href="/assets/css/main.css" />
-	</head>
-	<body>
-		<div id="page-wrapper">
-			<header id="header">
-				<h1 id="logo"><a href="/index.html">DivestOS</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="/index.html">Home</a></li>
-						<li>
-							<a href="#">Get Started</a>
-							<ul>
-								<li><a href="/pages/bootloader.html">Bootloader Unlocking</a></li>
-								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
-								<li><a href="/pages/post_install.html">Post Install</a></li>
-								<li><a href="/pages/troubleshooting.html">Troubleshooting</a></li>
-								<li><a href="/pages/apps.php">Recommended Apps</a></li>
-								<li><a href="/pages/extras.html">Extras</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Docs</a>
-							<ul>
-								<li><a href="/pages/docs/faq.html">FAQ</a></li>
-								<li><a href="/pages/docs/screenshots.html">Screenshots</a></li>
-								<li><a href="/pages/docs/messengers.html">Messenger Tables</a></li>
-								<li><a href="/pages/docs/browsers.html">Browser Tables</a></li>
-								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
-								<li><a href="/pages/docs/build.html">Build Guide</a></li>
-							</ul>
-						</li>
-						<li><a href="https://gitea.divestos.xyz/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
-						<li><a href="/pages/about.html">About</a></li>
-					</ul>
-				</nav>
-			</header>
-
-			<div id="main" class="wrapper style1">
-				<div class="container">
-					<header class="major">
-						<h2>Post Install</h2>
-						<p>Things you should do soon after installing</p>
-					</header>
-
-					<section id="content">
+				<div class="card fluid">
+					<h2>Post Install</h2>
+					<p>Things you should do soon after installing</p>
+					<div class="section">
 						<h3>Install some apps!</h3>
 						<p>We created a list of recommended and tested apps <a href="/pages/apps.php">here</a>.<br>You can also get access to even more apps by enabling the included 'IzzyOnDroid' repo; be warned however that while all apps are open source, not all are fully FOSS. Read more <a href="https://apt.izzysoft.de/fdroid/index/info" target="_blank" rel="nofollow noopener noreferrer">here at IzzySoft.</a></p>
+					</div>
+					<div class="section">
 						<h3>Optional settings to change</h3>
 						<ul>
 							<li>Utilizing and configuring 'Profiles' for your uses/environment can increase battery life and potentially enhance security.</li>
@@ -63,6 +15,8 @@
 							<li>Enabling 'Increasing ring volume' is very nice if you don't use it already</li>
 							<li>Setting a lockscreen password of 12+ characters is extremely recommended, at the minimum please use a 6+ digit pin</li>
 						</ul>
+					</div>
+					<div class="section">
 						<h3>Enable a location provider or two</h3>
 						<p>In order to obtain your location without GPS a location provider is necessary. These can utilize known locations of cell towers and Wi-Fi access points in order to determine your location. Backends can either be powered by offline or online databases.</p>
 						<ul>
@@ -71,33 +25,20 @@
 							<li>To enable either backend: microG Settings > UnifiedNlp Settings > Configure location backends</li>
 							<li>There are additional backends avaialble via F-Droid.</li>
 						</ul>
+					</div>
+					<div class="section">
 						<h3>Advanced changes</h3>
 						<ul>
 							<li>Flash a firmware deblobber from <a href="/pages/extras.html">here</a> to further remove proprietary code from your device</li>
 							<li>Flash the corresponding recovery for your device for extra verification of updates</li>
 							<li>Consider relocking your bootloader. Warning: Some devices (eg. Motorola) will hard brick upon relocking</li>
 						</ul>
+					</div>
+					<div class="section">
 						<h3>To support proprietary apps</h3>
 						<ul style="color:#f44336;">
 							<li><strike>To get (proprietary) apps from the Goolge Play Store, install 'Yalp Store' from F-Droid</strike></li>
 							<li><strike>To pass (the proprietary) SafetyNet checks enable the microG F-Droid repo and install 'microG DroidGuard Helper' then enable it under microG Settings > SafetyNet</strike></li>
 						</ul>
-					</section>
+					</div>
 				</div>
-			</div>
-
-			<footer id="footer">
-				<ul class="copyright">
-					<li>Spot Communications, Inc. &copy; 2017-2018 || <a href="/pages/legal/pp.html">Privacy Policy</a> || <a href="/pages/legal/tos.html">Terms of Service</a> || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
-				</ul>
-			</footer>
-		</div>
-
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="/assets/js/jquery.dropotron.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-		<script src="/assets/js/main.js"></script>
-		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
-		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DivestOS&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
-	</body>
-</html>

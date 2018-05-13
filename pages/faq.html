@@ -1,57 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>FAQ - DivestOS</title>
-		<meta charset="utf-8" />
-		<meta name="theme-color" content="#212121">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
-		<link href="/images/favicon.png" rel="shortcut icon">
-		<link rel="stylesheet" href="/assets/css/main.css" />
-	</head>
-	<body>
-		<div id="page-wrapper">
-			<header id="header">
-				<h1 id="logo"><a href="/index.html">DivestOS</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="/index.html">Home</a></li>
-						<li>
-							<a href="#">Get Started</a>
-							<ul>
-								<li><a href="/pages/bootloader.html">Bootloader Unlocking</a></li>
-								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
-								<li><a href="/pages/post_install.html">Post Install</a></li>
-								<li><a href="/pages/troubleshooting.html">Troubleshooting</a></li>
-								<li><a href="/pages/apps.php">Recommended Apps</a></li>
-								<li><a href="/pages/extras.html">Extras</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Docs</a>
-							<ul>
-								<li><a href="/pages/docs/faq.html">FAQ</a></li>
-								<li><a href="/pages/docs/screenshots.html">Screenshots</a></li>
-								<li><a href="/pages/docs/messengers.html">Messenger Tables</a></li>
-								<li><a href="/pages/docs/browsers.html">Browser Tables</a></li>
-								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
-								<li><a href="/pages/docs/build.html">Build Guide</a></li>
-							</ul>
-						</li>
-						<li><a href="https://gitea.divestos.xyz/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
-						<li><a href="/pages/about.html">About</a></li>
-					</ul>
-				</nav>
-			</header>
-
-			<div id="main" class="wrapper style1">
-				<div class="container">
-					<header class="major">
-						<h2>Frequently Asked Questions</h2>
-						<p></p>
-					</header>
-
-					<section id="content">
+				<div class="card fluid">
+					<h2>Frequently Asked Questions</h2>
+					<div class="section">
 						<h4>What phone do you recommend?</h4>
 						<p>For a phone that 'just works', we recommended basically any Nexus or Pixel device. They are easy to unlock and get great support from the community.</p>
 						<ul>
@@ -86,12 +35,6 @@
 						<h4>Why did you remove the weather providers?</h4>
 						<p>Because they all transmit your location on a somewhat fixed schedule over HTTP.</p>
 
-						<h4>Why haven't you removed Trebuchet's RemoteFolder malware?</h4>
-						<p>Because it doesn't do anything unless configured and will be eventually removed once its rebased upon the newer AOSP launcher (which has already happened in LineageOS 15.1).</p>
-
-						<h4>Why haven't you updated the WebView or replaced it with Chromium Monochrome?</h4>
-						<p>- Because building Chromium is a hassle<br>- The default browser is Gecko<br>- Hopefully once LineageOS 15.1 is stable they'll actually keep it updated.</p>
-
 						<h4>Why did you only partially remove VoLTE?</h4>
 						<p>Because it is necessary on some carriers to be able to call. It also allows you to stay on LTE longer which is all around a very good thing.</p>
 
@@ -112,22 +55,5 @@
 
 						<h4>Why are you wasting your time with Android? Its clear that Google has been slowly killing AOSP every release!</h4>
 						<p>Android is a legitimately fantastic operating system and no other mobile platform has as many open source apps as it does.</p>
-					</section>
+					</div>
 				</div>
-			</div>
-
-			<footer id="footer">
-				<ul class="copyright">
-					<li>Spot Communications, Inc. &copy; 2017-2018 || <a href="/pages/legal/pp.html">Privacy Policy</a> || <a href="/pages/legal/tos.html">Terms of Service</a> || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
-				</ul>
-			</footer>
-		</div>
-
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="/assets/js/jquery.dropotron.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-		<script src="/assets/js/main.js"></script>
-		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
-		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DivestOS&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
-	</body>
-</html>

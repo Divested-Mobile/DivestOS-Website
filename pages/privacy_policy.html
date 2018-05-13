@@ -1,57 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Privacy Policy - DivestOS</title>
-		<meta charset="utf-8" />
-		<meta name="theme-color" content="#212121">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
-		<link href="/images/favicon.png" rel="shortcut icon">
-		<link rel="stylesheet" href="/assets/css/main.css" />
-	</head>
-	<body>
-		<div id="page-wrapper">
-			<header id="header">
-				<h1 id="logo"><a href="/index.html">DivestOS</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="/index.html">Home</a></li>
-						<li>
-							<a href="#">Get Started</a>
-							<ul>
-								<li><a href="/pages/bootloader.html">Bootloader Unlocking</a></li>
-								<li><a href="/pages/devices.php?base=LineageOS">Device Downloads</a></li>
-								<li><a href="/pages/post_install.html">Post Install</a></li>
-								<li><a href="/pages/troubleshooting.html">Troubleshooting</a></li>
-								<li><a href="/pages/apps.php">Recommended Apps</a></li>
-								<li><a href="/pages/extras.html">Extras</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Docs</a>
-							<ul>
-								<li><a href="/pages/docs/faq.html">FAQ</a></li>
-								<li><a href="/pages/docs/screenshots.html">Screenshots</a></li>
-								<li><a href="/pages/docs/messengers.html">Messenger Tables</a></li>
-								<li><a href="/pages/docs/browsers.html">Browser Tables</a></li>
-								<li><a href="/pages/docs/broken.html">Functionality Tables</a></li>
-								<li><a href="/pages/docs/build.html">Build Guide</a></li>
-							</ul>
-						</li>
-						<li><a href="https://gitea.divestos.xyz/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
-						<li><a href="/pages/about.html">About</a></li>
-					</ul>
-				</nav>
-			</header>
-
-			<div id="main" class="wrapper style1">
-				<div class="container">
-					<header class="major">
-						<h2>Privacy Policy (May 8th, 2018)</h2>
-						<p>User privacy is one of the primary goals of DivestOS. Detailed below is everything you need to know about how your data is handled.</p>
-					</header>
-
-					<section id="content">
+				<div class="card fluid">
+					<h2>Privacy Policy (May 8th, 2018)</h2>
+					<p>User privacy is one of the primary goals of DivestOS. Detailed below is everything you need to know about how your data is handled.</p>
+					<div class="section">
 						<h3>What data we (Spot Communications, Inc.) collect</h3>
 						<ul>
 							<li>Website</li>
@@ -73,13 +23,18 @@
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 								<li>How to disable: The server will not store the request if your browser's 'Do Not Track' option is enabled. This check will be moved to the client in the future.</li>
 							</ul>
-							<li>Git Server</li>
-							<ul>
-								<li>Coming soon...</li>
-							</ul>
 							<li>ROM</li>
 							<ul>
 								<li>The ROM does not contain any analytics and any requests are used only for supporting it</li>
+							</ul>
+							<li>ROM: Captive Portal Check</li>
+							<ul>
+								<li>What we collect: Static User Agent, IP Address</li>
+								<li>How often: On every Wi-Fi and cell connection</li>
+								<li>Why we collect: Used to determine if there is an Internet connection</li>
+								<li>When it will be deleted: All requests to gen204.php are never logged</li>
+								<li>What else will we use it for: Nothing else</li>
+								<li>How to disable: <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
 							</ul>
 							<li>ROM: Updater</li>
 							<ul>
@@ -90,15 +45,6 @@
 								<li>What else will we use it for: Will be occasionally used to determine how many users we have and what percent are up-to-date or not</li>
 								<li>How to anonymize: Tor support via Orbot will be added in the future</li>
 								<li>How to disable: Automatic checks can be disabled in Settings > About > DivestOS updates > Preferences > Auto updates check</li>
-							</ul>
-							<li>ROM: Captive Portal Check</li>
-							<ul>
-								<li>What we collect: Static User Agent, IP Address</li>
-								<li>How often: On every Wi-Fi and cell connection</li>
-								<li>Why we collect: Used to determine if there is an Internet connection</li>
-								<li>When it will be deleted: All requests to gen204.php are never logged</li>
-								<li>What else will we use it for: Nothing else</li>
-								<li>How to disable: $ adb shell settings put global captive_portal_mode 0; #An option to easily toggle this will be added in the future.</li>
 							</ul>
 							<li>ROM: DivestOS F-Droid Repos</li>
 							<ul>
@@ -121,6 +67,8 @@
 								<li>How to anonymize: Install Orbot and enable 'Download over Tor'</li>
 							</ul>
 						</ul>
+					</div>
+					<div class="section">
 						<h3>What data third parties collect</h3>
 						<p>Third parties are used to support specific features and apps</p>
 						<ul>
@@ -139,7 +87,7 @@
 								<li>Description: Used to determine if there is a captive portal, when ours is unavailable</li>
 								<li>What they receive: Static User Agent, IP Address</li>
 								<li>How often: On every Wi-Fi and cell connection</li>
-								<li>How to disable: $ adb shell settings put global captive_portal_mode 0; #An option to easily toggle this will be added in the future.</li>
+								<li>How to disable: <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
 								<li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Google Privacy Policy</a></li>
 							</ul>
 							<li>ROM: F-Droid Official Repo</li>
@@ -154,22 +102,5 @@
 								<li>Privacy Policy: <a href="https://f-droid.org/en/docs/Security_Model/" target="_blank" rel="nofollow noopener noreferrer">F-Droid Security Information</a></li>
 							</ul>
 						</ul>
-					</section>
+					</div>
 				</div>
-			</div>
-
-			<footer id="footer">
-				<ul class="copyright">
-					<li>Spot Communications, Inc. &copy; 2017-2018 || <a href="/pages/legal/pp.html">Privacy Policy</a> || <a href="/pages/legal/tos.html">Terms of Service</a> || Designed by <a href="https://html5up.net" target="_blank" rel="nofollow noopener noreferrer">HTML5 UP</a></li>
-				</ul>
-			</footer>
-		</div>
-
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="/assets/js/jquery.dropotron.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-		<script src="/assets/js/main.js"></script>
-		<script type="text/javascript" src="https://spotco.us/shadow/assets/js/fingerprint2.min.js"></script>
-		<script type="text/javascript">new Fingerprint2().get(function(result, components){var atr = new XMLHttpRequest(); atr.open("POST", "https://spotco.us/shadow/shadow.php", true); atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); atr.send("p=DivestOS&fpid=" + result + "&ref=" + document.referrer.split('/')[2]);});</script>
-	</body>
-</html>

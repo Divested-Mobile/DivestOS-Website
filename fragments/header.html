@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title><?php $title=ucwords(str_replace("&lowbar;", " ", noHTML($_GET["page"]))); if(strlen($title) > 0) { print($title . " - "); } ?>DivestOS</title>
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#212121">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
+		<link href="/images/favicon.png" rel="shortcut icon">
+		<link rel="stylesheet" href="assets/css/mini-default-v3.0.0-alpha.3.min.css">
+	</head>
+
+	<body>
+		<header class="sticky" style="text-align: center;">
+			<a href="/index.php" class="logo col-sm-3" style="color: #FF5722;">DivestOS</a>
+			<label for="drawer-control" class="button drawer-toggle"></label>
+		</header>
+
+		<div class="row">
+			<!-- Navigation -->
+			<input type="checkbox" id="drawer-control" class="drawer">
+			<nav class="col-md-3 col-lg-2">
+				<label for="drawer-control" class="drawer-close"></label>
+				<a href="/index.php?page=home">Home</a>
+				<span>Get Started</span>
+					<a class="sublink-1" href="/index.php?page=bootloader">Bootloader Unlocking</a>
+					<a class="sublink-1" href="/index.php?page=devices&base=LineageOS">Device Downloads</a>
+					<a class="sublink-1" href="/index.php?page=post_install">Post Install</a>
+					<a class="sublink-1" href="/index.php?page=troubleshooting">Troubleshooting</a>
+					<a class="sublink-1" href="/index.php?page=apps">Recommended Apps</a>
+					<a class="sublink-1" href="/index.php?page=extras">Extras</a>
+				<span>Docs</span>
+					<a class="sublink-1" href="/index.php?page=faq">FAQ</a>
+					<a class="sublink-1" href="/index.php?page=screenshots">Screenshots</a>
+					<a class="sublink-1" href="/index.php?page=browsers">Browser Tables</a>
+					<a class="sublink-1" href="/index.php?page=messengers">Messenger Tables</a>
+					<a class="sublink-1" href="/index.php?page=broken">Functionality Tables</a>
+					<a class="sublink-1" href="/index.php?page=build">Build Guide</a>
+				<a href="https://git.spotco.us/DivestOS" target="_blank"  rel="nofollow noopener noreferrer">Source Code</a>
+				<a href="/index.php?page=about">About</a>
+			</nav>
+
+			<!-- Content -->
+			<div class="col-sm-12 col-md-9 col-lg-10">

@@ -1,0 +1,321 @@
+				<div class="card fluid">
+					<h2>Messenger Comparison Table</h2>
+					<p>This is not intended to be an extremely comprehensive list, but enough to get a grasp on the situation.</p>
+					<div class="section">
+						<table class="striped hoverable horizontal" style="max-height: 100%;">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>FOSS Client</th>
+									<th>Non-Free Dependencies</th>
+									<th>FOSS Server</th>
+									<th>Protocol</th>
+									<th>Federated</th>
+									<th>Decentralized</th>
+									<th>Encryption</th>
+									<th>Encrypted by Default</th>
+									<th>Battery Drain</th>
+									<th>Data Usage</th>
+									<th>Desktop Client</th>
+									<th>File Sharing</th>
+									<th>Voice Calling</th>
+									<th>Video Calling</th>
+									<!-- TODO: Audited?, Leaky?, Track Record, Origin Country -->
+									<!-- TODO: Mumble, Discord, Slack, RocketChat -->
+								</tr>
+							</thead>
+							<tbody>
+								<!-- TODO: ADD data-label FOR MOBILE! -->
+								<tr>
+									<td data-label="Name">Conversations</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#4CAF50;">No</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>XMPP</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">TLS + OMEMO (Signal) E2E</td>
+									<td style="color:#FFC107;">To contacts with OMEMO</td>
+									<td style="color:#4CAF50;">Minimal</td>
+									<td style="color:#4CAF50;">Minimal</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Signal</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#f44336;">Yes, GMS</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">TLS + Signal E2E</td>
+									<td style="color:#FFC107;">To contacts with Signal</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Riot</td>
+									<td style="color:#4CAF50;">Apache</td>
+									<td style="color:#4CAF50;">No</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>Matrix</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">TLS + Olm (Signal) E2E</td>
+									<td style="color:#f44336;">Not yet</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Ring</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#4CAF50;">No</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>Custom</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>Yes</td>
+									<td style="color:#4CAF50;">TLS + SRTP + Custom E2E</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">High</td>
+									<td>?</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Silence</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#4CAF50;">No</td>
+									<td style="color:#673AB7;">N/A</td>
+									<td>SMS</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>Yes</td>
+									<td style="color:#4CAF50;">Signal E2E</td>
+									<td style="color:#FFC107;">To contacts with Silence</td>
+									<td style="color:#4CAF50;">Minimal</td>
+									<td style="color:#4CAF50;">Minimal</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#FFC107;">Basic</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Briar</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#4CAF50;">No</td>
+									<td style="color:#673AB7;">N/A</td>
+									<td>Custom</td>
+									<td style="color:#673AB7;">No</td>
+									<td>Yes</td>
+									<td style="color:#4CAF50;">Custom E2E</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">High</td>
+									<td>?</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Xabber</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#4CAF50;">No</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>XMPP</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">TLS + OTR E2E</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#4CAF50;">Low</td>
+									<td style="color:#4CAF50;">Low</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Telegram</td>
+									<td style="color:#4CAF50;">GPLv2</td>
+									<td style="color:#f44336;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">Custom E2E</td>
+									<td style="color:#f44336;">No</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Kontalk</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#4CAF50;">No</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>XMPP</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">TLS + OpenPGP E2E</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Delta Chat</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#4CAF50;">No</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>E-Mail</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>?</td>
+									<td style="color:#4CAF50;">TLS + OpenPGP E2E</td>
+									<td style="color:#FFC107;">To contacts with AutoCrypt</td>
+									<td style="color:#4CAF50;">Low</td>
+									<td style="color:#4CAF50;">Minimal</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Wire</td>
+									<td style="color:#4CAF50;">GPLv3</td>
+									<td style="color:#f44336;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">Custom E2E</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">WhatsApp</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">TLS + Signal E2E</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#FFC107;">Web</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Google Allo</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">TLS + Signal E2E</td>
+									<td style="color:#f44336;">No</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Threema</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">Custom E2E</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#FFC107;">Web</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#f44336;">No</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Facebook Messenger</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#4CAF50;">TLS + Signal E2E</td>
+									<td style="color:#f44336;">No</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#FFC107;">Web</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Google Hangouts</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#673AB7;">TLS</td>
+									<td style="color:#f44336;">No</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#FFC107;">Web</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Skype</td>
+									<td style="color:#f44336;">No</td>
+									<td style="color:#f44336;">Yes</td>
+									<td style="color:#f44336;">No</td>
+									<td>Custom</td>
+									<td style="color:#f44336;">No</td>
+									<td>No</td>
+									<td style="color:#673AB7;">TLS</td>
+									<td style="color:#f44336;">No</td>
+									<td>?</td>
+									<td>?</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+									<td style="color:#4CAF50;">Yes</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
