@@ -57,13 +57,13 @@ echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc</code></pre>
 						<pre><code>firejail --profile=/etc/firejail/aosp.profile bash</code></pre>
 						<h4>Checking out the code</h4>
 						<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a separate drive from your system drive.</p>
-						<pre><code>git clone https://github.com/DivestOS_Mobile/DivestOS-Build.git DivestOS
+						<pre><code>git clone https://git.spotco.us/DivestOS/DivestOS-Build.git DivestOS
 cd DivestOS
 git submodule update --init --recursive
-mkdir -p Build/LineageOS-14.1/.repo/local_manifests Builds Signing_Keys
-cd Build/LineageOS-14.1
-ln -s ../../Manifests/Manifest_LAOS-14.1.xml .repo/local_manifests/local_manifest.xml
-repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+mkdir -p Build/LineageOS-15.1/.repo/local_manifests Builds Signing_Keys
+cd Build/LineageOS-15.1
+ln -s ../../Manifests/Manifest_LAOS-15.1.xml .repo/local_manifests/local_manifest.xml
+repo init -u git://github.com/LineageOS/android.git -b lineage-15.1
 repo sync #This part will take a while
 
 #Some systems have python3 set as default, the build scripts require python2
@@ -71,7 +71,7 @@ virtualenv2 venv
 
 #TODO: Signing Keys
 cd ../..
-nano Scripts/LineageOS-14.1/00init.sh #Update all relevant paths
+nano Scripts/LineageOS-15.1/00init.sh #Update all relevant paths
 </code></pre>
 					<h4>Setting up ccache (Optional)</h4>
 						<p>Use of ccache is highly recommended, its an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
@@ -97,9 +97,9 @@ ccache -M 128GB #Optionally set a size limit</code></pre>
 					<div class="section">
 						<h3>Building</h3>
 						<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
-						<pre><code>cd Build/LineageOS-14.1
+						<pre><code>cd Build/LineageOS-15.1
 source venv/bin/activate #Only for python3 default systems
-source ../../Scripts/LineageOS-14.1/00init.sh
+source ../../Scripts/LineageOS-15.1/00init.sh
 resetWorkspace
 patchWorkspace
 buildDevice [device] #or buildAll for all supported devices</code></pre>

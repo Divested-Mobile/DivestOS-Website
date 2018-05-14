@@ -38,9 +38,11 @@ function markPurchased() {
 }
 
 function checkoutProxy() {
-	var warning = "Payment processing is performed by Stripe. By clicking continue your browser will load proprietary code from their servers. Do you want to continue?";
+	var warning = "Payment processing is performed by Stripe. By continuing your browser will load proprietary code from their servers. Do you want to continue?";
 	if(confirm(warning)) {
 		loadExternalJS("https://checkout.stripe.com/checkout.js", checkout);
+	} else {
+		document.getElementById("radPriceFree").click();
 	}
 }
 
@@ -48,7 +50,11 @@ function updateDownloadButtons(text, href) {
 	var arrDownloadButtons = document.getElementsByClassName("rom");
 	for(var c = 0; c < arrDownloadButtons.length; c++) {
 		arrDownloadButtons[c].text = text;
-		arrDownloadButtons[c].href = href;
+		if(href == "value") {
+			arrDownloadButtons[c].href = arrDownloadButtons[c].getAttribute("value");
+		} else {
+			arrDownloadButtons[c].href = href;
+		}
 	}
 }
 
@@ -58,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	for(var c = 0; c < arrRadPrice.length; c++) {
 		arrRadPrice[c].onclick = function() {
 			if(this.id=='radPriceFree') {
-				updateDownloadButtons("Download", this.getAttribute("value"));
+				updateDownloadButtons("Download", "value");
 			} else {
 				updateDownloadButtons("Purchase", "javascript:checkoutProxy()");
 			}
