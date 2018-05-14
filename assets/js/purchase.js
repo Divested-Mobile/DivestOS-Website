@@ -34,6 +34,14 @@ function checkout() {
 		handler.close();
 	});
 }
+
+function checkoutProxy() {
+	var warning = "Payment processing is performed by Stripe. By clicking continue your browser will load proprietary code from their servers. Do you want to continue?";
+	if(confirm(warning)) {
+		loadExternalJS("https://checkout.stripe.com/checkout.js", checkout);
+	}
+}
+
 $(document).ready(function() {
 	$('input[type=radio][name="radPrice"]').on('change', function(){
 		if(this.id=='radPriceFree') {
@@ -45,7 +53,7 @@ $(document).ready(function() {
 		} else {
 			$(".rom").each(function(){
 				this.text = "Purchase";
-				this.href = "javascript:checkout()";
+				this.href = "javascript:checkoutProxy()";
 				$(this).addClass("icon-cart").removeClass("icon-upload");
 			});
 		}
