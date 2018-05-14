@@ -8,13 +8,7 @@ function checkout() {
 			var req = new XMLHttpRequest();
 			req.onreadystatechange = function() {
 				if (req.readyState == 4 && req.status == 200) {
-					setTimeout(function() {
-						$("#lblThanks").attr("hidden", false);
-						$("#radPriceTen").attr("disabled", true);
-						$("#radPriceFree").click();
-						$("#lblPriceFree").text("Purchased");
-						$("#radPriceFree").attr("disabled", true);
-					}, 500);
+					setTimeout(markPurchased, 500);
 				}
 			};
 			req.open("POST", "processor.php", true);
@@ -35,6 +29,14 @@ function checkout() {
 	});
 }
 
+function markPurchased() {
+	document.getElementById("lblThanks").hidden = false;
+	document.getElementById("radPriceTen").disabled = true;
+	document.getElementById("radPriceFree").click();
+	document.getElementById("lblPriceFree").textContent = "Purchased";
+	document.getElementById("radPriceFree").disabled = true;
+}
+
 function checkoutProxy() {
 	var warning = "Payment processing is performed by Stripe. By clicking continue your browser will load proprietary code from their servers. Do you want to continue?";
 	if(confirm(warning)) {
@@ -42,25 +44,27 @@ function checkoutProxy() {
 	}
 }
 
-$(document).ready(function() {
-	$('input[type=radio][name="radPrice"]').on('change', function(){
-		if(this.id=='radPriceFree') {
-			$(".rom").each(function(){
-				this.text = "Download";
-				this.href = $(this).attr("value");
-				$(this).addClass("icon-upload").removeClass("icon-cart");
-			});
-		} else {
-			$(".rom").each(function(){
-				this.text = "Purchase";
-				this.href = "javascript:checkoutProxy()";
-				$(this).addClass("icon-cart").removeClass("icon-upload");
-			});
-		}
-	});
-	$("#radPriceTen").click();
-});
+function updateDownloadButtons(text, href) {
+	var arrDownloadButtons = document.getElementsByClassName("rom");
+	for(var c = 0; c < arrDownloadButtons.length; c++) {
+		arrDownloadButtons[c].text = text;
+		arrDownloadButtons[c].href = href;
+	}
+}
 
-$(document).ready(function() {
-	$("#radPriceTen").click();
+document.addEventListener("DOMContentLoaded", function(event) {
+	//Handle radio buttons
+	var arrRadPrice = document.getElementsByName("radPrice");
+	for(var c = 0; c < arrRadPrice.length; c++) {
+		arrRadPrice[c].onclick = function() {
+			if(this.id=='radPriceFree') {
+				updateDownloadButtons("Download", this.getAttribute("value"));
+			} else {
+				updateDownloadButtons("Purchase", "javascript:checkoutProxy()");
+			}
+		}
+	}
+
+	//Set default
+	document.getElementById("radPriceTen").click();
 });
