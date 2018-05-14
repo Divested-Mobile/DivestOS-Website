@@ -149,4 +149,9 @@
 					</div>
 				</div>
 
+				<script type="text/javascript">
+					function getCSRFToken() {
+						return "<?php print($_SESSION['csrfToken']); ?>";
+					}
+				</script>
 				<script src="/assets/js/purchase.js"></script>

@@ -13,7 +13,7 @@ function checkout() {
 			};
 			req.open("POST", "processor.php", true);
 			req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			req.send("token=" + token.id + "&ct=<?php print($_SESSION['csrfToken']); ?>");
+			req.send("token=" + token.id + "&ct=" + getCSRFToken());
 		}
 	});
 
