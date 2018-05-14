@@ -57,7 +57,7 @@
 							continue;
 						}
 						if(strlen($file) > 30) {
-							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button rom icon-upload\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#e2e2e2'\">Download</a>";
+							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button rom\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#e2e2e2'\">Download</a>";
 							$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 							break;
 						}
