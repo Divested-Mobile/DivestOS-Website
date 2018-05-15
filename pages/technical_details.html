@@ -7,7 +7,7 @@
 						<p>The kernel is an essential part of any operating system. It provides the essential core functionalities and allows the software to talk to the hardware.</p>
 						<p>Due to the extensive modifications made by device manufacturers and upstream hardware creators, the vanilla 'Mainline' kernel cannot be used. This means that most devices use kernels that are outdated and need to be manually maintained. Some kernels can be easily kept up to date by applying kernel version patches, but more often are modified so much that they need to instead have patches manually tweaked (backported) to work. Google, Qualcomm, and other manufacturers do actually do this work but they still need to be manually applied by device maintainers. Due to this most third party and even stock ROMs ship kernels that are littered with known vulnerabilities.</p>
 						<p>We however have created a program that eases tracking and applying of these patches massively. Once supplied with a sufficient amount of patches it can can be easily fed kernels and spit out scripts that will automatically apply all applicable patches. It is far from perfect, but with our current set of ~1500 patches for ~900 CVEs it can typically apply between 20 and 250 patches to a kernel. The end result of this is that kernels are much more secure. <b>This is referred to below as our 'CVE patcher'.</b></p>
-						<p>The kernel also sports many built-in security features, that most devices actually have disabled! We created a tool that automatically enables as many of these security features as possible. This is an easy way to have a noticible increase in security with minimal effort <b>This is referred to below as our 'defconfig hardener'.</b></p>
+						<p>The kernel also sports many built-in security features, that most devices actually have disabled! We created a tool that automatically enables as many of these security features as possible. This is an easy way to have a noticeable increase in security with minimal effort <b>This is referred to below as our 'defconfig hardener'.</b></p>
 						<h4>Android Itself</h4>
 						<p></p>
 						<h4>Vendor Blobs</h4>
@@ -15,7 +15,7 @@
 					</div>
 					<div class="section">
 						<h3>The nitty gritty</h3>
-						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes we make.</p>
+						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
 						<p>Last updated: 2018-05-15</p>
 						<h4>Workspace</h4>
 						<ul>
@@ -26,9 +26,9 @@
 						</ul>
 						<h4>The Patcher</h4>
 						<p>We do not maintain forks of repos to store modifications. Instead we keep all of our changes and scripts to apply them in a single repository. This has various benefits and downsides, but works best for our needs.</p>
-						<h5>Steps perfomed when running patchWorkspace()</h5>
+						<h5>Steps performed when running patchWorkspace()</h5>
 						<ul>
-							<li>Our changes are periodically verfiied to ensure that they are properly applied and functioning</li>
+							<li>Our changes are periodically verified to ensure that they are properly applied and functioning</li>
 							<li>Before executing any scripts in the workspace a quick malware scan is performed using ClamAV</li>
 							<li>Any cherry picks are applied</li>
 							<li>Patch.sh is executed, this applies many .patch files to various repositories and also calls many functions that make further changes</li>
@@ -39,12 +39,14 @@
 								<li>hardenDefconfig(), this enables many kernel security features</li>
 							</ul>
 							<li>Defaults.sh is executed, this changes various default settings</li>
-							<li>Overclock.sh is executed, this applies overclocks (and underclocks) to various kernels</li>
+							<li>Overclock.sh is executed, this applies overclocks to various kernels</li>
 							<li>Rebrand.sh is executed, this changes many LineageOS references over to DivestOS</li>
 							<li>Deblob.sh is executed, this removed many proprietary blob files from the following locations: device, kernel, vendor</li>
 							<li>Patch_CVE.sh is executed, this executes scripts created by the CVE patcher to automatically apply many CVE patches to all the kernels</li>
 						</ul>
-						<h4>Included Apps</h4>
+						<h4>The changes</h4>
+						<p>We currently support both LineageOS 14.1 (Nougat) and 15.1 (Oreo). We try our best to ensure parity between them, but either one might have changes the other doesn't.</p>
+						<h5>Included Apps</h5>
 						<ul>
 							<li>Camera Roll: An improved gallery app. Replaces AOSP Gallery</li>
 							<li>F-Droid: An app store for FOSS apps</li>
@@ -52,8 +54,6 @@
 							<li>Offline Calendar: Allows created calendars without an account</li>
 							<li>Silence: An improve SMS app that allows for end-to-end encrypted messages between other Silence users. Replaces AOSP Messaging</li>
 						</ul>
-						<h4>The changes</h4>
-						<p>We currently support both LineageOS 14.1 (Nougat) and 15.1 (Oreo). We try our best to ensure parity between them, but either one might have changes the other doesn't.</p>
 						<h5>android_bootable_recovery</h5>
 						<ul>
 							<li>[Patch.sh 14.1] Remove nested menus</li>
@@ -66,6 +66,17 @@
 							<li>[Patch.sh] Replace AOSP SMS with Silence</li>
 							<li>[Rebrand.sh] Change build user and host</li>
 						</ul>
+						<h5>android_device_*</h5>
+						<ul>
+							<li>[Deblob.sh] Many references to proprietary blobs are removed</li>
+							<li>[Deblob.sh] Many options enabling use of proprietary blobs are removed</li>
+							<li>[Deblob.sh] The DRM server is disabled</li>
+							<li>[Deblob.sh] setup-makefiles.sh is executed to update vendor Makefiles</li>
+							<li>[Functions.sh] enhanceLocation(): Switch to HTTPS URLs</li>
+							<li>[Functions.sh] enhanceLocation(): Switch to XTRA version 3 if supported</li>
+							<li>[Functions.sh] enableDexPreOpt(): DEXPREOPT is enabled for core componenets</li>
+							<li>[Functions.sh] enableForcedEncryption(): Partitions in fstab marked encryptable are changed to forceencrypt</li>
+						</ul>
 						<h5>android_frameworks_base</h5>
 						<ul>
 							<li>[Patch.sh] Disable DropBox</li>
@@ -74,6 +85,7 @@
 							<li>[Patch.sh] Switch the default and fallback DNS to OpenNIC</li>
 							<li>[Patch.sh] Change captive portal/network monitor check endpoints to our servers</li>
 							<li>[Patch.sh] Remove the PrintRecommendation service</li>
+							<li>[Deblob.sh] ClearKey DRM module is removed</li>
 							<li>[Defaults.sh] Change the default quick tiles</li>
 							<li>[Defaults.sh] Hide sensitive notification content on lock screen</li>
 							<li>[Defaults.sh] Disable lock screen sounds</li>
@@ -87,6 +99,17 @@
 							<li>[Optimize.sh] Change ambient light sensor polling rate to 1 second</li>
 							<li>[Optimize.sh] Offload more rendering to GPU</li>
 							<li>[Optimize.sh] Enable high temperature warnings</li>
+						</ul>
+						<h5>android_kernel_*</h5>
+						<ul>
+							<li>[Patch_CVE.sh] Kernel version patches are applied</li>
+							<li>[Patch_CVE.sh] Kernel hardening patches are applied</li>
+							<li>[Patch_CVE.sh] Kernel CVE patches are applied</li>
+							<li>[Patch_CVE.sh] Kernel LOCALVERSION is updated to include patch count</li>
+							<li>[Functions.sh] hardenDefconfig(): Many options that increase security are enabled</li>
+							<li>[Functions.sh] hardenDefconfig(): Many options that decrease security are disabled</li>
+							<li>[Functions.sh] hardenDefconfig(): LOCALVERSION is updated to include to indicated the defconfig was hardened</li>
+							<li>[Overclock.sh] Select kernels are overclocked for increased performance</li>
 						</ul>
 						<h5>android_lineage-sdk / android_vendor_cmsdk</h5>
 						<ul>
@@ -171,6 +194,11 @@
 							<li>[Rebrand.sh] Change legal links to ours</li>
 							<li>[Rebrand.sh] Change ZIP name</li>
 							<li>[Rebrand.sh] Remove bootanimation</li>
+						</ul>
+						<h5>android_vendor_*</h5>
+						<ul>
+							<li>[Deblob.sh] Many references to proprietary blobs are removed</li>
+							<li>[Deblob.sh] Proprietary vendor blobs are deleted</li>
 						</ul>
 					</div>
 				</div>
