@@ -7,7 +7,7 @@
 						<p>The kernel is an essential part of any operating system. It provides the essential core functionalities and allows the software to talk to the hardware.</p>
 						<p>Due to the extensive modifications made by device manufacturers and upstream hardware creators, the vanilla 'Mainline' kernel cannot be used. This means that most devices use kernels that are outdated and need to be manually maintained. Some kernels can be easily kept up to date by applying kernel version patches, but more often are modified so much that they need to instead have patches manually tweaked (backported) to work. Google, Qualcomm, and other manufacturers do actually do this work but they still need to be manually applied by device maintainers. Due to this most third party and even stock ROMs ship kernels that are littered with known vulnerabilities.</p>
 						<p>We however have created a program that eases tracking and applying of these patches massively. Once supplied with a sufficient amount of patches it can can be easily fed kernels and spit out scripts that will automatically apply all applicable patches. It is far from perfect, but with our current set of ~1500 patches for ~900 CVEs it can typically apply between 20 and 250 patches to a kernel. The end result of this is that kernels are much more secure. <b>This is referred to below as our 'CVE patcher'.</b></p>
-						<p>The kernel also sports many built-in security features, that most devices actually have disabled! We created a tool that automatically enables as many of these security features as possible. This is an easy way to have a noticeable increase in security with minimal effort <b>This is referred to below as our 'defconfig hardener'.</b></p>
+						<p>The kernel also sports many built-in security features, that most devices actually have disabled! We created a tool that automatically enables as many of these security features as possible. This is an easy way to have a noticeable increase in security with minimal effort. <b>This is referred to below as our 'defconfig hardener'.</b></p>
 						<h4>Android Itself</h4>
 						<p></p>
 						<h4>Vendor Blobs</h4>
@@ -52,8 +52,8 @@
 							<li>Fennec DOS: A browser hardened against trackers by default. Replaces AOSP Browser/LineageOS Jelly</li>
 							<li>F-Droid: An app store for FOSS apps</li>
 							<li>microG: Allows for using apps that depend on the proprietary Google Play Services and also battery efficient location lookups.</li>
-							<li>Offline Calendar: Allows created calendars without an account</li>
-							<li>Silence: An improve SMS app that allows for end-to-end encrypted messages between other Silence users. Replaces AOSP Messaging</li>
+							<li>Offline Calendar: Allows creating calendars without an account</li>
+							<li>Silence: An improved SMS app that allows for end-to-end encrypted messages between other Silence users. Replaces AOSP Messaging</li>
 						</ul>
 						<h5>android_bootable_recovery</h5>
 						<ul>
@@ -73,7 +73,7 @@
 							<li>[Deblob.sh] Many options enabling use of proprietary blobs are removed</li>
 							<li>[Deblob.sh] The DRM server is disabled</li>
 							<li>[Deblob.sh] setup-makefiles.sh is executed to update vendor Makefiles</li>
-							<li>[Functions.sh] enhanceLocation(): Switch to HTTPS URLs</li>
+							<li>[Functions.sh] enhanceLocation(): Switch to HTTPS URLs for AGPS data</li>
 							<li>[Functions.sh] enhanceLocation(): Switch to XTRA version 3 if supported</li>
 							<li>[Functions.sh] enableDexPreOpt(): DEXPREOPT is enabled for core components</li>
 							<li>[Functions.sh] enableForcedEncryption(): Partitions in fstab marked encryptable are changed to forceencrypt</li>
