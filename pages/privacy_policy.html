@@ -6,20 +6,20 @@
 						<ul>
 							<li>Website</li>
 							<ul>
-								<li>What we collect: Page Visited, Referring Page, User Agent, and IP Address</li>
+								<li>What is received: Page Visited, Referring Page, User Agent, and IP Address</li>
 								<li>How often: On every page visit</li>
-								<li>Why we collect: Used to serve the web pages to users</li>
+								<li>Why it is received: Used to serve the web pages to users</li>
 								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
-								<li>What else will we use it for: Nothing else</li>
+								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 							</ul>
 							<li>Website Analytics</li>
 							<ul>
-								<li>What we collect: Page Visited, Stripped Referring Page, Browser Fingerprint (salted with domain), User Agent, IP Address</li>
+								<li>What is received: Page Visited, Stripped Referring Page, Browser Fingerprint (salted with domain), User Agent, IP Address</li>
 								<li>How often: On every page visit</li>
-								<li>Why we collect: Used to determine how popular and roughly how many users we have</li>
+								<li>Why it is received: Used to determine how popular and roughly how many users we have</li>
 								<li>When it will be deleted: Only the past 200 requests are stored</li>
-								<li>What else will we use it for: Nothing else</li>
+								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 								<li>How to disable: Enable your browser's 'Do Not Track' option</li>
 							</ul>
@@ -29,41 +29,41 @@
 							</ul>
 							<li>ROM: Captive Portal Check</li>
 							<ul>
-								<li>What we collect: Static User Agent, IP Address</li>
+								<li>What is received: Static User Agent, IP Address</li>
 								<li>How often: On every Wi-Fi and cell connection</li>
-								<li>Why we collect: Used to determine if there is an Internet connection</li>
+								<li>Why it is received: Used to determine if there is an Internet connection</li>
 								<li>When it will be deleted: All requests to gen204.php are never logged</li>
-								<li>What else will we use it for: Nothing else</li>
+								<li>What else will it be used for: Nothing else</li>
 								<li>How to disable: <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
 							</ul>
 							<li>ROM: Updater</li>
 							<ul>
-								<li>What we collect: Device Model, Default Android User Agent, Incremental Build ID, IP Address</li>
+								<li>What is received: Device Model, Default Android User Agent, Incremental Build ID, IP Address</li>
 								<li>How often: On every boot and also once per day</li>
-								<li>Why we collect: Used to serve system updates</li>
+								<li>Why it is received: Used to serve system updates</li>
 								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
-								<li>What else will we use it for: Will be occasionally used to determine how many users we have and what percent are up-to-date or not</li>
+								<li>What else will it be used for: Will be occasionally used to determine how many users we have and what percent are up-to-date or not</li>
 								<li>How to anonymize: Tor support via Orbot will be added in the future</li>
 								<li>How to disable: Automatic checks can be disabled in Settings > About > DivestOS updates > Preferences > Auto updates check</li>
 							</ul>
 							<li>ROM: DivestOS F-Droid Repos</li>
 							<ul>
-								<li>What we collect: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
+								<li>What is received: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
 								<li>How often: On every boot and also once per day</li>
-								<li>Why we collect: Used to serve apps and their updates</li>
+								<li>Why it is received: Used to serve apps and their updates</li>
 								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
-								<li>What else will we use it for: Nothing else</li>
+								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
 								<li>How to reduce: Set the 'Automatic update interval' to 'Never' in F-Droid > Settings</li>
 								<li>How to disable: Disable the 'DivestOS' repos in F-Droid > Settings > Repositories</li>
 							</ul>
 							<li>App: Hypatia</li>
 							<ul>
-								<li>What we collect: Signature Database Requests, IP Address</li>
+								<li>What is received: Signature Database Requests, IP Address</li>
 								<li>How often: Manually</li>
-								<li>Why we collect: Used to serve signature databases</li>
+								<li>Why it is received: Used to serve signature databases</li>
 								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
-								<li>What else will we use it for: Nothing else</li>
+								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Install Orbot and enable 'Download over Tor'</li>
 							</ul>
 						</ul>
