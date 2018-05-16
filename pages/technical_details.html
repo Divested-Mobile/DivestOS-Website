@@ -43,6 +43,7 @@
 							<li>Rebrand.sh is executed, this changes many LineageOS references over to DivestOS</li>
 							<li>Deblob.sh is executed, this removed many proprietary blob files from the following locations: device, kernel, vendor</li>
 							<li>Patch_CVE.sh is executed, this executes scripts created by the CVE patcher to automatically apply many CVE patches to all the kernels</li>
+							<li>Theme.sh (14.1 only) is executed, this changes the teal accents to orange ones</li>
 						</ul>
 						<h4>The changes</h4>
 						<p>We currently support both LineageOS 14.1 (Nougat) and 15.1 (Oreo). We try our best to ensure parity between them, but either one might have changes the other doesn't.</p>
@@ -60,6 +61,10 @@
 							<li>[Patch.sh 14.1] Remove nested menus</li>
 							<li>[Rebrand.sh] Remove LineageOS logo</li>
 							<li>[Rebrand.sh] LineageOS -> DivestOS</li>
+						</ul>
+						<h5>android_external_sqlite</h5>
+						<ul>
+							<li>[Patch.sh 14.1] Enable secure_delete</li>
 						</ul>
 						<h5>android_build</h5>
 						<ul>
@@ -86,6 +91,8 @@
 							<li>[Patch.sh] Switch the default and fallback DNS to OpenNIC</li>
 							<li>[Patch.sh] Change captive portal/network monitor check endpoints to our servers</li>
 							<li>[Patch.sh] Remove the PrintRecommendation service</li>
+							<li>[Patch.sh 14.1] Set sqlite journal mode to TRUNCATE</li>
+							<li>[Patch.sh 14.1] Add support for reducing resolution</li>
 							<li>[Deblob.sh] ClearKey DRM module is removed</li>
 							<li>[Defaults.sh] Change the default quick tiles</li>
 							<li>[Defaults.sh] Hide sensitive notification content on lock screen</li>
@@ -100,6 +107,7 @@
 							<li>[Optimize.sh] Change ambient light sensor polling rate to 1 second</li>
 							<li>[Optimize.sh] Offload more rendering to GPU</li>
 							<li>[Optimize.sh] Enable high temperature warnings</li>
+							<li>[Theme.sh 14.1] Change teal accents to orange ones</li>
 						</ul>
 						<h5>android_kernel_*</h5>
 						<ul>
@@ -133,6 +141,8 @@
 						<h5>android_packages_apps_LineageParts / android_packages_apps_CMParts</h5>
 						<ul>
 							<li>[Patch.sh] Remove {CM,Lineage}Stats</li>
+							<li>[Patch.sh 14.1] Add support for reducing resolution</li>
+							<li>[Theme.sh 14.1] Change teal accents to orange ones</li>
 						</ul>
 						<h5>android_packages_apps_Nfc</h5>
 						<ul>
@@ -143,6 +153,7 @@
 							<li>[Patch.sh] Increase max password length from 16 to 48 characters</li>
 							<li>[Defaults.sh] Disable Instant Apps</li>
 							<li>[Rebrand.sh] LineageOS -> DivestOS</li>
+							<li>[Theme.sh 14.1] Change teal accents to orange ones</li>
 						</ul>
 						<h5>android_packages_apps_SetupWizard</h5>
 						<ul>
@@ -157,21 +168,24 @@
 							<li>[Defaults.sh 14.1] Disable search</li>
 							<li>[Defaults.sh 14.1] Use compact drawer</li>
 							<li>[Defaults.sh 14.1] Hide scrollbar</li>
+							<li>[Theme.sh 14.1] Change teal accents to orange ones</li>
 						</ul>
 						<h5>android_packages_apps_Updater</h5>
 						<ul>
 							<li>[Patch.sh] Switch to our update server</li>
 							<li>[Rebrand.sh] LineageOS -> DivestOS</li>
+							<li>[Theme.sh 14.1] Change teal accents to orange ones</li>
 						</ul>
 						<h5>android_packages_apps_WallpaperPicker</h5>
 						<ul>
-							<li>[Patch.sh] Change default wallpapers</li>
 							<li>[Patch.sh] Enable basic editing (crop/zoom)</li>
+							<li>[Patch.sh 14.1] Change default wallpapers</li>
 						</ul>
 						<h5>android_packages_inputmethods_LatinIME</h5>
 						<ul>
 							<li>[Patch.sh] Remove voice input key</li>
 							<li>[Defaults.sh] Wipe personalization dictionary every five days</li>
+							<li>[Theme.sh 14.1] Change teal accents to orange ones</li>
 						</ul>
 						<h5>android_system_core</h5>
 						<ul>
@@ -189,6 +203,7 @@
 							<li>[Patch.sh] Include extra apps such as microG and F-Droid</li>
 							<li>[Patch.sh] Add the firmware_deblobber generator target</li>
 							<li>[Patch.sh] Change the buildtype from UNOFFICIAL to dos</li>
+							<li>[Patch.sh 14.1] Per app performance profiles for many apps</li>
 							<li>[Defaults.sh] Change notification sound to Pong</li>
 							<li>[Defaults.sh] Change alarm sound to Alarm Buzzer</li>
 							<li>[Defaults.sh] Change MMS user-agent</li>
