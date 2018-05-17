@@ -57,16 +57,19 @@
 							continue;
 						}
 						if(strlen($file) > 30) {
-							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button rom\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#e2e2e2'\">Download</a>";
+							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button primary rom-unknown\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='var(--button-back-color)'\">Download</a>";
 							$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 							break;
 						}
 					}
 					if(file_exists($realRootdir . $device . "/recovery.img")) {
-						$downloadButtons .= "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='#e2e2e2'\">Recovery</a>";
+						$downloadButtons .= "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button inverse small\">Recovery</a>";
 					}
 					$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
 					$color = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
+					if($color === "4CAF50") {
+						$downloadButtons = str_replace("rom-unknown", "rom-working", $downloadButtons);
+					}
 					$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
 					print($downloadButtons);
 
@@ -154,4 +157,4 @@
 						return "<?php print($_SESSION['csrfToken']); ?>";
 					}
 				</script>
-				<script type="text/javascript" src="/assets/js/purchase.js" integrity="sha384-bduP4DQqIjVm+txT1ekk06AHOrL8YMbseaFGKDXPgXw8vC0JeyvbFROzI72D/1nI"></script>
+				<script type="text/javascript" src="/assets/js/purchase.js" integrity="sha384-/q2Xj473XNtWOt6T03guRBhtzJ2lRQ0ZHjejDw4QF5wXHWTUk6PVWKaxNBefbaMl"></script>

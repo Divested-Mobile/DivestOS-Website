@@ -47,7 +47,7 @@ function checkoutProxy() {
 }
 
 function updateDownloadButtons(text, href) {
-	var arrDownloadButtons = document.getElementsByClassName("rom");
+	var arrDownloadButtons = document.getElementsByClassName("rom-working");
 	for(var c = 0; c < arrDownloadButtons.length; c++) {
 		arrDownloadButtons[c].text = text;
 		if(href == "value") {
