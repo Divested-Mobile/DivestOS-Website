@@ -3,6 +3,7 @@ Copyright (c) 2017-2018 Spot Communications, Inc.
 Below are the license mappings for all of the files found in this repository. All attempts have been made to ensure accuracy of the corresponding license files. If you've found an issue please file an issue or pull request.
 
 assets/css/mini.css - MIT
+assets/css/vibrate.css - BSD
 stripe - MIT
 [EVERYTHING ELSE] - GPLv3
 

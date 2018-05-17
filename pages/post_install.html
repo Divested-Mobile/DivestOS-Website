@@ -1,9 +1,10 @@
+				<link rel="stylesheet" href="assets/css/vibrate.css">
 				<div class="card fluid">
 					<h2>Post Install</h2>
 					<p>Things you should do soon after installing</p>
 					<div class="section">
 						<h3>Install some apps!</h3>
-						<p>We created a list of recommended and tested apps <a href="/pages/apps.php">here</a>.<br>You can also get access to even more apps by enabling the included 'IzzyOnDroid' repo; be warned however that while all apps are open source, not all are fully FOSS. Read more <a href="https://apt.izzysoft.de/fdroid/index/info" target="_blank" rel="nofollow noopener noreferrer">here at IzzySoft.</a></p>
+						<p>We created a list of recommended and tested apps <a href="/index.php?page=recommended_apps">here</a>.<br>You can also get access to even more apps by enabling the included 'IzzyOnDroid' repo; be warned however that while all apps are open source, not all are fully FOSS. Read more <a href="https://apt.izzysoft.de/fdroid/index/info" target="_blank" rel="nofollow noopener noreferrer">here at IzzySoft.</a></p>
 					</div>
 					<div class="section">
 						<h3>Optional settings to change</h3>
@@ -13,6 +14,11 @@
 							<li>Utilizing and configuring 'Profiles' for your uses/environment can increase battery life and potentially enhance security.</li>
 							<li>Disabling lockscreen shortcuts can potentially reduce potential lockscreen bypass vulnerabilities</li>
 							<li>Enabling 'Increasing ring volume' is very nice if you don't use it already</li>
+							<!-- duplicated on porpoise -->
+							<li class="vibrate-slow">Setting a lockscreen password of 12+ characters is extremely recommended, at the minimum please use a 6+ digit pin</li>
+							<li class="vibrate-fast">Setting a lockscreen password of 12+ characters is extremely recommended, at the minimum please use a 6+ digit pin</li>
+							<li class="vibrate-2fast">Setting a lockscreen password of 12+ characters is extremely recommended, at the minimum please use a 6+ digit pin</li>
+							<!-- Did you set your lockscreen password yet? -->
 						</ul>
 					</div>
 					<div class="section">
@@ -28,7 +34,7 @@
 					<div class="section">
 						<h3>Advanced changes</h3>
 						<ul>
-							<li>Flash a firmware deblobber from <a href="/pages/extras.html#FirmwareDeblobber">here</a> to further remove proprietary code from your device</li>
+							<li>Flash a firmware deblobber from <a href="/index.php?page=extras#FirmwareDeblobber">here</a> to further remove proprietary code from your device</li>
 							<li>Flash the corresponding recovery for your device for extra verification of updates</li>
 							<li>Consider relocking your bootloader. Warning: Some devices (eg. Motorola) will hard brick upon relocking</li>
 						</ul>

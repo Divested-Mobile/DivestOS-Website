@@ -23,13 +23,13 @@
 						<p>Apollo/Thor is no longer officially supported by LineageOS and has not had any fixes by its device maintainers in a long while. As a workaround you can toggle Airplane Mode for 20 seconds.</p>
 
 						<h4>Apollo/Thor: Boot-looping into recovery</h4>
-						<p>If you installed a system update with a recovery that doesn't know where the /misc partition is the update flag will never be cleared. The fix it to run the following<br>$ fastboot format misc</p>
+						<p>If you installed a system update with a recovery that doesn't know where the /misc partition is the update flag will never be cleared. The fix is to run the following<br><code>$ fastboot format misc</code></p>
 					</div>
 					<div class="section">
 						<h3>Issues after upgrading to 15.1 from 14.1</h3>
 
 						<h4>Black screen or only wallpaper showing</h4>
-						<p>Pull down from the notification drawer to get into Settings, enable Development Mode, and turn on ADB then run the following<br>$ adb shell am start org.lineageos.setupwizard/org.lineageos.setupwizard.SetupWizardExitActivity</p>
+						<p>Pull down from the notification drawer to get into Settings, enable Development Mode, and turn on ADB then run the following<br><code>$ adb shell am start org.lineageos.setupwizard/org.lineageos.setupwizard.SetupWizardExitActivity</code></p>
 
 						<h4>No mobile service</h4>
 						<p>Select the proper APN for your carrier under Settings > Network > Mobile network > Advanced > Access Point Names</p>
