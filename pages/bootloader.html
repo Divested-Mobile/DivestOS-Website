@@ -2,6 +2,12 @@
 					<h2>Bootloader Unlocking (WIP)</h2>
 					<p>In order to flash any third party ROMs to your device, it is essential to unlock the bootloader first.<br>Documented here are many different methods in order to do so.</p>
 					<div class="section">
+						<div class="card fluid warning">
+							<h2>WARNING!</h2>
+							<p>Unlocking your bootloader will wipe your device! Please backup all of your contacts, photos, files, apps, keys, etc. first!</p>
+						</div>
+					</div>
+					<div class="section">
 						<h3>Prerequisites</h3>
 						<p>You'll need ADB access in order to attempt any of the methods below.</p>
 						<h4>On your computer</h4>
@@ -28,11 +34,17 @@
 						<ul>
 							<li>Devices Supported: Nextbit Robin (ether), Nexus 4 (mako), Nexus 5 (hammerhead), Nexus 6 (shamu), Nexus 7 (flo), OnePlus One (bacon)</li>
 							<li>This is the easiest method, and works mostly on old retail variants.</li>
+							<h4>Unlocking</h4>
 							<ol>
 								<li><code>$ adb reboot bootloader</code></li>
 								<li><code>$ fastboot oem unlock</code></li>
 								<li><code>$ fastboot flash recovery recovery.img</code></li>
-								<li>Ez pz.</li>
+							</ol>
+							<h4>Locking</h4>
+							<ol>
+								<li><code>$ adb reboot bootloader</code></li>
+								<li><code>$ fastboot flash recovery recovery.img #recovery.img should be signed</code></li>
+								<li><code>$ fastboot oem lock</code></li>
 							</ol>
 						</ul>
 					</div>
