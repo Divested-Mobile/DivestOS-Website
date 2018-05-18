@@ -9,7 +9,7 @@
 								<li>What is received: Page Visited, Referring Page, User Agent, and IP Address</li>
 								<li>How often: On every page visit</li>
 								<li>Why it is received: Used to serve the web pages to users</li>
-								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
+								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 							</ul>
@@ -21,7 +21,7 @@
 								<li>When it will be deleted: Only the past 200 requests are stored</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
-								<li>How to disable: Enable your browser's 'Do Not Track' option</li>
+								<li>How to disable: Enable your browser's 'Do Not Track' option or disable JavaScript</li>
 								<script>
 									var dntStatus = "Unknown";
 									if(navigator.doNotTrack) {
@@ -29,9 +29,9 @@
 									} else {
 										dntStatus = "Tracking (Do Not Track Disabled)";
 									}
-									document.write("<li>Current Status: " + dntStatus + "</li>");
+									document.write("<li><mark>Current status: " + dntStatus + "</mark></li>");
 								</script>
-								<noscript><li>Current Status: Not Tracking (Javascript Disabled)</li></noscript>
+								<noscript><li><mark>Current status: Not Tracking (JavaScript Disabled)</mark></li></noscript>
 							</ul>
 							<li>ROM</li>
 							<ul>
@@ -51,7 +51,7 @@
 								<li>What is received: Device Model, Default Android User Agent, Incremental Build ID, IP Address</li>
 								<li>How often: On every boot and also once per day</li>
 								<li>Why it is received: Used to serve system updates</li>
-								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
+								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
 								<li>What else will it be used for: Will be occasionally used to determine how many users we have and what percent are up-to-date or not</li>
 								<li>How to anonymize: Tor support via Orbot will be added in the future</li>
 								<li>How to disable: Automatic checks can be disabled in Settings > About > DivestOS updates > Preferences > Auto updates check</li>
@@ -61,7 +61,7 @@
 								<li>What is received: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
 								<li>How often: On every boot and also once per day</li>
 								<li>Why it is received: Used to serve apps and their updates</li>
-								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
+								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
 								<li>How to reduce: Set the 'Automatic update interval' to 'Never' in F-Droid > Settings</li>
@@ -72,7 +72,7 @@
 								<li>What is received: Signature Database Requests, IP Address</li>
 								<li>How often: Manually</li>
 								<li>Why it is received: Used to serve signature databases</li>
-								<li>When it will be deleted: When the Apache log files are rotated/deleted</li>
+								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Install Orbot and enable 'Download over Tor'</li>
 							</ul>
