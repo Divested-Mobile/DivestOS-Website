@@ -22,6 +22,16 @@
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 								<li>How to disable: Enable your browser's 'Do Not Track' option</li>
+								<script>
+									var dntStatus = "Unknown";
+									if(navigator.doNotTrack) {
+										dntStatus = "Not Tracking (Do Not Track Enabled)";
+									} else {
+										dntStatus = "Tracking (Do Not Track Disabled)";
+									}
+									document.write("<li>Current Status: " + dntStatus + "</li>");
+								</script>
+								<noscript><li>Current Status: Not Tracking (Javascript Disabled)</li></noscript>
 							</ul>
 							<li>ROM</li>
 							<ul>
