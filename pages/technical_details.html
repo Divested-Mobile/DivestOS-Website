@@ -16,7 +16,7 @@
 					<div class="section">
 						<h3>The nitty gritty</h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2018-05-16</p>
+						<p>Last updated: 2018-05-20</p>
 						<h4>Workspace</h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -119,6 +119,7 @@
 							<li>[Functions.sh] hardenDefconfig(): Many options that increase security are enabled</li>
 							<li>[Functions.sh] hardenDefconfig(): Many options that decrease security are disabled</li>
 							<li>[Functions.sh] hardenDefconfig(): LOCALVERSION is updated to indicate that the defconfig was hardened</li>
+							<li>[Optimize.sh] Change VM_MAX_READAHEAD from 128KB to 512KB</li>
 							<li>[Overclock.sh] Select kernels are overclocked for increased performance</li>
 						</ul>
 						<h5>android_lineage-sdk / android_vendor_cmsdk</h5>
@@ -132,12 +133,13 @@
 						<h5>android_packages_apps_FDroid</h5>
 						<ul>
 							<li>[Patch.sh] Add our repos</li>
+							<li>[Patch.sh] Change application ID</li>
 							<li>[Defaults.sh] Hide root apps</li>
 							<li>[Defaults.sh] Hide anti-feature apps</li>
 						</ul>
 						<h5>android_packages_apps_FDroidPrivilegedExtension</h5>
 						<ul>
-							<li>[Patch.sh] Only grant permission to apps with our signing key</li>
+							<li>[Patch.sh] Only grant permission to our F-Droid build</li>
 						</ul>
 						<h5>android_packages_apps_LineageParts / android_packages_apps_CMParts</h5>
 						<ul>
