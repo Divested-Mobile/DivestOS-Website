@@ -42,8 +42,8 @@ function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 		if(!empty($inc)) {
 			$cacheKey .= "+inc:" . $inc;
 		}
-		if($redis->exists($cacheKey)) {
-			return $redis->get($cacheKey);
+		if(($cachedResult = $redis->get($cacheKey)) != false) {
+			return $cachedResult;
 		} else {
 			$newCache = getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
 			$redis->setEx($cacheKey, 600, $newCache);
