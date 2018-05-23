@@ -18,43 +18,50 @@
 	session_start();
 	$_SESSION['csrfToken'] = bin2hex(random_bytes(32));
 
-	function getCachedDeviceDownloads() {
+	function getDownloads() {
+		$base = noHTML($_GET["base"]);
+		$base = str_replace("&period;", ".", $base);
+		if(is_null($base) || strlen($base) == 0 || !(substr_count($base, '.') <= 1) || !(substr_count($base, '/') == 0)) {
+			error();
+			return;
+		}
+
+		$rootdir = "/builds/" . $base . "/";
+		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
+		if(!(is_dir($realRootdir))) {
+			error();
+			return;
+		}
+
+		$devices = scandir($realRootdir, 0);
+		if(sizeof($devices) == 2) {
+			print("It appears there are no builds for this base yet...");
+			return;
+		}
+
+		print(getCachedDevices($base, $rootdir, $realRootdir, $devices));
+	}
+
+	function getCachedDevices($base, $rootdir, $realRootdir, $devices) {
 		if(extension_loaded("redis")) {
 			$redis = new Redis();
 			$redis->connect('127.0.0.1');
-			$cacheKey = "DivestOS+devices.php+base:" . noHTML($_GET["base"]);
+			$cacheKey = "DivestOS+devices.php+base:" . $base;
 			if($redis->exists($cacheKey)) {
 				return $redis->get($cacheKey);
 			} else {
-				$newCache = getDeviceDownloads();
+				$newCache = getDevices($base, $rootdir, $realRootdir, $devices);
 				$redis->setEx($cacheKey, 600, $newCache);
 				return $newCache;
 			}
 			$redis->close();
 		} else {
-			return getDeviceDownloads();
+			return getDevices($base, $rootdir, $realRootdir, $devices);
 		}
 	}
 
-	function getDeviceDownloads() {
+	function getDevices($base, $rootdir, $realRootdir, $devices) {
 		$downloads = "";
-		$base = noHTML($_GET["base"]);
-		$base = str_replace("&period;", ".", $base);
-		if(is_null($base) || strlen($base) == 0 || !(substr_count($base, '.') <= 1) || !(substr_count($base, '/') == 0)) {
-			$downloads = error();
-			return $downloads;
-		}
-		$rootdir = "/builds/" . $base . "/";
-		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
-		if(!(is_dir($realRootdir))) {
-			$downloads = error();
-			return $downloads;
-		}
-		$devices = scandir($realRootdir, 0);
-		if(sizeof($devices) == 2) {
-			$downloads = "It appears there are no builds for this base yet...";
-			return $downloads;
-		}
 		$lastSecRelease = 1525824000; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
@@ -150,7 +157,7 @@
 	}
 
 	function error() {
-		return "Unknown base!";
+		print("Unknown base!");
 		http_response_code(400);
 	}
 
@@ -186,7 +193,7 @@
 					</div>
 					<div class="section">
 						<div class="row" style="text-align: center;">
-							<?php print(getCachedDeviceDownloads()); ?>
+							<?php getDownloads(); ?>
 						</div>
 					</div>
 				</div>
