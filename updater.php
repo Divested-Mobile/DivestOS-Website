@@ -19,11 +19,11 @@ error_reporting(E_ERROR | E_PARSE);
 $base = noHTML($_GET["base"]);
 $base = str_replace("&period;", ".", $base);
 $device = strtolower(noHTML($_GET["device"]));
-if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0) {
+$inc = noHTML($_GET["inc"]);
+if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0 && (empty($inc) || (!empty($inc) && strlen($inc) < 20))) {
 	$rootdir = "builds/" . $base . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {
-		$inc = noHTML($_GET["inc"]);
 		print(getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc));
 	} else {
 		print("Unknown base/device");
