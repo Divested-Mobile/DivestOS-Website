@@ -23,7 +23,7 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 	$rootdir = "builds/" . $base . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {
-		print(getDeviceJson($rootdir, $rootdirInc, $base, $device));
+		print(getCachedDeviceJson($rootdir, $rootdirInc, $base, $device));
 	} else {
 		print("Unknown base/device");
 		http_response_code(404);
@@ -31,6 +31,24 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 } else {
 	print("Invalid request");
 	http_response_code(400);
+}
+
+function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device) {
+	if(extension_loaded("redis")) {
+		$redis = new Redis();
+		$redis->connect('127.0.0.1');
+		$cacheKey = $base . "+" . $device;
+		if($redis->exists($cacheKey)) {
+			return $redis->get($cacheKey);
+		} else {
+			$newCache = getDeviceJson($rootdir, $rootdirInc, $base, $device);
+			$redis->setEx($cacheKey, 1800, $newCache);
+			return $newCache;
+		}
+		$redis->close();
+	} else {
+		return getDeviceJson($rootdir, $rootdirInc, $base, $device);
+	}
 }
 
 function getDeviceJson($rootdir, $rootdirInc, $base, $device) {
