@@ -23,24 +23,7 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 	$rootdir = "builds/" . $base . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {
-		print("{");
-		print("\n\t\"response\": [");
-		if(isset($_GET["inc"]) && file_exists($rootdirInc)) {
-			$inc = noHTML($_GET["inc"]);
-			$imagesInc = scandir($rootdirInc, 0);
-			foreach($imagesInc as $imageInc) {
-				$imageSplit = explode("-", $imageInc);
-				if($imageSplit[5] == $inc) {
-					getImageJson($rootdirInc, $base, $device, $imageInc);
-				}
-			}
-		}
-		$images = scandir($rootdir, 0);
-		foreach($images as $image) {
-			getImageJson($rootdir, $base, $device, $image);
-		}
-		print("\n\t]");
-		print("\n}");
+		print(getDeviceJson($rootdir, $rootdirInc, $base, $device));
 	} else {
 		print("Unknown base/device");
 		http_response_code(404);
@@ -50,23 +33,48 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 	http_response_code(400);
 }
 
+function getDeviceJson($rootdir, $rootdirInc, $base, $device) {
+	$fullJson = "";
+	$fullJson .= "{";
+	$fullJson .= "\n\t\"response\": [";
+	if(isset($_GET["inc"]) && file_exists($rootdirInc)) {
+		$inc = noHTML($_GET["inc"]);
+		$imagesInc = scandir($rootdirInc, 0);
+		foreach($imagesInc as $imageInc) {
+			$imageSplit = explode("-", $imageInc);
+			if($imageSplit[5] == $inc) {
+				$fullJson .= getImageJson($rootdirInc, $base, $device, $imageInc);
+			}
+		}
+	}
+	$images = scandir($rootdir, 0);
+	foreach($images as $image) {
+		$fullJson .= getImageJson($rootdir, $base, $device, $image);
+	}
+	$fullJson .= "\n\t]";
+	$fullJson .= "\n}";
+	return $fullJson;
+}
+
 function getImageJson($rootdir, $base, $device, $image) {
 	if(!contains($image, "md5sum") && strlen($image) > 30) {
 		$imageSplit = explode("-", $image); //name-version-date-buildtype-device-[previnc].zip
 		if(startsWith(strtolower($imageSplit[4]), $device)) {
-			print("\n\t\t{");
-			print("\n\t\t\t\"filename\": \"" . $image . "\",");
+			$json = "";
+			$json .= "\n\t\t{";
+			$json .= "\n\t\t\t\"filename\": \"" . $image . "\",";
 			if(contains($rootdir, "incremental")) {
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?base=" . $base . "&f=" . $device . "/incremental/" . $image . "\",");
+				$json .= "\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?base=" . $base . "&f=" . $device . "/incremental/" . $image . "\",";
 			} else {
-				print("\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?base=" . $base . "&f=" . $device . "/" . $image . "\",");
+				$json .= "\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?base=" . $base . "&f=" . $device . "/" . $image . "\",";
 			}
-			print("\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",");
-			print("\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",");
-			print("\n\t\t\t\"id\": \"" . md5(file_get_contents($rootdir . "/". $image . ".md5sum")) . "\",");
-			print("\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",");
-			print("\n\t\t\t\"size\": " . filesize($rootdir . "/". $image));
-			print("\n\t\t},");
+			$json .= "\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",";
+			$json .= "\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",";
+			$json .= "\n\t\t\t\"id\": \"" . md5(file_get_contents($rootdir . "/". $image . ".md5sum")) . "\",";
+			$json .= "\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",";
+			$json .= "\n\t\t\t\"size\": " . filesize($rootdir . "/". $image);
+			$json .= "\n\t\t},";
+			return $json;
 		}
 	}
 }
