@@ -18,6 +18,24 @@
 	session_start();
 	$_SESSION['csrfToken'] = bin2hex(random_bytes(32));
 
+	function getCachedDeviceDownloads() {
+		if(extension_loaded("redis")) {
+			$redis = new Redis();
+			$redis->connect('127.0.0.1');
+			$cacheKey = "DivestOS+devices.php+base:" . noHTML($_GET["base"]);
+			if($redis->exists($cacheKey)) {
+				return $redis->get($cacheKey);
+			} else {
+				$newCache = getDeviceDownloads();
+				$redis->setEx($cacheKey, 600, $newCache);
+				return $newCache;
+			}
+			$redis->close();
+		} else {
+			return getDeviceDownloads();
+		}
+	}
+
 	function getDeviceDownloads() {
 		$downloads = "";
 		$base = noHTML($_GET["base"]);
@@ -168,7 +186,7 @@
 					</div>
 					<div class="section">
 						<div class="row" style="text-align: center;">
-							<?php print(getDeviceDownloads()); ?>
+							<?php print(getCachedDeviceDownloads()); ?>
 						</div>
 					</div>
 				</div>

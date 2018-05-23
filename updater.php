@@ -42,7 +42,7 @@ function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device) {
 			return $redis->get($cacheKey);
 		} else {
 			$newCache = getDeviceJson($rootdir, $rootdirInc, $base, $device);
-			$redis->setEx($cacheKey, 1800, $newCache);
+			$redis->setEx($cacheKey, 600, $newCache);
 			return $newCache;
 		}
 		$redis->close();
