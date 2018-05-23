@@ -37,7 +37,7 @@ function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device) {
 	if(extension_loaded("redis")) {
 		$redis = new Redis();
 		$redis->connect('127.0.0.1');
-		$cacheKey = $base . "+" . $device;
+		$cacheKey = "DivestOS+updater.php+base:" . $base . "+device:" . $device;
 		if($redis->exists($cacheKey)) {
 			return $redis->get($cacheKey);
 		} else {

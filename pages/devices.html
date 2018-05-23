@@ -19,38 +19,39 @@
 	$_SESSION['csrfToken'] = bin2hex(random_bytes(32));
 
 	function getDeviceDownloads() {
+		$downloads = "";
 		$base = noHTML($_GET["base"]);
 		$base = str_replace("&period;", ".", $base);
 		if(is_null($base) || strlen($base) == 0 || !(substr_count($base, '.') <= 1) || !(substr_count($base, '/') == 0)) {
-			error();
-			return;
+			$downloads = error();
+			return $downloads;
 		}
 		$rootdir = "/builds/" . $base . "/";
 		$realRootdir = $_SERVER['DOCUMENT_ROOT'] . $rootdir;
 		if(!(is_dir($realRootdir))) {
-			error();
-			return;
+			$downloads = error();
+			return $downloads;
 		}
 		$devices = scandir($realRootdir, 0);
 		if(sizeof($devices) == 2) {
-			print("It appears there are no builds for this base yet...");
-			return;
+			$downloads = "It appears there are no builds for this base yet...";
+			return $downloads;
 		}
 		$lastSecRelease = 1525824000; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) >= 2 && $device != '..') {
-				print("<div class=\"card\">");
+				$downloads .= "<div class=\"card\">";
 				$name = $device;
 				$friendlyNamePath = $realRootdir . $device . "/friendlyName";
 				if(file_exists($friendlyNamePath)) {
 					$name = file_get_contents($friendlyNamePath) . " (" . $device . ")";
 				}
-				print("<h3>" . $name . "</h3>");
-				print("<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>");
+				$downloads .= "<h3>" . $name . "</h3>";
+				$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>";
 				$files = scandir($realRootdir . $device);
 				if(sizeof($files) <= 4) {
-					print("<h4>Currently Unavailable</h4>");
+					$downloads .= "<h4>Currently Unavailable</h4>";
 				} else {
 					foreach ($files as $file) {
 						if($file == "status" || $file == "recovery.img" || contains($file, "md5sum")) {
@@ -66,52 +67,72 @@
 						$downloadButtons .= "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button inverse small\">Recovery</a>";
 					}
 					$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
-					$color = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
+					$color = getStatusColor(file_get_contents($realRootdir . $device . "/status"), $outdated);
+					$statusMessage = getStatusMessage(file_get_contents($realRootdir . $device . "/status"), $outdated);
+					$downloads .= "<h5 style=\"color: #" . $color . ";\">" . $statusMessage . "</h5>";
 					if($color === "4CAF50") {
 						$downloadButtons = str_replace("rom-unknown", "rom-working", $downloadButtons);
 					}
 					$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
-					print($downloadButtons);
+					$downloads .= $downloadButtons;
 
 				}
-				print("</div>");
+				$downloads .= "</div>";
 			}
 		}
+		return $downloads;
 	}
 
-	function getStatus($status, $outdated) {
-		$message = "Unknown";
+	function getStatusColor($status, $outdated) {
 		$color = "03A9F4";
 		if(!($status === false)) {
 			switch($status) {
 				case 0:
-					$message = "Works";
 					$color = "4CAF50";
 					break;
 				case 1:
-					$message = "Broken";
 					$color = "f44336";
 					break;
 				case 2:
-					$message = "Untested";
 					$color = "FFC107";
 					break;
 				case 3:
-					$message = "Untested (Experimental)";
 					$color = "673AB7";
 					break;
 			}
 		}
 		if($outdated) {
-			$message = $message . " and Outdated";
 			$color = "f44336";
 		}
-		print("<h5 style=\"color: #" . $color . ";\">" . $message . "</h5>");
 		return $color;
 	}
 
+	function getStatusMessage($status, $outdated) {
+		$message = "Unknown";
+		if(!($status === false)) {
+			switch($status) {
+				case 0:
+					$message = "Works";
+					break;
+				case 1:
+					$message = "Broken";
+					break;
+				case 2:
+					$message = "Untested";
+					break;
+				case 3:
+					$message = "Untested (Experimental)";
+					break;
+			}
+		}
+		if($outdated) {
+			$message = $message . " and Outdated";
+		}
+		return $message;
+	}
+
 	function error() {
-		print("Unknown base!");
+		return "Unknown base!";
 		http_response_code(400);
 	}
 
@@ -147,7 +168,7 @@
 					</div>
 					<div class="section">
 						<div class="row" style="text-align: center;">
-							<?php getDeviceDownloads(); ?>
+							<?php print(getDeviceDownloads()); ?>
 						</div>
 					</div>
 				</div>
