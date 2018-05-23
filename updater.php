@@ -23,7 +23,8 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 	$rootdir = "builds/" . $base . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {
-		print(getCachedDeviceJson($rootdir, $rootdirInc, $base, $device));
+		$inc = noHTML($_GET["inc"]);
+		print(getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc));
 	} else {
 		print("Unknown base/device");
 		http_response_code(404);
@@ -33,30 +34,32 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 	http_response_code(400);
 }
 
-function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device) {
+function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 	if(extension_loaded("redis")) {
 		$redis = new Redis();
 		$redis->connect('127.0.0.1');
 		$cacheKey = "DivestOS+updater.php+base:" . $base . "+device:" . $device;
+		if(!empty($inc)) {
+			$cacheKey .= "+inc:" . $inc;
+		}
 		if($redis->exists($cacheKey)) {
 			return $redis->get($cacheKey);
 		} else {
-			$newCache = getDeviceJson($rootdir, $rootdirInc, $base, $device);
+			$newCache = getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
 			$redis->setEx($cacheKey, 600, $newCache);
 			return $newCache;
 		}
 		$redis->close();
 	} else {
-		return getDeviceJson($rootdir, $rootdirInc, $base, $device);
+		return getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
 	}
 }
 
-function getDeviceJson($rootdir, $rootdirInc, $base, $device) {
+function getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 	$fullJson = "";
 	$fullJson .= "{";
 	$fullJson .= "\n\t\"response\": [";
-	if(isset($_GET["inc"]) && file_exists($rootdirInc)) {
-		$inc = noHTML($_GET["inc"]);
+	if(!empty($inc) && file_exists($rootdirInc)) {
 		$imagesInc = scandir($rootdirInc, 0);
 		foreach($imagesInc as $imageInc) {
 			$imageSplit = explode("-", $imageInc);

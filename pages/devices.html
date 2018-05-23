@@ -92,8 +92,7 @@
 						$downloadButtons .= "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button inverse small\">Recovery</a>";
 					}
 					$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
-					$color = getStatusColor(file_get_contents($realRootdir . $device . "/status"), $outdated);
-					$statusMessage = getStatusMessage(file_get_contents($realRootdir . $device . "/status"), $outdated);
+					list($color, $statusMessage) = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
 					$downloads .= "<h5 style=\"color: #" . $color . ";\">" . $statusMessage . "</h5>";
 					if($color === "4CAF50") {
 						$downloadButtons = str_replace("rom-unknown", "rom-working", $downloadButtons);
@@ -108,52 +107,34 @@
 		return $downloads;
 	}
 
-	function getStatusColor($status, $outdated) {
+	function getStatus($status, $outdated) {
 		$color = "03A9F4";
-		if(!($status === false)) {
-			switch($status) {
-				case 0:
-					$color = "4CAF50";
-					break;
-				case 1:
-					$color = "f44336";
-					break;
-				case 2:
-					$color = "FFC107";
-					break;
-				case 3:
-					$color = "673AB7";
-					break;
-			}
-		}
-		if($outdated) {
-			$color = "f44336";
-		}
-		return $color;
-	}
-
-	function getStatusMessage($status, $outdated) {
 		$message = "Unknown";
 		if(!($status === false)) {
 			switch($status) {
 				case 0:
+					$color = "4CAF50";
 					$message = "Works";
 					break;
 				case 1:
+					$color = "f44336";
 					$message = "Broken";
 					break;
 				case 2:
+					$color = "FFC107";
 					$message = "Untested";
 					break;
 				case 3:
+					$color = "673AB7";
 					$message = "Untested (Experimental)";
 					break;
 			}
 		}
 		if($outdated) {
+			$color = "f44336";
 			$message = $message . " and Outdated";
 		}
-		return $message;
+		return array($color, $message);
 	}
 
 	function error() {
