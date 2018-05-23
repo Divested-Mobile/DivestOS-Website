@@ -44,17 +44,16 @@
 
 	function getCachedDevices($base, $rootdir, $realRootdir, $devices) {
 		if(extension_loaded("redis")) {
+			$result = "";
 			$redis = new Redis();
 			$redis->connect('127.0.0.1');
 			$cacheKey = "DivestOS+devices.php+base:" . $base;
-			if(($cachedResult = $redis->get($cacheKey)) != false) {
-				return $cachedResult;
-			} else {
-				$newCache = getDevices($base, $rootdir, $realRootdir, $devices);
-				$redis->setEx($cacheKey, 600, $newCache);
-				return $newCache;
+			if(($result = $redis->get($cacheKey)) == false) {
+				$result = getDevices($base, $rootdir, $realRootdir, $devices);
+				$redis->setEx($cacheKey, 3600, $result);
 			}
 			$redis->close();
+			return $result;
 		} else {
 			return getDevices($base, $rootdir, $realRootdir, $devices);
 		}

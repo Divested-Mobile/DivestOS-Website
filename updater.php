@@ -36,20 +36,19 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 
 function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 	if(extension_loaded("redis")) {
+		$result = "";
 		$redis = new Redis();
 		$redis->connect('127.0.0.1');
 		$cacheKey = "DivestOS+updater.php+base:" . $base . "+device:" . $device;
 		if(!empty($inc)) {
 			$cacheKey .= "+inc:" . $inc;
 		}
-		if(($cachedResult = $redis->get($cacheKey)) != false) {
-			return $cachedResult;
-		} else {
-			$newCache = getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
-			$redis->setEx($cacheKey, 600, $newCache);
-			return $newCache;
+		if(($result = $redis->get($cacheKey)) == false) {
+			$result = getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
+			$redis->setEx($cacheKey, 3600, $result);
 		}
 		$redis->close();
+		return $result;
 	} else {
 		return getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
 	}
