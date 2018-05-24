@@ -1,6 +1,8 @@
 				<div class="card fluid">
-					<h2>Privacy Policy (2018-05-16)</h2>
+					<h2>Privacy Policy (2018-05-24)</h2>
 					<p>User privacy is one of the primary goals of DivestOS. Detailed below is everything you need to know about how your data is handled.</p>
+					<p>A note on the GDPR: For the time being we are sadly not 100% GDPR compliant. We are not lawyers but we are pretty sure the only thing we need to do is not log the last two (or four) octets of IP addresses. There are currently no maintained Apache modules that accomplish this, but we are confident that by release there will be. Once that is in place the overall privacy situation for all users will be dramatically improved and we will also be (hopefully) compliant with the GDPR as well.</p>
+					<!-- TODO: Update IP address references below once we get a mod_removeip -->
 					<div class="section">
 						<h3>What data we (Spot Communications, Inc.) collect</h3>
 						<ul>
@@ -37,6 +39,7 @@
 							<ul>
 								<li>The ROM does not contain any analytics and any requests are used only for supporting it</li>
 							</ul>
+							<!-- Corresponding patch is currently disabled -->
 							<!--<li>ROM: Captive Portal Check</li>
 							<ul>
 								<li>What is received: Static User Agent, IP Address</li>
@@ -48,7 +51,7 @@
 							</ul>-->
 							<li>ROM: Updater</li>
 							<ul>
-								<li>What is received: Device Model, Default Android User Agent, Incremental Build ID, IP Address</li>
+								<li>What is received: Device Model, Incremental Build ID, Default Android User Agent, IP Address</li>
 								<li>How often: On every boot and also once per day</li>
 								<li>Why it is received: Used to serve system updates</li>
 								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
@@ -59,12 +62,12 @@
 							<li>ROM: DivestOS F-Droid Repos</li>
 							<ul>
 								<li>What is received: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
-								<li>How often: On every boot and also once per day</li>
+								<li>How often: Once per day</li>
 								<li>Why it is received: Used to serve apps and their updates</li>
 								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
-								<li>How to reduce: Set the 'Automatic update interval' to 'Never' in F-Droid > Settings</li>
+								<li>How to reduce: Decrease the 'Automatic update interval' in F-Droid > Settings</li>
 								<li>How to disable: Disable the 'DivestOS' repos in F-Droid > Settings > Repositories</li>
 							</ul>
 							<li>App: Hypatia</li>
@@ -78,6 +81,17 @@
 							</ul>
 						</ul>
 					</div>
+					<!-- TODO: Uncomment once we get a mod_removeip -->
+					<!--<div class="section">
+						<h3>Control over your data</h3>
+						<ul>
+							<li>Requesting your data: We have no way to tie data to an identity</li>
+							<li>Correction of your data: We have no data that can be corrected</li>
+							<li>Deletion of your data: All data we have on users is periodically deleted</li>
+							<li>Expressing concerns: We are always open to suggestions on how we can further improve user privacy. Please e-mail us or open an issue on the project repository and lets get a discussion going!</li>
+						</ul>
+						<p>E-Mail: <script>document.write(atob("PGEgaHJlZj0ibWFpbHRvOnN1cHBvcnRAZGl2ZXN0b3MueHl6Ij5zdXBwb3J0QGRpdmVzdG9zLnh5ejwvYT4K"));</script><noscript>Javascript Protected</noscript></p>
+					</div>-->
 					<div class="section">
 						<h3>What data third parties collect</h3>
 						<p>Third parties are used to support specific features and apps</p>
@@ -105,10 +119,10 @@
 							<ul>
 								<li>Who: F-Droid</li>
 								<li>What they receive: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
-								<li>How often: On every boot and also once per day</li>
+								<li>How often: Once per day</li>
 								<li>Why they receive: Used to serve apps and their updates</li>
 								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
-								<li>How to reduce: Set the 'Automatic update interval' to 'Never' in F-Droid > Settings</li>
+								<li>How to reduce: Decrease the 'Automatic update interval' in F-Droid > Settings</li>
 								<li>How to disable: Disable the 'F-Droid' repos in F-Droid > Settings > Repositories</li>
 								<li>Privacy Policy: <a href="https://f-droid.org/en/docs/Security_Model" target="_blank" rel="nofollow noopener noreferrer">F-Droid Security Information</a></li>
 							</ul>
