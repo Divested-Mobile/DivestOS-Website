@@ -49,4 +49,5 @@ function contains($haystack, $needle) {
 }
 //END OF FUNCTIONS
 
+print("<!-- Server Side Rendering Time: " . (microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"]) . "s -->");
 ?>
