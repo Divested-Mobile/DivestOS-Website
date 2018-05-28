@@ -7,8 +7,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
 		<link href="/images/favicon.png" rel="shortcut icon" integrity="sha384-7loQf2TJ+siBPhi5idRnLCRdWHrbtisZKlxOJBPPkcI+PYjbJHmQvzIhAL+xEIUV+g==">
-		<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-uuZR69sRtjlogJ2VrzcX2LPt8oh8jjzb3CC5pmnNzgF/MLBrY6D0TUb6vOfgntkB">
-		<!--<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-EHgOgCZATTGq0H0kZ60aqSR8KBABFxWXv8vNCYQK37ct14GcGR+ZMkCntjeQhBQX">-->
+		<?php
+			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-uuZR69sRtjlogJ2VrzcX2LPt8oh8jjzb3CC5pmnNzgF/MLBrY6D0TUb6vOfgntkB">';
+			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-EHgOgCZATTGq0H0kZ60aqSR8KBABFxWXv8vNCYQK37ct14GcGR+ZMkCntjeQhBQX">';
+
+			$darkThemeCookie = noHTML($_COOKIE["DARK_THEME"]);
+			if($darkThemeCookie === "true") {
+				print($darkTheme);
+			} else {
+				print($lightTheme);
+			}
+		?>
 	</head>
 
 	<body>
@@ -41,6 +50,14 @@
 					<a class="sublink-1" href="/index.php?page=build">Build Guide</a>
 				<a href="https://git.spotco.us/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code (GPLv3)</a>
 				<a href="/index.php?page=about">About</a>
+				<script>
+					function toggleDarkTheme() {
+						setCookie("DARK_THEME", (getCookie("DARK_THEME") != "true"), 30);
+						location.reload();
+					}
+					var toggleTheme = '<a href="javascript:toggleDarkTheme();">Toggle dark theme</a>';
+					document.write(toggleTheme);
+				</script>
 			</nav>
 
 			<!-- Content -->
