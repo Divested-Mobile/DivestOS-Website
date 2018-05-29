@@ -1,5 +1,5 @@
 				<div class="card fluid">
-					<h2>Privacy Policy (2018-05-24)</h2>
+					<h2>Privacy Policy (2018-05-29)</h2>
 					<p>User privacy is one of the primary goals of DivestOS. Detailed below is everything you need to know about how your data is handled.</p>
 					<p>A note on the GDPR: For the time being we are sadly not 100% GDPR compliant. We are not lawyers but we are pretty sure the only thing we need to do is not log the last two (or four) octets of IP addresses. There are currently no maintained Apache modules that accomplish this, but we are confident that by release there will be. Once that is in place the overall privacy situation for all users will be dramatically improved and we will also be (hopefully) compliant with the GDPR as well.</p>
 					<!-- TODO: Update IP address references below once we get a mod_removeip -->
@@ -8,7 +8,13 @@
 						<ul>
 							<li>Website</li>
 							<ul>
-								<li>What is received: Page Visited, Referring Page, User Agent, and IP Address</li>
+								<li>What is received: Cookies (detailed below), Page Visited, Referring Page, User Agent, and IP Address</li>
+								<li>Cookies</li>
+								<ul>
+									<li>PreReleaseConfirmed - Used strictly by the client to prevent showing the pre-release message repeatedly</li>
+									<li>DARK_THEME - Toggled by the client so the web server can serve up the dark variant of mini.css</li>
+									<li>PHPSESSID - Set by the server to maintain a CSRF token on the client to prevent abuse of the Stripe processor</li>
+								</ul>
 								<li>How often: On every page visit</li>
 								<li>Why it is received: Used to serve the web pages to users</li>
 								<li>When it will be deleted: When the web server log files are rotated/deleted</li>

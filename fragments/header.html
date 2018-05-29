@@ -50,7 +50,9 @@
 					<a class="sublink-1" href="/index.php?page=build">Build Guide</a>
 				<a href="https://git.spotco.us/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code (GPLv3)</a>
 				<a href="/index.php?page=about">About</a>
-				<script>
+				<!-- TODO: Replace this with a <form> to provide functionality to users with JavaScript disabled -->
+				<script type="text/javascript">
+
 					function toggleDarkTheme() {
 						setCookie("DARK_THEME", (getCookie("DARK_THEME") != "true"), 30);
 						location.reload();
