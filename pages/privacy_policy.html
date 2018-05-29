@@ -11,9 +11,16 @@
 								<li>What is received: Cookies (detailed below), Page Visited, Referring Page, User Agent, and IP Address</li>
 								<li>Cookies</li>
 								<ul>
-									<li>PreReleaseConfirmed - Used strictly by the client to prevent showing the pre-release message repeatedly</li>
 									<li>DARK_THEME - Toggled by the client so the web server can serve up the dark variant of mini.css</li>
 									<li>PHPSESSID - Set by the server to maintain a CSRF token on the client to prevent abuse of the Stripe processor</li>
+									<li>PreReleaseConfirmed - Used strictly by the client to prevent showing the pre-release message repeatedly</li>
+									<script>
+										var cookieCount = document.cookie.split(';').length;
+										if(document.cookie.length == 0) { cookieCount--; }
+										document.write('<li><mark>Cookie status: ' + cookieCount + ' currently set</mark></li>');
+										document.write('<li><a href="javascript:deleteAllCookies()">Click here to delete all cookies from your browser</a></li>')
+									</script>
+									<noscript><li><mark>Cookie status: Unknown</mark></li></noscript>
 								</ul>
 								<li>How often: On every page visit</li>
 								<li>Why it is received: Used to serve the web pages to users</li>
