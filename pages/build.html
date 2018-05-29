@@ -103,10 +103,10 @@ source ../../Scripts/LineageOS-15.1/00init.sh
 resetWorkspace
 patchWorkspace
 buildDevice [device] #or buildAll for all supported devices</code></pre>
-						<p>Afterwards you should have flashable zips located in out/target/product/[device] copy them to Builds</p>
+						<p>Afterwards you should have flashable zips located in out/target/product/[device]. You should copy them to /Builds</p>
 					</div>
 					<div class="section">
 						<h3>Installing</h3>
-						<p>Now copy the builds to your device and flash them through your recovery.</p>
+						<p>Reboot into recovery on your device and <code>$ adb sideload coverage*$device.zip</code></p>
 					</div>
 				</div>
