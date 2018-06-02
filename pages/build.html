@@ -71,7 +71,7 @@ virtualenv2 venv
 
 #TODO: Signing Keys
 cd ../..
-nano Scripts/LineageOS-15.1/00init.sh #Update all relevant paths
+nano Scripts/init.sh #Choose your options and update paths
 </code></pre>
 					<h4>Setting up ccache (Optional)</h4>
 						<p>Use of ccache is highly recommended, its an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
@@ -99,7 +99,7 @@ ccache -M 128GB #Optionally set a size limit</code></pre>
 						<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
 						<pre><code>cd Build/LineageOS-15.1
 source venv/bin/activate #Only for python3 default systems
-source ../../Scripts/LineageOS-15.1/00init.sh
+source ../../Scripts/init.sh
 resetWorkspace
 patchWorkspace
 buildDevice [device] #or buildAll for all supported devices</code></pre>
