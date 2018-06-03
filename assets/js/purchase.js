@@ -1,7 +1,6 @@
 function checkout() {
 	var handler = StripeCheckout.configure({
 		key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
-		image: '/images/spotco.png',
 		locale: 'auto',
 		allowRememberMe: false,
 		token: function(token) {
@@ -18,8 +17,8 @@ function checkout() {
 	});
 
 	handler.open({
-		name: 'Spot Communications, Inc.',
-		description: 'DivestOS Distro Download',
+		name: 'Divested Computing, Inc.',
+		description: 'DivestOS Mobile Download',
 		zipCode: true,
 		amount: 1000
 	});
