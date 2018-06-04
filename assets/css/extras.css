@@ -1,0 +1,14 @@
+.h2o {
+  color: #FF5722;
+}
+
+.h3o {
+  color: #4CAF50;
+}
+
+.centero {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}

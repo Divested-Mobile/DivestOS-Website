@@ -1,0 +1,49 @@
+/* 
+  https://raw.githubusercontent.com/Chalarangelo/mini.css/master/src/flavors/mini-doc.scss
+*/
+.index-splash {
+  width: 100%;
+  height: 100vh;
+}
+
+.index-splash-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+h1.splash {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  padding-top: 40vh;
+  font-size: 10vmin;
+  font-weight: bold;
+  color: #FF5722;
+}
+
+a.scroll {
+  position: absolute;
+  top: 90vh;
+  width: 50vw;
+  left: 25vw;
+  text-align: center;
+  font-size: 8vmin;
+  font-weight: bold;
+  color: #FF5722;
+}
+
+p.splash {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-top: 52vh;
+  font-size: 4vmin;
+  color: #FFFFFF;
+}

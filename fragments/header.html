@@ -18,16 +18,28 @@
 			} else {
 				print($lightTheme);
 			}
+			$splashCSS = '<link rel="stylesheet" href="assets/css/splash.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">';
+			if($page==="pages/home.html") { print($splashCSS); }
 		?>
+		<link rel="stylesheet" href="assets/css/extras.css" integrity="sha384-dmXLXj/JNtbnD7lJ6CSV3T+xFuFLYnSnm7VinPb7rAobh9MQbmd4W69fD1W1ZQge">
 	</head>
 
 	<body>
+		<?php
+			$splash = '<div class="index-splash">
+				<div class="index-splash-bg" id="header"></div>
+				<h1 class="splash">DivestOS Mobile</h1>
+				<p class="splash">A privacy focused Android distribution<br><small><em>Take back (some) control of <b>your</b> device</em></small></p>
+				<a class="scroll" href="#content">▼</a>
+			</div>';
+			if($page==="pages/home.html") { print($splash); }
+		?>
 		<header class="sticky" style="text-align: center;">
 			<a href="/index.php" class="logo col-sm-3" style="color: #FF5722;">DivestOS Mobile</a>
 			<label for="drawer-control" class="button drawer-toggle"></label>
 		</header>
 
-		<div class="row">
+		<div class="row" id="content">
 			<!-- Navigation -->
 			<input type="checkbox" id="drawer-control" class="drawer">
 			<nav class="col-md-3 col-lg-2">

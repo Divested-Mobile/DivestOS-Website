@@ -65,7 +65,7 @@
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) >= 2 && $device != '..') {
-				$downloads .= "<div class=\"card\">";
+				$downloads .= "<div class=\"card centero\">";
 				$name = $device;
 				$friendlyNamePath = $realRootdir . $device . "/friendlyName";
 				if(file_exists($friendlyNamePath)) {
@@ -148,15 +148,15 @@
 					<noscript><p>Currently in pre-release, please do not share! Mirror servers have not been setup!</p></noscript>
 					<div class="section">
 						<div class="row">
-							<div class="card large">
+							<div class="card centero large">
 								<h3>Disclaimer</h3>
 								<p>Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided <b>without</b> warranty and <b>can</b> damage your device. We are <b>not</b> liable for <b>any</b> damage done by using these, and you yourself will be at fault.</p>
 							</div>
-							<div class="card large">
+							<div class="card centero large">
 								<h3>Root</h3>
 								<p>These are 'user' builds, root is not included. It is not recommended to flash any other zips alongside our builds. Root frameworks and runtime modification frameworks will <b>severely decrease</b> the security of your device.</p>
 							</div>
-							<div class="card large">
+							<div class="card centero large">
 								<h3>Signed Builds</h3>
 								<p>All builds published are signed with our signing keys, unlike other ROMs that simply use test-keys. This means that when switching to or away from our builds, you will be prompted to wipe /data.</p>
 							</div>
