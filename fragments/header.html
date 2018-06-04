@@ -9,10 +9,10 @@
 		<link href="/images/favicon.png" rel="shortcut icon" integrity="sha384-7loQf2TJ+siBPhi5idRnLCRdWHrbtisZKlxOJBPPkcI+PYjbJHmQvzIhAL+xEIUV+g==">
 		<!-- sed -i 's/.apple-system/"Fira Sans", -apple-system/' mini*.css; -->
 		<?php
-			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-I0JZrlnrfl/sj0x+m1zMq41kC5NY8II5AcD53lX2RmSWjr/75qge/WCY2LYwH0+R">';
-			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-Q/kwK+sCtHI2f0TWmvzZlFItAiAapeHdTKQEM8uwHu7/71o2zolTUBByjxL1zK1L">';
-			$splashCSS = '<link rel="stylesheet" href="assets/css/splash.css" integrity="sha384-bg1hY/7L94gRkUwN9g3UzwW+z7p2fejWlGiT5TsFFvcNor7ndhItss/SsJPE+wSG">';
-			$splashCSSDark = '<link rel="stylesheet" href="assets/css/splash-dark.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">';
+			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-I0JZrlnrfl/sj0x+m1zMq41kC5NY8II5AcD53lX2RmSWjr/75qge/WCY2LYwH0+R">'. PHP_EOL;
+			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-Q/kwK+sCtHI2f0TWmvzZlFItAiAapeHdTKQEM8uwHu7/71o2zolTUBByjxL1zK1L">'. PHP_EOL;
+			$splashCSS = '<link rel="stylesheet" href="assets/css/splash.css" integrity="sha384-bg1hY/7L94gRkUwN9g3UzwW+z7p2fejWlGiT5TsFFvcNor7ndhItss/SsJPE+wSG">'. PHP_EOL;
+			$splashCSSDark = '<link rel="stylesheet" href="assets/css/splash-dark.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">'. PHP_EOL;
 
 			$darkThemeCookie = noHTML($_COOKIE["DARK_THEME"]);
 			if($darkThemeCookie === "true") {
@@ -33,7 +33,7 @@
 				<h1 class="splash">DivestOS Mobile</h1>
 				<p class="splash">A privacy focused Android distribution<br><small><em>Take back (some) control of <b>your</b> device</em></small></p>
 				<a class="scroll" href="#content">▼</a>
-			</div>';
+			</div>' . PHP_EOL;
 			if($page==="pages/home.html") { print($splash); }
 		?>
 		<header class="sticky" style="text-align: center;">

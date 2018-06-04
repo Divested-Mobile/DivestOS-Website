@@ -72,7 +72,7 @@
 					$name = file_get_contents($friendlyNamePath) . " (" . $device . ")";
 				}
 				$downloads .= "<h3>" . $name . "</h3>";
-				$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Information</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Installation Guide</a></p>";
+				$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Install Guide</a></p>";
 				$files = scandir($realRootdir . $device);
 				if(sizeof($files) <= 4) {
 					$downloads .= "<h4>Currently Unavailable</h4>";
@@ -88,7 +88,7 @@
 						}
 					}
 					if(file_exists($realRootdir . $device . "/recovery.img")) {
-						$downloadButtons .= "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button inverse small\">Recovery</a>";
+						$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/recovery.img\" class=\"button inverse small\">Recovery</a>";
 					}
 					$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
 					list($color, $statusMessage) = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
