@@ -11,15 +11,17 @@
 		<?php
 			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-I0JZrlnrfl/sj0x+m1zMq41kC5NY8II5AcD53lX2RmSWjr/75qge/WCY2LYwH0+R">';
 			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-Q/kwK+sCtHI2f0TWmvzZlFItAiAapeHdTKQEM8uwHu7/71o2zolTUBByjxL1zK1L">';
+			$splashCSS = '<link rel="stylesheet" href="assets/css/splash.css" integrity="sha384-bg1hY/7L94gRkUwN9g3UzwW+z7p2fejWlGiT5TsFFvcNor7ndhItss/SsJPE+wSG">';
+			$splashCSSDark = '<link rel="stylesheet" href="assets/css/splash-dark.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">';
 
 			$darkThemeCookie = noHTML($_COOKIE["DARK_THEME"]);
 			if($darkThemeCookie === "true") {
 				print($darkTheme);
+				if($page==="pages/home.html") { print($splashCSSDark); }
 			} else {
 				print($lightTheme);
+				if($page==="pages/home.html") { print($splashCSS); }
 			}
-			$splashCSS = '<link rel="stylesheet" href="assets/css/splash.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">';
-			if($page==="pages/home.html") { print($splashCSS); }
 		?>
 		<link rel="stylesheet" href="assets/css/extras.css" integrity="sha384-dmXLXj/JNtbnD7lJ6CSV3T+xFuFLYnSnm7VinPb7rAobh9MQbmd4W69fD1W1ZQge">
 	</head>
