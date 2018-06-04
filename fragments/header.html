@@ -7,9 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
 		<link href="/images/favicon.png" rel="shortcut icon" integrity="sha384-7loQf2TJ+siBPhi5idRnLCRdWHrbtisZKlxOJBPPkcI+PYjbJHmQvzIhAL+xEIUV+g==">
+		<!-- sed -i 's/.apple-system/"Fira Sans", -apple-system/' mini*.css; -->
 		<?php
-			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-uuZR69sRtjlogJ2VrzcX2LPt8oh8jjzb3CC5pmnNzgF/MLBrY6D0TUb6vOfgntkB">';
-			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-EHgOgCZATTGq0H0kZ60aqSR8KBABFxWXv8vNCYQK37ct14GcGR+ZMkCntjeQhBQX">';
+			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-I0JZrlnrfl/sj0x+m1zMq41kC5NY8II5AcD53lX2RmSWjr/75qge/WCY2LYwH0+R">';
+			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-Q/kwK+sCtHI2f0TWmvzZlFItAiAapeHdTKQEM8uwHu7/71o2zolTUBByjxL1zK1L">';
 
 			$darkThemeCookie = noHTML($_COOKIE["DARK_THEME"]);
 			if($darkThemeCookie === "true") {
