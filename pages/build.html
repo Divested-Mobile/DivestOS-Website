@@ -27,59 +27,62 @@
 						<p>Run the few commands below to get your system up to date and install all necessary dependencies.</p>
 						<h4>On Arch Linux</h4>
 							<p>@p4block has created a handy metapackage for installing the necessary dependencies, use your favorite AUR helper to install it. There is also a more minimal one included in our build repository that you can install with makepkg.</p>
-							<pre><code>sudo pacman -Syu
-yaourt -S lineageos-devel firejail
-sudo paccache -rk0</code></pre>
+							<pre><code>sudo pacman -Syu;
+yaourt -S lineageos-devel firejail;
+sudo paccache -rk0;</code></pre>
 
 						<h4>On Fedora</h4>
 							<p>The latest Fedora release is recommended. Some dependencies are missing.</p>
-							<pre><code>sudo dnf update
+							<pre><code>sudo dnf update;
 
-sudo dnf install @development-tools java-1.8.0-openjdk java-1.8.0-openjdk-devel android-tools git gnupg flex bison gperf SDL wxGTK squashfs-tools curl zlib ncurses schedtool perl-Switch zip unzip libxslt python2-virtualenv bc rsync xml2 lzop pngcrush ImageMagick ccache maven gradle ninja-build ncurses-devel ncurses-devel.i686</code></pre>
+sudo dnf install @development-tools java-1.8.0-openjdk java-1.8.0-openjdk-devel android-tools git gnupg flex bison gperf SDL wxGTK squashfs-tools curl zlib ncurses schedtool perl-Switch zip unzip libxslt python2-virtualenv bc rsync xml2 lzop pngcrush ImageMagick ccache maven gradle ninja-build ncurses-devel ncurses-devel.i686;</code></pre>
 
 						<h4>On Ubuntu</h4>
 							<p>Ubuntu 16.10 is recommended, newer should work fine with little change.</p>
-							<pre><code>sudo add-apt-repository ppa:cwchien/gradle
-sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove
+							<pre><code>sudo add-apt-repository ppa:cwchien/gradle;
+sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove;
 sudo ln -s /usr/include/asm-generic /usr/include/asm;
 
-sudo apt install autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git-core g++-multilib gnupg gperf gradle lib32ncurses5-dev lib32z1-dev lib32z-dev libc6-dev libc6-dev-i386 libcap-dev libcloog-isl-dev libesd0-dev libexpat1-dev libgcc1:i386 libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven ncurses-dev openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo firejail
+sudo apt install autoconf automake bc bison build-essential ccache curl expat flex g++ gawk gcc gcc-multilib git-core g++-multilib gnupg gperf gradle lib32ncurses5-dev lib32z1-dev lib32z-dev libc6-dev libc6-dev-i386 libcap-dev libcloog-isl-dev libesd0-dev libexpat1-dev libgcc1:i386 libgl1-mesa-dev libgmp-dev libmpc-dev libmpfr-dev libncurses5-dev libsdl1.2-dev libtool libx11-dev libxml2 libxml2-utils lzop maven ncurses-dev openjdk-8-jdk patch pkg-config pngcrush python-all-dev schedtool squashfs-tools subversion texinfo unzip x11proto-core-dev xsltproc zip zlib1g-dev imagemagick repo firejail;
 
-sudo apt clean</code></pre>
+sudo apt clean;</code></pre>
 						<h4>On Any</h4>
-							<pre><code>echo "export TZ=:/etc/localtime" >> .bashrc
-echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc</code></pre>
+							<pre><code>echo "export TZ=:/etc/localtime" >> .bashrc;
+echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc;</code></pre>
 					</div>
 					<div class="section">
 						<h3>Creating a Workspace</h3>
 						<h4>Setting up Firejail (optional)</h4>
 						<p>For extra security of your host machine, you can run the entire build process in a fairly restricted sandbox with minimal performance impact. We've already upstreamed a profile for just this task.</p>
-						<pre><code>firejail --profile=/etc/firejail/aosp.profile bash</code></pre>
+						<pre><code>firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
 						<h4>Checking out the code</h4>
 						<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a separate drive from your system drive.</p>
-						<pre><code>git clone https://git.spotco.us/DivestOS/DivestOS-Build.git DivestOS
-cd DivestOS
-git submodule update --init --recursive
-mkdir -p Build/LineageOS-15.1/.repo/local_manifests Builds Signing_Keys
-cd Build/LineageOS-15.1
-ln -s ../../Manifests/Manifest_LAOS-15.1.xml .repo/local_manifests/local_manifest.xml
-repo init -u git://github.com/LineageOS/android.git -b lineage-15.1
-repo sync #This part will take a while
+						<pre><code>git clone https://git.spotco.us/DivestOS/DivestOS-Build.git DivestOS;
+cd DivestOS;
+git submodule update --init --recursive;
+mkdir -p Build/LineageOS-15.1/.repo/local_manifests Builds Signing_Keys;
+cd Build/LineageOS-15.1;
+ln -s ../../Manifests/Manifest_LAOS-15.1.xml .repo/local_manifests/local_manifest.xml;
+repo init -u git://github.com/LineageOS/android.git -b lineage-15.1;
+repo sync; #This part will take a while
 
 #Some systems have python3 set as default, the build scripts require python2
-virtualenv2 venv
+virtualenv2 venv;
 
-#TODO: Signing Keys
 cd ../..
-nano Scripts/init.sh #Choose your options and update paths
+nano Scripts/init.sh; #Choose your options and update paths
+
+#Generate signing keys
+nano Generate_Signing_Keys.sh; #Update description
+sh Generate_Signing_Keys.sh;
 </code></pre>
 					<h4>Setting up ccache (Optional)</h4>
 						<p>Use of ccache is highly recommended, its an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
-						<pre><code>mkdir ccache
-echo "export USE_CCACHE=1" >> .bashrc
-echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY]" >> .bashrc
-source ~/.bashrc
-ccache -M 128GB #Optionally set a size limit</code></pre>
+						<pre><code>mkdir ccache;
+echo "export USE_CCACHE=1" >> .bashrc;
+echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY]" >> .bashrc;
+source ~/.bashrc;
+ccache -M 128GB; #Optionally set a size limit</code></pre>
 					</div>
 					<div class="section">
 						<h3>About the Workspace</h3>
@@ -97,16 +100,16 @@ ccache -M 128GB #Optionally set a size limit</code></pre>
 					<div class="section">
 						<h3>Building</h3>
 						<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
-						<pre><code>cd Build/LineageOS-15.1
-source venv/bin/activate #Only for python3 default systems
-source ../../Scripts/init.sh
-resetWorkspace
-patchWorkspace
-buildDevice [device] #or buildAll for all supported devices</code></pre>
+						<pre><code>cd Build/LineageOS-15.1;
+source venv/bin/activate; #Only for python3 default systems
+source ../../Scripts/init.sh;
+resetWorkspace;
+patchWorkspace;
+buildDevice [device]; #or buildAll for all supported devices</code></pre>
 						<p>Afterwards you should have flashable zips located in out/target/product/[device]. You should copy them to /Builds</p>
 					</div>
 					<div class="section">
 						<h3>Installing</h3>
-						<p>Reboot into recovery on your device and <code>$ adb sideload coverage*$device.zip</code></p>
+						<p>Reboot into recovery on your device and <code>$ adb sideload coverage*$device.zip;</code></p>
 					</div>
 				</div>
