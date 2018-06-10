@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		}
 	}
 
+	//Unhide
+	document.getElementById("nameYourPrice").classList.remove("hidden");
 	//Set default
 	document.getElementById("radPriceTen").click();
 });
