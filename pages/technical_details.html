@@ -16,7 +16,7 @@
 					<div class="section">
 						<h3>The nitty gritty</h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2018-05-24</p>
+						<p>Last updated: 2018-06-25</p>
 						<h4>Workspace</h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -52,14 +52,16 @@
 							<li>Camera Roll: An improved gallery app. Replaces AOSP Gallery</li>
 							<li>Fennec DOS: A browser hardened against trackers by default. Replaces AOSP Browser/LineageOS Jelly</li>
 							<li>F-Droid: An app store for FOSS apps</li>
-							<li>microG: Allows for using apps that depend on the proprietary Google Play Services and also battery efficient location lookups.</li>
+							<!--<li>microG + Backends: Allows for using apps that depend on the proprietary Google Play Services and also battery efficient location lookups.</li>-->
+							<li>UnifiedNLP + Backends: Fused location provider that uses plugins to provide battery efficient location lookups.</li>
 							<li>Offline Calendar: Allows creating calendars without an account</li>
 							<li>Silence: An improved SMS app that allows for end-to-end encrypted messages between other Silence users. Replaces AOSP Messaging</li>
 						</ul>
 						<h5>android_bootable_recovery</h5>
 						<ul>
 							<li>[Patch.sh 14.1] Remove nested menus</li>
-							<li>[Rebrand.sh] Remove LineageOS logo</li>
+							<li>[Rebrand.sh 15.1] Recolor icons and text</li>
+							<li>[Rebrand.sh 15.1] Remove LineageOS logo and center icons</li>
 							<li>[Rebrand.sh] LineageOS -> DivestOS</li>
 						</ul>
 						<h5>android_external_sqlite</h5>
@@ -76,6 +78,7 @@
 						<ul>
 							<li>[Deblob.sh] Many references to proprietary blobs are removed</li>
 							<li>[Deblob.sh] Many options enabling use of proprietary blobs are removed</li>
+							<li>[Deblob.sh] SELinux policy files for proprietary blobs are removed</li>
 							<li>[Deblob.sh] The DRM server is disabled</li>
 							<li>[Deblob.sh] setup-makefiles.sh is executed to update vendor Makefiles</li>
 							<li>[Functions.sh] enhanceLocation(): Switch to HTTPS URLs for AGPS data</li>
@@ -87,8 +90,7 @@
 						<ul>
 							<li>[Patch.sh] Disable DropBox</li>
 							<li>[Patch.sh] Enable permission review</li>
-							<li>[Patch.sh] Allow platform apps to spoof their signature</li>
-							<!--<li>[Patch.sh] Switch the default and fallback DNS to CloudFlare</li>-->
+							<!--<li>[Patch.sh] Allow platform apps to spoof their signature</li>-->
 							<li>[Patch.sh] Switch the default and fallback DNS to OpenNIC</li>
 							<!--<li>[Patch.sh] Change captive portal/network monitor check endpoints to our servers</li>-->
 							<li>[Patch.sh] Remove the PrintRecommendation service</li>
@@ -110,6 +112,7 @@
 							<li>[Optimize.sh] Offload more rendering to GPU</li>
 							<li>[Optimize.sh] Enable high temperature warnings</li>
 							<li>[Theme.sh 14.1] Change teal accents to orange ones</li>
+							<li>[Rebrand.sh] Boot animation mask and shine is changed</li>
 						</ul>
 						<h5>android_kernel_*</h5>
 						<ul>
