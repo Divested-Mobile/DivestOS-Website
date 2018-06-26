@@ -25,16 +25,6 @@ h1.splash {
   font-size: 10vmin;
   font-weight: bold;
   color: #FF5722;
-  background-image: url("/images/plasma-mask.jpg");
-  -webkit-animation: scroller 20s infinite linear;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes scroller {
-  100% {
-    background-position: 100%;
-  }
 }
 
 a.scroll {
