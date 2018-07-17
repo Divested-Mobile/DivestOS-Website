@@ -4,12 +4,11 @@
 					<div class="section">
 						<h3>General Issues</h3>
 
-						<h4>F-Droid repeatedly installing/updating apps</h4>
-						<p>This is a known issue in F-Droid 1.1-1.2 and will (hopefully) be fixed by upstream soon. As a temporary workaround you can either manually clear F-Droid's data (cache sometimes works) or reboot your device.</p>
-						<p>Issues: #1311, #1031, #1209, #1271, #1374, #1392, #1409, #1415, #1420, #1429, #1441, #1445</p>
-
 						<h4>Upon first install device gets stuck at 'Encrypting...' screen</h4>
-						<p>LineageOS adds duplicate fstab entries to most devices in order to allow the user to choose between an ext4 or F2FS /data partition. If you improperly wiped your device beforehand (erased instead of formatted /data) the system won't know what to do and will just hang there. Simply format /data via TWRP or fastboot to fix.</p>
+						<p>Most devices have duplicate fstab entries in order to allow the user to choose between an ext4 or F2FS /data partition. If you improperly wiped your device beforehand (erased instead of formatted /data) the system won't know what to do and will just hang there. Simply format /data via TWRP or fastboot to fix.</p>
+
+						<h4>No mobile service</h4>
+						<p>Select the proper APN for your carrier under Settings > Network > Mobile network > Advanced > Access Point Names</p>
 					</div>
 					<div class="section">
 						<h3>Device Specific Issues</h3>
@@ -34,8 +33,5 @@
 
 						<h4>Black screen or only wallpaper showing</h4>
 						<p>Pull down from the notification drawer to get into Settings, enable Development Mode, turn on ADB and then run the following<br><code>$ adb shell am start org.lineageos.setupwizard/org.lineageos.setupwizard.SetupWizardExitActivity</code></p>
-
-						<h4>No mobile service</h4>
-						<p>Select the proper APN for your carrier under Settings > Network > Mobile network > Advanced > Access Point Names</p>
 					</div>
 				</div>
