@@ -64,7 +64,10 @@
 						<p>If your device has VoLTE support or is an LTE tablet then YES! LTE has both stronger encryption compared to 3G and is end-to-end encrypted to the cell tower. Intercepting 2G and 3G via a fake cell tower is easy since 2G has no encryption and 3G can be cracked in near-realtime. LTE however requires much more expensive devices that aren't as widely available. As always there are various other ways for your device to be compromised or to have your data intercepted, but every bit helps!</p>
 
 						<h4>Why haven't you completely changed the default DNS servers?</h4>
-						<p>Right now OpenNIC AnyCast is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
+						<p>Right now Cloudflare (OpenNIC AnyCast disappeared) is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
+
+						<h4>Why haven't you replaced the graphics drivers with SwiftShader (like Android-x86)?</h4>
+						<p>The deblobber actually has basic support for switching to SwiftShader. However we've been unable to successfully boot a device. We will need to reach out to the Android-x86 team and ask for help around that.</p>
 
 						<h4>Why haven't you replaced the graphics drivers with mesa/llvmpipe (like Replicant)?</h4>
 						<p>Because we haven't figured that out yet. If someone from Replicant (or anywhere else) wants to wrap those patches up in a nice tidy ball, that'd be amazing. However even then we aren't sure if the performance/battery hit is worth it.</p>

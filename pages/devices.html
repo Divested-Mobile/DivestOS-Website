@@ -61,7 +61,7 @@
 
 	function getDevices($base, $rootdir, $realRootdir, $devices) {
 		$downloads = "";
-		$lastSecRelease = 1525824000; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
+		$lastSecRelease = 1533427200; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) >= 2 && $device != '..') {
@@ -183,4 +183,4 @@
 						return "<?php print($_SESSION['csrfToken']); ?>";
 					}
 				</script>
-				<script defer type="text/javascript" src="/assets/js/purchase.js" integrity="sha384-upELWODDbmHONrJWGWa5QObnn6hSXaOz+8nSTGMBGvHkQDGjmZbEm4v31WRjA9T3"></script>
+				<script type="text/javascript" src="/assets/js/purchase.js" integrity="sha384-upELWODDbmHONrJWGWa5QObnn6hSXaOz+8nSTGMBGvHkQDGjmZbEm4v31WRjA9T3"></script>
