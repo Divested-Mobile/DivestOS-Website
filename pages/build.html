@@ -35,7 +35,10 @@ sudo paccache -rk0;</code></pre>
 							<p>The latest Fedora release is recommended.</p>
 							<pre><code>sudo dnf update;
 
-sudo dnf install @development-tools android-tools automake bc bison bzip2 bzip2-libs ccache curl dpkg-dev flex gcc gcc-c++ git glibc-devel.{x86_64,i686} gnupg gperf gradle ImageMagick ImageMagick-c++-devel ImageMagick-devel java-1.8.0-openjdk java-1.8.0-openjdk-devel libstdc++.i686 libX11-devel.{x86_64,i686} libxml2-devel libXrandr.{x86_64,i686} libXrender.{x86_64,i686} libxslt lz4-libs lzop make maven mesa-libGL-devel.{x86_64,i686} ncurses ncurses-compat-libs ncurses-devel.{x86_64,i686} ninja-build openssl-devel optipng perl-Digest-MD5-File perl-Switch pngcrush python python2-virtualenv python3 python3-mako python-mako python-markdown python-networkx readline-devel.{x86_64,i686} rsync schedtool SDL squashfs-tools syslinux-devel unzip wxGTK xml2 xz-lzma-compat zip zlib zlib-devel.{x86_64,i686};</code></pre>
+sudo dnf install @development-tools android-tools automake bc bison bzip2 bzip2-libs ccache curl dpkg-dev flex gcc gcc-c++ git glibc-devel.{x86_64,i686} gnupg gperf gradle ImageMagick ImageMagick-c++-devel ImageMagick-devel java-1.8.0-openjdk java-1.8.0-openjdk-devel libstdc++.i686 libX11-devel.{x86_64,i686} libxml2-devel libXrandr.{x86_64,i686} libXrender.{x86_64,i686} libxslt lz4-libs lzop make maven mesa-libGL-devel.{x86_64,i686} ncurses ncurses-compat-libs ncurses-devel.{x86_64,i686} ninja-build openssl-devel optipng perl-Digest-MD5-File perl-Switch pngcrush python python2-virtualenv python3 python3-mako python-mako python-markdown python-networkx readline-devel.{x86_64,i686} rsync schedtool SDL squashfs-tools syslinux-devel unzip wxGTK xml2 xz-lzma-compat zip zlib zlib-devel.{x86_64,i686};
+
+curl https://storage.googleapis.com/git-repo-downloads/repo >> ~/bin/repo;
+chmod a+x ~/bin/repo;</code></pre>
 
 						<h4>On Ubuntu</h4>
 							<p>Ubuntu 16.10 is recommended, newer should work fine with little change.</p>
@@ -54,7 +57,8 @@ echo "export EXPERIMENTAL_USE_JAVA8=true" >> .bashrc;</code></pre>
 						<h3>Creating a Workspace</h3>
 						<h4>Setting up Firejail (optional)</h4>
 						<p>For extra security of your host machine, you can run the entire build process in a fairly restricted sandbox with minimal performance impact. We've already upstreamed a profile for just this task.</p>
-						<pre><code>firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
+						<pre><code>echo 'if [ $container="firejail" ]; then unset PROMPT_COMMAND; fi;' >> .bashrc;
+firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
 						<h4>Checking out the code</h4>
 						<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a separate drive from your system drive.</p>
 						<pre><code>git clone https://git.spotco.us/DivestOS/DivestOS-Build.git DivestOS;
