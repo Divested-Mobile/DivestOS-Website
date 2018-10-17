@@ -119,7 +119,7 @@
 							<li>Devices Supported: Most LG devices</li>
 							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
 							<ol>
-								<li>Windows is required for this. Using a virtual machine makes it very tricky due to all the different USB ids presented.</li>
+								<li>Windows is required for this. KVM USB pass through has been confirmed to work</li>
 								<li>[TO BE COMPLETED]</li>
 							</ol>
 						</ul>
@@ -141,7 +141,7 @@
 							<li>This method is simple, but dangerous.</li>
 							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).</li>
 							<ol>
-								<li>Windows is required for this. VirtualBox USB passthrough has been confirmed to work</li>
+								<li>Windows is required for this. KVM USB pass through has been confirmed to work</li>
 								<li>Download dd from <a href="http://www.chrysocome.net/downloads/dd-0.5.zip" target="_blank" rel="nofollow noopener noreferrer">here</a></li>
 								<li>Connect your device</li>
 								<li><code>> wmic partition where index=22 get diskindex</code></li>
