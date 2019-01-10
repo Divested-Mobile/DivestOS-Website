@@ -60,8 +60,9 @@
 						<h4>Why did you only partially remove VoLTE?</h4>
 						<p>Because it is necessary on some carriers to be able to call. It also allows you to stay on LTE longer which is all around a very good thing.</p>
 
-						<h4>Should I use the 'LTE Only' option (if available)?</h4>
-						<p>If your device has VoLTE support or is an LTE tablet then YES! LTE has both stronger encryption compared to 3G and is end-to-end encrypted to the cell tower. Intercepting 2G and 3G via a fake cell tower is easy since 2G has no encryption and 3G can be cracked in near-realtime. LTE however requires much more expensive devices that aren't as widely available. As always there are various other ways for your device to be compromised or to have your data intercepted, but every bit helps!</p>
+						<h4>Should I use the 'XG only' network mode option (if available)?</h4>
+						<p>2G has no encryption, 3G has decent encryption, and LTE has strong end-to-end encryption (simplified, 3G and LTE still have many leaks). Malicious cell interception devices capable of intercepting 3G/LTE are very expensive kits, so the lesser ones downgrade you to 2G where they can work. These network modes offer enhanched protection against interception by pinning to a mode. As always there are various other ways for your device to be compromised or to have your data intercepted, but every bit helps!</p>
+						<p>Which to use? If your device has VoLTE available, you should choose 'LTE only'. If it has LTE but you can make calls over 3G, choose 'LTE/3G only'. If it does not have LTE, but can make calls over 3G, choose '3G only'. If you can't make calls over 3G, you will sadly have to use the regular LTE or 3G modes (which happily downgrade to 2G).</p>
 
 						<h4>Why haven't you completely changed the default DNS servers?</h4>
 						<p>Right now Cloudflare (OpenNIC AnyCast disappeared) is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
