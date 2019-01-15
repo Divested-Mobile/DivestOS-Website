@@ -1,0 +1,154 @@
+				<div class="card fluid">
+					<h2>Saving Data (WIP)</h2>
+					<p>Documented below are various settings to reduce your mobile data usage. Utilizing all of the available settings below and being mindful of your use can allow for moderate to heavy usage while staying below 500MB a month.</p>
+					<div class="section">
+						<h4>System Wide Saver</h4>
+						<p>There is a built in 'Data saver' feature. Enabling it restricts the amount of data an app can use while in background and also informs apps that you would like to save data. You can enable it via Quick Settings or Settings > Network > Data usage. As of Jan. 2019 only a small handful of apps on F-Droid change how they operate when this is enabled.</p>
+
+						<h4>System Wide Cap</h4>
+						<p>Data usage can be cutoff completely if a threshold is reached: Settings > Network > Data usage > Billing cycle</p>
+
+						<h4>AntennaPod</h4>
+						<p>By default will only update when on Wi-Fi or manually invoked.</p>
+
+						<h4>Bitcoin Wallet</h4>
+						<p>[TODO]</p>
+
+						<h4>Chromium</h4>
+						<p>Enabling the 'Data saver' feature routes ALL HTTP (non encrypted) traffic through Google's proprietary compression proxy servers. It also sends the 'Save-Data' HTTP header with all HTTPS connections. Usage of this feature is NOT recommended due to the insane privacy tradeoff.</p>
+
+						<h4>Conversations</h4>
+						<ul>
+							<li>When connected to a properly maintained XMPP server, data usage should be minimal.</li>
+							<li>Automatic download of attachments is disabled when system 'Data saver' is enabled.</li>
+							<li>Usage can be further reduced via attachment options..</li>
+						</ul>
+
+						<h4>DuckDuckGo Browser</h4>
+						<p>An ad/tracker blocker is enabled by default.</p>
+
+						<h4>E-Mail (AOSP)</h4>
+						<ul>
+							<li>Automatic inbox refresh time interval can be increased/disabled: Settings > [account]</li>
+							<li>Automatic attachment download can be capped/disabled: Settings > [account]</li>
+						</ul>
+
+						<h4>Face Slim</h4>
+						<ul>
+							<li>Images can be disabled.</li>
+							<li>'Basic' mode can be enabled.</li>
+						</ul>
+
+						<h4>F-Droid</h4>
+						<p>By default will only update when on Wi-Fi or manually invoked.</p>
+
+						<h4>Firefox/Fennec/Mull/IceCat/Orfox/Tor Browser</h4>
+						<ul>
+							<li>Restrict image loading: Settings > Advanced > Show images</li>
+							<li>Downloading of fonts can be disabled: Settings > Advanced</li>
+							<li>Autoplay of media can be disabled: Settings > Advanced</li>
+							<li>Enable Tracking Protection: Settings > Privacy.</li>
+							<li>[3rdParty] Install 'uBlock Origin' add-on to prevent loading of trackers/ads.</li>
+							<li>[3rdParty] Install 'Decentraleyes' add-on to load commonly used JavaScript libraries from disk.</li>
+							<li>[3rdParty] Install 'Save-Data: on' add-on to send HTTP header informing you would like to save data.</li>
+						</ul>
+
+						<h4>Flym/spaRSS</h4>
+						<ul>
+							<li>Automatic refresh time can be reduced.</li>
+							<li>Automatic refresh can be disabled on mobile.</li>
+							<li>Image precaching is only enabled on Wi-Fi by default.</li>
+							<li>Images can be disabled.</li>
+						</ul>
+
+						<h4>Forecastie</h4>
+						<p>Backround updates can be disabled.</p>
+
+						<h4>FOSS Browser</h4>
+						<ul>
+							<li>An ad/tracker blocker is enabled by default.</li>
+							<li>Images can be disabled: Settings > Start control</li>
+							<li>JavaScript can be disabled: Settings > Start control</li>
+							<li>3rd party requests can be disabled: Settings > Start control</li>
+							<li>Enable 'Request Save Data' via Settings > Start control to send HTTP header informing you would like to save data.</li>
+						</ul>
+
+						<h4>Hypatia</h4>
+						<p>Will only update when manually invoked.</p>
+
+						<h4>Kiwix</h4>
+						<p>By default will only update when on Wi-Fi or manually invoked. Also warns when clicking external links. Note: Loading available ZIM files takes 10MB.</p>
+
+						<h4>Klar/Focus</h4>
+						<ul>
+							<li>An ad/tracker blocker is enabled by default.</li>
+							<li>Blocking of even more trackers can be enabled.</li>
+							<li>Downloading of fonts can be disabled.</li>
+							<li>JavaScript can be disabled.</li>
+							<li>Blocking of images is currently implemented but unavailable.</li>
+						</ul>
+
+						<h4>Lightning</h4>
+						<ul>
+							<li>An ad/tracker blocker can be enabled: Settings > General</li>
+							<li>Images can be disabled: Settings > General</li>
+							<li>JavaScript can be disabled: Settings > General</li>
+							<li>[Pending Merge/Approval] Enable 'Request Save-Data' via Settings > General to send HTTP header informing you would like to save data.</li>
+						</ul>
+
+						<h4>NewPipe</h4>
+						<p>Resolution can be reduced on mobile, 240P is recommended at ~1MB per minute: Settings > Video & Audio. Thumbnail loading can also be disabled: Settings > Content.</p>
+
+						<h4>Nextcloud/Owncloud</h4>
+						<p>[TODO]</p>
+
+						<h4>Orbot</h4>
+						<p>Will continually use data while running. By default will send fewer padding packets and close circuits earlier to save data. Also goes to sleep when not used by any app for a while.</p>
+
+						<h4>OsmAnd</h4>
+						<p>Always performs updates checks on app startup. Will only download map/databases when manually invoked. Online maps and images have to be manually enabled.</p>
+
+						<h4>Privacy Browser [TODO]</h4>
+						<ul>
+							<li>An ad/tracker blocker is enabled by default.</li>
+							<li>JavaScript is disabled by default.</li>
+							<li>Image loading can be disabled.</li>
+						</ul>
+
+						<h4>RadioDroid</h4>
+						<ul>
+							<li>Favicon downloading can be disabled.</li>
+							<li>Warn on mobile data can be enabled.</li>
+						</ul>
+
+						<h4>RedReader</h4>
+						<p>Allow thumbnails on Wi-Fi only: Settings > Appearance. Precaching can also be disabled: Settings > Cache</p>
+
+						<h4>Silence</h4>
+						<p>Automatic MMS download can be disabled: Settings > Chats and media</p>
+
+						<h4>Slide</h4>
+						<p>Image quality for select hosts can be reduced: Settings > Data saving</p>
+
+						<h4>Syncthing</h4>
+						<ul>
+							<li>By default will only run when on Wi-Fi</li>
+							<li>Has an option to respect system 'Data saver': Settings > Run conditions</li>
+						</ul>
+
+						<h4>Twidere</h4>
+						<ul>
+							<li>Automatic refresh time interval can be increased/disabled: Settings > Refresh</li>
+							<li>Media previews can be disabled on mobile: Settings > Network</li>
+						</ul>
+
+						<h4>Wikipedia</h4>
+						<ul>
+							<li>Link preloading can be disabled.</li>
+							<li>Images can be disabled.</li>
+							<li>Stats can be disabled.</li>
+							<li>Note: the data saver/mobile detection seems to be broken</li>
+							<li>Consider using Kiwix with an offiline 'Wikipedia Simple' database (400MB) and only using the Wikipedia app to sumplement</li>
+						</ul>
+					</div>
+				</div>
