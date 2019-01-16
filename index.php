@@ -2,6 +2,12 @@
 
 error_reporting(E_ERROR | E_PARSE);
 
+// Check if the `Save-Data` header exists and is set to a value of "on".
+$saveData = false;
+if (isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) === "on") {
+	$saveData = true;
+}
+
 //START OF PAGE LOADER
 $page = noHTML($_GET["page"]);
 if(strlen($page) == 0) {
