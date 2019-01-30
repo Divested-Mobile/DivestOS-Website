@@ -32,9 +32,9 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 
 function getMirror() {
 	if($GLOBALS['numMirrors'] == 0) {
-		return "https://divestos.xyz/builds/";
+		return "https://" . $_SERVER['SERVER_NAME'] . "/builds/";
 	}
-	return "https://mirror" . rand(0, $GLOBALS['numMirrors']) . ".divestos.xyz/";
+	return "https://mirror" . rand(0, $GLOBALS['numMirrors']) . "." . $_SERVER['SERVER_NAME'] . "/";
 }
 
 //Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know

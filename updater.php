@@ -84,9 +84,9 @@ function getImageJson($rootdir, $base, $device, $image) {
 			$json .= "\n\t\t{";
 			$json .= "\n\t\t\t\"filename\": \"" . $image . "\",";
 			if(contains($rootdir, "incremental")) {
-				$json .= "\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?base=" . $base . "&f=" . $device . "/incremental/" . $image . "\",";
+				$json .= "\n\t\t\t\"url\": \"https://" . $_SERVER['SERVER_NAME'] . "/mirror.php?base=" . $base . "&f=" . $device . "/incremental/" . $image . "\",";
 			} else {
-				$json .= "\n\t\t\t\"url\": \"https://divestos.xyz/mirror.php?base=" . $base . "&f=" . $device . "/" . $image . "\",";
+				$json .= "\n\t\t\t\"url\": \"https://" . $_SERVER['SERVER_NAME'] . "/mirror.php?base=" . $base . "&f=" . $device . "/" . $image . "\",";
 			}
 			$json .= "\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",";
 			$json .= "\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",";
