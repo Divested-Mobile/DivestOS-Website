@@ -1,59 +1,44 @@
 <?php
 
-error_reporting(E_ERROR | E_PARSE);
-
-// Check if the `Save-Data` header exists and is set to a value of "on".
-$saveData = false;
-if (isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) === "on") {
-	$saveData = true;
-}
+$handler = false;
+include "sbnr/config.php";
+include "sbnr/security.php";
+include "sbnr/utils.php";
+include "sbnr/pre.php";
 
 //START OF PAGE LOADER
 $page = noHTML($_GET["page"]);
-if(strlen($page) == 0) {
+if(strlen($page) == 0) { //default to home page if not empty
 	$page = "home";
+	if($SBNR_GEN_ONE_PAGE) { $page = "home-1p"; }
 }
-if(strpos($page, '&period;') === false && strpos($page, '&sol;') === false) {
+if(checkString($page, 1, 0, 0, 0)) { //validate string to prevent accessing out of self resources
 	$page = str_replace("&lowbar;", "_", $page);
+	$pageRaw = $page;
 	$page = "pages/" . $page . ".html";
-	if(file_exists($page)) {
+	if(file_exists($page)) { //check if page exists
 		$pageReal = $page;
-	} else {
+		$pageIsHome = ($page === "pages/home.html" || $page === "pages/home-1p.html");
+	} else { //doesn't exist
 		$pageContents = genErrorPage(404);
 	}
-} else {
+} else { //invalidate request
 	$pageContents = genErrorPage(400);
 }
-//END OF PAGE LOADER
 
+//END OF PAGE LOADER
 
 //START OF PAGE
 include "fragments/header.html";
-if(isset($pageReal)) {
+if(isset($pageReal)) { //load the page if exists
 	include $pageReal;
-} else {
+} else { //page doesn't exist, show internally generated page
 	print($pageContents);
 }
 include "fragments/footer.html";
 //END OF PAGE
 
-
-//START OF FUNCTIONS
-function genErrorPage($errorCode) {
-	http_response_code($errorCode);
-	return str_replace("ERROR_PLACEHOLDER", $errorCode, file_get_contents("fragments/error.html"));
-}
-
-//Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
-function noHTML($input, $encoding = 'UTF-8') {
-	return htmlentities($input, ENT_QUOTES | ENT_HTML5, $encoding);
-}
-
-//Credit: https://stackoverflow.com/a/7112596
-function contains($haystack, $needle) {
-	return strpos($haystack, $needle) !== false;
-}
-//END OF FUNCTIONS
-
+include "sbnr/post.php";
 print("<!-- Server Side Rendering Time: " . (microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"]) . "s -->");
+
 ?>

@@ -1,5 +1,5 @@
 <?php
-//Copyright (c) 2017-2018 Divested Computing, Inc.
+//Copyright (c) 2017-2019 Divested Computing, Inc.
 //
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -14,7 +14,11 @@
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-error_reporting(E_ERROR | E_PARSE);
+$handler = true;
+include "sbnr/config.php";
+include "sbnr/security.php";
+include "sbnr/utils.php";
+include "sbnr/pre.php";
 
 $base = noHTML($_GET["base"]);
 $base = str_replace("&period;", ".", $base);
@@ -99,19 +103,4 @@ function getImageJson($rootdir, $base, $device, $image) {
 	}
 }
 
-//Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
-function noHTML($input, $encoding = 'UTF-8') {
-    return htmlentities($input, ENT_QUOTES | ENT_HTML5, $encoding);
-}
-
-//Credit: https://stackoverflow.com/a/7112596
-function contains($haystack, $needle) {
-    return strpos($haystack, $needle) !== false;
-}
-
-//Credit: http://stackoverflow.com/a/10473026
-function startsWith($haystack, $needle) {
-    // search backwards starting from haystack length characters from the end
-    return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
-}
 ?>

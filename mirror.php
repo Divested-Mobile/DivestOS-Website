@@ -1,5 +1,5 @@
 <?php
-//Copyright (c) 2017 Divested Computing, Inc.
+//Copyright (c) 2017-2019 Divested Computing, Inc.
 //
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -14,7 +14,11 @@
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-error_reporting(E_ERROR | E_PARSE);
+$handler = true;
+include "sbnr/config.php";
+include "sbnr/security.php";
+include "sbnr/utils.php";
+include "sbnr/pre.php";
 
 $numMirrors = 0;
 
@@ -23,7 +27,7 @@ $base = str_replace("&period;", ".", $base);
 $file = noHTML($_GET["f"]);
 $file = str_replace("&period;", ".", $file);
 $file = str_replace("&sol;", "/", $file);
-if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($file) && strlen($file) > 0 && substr_count($file, '.') <= 2 && substr_count($file, '..') == 0 && substr_count($file, '/') <= 2) {
+if(checkString($base, 0, 1, 0, 0) && checkString($file, 0, 2, 2, 0)) {
 	header('Location: ' . getMirror() . $base . "/" . $file);
 } else {
 	print("Invalid request");
@@ -37,8 +41,4 @@ function getMirror() {
 	return "https://mirror" . rand(0, $GLOBALS['numMirrors']) . "." . $_SERVER['SERVER_NAME'] . "/";
 }
 
-//Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
-function noHTML($input, $encoding = 'UTF-8') {
-    return htmlentities($input, ENT_QUOTES | ENT_HTML5, $encoding);
-}
 ?>

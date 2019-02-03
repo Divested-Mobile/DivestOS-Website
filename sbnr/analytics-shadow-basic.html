@@ -1,0 +1,8 @@
+		<script type="text/javascript">
+		if(!navigator.doNotTrack) {
+			var atr = new XMLHttpRequest();
+			atr.open("POST", "[PLACEHOLDER_INSTANCE]/shadow.php", true);
+			atr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			atr.send("p=[PLACEHOLDER_LANDSCAPE]&ref=" + document.referrer.split('/')[2]);
+		}
+		</script>

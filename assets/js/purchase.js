@@ -1,4 +1,6 @@
 function checkout() {
+	var paymentAmount = 1000;
+	var paymentDescription = 'DivestOS Mobile Download'
 	var handler = StripeCheckout.configure({
 		key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
 		locale: 'auto',
@@ -10,17 +12,20 @@ function checkout() {
 					setTimeout(markPurchased, 500);
 				}
 			};
-			req.open("POST", "processor.php", true);
+			req.open("POST", "sbnr/stripe.php", true);
 			req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			req.send("token=" + token.id + "&ct=" + getCSRFToken());
+			req.send("PAYMENT_TOKEN=" + token.id
+			+ "&PAYMENT_AMOUNT=" + paymentAmount
+			+ "&PAYMENT_DESCRIPTION=" + btoa(paymentDescription)
+			+ "&CSRF_TOKEN=" + getCSRFToken());
 		}
 	});
 
 	handler.open({
 		name: 'Divested Computing, Inc.',
-		description: 'DivestOS Mobile Download',
+		description: paymentDescription,
 		zipCode: true,
-		amount: 1000
+		amount: paymentAmount
 	});
 
 	window.addEventListener('popstate', function() {

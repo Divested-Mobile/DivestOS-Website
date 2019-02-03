@@ -11,7 +11,6 @@
 								<li>What is received: Cookies (detailed below), Page Visited, Referring Page, User Agent, and IP Address</li>
 								<li>Cookies</li>
 								<ul>
-									<li>DARK_THEME - Toggled by the client so the web server can serve up the dark variant of mini.css</li>
 									<li>PHPSESSID - Set by the server to maintain a CSRF token on the client to prevent abuse of the Stripe processor</li>
 									<li>PreReleaseConfirmed - Used strictly by the client to prevent showing the pre-release message repeatedly</li>
 									<script>
@@ -28,6 +27,7 @@
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 							</ul>
+							<?php if($SBNR_ANALYTICS_ENABLED || $SBNR_SHADOW_ENABLED) : ?>
 							<li>Website Analytics</li>
 							<ul>
 								<li>What is received: Page Visited, Stripped Referring Page, Browser Fingerprint (salted with domain), User Agent, IP Address</li>
@@ -48,6 +48,7 @@
 								</script>
 								<noscript><li><mark>Current status: Not Tracking (JavaScript Disabled)</mark></li></noscript>
 							</ul>
+							<?php endif; ?>
 							<li>ROM</li>
 							<ul>
 								<li>The ROM does not contain any analytics and any requests are used only for supporting it</li>

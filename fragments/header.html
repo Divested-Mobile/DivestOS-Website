@@ -6,76 +6,82 @@
 		<meta name="theme-color" content="#212121">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
-		<link href="/images/favicon.png" rel="shortcut icon" integrity="sha384-7loQf2TJ+siBPhi5idRnLCRdWHrbtisZKlxOJBPPkcI+PYjbJHmQvzIhAL+xEIUV+g==">
+		<link href="images/favicon.png" rel="shortcut icon" integrity="sha384-7loQf2TJ+siBPhi5idRnLCRdWHrbtisZKlxOJBPPkcI+PYjbJHmQvzIhAL+xEIUV+g==">
 		<!-- sed -i 's/.apple-system/"Fira Sans", -apple-system/' mini*.css; -->
 		<?php
-			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-I0JZrlnrfl/sj0x+m1zMq41kC5NY8II5AcD53lX2RmSWjr/75qge/WCY2LYwH0+R">'. PHP_EOL;
-			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-Q/kwK+sCtHI2f0TWmvzZlFItAiAapeHdTKQEM8uwHu7/71o2zolTUBByjxL1zK1L">'. PHP_EOL;
-			$splashCSS = '<link rel="stylesheet" href="assets/css/splash.css" integrity="sha384-bg1hY/7L94gRkUwN9g3UzwW+z7p2fejWlGiT5TsFFvcNor7ndhItss/SsJPE+wSG">'. PHP_EOL;
-			$splashCSSDark = '<link rel="stylesheet" href="assets/css/splash-dark.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">'. PHP_EOL;
+			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-I0JZrlnrfl/sj0x+m1zMq41kC5NY8II5AcD53lX2RmSWjr/75qge/WCY2LYwH0+R">' . PHP_EOL;
+			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-Q/kwK+sCtHI2f0TWmvzZlFItAiAapeHdTKQEM8uwHu7/71o2zolTUBByjxL1zK1L">' . PHP_EOL;
+			$splashCSS = '<link rel="stylesheet" href="assets/css/splash.css" integrity="sha384-bg1hY/7L94gRkUwN9g3UzwW+z7p2fejWlGiT5TsFFvcNor7ndhItss/SsJPE+wSG">' . PHP_EOL;
+			$splashCSSDark = '<link rel="stylesheet" href="assets/css/splash-dark.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">' . PHP_EOL;
 
-			$darkThemeCookie = noHTML($_COOKIE["DARK_THEME"]);
-			if($darkThemeCookie === "true") {
+			if($SBNR_GEN_DARKMODE) {
 				print($darkTheme);
-				if($page==="pages/home.html") { print($splashCSSDark); }
+				if($pageIsHome) { print($splashCSSDark); }
 			} else {
 				print($lightTheme);
-				if($page==="pages/home.html") { print($splashCSS); }
+				if($pageIsHome) { print($splashCSS); }
 			}
 		?>
 		<link rel="stylesheet" href="assets/css/extras.css" integrity="sha384-dmXLXj/JNtbnD7lJ6CSV3T+xFuFLYnSnm7VinPb7rAobh9MQbmd4W69fD1W1ZQge">
 	</head>
 
+	<?php if($SBNR_OBF_DISABLE_RIGHT_CLICK) : ?>
+	<body oncontextmenu="return false;">
+	<?php else : ?>
 	<body>
-		<?php
-			$splash = '<div class="index-splash">
-				<div class="index-splash-bg" id="header"></div>
-				<h1 class="splash">DivestOS Mobile</h1>
-				<p class="splash">A privacy focused Android distribution<br><small><em>Take back (some) control of <b>your</b> device</em></small></p>
-				<a class="scroll" href="#content">▼</a>
-			</div>' . PHP_EOL;
-			if($page==="pages/home.html") { print($splash); }
-		?>
-		<header class="sticky" style="text-align: center;">
-			<a href="/index.php" class="logo col-sm-3" style="color: #FF5722;">DivestOS Mobile</a>
+	<?php endif; ?>
+		<?php if($pageIsHome) : ?>
+		<div class="index-splash">
+			<div class="index-splash-bg" id="splash"></div>
+			<h1 class="splash">DivestOS Mobile</h1>
+			<p class="splash">A privacy focused Android distribution<br><small><em>Take back (some) control of <b>your</b> device</em></small></p>
+			<a class="scroll" href="#content">▼</a>
+		</div>
+		<?php endif; ?>
+
+		<?php if($SBNR_GEN_ONE_PAGE) : ?>
+		<header class="sticky centero">
+			<a href="index.php#splash" class="logo" style="color: #FF5722; font-weight: bold;">DivestOS Mobile</a>
 			<label for="drawer-control" class="button drawer-toggle"></label>
 		</header>
 
+		<input type="checkbox" id="drawer-control" class="drawer">
+		<nav class="hidden-md hidden-lg">
+			<label for="drawer-control" class="drawer-close"></label>
+		</nav>
 		<div class="row" id="content">
-			<!-- Navigation -->
+			<div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+		<?php else : ?>
+		<header class="sticky" style="text-align: center;">
+			<a href="index.php" class="logo col-sm-3" style="color: #FF5722;">DivestOS Mobile</a>
+			<label for="drawer-control" class="button drawer-toggle"></label>
+		</header>
+		<div class="row" id="content">
 			<input type="checkbox" id="drawer-control" class="drawer">
 			<nav class="col-md-3 col-lg-2">
 				<label for="drawer-control" class="drawer-close"></label>
-				<a href="/index.php?page=home">Home</a>
+				<a href="index.php?page=home">Home</a>
 				<span>Get Started</span>
-					<a class="sublink-1" href="/index.php?page=bootloader">Bootloader Unlocking</a>
-					<a class="sublink-1" href="/index.php?page=devices&base=LineageOS">Device Downloads</a>
-					<a class="sublink-1" href="/index.php?page=post_install">Post Install</a>
-					<a class="sublink-1" href="/index.php?page=our_apps">Our Apps</a>
-					<a class="sublink-1" href="/index.php?page=recommended_apps">Recommended Apps</a>
-					<a class="sublink-1" href="/index.php?page=extras">Extras</a>
+					<a class="sublink-1" href="index.php?page=bootloader">Bootloader Unlocking</a>
+					<a class="sublink-1" href="index.php?page=devices&base=LineageOS">Device Downloads</a>
+					<a class="sublink-1" href="index.php?page=post_install">Post Install</a>
+					<a class="sublink-1" href="index.php?page=our_apps">Our Apps</a>
+					<a class="sublink-1" href="index.php?page=recommended_apps">Recommended Apps</a>
+					<a class="sublink-1" href="index.php?page=extras">Extras</a>
 				<span>Docs</span>
-					<a class="sublink-1" href="/index.php?page=faq">FAQ</a>
-					<a class="sublink-1" href="/index.php?page=screenshots">Screenshots</a>
-					<a class="sublink-1" href="/index.php?page=troubleshooting">Troubleshooting</a>
-					<a class="sublink-1" href="/index.php?page=technical_details">Technical Details</a>
-					<a class="sublink-1" href="/index.php?page=saving_data">Saving Data</a>
-					<a class="sublink-1" href="/index.php?page=browsers">Browser Tables</a>
-					<a class="sublink-1" href="/index.php?page=messengers">Messenger Tables</a>
-					<a class="sublink-1" href="/index.php?page=broken">Functionality Tables</a>
-					<a class="sublink-1" href="/index.php?page=build">Build Guide</a>
+					<a class="sublink-1" href="index.php?page=faq">FAQ</a>
+					<a class="sublink-1" href="index.php?page=screenshots">Screenshots</a>
+					<a class="sublink-1" href="index.php?page=troubleshooting">Troubleshooting</a>
+					<a class="sublink-1" href="index.php?page=technical_details">Technical Details</a>
+					<a class="sublink-1" href="index.php?page=saving_data">Saving Data</a>
+					<a class="sublink-1" href="index.php?page=browsers">Browser Tables</a>
+					<a class="sublink-1" href="index.php?page=messengers">Messenger Tables</a>
+					<a class="sublink-1" href="index.php?page=broken">Functionality Tables</a>
+					<a class="sublink-1" href="index.php?page=build">Build Guide</a>
 				<a href="https://git.spotco.us/DivestOS" target="_blank" rel="nofollow noopener noreferrer">Source Code (GPLv3)</a>
-				<a href="/index.php?page=about">About</a>
-				<!-- TODO: Replace this with a <form> to provide functionality to users with JavaScript disabled -->
-				<script type="text/javascript">
-					function toggleDarkTheme() {
-						setCookie("DARK_THEME", (getCookie("DARK_THEME") != "true"), 30);
-						location.reload();
-					}
-					var toggleTheme = '<a href="javascript:toggleDarkTheme();">Toggle dark theme</a>';
-					document.write(toggleTheme);
-				</script>
+				<a href="index.php?page=about">About</a>
 			</nav>
 
-			<!-- Content -->
 			<div class="col-sm-12 col-md-9 col-lg-10">
+		<?php endif; ?>
+

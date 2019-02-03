@@ -2,12 +2,10 @@ Copyright (c) 2017-2019 Divested Computing, Inc.
 
 Below are the license mappings for all of the files found in this repository. All attempts have been made to ensure accuracy of the corresponding license files. If you've found an issue please file an issue or pull request.
 
-assets/css/mini.css - MIT
-assets/css/vibrate.css - BSD
-stripe - MIT
+assets/css/mini*.min.css - MIT - v3.0.0 - https://github.com/Chalarangelo/mini.css
+assets/js/devtools-detect.js - MIT - v2.2.0 - https://github.com/sindresorhus/devtools-detect
+stripe - MIT - ? - https://github.com/stripe/stripe-php
 [EVERYTHING ELSE] - GPLv3
-
-
 
 
                     GNU GENERAL PUBLIC LICENSE

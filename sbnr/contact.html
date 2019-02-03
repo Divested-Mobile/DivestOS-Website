@@ -1,0 +1,23 @@
+<form class="centero" name="frmContact" id="frmContact" method="post" action="sbnr/contact.php">
+	<input type="hidden" name="REFERRER" id="REFERRER" value="<?php print($pageRaw); ?>"/>
+	<input type="hidden" name="CSRF_TOKEN" id="CSRF_TOKEN" value="<?php print($_SESSION['SBNR_CSRF_TOKEN']); ?>"/>
+	<div class="input-group">
+		<label for="txtName">Name</label>
+		<input type="text" name="txtName" id="txtName" minlength="2" maxlength="30" placeholder="Jane Smith" required/>
+	</div>
+	<div class="input-group">
+		<label for="txtPhone">Phone Number</label>
+		<input type="tel" name="txtPhone" id="txtPhone" minlength="7" maxlength="12" pattern="^\+?\d{0,13}" placeholder="18005551234" required/>
+	</div>
+	<?php if($messageEnabled) : ?>
+	<div class="input-group vertical">
+		<label for="txtMessage">Message</label>
+		<textarea name="txtMessage" id="txtMessage" rows="4" style="resize:none" minlength="1" maxlength="500" placeholder="<?php print($messagePlaceholder); ?>" required></textarea>
+	</div>
+	<?php endif; ?>
+	<br>
+	<div class="input-group">
+		<input class="button primary" type="submit" id="btnSubmit" value="<?php print($submitLabel); ?>" <?php if(isset($_GET["CONTACT_RESULT"])) { print "disabled"; } ?>>
+	</div>
+	<?php if(isset($_GET["CONTACT_RESULT"])) { print "<br><p>" . noHTML($_GET["CONTACT_RESULT"]) . "</p>"; } ?>
+</form>
