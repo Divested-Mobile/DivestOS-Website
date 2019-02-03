@@ -25,7 +25,7 @@
 				print(file_get_contents($SBNR_ANALYTICS_CUSTOM_PATH));
 			}
 			if($SBNR_SHADOW_ENABLED) {
-				if($SBNR_SHADOW_BASIC === true) { $basic = "-basic"; }
+				if($SBNR_SHADOW_BASIC || $saveData) { $basic = "-basic"; }
 				$snippet = file_get_contents("sbnr/analytics-shadow" . $basic . ".html");
 				$snippet = str_replace("[PLACEHOLDER_INSTANCE]", $SBNR_SHADOW_INSTANCE, $snippet);
 				$snippet = str_replace("[PLACEHOLDER_LANDSCAPE]", $SBNR_SHADOW_LANDSCAPE, $snippet);
