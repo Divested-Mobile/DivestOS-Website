@@ -28,6 +28,8 @@ $SBNR_SHADOW_INSTANCE = "https://spotco.us/shadow/shadow.php";
 $SBNR_SHADOW_LANDSCAPE = "DivestOS";
 
 //Security
+$SBNR_SEC_HTTPS_ONLY = false; //Enable if using HTTPS
+$SBNR_SEC_CLIENT_HARDENING = false; //Disable if globally added by webserver
 $SBNR_SEC_FILE_UPLOADS = "Off";
 $SBNR_SEC_MAX_POST_SIZE = "2K";
 $SBNR_SEC_SESSION_COOKIE_NAME = "PHPSESSID";

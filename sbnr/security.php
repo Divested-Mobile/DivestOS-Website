@@ -26,6 +26,20 @@ ini_set("session.use_trans_sid", "0");
 ini_set("display_errors", "Off");
 error_reporting(E_ERROR | E_PARSE);
 
+//Client-side hardening
+if($SBNR_SEC_CLIENT_HARDENING) {
+	header('Feature-Policy: * \'none\''); //Disable all special page permissions (camera, microphone, location)
+	header('Referrer-Policy: "origin-when-cross-origin"'); //Prevent sending referrer information to 3rd parties
+	header('X-Content-Type-Options: "nosniff"'); //Force IE to respect headers
+	header('X-Frame-Options: "DENY"'); //Prevent embedding pages
+	header('X-Permitted-Cross-Domain-Policies: "none"'); //Prevent plugins from ever loading data from other domains
+	header('X-Xss-Protection: "1; mode=block"'); //Basic XSS protection
+	//header('Content-Security-Policy: "default-src \'none\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' checkout.stripe.com; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: *.stripe.com; font-src \'self\'; connect-src \'self\' checkout.stripe.com; media-src \'self\'; object-src \'none\'; child-src \'none\'; frame-src \'self\' checkout.stripe.com; worker-src \'none\'; frame-ancestors \'none\'; disown-opener; sandbox allow-forms allow-modals allow-same-origin allow-popups allow-scripts; reflected-xss block; manifest-src \'self\';"');
+}
+if($SBNR_SEC_HTTPS_ONLY) {
+	header('Strict-Transport-Security: max-age=86400; includeSubDomains'); //Enforce HTTPS
+}
+
 //Disable cache
 if($SBNR_OBF_DISABLE_CACHE) {
 	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
