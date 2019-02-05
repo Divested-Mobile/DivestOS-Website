@@ -32,6 +32,9 @@
 				print($snippet);
 			}
 		?>
+		<?php if($SBNR_OBF_DISABLE_CLIPBOARD) : ?>
+		<script type="text/javascript" src="assets/js/noclip.js" integrity="sha384-t61ZBUkydTPYiZUdXu4lt5GEIpE+v4fchB6yrIuYODcDNvV6hlw7P8GEf+9Qen3A"></script>
+		<?php endif; ?>
 		<?php if($SBNR_OBF_DISABLE_DEVTOOLS) : ?>
 		<script type="text/javascript" src="assets/js/devtools-detect.js" integrity="sha384-opU/k/i2uQ0DUG1mxi6Alx8Q+hYa5ofxZPtIgqELoTpsRXfto3CJUwgN4svlrWB8"></script>
 		<script type="text/javascript" src="assets/js/nodev.js" integrity="sha384-8z/StSSpQqoIc6bzh2lMbUPcwuN6WIgzATvfWHmYbf4N5zBFB3yNHf7Y6+ieRwIy"></script>
