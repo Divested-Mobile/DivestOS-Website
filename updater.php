@@ -63,7 +63,7 @@ function getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 	$fullJson .= "{";
 	$fullJson .= "\n\t\"response\": [";
 	if(!empty($inc) && file_exists($rootdirInc)) {
-		$imagesInc = scandir($rootdirInc, 0);
+		$imagesInc = scandir($rootdirInc, 1);
 		foreach($imagesInc as $imageInc) {
 			$imageSplit = explode("-", $imageInc);
 			if($imageSplit[5] == $inc) {
@@ -71,7 +71,7 @@ function getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 			}
 		}
 	}
-	$images = scandir($rootdir, 0);
+	$images = scandir($rootdir, 1);
 	foreach($images as $image) {
 		$fullJson .= getImageJson($rootdir, $base, $device, $image);
 	}

@@ -69,7 +69,7 @@
 				}
 				$downloads .= "<h3>" . $name . "</h3>";
 				$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Install Guide</a></p>";
-				$files = scandir($realRootdir . $device);
+				$files = scandir($realRootdir . $device, 1);
 				if(sizeof($files) <= 4) {
 					$downloads .= "<h4>Currently Unavailable</h4>";
 				} else {
