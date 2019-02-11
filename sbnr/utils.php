@@ -53,14 +53,20 @@ function endsWith($haystack, $needle) {
 }
 
 //Credit: http://stackoverflow.com/a/4356295
-function generateRandomString($length = 4) {
-	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+function generateRandomString($length = 4, $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') {
 	$charactersLength = strlen($characters);
 	$randomString = '';
 	for ($i = 0; $i < $length; $i++) {
 		$randomString .= $characters[rand(0, $charactersLength - 1)];
 	}
 	return $randomString;
+}
+
+//Credit: https://stackoverflow.com/a/4478788
+function getRandomFile($dir) {
+    $files = glob($dir . '/*.*');
+    $file = array_rand($files);
+    return $files[$file];
 }
 
 //Credit: https://stackoverflow.com/a/6225706

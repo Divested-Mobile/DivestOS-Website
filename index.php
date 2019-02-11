@@ -3,6 +3,8 @@
 $handler = false;
 include "sbnr/config.php";
 include "sbnr/security.php";
+putenv('GDFONTPATH=' . realpath('.') . '/sbnr/captcha_fonts/');
+include "sbnr/captcha.php";
 include "sbnr/utils.php";
 include "sbnr/pre.php";
 

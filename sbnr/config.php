@@ -35,8 +35,9 @@ $SBNR_SEC_MAX_POST_SIZE = "2K";
 $SBNR_SEC_SESSION_COOKIE_NAME = "PHPSESSID";
 $SBNR_SEC_CSRF_PER_REQUEST = true; //Disable if you CSRF tokens are needed and users are likely to have multiple windows open
 
-//Contact form handler
-$SBNR_CONTACT_ENABLED = false; //prevent request handling
+//Contact Form Handler
+$SBNR_CONTACT_ENABLED = false;
+$SBNR_CONTACT_CAPTCHA = true && extension_loaded('gd'); //Require a captcha to be solved
 $SBNR_CONTACT_SENDXMPP_RECEIPENT = "contact@example.tld";
 $SBNR_CONTACT_SENDXMPP_CONFIG = "/var/www/secrets/sender_account.config";
 $SBNR_CONTACT_GEOIP = false; //requires mod_maxminddb
@@ -46,7 +47,7 @@ $SBNR_CONTACT_MIN_LENGTH_PHONE_NUMBER = 7; //000-0000
 $SBNR_CONTACT_MAX_LENGTH_PHONE_NUMBER = 12; //1-000-000-0000
 $SBNR_CONTACT_MAX_LENGTH_MESSAGE = 500;
 
-//Payments - Stripe
+//Payment Handler - Stripe
 $SBNR_STRIPE_ENABLED = false;
 $SBNR_STRIPE_KEY_PRIVATE = "";
 
