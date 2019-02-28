@@ -1,7 +1,7 @@
 <?php
 
 function generateRandomColor($image) {
-	imagecolorallocate($image, rand(1, 255), rand(1, 255), rand(1, 255));
+	imagecolorallocate($image, rand(20, 255), rand(20, 255), rand(20, 255));
 }
 
 function applyRandomImageFilter($image) {
@@ -42,24 +42,27 @@ function generateTextCaptcha($captchaText) {
 }
 
 function getCaptchaText($clear = true) {
-	if($clear) { clearCaptchaAnswer(); }
+	if($clear) { clearCaptchaStore(); }
 	$captchaText = generateRandomString(6);
-	appendCaptchaAnswer($captchaText);
+	appendCaptchaStore($captchaText, implode(' ', str_split($captchaText)));
 	return generateTextCaptcha($captchaText);
 }
 
 function getCaptchaMath($clear = true) {
-	if($clear) { clearCaptchaAnswer(); }
+	if($clear) { clearCaptchaStore(); }
 	$num1 = rand(0, 20);
 	$num2 = rand(0, 20);
 	$captchaText = $num1 . " + " . $num2 . " =";
-	appendCaptchaAnswer(($num1 + $num2));
+	appendCaptchaStore(($num1 + $num2), $captchaText);
 	return generateTextCaptcha($captchaText);
 }
 
-function getCaptchaObject($clear = true) {
-	if($clear) { clearCaptchaAnswer(); }
-	//TODO
+function getCaptchaAudio() {
+	ob_start();
+		passthru('espeak -v en+f' . rand(1, 5) . ' -s10 -k2 --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '"');
+		$soundFile = ob_get_contents();
+	ob_end_clean();
+	return 'data:audio/x-wav;base64,' . base64_encode($soundFile);
 }
 
 function getCaptchaRandom($clear = true) {
@@ -68,13 +71,11 @@ function getCaptchaRandom($clear = true) {
 			return getCaptchaText($clear);
 		case 1:
 			return getCaptchaMath($clear);
-		case 2:
-			return getCaptchaObject($clear);
 	}
 }
 
 function getCaptchaMultiple($numParts = 2) {
-	clearCaptchaAnswer();
+	clearCaptchaStore();
 	$outputImage = imagecreatetruecolor(300, 100 * $numParts);
 	for ($i = 0; $i < $numParts; $i++) {
 		imagecopy($outputImage, getCaptchaRandom(false), 0, 100 * $i, 0, 0, 300, 100);
@@ -82,12 +83,17 @@ function getCaptchaMultiple($numParts = 2) {
 	return $outputImage;
 }
 
-function clearCaptchaAnswer() {
+function clearCaptchaStore() {
 	$_SESSION['SBNR_CAPTCHA_ANSWER'] = "";
+	$_SESSION['SBNR_CAPTCHA_SPEAK'] = "";
 }
 
-function appendCaptchaAnswer($answer) {
+function appendCaptchaStore($answer, $raw) {
 	$_SESSION['SBNR_CAPTCHA_ANSWER'] .= " " . $answer;
+	if(strlen($_SESSION['SBNR_CAPTCHA_SPEAK']) > 0) {
+		$_SESSION['SBNR_CAPTCHA_SPEAK'] .= " and";
+	}
+	$_SESSION['SBNR_CAPTCHA_SPEAK'] .= " " . $raw;
 }
 
 function relaxString($text) {

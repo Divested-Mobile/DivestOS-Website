@@ -28,7 +28,14 @@ if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && subs
 	$rootdir = "builds/" . $base . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {
-		print(getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc));
+		$result = getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
+		$result = str_replace("invalid://invalid.invalid", getBaseURL(true, $SBNR_DOMAIN_WHITELIST), $result);
+		if(contains($result, "invalid://invalid.invalid")) {
+			print("Invalid request");
+			http_response_code(400);
+		} else {
+			print($result);
+		}
 	} else {
 		print("Unknown base/device");
 		http_response_code(404);
@@ -88,9 +95,9 @@ function getImageJson($rootdir, $base, $device, $image) {
 			$json .= "\n\t\t{";
 			$json .= "\n\t\t\t\"filename\": \"" . $image . "\",";
 			if(contains($rootdir, "incremental")) {
-				$json .= "\n\t\t\t\"url\": \"https://" . $_SERVER['SERVER_NAME'] . "/mirror.php?base=" . $base . "&f=" . $device . "/incremental/" . $image . "\",";
+				$json .= "\n\t\t\t\"url\": \"invalid://invalid.invalid" . "/mirror.php?base=" . $base . "&f=" . $device . "/incremental/" . $image . "\",";
 			} else {
-				$json .= "\n\t\t\t\"url\": \"https://" . $_SERVER['SERVER_NAME'] . "/mirror.php?base=" . $base . "&f=" . $device . "/" . $image . "\",";
+				$json .= "\n\t\t\t\"url\": \"invalid://invalid.invalid" . "/mirror.php?base=" . $base . "&f=" . $device . "/" . $image . "\",";
 			}
 			$json .= "\n\t\t\t\"version\": \"" . $imageSplit[1] . "\",";
 			$json .= "\n\t\t\t\"romtype\": \"" . $imageSplit[3] . "\",";

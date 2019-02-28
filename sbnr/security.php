@@ -10,7 +10,7 @@ ini_set("post_max_size", $SBNR_SEC_MAX_POST_SIZE);
 
 //Harden session cookies
 ini_set("session.name", $SBNR_SEC_SESSION_COOKIE_NAME);
-//ini_set("session.referer_check", $SBNR_GEN_DOMAIN);
+//ini_set("session.referer_check", $SBNR_DOMAIN_PRIMARY);
 ini_set("session.cookie_httponly", "true");
 ini_set("session.cookie_lifetime", "0");
 ini_set("session.cookie_secure", "1");

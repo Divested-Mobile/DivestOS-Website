@@ -15,6 +15,27 @@ function getContactForm($submitLabel = 'Send', $messageEnabled = false, $message
 	include "contact.html";
 }
 
+function getBaseUrl($whitelisted, $whitelistedHosts) {
+	$accessingDomain = noHTML($_SERVER['SERVER_NAME']);
+	$accessingDomain = str_replace("&period;", ".", $accessingDomain);
+	$baseURL = "";
+	if(isset($_SERVER['HTTPS'])) {
+		$baseURL .= "https://";
+	} else {
+		$baseURL .= "http://";
+	}
+	if($whitelisted) {
+		if(in_array($accessingDomain, $whitelistedHosts)) {
+			$baseURL .= $accessingDomain;
+			return $baseURL;
+		}
+	} else {
+		$baseURL .= $accessingDomain;
+		return $baseURL;
+	}
+	return "invalid://invalid.invalid";
+}
+
 //Validates a string
 function checkString($input, $minLength = 0, $numPeriods = 1, $numSlashes = 0, $numPeriodsRel = 0) {
 	//support already noHTML()'ed strings

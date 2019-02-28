@@ -36,9 +36,9 @@ if(checkString($base, 0, 1, 0, 0) && checkString($file, 0, 2, 2, 0)) {
 
 function getMirror() {
 	if($GLOBALS['numMirrors'] == 0) {
-		return "https://" . $_SERVER['SERVER_NAME'] . "/builds/";
+		return getBaseURL(true, $GLOBALS['SBNR_DOMAIN_WHITELIST']) . "/builds/";
 	}
-	return "https://mirror" . rand(0, $GLOBALS['numMirrors']) . "." . $_SERVER['SERVER_NAME'] . "/";
+	return "https://mirror" . rand(0, $GLOBALS['numMirrors']) . "." . $_SERVER['SERVER_NAME'] . "/"; //XXX: ADD WHITELIST CHECK HERE TOO (prefix support to getBaseURL?)
 }
 
 ?>
