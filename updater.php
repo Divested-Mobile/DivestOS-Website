@@ -24,7 +24,7 @@ $base = noHTML($_GET["base"]);
 $base = str_replace("&period;", ".", $base);
 $device = strtolower(noHTML($_GET["device"]));
 $inc = noHTML($_GET["inc"]);
-if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0 && (empty($inc) || (!empty($inc) && strlen($inc) < 20))) {
+if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0 && (empty($inc) || (!empty($inc) && strlen($inc) < 22))) {
 	$rootdir = "builds/" . $base . "/" . $device;
 	$rootdirInc = $rootdir . "/incremental/";
 	if(is_dir($rootdir)) {
