@@ -2,6 +2,51 @@
 					<h2>Functionality Tables</h2>
 					<p>A list of what doesn't work on DivestOS</p>
 					<div class="section">
+						<h3>Devices</h3>
+						<p>Devices listed as "Works" on Downloads page will not be listed here if they are fully working as expected and do not have any quirks.</p>
+						<table class="striped" style="max-height: 100%;">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Status</th>
+									<th>Information</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style="--table-body-fore-color: #3498db;">
+									<td data-label="Name">apollo/thor</td>
+									<td data-label="Status">Mostly Works</td>
+									<td data-label="Information">No encryption.</td>
+								</tr>
+								<tr style="--table-body-fore-color: #3498db;">
+									<td data-label="Name">grouper</td>
+									<td data-label="Status">Mostly Works</td>
+									<td data-label="Information">Extremely slow. No camera.</td>
+								</tr>
+								<tr style="--table-body-fore-color: #3498db;">
+									<td data-label="Name">nex</td>
+									<td data-label="Status">Mostly Works</td>
+									<td data-label="Information">No encryption. No camera. No GPS.</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">clark</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">TWRP is required for modem to work.</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">maguro/toro/toroplus</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Not encrypted by default, please enable after first boot. (OMAP SMC limitation)</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">mako</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">First boot will never succeed, force-reboot after ~2 minutes.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="section">
 						<h3>Hardware Features</h3>
 						<p>While some hardware might not require proprietary userspace blobs, the hardware itself is non-free and usually runs proprietary firmware.</p>
 						<table class="striped" style="max-height: 100%;">
@@ -26,7 +71,7 @@
 								<tr style="--table-body-fore-color: #4CAF50;">
 									<td data-label="Name">Bluetooth</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No blobs are required for Bluetooth</td>
+									<td data-label="Information">Some devices utilize blobs for Bluetooth</td>
 								</tr>
 								<tr style="--table-body-fore-color: #673AB7;">
 									<td data-label="Name">Camera</td>
@@ -120,7 +165,7 @@
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">AudioFX</td>
 									<td data-label="Status">Does not work</td>
-									<td data-label="Information">All AudioFX blobs are removed</td>
+									<td data-label="Information">Many AudioFX blobs are removed</td>
 								</tr>
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">Chromecast</td>
@@ -135,8 +180,8 @@
 								</tr>
 								<tr style="--table-body-fore-color: #4CAF50;">
 									<td data-label="Name">DRM/HDCP</td>
-									<td>Does not work</td>
-									<td data-label="Information">All DRM and HDCP blobs are removed and the DRM server is disabled</td>
+									<td data-label="Status">Does not work</td>
+									<td data-label="Information">All DRM and HDCP blobs are removed</td>
 								</tr>
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">Google SafetyNet</td>
@@ -148,7 +193,7 @@
 								<tr style="--table-body-fore-color: #673AB7;">
 									<td data-label="Name">IMS/VoLTE</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Many IMS blobs are removed, but is kept fully functional</td>
+									<td data-label="Information">Many IMS blobs are removed, but is kept working</td>
 								</tr>
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">Qualcomm aptX</td>
