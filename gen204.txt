@@ -6,7 +6,7 @@ In order to properly support gen204.php you need the following in your Apache vi
 		CustomLog ${APACHE_LOG_DIR}/access.log combined env=!dontlog
 		#Disable forced HTTPS redirect for gen204.php requests
 		RewriteCond %{REQUEST_URI} !^/gen204.php$
-		RewriteCond %{SERVER_NAME} =divestos.xyz
+		RewriteCond %{SERVER_NAME} =divestos.org
 		RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,QSA,R=permanent]
 
 	HTTPS VirtualHost

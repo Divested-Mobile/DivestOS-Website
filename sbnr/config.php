@@ -1,8 +1,8 @@
 <?php
 
 //General
-$SBNR_DOMAIN_PRIMARY = "divestos.xyz";
-$SBNR_DOMAIN_WHITELIST = array($SBNR_DOMAIN_PRIMARY);
+$SBNR_DOMAIN_PRIMARY = "divestos.org";
+$SBNR_DOMAIN_WHITELIST = array($SBNR_DOMAIN_PRIMARY, "divestos.xyz");
 $SBNR_GEN_ONE_PAGE = false;
 $SBNR_GEN_DARKMODE = true;
 
