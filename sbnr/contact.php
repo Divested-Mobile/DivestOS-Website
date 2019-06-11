@@ -9,8 +9,8 @@ include "captcha.php";
 include "utils.php";
 include "pre.php";
 
-if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["txtPhone"], $_POST["bearBear"])) {
-	if(noHTML($_POST["CSRF_TOKEN"]) === $_SESSION['SBNR_CSRF_TOKEN'] && noHTML($_POST["bearBear"]) === "roar") {
+if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["txtPhone"], $_POST["blackBear"])) {
+	if(noHTML($_POST["CSRF_TOKEN"]) === $_SESSION['SBNR_CSRF_TOKEN'] && (noHTML($_POST["blackBear"]) === "roar") && empty($_POST["brownBear"])) {
 		$name = noHTML(urldecode($_POST["txtName"]));
 		$number = preg_replace("/[^0-9]/", '', noHTML(urldecode($_POST["txtPhone"])));
 		if(isset($_POST["txtMessage"])) {
