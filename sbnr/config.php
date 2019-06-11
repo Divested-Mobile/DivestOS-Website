@@ -2,7 +2,7 @@
 
 //General
 $SBNR_DOMAIN_PRIMARY = "divestos.org";
-$SBNR_DOMAIN_WHITELIST = array($SBNR_DOMAIN_PRIMARY, "divestos.xyz");
+$SBNR_DOMAIN_WHITELIST = array($SBNR_DOMAIN_PRIMARY);
 $SBNR_GEN_ONE_PAGE = false;
 $SBNR_GEN_DARKMODE = true;
 
@@ -34,7 +34,7 @@ $SBNR_SEC_CLIENT_HARDENING = false; //Disable if globally added by webserver
 $SBNR_SEC_FILE_UPLOADS = "Off";
 $SBNR_SEC_MAX_POST_SIZE = "2K";
 $SBNR_SEC_SESSION_COOKIE_NAME = "PHPSESSID";
-$SBNR_SEC_CSRF_PER_REQUEST = true; //Disable if you CSRF tokens are needed and users are likely to have multiple windows open
+$SBNR_SEC_CSRF_PER_REQUEST = true; //Disable if CSRF tokens are needed and users are likely to have multiple windows open
 
 //Contact Form Handler
 $SBNR_CONTACT_ENABLED = false;

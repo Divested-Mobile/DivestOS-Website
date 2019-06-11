@@ -27,6 +27,7 @@
 	<?php endif; ?>
 	<br>
 	<div class="input-group">
+		<input type="text" name="bearBear" id="bearBear" style="display: none;" placeholder="ROAR!" value="roar" required/>
 		<input class="button primary" type="submit" id="btnSubmit" value="<?php print($submitLabel); ?>">
 	</div>
 	<?php if(isset($_GET["CONTACT_RESULT"])) { print "<br><p>" . noHTML($_GET["CONTACT_RESULT"]) . "</p>"; } ?>
