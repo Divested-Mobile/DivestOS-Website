@@ -39,8 +39,10 @@ $SBNR_SEC_CSRF_PER_REQUEST = true; //Disable if CSRF tokens are needed and users
 //Contact Form Handler
 $SBNR_CONTACT_ENABLED = false;
 $SBNR_CONTACT_CAPTCHA = true && extension_loaded('gd'); //Require a captcha to be solved
+$SBNR_CONTACT_OUTPUT = "TEXT"; //Choices: TEXT, XMPP
 $SBNR_CONTACT_SENDXMPP_RECEIPENT = "contact@example.tld";
 $SBNR_CONTACT_SENDXMPP_CONFIG = "/var/www/secrets/sender_account.config";
+$SBNR_CONTACT_TEXT_FILE = "/var/www/secrets/contact_responses-" . $SBNR_DOMAIN_PRIMARY . ".log";
 $SBNR_CONTACT_GEOIP = false; //requires mod_maxminddb
 $SBNR_CONTACT_MESSAGE_PREFIX_LENGTH = 3;
 $SBNR_CONTACT_MAX_LENGTH_NAME = 30;

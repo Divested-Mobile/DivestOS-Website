@@ -43,7 +43,13 @@ if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["tx
 						"[" . $msentinel . "] Message: \n" . $message . "\n" .
 						"[" . $msentinel . "] MESSAGE END";
 
-				exec("echo " . escapeshellarg($messageResult) . " | sendxmpp -f " . $SBNR_CONTACT_SENDXMPP_CONFIG . " -t " . $SBNR_CONTACT_SENDXMPP_RECEIPENT);
+				if($SBNR_CONTACT_OUTPUT === "TEXT") {
+					file_put_contents($SBNR_CONTACT_TEXT_FILE, escapeshellarg($messageResult), FILE_APPEND);
+				} else if($SBNR_CONTACT_OUTPUT === "XMPP") {
+					exec("echo " . escapeshellarg($messageResult) . " | sendxmpp -f " . $SBNR_CONTACT_SENDXMPP_CONFIG . " -t " . $SBNR_CONTACT_SENDXMPP_RECEIPENT);
+				}
+
+
 				header("Location: ../index.php?page=" . noHTML($_POST["REFERRER"]) . "&CONTACT_RESULT=Message%20Sent!#frmContact");
 			}
 		} else {
