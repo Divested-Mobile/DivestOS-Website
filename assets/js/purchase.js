@@ -22,7 +22,7 @@ function checkout() {
 	});
 
 	handler.open({
-		name: 'Divested Computing, Inc.',
+		name: 'Divested Computing Group',
 		description: paymentDescription,
 		zipCode: true,
 		amount: paymentAmount

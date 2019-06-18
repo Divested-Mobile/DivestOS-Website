@@ -41,7 +41,7 @@ if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["tx
 						"[" . $msentinel . "] Phone Number: " . $number . "\n" .
 						$location .
 						"[" . $msentinel . "] Message: \n" . $message . "\n" .
-						"[" . $msentinel . "] MESSAGE END";
+						"[" . $msentinel . "] MESSAGE END\n";
 
 				if($SBNR_CONTACT_OUTPUT === "TEXT") {
 					file_put_contents($SBNR_CONTACT_TEXT_FILE, escapeshellarg($messageResult), FILE_APPEND);
