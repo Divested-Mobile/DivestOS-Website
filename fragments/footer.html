@@ -13,13 +13,13 @@
 		</footer>
 
 		<!-- Scripts -->
-		<script async type="text/javascript" src="assets/js/utils.js" integrity="sha384-ta+GYYnV9oO8/pTXH4qGhU+HSbyvEXeKV61IZbgh4h0Xdyyq90ShglFOJzgIvKVG"></script>
-		<script defer type="text/javascript" src="assets/js/prerelease.js" integrity="sha384-HfgJFk8nqAgbaidhTDWYMEZM+QYT67CrZhyPr8yR1sXaYaxkvRR3XFxGNS2yRhHe"></script>
-		<script async type="text/javascript">
+		<script type="text/javascript" src="assets/js/utils.js" integrity="sha384-ta+GYYnV9oO8/pTXH4qGhU+HSbyvEXeKV61IZbgh4h0Xdyyq90ShglFOJzgIvKVG"></script>
+		<script type="text/javascript">
 			function getCSRFToken() {
 				return "<?php print($_SESSION['SBNR_CSRF_TOKEN']); ?>";
 			}
 		</script>
+		<script defer type="text/javascript" src="assets/js/prerelease.js" integrity="sha384-HfgJFk8nqAgbaidhTDWYMEZM+QYT67CrZhyPr8yR1sXaYaxkvRR3XFxGNS2yRhHe"></script>
 		<?php
 			if($SBNR_ANALYTICS_ENABLED) {
 				print(file_get_contents($SBNR_ANALYTICS_CUSTOM_PATH));
