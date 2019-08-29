@@ -73,7 +73,7 @@ function getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 		$imagesInc = scandir($rootdirInc, 1);
 		foreach($imagesInc as $imageInc) {
 			$imageSplit = explode("-", $imageInc);
-			if($imageSplit[5] == $inc) {
+			if(startsWith($imageSplit[5], $inc) {
 				$fullJson .= getImageJson($rootdirInc, $base, $device, $imageInc);
 			}
 		}
@@ -94,8 +94,8 @@ function getImageJson($rootdir, $base, $device, $image) {
 			$json = "";
 			$json .= "\n\t\t{";
 			$json .= "\n\t\t\t\"filename\": \"" . $image . "\",";
-			if(contains($rootdir, "incremental")) {
-				$json .= "\n\t\t\t\"url\": \"invalid://invalid.invalid" . "/mirror.php?base=" . $base . "&f=" . $device . "/incremental/" . $image . "\",";
+			if(contains($rootdir, "incrementals")) {
+				$json .= "\n\t\t\t\"url\": \"invalid://invalid.invalid" . "/mirror.php?base=" . $base . "&f=" . $device . "/incrementals/" . $image . "\",";
 			} else {
 				$json .= "\n\t\t\t\"url\": \"invalid://invalid.invalid" . "/mirror.php?base=" . $base . "&f=" . $device . "/" . $image . "\",";
 			}
