@@ -26,7 +26,7 @@ $device = strtolower(noHTML($_GET["device"]));
 $inc = noHTML($_GET["inc"]);
 if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0 && (empty($inc) || (!empty($inc) && strlen($inc) < 22))) {
 	$rootdir = "builds/" . $base . "/" . $device;
-	$rootdirInc = $rootdir . "/incremental/";
+	$rootdirInc = $rootdir . "/incrementals/";
 	if(is_dir($rootdir)) {
 		$result = getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
 		$result = str_replace("invalid://invalid.invalid", getBaseURL(true, $SBNR_DOMAIN_WHITELIST), $result);
@@ -73,7 +73,7 @@ function getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 		$imagesInc = scandir($rootdirInc, 1);
 		foreach($imagesInc as $imageInc) {
 			$imageSplit = explode("-", $imageInc);
-			if(startsWith($imageSplit[5], $inc) {
+			if(startsWith($imageSplit[5], $inc)) {
 				$fullJson .= getImageJson($rootdirInc, $base, $device, $imageInc);
 			}
 		}
