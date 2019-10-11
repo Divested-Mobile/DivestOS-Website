@@ -88,8 +88,9 @@ function getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 }
 
 function getImageJson($rootdir, $base, $device, $image) {
-	if(!contains($image, "md5sum") && strlen($image) > 30) {
+	if(!contains($image, "md5sum") && !contains($image, "sha512sum") && strlen($image) > 30) {
 		$imageSplit = explode("-", $image); //name-version-date-buildtype-device-[previnc].zip
+		unset($json);
 		if(startsWith(strtolower($imageSplit[4]), $device)) {
 			$json = "";
 			$json .= "\n\t\t{";

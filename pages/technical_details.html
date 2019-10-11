@@ -6,7 +6,7 @@
 						<h4>The Linux Kernel</h4>
 						<p>The kernel is a necessary part of any operating system. It provides the essential core functionalities and allows the software to talk to the hardware.</p>
 						<p>Due to the extensive modifications made by device manufacturers and upstream hardware creators, the vanilla 'Mainline' kernel cannot be used. This means that most devices use kernels that are outdated and need to be manually maintained. Some kernels can be easily kept up to date by applying kernel version patches, but more often are modified so much that they need to instead have patches manually tweaked (backported) to work. Google, Qualcomm, and other manufacturers do actually do this work but they still need to be manually applied by device maintainers. Due to this most third party and even stock ROMs ship kernels that are littered with known vulnerabilities.</p>
-						<p>We however have created a program that eases tracking and applying of these patches massively. Once supplied with a sufficient amount of patches it can can be easily fed kernels and spit out scripts that will automatically apply all applicable patches. It is far from perfect, but with our current set of ~2,500 patches for ~1,000 CVEs it can typically apply between 20 and 250 patches to a kernel. The end result of this is that kernels are much more secure. <b>This is referred to below as our 'CVE patcher'.</b></p>
+						<p>We however have created a program that eases tracking and applying of these patches massively. Once supplied with a sufficient amount of patches it can can be easily fed kernels and spit out scripts that will automatically apply all applicable patches. It is far from perfect, but with our current set of ~3,100 patches for ~2,100 CVEs it can typically apply between 30 and 300 patches to a kernel. The end result of this is that kernels are much more secure. <b>This is referred to below as our 'CVE patcher'.</b></p>
 						<p>The kernel also sports many built-in security features, that most devices actually have disabled! We created a tool that automatically enables as many of these security features as possible. This is an easy way to have a noticeable increase in security with minimal effort. <b>This is referred to below as 'hardenDefconfig()'.</b></p>
 						<h4>Android Itself</h4>
 						<p></p>
@@ -55,6 +55,7 @@
 							<!--<li>microG + Backends: Allows for using apps that depend on the proprietary Google Play Services and also battery efficient location lookups.</li>-->
 							<li>UnifiedNLP + Backends: Fused location provider that uses plugins to provide battery efficient location lookups.</li>
 							<li>Offline Calendar: Allows creating calendars without an account</li>
+							<li>OpenCamera: An improved camera app. Replaces Camera2/Snap</li>
 							<li>Silence: An improved SMS app that allows for end-to-end encrypted messages between other Silence users. Replaces AOSP Messaging</li>
 							<li>Simple Gallery: An improved gallery app. Replaces AOSP Gallery</li>
 							<li>Vanilla: A lighweight and customizable music player. Replaces Eleven/Music</li>

@@ -74,7 +74,7 @@
 					$downloads .= "<h4>Currently Unavailable</h4>";
 				} else {
 					foreach ($files as $file) {
-						if($file == "status" || $file == "recovery.img" || contains($file, "md5sum")) {
+						if($file == "status" || $file == "recovery.img" || contains($file, "md5sum") || contains($file, "sha512sum")) {
 							continue;
 						}
 						if(strlen($file) > 30) {
@@ -98,6 +98,7 @@
 				}
 				$downloads .= "</div>";
 			}
+			unset($downloadButtons); unset($latestFileTime); unset($outdated);
 		}
 		return $downloads;
 	}
@@ -140,7 +141,7 @@
 ?>
 				<div class="card fluid">
 					<h2>Device Downloads</h2>
-					<p>Releases are typically done on a fortnightly schedule unless there are major or security related changes.</p>
+					<p>Releases are typically done on a monthly schedule unless there are major or security related changes.</p>
 					<noscript><p>Currently in pre-release, please do not share! Mirror servers have not been setup!</p></noscript>
 					<div class="section">
 						<div class="row">
