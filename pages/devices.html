@@ -74,7 +74,7 @@
 					$downloads .= "<h4>Currently Unavailable</h4>";
 				} else {
 					foreach ($files as $file) {
-						if($file == "status" || $file == "recovery.img" || contains($file, "md5sum") || contains($file, "sha512sum")) {
+						if($file == "status" || $file == "recovery.img" || contains($file, "md5sum") || contains($file, "sha512sum") || startsWith($file, ".")) {
 							continue;
 						}
 						if(strlen($file) > 30) {
