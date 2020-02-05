@@ -6,9 +6,8 @@
 						<br>First things first, you're going to need a pretty decent computer if you want timely builds.</p>
 						<ul>
 							<li>For builds under 3 hours you'll want to have at least a powerful quad core processor, 8GB of RAM, and a 7200RPM drive.</li>
-							<li>For builds under an hour you'll want to have a processor that gets a score of 10k+ or higher on <a href="https://www.cpubenchmark.net/CPU_mega_page.html" target="_blank" rel="nofollow noopener noreferrer">Passmark</a>, 16GB+ of RAM, a 7200RPM drive and a 128GB SSD for ccache.</li>
+							<li>For builds under an hour you'll want to have a processor that gets a score of 10k+ or higher on <a href="https://www.cpubenchmark.net/CPU_mega_page.html" target="_blank" rel="nofollow noopener noreferrer">Passmark</a>, 16GB+ of RAM, and fast storage</li>
 							<li>If you plan on building in a virtual machine, in terms of performance: KVM > Hyper-V > VMWare > VirtualBox</li>
-
 							<li>You'll need a lot of available free space on your drives</li>
 							<ul>
 								<li>Source Code: 70GB + ~1-2GB per device</li>
@@ -16,7 +15,8 @@
 								<li>10GB per device for optional caching</li>
 								<li>250MB-650MB for each resulting build if you want to archive</li>
 								<li>4GB for two target-files for a device to optionally generate incremental updates</li>
-								<li>All in all having a 500GB 7200RPM drive and a 128GB SSD is a good combo</li>
+								<li>Cheap: ~$50 2TB 7200RPM HDD</li>
+								<li>Fast: ~$250 1.2TB Intel S3710 SSD</li>
 							</ul>
 						</ul>
 						<p>Second you'll want to have a decent Internet connection to download the source code and OS dependencies, 100Mbps is recommended.
@@ -68,7 +68,7 @@ repo init -u git://github.com/LineageOS/android.git -b lineage-15.1;
 repo sync; #This part will take a while
 
 #Some systems have python3 set as default, the build scripts require python2
-virtualenv2 venv;
+virtualenv venv --python=python2;
 
 cd ../..
 nano Scripts/init.sh; #Choose your options and update paths
