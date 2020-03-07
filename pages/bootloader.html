@@ -17,7 +17,7 @@
 							<li>Debian: <code>sudo apt install android-tools-adb android-tools-fastboot</code></li>
 							<li>Mac OS: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
 							<li>Windows: Install UniversalADB from <a href="https://adb.clockworkmod.com/" target="_blank" rel="nofollow noopener noreferrer">here</a> and download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
-							<li>You'll also need a recovery.img for your specific device. <a href="https://twrp.me" target="_blank" rel="nofollow noopener noreferrer">TWRP</a> is recommended for the first install</li>
+							<li>You'll also need a recovery.img for your specific device. Either ours or <a href="https://twrp.me" target="_blank" rel="nofollow noopener noreferrer">TWRP</a></li>
 						</ul>
 						<h4>On your phone</h4>
 						<ol>
@@ -51,14 +51,20 @@
 					<div class="section">
 						<h3>Fastboot (New)</h3>
 						<ul>
-							<li>Devices Supported: Google Pixel (marlin/sailfish), Nexus 5X (bullhead), Nexus 6P (angler)</li>
+							<li>Devices Supported: Google Pixel (marlin/sailfish), Nexus 5X (bullhead), Nexus 6P (angler), Essential Phone (mata)</li>
 							<li>This is a newer method for retail variants.</li>
+							<h4>Unlocking</h4>
 							<ol>
 								<li>Enable 'Allow OEM unlocking' under 'Developer options' in Settings</li>
 								<li><code>$ adb reboot bootloader</code></li>
 								<li><code>$ fastboot flashing unlock</code></li>
 								<li><code>$ fastboot flash recovery recovery.img</code></li>
-								<li>Pretty painless...</li>
+							</ol>
+							<h4>Locking</h4>
+							<ol>
+								<li><code>$ adb reboot bootloader</code></li>
+								<li><code># system image MUST be properly signed</code></li>
+								<li><code>$ fastboot flashing lock</code></li>
 							</ol>
 						</ul>
 
@@ -81,7 +87,6 @@
 								<li>Save the unlock.bin from the email and keep it for future use</li>
 								<li><code>$ fastboot flash unlock unlock.bin</code></li>
 								<li><code>$ fastboot flash recovery recovery.img</code></li>
-								<li>Its a shit process, but you're done!</li>
 							</ol>
 						</ul>
 					</div>
@@ -103,7 +108,6 @@
 								<li>Copy the code from the email and save it for future use</li>
 								<li><code>$ fastboot oem unlock [KEY FROM EMAIL]</code></li>
 								<li><code>$ fastboot flash recovery recovery.img</code></li>
-								<li>Its a shit process, but you're done!</li>
 							</ol>
 						</ul>
 					</div>
@@ -116,7 +120,7 @@
 					<div class="section">
 						<h3>LG UP</h3>
 						<ul>
-							<li>Devices Supported: Most LG devices</li>
+							<li>Devices Supported: Select LG devices</li>
 							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
 							<ol>
 								<li>Windows is required for this. KVM USB pass through has been confirmed to work</li>
@@ -125,9 +129,19 @@
 						</ul>
 					</div>
 					<div class="section">
+						<h3>LG LAF</h3>
+						<ul>
+							<li>Devices Supported: Select LG devices</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
+							<ol>
+								<li>[TO BE COMPLETED]</li>
+							</ol>
+						</ul>
+					</div>
+					<div class="section">
 						<h3>Heimdall</h3>
 						<ul>
-							<li>Devices Supported: Most Samsung devices</li>
+							<li>Devices Supported: SelectSamsung devices</li>
 							<ol>
 								<li>[TO BE COMPLETED]</li>
 							</ol>

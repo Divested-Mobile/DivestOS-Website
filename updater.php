@@ -88,7 +88,7 @@ function getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 }
 
 function getImageJson($rootdir, $base, $device, $image) {
-	if(!contains($image, "md5sum") && !contains($image, "sha512sum") && strlen($image) > 30 && !startsWith($image, ".")) {
+	if(!contains($image, "md5sum") && !contains($image, "sha512sum") && strlen($image) > 30 && !startsWith($image, ".") && endsWith($image, ".zip") && !contains($image, "fastboot") && !contains($image, "recovery")) {
 		$imageSplit = explode("-", $image); //name-version-date-buildtype-device-[previnc].zip
 		unset($json);
 		if(startsWith(strtolower($imageSplit[4]), $device)) {
