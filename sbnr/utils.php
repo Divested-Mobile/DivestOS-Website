@@ -37,13 +37,14 @@ function getBaseUrl($whitelisted, $whitelistedHosts) {
 }
 
 //Validates a string
-function checkString($input, $minLength = 0, $numPeriods = 1, $numSlashes = 0, $numPeriodsRel = 0) {
+function checkString($input, $minLength = 0, $maxLength = 256, $numPeriods = 1, $numSlashes = 0, $numPeriodsRel = 0) {
 	//support already noHTML()'ed strings
 	$input = str_replace("&period;", ".", $input);
 	$input = str_replace("&sol;", "/", $input);
 	//validate
 	$ok = !is_null($input)
-		&& strlen($input) > $minLength
+		&& strlen($input) >= $minLength
+		&& strlen($input) <= $maxLength
 		&& substr_count($input, '.') <= $numPeriods
 		&& substr_count($input, '..') <= $numPeriodsRel
 		&& substr_count($input, '/') <= $numSlashes;

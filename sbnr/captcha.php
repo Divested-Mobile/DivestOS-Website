@@ -110,11 +110,16 @@ function checkCaptchaAnswer($response, $relaxed) {
 	return $response == $_SESSION['SBNR_CAPTCHA_ANSWER'];
 }
 
-function getImageBase64($image) {
+function getImage($image) {
 	ob_start();
 		imagepng($image);
 		$imagePNG = ob_get_contents();
 	ob_end_clean();
+	return $imagePNG;
+}
+
+function getImageBase64($image) {
+	$imagePNG = getImage($image);
 	return 'data:image/png;base64,' . base64_encode($imagePNG);
 }
 

@@ -27,7 +27,7 @@ $base = str_replace("&period;", ".", $base);
 $file = noHTML($_GET["f"]);
 $file = str_replace("&period;", ".", $file);
 $file = str_replace("&sol;", "/", $file);
-if(checkString($base, 0, 1, 0, 0) && checkString($file, 0, 2, 2, 0)) {
+if(checkString($base, 2, 24, 1, 0, 0) && checkString($file, 3, 128, 2, 2, 0)) {
 	header('Location: ' . getMirror() . $base . "/" . $file);
 } else {
 	print("Invalid request");
