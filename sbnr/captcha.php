@@ -31,8 +31,8 @@ function generateTextCaptcha($captchaText) {
 	$textX = rand(15, 150);
 	imagettftext($captcha, 24, rand(-10, 10), $textX, 50, $textColor, getRandomFile("./sbnr/captcha_fonts/"), $captchaText); //Draw the captcha text
 	for ($i = 0; $i < rand(8, 20); $i++) { //Add lines
-		imagestring($captcha, 1, rand(0, 300), rand(0, 100), generateRandomString(rand(4, 20), '_'), $textColor);
-		//imageline($captcha, rand(0, 300), rand(0, 100), rand(0, 300), rand(0, 100), $textColor);
+		imagestring($captcha, 1, rand(0, 300), rand(0, 100), generateRandomString(rand(4, 20)), $textColor);
+		imageline($captcha, rand(0, 300), rand(0, 100), rand(0, 300), rand(0, 100), $textColor);
 	}
 	for ($i = 0; $i < rand(1, 8); $i++) { //Add letters
 		imagestring($captcha, 3, rand(0, 300), rand(0, 100), generateRandomString(6), $textColor);
