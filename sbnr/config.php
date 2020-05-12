@@ -24,7 +24,7 @@ $SBNR_ANALYTICS_ENABLED = false;
 $SBNR_ANALYTICS_CUSTOM_PATH = "fragments/analytics.html";
 
 //Analytics - Shadow
-$SBNR_SHADOW_ENABLED = true;
+$SBNR_SHADOW_ENABLED = false;
 $SBNR_SHADOW_BASIC = true;
 $SBNR_SHADOW_INSTANCE = "https://spotco.us/shadow";
 $SBNR_SHADOW_LANDSCAPE = "DivestOS";

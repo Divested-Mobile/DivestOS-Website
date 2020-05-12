@@ -19,7 +19,6 @@
 				return "<?php print($_SESSION['SBNR_CSRF_TOKEN']); ?>";
 			}
 		</script>
-		<script defer type="text/javascript" src="assets/js/prerelease.js" integrity="sha384-HfgJFk8nqAgbaidhTDWYMEZM+QYT67CrZhyPr8yR1sXaYaxkvRR3XFxGNS2yRhHe"></script>
 		<?php
 			if($SBNR_ANALYTICS_ENABLED) {
 				print(file_get_contents($SBNR_ANALYTICS_CUSTOM_PATH));
