@@ -4,7 +4,8 @@
 						<h4>What phone do you recommend?</h4>
 						<p>For a phone that 'just works', we recommend basically any Pixel or Nexus device. They are easy to unlock and receive fantastic support from the community.</p>
 						<ul>
-							<li>Pixel 3: Highest security and performance</li>
+							<li>Pixel 3/a: Highest security and performance</li>
+							<li>Essential Phone: An easier to obtain Pixel 2 alternative ($80-$140)</li>
 							<li>Pixel 1: Solid price/performance ($80-$140)</li>
 							<li>Nexus 5: Budget ($60-$80)</li>
 							<li>Nexus 4: Extreme budget ($30-$50)</li>
@@ -29,7 +30,7 @@
 						</ul>
 
 						<h4>What about that gaping hole that is the baseband processor?</h4>
-						<p>Eh, we are in dire need of free hardware, but it simply doesn't exist right now. This is better then nothing.</p>
+						<p>We are in dire need of free hardware, but we don't have many options available currently.</p>
 
 						<!--<h4>Why are you hosting on GitHub if its proprietary?</h4>
 						<p>Because a lot of people have GitHub accounts which reduces the barrier to entry for contributing. GitLab.com is still too slow, GitLab CE is too resource hungry, and Gitea/Gogs is a bit all over right now.</p>-->
@@ -42,7 +43,7 @@
 						<p>LineageOS also has superior device compatibility across the board.</p>
 
 						<h4>Can you support X device, that doesn't have an (un)official LineageOS port?</h4>
-						<p>Nope.</p>
+						<p>No.</p>
 
 						<h4>Can you support X device, that does have an official LineageOS port?</h4>
 						<p>If there is enough demand, yes.</p>
@@ -54,14 +55,14 @@
 						<p>Because they all transmit your location on a somewhat fixed schedule over HTTP.</p>
 
 						<h4>Why did you only partially remove VoLTE?</h4>
-						<p>Because it is necessary on some carriers to be able to call. It also allows you to stay on LTE longer which is all around a very good thing.</p>
+						<p>Many carriers are phasing out their 2G/3G cell towers. Soon it will only be possible to make calls using VoLTE.</p>
 
 						<h4>Should I use the 'XG only' network mode option (if available)?</h4>
-						<p>2G has no encryption, 3G has decent encryption, and LTE has strong end-to-end encryption (simplified, 3G and LTE still have many leaks). Malicious cell interception devices capable of intercepting 3G/LTE are very expensive kits, so the lesser ones downgrade you to 2G where they can work. These network modes offer enhanched protection against interception by pinning to a mode. As always there are various other ways for your device to be compromised or to have your data intercepted, but every bit helps!</p>
+						<p>2G has no encryption, 3G has decent encryption, and LTE has end-to-end encryption (simplified, 3G and LTE still have many leaks). Malicious cell interception devices capable of intercepting 3G/LTE are very expensive kits, so the lesser ones downgrade you to 2G where they can work. These network modes offer enhanched protection against interception by pinning to a mode. As always there are various other ways for your device to be compromised or to have your data intercepted.</p>
 						<p>Which to use? If your device has VoLTE available, you should choose 'LTE only'. If it has LTE but you can make calls over 3G, choose 'LTE/3G only'. If it does not have LTE, but can make calls over 3G, choose '3G only'. If you can't make calls over 3G, you will sadly have to use the regular LTE or 3G modes (which happily downgrade to 2G).</p>
 
 						<h4>Why haven't you completely changed the default DNS servers?</h4>
-						<p>Currently OpenNIC AnyCast is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
+						<p>Currently Cloudflare (after trying many other public resolvers) is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
 
 						<h4>Why haven't you replaced the graphics drivers with SwiftShader (like Android-x86)?</h4>
 						<p>The deblobber actually has basic support for switching to SwiftShader. However we've been unable to successfully boot a device. We will need to reach out to the Android-x86 team and ask for help around that.</p>
@@ -70,10 +71,10 @@
 						<p>Because we haven't figured that out yet. If someone from Replicant (or anywhere else) wants to wrap those patches up in a nice tidy ball, that'd be amazing..</p>
 
 						<h4>Why haven't you replaced the Adreno drivers with freedreno?</h4>
-						<p>Because all of the devices use kernels that either don't have or have an old version of freedreno.</p>
+						<p>Because all of the devices use kernels that either don't support or include an outdated version of freedreno.</p>
 
 						<h4>Why isn't root included?</h4>
-						<p>Because you don't <i>really</i> need it, and it just increases the attack surface.</p>
+						<p>You do not need root access on your daily driver cell phone.</p>
 
 						<h4>Why are you wasting your time with Android? Its clear that Google has been slowly killing AOSP every release!</h4>
 						<p>Android is a legitimately fantastic operating system and no other mobile platform has as many open source apps as it does.</p>
