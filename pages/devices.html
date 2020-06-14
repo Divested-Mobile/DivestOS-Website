@@ -82,6 +82,9 @@
 						if(strlen($file) > 30) {
 							$zip = $file;
 							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button primary rom-unknown\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='var(--button-back-color)'\">Download</a>";
+							if(file_exists($realRootdir . $device . "/" .$file . ".sha512sum")) {
+								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $file . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+							}
 							$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 							break;
 						}
@@ -89,12 +92,18 @@
 					//Output the recovery.img
 					$recovery = str_replace(".zip", "-recovery.img", $zip);
 					if(strlen($recovery) > 36 && file_exists($realRootdir . $device . "/" . $recovery)) {
-						$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $recovery . "\" class=\"button inverse small\">Recovery</a>";
+						$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $recovery . "\" class=\"button teritary\">Recovery</a>";
+						if(file_exists($realRootdir . $device . "/" . $recovery . ".sha512sum")) {
+							$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $recovery . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+						}
 					}
 					//Output the fastboot.zip
 					$fastboot = str_replace(".zip", "-fastboot.zip", $zip);
 					if(strlen($fastboot) > 36 && file_exists($realRootdir . $device . "/" . $fastboot)) {
-						$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $fastboot. "\" class=\"button inverse small\">Fastboot</a>";
+						$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $fastboot. "\" class=\"button teritary\">Fastboot</a>";
+						if(file_exists($realRootdir . $device . "/" . $fastboot . ".sha512sum")) {
+							$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $fastboot . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+						}
 					}
 					$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
 					list($color, $statusMessage) = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
