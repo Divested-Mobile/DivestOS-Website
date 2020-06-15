@@ -15,7 +15,7 @@
 								<li>5GB per device for optional caching</li>
 								<li>250MB-650MB for each resulting build if you want to archive</li>
 								<li>4GB for two target-files for a device to optionally generate incremental updates</li>
-								<li>Cheap: ~$50 2TB 7200RPM HDD</li>
+								<li>Cheap: ~$60 2TB 7200RPM HDD (non-SMR)</li>
 								<li>Fast: ~$150 800GB Intel S3710 SSD</li>
 								<li>If you plan on having multiple versions available btrfs+zstd:1+dedupe is recommended.</li>
 							</ul>
@@ -42,7 +42,7 @@ curl https://storage.googleapis.com/git-repo-downloads/repo >> ~/bin/repo;
 chmod a+x ~/bin/repo;</code></pre>
 
 						<h4>On Ubuntu</h4>
-							<p>Ubuntu 16.10 is recommended, newer should work fine with little change.</p>
+							<p>Ubuntu 18.04 is recommended, newer should work fine with little change.</p>
 							<pre><code>sudo add-apt-repository ppa:cwchien/gradle;
 sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove;
 sudo ln -s /usr/include/asm-generic /usr/include/asm;
@@ -62,10 +62,12 @@ firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
 						<pre><code>git clone https://gitlab.com/divested-mobile/divestos-build.git DivestOS;
 cd DivestOS;
 git submodule update --init --recursive;
-mkdir -p Build/LineageOS-16.0/.repo/local_manifests Builds Signing_Keys;
-cd Build/LineageOS-16.0;
-ln -s ../../Manifests/Manifest_LAOS-16.0.xml .repo/local_manifests/local_manifest.xml;
-repo init -u git://github.com/LineageOS/android.git -b lineage-16.0;
+mkdir -p Build/LineageOS-17.1/.repo/local_manifests Builds Signing_Keys .Signing_Keys;
+gocryptfs -init .Signing_Keys;
+gocryptfs .Signing_Keys/ Signing_Keys/;
+cd Build/LineageOS-17.1;
+cat ../../Manifests/Manifest_LAOS-17.1.xml > .repo/local_manifests/local_manifest.xml;
+repo init -u git://github.com/LineageOS/android.git -b lineage-17.1;
 repo sync; #This part will take a while
 
 #Some systems have python3 set as default, the build scripts require python2
@@ -76,13 +78,16 @@ nano Scripts/init.sh; #Choose your options and update paths
 
 #Generate signing keys
 nano Generate_Signing_Keys.sh; #Update description
-sh Generate_Signing_Keys.sh;
+sh Generate_Signing_Keys.sh $device; #repeat as needed for other devices
 </code></pre>
 					<h4>Setting up ccache (Optional)</h4>
 						<p>Use of ccache is highly recommended, its an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
 						<pre><code>mkdir ccache;
-echo "export USE_CCACHE=1" >> .bashrc;
-echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY]" >> .bashrc;
+echo "export USE_CCACHE=1;" >> .bashrc;
+echo "export CCACHE_COMPRESS=1;" >> .bashrc;
+echo "export CCACHE_COMPRESSLEVEL=1;" >> .bashrc;
+echo "export CCACHE_EXEC=/usr/bin/ccache;" >> .bashrc;
+echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY];" >> .bashrc;
 source ~/.bashrc;
 ccache -M 128GB; #Optionally set a size limit</code></pre>
 					</div>
@@ -91,7 +96,7 @@ ccache -M 128GB; #Optionally set a size limit</code></pre>
 						<p>You should become familiar with the workspace.</p>
 						<ul>
 							<li>/Build - This is where source code and working directory is stored</li>
-							<li>/Builds - This is where you should copy signed release builds to</li>
+							<li>/Builds - This is where signed release builds are copied to</li>
 							<li>/Manifests - This is where working repo manifests are stored</li>
 							<li>/Misc - This is for storing misc. snippets of anything</li>
 							<li>/Patches - This is where all repo patches are stored</li>
@@ -101,8 +106,8 @@ ccache -M 128GB; #Optionally set a size limit</code></pre>
 					</div>
 					<div class="section">
 						<h3>Building</h3>
-						<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, on Arch Linux you'll need to use a Python virtualenv.</p>
-						<pre><code>cd Build/LineageOS-16.0;
+						<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, and you may need to use a Python virtualenv.</p>
+						<pre><code>cd Build/LineageOS-17.1;
 source venv/bin/activate; #Only for python3 default systems
 source ../../Scripts/init.sh;
 resetWorkspace;
@@ -112,6 +117,7 @@ buildDevice [device]; #or buildAll for all supported devices</code></pre>
 					</div>
 					<div class="section">
 						<h3>Installing</h3>
+						<p>(Optional) Flash the recovery: <code>fastboot flash recovery divested*$device-recovery.img;</code></p>
 						<p>Reboot into recovery on your device and <code>$ adb sideload divested*$device.zip;</code></p>
 					</div>
 				</div>
