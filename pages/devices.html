@@ -177,6 +177,20 @@
 							</div>
 						</div>
 					</div>
+					<div class="section">
+						<div class="row">
+							<div class="card centero large">
+						<h3>Verification</h3>
+						<p>All files available below have a corresponding GPG signed .sha512sum file available. This can be used to verify builds have not been tampered with by this server or in transit.
+<pre><code>
+gpg --import divestos_signing.key;
+gpg --verify divested*sha512sum;
+sha512sum -c divested*sha512sum;
+</code></pre>
+<a href="/divestos_signing.key" class="button primary" target="_blank" title="Fingerprint: B874 4D67 F9F1 E14E 145D  FD8E 7F62 7E92 0F31 6994">GPG Public Key</a></p>
+							</div>
+						</div>
+					</div>
 					<div class="section hidden" id="nameYourPrice" style="text-align: center;">
 						<h3>Name Your Price</h3>
 						<input type="radio" id="radPriceFree" name="radPrice" checked>
