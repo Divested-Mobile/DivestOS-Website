@@ -3,6 +3,7 @@
 //Disable some dangerous features
 ini_set("allow_url_fopen", "Off");
 ini_set("allow_url_include", "Off");
+ini_set("expose_php", "Off");
 ini_set("file_uploads", $SBNR_SEC_FILE_UPLOADS);
 
 //Hardening
