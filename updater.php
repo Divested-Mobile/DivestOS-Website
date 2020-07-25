@@ -82,6 +82,7 @@ function getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 	foreach($images as $image) {
 		$fullJson .= getImageJson($rootdir, $base, $device, $image);
 	}
+	$fullJson = rtrim($fullJson, ", ");
 	$fullJson .= "\n\t]";
 	$fullJson .= "\n}";
 	return $fullJson;
