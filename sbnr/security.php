@@ -14,7 +14,6 @@ ini_set("session.name", $SBNR_SEC_SESSION_COOKIE_NAME);
 //ini_set("session.referer_check", $SBNR_DOMAIN_PRIMARY);
 ini_set("session.cookie_httponly", "true");
 ini_set("session.cookie_lifetime", "0");
-ini_set("session.cookie_secure", "1");
 ini_set("session.entropy_length", "64");
 ini_set("session.hash_bits_per_character", "5");
 ini_set("session.hash_function", "sha512");
@@ -38,6 +37,7 @@ if($SBNR_SEC_CLIENT_HARDENING) {
 	//header('Content-Security-Policy: "default-src \'none\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' checkout.stripe.com; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: *.stripe.com; font-src \'self\'; connect-src \'self\' checkout.stripe.com; media-src \'self\'; object-src \'none\'; child-src \'none\'; frame-src \'self\' checkout.stripe.com; worker-src \'none\'; frame-ancestors \'none\'; disown-opener; sandbox allow-forms allow-modals allow-same-origin allow-popups allow-scripts; reflected-xss block; manifest-src \'self\';"');
 }
 if($SBNR_SEC_HTTPS_ONLY) {
+	ini_set("session.cookie_secure", "1");
 	header('Strict-Transport-Security: max-age=86400; includeSubDomains'); //Enforce HTTPS
 }
 

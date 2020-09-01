@@ -1,0 +1,17 @@
+<form class="centero" name="frmCaptchaWall" id="frmCaptchaWall" method="post" action="sbnr/captcha_wall.php">
+	<input type="hidden" name="CSRF_TOKEN" id="CSRF_TOKEN" value="<?php print($_SESSION['SBNR_CSRF_TOKEN']); ?>"/>
+	<br>
+	<div class="input-group">
+		<label for="txtCaptcha"><h1>Before you continue...</h1></label>
+		<div class="card">
+			<?php print('<img src="' . getImageBase64(getCaptchaText()) . '" />'); ?>
+		</div>
+		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" required autofocus/>
+	</div>
+	<br>
+	<div class="input-group">
+		<input type="text" name="blackBear" id="blackBear" style="display: none;" placeholder="ROAR!" value="roar" required/>
+		<input type="text" name="brownBear" id="brownBear" style="display: none;" placeholder="Zzzz..." value=""/>
+		<input class="button primary" type="submit" id="btnSubmit" value="Submit">
+	</div>
+</form>

@@ -3,10 +3,10 @@
 
 		<footer style="text-align: center;">
 			<p>Divested Computing Group &copy; 2017-2020
-			<?php if($SBNR_FOOTER_LEGAL) : ?>
+			<?php if($SBNR_FOOTER_LEGAL && !$SBNR_AT_CAPTCHA_WALL) : ?>
 			<br><a href="index.php?page=privacy_policy">Privacy Policy</a> || <a href="index.php?page=terms_of_service">Terms of Service</a>
 			<?php endif; ?>
-			<?php if($SBNR_FOOTER_POWEREDBY) : ?>
+			<?php if($SBNR_FOOTER_POWEREDBY && !$SBNR_AT_CAPTCHA_WALL) : ?>
 			<br>Powered by <a href="https://minicss.org" target="_blank" rel="nofollow noopener noreferrer">mini.css</a> (MIT) and <a href="https://github.com/divestedcg/sbnr" target="_blank" rel="nofollow noopener noreferrer">SBNR</a> (LGPLv3)
 			<?php endif; ?>
 			</p>
@@ -31,10 +31,10 @@
 				print($snippet);
 			}
 		?>
-		<?php if($SBNR_OBF_DISABLE_CLIPBOARD) : ?>
+		<?php if($SBNR_OBF_DISABLE_CLIPBOARD || $SBNR_AT_CAPTCHA_WALL) : ?>
 		<script defer type="text/javascript" src="assets/js/noclip.js" integrity="sha384-t61ZBUkydTPYiZUdXu4lt5GEIpE+v4fchB6yrIuYODcDNvV6hlw7P8GEf+9Qen3A"></script>
 		<?php endif; ?>
-		<?php if($SBNR_OBF_DISABLE_DEVTOOLS) : ?>
+		<?php if($SBNR_OBF_DISABLE_DEVTOOLS || $SBNR_AT_CAPTCHA_WALL) : ?>
 		<script defer type="text/javascript" src="assets/js/devtools-detect.js" integrity="sha384-opU/k/i2uQ0DUG1mxi6Alx8Q+hYa5ofxZPtIgqELoTpsRXfto3CJUwgN4svlrWB8"></script>
 		<script defer type="text/javascript" src="assets/js/nodev.js" integrity="sha384-8z/StSSpQqoIc6bzh2lMbUPcwuN6WIgzATvfWHmYbf4N5zBFB3yNHf7Y6+ieRwIy"></script>
 		<?php endif; ?>
