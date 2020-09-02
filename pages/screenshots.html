@@ -3,6 +3,8 @@
 					<p>Various screenshots of the system and apps</p>
 					<div class="section">
 						<div class="row">
+<?php
+$screenshotHTML='
 <div class="card centero"><div class="section"><h3>Hypatia - Malware Scanner</h3></div><img class="section media" style="height:auto;" src="images/screenshots/10/Hypatia.png"/></div>
 <div class="card centero"><div class="section"><h3>Extirpater - Free Space Eraser</h3></div><img class="section media" style="height:auto;" src="images/screenshots/10/Extirpater.png"/></div>
 <div class="card centero"><div class="section"><h3>Mull - Browser</h3></div><img class="section media" style="height:auto;" src="images/screenshots/10/Mull.png"/></div>
@@ -20,6 +22,10 @@
 <div class="card centero"><div class="section"><h3>Settings</h3></div><img class="section media" style="height:auto;" src="images/screenshots/10/Settings.png"/></div>
 <div class="card centero"><div class="section"><h3>Settings - About</h3></div><img class="section media" style="height:auto;" src="images/screenshots/10/About.png"/></div>
 <div class="card centero"><div class="section"><h3>Updater</h3></div><img class="section media" style="height:auto;" src="images/screenshots/10/Updater.png"/></div>
+';
+if($SBNR_GEN_DARKMODE) { $screenshotHTML = str_replace("/10/", "/10-dark/", $screenshotHTML); }
+print($screenshotHTML);
+?>
 						</div>
 					</div>
 				</div>
