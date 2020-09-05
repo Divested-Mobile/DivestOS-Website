@@ -46,6 +46,7 @@ include "fragments/footer.html";
 //END OF PAGE
 
 include "sbnr/post.php";
-print("<!-- Server Side Rendering Time: " . (microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"]) . "s -->");
+print("<!-- Server Side Timing: " . ((microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"])*1000) . "ms -->");
+header('Server-Timing: app;dur=' . ((microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"])*1000));
 
 ?>
