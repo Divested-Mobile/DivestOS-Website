@@ -3,10 +3,10 @@
 					<p>User privacy is one of the primary goals of DivestOS. Detailed below is everything you need to know about how your data is handled.</p>
 					<p>A note on the GDPR: For the time being we are sadly not 100% GDPR compliant. We are not lawyers but we are pretty sure the only thing we need to do is not log the last two (or four) octets of IP addresses. There are currently no maintained Apache modules that accomplish this, but we are confident that by release there will be. Once that is in place the overall privacy situation for all users will be dramatically improved and we will also be (hopefully) compliant with the GDPR as well.</p>
 					<!-- TODO: Update IP address references below once we get a mod_removeip -->
-					<div class="section">
+					<div class="section" id="fpCollect">
 						<h3>What data we (Divested Computing Group) collect</h3>
 						<ul>
-							<li>Website</li>
+							<li id="website">Website</li>
 							<ul>
 								<li>What is received: Cookies (detailed below), Page Visited, Referring Page, User Agent, and IP Address</li>
 								<li>Cookies</li>
@@ -27,12 +27,12 @@
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 							</ul>
 							<?php if($SBNR_ANALYTICS_ENABLED || $SBNR_SHADOW_ENABLED) : ?>
-							<li>Website Analytics</li>
+							<li id="analytics">Website Analytics</li>
 							<ul>
 								<li>What is received: Page Visited, Stripped Referring Page, Browser Fingerprint (salted with domain), User Agent, IP Address</li>
 								<li>How often: On every page visit</li>
 								<li>Why it is received: Used to determine how popular and roughly how many users we have</li>
-								<li>When it will be deleted: Only the past 200 requests are stored</li>
+								<li>When it will be deleted: At least once a month</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 								<li>How to disable: Enable your browser's 'Do Not Track' option or disable JavaScript</li>
@@ -48,12 +48,12 @@
 								<noscript><li><mark>Current status: Not Tracking (JavaScript Disabled)</mark></li></noscript>
 							</ul>
 							<?php endif; ?>
-							<li>ROM</li>
+							<li id="rom">ROM</li>
 							<ul>
 								<li>The ROM does not contain any analytics and any requests are used only for supporting it</li>
 							</ul>
 							<!-- Corresponding patch is currently disabled -->
-							<!--<li>ROM: Captive Portal Check</li>
+							<!--<li id="fpCaptivePortal">ROM: Captive Portal Check</li>
 							<ul>
 								<li>What is received: Static User Agent, IP Address</li>
 								<li>How often: On every Wi-Fi and cell connection</li>
@@ -62,7 +62,7 @@
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to disable: Settings > Network > Data usage > Disable Captive Portal</code></li>
 							</ul>-->
-							<li>ROM: Updater</li>
+							<li id="romUpdater">ROM: Updater</li>
 							<ul>
 								<li>What is received: Device Model, Incremental Build ID, Default User Agent, IP Address</li>
 								<li>How often: On every boot and also once per day</li>
@@ -73,7 +73,7 @@
 								<li>How to disable: Disable 'Auto updates check'</li>
 								<li>Settings can be accessed via Settings > About > DivestOS updates > 3dot > Preferences</li>
 							</ul>
-							<li>ROM: DivestOS F-Droid Repos</li>
+							<li id="fpRepos">ROM: DivestOS F-Droid Repos</li>
 							<ul>
 								<li>What is received: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
 								<li>How often: Once per day</li>
@@ -84,7 +84,7 @@
 								<li>How to reduce: Decrease the 'Automatic update interval' in F-Droid > Settings</li>
 								<li>How to disable: Disable the 'DivestOS' repos in F-Droid > Settings > Repositories</li>
 							</ul>
-							<li>App: Hypatia</li>
+							<li id="hypatia">App: Hypatia</li>
 							<ul>
 								<li>What is received: Signature Database Requests, IP Address</li>
 								<li>How often: Manually</li>
@@ -96,7 +96,7 @@
 						</ul>
 					</div>
 					<!-- TODO: Uncomment once we get a mod_removeip -->
-					<!--<div class="section">
+					<!--<div class="section" id="control">
 						<h3>Control over your data</h3>
 						<ul>
 							<li>Requesting your data: We have no way to tie data to an identity</li>
@@ -106,11 +106,11 @@
 						</ul>
 						<p>E-Mail: <script>document.write(atob("PGEgaHJlZj0ibWFpbHRvOnN1cHBvcnRAZGl2ZXN0b3MueHl6Ij5zdXBwb3J0QGRpdmVzdG9zLnh5ejwvYT4K"));</script><noscript>JavaScript Protected</noscript></p>
 					</div>-->
-					<div class="section">
+					<div class="section" id="3rdparty">
 						<h3>What data third parties collect</h3>
 						<p>Third parties are used to support specific features and apps</p>
 						<ul>
-							<li>Website Payments</li>
+							<li id="stripe">Website Payments</li>
 							<ul>
 								<li>Who: Stripe</li>
 								<li>What they receive: Name, Bank Card, E-Mail Address, User Agent, Browser Fingerprint, IP Address</li>
@@ -120,7 +120,7 @@
 								<li>How to disable: Requests to Stripe's servers will not occur until you attempt to purchase a ROM</li>
 								<li>Privacy Policy: <a href="https://stripe.com/us/privacy" target="_blank" rel="nofollow noopener noreferrer">Stripe Privacy Policy</a></li>
 							</ul>
-							<li>ROM: Captive Portal Check</li>
+							<li id="googleCaptivePortal">ROM: Captive Portal Check</li>
 							<ul>
 								<li>Who: Google</li>
 								<li>Description: Used to determine if there is a captive portal</li>
@@ -129,7 +129,7 @@
 								<li>How to disable: Settings > Network > Data usage > Disable Captive Portal</code></li>
 								<li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Google Privacy Policy</a></li>
 							</ul>
-							<li>ROM: F-Droid Official Repo</li>
+							<li id="fdroid">ROM: F-Droid Official Repo</li>
 							<ul>
 								<li>Who: F-Droid</li>
 								<li>What they receive: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>

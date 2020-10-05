@@ -1,7 +1,7 @@
 				<div class="card fluid">
 					<h2>Build Guide</h2>
-					<div class="section">
-						<h3>Introduction</h3>
+					<div class="section" id="intro">
+						<h3>Introduction<a href="#intro">¶</a></h3>
 						<p>You want to build for yourself? Awesome!
 						<br>First things first, you're going to need a pretty decent computer if you want timely builds.</p>
 						<ul>
@@ -23,8 +23,8 @@
 						<p>Second you'll want to have a decent Internet connection to download the source code and OS dependencies, 100Mbps is recommended.
 						<br>Lastly you'll need to have an excellent cooling solution, your computer will be running at full load for quite some time.</p>
 					</div>
-					<div class="section">
-						<h3>Installing Dependencies</h3>
+					<div class="section" id="deps">
+						<h3>Installing Dependencies<a href="#deps">¶</a></h3>
 						<p>Run the few commands below to get your system up to date and install all necessary dependencies.</p>
 						<h4>On Arch Linux</h4>
 							<p>@p4block has created a handy metapackage for installing the necessary dependencies, use your favorite AUR helper to install it. There is also a more minimal one included in our build repository that you can install with makepkg.</p>
@@ -51,8 +51,8 @@ sudo apt install autoconf automake bc bison build-essential ccache curl expat fl
 
 sudo apt clean;</code></pre>
 					</div>
-					<div class="section">
-						<h3>Creating a Workspace</h3>
+					<div class="section" id="init">
+						<h3>Creating a Workspace<a href="#init">¶</a></h3>
 						<h4>Setting up Firejail (optional)</h4>
 						<p>For extra security of your host machine, you can run the entire build process in a fairly restricted sandbox with minimal performance impact. We've already upstreamed a profile for just this task.</p>
 						<pre><code>echo 'if [ $container="firejail" ]; then unset PROMPT_COMMAND; fi;' >> .bashrc;
@@ -91,8 +91,8 @@ echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY];" >> .bashrc;
 source ~/.bashrc;
 ccache -M 128GB; #Optionally set a size limit</code></pre>
 					</div>
-					<div class="section">
-						<h3>About the Workspace</h3>
+					<div class="section" id="paths">
+						<h3>About the Workspace<a href="#paths">¶</a></h3>
 						<p>You should become familiar with the workspace.</p>
 						<ul>
 							<li>/Build - This is where source code and working directory is stored</li>
@@ -104,8 +104,8 @@ ccache -M 128GB; #Optionally set a size limit</code></pre>
 							<li>/Signing_Keys - This is the default signing key store, its recommended to store these using gocryptfs or similar.</li>
 						</ul>
 					</div>
-					<div class="section">
-						<h3>Building</h3>
+					<div class="section" id="compile">
+						<h3>Building<a href="#compile">¶</a></h3>
 						<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, and you may need to use a Python virtualenv.</p>
 						<pre><code>cd Build/LineageOS-17.1;
 source venv/bin/activate; #Only for python3 default systems
@@ -115,8 +115,8 @@ patchWorkspace;
 buildDevice [device]; #or buildAll for all supported devices</code></pre>
 						<p>Afterwards you should have flashable zips located in out/target/product/[device]. You should copy them to /Builds</p>
 					</div>
-					<div class="section">
-						<h3>Installing</h3>
+					<div class="section" id="install">
+						<h3>Installing<a href="#install">¶</a></h3>
 						<p>(Optional) Flash the recovery: <code>fastboot flash recovery divested*$device-recovery.img;</code></p>
 						<p>Reboot into recovery on your device and <code>$ adb sideload divested*$device.zip;</code></p>
 					</div>

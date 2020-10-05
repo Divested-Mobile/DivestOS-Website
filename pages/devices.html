@@ -61,7 +61,7 @@
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) >= 2 && $device != '..') {
-				$downloads .= "<div class=\"card centero\">";
+				$downloads .= "<div class=\"card centero\" id=\"device-" . $device . "\">";
 				$name = $device;
 				$friendlyNamePath = $realRootdir . $device . "/friendlyName";
 				if(file_exists($friendlyNamePath)) {
@@ -163,24 +163,24 @@
 					<p>Releases are typically done on a monthly schedule unless there are major or security related changes.</p>
 					<div class="section">
 						<div class="row">
-							<div class="card centero large">
-								<h3>Disclaimer</h3>
+							<div class="card centero large" id="disclaimer">
+								<h3>Disclaimer<a href="#disclaimer">¶</a></h3>
 								<p>Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided without warranty and can damage your device. We are not liable for any damage done by using these, and you yourself will be at fault.</p>
 							</div>
-							<div class="card centero large">
-								<h3>Root</h3>
+							<div class="card centero large" id="root">
+								<h3>Root<a href="#root">¶</a></h3>
 								<p>These are 'user' builds, root is not included. It is not recommended to flash any other zips alongside our builds. Root frameworks and runtime modification frameworks will <b>severely decrease</b> the security of your device.</p>
 							</div>
-							<div class="card centero large">
-								<h3>Signed Builds</h3>
+							<div class="card centero large" id="signing">
+								<h3>Signed Builds<a href="#signing">¶</a></h3>
 								<p>All builds published are signed with our signing keys, unlike other ROMs that simply use test-keys. This means that when switching to or away from our builds, you will be prompted to wipe /data.</p>
 							</div>
 						</div>
 					</div>
-					<div class="section">
+					<div class="section" id="verify">
 						<div class="row">
 							<div class="card centero large">
-						<h3>Verification</h3>
+						<h3>Verification<a href="#verify">¶</a></h3>
 						<p>All files available below have a corresponding GPG signed .sha512sum file available. This can be used to verify builds have not been tampered with by this server or in transit.
 <pre><code>
 gpg --import divestos_signing.key;
@@ -199,7 +199,7 @@ sha512sum -c divested*sha512sum;
 						<label for="radPriceTen">$10</label>
 						<p id="lblThanks" hidden>Thank you for your contribution!</p>
 					</div>
-					<div class="section">
+					<div class="section" id="devices">
 						<div class="row" style="text-align: center;">
 							<?php getDownloads(); ?>
 						</div>
