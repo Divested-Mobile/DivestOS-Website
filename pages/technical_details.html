@@ -3,29 +3,29 @@
 					<div class="section" id="overview">
 						<h3>Overview<a href="#overview">¶</a></h3>
 						<p>An Android ROM is essentially made up of three parts as detailed below.</p>
-						<h4>The Linux Kernel</h4>
+						<h4 id="kernel">The Linux Kernel<a href="#kernel">¶</a></h4>
 						<p>The kernel is a necessary part of any operating system. It provides the essential core functionalities and allows the software to talk to the hardware.</p>
 						<p>Due to the extensive modifications made by device manufacturers and upstream hardware creators, the vanilla 'Mainline' kernel cannot be used. This means that most devices use kernels that are outdated and need to be manually maintained. Some kernels can be easily kept up to date by applying kernel version patches, but more often are modified so much that they need to instead have patches manually tweaked (backported) to work. Google, Qualcomm, and other manufacturers do actually do this work but they still need to be manually applied by device maintainers. Due to this most third party and even stock ROMs ship kernels that are littered with known vulnerabilities.</p>
 						<p>We however have created a program that eases tracking and applying of these patches massively. Once supplied with a sufficient amount of patches it can can be easily fed kernels and spit out scripts that will automatically apply all applicable patches. It is far from perfect, but with our current set of ~2,700 patches for ~2,300 CVEs it can typically apply between 30 and 300 patches to a kernel. The end result of this is that kernels are much more secure. <b>This is referred to below as our 'CVE patcher'.</b></p>
 						<p>The kernel also sports many built-in security features, that most devices actually have disabled! We created a tool that automatically enables as many of these security features as possible. This is an easy way to have a noticeable increase in security with minimal effort. <b>This is referred to below as 'hardenDefconfig()'.</b></p>
-						<h4>Android Itself</h4>
+						<h4 id="android">Android Itself<a href="#android">¶</a></h4>
 						<p></p>
-						<h4>Vendor Blobs</h4>
+						<h4 id="vendor">Vendor Blobs<a href="#vendor">¶</a></h4>
 						<p></p>
 					</div>
-					<div class="section" id="changes">
-						<h3>The nitty gritty<a href="#changes">¶</a></h3>
+					<div class="section" id="details">
+						<h3>The nitty gritty<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
 						<p>Last updated: 2018-06-27</p>
 						<p>This needs to be updated since we've switched to using a proper vendor overlay for many changes</p>
-						<h4>Workspace</h4>
+						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
 							<li>The workspace is fully reset and synced before every full build</li>
 							<li>Upon starting a full build a thorough malware scan is performed using ClamAV</li>
 
 						</ul>
-						<h4>The Patcher</h4>
+						<h4 id="patcher">The Patcher<a href="#patcher">¶</a></h4>
 						<p>We do not maintain forks of repos to store modifications. Instead we keep all of our changes and scripts to apply them in a single repository. This has various benefits and downsides, but works best for our needs.</p>
 						<h5>Steps performed when running patchWorkspace()</h5>
 						<ul>
@@ -46,9 +46,9 @@
 							<li>Patch_CVE.sh is executed, this executes scripts created by the CVE patcher to automatically apply many CVE patches to all the kernels</li>
 							<li>Theme.sh (14.1 only) is executed, this changes the teal accents to orange ones</li>
 						</ul>
-						<h4>The Changes</h4>
+						<h4 id="changes">The Changes<a href="#changes">¶</a></h4>
 						<p>We currently support LineageOS 11.0 (KitKat), 14.1 (Nougat), 15.1 (Oreo), 16.0 (Pie), and 17.1 (Q). We try our best to ensure parity between them, but 11.0 is missing a number of features and isn't recommened unless necessary.</p>
-						<h5>Included Apps</h5>
+						<h5 id="includedApps">Included Apps<a href="#includedApps">¶</a></h5>
 						<ul>
 							<li>Mull: A browser hardened against trackers by default. Replaces AOSP Browser/LineageOS Jelly</li>
 							<li>F-Droid: An app store for FOSS apps</li>
