@@ -4,67 +4,75 @@
 					<div class="section" id="devices">
 						<h3>Devices<a href="#devices">¶</a></h3>
 						<p>Devices listed as "Works" on Downloads page will not be listed here if they are fully working as expected and do not have any quirks.</p>
-						<table class="striped" style="max-height: 100%;">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Status</th>
-									<th>Information</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr style="--table-body-fore-color: #f44336;">
-									<td data-label="Name">herolte</td>
-									<td data-label="Status">Broken</td>
-									<td data-label="Information">Not booting (kernel?)</td>
-								</tr>
-								<tr style="--table-body-fore-color: #f44336;">
-									<td data-label="Name">manta</td>
-									<td data-label="Status">Broken</td>
-									<td data-label="Information">Crash at setup wizard</td>
-								</tr>
-								<tr style="--table-body-fore-color: #3498db;">
-									<td data-label="Name">i9300</td>
-									<td data-label="Status">Mostly Works</td>
-									<td data-label="Information">Out of memory errors (?)</td>
-								</tr>
-								<tr style="--table-body-fore-color: #3498db;">
-									<td data-label="Name">apollo/thor</td>
-									<td data-label="Status">Mostly Works</td>
-									<td data-label="Information">No encryption. (upstream blobs)</td>
-								</tr>
-								<tr style="--table-body-fore-color: #3498db;">
-									<td data-label="Name">grouper</td>
-									<td data-label="Status">Mostly Works</td>
-									<td data-label="Information">No camera. (upstream kernel)</td>
-								</tr>
-								<tr style="--table-body-fore-color: #3498db;">
-									<td data-label="Name">nex</td>
-									<td data-label="Status">Mostly Works</td>
-									<td data-label="Information">No encryption. No camera. No GPS. (gps deblobber, rest upstream)</td>
-								</tr>
-								<tr style="--table-body-fore-color: #3498db;">
-									<td data-label="Name">shamu</td>
-									<td data-label="Status">Mostly Works</td>
-									<td data-label="Information">No microphone on phone calls (deblobber?)</td>
-								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
-									<td data-label="Name">clark</td>
-									<td data-label="Status">Works</td>
-									<td data-label="Information">TWRP is required for modem to work.</td>
-								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
-									<td data-label="Name">maguro/toro/toroplus</td>
-									<td data-label="Status">Works</td>
-									<td data-label="Information">Not encrypted by default, please enable after first boot. (OMAP SMC limitation)</td>
-								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
-									<td data-label="Name">mako</td>
-									<td data-label="Status">Works</td>
-									<td data-label="Information">First boot will never succeed, force-reboot after ~3 minutes.</td>
-								</tr>
-							</tbody>
-						</table>
+						<h4 id="all">All Devices<a href="#all">¶</a></h4>
+						<ul>
+							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. [patcher]</li>
+							<li>Devices with 1GB of RAM or less will likely out-of-memory more often than usual. [slub_debug fragmentation?]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/64" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
+							<li>Incremental updates will often fail to successfuly apply on non A/B devices. [releasetools]</li>
+							<li>MediaProvider error toast on some boots. [permission whitelist?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>Most devices will take longer to acquire a GPS lock. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
+							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
+							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w optional enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
+							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
+							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+						</ul>
+						<h4 id="hdx-common">apollo/thor<a href="#hdx-common">¶</a></h4>
+						<ul>
+							<li>Encryption is not supported. [upstream blobs]</li>
+						</ul>
+						<h4 id="clark">clark<a href="#clark">¶</a></h4>
+						<ul>
+							<li>Camera is very slow to start and sometimes won't start at all. [upstream]</li>
+							<li>TWRP is required for flashing images due to modem firmware being compressed. [recovery]<a href="https://dl.twrp.me/clark/" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
+						</ul>
+						<h4 id="d852">d852<a href="#d852">¶</a></h4>
+						<ul>
+							<li>Sensors will not work unless you have a hybrid v220k modem which requires an a10b bootloader. [firmware]</li>
+						</ul>
+						<h4 id="g3-common">d852/d855/g3<a href="#g3-common">¶</a></h4>
+						<ul>
+							<li>Device will often fail to reboot and become unresponsive, requiring the battery to be pulled. [hardware]</li>
+						</ul>
+						<h4 id="grouper">grouper<a href="#grouper">¶</a></h4>
+						<ul>
+							<li>Camera is non-functional. [upstream kernel]</li>
+							<li>Device is extremely slow. [hardware?]</li>
+							<li>Relocking bootloader with an AOSP/Lineage/DivestOS recovery flashed will result in a *permanent hard brick* unless you have acquired your NvFlash recovery token! [bootloader]<a href="https://web.archive.org/web/20171225183216/http://www.androidroot.mobi/pages/guides/tegra3-guide-nvflash-jellybean/" target="_blank" rel="nofollow noopener noreferrer">[guide]</a></li>
+						</ul>
+						<h4 id="herolte">herolte<a href="#herolte">¶</a></h4>
+						<ul>
+							<li>(reported) bootloops. [???]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/62" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
+						</ul>
+						<h4 id="klte">klte<a href="#klte">¶</a></h4>
+						<ul>
+							<li>SD cards will fail to mount or format. [selinux]</li>
+							<li>USB ADB does not work. [selinux]</li>
+						</ul>
+						<h4 id="maguro">maguro/toro/toroplus<a href="#maguro">¶</a></h4>
+						<ul>
+							<li>Not encrypted by default. [OMAP SMC limitation]</li>
+						</ul>
+						<h4 id="mako">mako<a href="#mako">¶</a></h4>
+						<ul>
+							<li>Excessive battery drain when powered-off. Maybe fixed by <a href="https://github.com/Divested-Mobile/DivestOS-Build/commit/b56929d3d9ade1fd5484ba3b4c2b391a41056f12" target="_blank" rel="nofollow noopener noreferrer">b56929d3</a>. [???]<a href="https://github.com/voron00/android_device_lge_mako/commit/df0867237e71a03aea1646a92c7b022c9906a945#comments" target="_blank" rel="nofollow noopener noreferrer">[relevant]</a></li>
+							<li>/system needs to be resized to fit 17.1. [too small partition]</li>
+							<li>Will fail to boot on first boot. Force off once after 3 minutes. [modem subsystem service startup failure with forceencrypt]</li>
+						</ul>
+						<h4 id="mata">mata<a href="#mata">¶</a></h4>
+						<ul>
+							<li>Images will often fail to install via recovery. [fstab /vendor/firmware_mnt]</li>
+						</ul>
+						<h4 id="nexn900">nex/n900<a href="#nexn900">¶</a></h4>
+						<ul>
+							<li>Camera is non-functional. [upstream blobs?]</li>
+							<li>Encryption is not supported. [upstream device tree?]</li>
+							<li>GPS is non-funtional. [deblobber]</li>
+						</ul>
+						<h4 id="shamu">shamu<a href="#shamu">¶</a></h4>
+						<ul>
+							<li>(reported) bootloops. [???]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/111" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
+							<li>(reported) No microphone on phone calls. [deblobber?]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/10" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
+						</ul>
 					</div>
 					<div class="section" id="hardware">
 						<h3>Hardware Features<a href="#hardware">¶</a></h3>
@@ -213,7 +221,7 @@
 								<tr style="--table-body-fore-color: #673AB7;">
 									<td data-label="Name">IMS/VoLTE</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Many IMS blobs are removed, but is kept working</td>
+									<td data-label="Information">Select IMS blobs are removed, but is kept working</td>
 								</tr>
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">Qualcomm aptX</td>
