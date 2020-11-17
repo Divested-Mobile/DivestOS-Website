@@ -22,7 +22,7 @@
 		<div class="card">
 			<?php print('<img src="' . getImageBase64(getCaptchaMath()) . '" />'); ?>
 		</div>
-		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" required/>
+		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" autocomplete="off" required/>
 	</div>
 	<?php endif; ?>
 	<br>
