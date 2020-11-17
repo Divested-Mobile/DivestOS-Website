@@ -2,7 +2,7 @@
 
 $handler = true;
 include "config.php";
-if($SBNR_CAPTCHA_WALL === false) { exit; }
+if($SBNR_CAPTCHA_WALL === false && sizeof($SBNR_CAPTCHA_WALL_PAGES) === 0) { exit; }
 
 include "security.php";
 include "captcha.php";

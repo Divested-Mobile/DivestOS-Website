@@ -9,10 +9,10 @@ include "sbnr/utils.php";
 include "sbnr/pre.php";
 
 //START OF PAGE LOADER
-if($SBNR_CAPTCHA_WALL && !($_SESSION['SBNR_CAPTCHA_WALL_PASSED'] === true)) {
+$page = noHTML($_GET["page"]);
+if(($SBNR_CAPTCHA_WALL || in_array($page, $SBNR_CAPTCHA_WALL_PAGES) && extension_loaded('gd')) && !($_SESSION['SBNR_CAPTCHA_WALL_PASSED'] === true)) {
 	$SBNR_AT_CAPTCHA_WALL = true;
 } else {
-	$page = noHTML($_GET["page"]);
 	if(strlen($page) == 0) { //default to home page if not empty
 		$page = "home";
 		if($SBNR_GEN_ONE_PAGE) { $page = "home-1p"; }
