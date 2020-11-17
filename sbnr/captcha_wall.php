@@ -18,15 +18,21 @@ if(isset($_POST["CSRF_TOKEN"], $_POST["blackBear"])) {
 			$_SESSION['SBNR_CAPTCHA_WALL_PASSED'] = false;
 			http_response_code(403);
 		}
-		//header("Location: ../index.php");
-		header("Location: " . $_SERVER['HTTP_REFERER']); //XXX: REVIEW THIS FOR SECURITY!
 	} else {
-		generateErrorPageBasic(401);
+		http_response_code(401);
 	}
 } else {
-	generateErrorPageBasic(400);
+	http_response_code(400);
 }
 
+if(!empty($_SESSION['SBNR_CAPTCHA_WALL_URI'])) {
+	//This is only set by index.php meaning it'll redirect back to index.php and go through the usual checks
+	header("Location: " . $_SESSION['SBNR_CAPTCHA_WALL_URI']);
+} else {
+	header("Location: ../index.php");
+}
+
+$_SESSION['SBNR_CAPTCHA_WALL_URI'] = "";
 $_SESSION['SBNR_CSRF_TOKEN'] = bin2hex(random_bytes(32)); //Always renew the token to prevent brute forcing
 
 ?>

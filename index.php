@@ -11,6 +11,7 @@ include "sbnr/pre.php";
 //START OF PAGE LOADER
 $page = noHTML($_GET["page"]);
 if(($SBNR_CAPTCHA_WALL || in_array($page, $SBNR_CAPTCHA_WALL_PAGES) && extension_loaded('gd')) && !($_SESSION['SBNR_CAPTCHA_WALL_PASSED'] === true)) {
+	$_SESSION['SBNR_CAPTCHA_WALL_URI'] = $_SERVER["REQUEST_URI"];
 	$SBNR_AT_CAPTCHA_WALL = true;
 } else {
 	if(strlen($page) == 0) { //default to home page if not empty
