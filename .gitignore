@@ -4,3 +4,4 @@ builds/
 extras/
 stripe/
 sbnr/captcha_fonts
+updater.token.php
