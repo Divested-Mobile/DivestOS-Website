@@ -4,7 +4,7 @@
 	<div class="input-group">
 		<label for="txtCaptcha"><h1>Before you continue...</h1></label>
 		<div class="card">
-			<?php print('<img src="' . getImageBase64(getCaptchaText()) . '" />'); ?>
+			<?php print('<img src="' . getImageBase64(getCaptchaMath()) . '" />'); ?>
 		</div>
 		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" required autofocus/>
 	</div>

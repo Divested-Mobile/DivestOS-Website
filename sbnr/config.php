@@ -31,7 +31,7 @@ $SBNR_SHADOW_LANDSCAPE = "DivestOS";
 
 //Security
 $SBNR_CAPTCHA_WALL = false && extension_loaded('gd');
-$SBNR_CAPTCHA_WALL_PAGES = array();
+$SBNR_CAPTCHA_WALL_PAGES = array("devices");
 $SBNR_SEC_HTTPS_ONLY = false; //Enable if using HTTPS
 $SBNR_SEC_CLIENT_HARDENING = false; //Disable if globally added by webserver
 $SBNR_SEC_FILE_UPLOADS = "Off";

@@ -18,8 +18,8 @@ if(isset($_POST["CSRF_TOKEN"], $_POST["blackBear"])) {
 			$_SESSION['SBNR_CAPTCHA_WALL_PASSED'] = false;
 			http_response_code(403);
 		}
-		header("Location: ../index.php");
-		//header("Location: " . $_SERVER['HTTP_REFERER']); //XXX: REVIEW THIS FOR SECURITY!
+		//header("Location: ../index.php");
+		header("Location: " . $_SERVER['HTTP_REFERER']); //XXX: REVIEW THIS FOR SECURITY!
 	} else {
 		generateErrorPageBasic(401);
 	}
