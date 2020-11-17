@@ -1,11 +1,11 @@
 <?php
 
 function generateRandomColor($image) {
-	imagecolorallocate($image, rand(20, 255), rand(20, 255), rand(20, 255));
+	imagecolorallocate($image, random_int(20, 255), random_int(20, 255), random_int(20, 255));
 }
 
 function applyRandomImageFilter($image) {
-	switch(rand(0, 4)) {
+	switch(random_int(0, 4)) {
 		case 0:
 			//do nothing
 			break;
@@ -28,14 +28,14 @@ function generateTextCaptcha($captchaText) {
 	$captcha = imagecreate(300, 100);
 	generateRandomColor($captcha); //Set random background color
 	$textColor = imagecolorallocate($captcha, 0, 0, 0); //Black text
-	$textX = rand(15, 150);
-	imagettftext($captcha, 24, rand(-10, 10), $textX, 50, $textColor, getRandomFile("./sbnr/captcha_fonts/"), $captchaText); //Draw the captcha text
-	for ($i = 0; $i < rand(8, 20); $i++) { //Add lines
-		imagestring($captcha, 1, rand(0, 300), rand(0, 100), generateRandomString(rand(4, 20)), $textColor);
-		imageline($captcha, rand(0, 300), rand(0, 100), rand(0, 300), rand(0, 100), $textColor);
+	$textX = random_int(15, 150);
+	imagettftext($captcha, 24, random_int(-10, 10), $textX, 50, $textColor, getRandomFile("./sbnr/captcha_fonts/"), $captchaText); //Draw the captcha text
+	for ($i = 0; $i < random_int(8, 20); $i++) { //Add lines
+		imagestring($captcha, 1, random_int(0, 300), random_int(0, 100), generateRandomString(random_int(4, 20)), $textColor);
+		imageline($captcha, random_int(0, 300), random_int(0, 100), random_int(0, 300), random_int(0, 100), $textColor);
 	}
-	for ($i = 0; $i < rand(1, 8); $i++) { //Add letters
-		imagestring($captcha, 3, rand(0, 300), rand(0, 100), generateRandomString(6), $textColor);
+	for ($i = 0; $i < random_int(1, 8); $i++) { //Add letters
+		imagestring($captcha, 3, random_int(0, 300), random_int(0, 100), generateRandomString(6), $textColor);
 	}
 	//applyRandomImageFilter($captcha);
 	return $captcha;
@@ -50,8 +50,8 @@ function getCaptchaText($clear = true) {
 
 function getCaptchaMath($clear = true) {
 	if($clear) { clearCaptchaStore(); }
-	$num1 = rand(0, 20);
-	$num2 = rand(0, 20);
+	$num1 = random_int(0, 20);
+	$num2 = random_int(0, 20);
 	$captchaText = $num1 . " + " . $num2 . " =";
 	appendCaptchaStore(($num1 + $num2), $captchaText);
 	return generateTextCaptcha($captchaText);
@@ -59,14 +59,14 @@ function getCaptchaMath($clear = true) {
 
 function getCaptchaAudio() {
 	ob_start();
-		passthru('espeak -v en+f' . rand(1, 5) . ' -s10 -k2 --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '"');
+		passthru('espeak -v en+f' . random_int(1, 5) . ' -s10 -k2 --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '"');
 		$soundFile = ob_get_contents();
 	ob_end_clean();
 	return 'data:audio/x-wav;base64,' . base64_encode($soundFile);
 }
 
 function getCaptchaRandom($clear = true) {
-	switch(rand(0, 1)) {
+	switch(random_int(0, 1)) {
 		case 0:
 			return getCaptchaText($clear);
 		case 1:

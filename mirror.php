@@ -38,7 +38,7 @@ function getMirror() {
 	if($GLOBALS['numMirrors'] == 0) {
 		return getBaseURL(true, $GLOBALS['SBNR_DOMAIN_WHITELIST']) . "/builds/";
 	}
-	return "https://mirror" . rand(0, $GLOBALS['numMirrors']) . "." . $_SERVER['SERVER_NAME'] . "/"; //XXX: ADD WHITELIST CHECK HERE TOO (prefix support to getBaseURL?)
+	return "https://mirror" . random_int(0, $GLOBALS['numMirrors']) . "." . $_SERVER['SERVER_NAME'] . "/"; //XXX: ADD WHITELIST CHECK HERE TOO (prefix support to getBaseURL?)
 }
 
 ?>
