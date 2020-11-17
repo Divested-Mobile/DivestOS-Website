@@ -21,6 +21,7 @@
 		<label for="txtCaptcha">Captcha</label>
 		<div class="card">
 			<?php print('<img src="' . getImageBase64(getCaptchaMath()) . '" />'); ?>
+			<?php print('<audio controls src="' . getCaptchaAudio() . '"></audio>'); ?>
 		</div>
 		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" autocomplete="off" required/>
 	</div>
