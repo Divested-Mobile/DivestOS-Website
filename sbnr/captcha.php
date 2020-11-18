@@ -57,12 +57,23 @@ function getCaptchaMath($clear = true) {
 	return generateTextCaptcha($captchaText);
 }
 
+function getRandomVoice() {
+	switch (random_int(0, 5)) {
+		case 0: return "m" . random_int(1, 8);
+		case 1: return "f" . random_int(1, 5);
+		case 2: return "robosoft" . random_int(3, 8);
+		case 3: return "whisper";
+		case 4: return "whisperf";
+		case 5: return "croak";
+	}
+}
+
 function getCaptchaAudio() {
 	ob_start();
-		passthru('espeak -v en+f' . random_int(1, 5) . ' -s10 -k2 --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '"');
+		passthru('espeak-ng -v en+' . getRandomVoice(). ' -s10 -k2 -z --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '" | lame -b 16 - -');
 		$soundFile = ob_get_contents();
 	ob_end_clean();
-	return 'data:audio/x-wav;base64,' . base64_encode($soundFile);
+	return 'data:audio/mpeg;base64,' . base64_encode($soundFile);
 }
 
 function getCaptchaRandom($clear = true) {
