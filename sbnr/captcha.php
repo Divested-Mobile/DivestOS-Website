@@ -1,4 +1,18 @@
 <?php
+//Copyright (c) 2019-2020 Divested Computing Group
+//
+//This program is free software: you can redistribute it and/or modify
+//it under the terms of the GNU Lesser General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU Lesser General Public License for more details.
+//
+//You should have received a copy of the GNU Lesser General Public License
+//along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 function generateRandomColor($image) {
 	imagecolorallocate($image, random_int(20, 255), random_int(20, 255), random_int(20, 255));
@@ -52,7 +66,10 @@ function getCaptchaMath($clear = true) {
 	if($clear) { clearCaptchaStore(); }
 	$num1 = random_int(0, 20);
 	$num2 = random_int(0, 20);
-	$captchaText = $num1 . " + " . $num2 . " =";
+	$place = random_int(0, 1);
+	if($place) { $captchaText = "= "; }
+	$captchaText .= $num1 . " + " . $num2;
+	if(!$place) { $captchaText .= " ="; }
 	appendCaptchaStore(($num1 + $num2), $captchaText);
 	return generateTextCaptcha($captchaText);
 }
