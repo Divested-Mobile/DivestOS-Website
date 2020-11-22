@@ -5,7 +5,7 @@ window.addEventListener("keydown", function(e) {//Credit: https://stackoverflow.
 	if (e.getModifierState("Control")  && e.code == "KeyX") {
 		e.preventDefault(); e.stopPropagation(); return false;
 	}
-	if (e.getModifierState("Control")  && e.code == "KeyV") {
+	if (e.getModifierState("Control")  && e.code == "KeyS") {
 		e.preventDefault(); e.stopPropagation(); return false;
 	}
 });
