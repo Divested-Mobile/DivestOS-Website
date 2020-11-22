@@ -87,7 +87,7 @@ function getRandomVoice() {
 
 function getCaptchaAudio() {
 	ob_start();
-		passthru('espeak-ng -v en+' . getRandomVoice(). ' -s10 -k2 -z --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '" | lame -b 16 - -');
+		passthru('espeak-ng -v en+' . getRandomVoice(). ' -s10 -k2 -z --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '" | lame --silent -b 16 - -');
 		$soundFile = ob_get_contents();
 	ob_end_clean();
 	return 'data:audio/mpeg;base64,' . base64_encode($soundFile);
