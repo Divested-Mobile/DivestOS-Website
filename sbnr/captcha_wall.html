@@ -5,7 +5,7 @@
 		<label for="txtCaptcha"><h1>Before you continue...</h1></label>
 		<div class="card">
 			<?php print('<img src="' . getImageBase64(getCaptchaMath()) . '" />'); ?>
-			<?php print('<audio controls src="' . getCaptchaAudio() . '"></audio>'); ?>
+			<?php print(getCaptchaAudio()); ?>
 		</div>
 		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" autocomplete="off" required autofocus/>
 	</div>

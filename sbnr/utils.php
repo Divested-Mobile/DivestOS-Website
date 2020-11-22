@@ -65,6 +65,35 @@ function checkString($input, $minLength = 0, $maxLength = 256, $numPeriods = 1, 
 	return $ok;
 }
 
+//Credit: https://stackoverflow.com/a/9251201
+$proxyHeaders = array('CLIENT_IP', 'FORWARDED', 'FORWARDED_FOR', 'FORWARDED_FOR_IP', 'HTTP_CLIENT_IP', 'HTTP_FORWARDED', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED_FOR_IP', 'HTTP_PROXY_CONNECTION', 'HTTP_VIA', 'HTTP_X_FORWARDED', 'HTTP_X_FORWARDED_FOR', 'X_FORWARDED', 'X_FORWARDED_FOR');
+function isLowQualityProxy() {
+	foreach ($proxyHeaders as $header) {
+		if (isset($_SERVER[$header])) {
+			return true;
+		}
+	}
+	return false;
+}
+
+$headlessAgents = array("headless", "crawler", "scraper", "phantom", "python-requests/", "okhttp/", "curl/", "wget/", "go-http-client/");
+function isLikelyBot() {
+	if (strlen($_SERVER["HTTP_USER_AGENT"]) < 40) {
+		return true;
+	}
+	$lowerAgent = strtolower($_SERVER["HTTP_USER_AGENT"]);
+	foreach ($headlessAgents as $agent) {
+		if (contains($lowerAgent, $agent)) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function shouldChallengeRequest() {
+	return isLikelyBot();// || isLowQualityProxy();
+}
+
 //Strip entities to prevent XSS
 //Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
 function noHTML($input, $encoding = 'UTF-8') {

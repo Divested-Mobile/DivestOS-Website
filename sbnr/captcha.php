@@ -86,11 +86,14 @@ function getRandomVoice() {
 }
 
 function getCaptchaAudio() {
-	ob_start();
-		passthru('espeak-ng -v en+' . getRandomVoice(). ' -s10 -k2 -z --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '" | lame --silent -b 16 - -');
-		$soundFile = ob_get_contents();
-	ob_end_clean();
-	return 'data:audio/mpeg;base64,' . base64_encode($soundFile);
+	if(!isLikelyBot()) {
+		ob_start();
+			passthru('espeak-ng -v en+' . getRandomVoice(). ' -s10 -k2 -z --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '" | lame --silent -b 16 - -');
+			$soundFile = ob_get_contents();
+		ob_end_clean();
+		return '<audio controls src="data:audio/mpeg;base64,' . base64_encode($soundFile) . '"></audio>';
+	} //Don't generate the "expensive" audio captcha if it might be a bot to prevent DoS
+	return "";
 }
 
 function getCaptchaRandom($clear = true) {
