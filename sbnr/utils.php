@@ -65,23 +65,12 @@ function checkString($input, $minLength = 0, $maxLength = 256, $numPeriods = 1, 
 	return $ok;
 }
 
-//Credit: https://stackoverflow.com/a/9251201
-function isLowQualityProxy() {
-	$proxyHeaders = array('CLIENT_IP', 'FORWARDED', 'FORWARDED_FOR', 'FORWARDED_FOR_IP', 'HTTP_CLIENT_IP', 'HTTP_FORWARDED', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED_FOR_IP', 'HTTP_PROXY_CONNECTION', 'HTTP_VIA', 'HTTP_X_FORWARDED', 'HTTP_X_FORWARDED_FOR', 'X_FORWARDED', 'X_FORWARDED_FOR');
-	foreach ($proxyHeaders as $header) {
-		if (isset($_SERVER[$header])) {
-			return true;
-		}
-	}
-	return false;
-}
-
 function isLikelyBot() {
 	if (strlen($_SERVER["HTTP_USER_AGENT"]) < 40) {
 		return true;
 	}
 	$lowerAgent = strtolower($_SERVER["HTTP_USER_AGENT"]);
-	$headlessAgents = array("headless", "crawler", "scraper", "phantom", "python-requests/", "okhttp/", "curl/", "wget/", "go-http-client/");
+	$headlessAgents = array("headless", "crawler", "scraper", "phantom", "python-requests/", "okhttp/", "curl/", "wget/", "go-http-client/", "powershell/");
 	if(containsArr($lowerAgent, $headlessAgents)) {
 		return true;
 	}
@@ -89,7 +78,7 @@ function isLikelyBot() {
 }
 
 function shouldChallengeRequest() {
-	return isLikelyBot();// || isLowQualityProxy();
+	return isLikelyBot();
 }
 
 //Strip entities to prevent XSS
