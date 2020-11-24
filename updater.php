@@ -30,7 +30,7 @@ $validToken = "";
 if(file_exists($tokenFile)) {
 	include $tokenFile;
 }
-if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0 && (empty($inc) || (!empty($inc) && strlen($inc) < 22)) /*&& $token === $validToken*/) {
+if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0 && (empty($inc) || (!empty($inc) && strlen($inc) < 22)) && !isLikelyBot() /*&& $token === $validToken*/) {
 	$rootdir = "builds/" . $base . "/" . $device;
 	$rootdirInc = $rootdir . "/incrementals/";
 	if(is_dir($rootdir)) {
