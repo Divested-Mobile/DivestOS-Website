@@ -34,7 +34,7 @@ function getBaseUrl($whitelisted, $whitelistedHosts) {
 	$accessingDomain = str_replace("&period;", ".", $accessingDomain);
 	$baseURL = "";
 	$port = "";
-	if(!$_SERVER['SERVER_PORT'] !== 443 && $_SERVER['SERVER_PORT'] !== 80) {
+	if($_SERVER['SERVER_PORT'] != 443 && $_SERVER['SERVER_PORT'] != 80) {
 		$port = ":" . $_SERVER['SERVER_PORT'];
 	}
 	if(isset($_SERVER['HTTPS'])) {
