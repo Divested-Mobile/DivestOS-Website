@@ -25,7 +25,7 @@ function generateErrorPageBasic($errorCode) {
 	//print("<!DOCTYPE html><html lang=\"en\"><head><title>REQUEST DENIED</title></head><body><h1>REQUEST DENIED</h1></body></html>");
 }
 
-function getContactForm($submitLabel = 'Send', $messageEnabled = false, $messagePlaceholder = '') {
+function getContactForm($submitLabel = 'Send', $messageEnabled = false, $messagePlaceholder = '', $callbackType = 'EMAIL') {
 	include "contact.html";
 }
 

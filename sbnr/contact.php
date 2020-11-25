@@ -23,9 +23,10 @@ include "captcha.php";
 include "utils.php";
 include "pre.php";
 
-if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["txtPhone"], $_POST["blackBear"])) {
+if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["blackBear"])) {
 	if(noHTML($_POST["CSRF_TOKEN"]) === $_SESSION['SBNR_CSRF_TOKEN'] && (noHTML($_POST["blackBear"]) === "roar") && empty($_POST["brownBear"])) {
 		$name = noHTML(urldecode($_POST["txtName"]));
+		$email = noHTML(urldecode($_POST["txtEmail"]));
 		$number = preg_replace("/[^0-9]/", '', noHTML(urldecode($_POST["txtPhone"])));
 		if(isset($_POST["txtMessage"])) {
 			$message = noHTML(urldecode($_POST["txtMessage"]));
@@ -33,7 +34,7 @@ if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["tx
 			$message = "DISABLED";
 		}
 		if(strlen($name) <= $SBNR_CONTACT_MAX_LENGTH_NAME
-			&& strlen($number) >= $SBNR_CONTACT_MIN_LENGTH_PHONE_NUMBER
+			&& strlen($email) <= $SBNR_CONTACT_MAX_LENGTH_EMAIL
 			&& strlen($number) <= $SBNR_CONTACT_MAX_LENGTH_PHONE_NUMBER
 			&& strlen($message) <= $SBNR_CONTACT_MAX_LENGTH_MESSAGE) {
 
@@ -52,6 +53,7 @@ if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["tx
 
 				$messageResult = "[" . $msentinel . "] MESSAGE START\n" .
 						"[" . $msentinel . "] Name: " . $name . "\n" .
+						"[" . $msentinel . "] E-Mail: " . $email . "\n" .
 						"[" . $msentinel . "] Phone Number: " . $number . "\n" .
 						$location .
 						"[" . $msentinel . "] Message: \n" . $message . "\n" .

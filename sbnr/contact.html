@@ -5,16 +5,28 @@
 		<label for="txtName">Name</label>
 		<input type="text" name="txtName" id="txtName" minlength="2" maxlength="30" placeholder="Jane Smith" required/>
 	</div>
+
+	<?php if($callbackType === 'PHONE') : ?>
 	<div class="input-group">
 		<label for="txtPhone">Phone Number</label>
 		<input type="tel" name="txtPhone" id="txtPhone" minlength="7" maxlength="12" pattern="^\+?\d{0,13}" placeholder="18005551234" required/>
 	</div>
+	<?php endif; ?>
+
+	<?php if($callbackType === 'EMAIL') : ?>
+	<div class="input-group">
+		<label for="txtEmail">E-Mail Address</label>
+		<input type="email" name="txtEmail" id="txtEmail" minlength="5" maxlength="64" placeholder="jane@example.com" required/>
+	</div>
+	<?php endif; ?>
+
 	<?php if($messageEnabled) : ?>
 	<div class="input-group vertical">
 		<label for="txtMessage">Message</label>
 		<textarea name="txtMessage" id="txtMessage" rows="4" style="resize:none" minlength="1" maxlength="500" placeholder="<?php print($messagePlaceholder); ?>" required></textarea>
 	</div>
 	<?php endif; ?>
+
 	<?php if($GLOBALS['SBNR_CONTACT_CAPTCHA']) : ?>
 	<br>
 	<div class="input-group">
@@ -26,6 +38,7 @@
 		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" autocomplete="off" required/>
 	</div>
 	<?php endif; ?>
+
 	<br>
 	<div class="input-group">
 		<input type="text" name="blackBear" id="blackBear" style="display: none;" placeholder="ROAR!" value="roar" required/>
