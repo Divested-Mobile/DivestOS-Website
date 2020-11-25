@@ -33,6 +33,10 @@ function getBaseUrl($whitelisted, $whitelistedHosts) {
 	$accessingDomain = noHTML($_SERVER['SERVER_NAME']);
 	$accessingDomain = str_replace("&period;", ".", $accessingDomain);
 	$baseURL = "";
+	$port = "";
+	if(!$_SERVER['SERVER_PORT'] !== 443 && $_SERVER['SERVER_PORT'] !== 80) {
+		$port = ":" . $_SERVER['SERVER_PORT'];
+	}
 	if(isset($_SERVER['HTTPS'])) {
 		$baseURL .= "https://";
 	} else {
@@ -41,10 +45,12 @@ function getBaseUrl($whitelisted, $whitelistedHosts) {
 	if($whitelisted) {
 		if(in_array($accessingDomain, $whitelistedHosts)) {
 			$baseURL .= $accessingDomain;
+			$baseURL .= $port;
 			return $baseURL;
 		}
 	} else {
 		$baseURL .= $accessingDomain;
+		$baseURL .= $port;
 		return $baseURL;
 	}
 	return "invalid://invalid.invalid";
