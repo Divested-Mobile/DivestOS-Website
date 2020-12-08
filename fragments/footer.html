@@ -39,5 +39,11 @@
 		<script defer type="text/javascript" src="assets/js/nodev.js" integrity="sha384-8z/StSSpQqoIc6bzh2lMbUPcwuN6WIgzATvfWHmYbf4N5zBFB3yNHf7Y6+ieRwIy"></script>
 		<?php endif; ?>
 
+                <?php if(false && $saveData === false && $pageIsHome) : ?>
+                <script src="assets/js/particles.min.js" integrity="sha384-d+UOwmNNIC7V4izkTAKSXzWhjC2GxiS9PTykO1XdOPC3nc2z65UOS7SP6QdKPA70"></script>
+                <script type="text/javascript">
+                        particlesJS.load('splash', 'assets/particlesjs-config.json', undefined);
+                </script>
+                <?php endif; ?>
 	</body>
 </html>
