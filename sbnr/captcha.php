@@ -114,6 +114,44 @@ function getCaptchaMultiple($numParts = 2) {
 	return $outputImage;
 }
 
+function getJSChallenge($haystack = 20) {
+	$strAnswer = generateRandomString(8);
+	$strAnswerHash = hash("sha512", $strAnswer);
+	$_SESSION['SBNR_CAPTCHA_ANSWER_JS'] = $strAnswer;
+	$arrPotentials = array($strAnswer);
+	for ($i = 0; $i < $haystack; $i++) {
+		array_push($arrPotentials, generateRandomString(8));
+	}
+	shuffle($arrPotentials); //XXX: this is not secure
+
+	foreach ($arrPotentials as $potential) {
+		$strPotentials .= "'" . $potential . "',";
+	}
+
+$challenge = '
+<script type="text/javascript">
+window.onload = (event) => {
+	let strAnswerHash = "' . $strAnswerHash . '";
+	let arrPotentials = [' . $strPotentials . '];
+
+	arrPotentials.every(async function(item, index, array) {
+		const hash = await sha512(item);
+		if(hash == strAnswerHash) {
+			document.getElementById("txtJSChallenge").value = item;
+			console.log("SBNR JS Challenge: Solved at " + index);
+			return false;
+		}
+		return true;
+	});
+};
+</script>';
+	return $challenge;
+}
+
+function checkJSChallengeAnswer($response) {
+	return $response === $_SESSION['SBNR_CAPTCHA_ANSWER_JS'];
+}
+
 function clearCaptchaStore() {
 	$_SESSION['SBNR_CAPTCHA_ANSWER'] = "";
 	$_SESSION['SBNR_CAPTCHA_SPEAK'] = "";
