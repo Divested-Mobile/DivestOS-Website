@@ -15,7 +15,7 @@
 //along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 function generateRandomColor($image) {
-	imagecolorallocate($image, random_int(20, 255), random_int(20, 255), random_int(20, 255));
+	imagecolorallocate($image, rand(20, 255), rand(20, 255), rand(20, 255));
 }
 
 function applyRandomImageFilter($image) {
@@ -42,14 +42,13 @@ function generateTextCaptcha($captchaText) {
 	$captcha = imagecreate(300, 100);
 	generateRandomColor($captcha); //Set random background color
 	$textColor = imagecolorallocate($captcha, 0, 0, 0); //Black text
-	$textX = random_int(15, 150);
-	imagettftext($captcha, 24, random_int(-10, 10), $textX, 50, $textColor, getRandomFile("./sbnr/captcha_fonts/"), $captchaText); //Draw the captcha text
-	for ($i = 0; $i < random_int(8, 20); $i++) { //Add lines
-		imagestring($captcha, 1, random_int(0, 300), random_int(0, 100), generateRandomString(random_int(4, 20)), $textColor);
-		imageline($captcha, random_int(0, 300), random_int(0, 100), random_int(0, 300), random_int(0, 100), $textColor);
+	imagettftext($captcha, 24, rand(-10, 10), rand(15, 150), 50, $textColor, getRandomFile("./sbnr/captcha_fonts/"), $captchaText); //Draw the captcha text
+	for ($i = 0; $i < rand(8, 20); $i++) { //Add lines
+		imagestring($captcha, 1, rand(0, 300), rand(0, 100), generateRandomString(rand(4, 20), false), $textColor);
+		imageline($captcha, rand(0, 300), rand(0, 100), rand(0, 300), rand(0, 100), $textColor);
 	}
-	for ($i = 0; $i < random_int(1, 8); $i++) { //Add letters
-		imagestring($captcha, 3, random_int(0, 300), random_int(0, 100), generateRandomString(6), $textColor);
+	for ($i = 0; $i < rand(1, 8); $i++) { //Add letters
+		imagestring($captcha, 3, rand(0, 300), rand(0, 100), generateRandomString(6, false), $textColor);
 	}
 	//applyRandomImageFilter($captcha);
 	return $captcha;
@@ -57,7 +56,7 @@ function generateTextCaptcha($captchaText) {
 
 function getCaptchaText($clear = true) {
 	if($clear) { clearCaptchaStore(); }
-	$captchaText = generateRandomString(6);
+	$captchaText = generateRandomString(6, true);
 	appendCaptchaStore($captchaText, implode(' ', str_split($captchaText)));
 	return generateTextCaptcha($captchaText);
 }
@@ -114,13 +113,13 @@ function getCaptchaMultiple($numParts = 2) {
 	return $outputImage;
 }
 
-function getJSChallenge($haystack = 20) {
-	$strAnswer = generateRandomString(8);
+function getJSChallenge($haystack = 255) {
+	$strAnswer = generateRandomString(8, true);
 	$strAnswerHash = hash("sha512", $strAnswer);
 	$_SESSION['SBNR_CAPTCHA_ANSWER_JS'] = $strAnswer;
 	$arrPotentials = array($strAnswer);
 	for ($i = 0; $i < $haystack; $i++) {
-		array_push($arrPotentials, generateRandomString(8));
+		array_push($arrPotentials, generateRandomString(8, false));
 	}
 	shuffle($arrPotentials); //XXX: this is not secure
 

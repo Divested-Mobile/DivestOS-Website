@@ -41,7 +41,7 @@ if(isset($_POST["CSRF_TOKEN"], $_POST["REFERRER"], $_POST["txtName"], $_POST["bl
 			if($SBNR_CONTACT_CAPTCHA && !checkCaptchaAnswer(noHTML($_POST["txtCaptcha"]), true)) {
 				header("Location: ../index.php?page=" . noHTML($_POST["REFERRER"]) . "&CONTACT_RESULT=Captcha%20Incorrect!#frmContact");
 			} else {
-				$msentinel = generateRandomString($SBNR_CONTACT_MESSAGE_PREFIX_LENGTH);
+				$msentinel = generateRandomString($SBNR_CONTACT_MESSAGE_PREFIX_LENGTH, false);
 
 				if ($SBNR_CONTACT_GEOIP) {
 					$geoIP = $_SERVER["MM_COUNTRY_CODE"];
