@@ -24,6 +24,7 @@ include "sbnr/pre.php";
 
 //START OF PAGE LOADER
 $page = noHTML($_GET["page"]);
+$page = str_replace("&lowbar;", "_", $page);
 if((($SBNR_CAPTCHA_WALL || in_array($page, $SBNR_CAPTCHA_WALL_PAGES) || shouldChallengeRequest()) && extension_loaded('gd')) && !($_SESSION['SBNR_CAPTCHA_WALL_PASSED'] === true)) {
 	$_SESSION['SBNR_CAPTCHA_WALL_URI'] = $_SERVER["REQUEST_URI"];
 	$SBNR_AT_CAPTCHA_WALL = true;
@@ -33,7 +34,6 @@ if((($SBNR_CAPTCHA_WALL || in_array($page, $SBNR_CAPTCHA_WALL_PAGES) || shouldCh
 		if($SBNR_GEN_ONE_PAGE) { $page = "home-1p"; }
 	}
 	if(checkString($page, 1, 32, 0, 0, 0)) { //validate string to prevent accessing out of self resources
-		$page = str_replace("&lowbar;", "_", $page);
 		$pageRaw = $page;
 		$page = "pages/" . $page . ".html";
 		if(file_exists($page)) { //check if page exists
@@ -45,6 +45,13 @@ if((($SBNR_CAPTCHA_WALL || in_array($page, $SBNR_CAPTCHA_WALL_PAGES) || shouldCh
 	} else { //invalidate request
 		$pageContents = genErrorPage(400);
 	}
+	//page caching
+	if(in_array($pageRaw, $SBNR_CACHABLE_PAGES) && !$SBNR_OBF_DISABLE_CACHE) {
+		$pageIsCached = true;
+		header("Cache-Control: max-age=43200");
+		header("Pragma: cache");
+	}
+
 }
 //END OF PAGE LOADER
 

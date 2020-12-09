@@ -14,11 +14,13 @@
 
 		<!-- Scripts -->
 		<script type="text/javascript" src="assets/js/utils.js" integrity="sha384-ta+GYYnV9oO8/pTXH4qGhU+HSbyvEXeKV61IZbgh4h0Xdyyq90ShglFOJzgIvKVG"></script>
+		<?php if(!$pageIsCached) : ?>
 		<script type="text/javascript">
 			function getCSRFToken() {
 				return "<?php print($_SESSION['SBNR_CSRF_TOKEN']); ?>";
 			}
 		</script>
+		<?php endif; ?>
 		<?php
 			if($SBNR_ANALYTICS_ENABLED) {
 				print(file_get_contents($SBNR_ANALYTICS_CUSTOM_PATH));

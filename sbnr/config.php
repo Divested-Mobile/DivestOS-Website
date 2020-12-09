@@ -6,6 +6,7 @@ $SBNR_DOMAIN_WHITELIST = array($SBNR_DOMAIN_PRIMARY, "divestoseb5nncsydt7zzf5hrf
 $SBNR_GEN_ONE_PAGE = false;
 $SBNR_GEN_DARKMODE = false;
 $SBNR_CAPTCHA_STANDALONE_ENABLED = false;
+$SBNR_CACHABLE_PAGES = array();
 
 //Footer
 $SBNR_FOOTER_LEGAL = true;
