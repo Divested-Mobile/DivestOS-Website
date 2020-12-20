@@ -6,7 +6,7 @@ $SBNR_DOMAIN_WHITELIST = array($SBNR_DOMAIN_PRIMARY, "divestoseb5nncsydt7zzf5hrf
 $SBNR_GEN_ONE_PAGE = false;
 $SBNR_GEN_DARKMODE = false;
 $SBNR_CAPTCHA_STANDALONE_ENABLED = false;
-$SBNR_CACHABLE_PAGES = array("about", "bootloader", "broken", "browsers", "build", "extras", "faq", "home", "messengers", "our_apps", "post_install", "privacy_policy", "recommended_apps", "saving_data", "screenshots", "technical_details", "terms_of_service", "troubleshooting");
+$SBNR_CACHABLE_PAGES = array("about", "bootloader", "broken", "browsers", "build", "extras", "faq", "home", "messengers", "network_connections", "our_apps", "post_install", "privacy_policy", "recommended_apps", "saving_data", "screenshots", "technical_details", "terms_of_service", "troubleshooting");
 
 //Footer
 $SBNR_FOOTER_LEGAL = true;
