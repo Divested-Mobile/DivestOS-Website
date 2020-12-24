@@ -14,10 +14,9 @@
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-	function getDownloads() {
+	function getDownloads($version) {
 		$base = noHTML($_GET["base"]);
-		$base = str_replace("&period;", ".", $base);
-		if(is_null($base) || strlen($base) == 0 || !(substr_count($base, '.') <= 1) || !(substr_count($base, '/') == 0)) {
+		if(is_null($base) || strlen($base) == 0 || !(substr_count($base, '/') == 0)) {
 			error();
 			return;
 		}
@@ -31,94 +30,119 @@
 
 		$devices = scandir($realRootdir, 0);
 		if(sizeof($devices) == 2) {
-			print("It appears there are no builds for this base yet...");
+			print("No devices available for base");
 			return;
 		}
 
-		print(getCachedDevices($base, $rootdir, $realRootdir, $devices));
+		print(getCachedDevices($base, $rootdir, $realRootdir, $devices, $version));
 	}
 
-	function getCachedDevices($base, $rootdir, $realRootdir, $devices) {
+	function getCachedDevices($base, $rootdir, $realRootdir, $devices, $version) {
 		if(extension_loaded("redis")) {
 			$result = "";
 			$redis = new Redis();
 			$redis->connect('127.0.0.1');
-			$cacheKey = "DivestOS+devices.php+base:" . $base;
+			$cacheKey = "DivestOS+devices.php+base:" . $base . "+version:" . $version;
 			if(($result = $redis->get($cacheKey)) == false) {
-				$result = getDevices($base, $rootdir, $realRootdir, $devices);
-				$redis->setEx($cacheKey, 3600, $result);
+				$result = getDevices($base, $rootdir, $realRootdir, $devices, $version);
+				$redis->setEx($cacheKey, 86400, $result); //24 hours
 			}
 			$redis->close();
 			return $result;
 		} else {
-			return getDevices($base, $rootdir, $realRootdir, $devices);
+			return getDevices($base, $rootdir, $realRootdir, $devices, $version);
 		}
 	}
 
-	function getDevices($base, $rootdir, $realRootdir, $devices) {
+	function getDevices($base, $rootdir, $realRootdir, $devices, $version) {
 		$downloads = "";
 		$lastSecRelease = 1567728000; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
 		foreach ($devices as $device) {
 			if(strlen($device) >= 2 && $device != '..') {
-				$downloads .= "<div class=\"card centero\" id=\"device-" . $device . "\">";
-				$name = $device;
-				$friendlyNamePath = $realRootdir . $device . "/friendlyName";
-				if(file_exists($friendlyNamePath)) {
-					$name = file_get_contents($friendlyNamePath) . " (" . $device . ")";
-				}
-				$downloads .= "<h3>" . $name . "<a href=\"#device-" . $device . "\">¶</a></h3>";
-				$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $device . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a> and <a href=\"https://wiki.lineageos.org/devices/" . $device . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Install Guide</a></p>";
 				$files = scandir($realRootdir . $device, 1);
-				if(sizeof($files) <= 5) {
-					$downloads .= "<h5 style=\"color: #673AB7\">Currently Unavailable</h5>";
-				} else {
+				if(sizeof($files) > 5) {
 					$zip = "";
+					//Identify an existing image matching the device and version
 					foreach ($files as $file) {
-						if($file == "status" || contains($file, "recovery.img") || contains($file, "md5sum") || contains($file, "sha512sum") || startsWith($file, ".")) {
-							continue;
-						}
-						//Output the OTA
-						if(strlen($file) > 30) {
-							$zip = $file;
-							$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button primary rom-unknown\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='var(--button-back-color)'\">Download</a>";
-							if(file_exists($realRootdir . $device . "/" .$file . ".sha512sum")) {
-								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $file . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+						if($file != "status" && $file != "friendlyName" && $file != "incrementals" && !contains($file, "md5sum") && !contains($file, "sha512sum") && strlen($file) > 30 && !startsWith($file, ".") && endsWith($file, ".zip") && !contains($file, "fastboot") && !contains($file, "recovery")) {
+							$imageSplit = explode("-", $file);
+							if(startsWith(strtolower($imageSplit[4]), $device) && ($imageSplit[1] == $version)) {
+								if(strlen($file) > 30) {
+									$zip = $file;
+									$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button primary rom-unknown\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='var(--button-back-color)'\">Download</a>";
+									if(file_exists($realRootdir . $device . "/" .$file . ".sha512sum")) {
+										$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $file . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+									}
+									$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
+									$trueName = explode(".", $imageSplit[4])[0];
+									break;
+								}
 							}
-							$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
-							break;
+							unset($imageSplit);
 						}
 					}
-					//Output the recovery.img
-					$recovery = str_replace(".zip", "-recovery.img", $zip);
-					if(strlen($recovery) > 36 && file_exists($realRootdir . $device . "/" . $recovery)) {
-						$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $recovery . "\" class=\"button teritary\">Recovery</a>";
-						if(file_exists($realRootdir . $device . "/" . $recovery . ".sha512sum")) {
-							$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $recovery . ".sha512sum\" class=\"button inverse small\">512sum</a>";
-						}
-					}
-					//Output the fastboot.zip
-					$fastboot = str_replace(".zip", "-fastboot.zip", $zip);
-					if(strlen($fastboot) > 36 && file_exists($realRootdir . $device . "/" . $fastboot)) {
-						$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $fastboot. "\" class=\"button teritary\">Fastboot</a>";
-						if(file_exists($realRootdir . $device . "/" . $fastboot . ".sha512sum")) {
-							$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $fastboot . ".sha512sum\" class=\"button inverse small\">512sum</a>";
-						}
-					}
-					$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
-					list($color, $statusMessage) = getStatus(file_get_contents($realRootdir . $device . "/status"), $outdated);
-					$downloads .= "<h5 style=\"color: #" . $color . ";\">" . $statusMessage . "</h5>";
-					if($color === "4CAF50") {
-						$downloadButtons = str_replace("rom-unknown", "rom-working", $downloadButtons);
-					}
-					$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
-					$downloads .= $downloadButtons;
 
+					//We have an image, get the other goodies
+					if(strlen($zip) > 30) {
+						//Output the recovery.img if it exists
+						$recovery = str_replace(".zip", "-recovery.img", $zip);
+						if(strlen($recovery) > 36 && file_exists($realRootdir . $device . "/" . $recovery)) {
+							$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $recovery . "\" class=\"button teritary\">Recovery</a>";
+							if(file_exists($realRootdir . $device . "/" . $recovery . ".sha512sum")) {
+								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $recovery . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+							}
+						}
+
+						//Output the fastboot.zip if it exists
+						$fastboot = str_replace(".zip", "-fastboot.zip", $zip);
+						if(strlen($fastboot) > 36 && file_exists($realRootdir . $device . "/" . $fastboot)) {
+							$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $fastboot. "\" class=\"button teritary\">Fastboot</a>";
+							if(file_exists($realRootdir . $device . "/" . $fastboot . ".sha512sum")) {
+								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $fastboot . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+							}
+						}
+
+						//Create the status message
+						$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
+
+						$statusFileGeneric = $realRootdir . $device . "/status";
+						$statusFileVersioned = $statusFileGeneric . "-" . $version;
+						if(file_exists($statusFileVersioned)) {
+							$statusFile = $statusFileVersioned;
+						} else if(file_exists($statusFileGeneric)) {
+							$statusFile = $statusFileGeneric;
+						}
+						unset($statusFileGeneric); unset($statusFileVersioned);
+
+						list($color, $statusMessage) = getStatus(file_get_contents($statusFile), $outdated);
+						unset($statusFile);
+						$status = "<h5 style=\"color: #" . $color . ";\">" . $statusMessage . "</h5>";
+						if($color === "4CAF50") {
+							$downloadButtons = str_replace("rom-unknown", "rom-working", $downloadButtons);
+						}
+						$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
+						unset($color);
+
+						//Output the card
+						$downloads .= "<div class=\"card centero\" id=\"device-" . $device . "\">";
+						$name = $trueName;
+						$friendlyNamePath = $realRootdir . $device . "/friendlyName";
+						if(file_exists($friendlyNamePath)) {
+							$name = file_get_contents($friendlyNamePath) . " (" . $trueName . ")";
+						}
+						$downloads .= "<h3>" . $name . "<a href=\"#device-" . $device . "\">¶</a></h3>";
+						$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $trueName . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a> and <a href=\"https://wiki.lineageos.org/devices/" . $trueName . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Install Guide</a></p>";
+						$downloads .= $status;
+						$downloads .= $downloadButtons;
+						$downloads .= "</div>";
+					}
+					unset($zip); unset($recovery); unset($fastboot); unset($outdated); unset($latestFileTime); unset($downloadButtons);
 				}
-				$downloads .= "</div>";
 			}
-			unset($downloadButtons); unset($latestFileTime); unset($outdated);
 		}
+		unset($version);
+		unset($curTime);
 		return $downloads;
 	}
 
@@ -153,7 +177,7 @@
 	}
 
 	function error() {
-		print("Unknown base!");
+		print("Invalid base!");
 		http_response_code(400);
 	}
 
@@ -200,11 +224,34 @@ sha512sum -c divested*sha512sum;
 						<label for="radPriceTen">$10</label>
 						<p id="lblThanks" hidden>Thank you for your contribution!</p>
 					</div>
+					<?php if(noHTML($_GET["base"]) === "LineageOS") : ?>
 					<div class="section" id="devices">
+						<h2 class="centero">17.1 / 10.0 / Q</h2>
 						<div class="row" style="text-align: center;">
-							<?php getDownloads(); ?>
+							<?php getDownloads("17.1"); ?>
 						</div>
 					</div>
+					<div class="section" id="devices">
+						<h2 class="centero">16.0 / 9.0 / Pie</h2>
+						<div class="row" style="text-align: center;">
+							<?php getDownloads("16.0"); ?>
+						</div>
+					</div>
+					<div class="section" id="devices">
+						<h2 class="centero">15.1 / 8.0 / Oreo</h2>
+						<div class="row" style="text-align: center;">
+							<?php getDownloads("15.1"); ?>
+						</div>
+					</div>
+					<div class="section" id="devices">
+						<h2 class="centero">14.1 / 7.1 / Nougat</h2>
+						<div class="row" style="text-align: center;">
+							<?php getDownloads("14.1"); ?>
+						</div>
+					</div>
+					<?php else : ?>
+						<h2>Invalid base!</h2>
+					<?php endif; ?>
 				</div>
 
 				<!--<script defer type="text/javascript" src="/assets/js/purchase.js" integrity="sha384-U4dJieuHmKxvDmCHpoCeehDe6Xrj9OjnvV34d2UZCGQiCVWmA9vZeIJJjOftpSis"></script>-->
