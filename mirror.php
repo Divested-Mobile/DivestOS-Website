@@ -29,6 +29,7 @@ $file = str_replace("&period;", ".", $file);
 $file = str_replace("&sol;", "/", $file);
 $file = str_replace("&lowbar;", "_", $file);
 if(checkString($base, 2, 24, 1, 0, 0) && checkString($file, 3, 128, 2, 2, 0)) {
+	header('Content-Disposition: attachment; filename="' . explode("/", $file)[1] . '"');
 	header('Location: ' . getMirror() . $base . "/" . $file);
 } else {
 	print("Invalid request");
