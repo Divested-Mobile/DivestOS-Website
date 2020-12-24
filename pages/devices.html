@@ -82,6 +82,7 @@
 							unset($imageSplit);
 						}
 					}
+					unset($file);
 
 					//We have an image, get the other goodies
 					if(strlen($zip) > 30) {
@@ -93,6 +94,7 @@
 								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $recovery . ".sha512sum\" class=\"button inverse small\">512sum</a>";
 							}
 						}
+						unset($recovery);
 
 						//Output the fastboot.zip if it exists
 						$fastboot = str_replace(".zip", "-fastboot.zip", $zip);
@@ -102,10 +104,10 @@
 								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $fastboot . ".sha512sum\" class=\"button inverse small\">512sum</a>";
 							}
 						}
+						unset($fastboot);
 
 						//Create the status message
 						$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
-
 						$statusFileGeneric = $realRootdir . $device . "/status";
 						$statusFileVersioned = $statusFileGeneric . "-" . $version;
 						if(file_exists($statusFileVersioned)) {
@@ -114,9 +116,9 @@
 							$statusFile = $statusFileGeneric;
 						}
 						unset($statusFileGeneric); unset($statusFileVersioned);
-
 						list($color, $statusMessage) = getStatus(file_get_contents($statusFile), $outdated);
 						unset($statusFile);
+						unset($outdated);
 						$status = "<h5 style=\"color: #" . $color . ";\">" . $statusMessage . "</h5>";
 						if($color === "4CAF50") {
 							$downloadButtons = str_replace("rom-unknown", "rom-working", $downloadButtons);
@@ -132,17 +134,19 @@
 							$name = file_get_contents($friendlyNamePath) . " (" . $trueName . ")";
 						}
 						$downloads .= "<h3>" . $name . "<a href=\"#device-" . $device . "\">¶</a></h3>";
+						unset($name);
 						$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $trueName . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a> and <a href=\"https://wiki.lineageos.org/devices/" . $trueName . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Install Guide</a></p>";
 						$downloads .= $status;
+						unset($status);
 						$downloads .= $downloadButtons;
 						$downloads .= "</div>";
 					}
-					unset($zip); unset($recovery); unset($fastboot); unset($outdated); unset($latestFileTime); unset($downloadButtons);
+					unset($zip); unset($downloadButtons); unset($latestFileTime); unset($trueName);
 				}
+				unset($files);
 			}
+			unset($device);
 		}
-		unset($version);
-		unset($curTime);
 		return $downloads;
 	}
 
