@@ -72,7 +72,7 @@
 									$zip = $file;
 									$downloadButtons = "<a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" download=\"" . $file . "\" value=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $file . "\" class=\"button primary rom-unknown\" onMouseOver=\"this.style.backgroundColor='#COLOUR'\" onMouseOut=\"this.style.backgroundColor='var(--button-back-color)'\">Download</a>";
 									if(file_exists($realRootdir . $device . "/" .$file . ".sha512sum")) {
-										$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $file . ".sha512sum\" download=\"" . $file . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+										$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $file . ".sha512sum\" download class=\"button inverse small\">512sum</a>";
 									}
 									$latestFileTime = filemtime($realRootdir . $device . "/" .$file);
 									$trueName = explode(".", $imageSplit[4])[0];
@@ -91,7 +91,7 @@
 						if(strlen($recovery) > 36 && file_exists($realRootdir . $device . "/" . $recovery)) {
 							$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $recovery . "\" download=\"" . $recovery . "\" class=\"button teritary\">Recovery</a>";
 							if(file_exists($realRootdir . $device . "/" . $recovery . ".sha512sum")) {
-								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $recovery . ".sha512sum\" download=\"" . $recovery . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $recovery . ".sha512sum\" download class=\"button inverse small\">512sum</a>";
 							}
 						}
 						unset($recovery);
@@ -101,7 +101,7 @@
 						if(strlen($fastboot) > 36 && file_exists($realRootdir . $device . "/" . $fastboot)) {
 							$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $fastboot. "\" download=\"" . $fastboot . "\" class=\"button teritary\">Fastboot</a>";
 							if(file_exists($realRootdir . $device . "/" . $fastboot . ".sha512sum")) {
-								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $fastboot . ".sha512sum\" download=\"" . $fastboot . ".sha512sum\" class=\"button inverse small\">512sum</a>";
+								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $fastboot . ".sha512sum\" download class=\"button inverse small\">512sum</a>";
 							}
 						}
 						unset($fastboot);
@@ -216,7 +216,7 @@ gpg --import divestos_signing.key;
 gpg --verify divested*sha512sum;
 sha512sum -c divested*sha512sum;
 </code></pre>
-<a href="/divestos_signing.key" download="divestos_signing.key" class="button primary" target="_blank">GPG Public Key</a><br><a href="https://gitlab.com/divested-mobile/divestos-website/-/raw/master/divestos_signing.key" class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 1</a><a href="https://raw.githubusercontent.com/Divested-Mobile/divestos-website/master/divestos_signing.key" class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 2</a><a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/12" class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 3</a></p>
+<a href="/divestos_signing.key" download class="button primary" target="_blank">GPG Public Key</a><br><a href="https://gitlab.com/divested-mobile/divestos-website/-/raw/master/divestos_signing.key" download class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 1</a><a href="https://raw.githubusercontent.com/Divested-Mobile/divestos-website/master/divestos_signing.key" download class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 2</a><a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/12" class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 3</a></p>
 							</div>
 						</div>
 					</div>
