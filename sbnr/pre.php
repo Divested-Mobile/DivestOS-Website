@@ -26,6 +26,9 @@ $saveData = false;
 if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) === "on") {
 	$saveData = true;
 }
+if(endsWith(noHTML($_SERVER['SERVER_NAME']), "&period;onion")) {
+	$saveData = true;
+}
 
 if($SNBR_OBF_MINIFY) {
 	ob_start("minifyWhitespace");

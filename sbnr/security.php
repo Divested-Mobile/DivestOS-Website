@@ -48,7 +48,7 @@ if($SBNR_SEC_CLIENT_HARDENING) {
 	header('X-Frame-Options: "DENY"'); //Prevent embedding pages
 	header('X-Permitted-Cross-Domain-Policies: "none"'); //Prevent plugins from ever loading data from other domains
 	header('X-Xss-Protection: "1; mode=block"'); //Basic XSS protection
-	//header('Content-Security-Policy: "default-src \'none\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' checkout.stripe.com; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: *.stripe.com; font-src \'self\'; connect-src \'self\' checkout.stripe.com; media-src \'self\'; object-src \'none\'; child-src \'none\'; frame-src \'self\' checkout.stripe.com; worker-src \'none\'; frame-ancestors \'none\'; disown-opener; sandbox allow-forms allow-modals allow-same-origin allow-popups allow-scripts; reflected-xss block; manifest-src \'self\';"');
+	//header('Content-Security-Policy: "default-src \'none\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' checkout.stripe.com; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: *.stripe.com; font-src \'self\'; connect-src \'self\' checkout.stripe.com; media-src \'self\'; object-src \'none\'; child-src \'none\'; frame-src \'self\' checkout.stripe.com; worker-src \'none\'; frame-ancestors \'none\'; disown-opener; sandbox allow-forms allow-modals allow-same-origin allow-popups allow-scripts allow-downloads; reflected-xss block; manifest-src \'self\';"');
 }
 if($SBNR_SEC_HTTPS_ONLY) {
 	ini_set("session.cookie_secure", "1");
