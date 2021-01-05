@@ -2,6 +2,7 @@
 					<h2>Browser Comparison Table</h2>
 					<p>All of the available browsers have each of their own faults as documented in the table below.</p>
 					<p>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.</p>
+					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.</p>
 					<div class="section" id="full">
 						<h3>Full Fledged Browsers<a href="#full">¶</a></h3>
 						<table class="striped" style="max-height: 100%;">
@@ -31,17 +32,6 @@
 									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Mull (Fennec)</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#FFC107;">Eh</td>
-									<td data-label="Insecure?" style="color:#f44336;">Yes (known vulns)</td>
-									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Unstable?" style="color:#FFC107;">Sometimes</td>
-									<td data-label="Updated?" style="color:#f44336;">ESR68</td>
-								</tr>
-								<tr>
 									<td data-label="Name">Bromite</td>
 									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
 									<td data-label="Hardened?" style="color:#4CAF50;">Yes</td>
@@ -64,17 +54,6 @@
 									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Fennec F-Droid (Fennec)</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#673AB7;">No</td>
-									<td data-label="Insecure?" style="color:#f44336;">Yes (known vulns)</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#f44336;">ESR68</td>
-								</tr>
-								<tr>
 									<td data-label="Name">Tor Browser (Fenix)</td>
 									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
 									<td data-label="Hardened?" style="color:#673AB7;">No</td>
@@ -84,17 +63,6 @@
 									<td data-label="Private?" style="color:#4CAF50;">Sure</td>
 									<td data-label="Unstable?" style="color:#FFC107;">Sometimes</td>
 									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
-								</tr>
-								<tr>
-									<td data-label="Name">Tor Browser (Fennec)</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#673AB7;">No</td>
-									<td data-label="Insecure?" style="color:#f44336;">Yes (known vulns)</td>
-									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Sure</td>
-									<td data-label="Unstable?" style="color:#FFC107;">Sometimes</td>
-									<td data-label="Updated?" style="color:#f44336;">ESR68</td>
 								</tr>
 								<tr>
 									<td data-label="Name">Firefox (Fenix)</td>
@@ -108,17 +76,6 @@
 									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Firefox (Fennec)</td>
-									<td data-label="FOSS?" style="color:#FFC107;">Almost</td>
-									<td data-label="Hardened?" style="color:#673AB7;">No</td>
-									<td data-label="Insecure?" style="color:#f44336;">Yes (known vulns)</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#f44336;">ESR68</td>
-								</tr>
-								<tr>
 									<td data-label="Name">Chromium (getChromium)</td>
 									<td data-label="FOSS?" style="color:#FFC107;">Almost</td>
 									<td data-label="Hardened?" style="color:#4CAF50;">Yes</td>
@@ -128,17 +85,6 @@
 									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
 									<td data-label="Unstable?" style="color:#FFC107;">Sometimes</td>
 									<td data-label="Updated?" style="color:#4CAF50;">Trunk</td>
-								</tr>
-								<tr>
-									<td data-label="Name">Orfox</td>
-									<td data-label="FOSS?" style="color:#FFC107;">Almost</td>
-									<td data-label="Hardened?" style="color:#673AB7;">No</td>
-									<td data-label="Insecure?" style="color:#f44336;">Yes (known vulns)</td>
-									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Sure</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#f44336;">Behind ESR60</td>
 								</tr>
 							</tbody>
 						</table>
@@ -167,7 +113,7 @@
 									<td data-label="Hardened?" style="color:#4CAF50;">Yes*</td>
 									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
 									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#f44336;">Yes</td>
+									<td data-label="Limited?" style="color:#4CAF50;">No</td>
 									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
 									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
 									<td data-label="Updated?" style="color:#4CAF50;">Yes*</td>
