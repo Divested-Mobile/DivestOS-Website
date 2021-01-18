@@ -7,19 +7,19 @@
 						<ul>
 							<li>November and December ASB builds have been released.</li>
 							<li>Mull is now on its 3rd Fenix based release, with the latest 84.1.0. Huge thanks to @relan for their build scripts. <a href="https://gitlab.com/divested-mobile/mull-fenix" target="_blank" rel="nofollow noopener noreferrer">repo link</a></li>
-							<li>Hypatia has been updated to show database release/update dates in addition to a multithreading fix.</li>
+							<li>Hypatia has been updated to show database release/update dates in addition to a multi-threading fix.</li>
 							<li>Etar is now used for the calendar app across all versions.</li>
 							<li>A handful of more proprietary blob variants have been removed.</li>
 							<li>Vendor build fingerprints are now all replaced.</li>
 							<li>Lots of miscellaneous fixes and cleanup.</li>
 							<li>All 15.1 builds and higher are now fully dexpreopted, this allows for reduced memory usage and also decreased boot times on FDE devices.</li>
-							<li>TCP SACK is no longer disabled. SACK PANIC has now been patched on nearly all kernels supported. It has vaulable bandwidth saving benefits.</li>
+							<li>TCP SACK is no longer disabled. SACK PANIC has now been patched on nearly all kernels supported. It has valuable bandwidth saving benefits.</li>
 							<li>There have been many new CVE patches, especially for 3.18 kernels.</li>
 						</ul>
 						<h4>Roster Updates</h4>
 						<ul>
 							<li>clark has been updated from 14.1 to 17.1 (potential modem issues). In-place upgrade to work, but your mileage may vary.</li>
-							<li>flo has been updated from 15.1 to 17.1, but requires repartitioning.</li>
+							<li>flo has been updated from 15.1 to 17.1, but requires re-partitioning.</li>
 							<li>cheeseburger/dumpling are compiling for 17.1, but not booting.</li>
 							<li>coral and flame 17.1 builds are available (untested).</li>
 							<li>rs988 and h990 17.1 builds are available (untested).</li>
@@ -56,7 +56,7 @@
 							<li>Most 3.18 devices should expect 10-40 more kernel CVE patches. <a href="https://gitlab.com/cip-project/cip-kernel/cip-kernel-sec/-/commit/5a07867289e1236fd35c894860abca79b9ce402f" target="_blank" rel="nofollow noopener noreferrer">git commit</a></li>
 							<li>A handful of other kernel CVE patches are available for all other devices as per usual.</li>
 							<li>Lots of work has been done on making the CVE patcher easier for other projects to use. <a href="https://gitlab.com/divested-mobile/cve_checker" target="_blank" rel="nofollow noopener noreferrer">repo link</a></li>
-							<li>Mull is now severly out of date. There hasn't been the time to rebase it. It is strongly suggested to use Bromite or the new Fennec F-Droid until then. Bromite repo is already included in DivestOS F-Droid.</li>
+							<li>Mull is now severely out of date. There hasn't been the time to rebase it. It is strongly suggested to use Bromite or the new Fennec F-Droid until then. Bromite repo is already included in DivestOS F-Droid.</li>
 							<li>victara build failed last month due to recovery image being too large, however it is now once again available.</li>
 							<li>h850 and zenfone3 builds have been pulled as they were last updated in 2018 and 2019 respectively.</li>
 							<li>[Upstream] Updated to October security bulletin.</li>
@@ -84,7 +84,7 @@
 							<li>2020/12/21: The umask for the build scripts was adjusted, fixing many small issues.</li>
 							<li>2020/12/11: All non-LTS Linux CVE patches were dropped from the repository.</li>
 							<li>2020/11/06: Added many missing Linux CVE patches missed by the CIP scripts from Debian retired tracker.</li>
-							<li>2020/10/22: Mull was rebased onto Fenix, built on top of much effort from Relan.</li>
+							<li>2020/10/22: Mull was rebased onto Fenix, based on top of much effort from Relan.</li>
 							<li>2020/10/15: A critical issue was identified and resolved that affected many devices. It caused slow performance and boot issues. Originally introduced 2018/10/01.</li>
 							<li>2020/10/11: Initial inclusion of Etar for Calendar.</li>
 							<li>2020/10/06: Added many Linux 3.4 CVE patches thanks to @haggertk.</li>
@@ -92,10 +92,10 @@
 							<li>2020/08/07: Initial import of Linux CVE patches from the Civil Infrastructure Platform tracker.</li>
 							<li>2020/06/17: The start of providing GPG signatures for all builds.</li>
 							<li>2020/06/14: The CodeAurora CVE patch list was created.</li>
-							<li>2020/06/12: DivestOS is publically released, initially on the F-Droid Forum.</li>
+							<li>2020/06/12: DivestOS is publicly released, initially on the F-Droid Forum.</li>
 							<li>2020/06/07: The AOSP CVE patch list was created.</li>
 							<li>2020/04/14: Initial support for building on top of LineageOS 17.1.</li>
-							<li>2019/10/18: Automated kernel hardening via command line arguments was introducted.</li>
+							<li>2019/10/18: Automated kernel hardening via command line arguments was introduced.</li>
 							<li>2019/10/04: Initial import of Linux CVE patches from the Google Project Zero tracker.</li>
 							<li>2019/09/25: Most signing keys were switched to RSA-4096.</li>
 							<li>2019/09/13: Per-device signing keys were introduced.</li>
@@ -127,28 +127,28 @@
 							<li>2018/04/28: Initial patches to support DNS66 loading defaults from system.</li>
 							<li>2018/04/01: The proprietary LOSCoins malware was removed before ever being included in DivestOS.</li>
 							<li>2018/03/13: The PrebuiltApps repo was created for including official/F-Droid builds of apps.</li>
-							<li>2018/03/08: F-Droid approved the inclusion of F-Droid into the system.</li>
-							<li>2018/03/04: LineageOS approved the rebranding was sufficient.</li>
+							<li>2018/03/08: F-Droid signed-off on the inclusion of F-Droid into the system.</li>
+							<li>2018/03/04: LineageOS signed-off on the re-branding being sufficient.</li>
 							<li>2018/02/13: Initial support for building on top of LineageOS 15.1</li>
 							<li>2018/01/04: Very basic Spectre mitigations were automatically applied to 3.10 kernels.</li>
 							<li>2018/01/03: Very basic Spectre mitigations were applied to Mull.</li>
-							<li>2017/12/25: Mull came into existance.</li>
-							<li>2017/12/13: Veritas, now called Hypatia, was created as the first FOSS realtime malware scanner for Android systems.</li>
+							<li>2017/12/25: Mull came into existence.</li>
+							<li>2017/12/13: Veritas, now called Hypatia, was created as the first FOSS real-time malware scanner for Android systems.</li>
 							<li>2017/12/09: Automatic kernel hardening via defconfig overrides was introduced.</li>
 							<li>2017/11/21: Initial work on building Firefox for Android without blobs began.</li>
 							<li>2017/11/11: A script for deblobbing separate /firmware partitions was created.</li>
 							<li>2017/11/10: Initial automatic applying of Linux incrementals.</li>
 							<li>2017/11/07: Creation of our initial original Linux CVE patch list.</li>
 							<li>2017/11/02: Initial versioning of CVE patches to reduce breakage.</li>
-							<li>2017/10/30: Utilzing the new CVE patcher, all devices were mitigated against KRACK.</li>
+							<li>2017/10/30: Utilizing the new CVE patcher, all devices were mitigated against KRACK.</li>
 							<li>2017/10/29: Introduction of automatic kernel CVE patching for all devices.</li>
 							<li>2017/10/29: The CVE downloader/patcher project was created.</li>
-							<li>2017/10/14: The repositories were relicensed GPLv3.</li>
+							<li>2017/10/14: The repositories were re-licensed to GPLv3.</li>
 							<li>2017/09/10: Extirpater saw its initial port to Android.</li>
 							<li>2017/08/01: A commit references a patch made four years earlier? Not too sure about this one.</li>
 							<li>2017/06/15: Silence was included in the images.</li>
 							<li>2017/06/04: Start of work on automated kernel CVE patching.</li>
-							<li>2017/06/04: The project was rebranded into DivestOS.</li>
+							<li>2017/06/04: The project was re-branded into DivestOS.</li>
 							<li>2017/05/30: OTA updates became supported.</li>
 							<li>2017/02/25: The dedicated website was created.</li>
 							<li>2017/01/25: The first revision of our automated deblobber was created.</li>
@@ -161,9 +161,9 @@
 							<li>2016/03/03: Earliest recorded date of our UnifiedNLP backend, MergedWiFiNLP, utilizing simple CSV files.</li>
 							<li>2016/01/01: Public images were discontinued.</li>
 							<li>2015/11/20: First builds signed using proper release-keys.</li>
-							<li>2015/11/19: A PaX enabled kernel is sucessfully booted on bacon, with help from Daniel Micay.</li>
+							<li>2015/11/19: A PaX enabled kernel is successfully booted on bacon, based on work and with help from Daniel Micay.</li>
 							<li>2015/04/01: Our first CyanogenMod 12.1 based images made available.</li>
-							<li>2014/12/31: The earliest recorded date of publically offering custom images. They were based off of CyanogenMod 12 and available for five devices.</li>
+							<li>2014/12/31: The earliest recorded date of publicly offering custom images. They were based off of CyanogenMod 12 and available for five devices.</li>
 						</ul>
 					</div>
 				</div>
