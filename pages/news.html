@@ -10,7 +10,7 @@
 							<li>IMS/VoLTE was made working on supported devices. <a href="https://forum.f-droid.org/uploads/default/original/2X/5/53ee160037c0d5683a65629320d04f41c19f31bb.jpeg" target="_blank" rel="nofollow noopener noreferrer">image</a></li>
 							<li>CNE was removed after being briefly included in the Dec/Jan builds. This removal breaks Wi-Fi calling, but is likely worth the security benefits.</li>
 							<li>The deblobber received tweaks to better handle more property edits. <a href="https://gitlab.com/divested-mobile/divestos-build/-/commit/b99e1865fe9a108c024f335c7ac36d7db9a355d9" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
-							<li>Part two of the Debian/retired Linux CVE import was completed. Linux 3.0, 3.4, 3.10 devices benefit the most from this, averaging between 10 and 90 added CVE patches. <a href="https://gitlab.com/divested-mobile/kernel_patches/-/commit/40fef12125acdad0b4512580335642725353839d" target="_blank" rel="nofollow noopener noreferrer">import</a> and <a href="https://gitlab.com/divested-mobile/divestos-build/-/commit/08142c2c9d8acd1d7e8fc8ef7955379aa15963b7" target="_blank" rel="nofollow noopener noreferrer">update</a></li>
+							<li>Part two of the Debian/retired Linux CVE import was completed. Linux 3.0, 3.4, and 3.10 devices benefit the most from this, averaging between 10 and 90 added CVE patches. <a href="https://gitlab.com/divested-mobile/kernel_patches/-/commit/40fef12125acdad0b4512580335642725353839d" target="_blank" rel="nofollow noopener noreferrer">import</a> and <a href="https://gitlab.com/divested-mobile/divestos-build/-/commit/08142c2c9d8acd1d7e8fc8ef7955379aa15963b7" target="_blank" rel="nofollow noopener noreferrer">update</a></li>
 							<li>The exec-based spawning feature from GrapheneOS was disabled. We likely failed to port it over correctly and the result is many subtle breakages.</li>
 							<li>All versions now include the LineageOS 17.1 APN list for better cell carrier compatibility. <a href="https://gitlab.com/divested-mobile/divestos-build/-/commit/e62afb602b6566f643f0fe74a9d33d67ec4c058c" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
 							<li>All versions were mostly patched against the old CVE-2019-2306. <a href="https://gitlab.com/divested-mobile/divestos-build/-/commit/42b94605f871136d7c85f47ec7569fd37e8e4cfa" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
@@ -20,9 +20,9 @@
 						</ul>
 						<h4>Device Updates</h4>
 						<ul>
-							<li>mata has long-standing audio issues, Lineage team has been trying to fix. Right now earpiece speaker works on calls, but loud speaker cannot have its volume adjusted.</li>
+							<li>mata has long-standing audio issues, Lineage team has been trying to fix them. Currently the earpiece speaker works on calls, but the loud speaker cannot have its volume adjusted.</li>
 							<li>The microphone issue on shamu was resolved, was caused by our removal of some voice recognition blobs (which are required for adspd bring-up). <a href="https://gitlab.com/divested-mobile/divestos-build/-/commit/3b8750cdff7722fae94b4b5cd11bb87c20ef13a9" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
-							<li>bullhead now installs (and works) after removing the firmware images to workaround the missing proprietary additions needed for such flashing.</li>
+							<li>bullhead now installs (and works) after removing the firmware images to workaround the missing proprietary additions needed for their flashing. <a href="https://github.com/anestisb/android-prepare-vendor/issues/46#issuecomment-260109464" target="_blank" rel="nofollow noopener noreferrer">related</a></li>
 						</ul>
 						<h4>Roster Updates</h4>
 						<ul>
