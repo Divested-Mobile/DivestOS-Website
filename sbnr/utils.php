@@ -76,7 +76,7 @@ function isLikelyBot() {
 		return true;
 	}
 	$lowerAgent = strtolower($_SERVER["HTTP_USER_AGENT"]);
-	$headlessAgents = array("headless", "crawler", "spider", "scraper", "phantom", "selenium", "webdriver", "python-requests/", "python-urllib/", "okhttp/", "curl/", "wget/", "go-http-client/", "powershell/", "libwww-perl/", "httpunit", "httrack", "apache-httpclient/", "php-curl-class/", "analytics" /*, "/bot" */);
+	$headlessAgents = array("headless", "crawler", "spider", "scraper", "phantom", "selenium", "webdriver", "python-requests/", "python-urllib/", "okhttp/", "curl/", "wget/", "go-http-client/", "powershell/", "libwww-perl/", "httpunit", "httrack", "apache-httpclient/", "php-curl-class/", "aiohttp/", "analytics" /*, "/bot" */);
 	if(containsArr($lowerAgent, $headlessAgents)) {
 		return true;
 	}
@@ -104,19 +104,19 @@ function containsArr($haystack, $needles) {
 	}
 }
 
-//Credit: http://stackoverflow.com/a/10473026
+//Credit: https://stackoverflow.com/a/10473026
 function startsWith($haystack, $needle) {
     // search backwards starting from haystack length characters from the end
     return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
 }
 
-//Credit: http://stackoverflow.com/a/10473026
+//Credit: https://stackoverflow.com/a/10473026
 function endsWith($haystack, $needle) {
     // search forward starting from end minus needle length characters
     return $needle === "" || strpos($haystack, $needle, strlen($haystack) - strlen($needle)) !== FALSE;
 }
 
-//Credit: http://stackoverflow.com/a/4356295
+//Credit: https://stackoverflow.com/a/4356295
 function generateRandomString($length = 8, $secure = true, $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') {
 	$charactersLength = strlen($characters);
 	$randomString = '';
