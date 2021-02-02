@@ -68,7 +68,7 @@ gocryptfs -init .Signing_Keys;
 gocryptfs .Signing_Keys/ Signing_Keys/;
 cd Build/LineageOS-17.1;
 cat ../../Manifests/Manifest_LAOS-17.1.xml > .repo/local_manifests/local_manifest.xml;
-repo init -u git://github.com/LineageOS/android.git -b lineage-17.1;
+repo init -u https://github.com/LineageOS/android.git -b lineage-17.1;
 repo sync; #This part will take a while
 
 #Some systems have python3 set as default, the build scripts require python2
