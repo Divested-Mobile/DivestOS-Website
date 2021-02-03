@@ -84,15 +84,25 @@ function getRandomVoice() {
 	}
 }
 
-function getCaptchaAudio() {
-	if(!isLikelyBot()) {
+function getCaptchaAudioContent() {
+	if(strlen($_SESSION['SBNR_CAPTCHA_SPEAK']) > 0 && !isLikelyBot()) {
 		ob_start();
 			passthru('espeak-ng -v en+' . getRandomVoice(). ' -s10 -k2 -z --stdout "' . escapeshellarg($_SESSION['SBNR_CAPTCHA_SPEAK']) . '" | lame --silent -b 16 - -');
 			$soundFile = ob_get_contents();
 		ob_end_clean();
-		return '<audio controls src="data:audio/mpeg;base64,' . base64_encode($soundFile) . '"></audio>';
+		header('Content-Type: audio/mpeg');
+		print($soundFile);
+	} else {
+		http_response_code(400);
 	} //Don't generate the "expensive" audio captcha if it might be a bot to prevent DoS
-	return "";
+}
+
+function getCaptchaAudio() {
+	if(!isLikelyBot()) {
+		return '<audio controls src="sbnr/captcha_audio.php" preload="none"></audio>';
+	} else {
+		return ""; //Prevent including the audio element if it is useless
+	}
 }
 
 function getCaptchaRandom($clear = true) {

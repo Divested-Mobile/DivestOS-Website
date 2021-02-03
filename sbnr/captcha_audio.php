@@ -1,5 +1,5 @@
 <?php
-//Copyright (c) 2019-2020 Divested Computing Group
+//Copyright (c) 2021 Divested Computing Group
 //
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU Lesser General Public License as published by
@@ -14,24 +14,15 @@
 //You should have received a copy of the GNU Lesser General Public License
 //along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-session_start();
+$handler = true;
+$binaryOutput = true;
+include "config.php";
+include "security.php";
+include "captcha.php";
+include "utils.php";
+include "pre.php";
 
-//Generate a CSRF token
-if(($handler === false && $SBNR_SEC_CSRF_PER_REQUEST) || !isset($_SESSION['SBNR_CSRF_TOKEN'])) {
-	$_SESSION['SBNR_CSRF_TOKEN'] = bin2hex(random_bytes(32));
-}
-
-//Save-Data Header Support
-$saveData = false;
-if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) === "on") {
-	$saveData = true;
-}
-if(endsWith(noHTML($_SERVER['SERVER_NAME']), "&period;onion")) {
-	$saveData = true;
-}
-
-if($SNBR_OBF_MINIFY && $binaryOutput != true) {
-	ob_start("minifyWhitespace");
-}
+getCaptchaAudioContent();
+$_SESSION['SBNR_CAPTCHA_SPEAK'] = ""; //Unset to prevent repeat generation
 
 ?>
