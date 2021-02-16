@@ -1,5 +1,5 @@
 <?php
-//Copyright (c) 2017-2020 Divested Computing Group
+//Copyright (c) 2017-2021 Divested Computing Group
 //
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -13,6 +13,24 @@
 //
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+	function getRedis() {
+		if(isset($GLOBALS['redisSingleton'])) {
+			return $GLOBALS['redisSingleton'];
+		}
+		if(extension_loaded("redis")) {
+			$GLOBALS['redisSingleton'] = new Redis();
+			$GLOBALS['redisSingleton']->connect('127.0.0.1');
+			return $GLOBALS['redisSingleton'];
+		}
+	}
+
+	function closeRedis() {
+		if(isset($GLOBALS['redisSingleton']) && extension_loaded("redis")) {
+			$GLOBALS['redisSingleton']->close();
+			unset($GLOBALS['redisSingleton']);
+		}
+	}
 
 	function getDownloads($version) {
 		$base = noHTML($_GET["base"]);
@@ -40,14 +58,11 @@
 	function getCachedDevices($base, $rootdir, $realRootdir, $devices, $version) {
 		if(extension_loaded("redis")) {
 			$result = "";
-			$redis = new Redis();
-			$redis->connect('127.0.0.1');
 			$cacheKey = "DivestOS+devices.php+base:" . $base . "+version:" . $version;
-			if(($result = $redis->get($cacheKey)) == false) {
+			if(($result = getRedis()->get($cacheKey)) == false) {
 				$result = getDevices($base, $rootdir, $realRootdir, $devices, $version);
-				$redis->setEx($cacheKey, 86400, $result); //24 hours
+				getRedis()->setEx($cacheKey, 86400, $result); //24 hours
 			}
-			$redis->close();
 			return $result;
 		} else {
 			return getDevices($base, $rootdir, $realRootdir, $devices, $version);
@@ -170,7 +185,7 @@
 			switch($status) {
 				case 0:
 					$color = "4CAF50";
-					$message = "Works";
+					$message = "Tested Working";
 					break;
 				case 1:
 					$color = "f44336";
@@ -275,6 +290,7 @@ sha512sum -c divested*sha512sum;
 					<?php else : ?>
 						<h2>Invalid base!</h2>
 					<?php endif; ?>
+					<?php closeRedis(); ?>
 				</div>
 
 				<!--<script defer type="text/javascript" src="/assets/js/purchase.js" integrity="sha384-U4dJieuHmKxvDmCHpoCeehDe6Xrj9OjnvV34d2UZCGQiCVWmA9vZeIJJjOftpSis"></script>-->
