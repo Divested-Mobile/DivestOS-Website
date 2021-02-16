@@ -119,12 +119,21 @@
 						list($color, $statusMessage) = getStatus(file_get_contents($statusFile), $outdated);
 						unset($statusFile);
 						unset($outdated);
-						$status = "<h5 style=\"color: #" . $color . ";\">" . $statusMessage . "</h5>";
+						$status = "<li style=\"color: #" . $color . ";\">Status: " . $statusMessage . "</li>";
 						if($color === "4CAF50") {
 							$downloadButtons = str_replace("rom-unknown", "rom-working", $downloadButtons);
 						}
 						$downloadButtons = str_replace("COLOUR", $color, $downloadButtons);
 						unset($color);
+
+						//Output the bootloader information
+						$bootloaderInformationFile = $realRootdir . $device . "/bootloader_information";
+						if(file_exists($bootloaderInformationFile)) {
+							$bootloaderInformationArr = file($bootloaderInformationFile);
+							$bootloaderInformation = "<li>Unlock Method: " . $bootloaderInformationArr[0] . "</li><li>Relockable: " . $bootloaderInformationArr[1] . "</li><li>Verified Boot: " . $bootloaderInformationArr[2] . "</li></ul>";
+							unset($bootloaderInformationArr);
+						}
+						unset($bootloaderInformationFile);
 
 						//Output the card
 						$downloads .= "<div class=\"card centero\" id=\"device-" . $device . "\">";
@@ -136,8 +145,12 @@
 						$downloads .= "<h3>" . $name . "<a href=\"#device-" . $device . "\">¶</a></h3>";
 						unset($name);
 						$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $trueName . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a> and <a href=\"https://wiki.lineageos.org/devices/" . $trueName . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Install Guide</a></p>";
+						$downloads .= "<ul>";
 						$downloads .= $status;
 						unset($status);
+						$downloads .= $bootloaderInformation;
+						unset($bootloaderInformation);
+						$downloads .= "</ul>";
 						$downloads .= $downloadButtons;
 						$downloads .= "</div>";
 					}
