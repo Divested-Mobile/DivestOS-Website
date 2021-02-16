@@ -4,11 +4,15 @@
 					<div class="section" id="warning">
 						<div class="card fluid warning">
 							<h2>WARNING!<a href="#warning">¶</a></h2>
-							<p>Unlocking your bootloader will wipe your device! Please backup all of your contacts, photos, files, apps, keys, etc. first!</p>
+							<p>Unlocking and locking your bootloader will wipe your device!
+							<br>Locking your bootloader on most newer devices will wipe your device!
+							<br>Please backup all of your contacts, photos, files, apps, keys, etc. first!</p>
+							<p>Locking your bootloader with an incorrectly signed system image or on unsupported device can result in a permanent brick!</p>
 						</div>
 					</div>
 					<div class="section" id="prereq">
 						<h3>Prerequisites<a href="#prereq">¶</a></h3>
+						<p>Research for information surrounding your specific device model.<br>It is strongly recommended to be running the latest factory images before switching, especially if relocking. However notably some devices must be running an old version to allow installation of alternative systems.</p>
 						<p>You'll need ADB access in order to attempt any of the methods below.</p>
 						<h4>On your computer</h4>
 						<ul>
@@ -29,46 +33,27 @@
 							<li>Under 'Developer options', enable 'Android debugging'</li>
 						</ol>
 					</div>
-					<div class="section" id="fastbootOld">
-						<h3>Fastboot (Old)<a href="#fastbootOld">¶</a></h3>
+					<div class="section" id="fastboot">
+						<h3>Fastboot<a href="#fastboot">¶</a></h3>
 						<ul>
-							<li>Devices Supported: Nextbit Robin (ether), Nexus 4 (mako), Nexus 5 (hammerhead), Nexus 6 (shamu), Nexus 7 (flo), OnePlus One (bacon)</li>
-							<li>This is the easiest method, and works mostly on old retail variants.</li>
-							<h4>Unlocking</h4>
-							<ol>
-								<li><code>$ adb reboot bootloader</code></li>
-								<li><code>$ fastboot oem unlock</code></li>
-								<li><code>$ fastboot flash recovery recovery.img</code></li>
-							</ol>
-							<h4>Locking</h4>
-							<ol>
-								<li><code>$ adb reboot bootloader</code></li>
-								<li><code>$ fastboot flash recovery recovery.img #recovery.img should be signed</code></li>
-								<li><code>$ fastboot oem lock</code></li>
-							</ol>
-						</ul>
-					</div>
-					<div class="section" id="fastbootNew">
-						<h3>Fastboot (New)<a href="#fastbootNew">¶</a></h3>
-						<ul>
-							<li>Devices Supported: Google Pixel (marlin/sailfish), Nexus 5X (bullhead), Nexus 6P (angler), Essential Phone (mata)</li>
-							<li>This is a newer method for retail variants.</li>
 							<h4>Unlocking</h4>
 							<ol>
 								<li>Open the dialer app and dial "*##CHECKIN##*"</li>
 								<li>Enable 'Allow OEM unlocking' under 'Developer options' in Settings</li>
-								<li><code>$ adb reboot bootloader</code></li>
-								<li><code>$ fastboot flashing unlock</code></li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
+								<li><code>$ fastboot oem unlock</code> or <code>$ fastboot flashing unlock</code></li>
 								<li><code>$ fastboot flash recovery recovery.img</code></li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or volume key combination if off)</li>
+								<li><code>$ adb sideload system.zip</code></li>
 							</ol>
 							<h4>Locking</h4>
 							<ol>
-								<li><code>$ adb reboot bootloader</code></li>
-								<li><code># system image MUST be properly signed</code></li>
-								<li><code>$ fastboot flashing lock</code></li>
+								<li>After install, verify boot, verify functionality, and verify the ability to factory reset.</li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
+								<li><code>$ fastboot oem lock</code> or <code>$ fastboot flashing lock</code></li>
+								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes.</li>
 							</ol>
 						</ul>
-
 					</div>
 					<div class="section" id="fastbootLGE">
 						<h3>Fastboot (LGE)<a href="#fastbootLGE">¶</a></h3>
@@ -79,7 +64,7 @@
 								<li>First check <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
 								<li>Create an LG Developer account (sorry)</li>
 								<li>Note down your IMEI (From original box or from Settings -> About -> Status)</li>
-								<li><code>$ adb reboot bootloader</code></li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li><code>$ fastboot oem device-id</code></li>
 								<li>Combine the two lines</li>
 								<li>Paste it into the site along with the IMEI</li>
@@ -88,6 +73,8 @@
 								<li>Save the unlock.bin from the email and keep it for future use</li>
 								<li><code>$ fastboot flash unlock unlock.bin</code></li>
 								<li><code>$ fastboot flash recovery recovery.img</code></li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or volume key combination if off)</li>
+								<li><code>$ adb sideload system.zip</code></li>
 							</ol>
 						</ul>
 					</div>
@@ -100,7 +87,7 @@
 								<li>First check <a href="https://mobilesupport.lenovo.com/us/en/solution/MS87215" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
 								<li>If it does, click the 'Unlock' link for your device</li>
 								<li>Create a Motorola or Google account (sorry)</li>
-								<li><code>$ adb reboot bootloader</code></li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li><code>$ fastboot oem get_unlock_data</code></li>
 								<li>Use the little tool on the site to format the above output</li>
 								<li>Paste it into the field</li>
@@ -109,6 +96,8 @@
 								<li>Copy the code from the email and save it for future use</li>
 								<li><code>$ fastboot oem unlock [KEY FROM EMAIL]</code></li>
 								<li><code>$ fastboot flash recovery recovery.img</code></li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or volume key combination if off)</li>
+								<li><code>$ adb sideload system.zip</code></li>
 							</ol>
 						</ul>
 					</div>
@@ -124,7 +113,7 @@
 							<li>Devices Supported: Select LG devices</li>
 							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
 							<ol>
-								<li>Windows is required for this. KVM USB pass through has been confirmed to work</li>
+								<li>Windows is required for this. KVM USB passthrough has been confirmed to work.</li>
 								<li>[TO BE COMPLETED]</li>
 							</ol>
 						</ul>
@@ -165,6 +154,7 @@
 								<li>The above 3 commands should all return the same DiskIndex</li>
 								<li>Apollo Specific Files: <a href="https://drive.google.com/open?id=0B2twXJIOgv-URzJDQkczNzRLaHM" target="_blank" rel="nofollow noopener noreferrer">download</a></li>
 								<li>Thor Specific Files: <a href="/extras/thor/Amazon_Thor-Unlock.zip" target="_blank">download</a></li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li><code>> fastboot -i 0x1949 erase aboot</code></li>
 								<li><code>> fastboot -i 0x1949 reboot</code></li>
 								<li><code>> dd of=\\?\Device\Harddisk[DiskIndex]\Partition6 if=aboot_vuln.mbn</code></li>
@@ -172,7 +162,8 @@
 								<li>If you get the error "Error reading file: 87 The parameter is incorrect", ignore it</li>
 								<li>Wait a few minutes</li>
 								<li>Force the device off by holding the power button</li>
-								<li>You should now have a custom recovery installed.</li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or volume key combination if off)</li>
+								<li><code>$ adb sideload system.zip</code></li>
 							</ol>
 						</ul>
 					</div>
@@ -190,7 +181,8 @@
 								<li><code>$$ su</code></li>
 								<li><code>$$ dd if=/sdcard/recovery.img of=/dev/block/bootdevice/by-name/recovery</code></li>
 								<li>The output path in the above command may be different.</li>
-								<li>You should now have a custom recovery installed.</li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or volume key combination if off)</li>
+								<li><code>$ adb sideload system.zip</code></li>
 							</ol>
 						</ul>
 					</div>
