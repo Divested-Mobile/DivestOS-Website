@@ -115,6 +115,9 @@
 						$fastboot = str_replace(".zip", "-fastboot.zip", $zip);
 						if(strlen($fastboot) > 36 && file_exists($realRootdir . $device . "/" . $fastboot)) {
 							$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $fastboot. "\" download=\"" . $fastboot . "\" class=\"button teritary\">Fastboot</a>";
+							if(file_exists($realRootdir . $device . "/avb_pkmd.bin")) { //Output the avb_pkmd.bin if it exists
+								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/avb_pkmd.bin\" download class=\"button inverse small\">AVB key</a>";
+							}
 							if(file_exists($realRootdir . $device . "/" . $fastboot . ".sha512sum")) {
 								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $fastboot . ".sha512sum\" download class=\"button inverse small\">512sum</a>";
 							}
