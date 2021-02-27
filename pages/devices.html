@@ -115,14 +115,15 @@
 						$fastboot = str_replace(".zip", "-fastboot.zip", $zip);
 						if(strlen($fastboot) > 36 && file_exists($realRootdir . $device . "/" . $fastboot)) {
 							$downloadButtons .= "<br><a href=\"/mirror.php?base=" . $base . "&f=" . $device . "/" . $fastboot. "\" download=\"" . $fastboot . "\" class=\"button teritary\">Fastboot</a>";
-							if(file_exists($realRootdir . $device . "/avb_pkmd.bin")) { //Output the avb_pkmd.bin if it exists
-								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/avb_pkmd.bin\" download class=\"button inverse small\">AVB key</a>";
-							}
 							if(file_exists($realRootdir . $device . "/" . $fastboot . ".sha512sum")) {
 								$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/" . $fastboot . ".sha512sum\" download class=\"button inverse small\">512sum</a>";
 							}
 						}
 						unset($fastboot);
+
+						if(file_exists($realRootdir . $device . "/avb_pkmd.bin")) { //Output the avb_pkmd.bin if it exists
+							$downloadButtons .= "<br><a href=\"/builds/" . $base . "/" . $device . "/avb_pkmd.bin\" download class=\"button inverse small\">AVB key</a>";
+						}
 
 						//Create the status message
 						$outdated = !(($latestFileTime >= $lastSecRelease) && (($curTime - $latestFileTime) <= 3456000));
@@ -236,9 +237,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="section" id="verify">
+					<div class="section">
 						<div class="row">
-							<div class="card centero large">
+							<div class="card centero large" id="verify">
 						<h3>Verification<a href="#verify">¶</a></h3>
 						<p>All files available below have a corresponding GPG signed .sha512sum file available. This can be used to verify builds have not been tampered with by this server or in transit.
 <pre><code>
@@ -248,6 +249,11 @@ gpg --verify divested*sha512sum;
 sha512sum -c divested*sha512sum;
 </code></pre>
 <a href="/divestos_signing.key" download class="button primary" target="_blank">GPG Public Key</a><br><a href="https://gitlab.com/divested-mobile/divestos-website/-/raw/master/divestos_signing.key" download class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 1</a><a href="https://raw.githubusercontent.com/Divested-Mobile/divestos-website/master/divestos_signing.key" download class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 2</a><a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/12" class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 3</a></p>
+							</div>
+							<div class="card centero large" id="contribute">
+								<h3>Contribute<a href="#contribute">¶</a></h3>
+								<p>Please consider contributing in the form of testing, bug reports, merge requests, translations, mirrors, and financially to ensure the project's longevity.</p>
+								<a href="bitcoin:bc1qkjtp2k7cc4kuv8k9wjdlxkeuqczenrpv5mwasl" class="button primary">bc1qkjtp2k7cc4kuv8k9wjdlxkeuqczenrpv5mwasl</a>
 							</div>
 						</div>
 					</div>

@@ -14,6 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+echo 0 > angler/status-15.1;
 echo 0 > bacon/status-17.1;
 echo 0 > bullhead/status-15.1;
 echo 0 > cheeseburger/status-16.0;
@@ -42,6 +43,7 @@ echo 0 > nex/status-11.0;
 echo 0 > osprey/status-14.1;
 echo 0 > sailfish/status-17.1;
 echo 0 > shamu/status-17.1;
+echo 0 > taimen/status-17.1;
 echo 0 > thor/status-14.1;
 echo 0 > toroplus/status-14.1;
 echo 1 > cheeseburger/status-17.1;
@@ -52,7 +54,6 @@ echo 1 > manta/status-14.1;
 echo 1 > star2lte/status-17.1;
 echo 1 > starlte/status-17.1;
 echo 2 > amber/status-17.1;
-echo 2 > angler/status-15.1;
 echo 2 > blueline/status-17.1;
 echo 2 > bonito/status-17.1;
 echo 2 > cheryl/status-17.1;
@@ -86,7 +87,6 @@ echo 2 > pro1/status-17.1;
 echo 2 > rs988/status-17.1;
 echo 2 > sargo/status-17.1;
 echo 2 > shamu/status-15.1;
-echo 2 > taimen/status-17.1;
 echo 2 > toro/status-14.1;
 echo 2 > us996/status-17.1;
 echo 2 > us997/status-15.1;

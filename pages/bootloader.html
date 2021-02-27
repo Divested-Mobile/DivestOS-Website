@@ -50,6 +50,8 @@
 							<ol>
 								<li>After install of a properly signed system you must verify boot, verify functionality, verify update support, and verify the ability to factory reset.</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
+								<li>AVB devices only: <code>$ fastboot erase avb_custom_key</code></li>
+								<li>AVB devices only: <code>$ fastboot flash avb_custom_key avb_pkmd.bin</code></li>
 								<li><code>$ fastboot oem lock</code> or <code>$ fastboot flashing lock</code></li>
 								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes.</li>
 							</ol>
