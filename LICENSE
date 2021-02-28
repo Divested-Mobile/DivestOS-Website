@@ -7,6 +7,9 @@ If you've found an issue please file an issue or pull request.
 assets/css/mini-*.min.css - MIT - v3.0.1 - https://github.com/Chalarangelo/mini.css
 assets/js/devtools-detect.js - MIT - v2.2.0 - https://github.com/sindresorhus/devtools-detect
 assets/js/particles.min.js - MIT - v2.0.0 - https://github.com/VincentGarreau/particles.js
+images/OnePlus_One-Dark-By_Maurice.png (frame) - "Use this PSD wherever you like, but don't resell it." - https://dribbble.com/shots/1587380-OnePlus-One-Mockup-PSD
+images/OnePlus_One-Light-By_Maurice.png (frame) - "Use this PSD wherever you like, but don't resell it." - https://dribbble.com/shots/1587380-OnePlus-One-Mockup-PSD
+images/Tri_Mako-By_Victor_Stuber.png (frame) - "Free for personal and commercial use." - https://dribbble.com/shots/1185538-Free-Nexus-4-PSD
 stripe/ - MIT - ? - https://github.com/stripe/stripe-php
 sbnr/ - LGPLv3
 get_captcha.php - LGPLv3

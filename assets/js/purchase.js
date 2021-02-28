@@ -1,5 +1,5 @@
 function checkout() {
-	var paymentAmount = 1000;
+	var paymentAmount = 500;
 	var paymentDescription = 'DivestOS Mobile Download'
 	var handler = StripeCheckout.configure({
 		key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
@@ -9,7 +9,7 @@ function checkout() {
 			var req = new XMLHttpRequest();
 			req.onreadystatechange = function() {
 				if (req.readyState == 4 && req.status == 200) {
-					setTimeout(markPurchased, 500);
+					setTimeout(markDonated, 500);
 				}
 			};
 			req.open("POST", "sbnr/stripe.php", true);
@@ -33,11 +33,11 @@ function checkout() {
 	});
 }
 
-function markPurchased() {
+function markDonated() {
 	document.getElementById("lblThanks").hidden = false;
 	document.getElementById("radPriceTen").disabled = true;
 	document.getElementById("radPriceFree").click();
-	document.getElementById("lblPriceFree").textContent = "Purchased";
+	document.getElementById("lblPriceFree").textContent = "Donated";
 	document.getElementById("radPriceFree").disabled = true;
 }
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			if(this.id=='radPriceFree') {
 				updateDownloadButtons("Download", "value");
 			} else {
-				updateDownloadButtons("Purchase", "javascript:checkoutProxy()");
+				updateDownloadButtons("Donate", "javascript:checkoutProxy()");
 			}
 		}
 	}
