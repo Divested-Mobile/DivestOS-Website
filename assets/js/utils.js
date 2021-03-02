@@ -9,7 +9,7 @@ function loadExternalJS(url, callAfterLoad, integrity) {
 	document.body.appendChild(tmpJS);
 }
 
-//CREDIT: https://www.w3schools.com/js/js_cookies.asp
+//Credit: https://www.w3schools.com/js/js_cookies.asp
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -25,7 +25,7 @@ function getCookie(cname) {
     return "";
 }
 
-//CREDIT: https://www.w3schools.com/js/js_cookies.asp
+//Credit: https://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -33,7 +33,7 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";SameSite=Strict;path=/";
 }
 
-//CREDIT: https://stackoverflow.com/a/179514
+//Credit (CC BY-SA 2.5): https://stackoverflow.com/a/179514
 function deleteAllCookies() {
     var cookies = document.cookie.split(";");
     for (var i = 0; i < cookies.length; i++) {
@@ -44,7 +44,7 @@ function deleteAllCookies() {
     }
 }
 
-//CREDIT: https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest
+//Credit: https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest
 async function sha512(message) {
 	const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
 	const hashBuffer = await crypto.subtle.digest('SHA-512', msgUint8);           // hash the message

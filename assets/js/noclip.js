@@ -1,4 +1,4 @@
-window.addEventListener("keydown", function(e) {//Credit: https://stackoverflow.com/a/38359924
+window.addEventListener("keydown", function(e) {//Credit (CC BY-SA 3.0): https://stackoverflow.com/a/38359924
 	if (e.getModifierState("Control")  && e.code == "KeyC") {
 		e.preventDefault(); e.stopPropagation(); return false;
 	}

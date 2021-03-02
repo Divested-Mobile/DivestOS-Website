@@ -13,7 +13,7 @@
 		</footer>
 
 		<!-- Scripts -->
-		<script type="text/javascript" src="assets/js/utils.js" integrity="sha384-JXyIdWcgXKUHMozuj317BGvPDm///Y33T8PuP0wms7taXRtG8+v++WBRKaS+/81t"></script>
+		<script type="text/javascript" src="assets/js/utils.js" integrity="sha384-SVgiaz5e1pRi465w54wy15L/wVY6kggHUdXCxR0gTUQljNwj/q94dsu4doLFpaKc"></script>
 		<?php if(!$pageIsCached) : ?>
 		<script type="text/javascript">
 			function getCSRFToken() {
@@ -34,11 +34,11 @@
 			}
 		?>
 		<?php if($SBNR_OBF_DISABLE_CLIPBOARD || $SBNR_AT_CAPTCHA_WALL) : ?>
-		<script defer type="text/javascript" src="assets/js/noclip.js" integrity="sha384-yRZRQyoe/CENDwIAjms2efXUtEDRKzPSLLx5IOHCKpnOAM9mnkp4f9MwPGr/I0nZ"></script>
+		<script defer type="text/javascript" src="assets/js/noclip.js" integrity="sha384-VLG60n4nTulX5xVohu8xtN1YsHpk18vX3FYfTBwe/g5YDGAkQ6JJrYwk+8LMzuDS"></script>
 		<?php endif; ?>
 		<?php if($SBNR_OBF_DISABLE_DEVTOOLS || $SBNR_AT_CAPTCHA_WALL) : ?>
 		<script defer type="text/javascript" src="assets/js/devtools-detect.js" integrity="sha384-opU/k/i2uQ0DUG1mxi6Alx8Q+hYa5ofxZPtIgqELoTpsRXfto3CJUwgN4svlrWB8"></script>
-		<script defer type="text/javascript" src="assets/js/nodev.js" integrity="sha384-8z/StSSpQqoIc6bzh2lMbUPcwuN6WIgzATvfWHmYbf4N5zBFB3yNHf7Y6+ieRwIy"></script>
+		<script defer type="text/javascript" src="assets/js/nodev.js" integrity="sha384-aCjLTeSWNE4KWmUmbwT8t8GxqxKjLYFY0J2PoQLUc2SqITZgBR5tH00MHQi1356X"></script>
 		<?php endif; ?>
 
                 <?php if(false && $saveData === false && $pageIsHome) : ?>

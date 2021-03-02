@@ -88,12 +88,12 @@ function shouldChallengeRequest() {
 }
 
 //Strip entities to prevent XSS
-//Credit: https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
+//Credit (CC BY-SA 4.0): https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know
 function noHTML($input, $encoding = 'UTF-8') {
 	return htmlentities($input, ENT_QUOTES | ENT_HTML5, $encoding);
 }
 
-//Credit: https://stackoverflow.com/a/7112596
+//Credit (CC BY-SA 3.0): https://stackoverflow.com/a/7112596
 function contains($haystack, $needle) {
 	return strpos($haystack, $needle) !== false;
 }
@@ -104,19 +104,19 @@ function containsArr($haystack, $needles) {
 	}
 }
 
-//Credit: https://stackoverflow.com/a/10473026
+//Credit (CC BY-SA 3.0): https://stackoverflow.com/a/10473026
 function startsWith($haystack, $needle) {
     // search backwards starting from haystack length characters from the end
     return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
 }
 
-//Credit: https://stackoverflow.com/a/10473026
+//Credit (CC BY-SA 3.0): https://stackoverflow.com/a/10473026
 function endsWith($haystack, $needle) {
     // search forward starting from end minus needle length characters
     return $needle === "" || strpos($haystack, $needle, strlen($haystack) - strlen($needle)) !== FALSE;
 }
 
-//Credit: https://stackoverflow.com/a/4356295
+//Credit (CC BY-SA 2.5): https://stackoverflow.com/a/4356295
 function generateRandomString($length = 8, $secure = true, $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') {
 	$charactersLength = strlen($characters);
 	$randomString = '';
@@ -132,14 +132,14 @@ function generateRandomString($length = 8, $secure = true, $characters = '012345
 	return $randomString;
 }
 
-//Credit: https://stackoverflow.com/a/4478788
+//Credit (CC BY-SA 2.5): https://stackoverflow.com/a/4478788
 function getRandomFile($dir) {
     $files = glob($dir . '/*.*');
     $file = array_rand($files);
     return $files[$file];
 }
 
-//Credit: https://stackoverflow.com/a/6225706
+//Credit (CC BY-SA 3.0): https://stackoverflow.com/a/6225706
 function minifyWhitespace($buffer) {
 	$search = array(
 	'/\>[^\S ]+/s',     // strip whitespaces after tags, except space
