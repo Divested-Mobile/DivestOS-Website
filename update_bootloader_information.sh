@@ -17,7 +17,6 @@
 #echo -e "Bulk Mode\nNot Unlockable\nNo" > apollo/bootloader_information;
 echo -e "Bulk Mode\nNot Unlockable\nNo" > thor/bootloader_information;
 #echo -e "Custom\nNot Unlockable\nNo" > axon7/bootloader_information;
-echo -e "Custom\nNot Unlockable\nNo" > z2_plus/bootloader_information;
 echo -e "Exploit\nNot Unlockable\nNo" > h990/bootloader_information;
 echo -e "Exploit\nNot Unlockable\nNo" > nex/bootloader_information;
 echo -e "Fastboot (ASUS)\nNo\nNo" > z00t/bootloader_information;
@@ -80,6 +79,7 @@ echo -e "Fastboot\nYes, Untested\nYes" > sargo/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > walleye/bootloader_information;
 #echo -e "Fastboot (Xiaomi)\nNo\nNo" > beryllium/bootloader_information;
 echo -e "Fastboot (Yandex)\nUnknown\nYes" > amber/bootloader_information;
+echo -e "Fastboot (ZUK)\nUnknown\nYes" > z2_plus/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > herolte/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > i9100/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > i9300/bootloader_information;
