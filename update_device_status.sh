@@ -69,6 +69,7 @@ echo 2 > ether/status-15.1;
 echo 2 > ether/status-17.1;
 echo 2 > fajita/status-17.1;
 echo 2 > flame/status-17.1;
+echo 2 > fp3/status-17.1;
 echo 2 > fugu/status-15.1;
 echo 2 > griffin/status-17.1;
 echo 2 > guacamoleb/status-17.1;
