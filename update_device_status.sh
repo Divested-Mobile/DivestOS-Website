@@ -16,6 +16,7 @@
 
 echo 0 > angler/status-15.1;
 echo 0 > bacon/status-17.1;
+echo 2 > bacon/status-18.1;
 echo 0 > bullhead/status-15.1;
 echo 0 > cheeseburger/status-16.0;
 echo 0 > clark/status-14.1;
@@ -33,11 +34,13 @@ echo 0 > i9300/status-14.1;
 echo 0 > i9305/status-14.1;
 echo 0 > jfltexx/status-17.1;
 echo 0 > klte/status-17.1;
+echo 0 > klte/status-18.1;
 echo 0 > m8/status-17.1;
 echo 0 > maguro/status-14.1;
 echo 0 > mako/status-15.1;
 echo 0 > mako/status-16.0;
 echo 0 > mako/status-17.1;
+echo 0 > mako/status-18.1;
 echo 0 > marlin/status-17.1;
 echo 0 > mata/status-17.1;
 echo 0 > nex/status-11.0;
