@@ -16,12 +16,13 @@
 
 echo 0 > angler/status-15.1;
 echo 0 > bacon/status-17.1;
-echo 2 > bacon/status-18.1;
+echo 1 > bacon/status-18.1;
 echo 0 > bullhead/status-15.1;
 echo 0 > cheeseburger/status-16.0;
 echo 0 > clark/status-14.1;
 echo 0 > clark/status-17.1;
 echo 0 > d852/status-17.1;
+echo 0 > dragon/status-15.1;
 echo 0 > dumpling/status-16.0;
 echo 0 > flo/status-15.1;
 echo 0 > flounder/status-15.1;
@@ -66,7 +67,6 @@ echo 2 > crackling/status-17.1;
 echo 2 > crosshatch/status-17.1;
 echo 2 > d802/status-17.1;
 echo 2 > d855/status-17.1;
-echo 2 > dragon/status-15.1;
 echo 2 > enchilada/status-17.1;
 echo 2 > ether/status-15.1;
 echo 2 > ether/status-17.1;

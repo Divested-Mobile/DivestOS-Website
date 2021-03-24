@@ -6,6 +6,7 @@
 						<p>Devices listed as "Works" on Downloads page will not be listed here if they are fully working as expected and do not have any quirks.</p>
 						<h4 id="all">All Devices<a href="#all">¶</a></h4>
 						<ul>
+							<li>'Developer options' will crash on older releases due to null PDB handle. [upstream?]</li>
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. [patcher]</li>
 							<li>Devices with 1GB of RAM or less will likely out-of-memory more often than usual. [slub_debug fragmentation?]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/64" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
 							<li>IMS may or may not work. [upstream? deblobber?]</li>
@@ -14,8 +15,9 @@
 							<li>Most devices will take longer to acquire a GPS lock. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
 							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
 							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w optional enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
+							<li>Silence is included on devices without cellular connectivity. [vendor_divested]</li>
 							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
-							<li>'Storage Manager' is non-functional.</li>
+							<li>'Storage Manager' is non-functional in some cases.</li>
 							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 						</ul>
 						<h4 id="hdx-common">apollo/thor<a href="#hdx-common">¶</a></h4>
@@ -60,9 +62,10 @@
 						</ul>
 						<h4 id="mako">mako<a href="#mako">¶</a></h4>
 						<ul>
-							<li>Excessive battery drain when powered-off. Maybe fixed by <a href="https://github.com/Divested-Mobile/DivestOS-Build/commit/b56929d3d9ade1fd5484ba3b4c2b391a41056f12" target="_blank" rel="nofollow noopener noreferrer">b56929d3</a>. [???]<a href="https://github.com/voron00/android_device_lge_mako/commit/df0867237e71a03aea1646a92c7b022c9906a945#comments" target="_blank" rel="nofollow noopener noreferrer">[relevant]</a></li>
-							<li>/system needs to be resized to fit 17.1. [too small partition]</li>
+							<li>Excessive battery drain when powered-off. Likely fixed by <a href="https://github.com/Divested-Mobile/DivestOS-Build/commit/b56929d3d9ade1fd5484ba3b4c2b391a41056f12" target="_blank" rel="nofollow noopener noreferrer">b56929d3</a>. [???]<a href="https://github.com/voron00/android_device_lge_mako/commit/df0867237e71a03aea1646a92c7b022c9906a945#comments" target="_blank" rel="nofollow noopener noreferrer">[relevant]</a></li>
+							<li>/system needs to be resized to fit 17.1 or higher. [too small partition]</li>
 							<li>Will fail to boot on first boot. Force off once after 3 minutes. [modem subsystem service startup failure with forceencrypt]</li>
+							<li>Vibrator does not work on 18.1. [upstream device tree]</li>
 						</ul>
 						<h4 id="mata">mata<a href="#mata">¶</a></h4>
 						<ul>
