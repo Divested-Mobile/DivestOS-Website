@@ -22,6 +22,7 @@ echo -e "Exploit\nNot Unlockable\nNo" > nex/bootloader_information;
 echo -e "Fastboot (ASUS)\nNo\nNo" > z00t/bootloader_information;
 echo -e "Fastboot (ASUS)\nNo\nNo" > zenfone3/bootloader_information;
 echo -e "Fastboot (HTC)\nNo*\nNo" > himaul/bootloader_information;
+echo -e "Fastboot (HTC)\nNo*\nNo" > m7/bootloader_information;
 echo -e "Fastboot (HTC)\nNo*\nNo" > m8/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h815/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h850/bootloader_information;

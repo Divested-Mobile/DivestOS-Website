@@ -84,6 +84,7 @@ echo 2 > h990/status-17.1;
 echo 2 > ham/status-16.0;
 echo 2 > himaul/status-14.1;
 echo 2 > kipper/status-16.0;
+echo 2 > m7/status-14.1;
 echo 2 > n5110/status-14.1;
 echo 2 > oneplus2/status-17.1;
 echo 2 > oneplus3/status-17.1;
