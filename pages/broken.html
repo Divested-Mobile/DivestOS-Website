@@ -8,14 +8,13 @@
 						<ul>
 							<li>'Developer options' will crash on older releases due to null PDB handle. [upstream?]</li>
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. [patcher]</li>
-							<li>Devices with 1GB of RAM or less will likely out-of-memory more often than usual. [slub_debug fragmentation?]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/64" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
+							<li>Devices with less then 2GB of RAM will likely out-of-memory more often than usual. [various]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/64" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
 							<li>IMS may or may not work. [upstream? deblobber?]</li>
 							<li>Incremental updates will often fail to successfully apply on non A/B devices. [releasetools]</li>
 							<li>MediaProvider error toast on some boots. [permission whitelist?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>Most devices will take longer to acquire a GPS lock. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
 							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
 							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w optional enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
-							<li>Silence is included on devices without cellular connectivity. [vendor_divested]</li>
 							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
 							<li>'Storage Manager' is non-functional in some cases.</li>
 							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
@@ -53,7 +52,7 @@
 						</ul>
 						<h4 id="klte">klte<a href="#klte">¶</a></h4>
 						<ul>
-							<li>SD cards might fail to mount or format. [selinux]</li>
+							<li>SD cards might fail to mount or format. [vold + selinux?]</li>
 							<li>USB ADB does not work. [selinux]</li>
 						</ul>
 						<h4 id="maguro">maguro/toro/toroplus<a href="#maguro">¶</a></h4>
