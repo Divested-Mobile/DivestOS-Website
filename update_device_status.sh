@@ -16,7 +16,7 @@
 
 echo 0 > angler/status-15.1;
 echo 0 > bacon/status-17.1;
-echo 1 > bacon/status-18.1;
+echo 0 > bacon/status-18.1;
 echo 0 > bullhead/status-15.1;
 echo 0 > cheeseburger/status-16.0;
 echo 0 > clark/status-14.1;
@@ -27,6 +27,7 @@ echo 0 > dumpling/status-16.0;
 echo 0 > flo/status-15.1;
 echo 0 > flounder/status-15.1;
 echo 0 > flox/status-17.1;
+echo 0 > flox/status-18.1;
 echo 0 > fp2/status-17.1;
 echo 0 > grouper/status-14.1;
 echo 0 > hammerhead/status-15.1;
@@ -44,6 +45,7 @@ echo 0 > mako/status-17.1;
 echo 0 > mako/status-18.1;
 echo 0 > marlin/status-17.1;
 echo 0 > mata/status-17.1;
+echo 0 > mata/status-18.1;
 echo 0 > nex/status-11.0;
 echo 0 > osprey/status-14.1;
 echo 0 > sailfish/status-17.1;
