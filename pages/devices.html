@@ -191,6 +191,10 @@
 					$color = "4CAF50";
 					$message = "Tested Working";
 					break;
+				case 5:
+					$color = "673AB7";
+					$message = "Mostly Works";
+					break;
 				case 1:
 					$color = "f44336";
 					$message = "Broken";
@@ -199,10 +203,15 @@
 					$color = "FFC107";
 					$message = "Untested";
 					break;
+				case 4:
+					$color = "FFC107";
+					$message = "Likely Works";
+					break;
 				case 3:
 					$color = "673AB7";
 					$message = "Untested (Experimental)";
 					break;
+
 			}
 		}
 		if($outdated) {
@@ -276,7 +285,7 @@ sha512sum -c divested*sha512sum;
 					</div>
 					<?php if(noHTML($_GET["base"]) === "LineageOS") : ?>
 					<div class="section" id="devices">
-						<h2 class="centero">18.1 / 11.0 / R / EXPERIMENTAL</h2>
+						<h2 class="centero">18.1 / 11.0 / R</h2>
 						<p class="centero"><mark class="secondary">In-Place upgrades to 18.1 on legacy (<2017) devices require a wipe due to their legacy keystore support being removed.</mark></p>
 						<div class="row" style="text-align: center;">
 							<?php getDownloads("18.1"); ?>

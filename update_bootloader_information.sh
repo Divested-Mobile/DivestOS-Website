@@ -54,6 +54,7 @@ echo -e "Fastboot\nUnknown\nNo" > ether/bootloader_information;
 echo -e "Fastboot\nUnknown\nNo" > ham/bootloader_information;
 echo -e "Fastboot\nUnknown\nNo" > kipper/bootloader_information;
 echo -e "Fastboot\nUnknown\nNo" > manta/bootloader_information;
+echo -e "Fastboot\nUnknown\nYes" > avicii/bootloader_information;
 echo -e "Fastboot\nUnknown\nYes" > cheryl/bootloader_information;
 echo -e "Fastboot\nUnknown\nYes" > enchilada/bootloader_information;
 echo -e "Fastboot\nUnknown\nYes" > fajita/bootloader_information;
