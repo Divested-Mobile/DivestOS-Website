@@ -68,6 +68,7 @@ echo -e "Fastboot\nTested Working\nYes" > dumpling/bootloader_information;
 
 echo "Razer Phone" > cheryl/friendlyName;
 echo 2 > cheryl/status-17.1;
+echo 2 > cheryl/status-18.1;
 echo -e "Fastboot\nUnknown\nYes" > cheryl/bootloader_information;
 
 echo "Moto X Pure 2015" > clark/friendlyName;
@@ -78,7 +79,9 @@ echo -e "Fastboot (Motorola)\nNo*\nNo" > clark/bootloader_information;
 echo "Pixel 4 XL" > coral/friendlyName;
 echo "Pixel 4" > flame/friendlyName;
 echo 2 > coral/status-17.1;
+echo 2 > coral/status-18.1;
 echo 2 > flame/status-17.1;
+echo 2 > flame/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > coral/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > flame/bootloader_information;
 
@@ -88,6 +91,7 @@ echo -e "Fastboot\nUnknown\nNo" > crackling/bootloader_information;
 
 echo "LG G2 INTL" > d802/friendlyName;
 echo 2 > d802/status-17.1;
+echo 2 > d802/status-18.1;
 echo -e "LG UP\nNot Unlockable\nNo" > d802/bootloader_information;
 
 echo "LG G3 CAN" > d852/friendlyName;
@@ -111,6 +115,7 @@ echo -e "Fastboot\nUnknown\nYes" > fajita/bootloader_information;
 echo "Nextbit Robin" > ether/friendlyName;
 echo 2 > ether/status-15.1;
 echo 2 > ether/status-17.1;
+echo 2 > ether/status-18.1;
 echo -e "Fastboot\nUnknown\nNo" > ether/bootloader_information;
 
 echo "Google Nexus 7 [2013]" > flo/friendlyName;
@@ -161,7 +166,9 @@ echo -e "Fastboot (LGE)\nNo*\nNo" > h815/bootloader_information;
 echo "LG G5 INTL" > h850/friendlyName;
 echo "LG G5 US" > rs988/friendlyName;
 echo 2 > h850/status-17.1;
+echo 2 > h850/status-18.1;
 echo 2 > rs988/status-17.1;
+echo 2 > rs988/status-18.1;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h850/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > rs988/bootloader_information;
 
@@ -175,7 +182,9 @@ echo -e "Fastboot (LGE)\nNo*\nNo" > us997/bootloader_information;
 echo "LG V20 INTL" > h990/friendlyName;
 echo "LG V20 US" > us996/friendlyName;
 echo 2 > h990/status-17.1;
+echo 2 > h990/status-18.1;
 echo 2 > us996/status-17.1;
+echo 2 > us996/status-18.1;
 echo -e "Exploit\nNot Unlockable\nNo" > h990/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > us996/bootloader_information;
 
@@ -209,6 +218,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > i9305/bootloader_information;
 
 echo "Samsung Galaxy S4" > jfltexx/friendlyName;
 echo 0 > jfltexx/status-17.1;
+echo 4 > jfltexx/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > jfltexx/bootloader_information;
 
 echo "Wileyfox Storm" > kipper/friendlyName;
@@ -286,6 +296,7 @@ echo -e "Fastboot (Motorola)\nNo*\nNo" > osprey/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
 echo 2 > pro1/status-17.1;
+echo 2 > pro1/status-18.1;
 echo -e "Fastboot\nUnknown\nYes" > pro1/bootloader_information;
 
 echo "Google Nexus 6" > shamu/friendlyName;
@@ -304,8 +315,9 @@ echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 echo "Google Pixel 2 XL" > taimen/friendlyName;
 echo "Google Pixel 2" > walleye/friendlyName;
 echo 0 > taimen/status-17.1;
+echo 4 > taimen/status-18.1;
 echo 4 > walleye/status-17.1;
-echo 2 > walleye/status-18.1;
+echo 4 > walleye/status-18.1;
 echo -e "Fastboot\nTested Working\nYes" > taimen/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > walleye/bootloader_information;
 
@@ -320,6 +332,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
 echo 2 > victara/status-17.1;
+echo 2 > victara/status-18.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > victara/bootloader_information;
 
 echo "Google Project Tango Tablet" > yellowstone/friendlyName;
