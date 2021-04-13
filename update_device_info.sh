@@ -34,7 +34,7 @@ echo -e "Custom\nNot Unlockable\nNo" > axon7/bootloader_information;
 echo "OnePlus One" > bacon/friendlyName;
 echo 0 > bacon/status-17.1;
 echo 0 > bacon/status-18.1;
-echo -e "Fastboot\nTested Working\nNo" > bacon/bootloader_information;
+echo -e "Fastboot\nYes, but irreversible\nNo" > bacon/bootloader_information;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
 echo -e "Fastboot (Xiaomi)\nNo\nNo" > beryllium/bootloader_information;
@@ -72,7 +72,7 @@ echo -e "Fastboot\nUnknown\nYes" > cheryl/bootloader_information;
 
 echo "Moto X Pure 2015" > clark/friendlyName;
 echo 0 > clark/status-14.1;
-echo 5 > clark/status-17.1;
+echo 0 > clark/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > clark/bootloader_information;
 
 echo "Pixel 4 XL" > coral/friendlyName;
@@ -131,7 +131,7 @@ echo 0 > fp2/status-17.1;
 echo -e "Pre-Unlocked\nUnknown\nNo" > fp2/bootloader_information;
 
 echo "Fairphone 3" > fp3/friendlyName;
-echo 2 > fp3/status-17.1;
+echo 4 > fp3/status-17.1;
 echo -e "Fastboot\nYes, Untested\nYes" > fp3/bootloader_information;
 
 echo "Google Nexus Player" > fugu/friendlyName;
@@ -291,14 +291,8 @@ echo -e "Fastboot\nUnknown\nYes" > pro1/bootloader_information;
 echo "Google Nexus 6" > shamu/friendlyName;
 echo 4 > shamu/status-15.1;
 echo 0 > shamu/status-17.1;
+echo 0 > shamu/status-18.1;
 echo -e "Fastboot\nTested Working\nYes" > shamu/bootloader_information;
-
-echo "Google Pixel 2 XL" > taimen/friendlyName;
-echo "Google Pixel 2" > walleye/friendlyName;
-echo 0 > taimen/status-17.1;
-echo 4 > walleye/status-17.1;
-echo -e "Fastboot\nTested Working\nYes" > taimen/bootloader_information;
-echo -e "Fastboot\nYes, Untested\nYes" > walleye/bootloader_information;
 
 echo "Samsung Galaxy S9" > starlte/friendlyName;
 echo "Samsung Galaxy S9+" > star2lte/friendlyName;
@@ -306,6 +300,14 @@ echo 1 > starlte/status-17.1;
 echo 1 > star2lte/status-17.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > starlte/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
+
+echo "Google Pixel 2 XL" > taimen/friendlyName;
+echo "Google Pixel 2" > walleye/friendlyName;
+echo 0 > taimen/status-17.1;
+echo 4 > walleye/status-17.1;
+echo 2 > walleye/status-18.1;
+echo -e "Fastboot\nTested Working\nYes" > taimen/bootloader_information;
+echo -e "Fastboot\nYes, Untested\nYes" > walleye/bootloader_information;
 
 echo "Amazon Kindle Fire HDX 7" > thor/friendlyName;
 echo 0 > thor/status-14.1;
