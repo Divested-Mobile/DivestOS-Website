@@ -1,5 +1,5 @@
 createTable() {
-	echo -e '<tr>\n\t<td data-label="Device">'$1'</td>\n\t<td data-label="VSB">'$2'</td>\n\t<td data-label="Kernel">'$3'</td>\n</tr>';
+	echo -e '<tr>\n\t<td data-label="Device">'$1'</td>\n\t<td data-label="V-ASB">'$2'</td>\n\t<td data-label="Kernel">'$3'</td>\n</tr>';
 }
 
 createTable amber 2020-10 4.4.205;
