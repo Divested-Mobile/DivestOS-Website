@@ -97,7 +97,9 @@ echo -e "LG UP\nNot Unlockable\nNo" > d802/bootloader_information;
 echo "LG G3 CAN" > d852/friendlyName;
 echo "LG G3 INTL" > d855/friendlyName;
 echo 0 > d852/status-17.1;
+echo 0 > d852/status-18.1;
 echo 4 > d855/status-17.1;
+echo 4 > d855/status-18.1;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d852/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
