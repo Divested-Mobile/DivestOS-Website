@@ -99,7 +99,7 @@ echo "LG G3 INTL" > d855/friendlyName;
 echo 0 > d852/status-17.1;
 echo 0 > d852/status-18.1;
 echo 4 > d855/status-17.1;
-echo 4 > d855/status-18.1;
+echo 0 > d855/status-18.1;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d852/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
@@ -220,7 +220,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > i9305/bootloader_information;
 
 echo "Samsung Galaxy S4" > jfltexx/friendlyName;
 echo 0 > jfltexx/status-17.1;
-echo 4 > jfltexx/status-18.1;
+echo 0 > jfltexx/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > jfltexx/bootloader_information;
 
 echo "Wileyfox Storm" > kipper/friendlyName;
