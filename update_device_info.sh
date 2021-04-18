@@ -29,6 +29,7 @@ echo 2 > avicii/status-17.1;
 echo -e "Fastboot\nUnknown\nYes" > avicii/bootloader_information;
 
 echo "ZTE Axon 7" > axon7/friendlyName;
+echo 2 > axon7/status-15.1;
 echo -e "Custom\nNot Unlockable\nNo" > axon7/bootloader_information;
 
 echo "OnePlus One" > bacon/friendlyName;
@@ -60,9 +61,9 @@ echo -e "Fastboot\nYes, Untested\nYes" > bullhead/bootloader_information;
 echo "OnePlus 5" > cheeseburger/friendlyName;
 echo "OnePlus 5T" > dumpling/friendlyName;
 echo 0 > cheeseburger/status-16.0;
-echo 1 > cheeseburger/status-17.1;
+echo 0 > cheeseburger/status-18.1;
 echo 0 > dumpling/status-16.0;
-echo 1 > dumpling/status-17.1;
+echo 0 > dumpling/status-18.1;
 echo -e "Fastboot\nTested Working\nYes" > cheeseburger/bootloader_information;
 echo -e "Fastboot\nTested Working\nYes" > dumpling/bootloader_information;
 
@@ -167,10 +168,10 @@ echo -e "Fastboot (LGE)\nNo*\nNo" > h815/bootloader_information;
 
 echo "LG G5 INTL" > h850/friendlyName;
 echo "LG G5 US" > rs988/friendlyName;
-echo 2 > h850/status-17.1;
-echo 2 > h850/status-18.1;
-echo 2 > rs988/status-17.1;
-echo 2 > rs988/status-18.1;
+echo 4 > h850/status-17.1;
+echo 0 > h850/status-18.1;
+echo 4 > rs988/status-17.1;
+echo 4 > rs988/status-18.1;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h850/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > rs988/bootloader_information;
 
