@@ -11,9 +11,12 @@ images/OnePlus_One-Dark-By_Maurice.png (frame) - "Use this PSD wherever you like
 images/OnePlus_One-Light-By_Maurice.png (frame) - "Use this PSD wherever you like, but don't resell it." - https://dribbble.com/shots/1587380-OnePlus-One-Mockup-PSD
 images/Tri_Mako-By_Victor_Stuber.png (frame) - "Free for personal and commercial use." - https://dribbble.com/shots/1185538-Free-Nexus-4-PSD
 stripe/ - MIT - ? - https://github.com/stripe/stripe-php
-sbnr/ - LGPLv3
-get_captcha.php - LGPLv3
-index.php - LGPLv3
-[EVERYTHING ELSE] - GPLv3
+sbnr/ - LGPL-3.0-or-later
+get_captcha.php - LGPL-3.0-or-later
+index.php - LGPL-3.0-or-later
+pages/devices.php - AGPL-3.0-or-later
+mirror.php - AGPL-3.0-or-later
+updater.php - AGPL-3.0-or-later
+[EVERYTHING ELSE] - GPL-3.0-or-later
 
 Please see the included LICENSE.* files for the corresponding full license texts.
