@@ -14,9 +14,6 @@ stripe/ - MIT - ? - https://github.com/stripe/stripe-php
 sbnr/ - LGPL-3.0-or-later
 get_captcha.php - LGPL-3.0-or-later
 index.php - LGPL-3.0-or-later
-pages/devices.php - AGPL-3.0-or-later
-mirror.php - AGPL-3.0-or-later
-updater.php - AGPL-3.0-or-later
-[EVERYTHING ELSE] - GPL-3.0-or-later
+[EVERYTHING ELSE] - AGPL-3.0-or-later
 
 Please see the included LICENSE.* files for the corresponding full license texts.
