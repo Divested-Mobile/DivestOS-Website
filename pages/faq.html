@@ -38,6 +38,30 @@
 							<li>At least kernel 3.18, preferably 4.4</li>
 						</ul>
 
+						<h4 id="preloading">I want to sell devices with DivestOS preloaded, what should I know?<a href="#preloading">¶</a></h4>
+						<p>Selling devices with official builds of DivestOS installed is OK and within the license. Some preferred suggestions:</p>
+						<ul>
+							<li>Handle the sale in good faith.</li>
+							<li>Do not market DivestOS as a magic bullet of privacy and/or security.</li>
+							<li>Verify the GPG signature and checksums of the builds you download/install.</li>
+							<li>Use Extirpater + factory reset to ensure no previous user data remains.</li>
+							<li>Ensure the device firmware is up to date before flashing.</li>
+							<li>Use the DivestOS recovery if supported.</li>
+							<li>Do not modify any system partitions such as /system, /vendor, or /boot.</li>
+							<li>Lock the bootloader if supported.</li>
+							<li>If the device requires a token to unlock the bootloader please provide it to the user.</li>
+							<li>Leave it at the setup screen.</li>
+							<li>Leave the default wallpaper.</li>
+							<li>If you preload apps only source from the existing F-Droid repositories.</li>
+						</ul>
+						<p>If you are not using official builds of DivestOS:</p>
+						<ul>
+							<li>Make it clear to your users that it is unofficial.</li>
+							<li>Use the branding variables in the scripts to rename it.</li>
+							<li>You must make your sources available to your users under the original repositories' respective licenses.</li>
+							<li>Consider upstreaming any appropriate changes.</li>
+						</ul>
+
 						<h4 id="modem">What about that gaping hole that is the baseband processor?<a href="#modem">¶</a></h4>
 						<p>We are in dire need of free hardware, but we don't have many options available currently.</p>
 
