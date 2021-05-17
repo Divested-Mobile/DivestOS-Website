@@ -42,7 +42,9 @@ echo -e "Fastboot (Xiaomi)\nNo\nNo" > beryllium/bootloader_information;
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
 echo 4 > blueline/status-17.1;
+echo 4 > blueline/status-18.1;
 echo 0 > crosshatch/status-17.1;
+echo 4 > crosshatch/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > blueline/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > crosshatch/bootloader_information;
 
@@ -276,8 +278,8 @@ echo 2 > oneplus2/status-17.1;
 echo -e "Fastboot\nYes, Untested\nNo" > oneplus2/bootloader_information;
 
 echo "OnePlus 3/T" > oneplus3/friendlyName;
-echo 2 > oneplus3/status-17.1;
-echo -e "Fastboot\nYes, Untested\nYes" > oneplus3/bootloader_information;
+echo 0 > oneplus3/status-18.1;
+echo -e "Fastboot\nYes, test-keys only?\nYes" > oneplus3/bootloader_information;
 
 echo "Moto G 2015" > osprey/friendlyName;
 echo 0 > osprey/status-14.1;

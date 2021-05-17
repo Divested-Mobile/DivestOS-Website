@@ -2,7 +2,7 @@ function checkout() {
 	var paymentAmount = 500;
 	var paymentDescription = 'DivestOS Mobile Download'
 	var handler = StripeCheckout.configure({
-		key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+		key: 'pk_live_51IoDKvI3AVrWM0J0G0vPOlLifd4QLgVLQ2U4ExmBr7bhIclNwS3docWLwPSMCb2GdaZIDcj1mwoD6xSAMW8azhSU00ShMorJp4',
 		locale: 'auto',
 		allowRememberMe: false,
 		token: function(token) {

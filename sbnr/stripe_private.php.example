@@ -1,0 +1,5 @@
+<?php
+
+$SBNR_STRIPE_KEY_PRIVATE = "";
+
+?>
