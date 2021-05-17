@@ -16,7 +16,7 @@ $paymentAmount = noHTML($_POST['PAYMENT_AMOUNT']);
 $paymentDescription = noHTML(base64_decode(urldecode($_POST['PAYMENT_DESCRIPTION'])));
 
 if(isset($csrfToken, $paymentToken, $paymentAmount, $paymentDescription)) {
-	if($csrfToken === $_SESSION['SBNR_CSRF_TOKEN']) {
+	if($csrfToken === $_SESSION['SBNR_CSRF_TOKEN'] && !isLikelyBot()) {
 		require_once('stripe/init.php');
 		\Stripe\Stripe::setApiKey($SBNR_STRIPE_KEY_PRIVATE);
 		try {

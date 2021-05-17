@@ -2,7 +2,6 @@ builds-clean/
 builds-test/
 builds/
 extras/
-stripe/
 sbnr/captcha_fonts
 sbnr/stripe_private.php
 updater.token.php
