@@ -57,5 +57,6 @@ $SBNR_CONTACT_MAX_LENGTH_MESSAGE = 512;
 
 //Payment Handler - Stripe
 $SBNR_STRIPE_ENABLED = true;
+$SBNR_STRIPE_MAX_CHARGE = 2000; //$20
 
 ?>

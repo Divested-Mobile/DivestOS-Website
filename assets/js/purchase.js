@@ -1,6 +1,7 @@
+var paymentAmount = 0;
+
 function checkout() {
-	var paymentAmount = 500;
-	var paymentDescription = 'DivestOS Mobile Download'
+	var paymentDescription = 'DivestOS Device Donation'
 	var handler = StripeCheckout.configure({
 		key: 'pk_live_51IoDKvI3AVrWM0J0G0vPOlLifd4QLgVLQ2U4ExmBr7bhIclNwS3docWLwPSMCb2GdaZIDcj1mwoD6xSAMW8azhSU00ShMorJp4',
 		locale: 'auto',
@@ -35,7 +36,10 @@ function checkout() {
 
 function markDonated() {
 	document.getElementById("lblThanks").hidden = false;
+	document.getElementById("radPriceOne").disabled = true;
+	document.getElementById("radPriceFive").disabled = true;
 	document.getElementById("radPriceTen").disabled = true;
+	document.getElementById("radPriceFifteen").disabled = true;
 	document.getElementById("radPriceFree").click();
 	document.getElementById("lblPriceFree").textContent = "Donated";
 	document.getElementById("radPriceFree").disabled = true;
@@ -68,8 +72,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	for(var c = 0; c < arrRadPrice.length; c++) {
 		arrRadPrice[c].onclick = function() {
 			if(this.id=='radPriceFree') {
+				paymentAmount = 0;
 				updateDownloadButtons("Download", "value");
-			} else {
+			} else if(this.id=='radPriceOne') {
+				paymentAmount = 100;
+				updateDownloadButtons("Donate", "javascript:checkoutProxy()");
+			} else if(this.id=='radPriceFive') {
+				paymentAmount = 500;
+				updateDownloadButtons("Donate", "javascript:checkoutProxy()");
+			} else if(this.id=='radPriceTen') {
+				paymentAmount = 1000;
+				updateDownloadButtons("Donate", "javascript:checkoutProxy()");
+			} else if(this.id=='radPriceFifteen') {
+				paymentAmount = 1500;
 				updateDownloadButtons("Donate", "javascript:checkoutProxy()");
 			}
 		}
@@ -78,5 +93,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	//Unhide
 	document.getElementById("nameYourPrice").classList.remove("hidden");
 	//Set default
-	document.getElementById("radPriceTen").click();
+	document.getElementById("radPriceFive").click();
 });
