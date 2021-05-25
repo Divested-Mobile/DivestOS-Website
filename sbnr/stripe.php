@@ -2,8 +2,8 @@
 
 $handler = true;
 include "config.php";
-include "stripe_private.php";
 if($SBNR_STRIPE_ENABLED === false) { exit; }
+include "stripe_private.php";
 
 include "security.php";
 include "utils.php";
@@ -16,7 +16,7 @@ $paymentAmount = noHTML($_POST['PAYMENT_AMOUNT']);
 $paymentDescription = noHTML(base64_decode(urldecode($_POST['PAYMENT_DESCRIPTION'])));
 
 if(isset($csrfToken, $paymentToken, $paymentAmount, $paymentDescription)) {
-	if($csrfToken === $_SESSION['SBNR_CSRF_TOKEN'] && !isLikelyBot() && $paymentAmount <= $SBNR_STRIPE_MAX_CHARGE) {
+	if($csrfToken === $_SESSION['SBNR_CSRF_TOKEN'] && !isLikelyBot() && $paymentAmount > 0 && $paymentAmount <= $SBNR_STRIPE_MAX_CHARGE) {
 		require_once('stripe/init.php');
 		\Stripe\Stripe::setApiKey($SBNR_STRIPE_KEY_PRIVATE);
 		try {
@@ -50,7 +50,6 @@ if(isset($csrfToken, $paymentToken, $paymentAmount, $paymentDescription)) {
 			print("Uh oh!");
 		}
 	}
-
 }
 
 $_SESSION['SBNR_CSRF_TOKEN'] = bin2hex(random_bytes(32)); //Always renew the token to prevent brute forcing
