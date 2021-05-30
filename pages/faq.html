@@ -4,7 +4,8 @@
 						<h4 id="recommendPhone">What phone do you recommend?<a href="#recommendPhone">¶</a></h4>
 						<p>For a phone that 'just works', we recommend basically any Pixel or Nexus device. They are easy to unlock and receive fantastic support from the community.</p>
 						<ul>
-							<li>Pixel 3/a: Highest security and performance (note: untested)</li>
+							<li>Pixel 4: Highest security and performance (note: untested)</li>
+							<li>Pixel 3: High security and performance</li>
 							<li>Essential Phone: An easier to obtain Pixel 2 alternative ($70-$120)</li>
 							<li>Pixel 1: Solid price/performance ($60-$100)</li>
 							<li>Nexus 4: Extreme budget ($30-$50)</li>
@@ -92,15 +93,6 @@
 
 						<h4 id="dns">Why haven't you completely changed the default DNS servers?<a href="#dns">¶</a></h4>
 						<p>Currently Cloudflare (after trying many other public resolvers) is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
-
-						<h4 id="swiftshader">Why haven't you replaced the graphics drivers with SwiftShader (like Android-x86)?<a href="#swiftshader">¶</a></h4>
-						<p>The deblobber actually has basic support for switching to SwiftShader. However we've been unable to successfully boot a device. We will need to reach out to the Android-x86 team and ask for help around that.</p>
-
-						<h4 id="llvmpipe">Why haven't you replaced the graphics drivers with mesa/llvmpipe (like Replicant)?<a href="#llvmpipe">¶</a></h4>
-						<p>Because we haven't figured that out yet. If someone from Replicant (or anywhere else) wants to wrap those patches up in a nice tidy ball, that'd be much appreciated.</p>
-
-						<h4 id="freedreno">Why haven't you replaced the Adreno drivers with freedreno?<a href="#freedreno">¶</a></h4>
-						<p>Because all of the devices use kernels that either don't support or include an outdated version of freedreno.</p>
 
 						<h4 id="rootInclusion">Why isn't root included?<a href="#rootInclusion">¶</a></h4>
 						<p>You do not need root access on your daily driver cell phone.</p>

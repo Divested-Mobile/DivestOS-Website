@@ -274,8 +274,8 @@ echo 5 > nex/status-11.0;
 echo -e "Exploit\nNot Unlockable\nNo" > nex/bootloader_information;
 
 echo "OnePlus 2" > oneplus2/friendlyName;
-echo 2 > oneplus2/status-17.1;
-echo -e "Fastboot\nYes, Untested\nNo" > oneplus2/bootloader_information;
+echo 4 > oneplus2/status-17.1;
+echo -e "Fastboot\nYes, but irreversible\nNo" > oneplus2/bootloader_information;
 
 echo "OnePlus 3/T" > oneplus3/friendlyName;
 echo 0 > oneplus3/status-18.1;
@@ -330,7 +330,7 @@ echo 2 > z00t/status-14.1;
 echo -e "Fastboot (ASUS)\nNo\nNo" > z00t/bootloader_information;
 
 echo "ZUK Z2 Plus" > z2_plus/friendlyName;
-echo 2 > z2_plus/status-17.1;
+echo 0 > z2_plus/status-17.1;
 echo -e "Fastboot (ZUK)\nUnknown\nYes" > z2_plus/bootloader_information;
 
 echo "ASUS Zenfone 3" > zenfone3/friendlyName;
