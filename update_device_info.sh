@@ -113,8 +113,8 @@ echo -e "Fastboot\nUnknown\nYes" > enchilada/bootloader_information;
 echo -e "Fastboot\nUnknown\nYes" > fajita/bootloader_information;
 
 echo "Nextbit Robin" > ether/friendlyName;
-echo 2 > ether/status-15.1;
-echo 2 > ether/status-18.1;
+echo 4 > ether/status-15.1;
+echo 0 > ether/status-18.1;
 echo -e "Fastboot\nUnknown\nNo" > ether/bootloader_information;
 
 echo "Google Nexus 7 [2013]" > flo/friendlyName;
@@ -274,7 +274,7 @@ echo 5 > nex/status-11.0;
 echo -e "Exploit\nNot Unlockable\nNo" > nex/bootloader_information;
 
 echo "OnePlus 2" > oneplus2/friendlyName;
-echo 4 > oneplus2/status-17.1;
+echo 5 > oneplus2/status-17.1;
 echo -e "Fastboot\nYes, but irreversible\nNo" > oneplus2/bootloader_information;
 
 echo "OnePlus 3/T" > oneplus3/friendlyName;
