@@ -1,6 +1,6 @@
 				<div class="card fluid" id="about">
 					<h2>About<a href="#about">¶</a></h2>
-					<p>DivestOS is a passion project maintained solely by Tad (SkewedZeppelin) since 2014. It has many goals, but primarily: prolonging the life-span of discontinued devices, enhancing user privacy, and providing a modest increase of security where/when possible. The devices DivestOS supports are not fully free (as-in-freedom) and there are many security issues we cannot solve (proprietary blobs/firmware). We are also fully aware of our "off-the-rails" approach, however mostly attribute it to the sheer effectiveness provided by <a href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank" rel="nofollow noopener noreferrer">"80%"</a> solutions instead of mulling around and not doing anything. We genuinely believe that what DivestOS offers is something unlike any other project, especially with regards to the project scope and our persistence.</p>
+					<p>DivestOS is a passion project maintained solely by Tad (SkewedZeppelin) since <a href="index.php?page=history">2014</a>. It has many goals, but primarily: prolonging the life-span of discontinued devices, enhancing user privacy, and providing a modest increase of security where/when possible. The devices DivestOS supports are not fully free (as-in-freedom) and there are many security issues we cannot solve (proprietary blobs/firmware). We are also fully aware of our "off-the-rails" approach, however mostly attribute it to the sheer effectiveness provided by <a href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank" rel="nofollow noopener noreferrer">"80%"</a> solutions instead of mulling around and not doing anything. We genuinely believe that what DivestOS offers is something unlike any other project, especially with regards to the project scope and our persistence. We hope you find some benefit in our fruits, and remind you to have fun!</p>
 					<div class="section" id="community">
 						<h3>Community<a href="#community">¶</a></h3>
 						<p>Here are some places you can chat with other DivestOS users:</p>
@@ -16,7 +16,20 @@
 						<p>Please consider contributing in the form of testing, promoting, bug reports, code review, merge requests, translations, mirrors, and financially to ensure the project's longevity. Information to financially support the other projects that make DivestOS possible is also listed.</p>
 						<ul>
 							<li>DivestOS: <a href="bitcoin:bc1qkjtp2k7cc4kuv8k9wjdlxkeuqczenrpv5mwasl">bc1qkjtp2k7cc4kuv8k9wjdlxkeuqczenrpv5mwasl (BTC)</a></li>
-							<br>
+							<div class="section hidden" id="nameYourPrice">
+								<p>Via Stripe:
+								<input type="radio" id="radPriceOne" name="radPrice">
+								<label for="radPriceOne">$1</label>
+								<input type="radio" id="radPriceFive" name="radPrice">
+								<label for="radPriceFive">$5</label>
+								<input type="radio" id="radPriceTen" name="radPrice">
+								<label for="radPriceTen">$10</label>
+								<input type="radio" id="radPriceFifteen" name="radPrice">
+								<label for="radPriceFifteen">$15</label>
+								<a href="javascript:checkoutProxy()" class="button primary" id="btnDonate">Donate</a></p>
+							</div>
+							<p id="lblThanks" hidden>Thank you for your contribution!</p>
+							<hr>
 							<li>LineageOS: <a href="https://lineageos.org/about/" target="_blank" rel="nofollow noopener noreferrer">12aDckQC6YHEn75zReQWxXFCivBBNXfRjM (BTC)</a> / <a href="https://www.patreon.com/LineageOS" target="_blank" rel="nofollow noopener noreferrer">Patreon</a> / <a href="https://www.paypal.me/LineageOS" target="_blank" rel="nofollow noopener noreferrer">PayPal</a></li>
 							<li>GrapheneOS: <a href="https://grapheneos.org/donate" target="_blank" rel="nofollow noopener noreferrer">bc1qy6fhm8p00p3h3w5rrcp2h2wejeeqn7x6y7xs2p (BTC)</a> / <a href="https://github.com/sponsors/thestinger" target="_blank" rel="nofollow noopener noreferrer">GitHub Sponsors</a> / <a href="https://paypal.me/DanielMicay" target="_blank" rel="nofollow noopener noreferrer">PayPal</a></li>
 							<li>F-Droid: <a href="https://f-droid.org/en/donate/" target="_blank" rel="nofollow noopener noreferrer">15u8aAPK4jJ5N8wpWJ5gutAyyeHtKX5i18 (BTC)</a> / <a href="https://opencollective.com/f-droid" target="_blank" rel="nofollow noopener noreferrer">Open Collective</a> / <a href="https://liberapay.com/F-Droid-Data" target="_blank" rel="nofollow noopener noreferrer">Liberapay</a></li>
@@ -29,7 +42,7 @@
 						<p>The following do not necessarily have any direct involvement in DivestOS. If you would like to be added or removed please create an issue on either the GitHub or GitLab website repository.</p>
 						<ul>
 							<li><a href="https://en.wikipedia.org/wiki/Google" target="_blank" rel="nofollow noopener noreferrer">Google</a> and the <a href="https://source.android.com" target="_blank" rel="nofollow noopener noreferrer">Android Open Source Project</a></li>
-							<li>Distributions: <a href="https://lineageos.org" target="_blank" rel="nofollow noopener noreferrer">LineageOS</a> (and <a href="https://wiki.lineageos.org/contributors.html" target="_blank" rel="nofollow noopener noreferrer">contributors</a>), CyanogenMod, <a href="https://github.com/GrapheneOS" target="_blank" rel="nofollow noopener noreferrer">GrapheneOS</a>, <a href="https://github.com/AndroidHardeningArchive" target="_blank" rel="nofollow noopener noreferrer">AndroidHardening</a>, <a href="https://www.codeaurora.org" target="_blank" rel="nofollow noopener noreferrer">Code Aurora Forum</a>, <a href="https://calyxos.org/" target="_blank" rel="nofollow noopener noreferrer">CalyxOS</a></li>
+							<li>Distributions: <a href="https://lineageos.org" target="_blank" rel="nofollow noopener noreferrer">LineageOS</a> (and <a href="https://wiki.lineageos.org/contributors.html" target="_blank" rel="nofollow noopener noreferrer">contributors</a>), <a href="https://web.archive.org/web/20161222043753/http://cyanogenmod.org/" target="_blank" rel="nofollow noopener noreferrer">CyanogenMod</a>, <a href="https://github.com/GrapheneOS" target="_blank" rel="nofollow noopener noreferrer">GrapheneOS</a>, <a href="https://github.com/AndroidHardeningArchive" target="_blank" rel="nofollow noopener noreferrer">AndroidHardening</a>, <a href="https://www.codeaurora.org" target="_blank" rel="nofollow noopener noreferrer">Code Aurora Forum</a>, <a href="https://calyxos.org/" target="_blank" rel="nofollow noopener noreferrer">CalyxOS</a></li>
 							<li>Kernel: <a href="https://kernel.org" target="_blank" rel="nofollow noopener noreferrer">Linux</a>, <a href="https://www.redhat.com/en/about/company" target="_blank" rel="nofollow noopener noreferrer">Red Hat</a>, <a href="https://www.cip-project.org/about" target="_blank" rel="nofollow noopener noreferrer">Civil Infrastructure Platform</a>, Kevin Haggerty (haggertk), Corinna Vinschen (cygwin), <a href="https://github.com/android-linux-stable" target="_blank" rel="nofollow noopener noreferrer">Nathan Chancellor (nathanchance)</a></li>
 							<li>Apps: <a href="https://f-droid.org" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a> (and community), <a href="https://github.com/microG" target="_blank" rel="nofollow noopener noreferrer">microG</a> (mar-v-in), <a href="https://github.com/SilenceIM/Silence" target="_blank" rel="nofollow noopener noreferrer">Silence</a>, <a href="https://gitlab.com/relan" target="_blank" rel="nofollow noopener noreferrer">Relan</a>, <a href="https://opencamera.sourceforge.io" target="_blank" rel="nofollow noopener noreferrer">Mark Harman</a>, <a href="https://github.com/vanilla-music/vanilla" target="_blank" rel="nofollow noopener noreferrer">Vanilla Music</a>, <a href="https://simplemobiletools.com" target="_blank" rel="nofollow noopener noreferrer">Tibor Kaputa</a>, <a href="https://github.com/M66B" target="_blank" rel="nofollow noopener noreferrer">Marcel Bokhorst</a>, <a href="https://github.com/n76/DejaVu" target="_blank" rel="nofollow noopener noreferrer">Tod Fitch</a>, <a href="https://github.com/stevesoltys/backup" target="_blank" rel="nofollow noopener noreferrer">Steve Soltys</a>, <a href="https://github.com/dschuermann" target="_blank" rel="nofollow noopener noreferrer">Dominik Schürmann</a>, <a href="https://www.mozilla.org/en-US/foundation" target="_blank" rel="nofollow noopener noreferrer">Mozilla Foundation</a></li>
 							<li>ASB Backports: Basil Gello (vasek.gello), Kevin Haggerty (haggertk), Markus (MSe1969), syphyr, Tim Schumacher (timschumi), Wolf-Dieter Enders (grzwolf1)</li>
@@ -101,3 +114,5 @@
 						</ul>
 					</div>
 				</div>
+				<script defer type="text/javascript" src="/assets/js/purchase.js" integrity="sha384-OAZV2KpYfERtCMcmejXpc54p2QROsxz6JCMKdufjS6/oxFuEpapPGnxwUd6uz6dW"></script>
+				<script defer type="text/javascript" src="/assets/js/donate.js" integrity="sha384-9OwvarR+vLR0zjFwvP6JiSGUBx4NBEd1dVbVMc64m1f126BfJOv8Y1B5ZnEsQiNf"></script>
