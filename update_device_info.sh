@@ -326,7 +326,7 @@ echo 2 > yellowstone/status-16.0;
 echo -e "Fastboot\nYes, Untested\nNo" > yellowstone/bootloader_information;
 
 echo "ASUS Zenfone 2 Laser" > z00t/friendlyName;
-echo 2 > z00t/status-14.1;
+echo 2 > z00t/status-15.1;
 echo -e "Fastboot (ASUS)\nNo\nNo" > z00t/bootloader_information;
 
 echo "ZUK Z2 Plus" > z2_plus/friendlyName;
