@@ -14,7 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p amber angler apollo avicii axon7 bacon beryllium blueline bonito bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul i9100 i9300 i9305 jfltexx kipper klte m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 rs988 sailfish sargo shamu star2lte starlte taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p amber angler apollo avicii axon7 bacon beryllium blueline bonito bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul i9100 i9300 i9305 jfltexx kipper klte m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Yandex Phone" > amber/friendlyName;
 echo 2 > amber/status-17.1;
@@ -244,7 +244,7 @@ echo -e "Fastboot\nTested Working\nNo" > toroplus/bootloader_information;
 
 echo "Google Nexus 4" > mako/friendlyName;
 echo 0 > mako/status-17.1;
-echo 5 > mako/status-18.1;
+echo 0 > mako/status-18.1;
 echo -e "Fastboot\nTested Working\nNo" > mako/bootloader_information;
 
 echo "Google Nexus 10" > manta/friendlyName;
@@ -288,6 +288,14 @@ echo -e "Fastboot (Motorola)\nNo*\nNo" > osprey/bootloader_information;
 echo "F(x)tec Pro¹" > pro1/friendlyName;
 echo 2 > pro1/status-18.1;
 echo -e "Fastboot\nUnknown\nYes" > pro1/bootloader_information;
+
+echo "Galaxy S4 Mini INTL (3G)" > serrano3gxx/friendlyName;
+echo 2 > serrano3gxx/status-18.1;
+echo -e "Heimdall\nNot Unlockable\nNo" > serrano3gxx/bootloader_information;
+
+echo "Galaxy S4 Mini INTL (LTE)" > serranoltexx/friendlyName;
+echo 2 > serranoltexx/status-18.1;
+echo -e "Heimdall\nNot Unlockable\nNo" > serranoltexx/bootloader_information;
 
 echo "Google Nexus 6" > shamu/friendlyName;
 echo 4 > shamu/status-15.1;
