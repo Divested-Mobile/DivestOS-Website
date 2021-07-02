@@ -60,7 +60,8 @@ sudo apt clean;</code></pre>
 firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
 						<h4>Checking out the code</h4>
 						<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a separate drive from your system drive.</p>
-						<pre><code>git clone https://gitlab.com/divested-mobile/divestos-build.git DivestOS;
+						<pre><code>umask 0022;
+git clone https://gitlab.com/divested-mobile/divestos-build.git DivestOS;
 cd DivestOS;
 git submodule update --init --recursive;
 mkdir -p Build/LineageOS-17.1/.repo/local_manifests Builds Signing_Keys .Signing_Keys;
