@@ -29,7 +29,7 @@ function getContactForm($submitLabel = 'Send', $messageEnabled = false, $message
 	include "contact.html";
 }
 
-function getBaseUrl($whitelisted, $whitelistedHosts) {
+function getBaseUrl($allowlisted, $allowlistedHosts) {
 	$accessingDomain = noHTML($_SERVER['SERVER_NAME']);
 	$accessingDomain = str_replace("&period;", ".", $accessingDomain);
 	$baseURL = "";
@@ -42,8 +42,8 @@ function getBaseUrl($whitelisted, $whitelistedHosts) {
 	} else {
 		$baseURL .= "http://";
 	}
-	if($whitelisted) {
-		if(in_array($accessingDomain, $whitelistedHosts)) {
+	if($allowlisted) {
+		if(in_array($accessingDomain, $allowlistedHosts)) {
 			$baseURL .= $accessingDomain;
 			$baseURL .= $port;
 			return $baseURL;

@@ -38,9 +38,9 @@ if(checkString($base, 2, 24, 1, 0, 0) && checkString($file, 3, 128, 2, 2, 0)) {
 
 function getMirror() {
 	if($GLOBALS['numMirrors'] == 0) {
-		return getBaseUrl(true, $GLOBALS['SBNR_DOMAIN_WHITELIST']) . "/builds/";
+		return getBaseUrl(true, $GLOBALS['SBNR_DOMAIN_ALLOWLIST']) . "/builds/";
 	}
-	return "https://mirror" . random_int(0, $GLOBALS['numMirrors']) . "." . $_SERVER['SERVER_NAME'] . "/"; //XXX: ADD WHITELIST CHECK HERE TOO (prefix support to getBaseURL?)
+	return "https://mirror" . random_int(0, $GLOBALS['numMirrors']) . "." . $_SERVER['SERVER_NAME'] . "/"; //XXX: ADD ALLOWLIST CHECK HERE TOO (prefix support to getBaseURL?)
 }
 
 ?>

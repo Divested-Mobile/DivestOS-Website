@@ -2,7 +2,7 @@
 
 //General
 $SBNR_DOMAIN_PRIMARY = "divestos.org";
-$SBNR_DOMAIN_WHITELIST = array($SBNR_DOMAIN_PRIMARY, "divestoseb5nncsydt7zzf5hrfg44md4bxqjs5ifcv4t7gt7u6ohjyyd.onion", "6sdlxbqgcxdbkvysoir2qvqqs5ro3fxgyl3phvuphcdyklv7rg57jhid.onion");
+$SBNR_DOMAIN_ALLOWLIST = array($SBNR_DOMAIN_PRIMARY, "divestoseb5nncsydt7zzf5hrfg44md4bxqjs5ifcv4t7gt7u6ohjyyd.onion", "6sdlxbqgcxdbkvysoir2qvqqs5ro3fxgyl3phvuphcdyklv7rg57jhid.onion");
 $SBNR_GEN_ONE_PAGE = false;
 $SBNR_GEN_DARKMODE = false;
 $SBNR_CAPTCHA_STANDALONE_ENABLED = false;
