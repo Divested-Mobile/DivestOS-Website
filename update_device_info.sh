@@ -274,7 +274,7 @@ echo 5 > nex/status-11.0;
 echo -e "Exploit\nNot Unlockable\nNo" > nex/bootloader_information;
 
 echo "OnePlus 2" > oneplus2/friendlyName;
-echo 5 > oneplus2/status-17.1;
+echo 0 > oneplus2/status-17.1;
 echo -e "Fastboot\nYes, but irreversible\nNo" > oneplus2/bootloader_information;
 
 echo "OnePlus 3/T" > oneplus3/friendlyName;
