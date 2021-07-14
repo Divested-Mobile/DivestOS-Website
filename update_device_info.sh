@@ -243,7 +243,6 @@ echo -e "Fastboot\nYes, Untested\nNo" > toro/bootloader_information;
 echo -e "Fastboot\nTested Working\nNo" > toroplus/bootloader_information;
 
 echo "Google Nexus 4" > mako/friendlyName;
-echo 0 > mako/status-17.1;
 echo 0 > mako/status-18.1;
 echo -e "Fastboot\nTested Working\nNo" > mako/bootloader_information;
 
