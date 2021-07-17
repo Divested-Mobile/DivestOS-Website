@@ -63,22 +63,23 @@ firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
 git clone https://gitlab.com/divested-mobile/divestos-build.git DivestOS;
 cd DivestOS;
 git submodule update --init --recursive;
-mkdir -p Build/LineageOS-17.1/.repo/local_manifests Builds Signing_Keys .Signing_Keys;
+mkdir -p Build/LineageOS-18.1/.repo/local_manifests Builds Signing_Keys .Signing_Keys;
 gocryptfs -init .Signing_Keys;
 gocryptfs .Signing_Keys/ Signing_Keys/;
-cd Build/LineageOS-17.1;
-cat ../../Manifests/Manifest_LAOS-17.1.xml > .repo/local_manifests/local_manifest.xml;
-repo init -u https://github.com/LineageOS/android.git -b lineage-17.1;
+nano Scripts/init.sh; #Choose your options and update paths
+cd Build/LineageOS-18.1;
+cat ../../Manifests/Manifest_LAOS-18.1.xml > .repo/local_manifests/local_manifest.xml;
+repo init -u https://github.com/LineageOS/android.git -b lineage-18.1;
 repo sync; #This part will take a while
 
 #Some systems have python3 set as default, the build scripts require python2
-virtualenv venv --python=python2;
+virtualenv venv --python=python2; #not necessary for 18.1 and higher
 
-cd ../..
-nano Scripts/init.sh; #Choose your options and update paths
 
 #Generate signing keys
+source ../../Scripts/init.sh;
 nano Generate_Signing_Keys.sh; #Update description
+source build/envsetup.sh && breakfast lineage_sailfish-user && make -j20 generate_verity_key; #edit device if not available, can be any
 sh Generate_Signing_Keys.sh $device; #repeat as needed for other devices
 </code></pre>
 					<h4>Setting up ccache (Optional)</h4>
@@ -108,13 +109,13 @@ ccache -M 128GB; #Optionally set a size limit</code></pre>
 					<div class="section" id="compile">
 						<h3>Building<a href="#compile">¶</a></h3>
 						<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, and you may need to use a Python virtualenv.</p>
-						<pre><code>cd Build/LineageOS-17.1;
-source venv/bin/activate; #Only for python3 default systems
+						<pre><code>cd Build/LineageOS-18.1;
+source venv/bin/activate; #Only for python3 default systems, not needed for 18.1 and higher
 source ../../Scripts/init.sh;
 resetWorkspace;
 patchWorkspace;
 buildDevice [device]; #or buildAll for all supported devices</code></pre>
-						<p>Afterwards you should have flashable zips located in out/target/product/[device]. You should copy them to /Builds</p>
+						<p>Afterwards you should have flashable zips located in $DOS_BUILDS</p>
 					</div>
 					<div class="section" id="install">
 						<h3>Installing<a href="#install">¶</a></h3>
