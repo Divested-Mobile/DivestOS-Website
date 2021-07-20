@@ -14,7 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p amber angler apollo avicii axon7 bacon beryllium blueline bonito bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul i9100 i9300 i9305 jfltexx kipper klte m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Yandex Phone" > amber/friendlyName;
 echo 2 > amber/status-17.1;
@@ -23,6 +23,10 @@ echo -e "Fastboot (Yandex)\nUnknown\nYes" > amber/bootloader_information;
 echo "Google Nexus 6P" > angler/friendlyName;
 echo 0 > angler/status-15.1;
 echo -e "Fastboot\nTested Working\nYes" > angler/bootloader_information;
+
+echo "Razer Phone 2" > aura/friendlyname;
+echo 2 > aura/status-18.1;
+echo -e "Fastboot\nUnknown\nYes" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
 echo 2 > avicii/status-17.1;
@@ -131,6 +135,7 @@ echo -e "Fastboot\nYes, Untested\nNo" > flounder/bootloader_information;
 
 echo "Fairphone 2" > fp2/friendlyName;
 echo 0 > fp2/status-17.1;
+echo 4 > fp2/status-18.1;
 echo -e "Pre-Unlocked\nUnknown\nNo" > fp2/bootloader_information;
 
 echo "Fairphone 3" > fp3/friendlyName;
@@ -152,7 +157,6 @@ echo -e "Fastboot\nWill Brick\nNo" > tilapia/bootloader_information;
 
 echo "OnePlus 7 Pro" > guacamole/friendlyName;
 echo "OnePlus 7" > guacamoleb/friendlyName;
-echo 2 > guacamole/status-17.1;
 echo 2 > guacamole/status-18.1;
 echo 2 > guacamoleb/status-17.1;
 echo -e "Fastboot\nUnknown\nYes" > guacamole/bootloader_information;
@@ -199,6 +203,13 @@ echo -e "Heimdall\nNot Unlockable\nNo" > herolte/bootloader_information;
 echo "HTC One M9" > himaul/friendlyName;
 echo 2 > himaul/status-14.1;
 echo -e "Fastboot (HTC)\nNo*\nNo" > himaul/bootloader_information;
+
+echo "OnePlus 7T Pro" > hotdog/friendlyName;
+echo "OnePlus 7T" > hotdogb/friendlyName;
+echo 2 > hotdog/status-18.1;
+echo 2 > hotdogb/status-18.1;
+echo -e "Fastboot\nUnknown\nYes" > hotdog/bootloader_information;
+echo -e "Fastboot\nUnknown\nYes" > hotdogb/bootloader_information;
 
 echo "Samsung Galaxy S2" > i9100/friendlyName;
 echo 1 > i9100/status-14.1;
