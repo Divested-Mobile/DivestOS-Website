@@ -24,7 +24,7 @@ echo "Google Nexus 6P" > angler/friendlyName;
 echo 0 > angler/status-15.1;
 echo -e "Fastboot\nTested Working\nYes" > angler/bootloader_information;
 
-echo "Razer Phone 2" > aura/friendlyname;
+echo "Razer Phone 2" > aura/friendlyName;
 echo 2 > aura/status-18.1;
 echo -e "Fastboot\nUnknown\nYes" > aura/bootloader_information;
 
@@ -61,7 +61,7 @@ echo -e "Fastboot\nYes, Untested\nYes" > sargo/bootloader_information;
 
 echo "Google Nexus 5X" > bullhead/friendlyName;
 echo 0 > bullhead/status-15.1;
-echo -e "Fastboot\nYes, Untested\nYes" > bullhead/bootloader_information;
+echo -e "Fastboot\nTested Working\nYes" > bullhead/bootloader_information;
 
 echo "OnePlus 5" > cheeseburger/friendlyName;
 echo "OnePlus 5T" > dumpling/friendlyName;
@@ -322,9 +322,9 @@ echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 echo "Google Pixel 2 XL" > taimen/friendlyName;
 echo "Google Pixel 2" > walleye/friendlyName;
 echo 5 > taimen/status-18.1;
-echo 4 > walleye/status-18.1;
+echo 0 > walleye/status-18.1;
 echo -e "Fastboot\nTested Working\nYes" > taimen/bootloader_information;
-echo -e "Fastboot\nYes, Untested\nYes" > walleye/bootloader_information;
+echo -e "Fastboot\nTested Working\nYes" > walleye/bootloader_information;
 
 echo "Amazon Kindle Fire HDX 7" > thor/friendlyName;
 echo 0 > thor/status-14.1;
