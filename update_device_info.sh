@@ -117,7 +117,7 @@ echo -e "Fastboot\nUnknown\nYes" > enchilada/bootloader_information;
 echo -e "Fastboot\nUnknown\nYes" > fajita/bootloader_information;
 
 echo "Nextbit Robin" > ether/friendlyName;
-echo 4 > ether/status-15.1;
+echo 0 > ether/status-15.1;
 echo 0 > ether/status-18.1;
 echo -e "Fastboot\nUnknown\nNo" > ether/bootloader_information;
 
@@ -140,6 +140,7 @@ echo -e "Pre-Unlocked\nUnknown\nNo" > fp2/bootloader_information;
 
 echo "Fairphone 3" > fp3/friendlyName;
 echo 0 > fp3/status-17.1;
+echo 4 > fp3/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > fp3/bootloader_information;
 
 echo "Google Nexus Player" > fugu/friendlyName;
@@ -240,7 +241,7 @@ echo -e "Fastboot (HTC)\nNo*\nNo" > m7/bootloader_information;
 
 echo "HTC One M8" > m8/friendlyName;
 echo 0 > m8/status-17.1;
-echo 4 > m8/status-18.1;
+echo 0 > m8/status-18.1;
 echo -e "Fastboot (HTC)\nNo*\nNo" > m8/bootloader_information;
 
 echo "Samsung Galaxy Nexus GSM" > maguro/friendlyName;
@@ -300,11 +301,11 @@ echo 2 > pro1/status-18.1;
 echo -e "Fastboot\nUnknown\nYes" > pro1/bootloader_information;
 
 echo "Galaxy S4 Mini INTL (3G)" > serrano3gxx/friendlyName;
-echo 2 > serrano3gxx/status-18.1;
+echo 0 > serrano3gxx/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > serrano3gxx/bootloader_information;
 
 echo "Galaxy S4 Mini INTL (LTE)" > serranoltexx/friendlyName;
-echo 2 > serranoltexx/status-18.1;
+echo 0 > serranoltexx/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > serranoltexx/bootloader_information;
 
 echo "Google Nexus 6" > shamu/friendlyName;
