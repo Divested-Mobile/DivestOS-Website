@@ -72,7 +72,7 @@ createTable flo LineageOS-15.1 asus/flo google/msm;
 createTable flounder LineageOS-15.1 htc/flounder htc/flounder;
 createTable flox LineageOS-18.1 asus/flox google/msm;
 createTable FP2 LineageOS-18.1 fairphone/FP2 fairphone/msm8974;
-createTable FP3 LineageOS-17.1 fairphone/FP3 fairphone/sdm632;
+createTable FP3 LineageOS-18.1 fairphone/FP3 fairphone/sdm632;
 createTable fugu LineageOS-15.1 asus/fugu asus/fugu;
 createTable fugu LineageOS-16.0 asus/fugu asus/fugu;
 createTable fugu LineageOS-17.1 asus/fugu asus/fugu;
