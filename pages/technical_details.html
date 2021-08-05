@@ -117,21 +117,21 @@
 							<li>N: Re-enable doze on devices without gms</li>
 							<li>Disable DropBox internal logging service</li>
 							<li>Notify the user if their location is requested via SUPL</li>
-							<li>Q/R: Skip strict update compatibility checks</li>
-							<li>Q/R: Disable partition fingerprint mismatch warnings</li>
+							<li>!N: Skip strict update compatibility checks</li>
+							<li>!N: Disable partition fingerprint mismatch warnings</li>
 							<li>Decrease the strong auth prompt timeout to occur more often</li>
 							<li>N: Cherrypick 248599: Make SET_TIME_ZONE permission match SET_TIME</li>
 							<li>N: Allow reducing resolution to save power</li>
-							<li>MICROG_INCLUDED=FULL: Allow packages to spoof their signature</li>
-							<li>MICROG_INCLUDED=FULL: Restrict signature spoofing to system apps signed with the platform key</li>
+							<!--<li>MICROG_INCLUDED=FULL: Allow packages to spoof their signature</li>
+							<li>MICROG_INCLUDED=FULL: Restrict signature spoofing to system apps signed with the platform key</li>-->
 							<li>Change the default DNS servers</li>
 							<li>Disable/reduce functionality of various ad/analytics libraries</li>
 							<li>Always restrict access to Build.SERIAL (GrapheneOS)</li>
 							<li>Don't grant location permission to system browsers (GrapheneOS)</li>
-							<li>Allow SystemUI to directly manage Bluetooth/WiFi (GrapheneOS)</li>
-							<li>P/Q: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
+							<li>P/Q/R: Allow SystemUI to directly manage Bluetooth/WiFi (GrapheneOS)</li>
+							<!--<li>P/Q: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>-->
 							<li>Don't send IMSI to SUPL (MSe1969)</li>
-							<li>Enable fingerprint lockout after five failed attempts (GrapheneOS)</li>
+							<li>!N: Enable fingerprint lockout after five failed attempts (GrapheneOS)</li>
 							<li>P/Q/R: Add Open Camera to aux camera allowlist</li>
 							<li>!MICROG_INCLUDED=FULL: Remove CompanionDeviceManager, used to support Android Wear</li>
 							<li>N/O/Q: Remove Osu, Automatic Wi-Fi connection non-sense</li>
@@ -139,10 +139,10 @@
 							<li>Set animation scales to 0.5</li>
 							<li>Various rebranding</li>
 						</ul>
-						<h5>android_frameworks_opt_net_ims</h5>
+						<!--<h5>android_frameworks_opt_net_ims</h5>
 						<ul>
 							<li>DEBLOBBER_REMOVE_IMS=true: Fix calling when IMS is removed</li>
-						</ul>
+						</ul>-->
 						<h5>android_hardware_ti_omap4</h5>
 						<ul>
 							<li>N: Fix camera on tuna</li>
@@ -164,15 +164,19 @@
 						<ul>
 							<li>N/O: Fix week rollover</li>
 						</ul>
-						<h5>android_libcore</h5>
+						<!--<h5>android_libcore</h5>
 						<ul>
 							<li>Q: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
-						</ul>
+						</ul>-->
 						<h5>android_lineage-sdk</h5>
 						<ul>
 							<li>Disable Weather</li>
 							<li>DEBLOBBER_REMOVE_AUDIOFX=true: Remove AudioFX</li>
 							<li>Various rebranding</li>
+						</ul>
+						<h5>android_build_Backgrounds</h5>
+						<ul>
+							<li>P: Cherrypick 308977: Optimize builtin wallpaper loading code</li>
 						</ul>
 						<h5>android_packages_apps_Contacts</h5>
 						<ul>
@@ -206,10 +210,10 @@
 						<ul>
 							<li>N: Fix an issue with Permission Review</li>
 						</ul>
-						<h5>android_packages_apps_PermissionController</h5>
+						<!--<h5>android_packages_apps_PermissionController</h5>
 						<ul>
 							<li>R: MICROG_INCLUDED=FULL: Allow packages to spoof their signature</li>
-						</ul>
+						</ul>-->
 						<h5>android_packages_apps_Settings</h5>
 						<ul>
 							<li>!R: Don't hide OEM unlock</li>
@@ -217,7 +221,7 @@
 							<li>O: Fix crashes when the PersistentDataBlockManager service isn't available</li>
 							<li>Add option to disable captive portal checks (MSe1969)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
-							<li>MICROG_INCLUDED=FULL: microG doesn't support Google Backup, hide the options</li>
+							<!--<li>MICROG_INCLUDED=FULL: microG doesn't support Google Backup, hide the options</li>-->
 							<li>Disable "Instant Apps"</li>
 							<li>Always reset animation scales to 0.5</li>
 							<li>Various rebranding</li>
@@ -318,8 +322,8 @@
 							<li>Note: these are per branch changes to the overlay itself, not *the* changes made by the overlay</li>
 							<li>Q/R: Don't include Etar</li>
 							<li>R: Remove all lookup provider overrides</li>
-							<li>MICROG_INCLUDED=FULL: Include microG</li>
-							<li>HOSTS_BLOCKING=false: Include blocker app</li>
+							<!--<li>MICROG_INCLUDED=FULL: Include microG</li>-->
+							<!--<li>HOSTS_BLOCKING=false: Include blocker app</li>-->
 							<li>P/Q/R: Add deny usb service, all of our kernels the necessary patch</li>
 							<li>R: PicoTTS needs work to compile on 18.1, use eSpeak-NG instead</li>
 						</ul>
