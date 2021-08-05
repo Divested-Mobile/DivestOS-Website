@@ -69,7 +69,7 @@
 						</ul>
 						<h5>android_bionic</h5>
 						<ul>
-							<li>GRAPHENE_MALLOC=true: P/Q: Use hardened_malloc (GrapheneOS)</li>
+							<li>P/Q: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
 						</ul>
 						<h5>android_build_make</h5>
 						<ul>
@@ -231,6 +231,7 @@
 						<h5>android_packages_apps_Trebuchet</h5>
 						<ul>
 							<li>Override the default workspace layouts</li>
+							<li>O: Disable predictive apps by default</li>
 						</ul>
 						<h5>android_packages_apps_Updater</h5>
 						<ul>
@@ -341,6 +342,7 @@
 							<li>Fix builds with GCC 10</li>
 							<li>Verified boot keys are copied into their respective kernels</li>
 							<li>Change the VM_MAX_READAHEAD value from the default 128KB to 512KB</li>
+							<li>Many CVE (and some hardening) patches are applied to each and every kernel as applicable determined by the CVE checker.</li>
 						</ul>
 						<h5>Automated mass changes to android_vendor_*</h5>
 						<ul>
