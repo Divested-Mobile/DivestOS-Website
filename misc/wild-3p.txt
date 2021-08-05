@@ -8,6 +8,7 @@ https://community.e.foundation/t/secure-browser-and-firefox-about-config/24320/4
 https://community.e.foundation/t/where-can-i-find-apk-file-for-e-app-store/19347/13
 https://forum.f-droid.org/t/best-foss-os-available/13240
 https://forum.f-droid.org/t/favourite-browsers-to-use/12604
+https://forum.f-droid.org/t/oneplus-3t-foss-rom/14352
 https://forum.f-droid.org/t/operating-system-which-aosp-to-choose/12090
 https://forum.kuketz-blog.de/viewtopic.php?t=7275
 https://forum.privacytools.io/t/discussion-divestos/4815
@@ -47,6 +48,7 @@ https://social.coop/@dazinism/105753423847502090
 https://social.coop/@dazinism/105882070773086714
 https://social.coop/@dazinism/105882110817475294
 https://social.tchncs.de/@kuketzblog/106686201849538888
+https://t.me/NoGoolag/4367
 https://www.android-hilfe.de/forum/root-custom-roms-modding-fuer-samsung-galaxy-s5.1567/was-haltet-ihr-von-divestos-oder-lineageos-auf-dem-galaxy-s5.982469.html
 https://www.ebay.de/itm/333976652955
 https://www.ebay.de/usr/ungoogled #"realtime malware scanner"

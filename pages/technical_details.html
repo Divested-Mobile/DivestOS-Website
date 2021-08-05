@@ -6,7 +6,7 @@
 						<h4 id="kernel">The Linux Kernel<a href="#kernel">¶</a></h4>
 						<p>The kernel is a necessary part of any operating system. It provides the essential core functionalities and allows the software to talk to the hardware.</p>
 						<p>Due to the extensive modifications made by device manufacturers and upstream hardware creators, the vanilla 'Mainline' kernel cannot be used. This means that most devices use kernels that are outdated and need to be manually maintained. Some kernels can be easily kept up to date by applying kernel version patches, but more often are modified so much that they need to instead have patches manually tweaked (backported) to work. Google, Qualcomm, and other manufacturers do actually do this work but they still need to be manually applied by device maintainers. Due to this most third party and even stock ROMs ship kernels that are littered with known vulnerabilities.</p>
-						<p>We however have created a program that eases tracking and applying of these patches massively. Once supplied with a sufficient amount of patches it can can be easily fed kernels and spit out scripts that will automatically apply all applicable patches. It is far from perfect, but with our current set of ~11,000 patches for ~2,550 CVEs it can typically apply between 30 and 300 patches to a kernel. The end result of this is that kernels are much more secure.<b>This is referred to below as our 'CVE patcher'.</b></p>
+						<p>We however have created a program that eases tracking and applying of these patches massively. Once supplied with a sufficient amount of patches it can can be easily fed kernels and spit out scripts that will automatically apply all applicable patches. It is far from perfect, but with our current set of ~11,000 patches for ~2,550 CVEs it can typically apply between 30 and 300 patches to a kernel. The end result of this is that kernels are much more secure. <b>This is referred to below as our 'CVE patcher'.</b></p>
 						<p>The kernel also sports many built-in security features, that most devices actually have disabled! We created a tool that automatically enables as many of these security features as possible. This is an easy way to have a noticeable increase in security with minimal effort. <b>This is referred to below as 'hardenDefconfig()'.</b></p>
 						<h4 id="android">Android Itself<a href="#android">¶</a></h4>
 						<p></p>
@@ -16,13 +16,13 @@
 					<div class="section" id="details">
 						<h3>The nitty gritty<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2018-06-27</p>
+						<p>Last updated: 2021-08-04</p>
 						<p>This needs to be updated since we've switched to using a proper vendor overlay for many changes</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
 							<li>The workspace is fully reset and synced before every full build</li>
-							<li>Upon starting a full build a thorough malware scan is performed using ClamAV</li>
+							<li>Upon starting buildAll a thorough malware scan is performed using ClamAV</li>
 
 						</ul>
 						<h4 id="patcher">The Patcher<a href="#patcher">¶</a></h4>
@@ -33,33 +33,319 @@
 							<li>Before executing any scripts in the workspace a quick malware scan is performed using ClamAV</li>
 							<li>Any cherry picks are applied</li>
 							<li>Patch.sh is executed, this applies many .patch files to various repositories and also calls many functions that make further changes</li>
-							<ul>
-								<li>enhanceLocation(), this hardens GPS configs</li>
-								<li>enableDexPreOpt(), this decreases boot time</li>
-								<li>enableForcedEncryption(), this ensures devices are encrypted by default</li>
-								<li>hardenDefconfig(), this enables many kernel security features</li>
-							</ul>
+							<li>Copy_Keys.sh is executed, this copies public keys into place to enable verified boot support</li>
 							<li>Defaults.sh is executed, this changes various default settings</li>
-							<li>Overclock.sh is executed, this applies overclocks to various kernels</li>
 							<li>Rebrand.sh is executed, this changes many LineageOS references over to DivestOS</li>
 							<li>Deblob.sh is executed, this removes many proprietary blob files from the following locations: device, kernel, vendor</li>
 							<li>Patch_CVE.sh is executed, this executes scripts created by the CVE patcher to automatically apply many CVE patches to all the kernels</li>
-							<li>Theme.sh (14.1 only) is executed, this changes the teal accents to orange ones</li>
+							<li>N: Theme.sh is executed, this changes the teal accents to orange ones</li>
 						</ul>
 						<h4 id="changes">The Changes<a href="#changes">¶</a></h4>
-						<p>We currently support LineageOS 11.0 (KitKat), 14.1 (Nougat), 15.1 (Oreo), 16.0 (Pie), and 17.1 (Q). We try our best to ensure parity between them, but 11.0 is missing a number of features and isn't recommended unless necessary.</p>
+						<p>We currently support 14.1 (Nougat), 15.1 (Oreo), 16.0 (Pie), 17.1 (Q), and 18.1 (R). We try our best to ensure parity between them. Basic support for 11.0 (KitKat) is available, but ignored below. The below is non-exhaustive and does not include the many changes made using the vendor overlay.</p>
 						<h5 id="includedApps">Included Apps<a href="#includedApps">¶</a></h5>
 						<ul>
-							<li>Mull: A browser hardened against trackers by default. Replaces AOSP Browser/LineageOS Jelly</li>
-							<li>F-Droid: An app catalogue for FOSS apps</li>
-							<!--<li>microG + Backends: Allows for using apps that depend on the proprietary Google Play Services and also battery efficient location lookups.</li>-->
-							<li>UnifiedNlp + Backends: Fused location provider that uses plugins to provide battery efficient location lookups.</li>
+							<li>F-Droid+PrivExt: An app catalogue for FOSS apps</li>
+							<li>Etar: An improved calendar app</li>
 							<li>FairEmail: A sane e-mail client</li>
-							<li>Offline Calendar: Allows creating calendars without an account</li>
 							<li>OpenCamera: An improved camera app. Replaces Camera2/Snap</li>
+							<!--<li>microG + Backends: Allows for using apps that depend on the proprietary Google Play Services and also battery efficient location lookups.</li>-->
+							<li>Mull: A browser hardened against trackers by default. Replaces AOSP Browser/LineageOS Jelly</li>
 							<li>Silence: An improved SMS app that allows for end-to-end encrypted messages between other Silence users. Replaces AOSP Messaging</li>
 							<li>Simple Gallery: An improved gallery app. Replaces AOSP Gallery</li>
+							<li>UnifiedNlp + Backends: Fused location provider that uses plugins to provide battery efficient location lookups.</li>
 							<li>Vanilla: A lightweight and customizable music player. Replaces Eleven/Music</li>
+						</ul>
+
+						<h5>android_bootable_recovery</h5>
+						<ul>
+							<li>Abort package installs if they are specific to a serial number (GrapheneOS)</li>
+							<li>N/O/P: remove sideload cache</li>
+							<li>N: squash menus</li>
+							<li>O/P: Allow 4096-bit keys</li>
+							<li>O/P: Resurrect dm-verity</li>
+							<li>P: Always enforcing</li>
+							<li>P: Fix USB on most devices</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_bionic</h5>
+						<ul>
+							<li>GRAPHENE_MALLOC=true: P/Q: Use hardened_malloc (GrapheneOS)/li>
+						</ul>
+						<h5>android_build_make</h5>
+						<ul>
+							<li>P/Q: Add back PicoTTS and language files</li>
+							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
+							<li>Add correct keys to recovery for OTA verification</li>
+							<li>Enable auto-add-overlay for packages, this allows the vendor overlay to easily work across all branches.</li>
+							<li>Replace the Messaging app with Silence</li>
+							<li>Q/R: Disable APEX</li>
+							<li>P/Q/R: Set the minimum supported target SDK to Pie (GrapheneOS)</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_build_soong</h5>
+						<ul>
+							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
+						</ul>
+						<h5>android_device_qcom_sepolicy(-legacy)</h5>
+						<ul>
+							<li>Fix camera on -user builds</li>
+							<li>P/Q/R: Ignore neverallow violations</li>
+							<li>N: Cherrypick 248649: msm_irqbalance: Allow read for stats and interrupts</li>
+						</ul>
+						<h5>android_external_chromium-webview</h5>
+						<ul>
+							<li>Update the WebView to latest if available</li>
+						</ul>
+						<h5>android_external_sqlite</h5>
+						<ul>
+							<li>N: Enable secure_delete by default (AndroidHardening-13.0)</li>
+						</ul>
+						<h5>android_external_svox</h5>
+						<ul>
+							<li>O/P/Q: Add back Makefiles</li>
+							<li>P/Q: Fix build under Pie</li>
+						</ul>
+						<h5>android_frameworks_av</h5>
+						<ul>
+							<li>Q: GRAPHENE_MALLOC=true: Fixup A2DP with hardened_malloc (GrapheneOS)</li>
+							<li>P: GRAPHENE_MALLOC=true: Don't set RLIMIT_AS for hardened_malloc support (GrapheneOS)</li>
+							<li>N: Patch CVE-2017-0592</li>
+						</ul>
+						<h5>android_frameworks_base</h5>
+						<ul>
+							<li>Harden the default GPS config</li>
+							<li>N: Re-enable doze on devices without gms</li>
+							<li>Disable DropBox internal logging service</li>
+							<li>Notify the user if their location is requested via SUPL</li>
+							<li>Q/R: Skip strict update compatibility checks</li>
+							<li>Q/R: Disable partition fingerprint mismatch warnings</li>
+							<li>Decrease the strong auth prompt timeout to occur more often</li>
+							<li>N: Cherrypick 248599: Make SET_TIME_ZONE permission match SET_TIME</li>
+							<li>N: Allow reducing resolution to save power</li>
+							<li>MICROG_INCLUDED=FULL: Allow packages to spoof their signature</li>
+							<li>MICROG_INCLUDED=FULL: Restrict signature spoofing to system apps signed with the platform key</li>
+							<li>Change the default DNS servers</li>
+							<li>Disable/reduce functionality of various ad/analytics libraries</li>
+							<li>Always restrict access to Build.SERIAL (GrapheneOS)</li>
+							<li>Don't grant location permission to system browsers (GrapheneOS)</li>
+							<li>Allow SystemUI to directly manage Bluetooth/WiFi (GrapheneOS)/li>
+							<li>P/Q: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
+							<li>Don't send IMSI to SUPL (MSe1969)</li>
+							<li>Enable fingerprint lockout after five failed attempts (GrapheneOS)</li>
+							<li>P/Q/R: Add Open Camera to aux camera allowlist</li>
+							<li>!MICROG_INCLUDED=FULL: Remove CompanionDeviceManager, used to support Android Wear</li>
+							<li>N/O/Q: Remove Osu, Automatic Wi-Fi connection non-sense</li>
+							<li>Remove PrintRecommendationService, Creates popups to install proprietary print apps</li>
+							<li>Set animation scales to 0.5</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_frameworks_opt_net_ims</h5>
+						<ul>
+							<li>DEBLOBBER_REMOVE_IMS=true: Fix calling when IMS is removed</li>
+						</ul>
+						<h5>android_hardware_ti_omap4</h5>
+						<ul>
+							<li>N: Fix camera on tuna</li>
+						</ul>
+						<h5>android_hardware_ti_wlan</h5>
+						<ul>
+							<li>N: Cherrypick 209209: wl12xx: Update SR and MR firmwares versions</li>
+							<li>N: Cherrypick 209210: wl12xx: Update SR PLT firmwares</li>
+						</ul>
+						<h5>android_hardware_qcom_audio</h5>
+						<ul>
+							<li>Q/R: audio_extn: Fix unused parameter warning in utils.c</li>
+						</ul>
+						<h5>android_hardware_qcom_display</h5>
+						<ul>
+							<li>Patch CVE-2019-2306</li>
+						</ul>
+						<h5>android_hardware_qcom_gps</h5>
+						<ul>
+							<li>N/O: Fix week rollover</li>
+						</ul>
+						<h5>android_libcore</h5>
+						<ul>
+							<li>Q: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
+						</ul>
+						<h5>android_lineage-sdk</h5>
+						<ul>
+							<li>Disable Weather</li>
+							<li>DEBLOBBER_REMOVE_AUDIOFX=true: Remove AudioFX</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_packages_apps_Contacts</h5>
+						<ul>
+							<li>!N: Remove Privacy Policy and Terms of Service links (GrapheneOS)</li>
+							<li>Q/R: Backups are not sent to Google (GrapheneOS)</li>
+						</ul>
+						<h5>android_packages_apps_Dialer</h5>
+						<ul>
+							<li>P/Q/R: Add a privacy warning banner to calls (CalyxOS)</li>
+							<li>Disable FLP</li>
+							<li>Disable PLP</li>
+							<li>Disable RLP</li>
+						</ul>
+						<h5>android_packages_apps_CMParts</h5>
+						<ul>
+							<li>N: Remove analytics</li>
+							<li>N: Allow reducing resolution to save power</li>
+							<li>N: Various rebranding</li>
+						</ul>
+						<h5>android_packages_apps_LineageParts</h5>
+						<ul>
+							<li>Remove analytics</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_packages_apps_Nfc</h5>
+						<ul>
+							<li>Disable NFC by default</li>
+							<li>Disable NDEF Push by default</li>
+						</ul>
+						<h5>android_packages_apps_PackageInstaller</h5>
+						<ul>
+							<li>N: Fix an issue with Permission Review</li>
+						</ul>
+						<h5>android_packages_apps_PermissionController</h5>
+						<ul>
+							<li>R: MICROG_INCLUDED=FULL: Allow packages to spoof their signature</li>
+						</ul>
+						<h5>android_packages_apps_Settings</h5>
+						<ul>
+							<li>!R: Don't hide OEM unlock</li>
+							<li>N: Cherrypick 201113: wifi: Add world regulatory domain country code</li>
+							<li>O: Fix crashes when the PersistentDataBlockManager service isn't available</li>
+							<li>Add option to disable captive portal checks (MSe1969)</li>
+							<li>Never disable secure start-up when enabling an accessibility service</li>
+							<li>MICROG_INCLUDED=FULL: microG doesn't support Google Backup, hide the options</li>
+							<li>Disable "Instant Apps"</li>
+							<li>Always reset animation scales to 0.5</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_packages_apps_SetupWizard</h5>
+						<ul>
+							<li>Remove analytics</li>
+							<li>R: Always update recovery by default</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_packages_apps_Trebuchet</h5>
+						<ul>
+							<li>Override the default workspace layouts</li>
+						</ul>
+						<h5>android_packages_apps_Updater</h5>
+						<ul>
+							<li>Switch to our server</li>
+							<li>Add Tor support</li>
+							<li>Q/R: Remove periods from incremental version</li>
+							<li>R: Always update recovery by default</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_packages_apps_WallpaperPicker</h5>
+						<ul>
+							<li>N: Replace the wallpapers with our choices</li>
+							<li>N: Allow scrolling</li>
+							<li>N: Center alinged by default</li>
+						</ul>
+						<h5>android_packages_inputmethods_LatinIME</h5>
+						<ul>
+							<li>Remove voice input key</li>
+							<li>Disable personalization dictionary by default (GrapheneOS)</li>
+						</ul>
+						<h5>android_providers_MediaProvider</h5>
+						<ul>
+							<li>O: Fix permission denial</li>
+						</ul>
+						<h5>android_providers_TelephonyProvider</h5>
+						<ul>
+							<li>R: Cherrypick 304614: mcc/mnc fix</li>
+							<li>R: Cherrypick 312102: mnc fix</li>
+						</ul>
+						<h5>android_packages_services_Telephony</h5>
+						<ul>
+							<li>N/O/P: Add an LTE only option</li>
+						</ul>
+						<h5>android_system_bt</h5>
+						<ul>
+							<li>N: Cherrypick topic bt-sbc-hd-dualchannel-nougat</li>
+							<li>N: Cherrypick 242134: avrc_bld_get_attrs_rsp - fix attribute length position off by one</li>
+							<li>R: Cherrypick topic a2dp-master-fixes</li>
+						</ul>
+						<h5>android_system_core</h5>
+						<ul>
+							<li>Merge in our HOSTS file</li>
+							<li>Q/R: Revert some Lineage insanity</li>
+							<li>N: Allow 4096-bit keys</li>
+							<li>!R: Always update recovery</li>
+							<li>P/Q: GRAPHENE_MALLOC=true: Increase max_map_count for hardened_malloc (GrapheneOS)</li>
+							<li>Harden mounts with nodev/noexec/nosuid (GrapheneOS)</li>
+							<li>Misc sysctl changes</li>
+						</ul>
+						<h5>android_system_extras</h5>
+						<ul>
+							<li>P/Q/R: File Based Encryption: pad filenames more (GrapheneOS)</li>
+						</ul>
+						<h5>android_system_sepolicy</h5>
+						<ul>
+							<li>N: Cherrypick 248600: Restrict access to timing information in /proc</li>
+							<li>Fix -user builds for LGE devices</li>
+							<li>P/Q/R: Allow ignoring neverallows under -user</li>
+						</ul>
+						<h5>android_system_update_engine</h5>
+						<ul>
+							<li>Q/R: Do not skip payload signature verification</li>
+						</ul>
+						<h5>android_vendor_lineage</h5>
+						<ul>
+							<li>Remove Lineage keys</li>
+							<li>Remove analytics</li>
+							<li>Remove Lineage wallpaper</li>
+							<li>Make sure our hosts is always used</li>
+							<li>Remove Weather</li>
+							<li>Unset default backup provider</li>
+							<li>DEBLOBBER_REMOVE_AUDIOFX=true: Remove AudioFX</li>
+							<li>MICROG_INCLUDED=NLP: Adjust the fused providers</li>
+							<li>Change buildtype to dos</li>
+							<li>Include our customizations</li>
+							<li>Update APN list</li>
+							<li>Replace the Messaging app with Silence</li>
+							<li>Change default notification sound to Pong</li>
+							<li>Change default alarm sound to Alarm_Buzzer</li>
+							<li>Various rebranding</li>
+						</ul>
+						<h5>android_vendor_divested</h5>
+						<ul>
+							<li>Note: these are per branch changes to the overlay itself, not *the* changes made by the overlay</li>
+							<li>Q/R: Don't include Etar</li>
+							<li>R: Remove all lookup provider overrides</li>
+							<li>MICROG_INCLUDED=FULL: Include microG</li>
+							<li>HOSTS_BLOCKING=false: Include blocker app</li>
+							<li>P/Q/R: Add deny usb service, all of our kernels the necessary patch</li>
+							<li>R: PicoTTS needs work to compile on 18.1, use eSpeak-NG instead</li>
+						</ul>
+
+						<h5>Automated mass changes to android_device_*</h5>
+						<ul>
+							<li>LOWRAM_ENABLED: enableLowRam()</li>
+							<li>hardenLocationConf()</li>
+							<li>hardenLocationFWB()</li>
+							<li>DEBLOBBER_REMOVE_IMS=false: volteOverride()</li>
+							<li>enableDexPreOpt()</li>
+							<li>hardenUserdata()</li>
+							<li>Q/R: disableAPEX()</li>
+							<li>removeBuildFingerprints()</li>
+							<li>Many proprietary blobs are disabled/removed via Deblob.sh</li>
+						</ul>
+						<h5>Automated mass changes to android_kernel_*</h5>
+						<ul>
+							<li>hardenDefconfig()</li>
+							<li>Fix builds with GCC 10</li>
+							<li>Verified boot keys are copied into their respective kernels</li>
+							<li>Change the VM_MAX_READAHEAD value from the default 128KB to 512KB</li>
+						</ul>
+						<h5>Automated mass changes to android_vendor_*</h5>
+						<ul>
+							<li>hardenLocationConf()</li>
+							<li>Many proprietary blobs are disabled/removed via Deblob.sh</li>
 						</ul>
 					</div>
 				</div>
