@@ -1,4 +1,10 @@
+#
+# Links below are not verified or endorsed in any way.
+# Visit them at your own discretion.
+#
+
 https://android.gadgethacks.com/how-to/4-new-noteworthy-indie-android-apps-week-march-26-edition-0384474/
+https://boards.4channel.org/g/thread/82832737/fdroid-thread
 https://community.bitwarden.com/t/auto-fill-support-for-mull-browser-secure-firefox-android-fork/27454
 https://community.e.foundation/t/android-identifiers/33248
 https://community.e.foundation/t/browsers-privacy/31192
@@ -18,13 +24,19 @@ https://framasphere.org/posts/9668377
 https://github.com/bitwarden/mobile/pull/1435
 https://github.com/pluja/awesome-privacy/issues/69
 https://github.com/privacytools/privacytools.io/issues/2248
+https://github.com/Sainan/Universal-Bypass/issues/1957
 https://git.replicant.us/replicant/packages_apps_Contacts/tag/?h=cm-13-before-ambientsdk
 https://groups.google.com/g/alt.privacy/c/fbOKM-6pXoU
 https://groups.google.com/g/maru-os-dev/c/OAlUehwwYLo
 https://hub.libranet.de/wiki/and-priv-sec/wiki/verified-boot
+https://mastodon.technology/@IzzyOnDroid/106373635637389989
+https://mastodon.technology/@IzzyOnDroid/106392111912223379
+https://mastodon.technology/@IzzyOnDroid/106500661376752661
+https://mastodon.technology/@IzzyOnDroid/106523916480001971
 https://node9.org/display/b64.aHR0cHM6Ly9ub2RlOS5vcmcvaXRlbS8zZDUwMzdjMS0yMTkxLTQ3ZWMtOWRiYi0wMzdhNTlkZjc4ZTk
 https://old.reddit.com/r/degoogle/comments/narab5/without_google_play_store_how_do_i_install/
 https://old.reddit.com/r/fdroid/comments/jzba3e/this_ones_for_my_countersurveillance_family/
+https://old.reddit.com/r/fdroid/comments/kypdce/how_to_know_if_an_app_is_safe/
 https://old.reddit.com/r/firefox/comments/l95iul/what_are_the_fenix_forks_available/
 https://old.reddit.com/r/fossdroid/comments/lxw75o/how_to_use_android_with_no_proprietary_software/
 https://old.reddit.com/r/fossdroid/comments/os0wbf/client_for_google_maps/
@@ -48,9 +60,17 @@ https://social.coop/@dazinism/105753423847502090
 https://social.coop/@dazinism/105882070773086714
 https://social.coop/@dazinism/105882110817475294
 https://social.tchncs.de/@kuketzblog/106686201849538888
+https://teamos-hkrg.com/threads/android-gmaps-wv-v1-4-17.155907/
+https://teamos-hkrg.com/threads/android-hypatia-v2-21-74.156749/
 https://t.me/NoGoolag/4367
+https://twitter.com/firefoxpreview/status/1326928869111238658
 https://www.android-hilfe.de/forum/root-custom-roms-modding-fuer-samsung-galaxy-s5.1567/was-haltet-ihr-von-divestos-oder-lineageos-auf-dem-galaxy-s5.982469.html
 https://www.ebay.de/itm/333976652955
 https://www.ebay.de/usr/ungoogled #"realtime malware scanner"
+https://www.forocoches.com/foro/showthread.php?t=8683286
+https://www.ghacks.net/2020/10/01/you-can-now-install-any-add-on-in-firefox-nightly-for-android-but-it-is-complicated/
+https://www.ghacks.net/2021/08/05/is-iceraven-the-better-firefox-for-android-mobile-browser/
 https://www.lineage-os-forum.de/Thread-ROM-DivestOS-Mobil-basierend-auf-LineageOS
+https://www.quora.com/If-I-gave-away-my-old-Android-and-iPhone-devices-to-my-friends-and-family-is-there-a-risk-that-theyll-dig-out-my-personal-info-even-though-I-factory-reset-and-erased-the-devices
 https://www.youtube.com/watch?v=Kl3O9KR74o4
+https://www.youtube.com/watch?v=r3u5EczO9oU
