@@ -109,7 +109,7 @@ createTable n7100 LineageOS-14.1 samsung/n7100 samsung/smdk4412;
 createTable oneplus2 LineageOS-15.1 oneplus/oneplus2 oneplus/msm8994;
 createTable oneplus2 LineageOS-17.1 oneplus/oneplus2 oneplus/msm8994;
 createTable oneplus3 LineageOS-18.1 oneplus/oneplus3 oneplus/msm8996;
-createTable osprey LineageOS-14.1 motorola/osprey motorola/msm8916;
+createTable osprey LineageOS-17.1 motorola/osprey motorola/msm8916;
 createTable pro1 LineageOS-18.1 fxtec/pro1 fxtec/msm8998;
 createTable serrano3gxx/serranoltexx LineageOS-18.1 samsung/serrano-common samsung/msm8930-common;
 createTable shamu LineageOS-15.1 moto/shamu moto/shamu;
