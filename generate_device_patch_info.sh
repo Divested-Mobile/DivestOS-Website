@@ -13,7 +13,7 @@ getVendorPatchLevel() {
 		level="Unknown";
 	fi;
 	if [ "$level" = '$(PLATFORM_SECURITY_PATCH)' ]; then
-		level="2021-07";
+		level="2021-08";
 	fi;
 	echo -n $(sed -e 's/^"//' -e 's/"$//' <<< "$level");
 }
@@ -45,12 +45,12 @@ createTable() {
 }
 
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
+createTable alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 createTable angler LineageOS-15.1 huawei/angler huawei/angler;
 createTable aura LineageOS-18.1 razer/aura razer/sdm845;
 createTable avicii LineageOS-17.1 oneplus/avicii oneplus/sm7250;
 createTable axon7 LineageOS-15.1 zte/axon7 zte/msm8996;
 createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974;
-createTable beryllium LineageOS-16.0 xiaomi/sdm845-common xiaomi/sdm845;
 createTable beryllium LineageOS-18.1 xiaomi/sdm845-common xiaomi/sdm845;
 createTable bonito/sargo LineageOS-17.1 google/bonito google/msm-4.9;
 createTable bonito/sargo LineageOS-18.1 google/bonito google/msm-4.9;
@@ -96,6 +96,7 @@ createTable i9305 LineageOS-14.1 samsung/i9305 samsung/smdk4412;
 createTable jfltexx LineageOS-18.1 samsung/jfltexx samsung/jf;
 createTable kipper LineageOS-16.0 wileyfox/kipper cyanogen/msm8916;
 createTable klte LineageOS-18.1 samsung/klte-common samsung/msm8974;
+createTable lmi LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 createTable m7 LineageOS-14.1 htc/m7 htc/msm8960;
 createTable m8 LineageOS-17.1 htc/m8-common htc/msm8974;
 createTable m8 LineageOS-18.1 htc/m8-common htc/msm8974;
@@ -111,6 +112,7 @@ createTable oneplus2 LineageOS-17.1 oneplus/oneplus2 oneplus/msm8994;
 createTable oneplus3 LineageOS-18.1 oneplus/oneplus3 oneplus/msm8996;
 createTable osprey LineageOS-17.1 motorola/osprey motorola/msm8916;
 createTable pro1 LineageOS-18.1 fxtec/pro1 fxtec/msm8998;
+createTable raphael LineageOS-18.1 xiaomi/sm8150-common xiaomi/sm8150;
 createTable serrano3gxx/serranoltexx LineageOS-18.1 samsung/serrano-common samsung/msm8930-common;
 createTable shamu LineageOS-15.1 moto/shamu moto/shamu;
 createTable shamu LineageOS-18.1 moto/shamu moto/shamu;
