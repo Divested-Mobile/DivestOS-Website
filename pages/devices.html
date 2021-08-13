@@ -61,7 +61,7 @@
 			$cacheKey = "DivestOS+devices.php+base:" . $base . "+version:" . $version;
 			if(($result = getRedis()->get($cacheKey)) == false) {
 				$result = getDevices($base, $rootdir, $realRootdir, $devices, $version);
-				getRedis()->setEx($cacheKey, 86400, $result); //24 hours
+				getRedis()->setEx($cacheKey, 7200, $result); //2 hours
 			}
 			return $result;
 		} else {
@@ -149,10 +149,19 @@
 						$bootloaderInformationFile = $realRootdir . $device . "/bootloader_information";
 						if(file_exists($bootloaderInformationFile)) {
 							$bootloaderInformationArr = file($bootloaderInformationFile);
-							$bootloaderInformation = "<li>Unlock Method: " . $bootloaderInformationArr[0] . "</li><li>Relockable: " . $bootloaderInformationArr[1] . "</li><li>Verified Boot: " . $bootloaderInformationArr[2] . "</li></ul>";
+							$bootloaderInformation = "<li>Unlock Method: " . $bootloaderInformationArr[0] . "</li><li>Relockable: " . $bootloaderInformationArr[1] . "</li><li>Verified Boot: " . $bootloaderInformationArr[2] . "</li>";
 							unset($bootloaderInformationArr);
 						}
 						unset($bootloaderInformationFile);
+
+						//Updater check count
+						if(extension_loaded("redis")) {
+							$updateCounter = getRedis()->get("Counter-DivestOS+updater.php+base:" . $base . "+device:" . $device);
+							if($updateCounter > 0) {
+								$updateCount = "<li>Updater checks past ~2 days: " . $updateCounter . "</li>";
+							}
+							unset($updateCounter);
+						}
 
 						//Output the card
 						$downloads .= "<div class=\"card centero\" id=\"device-" . $device . "\">";
@@ -169,6 +178,8 @@
 						unset($status);
 						$downloads .= $bootloaderInformation;
 						unset($bootloaderInformation);
+						$downloads .= $updateCount;
+						unset($updateCount);
 						$downloads .= "</ul>";
 						$downloads .= $downloadButtons;
 						$downloads .= "</div>";

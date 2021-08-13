@@ -335,7 +335,7 @@ echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > raphael/bootloader_information
 
 echo "Google Pixel 2 XL" > taimen/friendlyName;
 echo "Google Pixel 2" > walleye/friendlyName;
-echo 5 > taimen/status-18.1;
+echo 0 > taimen/status-18.1;
 echo 0 > walleye/status-18.1;
 echo -e "Fastboot\nTested Working\nYes" > taimen/bootloader_information;
 echo -e "Fastboot\nTested Working\nYes" > walleye/bootloader_information;
