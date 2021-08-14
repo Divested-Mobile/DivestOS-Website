@@ -14,7 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 2 > alioth/status-18.1;
@@ -63,6 +63,10 @@ echo 2 > bonito/status-17.1;
 echo 2 > sargo/status-17.1;
 echo -e "Fastboot\nYes, Untested\nYes" > bonito/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > sargo/bootloader_information;
+
+echo "Google Pixel 4a 5G" > bramble/friendlyName;
+echo 2 > bramble/status-17.1;
+echo -e "Fastboot\nYes, Untested\nYes" > bramble/bootloader_information;
 
 echo "Google Nexus 5X" > bullhead/friendlyName;
 echo 0 > bullhead/status-15.1;
@@ -114,10 +118,8 @@ echo -e "Fastboot\nYes, but will error\nYes" > dragon/bootloader_information;
 
 echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
-echo 2 > enchilada/status-17.1;
-echo 2 > enchilada/status-18.1;
-echo 2 > fajita/status-17.1;
-echo 2 > fajita/status-18.1;
+echo 1 > enchilada/status-18.1;
+echo 1 > fajita/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > enchilada/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > fajita/bootloader_information;
 
@@ -163,8 +165,8 @@ echo -e "Fastboot\nWill Brick\nNo" > tilapia/bootloader_information;
 
 echo "OnePlus 7 Pro" > guacamole/friendlyName;
 echo "OnePlus 7" > guacamoleb/friendlyName;
-echo 2 > guacamole/status-18.1;
-echo 2 > guacamoleb/status-17.1;
+echo 1 > guacamole/status-18.1;
+echo 1 > guacamoleb/status-17.1;
 echo -e "Fastboot\nYes, Untested\nYes" > guacamole/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > guacamoleb/bootloader_information;
 
@@ -212,8 +214,8 @@ echo -e "Fastboot (HTC)\nNo*\nNo" > himaul/bootloader_information;
 
 echo "OnePlus 7T Pro" > hotdog/friendlyName;
 echo "OnePlus 7T" > hotdogb/friendlyName;
-echo 2 > hotdog/status-18.1;
-echo 2 > hotdogb/status-18.1;
+echo 1 > hotdog/status-18.1;
+echo 1 > hotdogb/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > hotdog/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > hotdogb/bootloader_information;
 
@@ -310,6 +312,10 @@ echo "F(x)tec Pro¹" > pro1/friendlyName;
 echo 2 > pro1/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > pro1/bootloader_information;
 
+echo "Google Pixel 5" > redfin/friendlyName;
+echo 2 > redfin/status-17.1;
+echo -e "Fastboot\nYes, Untested\nYes" > redfin/bootloader_information;
+
 echo "Galaxy S4 Mini INTL (3G)" > serrano3gxx/friendlyName;
 echo 0 > serrano3gxx/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > serrano3gxx/bootloader_information;
@@ -329,6 +335,10 @@ echo 1 > starlte/status-17.1;
 echo 1 > star2lte/status-17.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > starlte/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
+
+echo "Google Pixel 4a" > sunfish/friendlyName;
+echo 2 > sunfish/status-17.1;
+echo -e "Fastboot\nYes, Untested\nYes" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > raphael/bootloader_information;
