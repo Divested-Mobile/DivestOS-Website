@@ -65,7 +65,7 @@ echo -e "Fastboot\nYes, Untested\nYes" > bonito/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > sargo/bootloader_information;
 
 echo "Google Pixel 4a 5G" > bramble/friendlyName;
-echo 2 > bramble/status-17.1;
+echo 2 > bramble/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > bramble/bootloader_information;
 
 echo "Google Nexus 5X" > bullhead/friendlyName;
@@ -313,7 +313,7 @@ echo 2 > pro1/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > pro1/bootloader_information;
 
 echo "Google Pixel 5" > redfin/friendlyName;
-echo 2 > redfin/status-17.1;
+echo 2 > redfin/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > redfin/bootloader_information;
 
 echo "Galaxy S4 Mini INTL (3G)" > serrano3gxx/friendlyName;
@@ -337,7 +337,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > starlte/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 
 echo "Google Pixel 4a" > sunfish/friendlyName;
-echo 2 > sunfish/status-17.1;
+echo 2 > sunfish/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
