@@ -189,9 +189,9 @@
 						$name = $trueName;
 						$friendlyNamePath = $realRootdir . $device . "/friendlyName";
 						if(file_exists($friendlyNamePath)) {
-							$name = file_get_contents($friendlyNamePath) . " (" . $trueName . ")";
+							$name = $trueName . "<small>" . file_get_contents($friendlyNamePath) . "</small>";
 						}
-						$downloads .= "<h3>" . $name . "<a href=\"#device-" . $device . "\">¶</a></h3>";
+						$downloads .= "<h3><a style=\"color: inherit; text-decoration: none;\" href=\"#device-" . $device . "\">" . $name . "</a></h3>";
 						unset($name);
 						$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $trueName . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a> and <a href=\"https://wiki.lineageos.org/devices/" . $trueName . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Install Guide</a></p>";
 						$downloads .= "<ul>";
