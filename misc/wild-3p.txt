@@ -5,6 +5,7 @@
 
 https://alternativeto.net/software/mull/about/
 https://android.gadgethacks.com/how-to/4-new-noteworthy-indie-android-apps-week-march-26-edition-0384474/
+https://blog.dbmiller.org/2021-08-19-my-setup-using-mull-for-extensible-and-secure-browsing-on-android
 https://boards.4channel.org/g/thread/82832737/fdroid-thread
 https://community.bitwarden.com/t/auto-fill-support-for-mull-browser-secure-firefox-android-fork/27454
 https://community.e.foundation/t/android-identifiers/33248

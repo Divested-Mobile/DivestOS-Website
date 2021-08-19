@@ -41,10 +41,14 @@
 								<li>Enable 'Allow OEM unlocking' under 'Developer options' in Settings if available</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li><code>$ fastboot oem unlock</code> or <code>$ fastboot flashing unlock</code></li>
-								<li>If recovery.img available:<code>$ fastboot flash recovery recovery.img</code></li>
-								<li>If recovery.img available: Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li>If recovery.img available:<code>$ adb sideload system.zip</code></li>
 								<li>If fastboot.zip available: fastboot update fastboot.zip</li>
+								<li>If recovery.img available:
+									<ol>
+										<li><code>$ fastboot flash recovery recovery.img</code></li>
+										<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
+										<li><code>$ adb sideload system.zip</code></li>
+									</ol>
+								</li>
 							</ol>
 							<h4>Locking</h4>
 							<p><mark class="secondary">Locking your bootloader with an incorrectly signed system image or on unsupported device can result in a permanent brick!</mark></p>
