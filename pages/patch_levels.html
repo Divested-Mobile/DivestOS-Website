@@ -1,6 +1,29 @@
 				<div class="card fluid">
 					<h2>Patch Levels</h2>
 					<p>Below is version information for branches and devices for you to judge your device's security upon.</p>
+					<div class="section" id="romSecurity">
+						<h3>A note on ROM security<a href="#romSecurity">¶</a></h3>
+						<p>There are five parts that you can use to determine the general security of a ROM:
+							<ol>
+								<li>the version of Android itself, newer versions have more security features/hardening</li>
+								<li>the <a href="https://source.android.com/security/bulletin" target="_blank" rel="nofollow noopener noreferrer">ASB</a> patch level, these are essential security patches</li>
+								<li>the <a href="https://source.android.com/security/bulletin/pixel" target="_blank" rel="nofollow noopener noreferrer">Pixel ASB</a> patch level, these are recommended security patches</li>
+								<li>the vendor ASB patch level, see <a href="https://www.qualcomm.com/company/product-security/bulletins" target="_blank" rel="nofollow noopener noreferrer">Qualcomm</a></li>
+								<li>and lastly the <a href="https://www.kernel.org" target="_blank" rel="nofollow noopener noreferrer">Linux kernel</a></li>
+							</ol>
+						Briefly for each ROM:
+							<ul>
+								<li><a href="https://grapheneos.org" target="_blank" rel="nofollow noopener noreferrer">GrapheneOS</a> strictly only supports devices that have all parts updated.</li>
+								<li><a href="https://calyxos.org/" target="_blank" rel="nofollow noopener noreferrer">CalyxOS</a>, with the exception of the Pixel 2 and Mi A2, only supports devices that have all parts updated.</li>
+								<li><a href="https://lineageos.org" target="_blank" rel="nofollow noopener noreferrer">LineageOS</a> can help with 1, 2, 3, and usually 5, but if a device is out of support by its manufacturer it cannot help with 4.</li>
+								<li>DivestOS, being Lineage based helps with 1, 2, 3, can minimize 4 via the <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">deblobber</a>, and improve 5 significantly using the <a href="https://gitlab.com/divested-mobile/cve_checker" target="_blank" rel="nofollow noopener noreferrer">CVE auto-patcher</a>.</li>
+								<li>LineageOS (and derivatives) notably only apply Pixel ASB's to the most recent branch.</li>
+								<li>Any of the above ROMs will be a dramatic improvement for any device that is no longer receiving support from its manufacturer.</li>
+								<li><a href="https://replicant.us" target="_blank" rel="nofollow noopener noreferrer">Replicant</a> 6.0 is based on the LineageOS-13.0 branch and is behind on all parts.</li>
+							</ul>
+						If you are choosing a ROM for security the order is GrapheneOS, then DivestOS, then LineageOS, with the choice depending on what device you have or can acquire.
+						</p>
+					</div>
 					<div class="section" id="branchPatchLevels">
 						<h3>Branches<a href="#branchPatchLevels">¶</a></h3>
 						<p>Last updated: 2021-08-07</p>
@@ -58,7 +81,7 @@
 					</div>
 					<div class="section" id="kernelStatus">
 						<h3>Linux Version Status<a href="#kernelStatus">¶</a></h3>
-						<p>Last updated: 2021-08-06</p>
+						<p>Last updated: 2021-08-19</p>
 						<table class="striped" style="max-height: 100%;">
 							<thead>
 								<tr>
@@ -69,34 +92,39 @@
 							</thead>
 							<tbody>
 								<tr>
+									<td data-label="Version">5.10</td>
+									<td data-label="Last">5.10.60</td>
+									<td data-label="EOL">2026-12</td>
+								</tr>
+								<tr>
 									<td data-label="Version">5.4</td>
-									<td data-label="Last">5.4.138</td>
+									<td data-label="Last">5.4.142</td>
 									<td data-label="EOL">2025-12</td>
 								</tr>
 								<tr>
 									<td data-label="Version">4.19</td>
-									<td data-label="Last">4.19.201</td>
+									<td data-label="Last">4.19.204</td>
 									<td data-label="EOL">2024-12</td>
 								</tr>
 								<tr>
 									<td data-label="Version">4.14</td>
-									<td data-label="Last">4.14.242</td>
+									<td data-label="Last">4.14.244</td>
 									<td data-label="EOL">2024-01</td>
 								</tr>
 								<tr>
 									<td data-label="Version">4.9</td>
-									<td data-label="Last">4.9.278</td>
+									<td data-label="Last">4.9.280</td>
 									<td data-label="EOL">2023-01</td>
 								</tr>
 								<tr>
 									<td data-label="Version">4.4</td>
-									<td data-label="Last">4.4.278</td>
+									<td data-label="Last">4.4.281</td>
 									<td data-label="EOL">2022-02</td>
 								</tr>
 								<tr>
 									<td data-label="Version">3.18</td>
 									<td data-label="Last">3.18.140</td>
-									<td data-label="EOL">2017-01 + support from Google/Linaro</td>
+									<td data-label="EOL">2017-01 + continuing support from Google/Linaro</td>
 								</tr>
 								<tr>
 									<td data-label="Version">3.10</td>
@@ -118,7 +146,7 @@
 					</div>
 					<div class="section" id="devices">
 						<h3>Devices<a href="#deviceSpecific">¶</a></h3>
-						<p>Last updated: 2021-08-14</p>
+						<p>Last updated: 2021-08-19</p>
 						<table class="striped" style="max-height: 100%;">
 							<thead>
 								<tr>
@@ -133,13 +161,13 @@
 	<td data-label="Device">Amber</td>
 	<td data-label="Version">17.1</td>
 	<td data-label="V-ASB">2020-10-05</td>
-	<td data-label="Kernel">4.4.205 + 268 patches</td>
+	<td data-label="Kernel">4.4.205 + 269 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">alioth</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-05-01</td>
-	<td data-label="Kernel">4.19.113 + 270 patches</td>
+	<td data-label="Kernel">4.19.113 + 274 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">angler</td>
@@ -151,13 +179,13 @@
 	<td data-label="Device">aura</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-02-05</td>
-	<td data-label="Kernel">4.9.276 + 67 patches</td>
+	<td data-label="Kernel">4.9.276 + 68 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">avicii</td>
 	<td data-label="Version">17.1</td>
 	<td data-label="V-ASB">2020-12-01</td>
-	<td data-label="Kernel">4.19.81 + 343 patches</td>
+	<td data-label="Kernel">4.19.81 + 346 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">axon7</td>
@@ -175,25 +203,25 @@
 	<td data-label="Device">beryllium</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2020-12-01</td>
-	<td data-label="Kernel">4.9.276 + 67 patches</td>
+	<td data-label="Kernel">4.9.276 + 68 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">bonito/sargo</td>
 	<td data-label="Version">17.1</td>
 	<td data-label="V-ASB">2020-09-05</td>
-	<td data-label="Kernel">4.9.210 + 293 patches</td>
+	<td data-label="Kernel">4.9.210 + 294 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">bonito/sargo</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-08</td>
-	<td data-label="Kernel">4.9.248 + 152 patches</td>
+	<td data-label="Kernel">4.9.248 + 153 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">bramble</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-08</td>
-	<td data-label="Kernel">4.19.160 + 158 patches</td>
+	<td data-label="Kernel">4.19.160 + 163 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">bullhead</td>
@@ -205,13 +233,13 @@
 	<td data-label="Device">cheeseburger/dumpling</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2020-09-01</td>
-	<td data-label="Kernel">4.4.276 + 51 patches</td>
+	<td data-label="Kernel">4.4.276 + 53 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">cheryl</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2019-11-05</td>
-	<td data-label="Kernel">4.4.276 + 51 patches</td>
+	<td data-label="Kernel">4.4.276 + 53 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">clark</td>
@@ -229,7 +257,7 @@
 	<td data-label="Device">coral/flame</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-08</td>
-	<td data-label="Kernel">4.14.212 + 144 patches</td>
+	<td data-label="Kernel">4.14.212 + 145 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">crackling</td>
@@ -241,7 +269,7 @@
 	<td data-label="Device">crosshatch/blueline</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-08</td>
-	<td data-label="Kernel">4.9.248 + 152 patches</td>
+	<td data-label="Kernel">4.9.248 + 153 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">d802</td>
@@ -265,7 +293,7 @@
 	<td data-label="Device">enchilada/fajita</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">Unknown</td>
-	<td data-label="Kernel">4.9.227 + 212 patches</td>
+	<td data-label="Kernel">4.9.227 + 213 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">ether</td>
@@ -307,7 +335,7 @@
 	<td data-label="Device">FP3</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-03-05</td>
-	<td data-label="Kernel">4.9.218 + 253 patches</td>
+	<td data-label="Kernel">4.9.218 + 254 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">fugu</td>
@@ -343,13 +371,13 @@
 	<td data-label="Device">guacamoleb</td>
 	<td data-label="Version">17.1</td>
 	<td data-label="V-ASB">2021-01-01</td>
-	<td data-label="Kernel">4.14.117 + 401 patches</td>
+	<td data-label="Kernel">4.14.117 + 402 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">guacamole/hotdog/hotdogb</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-05-01</td>
-	<td data-label="Kernel">4.14.190 + 202 patches</td>
+	<td data-label="Kernel">4.14.190 + 203 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">h815</td>
@@ -451,7 +479,7 @@
 	<td data-label="Device">lmi</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-05-01</td>
-	<td data-label="Kernel">4.19.113 + 270 patches</td>
+	<td data-label="Kernel">4.19.113 + 274 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">m7</td>
@@ -499,7 +527,7 @@
 	<td data-label="Device">mata</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2020-02-05</td>
-	<td data-label="Kernel">4.4.280 + 97 patches</td>
+	<td data-label="Kernel">4.4.280 + 98 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">n5110</td>
@@ -541,19 +569,19 @@
 	<td data-label="Device">pro1</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2020-04-05</td>
-	<td data-label="Kernel">4.4.276 + 50 patches</td>
+	<td data-label="Kernel">4.4.276 + 51 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">raphael</td>
 	<td data-label="Version">18.1</td>
-	<td data-label="V-ASB">2021-05-01</td>
-	<td data-label="Kernel">4.14.180 + 233 patches</td>
+	<td data-label="V-ASB">2021-07-01</td>
+	<td data-label="Kernel">4.14.180 + 234 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">redfin</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-08</td>
-	<td data-label="Kernel">4.19.160 + 158 patches</td>
+	<td data-label="Kernel">4.19.160 + 163 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">serrano3gxx/serranoltexx</td>
@@ -577,13 +605,13 @@
 	<td data-label="Device">sunfish</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2021-08-05</td>
-	<td data-label="Kernel">4.14.212 + 145 patches</td>
+	<td data-label="Kernel">4.14.212 + 146 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">taimen/walleye</td>
 	<td data-label="Version">18.1</td>
 	<td data-label="V-ASB">2020-10-05</td>
-	<td data-label="Kernel">4.4.223 + 198 patches</td>
+	<td data-label="Kernel">4.4.223 + 199 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">thor</td>
@@ -637,7 +665,7 @@
 	<td data-label="Device">z2_plus</td>
 	<td data-label="Version">17.1</td>
 	<td data-label="V-ASB">2018-11-05</td>
-	<td data-label="Kernel">4.4.205 + 274 patches</td>
+	<td data-label="Kernel">4.4.205 + 275 patches</td>
 </tr>
 <tr>
 	<td data-label="Device">zenfone3</td>
