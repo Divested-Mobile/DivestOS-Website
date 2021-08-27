@@ -1,8 +1,28 @@
 				<div class="card fluid">
-					<h2>Privacy Policy (2018-05-29)</h2>
+					<h2>Privacy Policy (2021-08-27)</h2>
 					<p>User privacy is one of the primary goals of DivestOS. Detailed below is everything you need to know about how your data is handled.</p>
-					<p>A note on the GDPR: For the time being we are sadly not 100% GDPR compliant. We are not lawyers but we are pretty sure the only thing we need to do is not log the last two (or four) octets of IP addresses. There are currently no maintained Apache modules that accomplish this, but we are confident that by release there will be. Once that is in place the overall privacy situation for all users will be dramatically improved and we will also be (hopefully) compliant with the GDPR as well.</p>
-					<!-- TODO: Update IP address references below once we get a mod_removeip -->
+					<div class="section" id="control">
+						<h3>Control over your data</h3>
+						<ul>
+							<li>Requesting your data:
+								<ul>
+									<li>Web server logs will not be provided.</li>
+									<li>konvers.me chat logs of your user can be retrived by joining the room with an XMPP client supporting (MUC-)MAM.</li>
+									<li>Donation history via Stripe can be provided upon request from a matching email address.</li>
+								</ul>
+							</li>
+							<li>Correction of your data: We do not believe we have any data that can be corrected, but do reach out if necessary.</li>
+							<li>Deletion of your data:
+								<ul>
+									<li>Web server logs are kept for no longer then six weeks.</li>
+									<li>konvers.me access logs are deleted weekly.</li>
+									<li>konvers.me messages can be deleted upon special request.</li>
+								</ul>
+							</li>
+							<li>Expressing concerns: We are always open to suggestions and collaboration on how we can further improve user privacy. Please e-mail us or open an issue on the project repository and lets get a discussion going!</li>
+						</ul>
+						<p>E-Mail: <script>document.write(atob("PGEgaHJlZj1tYWlsdG86c3VwcG9ydCtwcml2YWN5QGRpdmVzdG9zLm9yZz5zdXBwb3J0K3ByaXZhY3lAZGl2ZXN0b3Mub3JnPC9hPgo="));</script><noscript>JavaScript Protected</noscript></p>
+					</div>
 					<div class="section" id="fpCollect">
 						<h3>What data we (Divested Computing Group) collect</h3>
 						<ul>
@@ -22,7 +42,7 @@
 								</ul>
 								<li>How often: On every page visit</li>
 								<li>Why it is received: Used to serve the web pages to users</li>
-								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
+								<li>When it will be deleted: Web server logs are kept for no longer then six weeks</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Visit the site using the Tor Browser</li>
 							</ul>
@@ -68,7 +88,7 @@
 								<li>What is received: Device Model, Incremental Build ID, Default User Agent, IP Address</li>
 								<li>How often: On every boot and also once per day</li>
 								<li>Why it is received: Used to serve system updates</li>
-								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
+								<li>When it will be deleted: Web server logs are kept for no longer then six weeks</li>
 								<li>What else will it be used for: Will be occasionally used to determine how many users we have and what percent are up-to-date or not</li>
 								<li>How to anonymize: Install Orbot and enable 'Perform requests over Tor'</li>
 								<li>How to disable: Disable 'Auto updates check'</li>
@@ -79,7 +99,7 @@
 								<li>What is received: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
 								<li>How often: Once per day</li>
 								<li>Why it is received: Used to serve apps and their updates</li>
-								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
+								<li>When it will be deleted: Web server logs are kept for no longer then six weeks</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
 								<li>How to reduce: Decrease the 'Automatic update interval' in F-Droid > Settings</li>
@@ -90,23 +110,21 @@
 								<li>What is received: Signature Database Requests, IP Address</li>
 								<li>How often: Manually</li>
 								<li>Why it is received: Used to serve signature databases</li>
-								<li>When it will be deleted: When the web server log files are rotated/deleted</li>
+								<li>When it will be deleted: Web server logs are kept for no longer then six weeks</li>
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Install Orbot and enable 'Download over Tor'</li>
 							</ul>
+							<li id="xmpp">Chat rooms (MUC) available on xmpp:konvers.me</li>
+							<ul>
+								<li>What is received: JID, nickname, avatar, your server IP address, your client IP address only if fetching an HTTP uploaded image</li>
+								<li>How often: When you join and are connected to a room</li>
+								<li>Why it is received: Used to provide the chat service to you</li>
+								<li>When it will be deleted: Messages are not deleted per default MAM policy. Access logs are deleted weekly. IP addresses are not stored in the access logs.</li>
+								<li>What else will it be used for: Nothing else</li>
+								<li>How to anonymize: Use a throwaway JID and nickname. Route your XMPP client over Tor.</li>
+							</ul>
 						</ul>
 					</div>
-					<!-- TODO: Uncomment once we get a mod_removeip -->
-					<!--<div class="section" id="control">
-						<h3>Control over your data</h3>
-						<ul>
-							<li>Requesting your data: We have no way to tie data to an identity</li>
-							<li>Correction of your data: We have no data that can be corrected</li>
-							<li>Deletion of your data: All data we have on users is periodically deleted</li>
-							<li>Expressing concerns: We are always open to suggestions on how we can further improve user privacy. Please e-mail us or open an issue on the project repository and lets get a discussion going!</li>
-						</ul>
-						<p>E-Mail: <script>document.write(atob("PGEgaHJlZj1tYWlsdG86c3VwcG9ydCtwcml2YWN5QGRpdmVzdG9zLm9yZz5zdXBwb3J0K3ByaXZhY3lAZGl2ZXN0b3Mub3JnPC9hPgo="));</script><noscript>JavaScript Protected</noscript></p>
-					</div>-->
 					<div class="section" id="3rdparty">
 						<h3>What data third parties collect</h3>
 						<p>Third parties are used to support specific features and apps</p>
@@ -114,9 +132,11 @@
 							<li id="stripe">Website Payments</li>
 							<ul>
 								<li>Who: Stripe</li>
-								<li>What they receive: Name, Bank Card, E-Mail Address, User Agent, Browser Fingerprint, IP Address</li>
+								<li>What they receive: Name, Bank Card, E-Mail Address, User Agent, Browser Fingerprint, IP Address, Location from Geo-IP</li>
+								<li>What we receive: Name, Bank Card, E-Mail Address, User Agent, Location from Geo-IP</li>
 								<li>How often: When you donate</li>
 								<li>Why they receive: Used to process the payment</li>
+								<li>What else will we use it for: Nothing else</li>
 								<li>How to anonymize: Use a fake name, debit gift card, disposable e-mail address, and connect via a computer at your local library</li>
 								<li>How to disable: Requests to Stripe's servers will not occur until you attempt to donate</li>
 								<li>Privacy Policy: <a href="https://stripe.com/us/privacy" target="_blank" rel="nofollow noopener noreferrer">Stripe Privacy Policy</a></li>
