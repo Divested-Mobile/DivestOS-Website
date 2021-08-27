@@ -14,7 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 2 > alioth/status-18.1;
@@ -304,7 +304,6 @@ echo 0 > oneplus3/status-18.1;
 echo -e "Fastboot\nYes, test-keys only?\nYes" > oneplus3/bootloader_information;
 
 echo "Moto G 2015" > osprey/friendlyName;
-echo 0 > osprey/status-14.1;
 echo 2 > osprey/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > osprey/bootloader_information;
 
@@ -342,6 +341,10 @@ echo -e "Fastboot\nYes, Untested\nYes" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > raphael/bootloader_information;
+
+echo "Moto E 2015 LTE" > surnia/friendlyName;
+echo 2 > surnia/status-17.1;
+echo -e "Fastboot (Motorola)\nNo*\nNo" > surnia/bootloader_information;
 
 echo "Google Pixel 2 XL" > taimen/friendlyName;
 echo "Google Pixel 2" > walleye/friendlyName;
