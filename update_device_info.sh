@@ -50,10 +50,8 @@ echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > beryllium/bootloader_informati
 
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
-echo 4 > blueline/status-17.1;
-echo 4 > blueline/status-18.1;
-echo 0 > crosshatch/status-17.1;
-echo 4 > crosshatch/status-18.1;
+echo 2 > blueline/status-18.1;
+echo 2 > crosshatch/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > blueline/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > crosshatch/bootloader_information;
 
@@ -141,13 +139,11 @@ echo 0 > flounder/status-15.1;
 echo -e "Fastboot\nYes, Untested\nNo" > flounder/bootloader_information;
 
 echo "Fairphone 2" > fp2/friendlyName;
-echo 0 > fp2/status-17.1;
 echo 4 > fp2/status-18.1;
 echo -e "Pre-Unlocked\nUnknown\nNo" > fp2/bootloader_information;
 
 echo "Fairphone 3" > fp3/friendlyName;
-echo 0 > fp3/status-17.1;
-echo 4 > fp3/status-18.1;
+echo 0 > fp3/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > fp3/bootloader_information;
 
 echo "Google Nexus Player" > fugu/friendlyName;
@@ -343,7 +339,7 @@ echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > raphael/bootloader_information;
 
 echo "Moto E 2015 LTE" > surnia/friendlyName;
-echo 2 > surnia/status-17.1;
+echo 0 > surnia/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > surnia/bootloader_information;
 
 echo "Google Pixel 2 XL" > taimen/friendlyName;
