@@ -80,8 +80,11 @@
 								<li>Why it is received: Used to determine if there is an Internet connection</li>
 								<li>When it will be deleted: All requests to gen204.php are never logged</li>
 								<li>What else will it be used for: Nothing else</li>
-								<li>How to disable: Settings > Network > Data usage > Disable Captive Portal</li>
-								<li>How to disable: <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
+								<li>How to disable: Captive portal toggle in settings app or <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
+								<li>Settings can be accessed via:<ul>
+									<li>9+: Settings > Network & Internet > Advanced > Captive portal mode</li>
+									<li><9: Settings > Network > Data usage > Disable Captive Portal</li>
+								</ul></li>
 							</ul>-->
 							<li id="romUpdater">ROM: Updater</li>
 							<ul>
@@ -92,7 +95,10 @@
 								<li>What else will it be used for: Will be occasionally used to determine how many users we have and what percent are up-to-date or not</li>
 								<li>How to anonymize: Install Orbot and enable 'Perform requests over Tor'</li>
 								<li>How to disable: Disable 'Auto updates check'</li>
-								<li>Settings can be accessed via Settings > About > DivestOS updates > 3dot > Preferences</li>
+								<li>Settings can be accessed via:<ul>
+									<li>9+: Settings > System > Advanced > DivestOS updates > 3dot > Preferences</li>
+									<li><9: Settings > About > DivestOS updates > 3dot > Preferences</li>
+								</ul></li>
 							</ul>
 							<li id="fpRepos">ROM: DivestOS F-Droid Repos</li>
 							<ul>
@@ -116,7 +122,7 @@
 							</ul>
 							<li id="xmpp">Chat rooms (MUC) available on xmpp:konvers.me</li>
 							<ul>
-								<li>What is received: JID, nickname, avatar, your server IP address, your client IP address only if fetching an HTTP uploaded image</li>
+								<li>What is received: JID, nickname, avatar, messages you send, your server IP address, your client IP address only if fetching an HTTP uploaded image</li>
 								<li>How often: When you join and are connected to a room</li>
 								<li>Why it is received: Used to provide the chat service to you</li>
 								<li>When it will be deleted: Messages are not deleted per default MAM policy. Access logs are deleted weekly. IP addresses are not stored in the access logs.</li>
@@ -147,8 +153,11 @@
 								<li>Description: Used to determine if there is a captive portal</li>
 								<li>What they receive: Static User Agent, IP Address</li>
 								<li>How often: On every Wi-Fi and cell connection</li>
-								<li>How to disable: Settings > Network > Data usage > Disable Captive Portal</li>
-								<li>How to disable: <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
+								<li>How to disable: Captive portal toggle in settings app or <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
+								<li>Settings can be accessed via:<ul>
+									<li>9+: Settings > Network & Internet > Advanced > Captive portal mode</li>
+									<li><9: Settings > Network > Data usage > Disable Captive Portal</li>
+								</ul></li>
 								<li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Google Privacy Policy</a></li>
 							</ul>
 							<li id="fdroid">ROM: F-Droid Official Repo</li>
