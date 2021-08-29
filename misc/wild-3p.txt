@@ -7,6 +7,7 @@ https://alternativeto.net/software/mull/about/
 https://android.gadgethacks.com/how-to/4-new-noteworthy-indie-android-apps-week-march-26-edition-0384474/
 https://blog.dbmiller.org/2021-08-19-my-setup-using-mull-for-extensible-and-secure-browsing-on-android
 https://boards.4channel.org/g/thread/82832737/fdroid-thread
+https://boards.4channel.org/g/thread/83030878/whats-the-best-android-browser
 https://community.bitwarden.com/t/auto-fill-support-for-mull-browser-secure-firefox-android-fork/27454
 https://community.e.foundation/t/android-identifiers/33248
 https://community.e.foundation/t/browsers-privacy/31192
@@ -36,6 +37,7 @@ https://mastodon.technology/@IzzyOnDroid/106392111912223379
 https://mastodon.technology/@IzzyOnDroid/106500661376752661
 https://mastodon.technology/@IzzyOnDroid/106523916480001971
 https://node9.org/display/b64.aHR0cHM6Ly9ub2RlOS5vcmcvaXRlbS8zZDUwMzdjMS0yMTkxLTQ3ZWMtOWRiYi0wMzdhNTlkZjc4ZTk
+https://old.reddit.com/r/Bitwarden/comments/p8ou0g/mull_browser_android_no_pop_up/
 https://old.reddit.com/r/degoogle/comments/narab5/without_google_play_store_how_do_i_install/
 https://old.reddit.com/r/fdroid/comments/jzba3e/this_ones_for_my_countersurveillance_family/
 https://old.reddit.com/r/fdroid/comments/kypdce/how_to_know_if_an_app_is_safe/
@@ -56,6 +58,7 @@ https://old.reddit.com/r/privacytoolsIO/comments/okuubs/thoughts_on_mull_browser
 https://old.reddit.com/r/privacytoolsIO/comments/ouqp1z/thoughts_on_divest_os/
 https://old.reddit.com/r/privacytoolsIO/comments/ozlg2e/which_is_best_graphene_os_vs_lineage_os_vs/
 https://old.reddit.com/r/thehatedone/comments/nob3jm/any_good_antiviruse_softwares_for_android_that/
+https://old.reddit.com/r/ZoroZone/comments/pclv76/zoro_website_doesnt_work_on_mull_browser/
 https://personaljournal.ca/jxtsai/galaxy-nexus-divestos
 https://personaljournal.ca/jxtsai/nexus-9-ru-shou
 https://redmine.replicant.us/projects/replicant/wiki/Upstream#DivestOS-Mobile
@@ -79,3 +82,4 @@ https://www.quora.com/If-I-gave-away-my-old-Android-and-iPhone-devices-to-my-fri
 https://www.youtube.com/watch?v=HvzUeDoG_J0
 https://www.youtube.com/watch?v=Kl3O9KR74o4
 https://www.youtube.com/watch?v=r3u5EczO9oU
+https://www.youtube.com/watch?v=ZggDBdcqdXc

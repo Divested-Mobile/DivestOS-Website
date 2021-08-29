@@ -94,8 +94,28 @@
 						<h4 id="dns">Why haven't you completely changed the default DNS servers?<a href="#dns">¶</a></h4>
 						<p>Currently Quad9 (after trying many other public resolvers) is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
 
-						<h4 id="rootInclusion">Why isn't root included?<a href="#rootInclusion">¶</a></h4>
-						<p>You do not need root access on your daily driver cell phone.</p>
+						<h4 id="rootSupport">Why isn't root included/supported?<a href="#rootSupport">¶</a></h4>
+						<p>DivestOS does not support or encourage the use of root or runtime modification frameworks.
+						<br>Such tools will break the following functions:
+							<ul>
+								<li>Bootloader locking on verified boot capable devices, preventing the system from booting.</li>
+								<li>Verified boot on capable devices, preventing the system from booting.</li>
+								<li>Incremental delta OTA updates, will fail to flash.</li>
+								<li>Will break the trust model that AOSP employs and reduce the integrity of the system.</li>
+							</ul>
+						Here are some common use cases of rooting and alternatives if available:
+							<ul>
+								<li>Network Restriction: DivestOS already lets you restrict network for each app by connection type (cellular/Wi-Fi/VPN) and when in the background.</li>
+								<li>Ad/Tracker Blocking: DivestOS includes a tailored <a href="https://divestos.org/hosts" target="_blank" rel="nofollow noopener noreferrer">HOSTS</a> file by default for such blocking. The user can further choose to use an alternative DNS or use a local VPN app such as <a href="https://f-droid.org/en/packages/org.jak_linux.dns66" target="_blank" rel="nofollow noopener noreferrer">DNS66</a> or <a href="https://f-droid.org/en/packages/eu.faircode.netguard" target="_blank" rel="nofollow noopener noreferrer">NetGuard</a>.</li>
+								<li>Permission Control: Modern AOSP provides far more control of permissions then older versions.</li>
+								<li>Data Spoofing: You can run apps in a work profile via <a href="https://f-droid.org/en/packages/net.typeblog.shelter" target="_blank" rel="nofollow noopener noreferrer">Shelter</a>/<a href="https://f-droid.org/en/packages/com.oasisfeng.island.fdroid" target="_blank" rel="nofollow noopener noreferrer">Insular</a> or in a separate user profile to minimize data available to apps when granted related permissions.</li>
+								<li>Backup: DivestOS includes <a href="https://calyxinstitute.org/projects/seedvault-encrypted-backup-for-android" target="_blank" rel="nofollow noopener noreferrer">SeedVault</a> on Q and R for backing up apps and their data to Nextcloud or USB OTG.</li>
+								<li>Overclocking: Most mobile system-on-chips have their RAM stacked above the processor. Heat kills. Overclocking can and will reduce the life-span of your device.</li>
+								<li>App Removal: Modern AOSP already lets you strictly disable most system installed apps. Furthermore DivestOS already includes <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">far fewer</a> system apps compared to most other ROMs.</li>
+								<li>Battery Saving: Modern AOSP lets you prohibit apps from running in the background completely and has more advanced idle battery saving features.</li>
+								<li>Battery Analysis: You can use <a href="https://developer.android.com/topic/performance/power/setup-battery-historian" target="_blank" rel="nofollow noopener noreferrer">Battery Historian</a> via ADB for extremely detailed battery usage reports.</li>
+							</ul>
+						</p>
 
 						<h4 id="slowDeath">Why are you wasting your time with Android? Its clear that Google has been slowly killing AOSP every release!<a href="#slowDeath">¶</a></h4>
 						<p>Android is a legitimately fantastic operating system and no other mobile platform has as many open source apps as it does. F-Droid as of March 2021 has over 3,000 FOSS apps!</p>
