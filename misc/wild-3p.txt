@@ -5,7 +5,7 @@
 
 https://alternativeto.net/software/mull/about/
 https://android.gadgethacks.com/how-to/4-new-noteworthy-indie-android-apps-week-march-26-edition-0384474/
-https://blog.dbmiller.org/2021-08-19-my-setup-using-mull-for-extensible-and-secure-browsing-on-android
+https://blog.dbmiller.org/2021-08-19-using-fennec-or-mull-for-extensible-and-secure-browsing-on-android
 https://boards.4channel.org/g/thread/82832737/fdroid-thread
 https://boards.4channel.org/g/thread/83030878/whats-the-best-android-browser
 https://community.bitwarden.com/t/auto-fill-support-for-mull-browser-secure-firefox-android-fork/27454
@@ -36,6 +36,8 @@ https://mastodon.technology/@IzzyOnDroid/106373635637389989
 https://mastodon.technology/@IzzyOnDroid/106392111912223379
 https://mastodon.technology/@IzzyOnDroid/106500661376752661
 https://mastodon.technology/@IzzyOnDroid/106523916480001971
+https://news.ycombinator.com/item?id=28294099
+https://news.ycombinator.com/item?id=28335786
 https://node9.org/display/b64.aHR0cHM6Ly9ub2RlOS5vcmcvaXRlbS8zZDUwMzdjMS0yMTkxLTQ3ZWMtOWRiYi0wMzdhNTlkZjc4ZTk
 https://old.reddit.com/r/Bitwarden/comments/p8ou0g/mull_browser_android_no_pop_up/
 https://old.reddit.com/r/degoogle/comments/narab5/without_google_play_store_how_do_i_install/

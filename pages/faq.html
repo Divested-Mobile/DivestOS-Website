@@ -63,6 +63,9 @@
 							<li>Consider upstreaming any appropriate changes.</li>
 						</ul>
 
+						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
+						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them. Now only update_engine/AB devices are currently supported.<br>As of 2021/08/29 that is:<br><code>Amber alioth avicii blueline bonito bramble cheryl coral crosshatch enchilada fajita flame FP3 guacamole guacamoleb marlin mata pro1 redfin sailfish sargo sunfish taimen walleye</code></p>
+
 						<h4 id="modem">What about that gaping hole that is the baseband processor?<a href="#modem">¶</a></h4>
 						<p>We are in dire need of free hardware, but we don't have many options available currently.</p>
 
@@ -101,6 +104,8 @@
 								<li>Bootloader locking on verified boot capable devices, preventing the system from booting.</li>
 								<li>Verified boot on capable devices, preventing the system from booting.</li>
 								<li>Incremental delta OTA updates, will fail to flash.</li>
+								<li>You will not be able to use the DivestOS recovery. DivestOS recovery only flashes same-signed ZIPs.</li>
+								<li>Lineage add-on backuptool is removed from DivestOS, you will have to reflash your changes every update.</li>
 								<li>Will break the trust model that AOSP employs and reduce the integrity of the system.</li>
 							</ul>
 						Here are some common use cases of rooting and alternatives if available:
