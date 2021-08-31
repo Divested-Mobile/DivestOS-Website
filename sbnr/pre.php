@@ -23,7 +23,7 @@ if(($handler === false && $SBNR_SEC_CSRF_PER_REQUEST) || !isset($_SESSION['SBNR_
 
 //Save-Data Header Support
 $saveData = false;
-if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) === "on") {
+if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower(noHTML($_SERVER["HTTP_SAVE_DATA"])) === "on") {
 	$saveData = true;
 }
 if(endsWith(noHTML($_SERVER['SERVER_NAME']), "&period;onion")) {
@@ -32,6 +32,11 @@ if(endsWith(noHTML($_SERVER['SERVER_NAME']), "&period;onion")) {
 
 if($SNBR_OBF_MINIFY && $binaryOutput != true) {
 	ob_start("minifyWhitespace");
+}
+
+//Dark mode user preference
+if(isset($_SERVER["Sec-CH-Prefers-Color-Scheme"]) && strtolower(noHTML($_SERVER["Sec-CH-Prefers-Color-Scheme"])) === "dark") {
+	$SBNR_GEN_DARKMODE = true;
 }
 
 ?>
