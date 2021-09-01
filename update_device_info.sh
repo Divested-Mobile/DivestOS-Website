@@ -139,7 +139,7 @@ echo 0 > flounder/status-15.1;
 echo -e "Fastboot\nYes, Untested\nNo" > flounder/bootloader_information;
 
 echo "Fairphone 2" > fp2/friendlyName;
-echo 4 > fp2/status-18.1;
+echo 0 > fp2/status-18.1;
 echo -e "Pre-Unlocked\nUnknown\nNo" > fp2/bootloader_information;
 
 echo "Fairphone 3" > fp3/friendlyName;
@@ -216,7 +216,7 @@ echo -e "Fastboot\nYes, Untested\nYes" > hotdog/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > hotdogb/bootloader_information;
 
 echo "Samsung Galaxy S2" > i9100/friendlyName;
-echo 1 > i9100/status-14.1;
+echo 0 > i9100/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > i9100/bootloader_information;
 
 echo "Samsung Galaxy S3 GSM" > i9300/friendlyName;
@@ -266,7 +266,7 @@ echo 0 > mako/status-18.1;
 echo -e "Fastboot\nTested Working\nNo" > mako/bootloader_information;
 
 echo "Google Nexus 10" > manta/friendlyName;
-echo 5 > manta/status-14.1;
+echo 0 > manta/status-14.1;
 echo -e "Fastboot\nUnknown\nNo" > manta/bootloader_information;
 
 echo "Google Pixel XL" > marlin/friendlyName;

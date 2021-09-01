@@ -179,7 +179,7 @@
 						if(extension_loaded("redis")) {
 							$updateCounter = getRedis()->get("Counter-DivestOS+updater.php+base:" . $base . "+device:" . $device);
 							if($updateCounter > 0) {
-								$updateCount = "<li>Updater checks past ~2 days: " . $updateCounter . "</li>";
+								$updateCount = "<li>Updater checks past " . humanTiming(getRedis()->get("DivestOS+updater.php+uptime")) . ": " . $updateCounter . "</li>";
 							}
 							unset($updateCounter);
 						}
