@@ -38,6 +38,8 @@ https://mastodon.technology/@IzzyOnDroid/106500661376752661
 https://mastodon.technology/@IzzyOnDroid/106523916480001971
 https://news.ycombinator.com/item?id=28294099
 https://news.ycombinator.com/item?id=28335786
+https://news.ycombinator.com/item?id=28388022
+https://news.ycombinator.com/item?id=28393954
 https://node9.org/display/b64.aHR0cHM6Ly9ub2RlOS5vcmcvaXRlbS8zZDUwMzdjMS0yMTkxLTQ3ZWMtOWRiYi0wMzdhNTlkZjc4ZTk
 https://old.reddit.com/r/Bitwarden/comments/p8ou0g/mull_browser_android_no_pop_up/
 https://old.reddit.com/r/degoogle/comments/narab5/without_google_play_store_how_do_i_install/
