@@ -151,7 +151,7 @@ echo 2 > fugu/status-15.1;
 echo -e "Fastboot\nYes, Untested\nNo" > fugu/bootloader_information;
 
 echo "Moto Z" > griffin/friendlyName;
-echo 2 > griffin/status-17.1;
+echo 0 > griffin/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > griffin/bootloader_information;
 
 echo "Google Nexus 7 [2012]" > grouper/friendlyName;
@@ -300,7 +300,7 @@ echo 0 > oneplus3/status-18.1;
 echo -e "Fastboot\nYes, test-keys only?\nYes" > oneplus3/bootloader_information;
 
 echo "Moto G 2015" > osprey/friendlyName;
-echo 2 > osprey/status-17.1;
+echo 0 > osprey/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > osprey/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
