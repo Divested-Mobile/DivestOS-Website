@@ -3,6 +3,7 @@
 # Visit them at your own discretion.
 #
 
+https://4pda.to/forum/index.php?showtopic=1030822
 https://alternativeto.net/software/mull/about/
 https://android.gadgethacks.com/how-to/4-new-noteworthy-indie-android-apps-week-march-26-edition-0384474/
 https://blog.dbmiller.org/2021-08-19-using-fennec-or-mull-for-extensible-and-secure-browsing-on-android
@@ -32,6 +33,7 @@ https://git.replicant.us/replicant/packages_apps_Contacts/tag/?h=cm-13-before-am
 https://groups.google.com/g/alt.privacy/c/fbOKM-6pXoU
 https://groups.google.com/g/maru-os-dev/c/OAlUehwwYLo
 https://hub.libranet.de/wiki/and-priv-sec/wiki/verified-boot
+https://mastodon.blake-hofer.net/@dblake/106659907731895651
 https://mastodon.technology/@IzzyOnDroid/106373635637389989
 https://mastodon.technology/@IzzyOnDroid/106392111912223379
 https://mastodon.technology/@IzzyOnDroid/106500661376752661

@@ -2,22 +2,27 @@
 					<h2>Frequently Asked Questions</h2>
 					<div class="section">
 						<h4 id="recommendPhone">What phone do you recommend?<a href="#recommendPhone">¶</a></h4>
-						<p>For a phone that 'just works', we recommend basically any Pixel or Nexus device. They are easy to unlock and receive fantastic support from the community.</p>
+						<p>Sorted by patch level and price.</p>
 						<ul>
-							<li>Pixel 4: Highest security and performance (note: untested)</li>
-							<li>Pixel 3: High security and performance</li>
-							<li>Essential Phone: An easier to obtain Pixel 2 alternative ($70-$120)</li>
-							<li>Pixel 1: Solid price/performance ($60-$100)</li>
-							<li>Nexus 4: Extreme budget ($30-$50)</li>
+							<li>Any newer Google Pixel, eg. 3/3a/4/4a/5, but notably not currently tested working</li>
+							<li>Google Pixel 2 (taimen/walleye)</li>
+							<li>OnePlus 5/5T (cheeseburger/dumpling)</li>
+							<li>Essential Phone (mata)</li>
+							<li>Google Pixel 1 (marlin/sailfish)</li>
+							<li>Samsung Galaxy S5 (klte)</li>
+							<li>Google Nexus 4 (mako)</li>
 						</ul>
 
 						<h4 id="recommendTablet">What tablet do you recommend?<a href="#recommendTablet">¶</a></h4>
-						<p>Like the phones, we recommend any Nexus device. Of note, the bottom two only have 2GB of RAM.</p>
+						<p>Of note, the bottom two only have 2GB of RAM.</p>
 						<ul>
-							<li>Pixel C: The fastest tablet supported by DivestOS ($100-$150)</li>
-							<li>Nexus 9: A larger Nexus 7 ($60-$100)</li>
-							<li>Nexus 7 2013: Well rounded tablet ($30-$60)</li>
+							<li>Google Pixel C (dragon)</li>
+							<li>Google Nexus 9 (flounder)</li>
+							<li>Google Nexus 7 2013 (flox)</li>
 						</ul>
+
+						<h4 id="pixelWarning">A note on Google Pixels<a href="#pixelWarning">¶</a></h4>
+						<p>Any Verizon, Telus, Rogers, EE, or IMEIs starting with 35 cannot be bootloader unlocked. In general always avoid carrier variants.</p>
 
 						<h4 id="guidelines">Any other guidelines for choosing a device?<a href="#guidelines">¶</a></h4>
 						<p>Yes, please for your own sake avoid devices with the following:</p>
@@ -25,16 +30,16 @@
 							<li>Carrier branding</li>
 							<li>No access to fastboot and/or requiring to create an account</li>
 							<li>Less than 3GB of RAM</li>
-							<li>Less than 16GB of storage</li>
-							<li>Less than a 1500mAh battery</li>
-							<li>Released before 2014</li>
+							<li>Less than 32GB of storage</li>
+							<li>Less than a 2000mAh battery</li>
+							<li>Released before 2016</li>
 							<li>Non-Qualcomm SoC, eg. MediaTek/Exynos/Tegra/OMAP</li>
-							<li>Kernel older than 3.4</li>
+							<li>Kernel older than 3.18</li>
 						</ul>
 						<p>And for the best experience:</p>
 						<ul>
 							<li>At least 4GB of RAM</li>
-							<li>At least 32GB of storage</li>
+							<li>At least 64GB of storage</li>
 							<li>At least an MSM8998 SoC</li>
 							<li>At least kernel 4.4, preferably newer.</li>
 						</ul>
@@ -70,7 +75,7 @@
 						<p>We are in dire need of free hardware, but we don't have many options available currently.</p>
 
 						<h4 id="proprietary-git">Why are you hosting on GitHub and GitLab if they are proprietary?<a href="#proprietary-git">¶</a></h4>
-						<p>Because a lot of people have existing accounts on them which reduces the barrier to entry for contributing.</p>
+						<p>Because a lot of people have existing accounts on them which reduces the barrier to entry for contributing. You are otherwise free to e-mail patches to us if you prefer.</p>
 
 						<h4 id="base">Why isn't DivestOS based on X ROM?<a href="#base">¶</a></h4>
 						<p>LineageOS has superb device compatibility across the board. Our build scripts are mostly universal so adding an alternate base if needed is easily doable.</p>

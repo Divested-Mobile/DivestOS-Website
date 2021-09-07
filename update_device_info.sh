@@ -116,10 +116,10 @@ echo -e "Fastboot\nYes, but will error\nYes" > dragon/bootloader_information;
 
 echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
-echo 1 > enchilada/status-18.1;
-echo 1 > fajita/status-18.1;
+echo 4 > enchilada/status-18.1;
+echo 0 > fajita/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > enchilada/bootloader_information;
-echo -e "Fastboot\nYes, Untested\nYes" > fajita/bootloader_information;
+echo -e "Fastboot\nYes, Tested Working\nYes" > fajita/bootloader_information;
 
 echo "Nextbit Robin" > ether/friendlyName;
 echo 0 > ether/status-15.1;
