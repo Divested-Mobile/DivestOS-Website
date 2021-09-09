@@ -124,7 +124,7 @@ echo -e "Fastboot\nYes, Tested Working\nYes" > fajita/bootloader_information;
 echo "Nextbit Robin" > ether/friendlyName;
 echo 0 > ether/status-15.1;
 echo 0 > ether/status-18.1;
-echo -e "Fastboot\nUnknown\nNo" > ether/bootloader_information;
+echo -e "Fastboot\nYes, Tested Working\nNo" > ether/bootloader_information;
 
 echo "Google Nexus 7 [2013]" > flo/friendlyName;
 echo "Google Nexus 7 [2013] REPART" > flox/friendlyName;
