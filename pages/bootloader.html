@@ -49,6 +49,8 @@
 										<li><code>$ adb sideload system.zip</code></li>
 									</ol>
 								</li>
+								<li>AVB devices only: <code>$ fastboot erase avb_custom_key</code></li>
+								<li>AVB devices only: <code>$ fastboot flash avb_custom_key avb_pkmd.bin</code></li>
 							</ol>
 							<h4>Locking</h4>
 							<p><mark class="secondary">Locking your bootloader with an incorrectly signed system image or on unsupported device can result in a permanent brick!</mark></p>
@@ -57,8 +59,7 @@
 							<ol>
 								<li>After install of a properly signed system you must verify boot, verify functionality, verify update support, and verify the ability to factory reset.</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
-								<li>AVB devices only: <code>$ fastboot erase avb_custom_key</code></li>
-								<li>AVB devices only: <code>$ fastboot flash avb_custom_key avb_pkmd.bin</code></li>
+								<li>AVB devices only, ensure you flashed the custom key slot earlier</li>
 								<li><code>$ fastboot oem lock</code> or <code>$ fastboot flashing lock</code></li>
 								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes.</li>
 							</ol>
