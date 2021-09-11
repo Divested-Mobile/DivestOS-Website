@@ -16,6 +16,7 @@ https://community.e.foundation/t/divestos-its-raining-new-lineageos-privacy-rom/
 https://community.e.foundation/t/divestos-vs-e-os-security-and-privacy-easy/33717
 https://community.e.foundation/t/secure-browser-and-firefox-about-config/24320/4
 https://community.e.foundation/t/where-can-i-find-apk-file-for-e-app-store/19347/13
+https://forum.fairphone.com/t/operating-systems-for-fairphones/11425
 https://forum.f-droid.org/t/best-foss-os-available/13240
 https://forum.f-droid.org/t/favourite-browsers-to-use/12604
 https://forum.f-droid.org/t/oneplus-3t-foss-rom/14352
@@ -45,6 +46,7 @@ https://news.ycombinator.com/item?id=28393954
 https://node9.org/display/b64.aHR0cHM6Ly9ub2RlOS5vcmcvaXRlbS8zZDUwMzdjMS0yMTkxLTQ3ZWMtOWRiYi0wMzdhNTlkZjc4ZTk
 https://old.reddit.com/r/Bitwarden/comments/p8ou0g/mull_browser_android_no_pop_up/
 https://old.reddit.com/r/degoogle/comments/narab5/without_google_play_store_how_do_i_install/
+https://old.reddit.com/r/degoogle/comments/pjligx/open_source_alternatives_for_degoogling/
 https://old.reddit.com/r/fdroid/comments/jzba3e/this_ones_for_my_countersurveillance_family/
 https://old.reddit.com/r/fdroid/comments/kypdce/how_to_know_if_an_app_is_safe/
 https://old.reddit.com/r/firefox/comments/l95iul/what_are_the_fenix_forks_available/
@@ -84,6 +86,7 @@ https://www.ebay.de/usr/ungoogled #"realtime malware scanner"
 https://www.forocoches.com/foro/showthread.php?t=8683286
 https://www.ghacks.net/2020/10/01/you-can-now-install-any-add-on-in-firefox-nightly-for-android-but-it-is-complicated/
 https://www.ghacks.net/2021/08/05/is-iceraven-the-better-firefox-for-android-mobile-browser/
+https://www.gsmarena.com/newscomm-47605.php
 https://www.lineage-os-forum.de/Thread-ROM-DivestOS-Mobil-basierend-auf-LineageOS
 https://www.quora.com/If-I-gave-away-my-old-Android-and-iPhone-devices-to-my-friends-and-family-is-there-a-risk-that-theyll-dig-out-my-personal-info-even-though-I-factory-reset-and-erased-the-devices
 https://www.youtube.com/watch?v=HvzUeDoG_J0

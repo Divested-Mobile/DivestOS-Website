@@ -14,7 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 2 > alioth/status-18.1;
@@ -109,6 +109,9 @@ echo 0 > d852/status-18.1;
 echo 0 > d855/status-18.1;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d852/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
+
+echo "Xiaomi Redmi K20 / Mi 9T" > davinci/friendlyName;
+echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > davinci/bootloader_information;
 
 echo "Google Pixel C" > dragon/friendlyName;
 echo 0 > dragon/status-15.1;
@@ -357,6 +360,9 @@ echo -e "Bulk Mode\nNot Unlockable\nNo" > thor/bootloader_information;
 echo "Samsung Galaxy Note Pro 12.2" > v1awifi/friendlyName;
 echo 2 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
+
+echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
+echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
 echo 2 > victara/status-18.1;
