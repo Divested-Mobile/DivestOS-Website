@@ -111,6 +111,7 @@ echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d852/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
 echo "Xiaomi Redmi K20 / Mi 9T" > davinci/friendlyName;
+echo 2 > davinci/status-17.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > davinci/bootloader_information;
 
 echo "Google Pixel C" > dragon/friendlyName;
@@ -130,7 +131,7 @@ echo 0 > ether/status-18.1;
 echo -e "Fastboot\nYes, Tested Working\nNo" > ether/bootloader_information;
 
 echo "Google Nexus 7 [2013]" > flo/friendlyName;
-echo "Google Nexus 7 [2013] REPART" > flox/friendlyName;
+echo "Google Nexus 7 [2013] (repartitioned)" > flox/friendlyName;
 echo 0 > flo/status-15.1;
 echo 0 > flox/status-18.1;
 echo -e "Fastboot\nYes, Untested\nNo" > deb/bootloader_information;
@@ -139,7 +140,7 @@ echo -e "Fastboot\nTested Working\nNo" > flox/bootloader_information;
 
 echo "Google Nexus 9" > flounder/friendlyName;
 echo 0 > flounder/status-15.1;
-echo -e "Fastboot\nYes, Untested\nNo" > flounder/bootloader_information;
+echo -e "Fastboot\nYes, Untested\nYes" > flounder/bootloader_information;
 
 echo "Fairphone 2" > fp2/friendlyName;
 echo 0 > fp2/status-18.1;
