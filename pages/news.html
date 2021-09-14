@@ -1,6 +1,60 @@
 				<div class="card fluid">
 					<h2>Project News</h2>
 					<p>Occasional updates about DivestOS.<br><a href="index.php?page=news-future">(Upcoming News)</a></p>
+					<div class="section" id="2021-09">
+						<h3>September 14th 2021 Update<a href="#2021-09">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>18.1 September ASB builds were published on September 13th and 14th.</li>
+							<li>14.1, 15.1, 16.0, and 17.1 release canidate #3 September ASB builds were published on September 12th.</li>
+							<li>slub_nomerge has been enabled for pre 3.18 kernels, providing some of the slab_nomerge benefits.</li>
+							<li><a href="https://cateee.net/lkddb/web-lkddb/PROC_PAGE_MONITOR.html" target="_blank" rel="nofollow noopener noreferrer">PROC_PAGE_MONITOR</a> is no longer disabled, fixing app and service memory stats (eg. previously 0B shown in Settings).</li>
+							<li>14.1 and 15.1 release canidate #2 September ASB builds were published on September 12th.</li>
+							<li>[upstream] The APN list has been updated, especially many changes for carriers in China.</li>
+							<li>14.1 and 15.1 release canidate #1 September ASB builds were published on September 9th.</li>
+							<li>[upstream] Updated to September ASB.</li>
+							<li>There have been many new kernel CVE patches as usual.</li>
+							<li>TalkBack is now included on all versions. This is thanks to our work <a href="https://gitlab.com/divested-mobile/talkback/-/commit/74df73825d050641ccc2605d41874f7264c0f17c" target="_blank" rel="nofollow noopener noreferrer">removing</a> its proprietary blobs back in July and the subsequent <a href="https://gitlab.com/fdroid/fdroiddata/-/merge_requests/9367/" target="_blank" rel="nofollow noopener noreferrer">upstreaming</a> to F-Droid. Notably it is the first libre-build featuring the Braille keyboard.</li>
+							<li>The included HOSTS list for blocking ads/trackers has now been <a href="https://gitlab.com/divested/simple_hosts_merger/-/blob/35a88d10f22ca03f7b9de53562094b34972312b9/src/Main.java#L277" target="_blank" rel="nofollow noopener noreferrer">optimized</a> using wildcards.</li>
+							<li>Wildcard HOSTS support has been backported from 16.0 branch to 14.1 and 15.1.</li>
+							<li>[upstream] Updated WebView to Chromium 92.0.4515.159, has many security fixes. <a href="https://review.lineageos.org/c/LineageOS/android_external_chromium-webview/+/313782/4" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>Camera on taimen and walleye is <a href="https://gitlab.com/divested-mobile/divestos-build/-/commit/3a79316ddb564527b25e3c54837169c1487f4a86" target="_blank" rel="nofollow noopener noreferrer">fixed</a>.</li>
+						</ul>
+						<h4>Roster Updates</h4>
+						<ul>
+							<li>vayu 18.1 builds are now available, untested.</li>
+							<li>davinci 17.1 builds are now available, untested.</li>
+							<li>surnia builds are now available, tested working.</li>
+							<li>sunfish, bramble, and redfin 18.1 builds are now available, untested.</li>
+							<li>beryllium, lmi, and alioth 18.1 builds are now available, untested.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Mull 91.1.0, 91.2.0, and 92.1.1 were made available.</li>
+							<li>Hypatia had a bug <a href="https://gitlab.com/divested-mobile/hypatia/-/commit/fe49d06902fc8a09149c27174fb4b419b4bb2707" target="_blank" rel="nofollow noopener noreferrer">fix</a> to identify multiple files with the same hashes (inverted hashmap).</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The messengers page now details offline message support and multiple device support.</li>
+							<li>The screenshots page has been overhauled.</li>
+							<li>Many refinements to the device downloads page:
+								<ul>
+									<li>Device names have been refined.</li>
+									<li>Update check counts are now shown for each device.</li>
+									<li>Fuzzy dates for images are now shown for each device.</li>
+								</ul>
+							</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>The privacy policy has been updated to better comply with GDPR regulations.</li>
+							<li>An F-Droid repository for serving system <a href="https://divestos.org/fdroid/webview?fingerprint=FB426DA1750A53D7724C8A582B4D34174E64A84B38940E5D5A802E1DFF9A40D2" target="_blank">WebView updates</a> out-of-band is now included. You might need to manually add it.</li>
+							<li>Periodic reminder that this is not a company or team and is just myself Tad. Please consider donating <a href="https://divested.dev/donate" target="_blank" rel="nofollow noopener noreferrer">here</a> if you enjoy my offerings.</li>
+						</ul>
+					</div>
 					<div class="section" id="2021-08">
 						<h3>August 7th 2021 Update<a href="#2021-08">¶</a></h3>
 						<h4>System Updates</h4>
