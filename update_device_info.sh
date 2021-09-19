@@ -190,8 +190,8 @@ echo -e "Fastboot (LGE)\nNo*\nNo" > us997/bootloader_information;
 
 echo "LG V20 INTL" > h990/friendlyName;
 echo "LG V20 US" > us996/friendlyName;
-echo 2 > h990/status-18.1;
-echo 2 > us996/status-18.1;
+echo 4 > h990/status-18.1;
+echo 0 > us996/status-18.1;
 echo -e "Exploit\nNot Unlockable\nNo" > h990/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > us996/bootloader_information;
 
@@ -363,6 +363,7 @@ echo 2 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
+echo 2 > vayu/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;

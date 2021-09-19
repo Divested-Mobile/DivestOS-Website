@@ -29,7 +29,7 @@ getVendorPatchLevel() {
 		level="Unknown";
 	fi;
 	if [ "$level" = '$(PLATFORM_SECURITY_PATCH)' ]; then
-		level="2021-08";
+		level="2021-09";
 	fi;
 	echo -n $(sed -e 's/^"//' -e 's/"$//' <<< "$level");
 }
