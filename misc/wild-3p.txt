@@ -3,6 +3,7 @@
 # Visit them at your own discretion.
 #
 
+https://0xzx.com/2021032921011302887.html
 https://4pda.to/forum/index.php?showtopic=1030822
 https://alternativeto.net/software/mull/about/
 https://android.gadgethacks.com/how-to/4-new-noteworthy-indie-android-apps-week-march-26-edition-0384474/
@@ -18,6 +19,8 @@ https://community.e.foundation/t/mistakenly-downloaded-an-apk-file-and-now-cant-
 https://community.e.foundation/t/secure-browser-and-firefox-about-config/24320/4
 https://community.e.foundation/t/what-are-the-best-applications-or-what-you-find-the-best-list-here-what-you-use-or-recommend/7343/45
 https://community.e.foundation/t/where-can-i-find-apk-file-for-e-app-store/19347/13
+https://edit.tosdr.org/services/2550
+https://en.wikipedia.org/wiki/List_of_custom_Android_distributions
 https://forum.fairphone.com/t/operating-systems-for-fairphones/11425
 https://forum.f-droid.org/t/best-foss-os-available/13240
 https://forum.f-droid.org/t/favourite-browsers-to-use/12604
@@ -37,6 +40,9 @@ https://git.replicant.us/replicant/packages_apps_Contacts/tag/?h=cm-13-before-am
 https://groups.google.com/g/alt.privacy/c/fbOKM-6pXoU
 https://groups.google.com/g/maru-os-dev/c/OAlUehwwYLo
 https://hub.libranet.de/wiki/and-priv-sec/wiki/verified-boot
+https://lemmy.eus/post/8317
+https://marzzzello.gitlab.io/mirror-monitor/repo/divestos.org:fdroid:official.html
+https://marzzzello.gitlab.io/mirror-monitor/repo/divestos.org:fdroid:unofficial.html
 https://mastodon.blake-hofer.net/@dblake/106659907731895651
 https://mastodon.technology/@IzzyOnDroid/106373635637389989
 https://mastodon.technology/@IzzyOnDroid/106392111912223379
@@ -92,11 +98,14 @@ https://social.coop/@dazinism/104772408463389838
 https://social.coop/@dazinism/105753423847502090
 https://social.coop/@dazinism/105882070773086714
 https://social.coop/@dazinism/105882110817475294
+https://social.coop/@dazinism/106048230292752206
 https://social.tchncs.de/@kuketzblog/106686201849538888
 https://static.lwn.net/Distributions/#embed
 https://teamos-hkrg.com/threads/android-gmaps-wv-v1-4-17.155907/
 https://teamos-hkrg.com/threads/android-hypatia-v2-21-74.156749/
 https://t.me/NoGoolag/4367
+https://tosdr.community/t/divestos/611
+https://tracxn.com/d/companies/divestos.org
 https://twitter.com/firefoxpreview/status/1326928869111238658
 https://www.android-hilfe.de/forum/root-custom-roms-modding-fuer-samsung-galaxy-s5.1567/was-haltet-ihr-von-divestos-oder-lineageos-auf-dem-galaxy-s5.982469.html
 https://www.ebay.de/itm/333976652955
@@ -106,12 +115,15 @@ https://www.ghacks.net/2020/10/01/you-can-now-install-any-add-on-in-firefox-nigh
 https://www.ghacks.net/2021/08/05/is-iceraven-the-better-firefox-for-android-mobile-browser/
 https://www.gsmarena.com/newscomm-47605.php
 https://www.lineage-os-forum.de/Thread-ROM-DivestOS-Mobil-basierend-auf-LineageOS
+https://www.publish0x.com/mlnpetrovic/the-best-mobile-browsers-xnqolzz
 https://www.quora.com/If-I-gave-away-my-old-Android-and-iPhone-devices-to-my-friends-and-family-is-there-a-risk-that-theyll-dig-out-my-personal-info-even-though-I-factory-reset-and-erased-the-devices
+https://www.youtube.com/watch?v=BVWU8TPgI6c
 https://www.youtube.com/watch?v=HvzUeDoG_J0
 https://www.youtube.com/watch?v=Kl3O9KR74o4
 https://www.youtube.com/watch?v=LbVcsJHuoVY
 https://www.youtube.com/watch?v=M_5dR2zhydI
 https://www.youtube.com/watch?v=r3u5EczO9oU
 https://www.youtube.com/watch?v=tRmAcNAOpIQ
+https://www.youtube.com/watch?v=xxrRY5Z5aXQ
 https://www.youtube.com/watch?v=yLoKVUJ3aoQ
 https://www.youtube.com/watch?v=ZggDBdcqdXc

@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The nitty gritty<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2021-08-04</p>
+						<p>Last updated: 2021-09-25</p>
 						<p>This needs to be updated since we've switched to using a proper vendor overlay for many changes</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
@@ -133,12 +133,17 @@
 							<!--<li>P/Q: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>-->
 							<li>Don't send IMSI to SUPL (MSe1969)</li>
 							<li>!N: Enable fingerprint lockout after three failed attempts (GrapheneOS)</li>
+							<li>Permission for sensors access (MSe1969)</li>
 							<li>P/Q/R: Add Open Camera to aux camera allowlist</li>
 							<li>!MICROG_INCLUDED=FULL: Remove CompanionDeviceManager, used to support Android Wear</li>
 							<li>N/O/Q: Remove Osu, Automatic Wi-Fi connection non-sense</li>
 							<li>Remove PrintRecommendationService, Creates popups to install proprietary print apps</li>
 							<li>Set animation scales to 0.5</li>
 							<li>Various rebranding</li>
+						</ul>
+						<h5>android_frameworks_native</h5>
+						<ul>
+							<li>Permission for sensors access (MSe1969)</li>
 						</ul>
 						<!--<h5>android_frameworks_opt_net_ims</h5>
 						<ul>
@@ -221,6 +226,7 @@
 							<li>N: Cherrypick 201113: wifi: Add world regulatory domain country code</li>
 							<li>O: Fix crashes when the PersistentDataBlockManager service isn't available</li>
 							<li>Add option to disable captive portal checks (MSe1969)</li>
+							<li>Permission for sensors access (MSe1969)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
 							<!--<li>MICROG_INCLUDED=FULL: microG doesn't support Google Backup, hide the options</li>-->
 							<li>Disable "Instant Apps"</li>

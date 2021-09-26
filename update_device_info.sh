@@ -45,7 +45,7 @@ echo 0 > bacon/status-18.1;
 echo -e "Fastboot\nYes, but irreversible\nNo" > bacon/bootloader_information;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
-echo 2 > beryllium/status-18.1;
+echo 1 > beryllium/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > beryllium/bootloader_information;
 
 echo "Google Pixel 3" > blueline/friendlyName;
@@ -57,8 +57,8 @@ echo -e "Fastboot\nYes, Untested\nYes" > crosshatch/bootloader_information;
 
 echo "Google Pixel 3a XL" > bonito/friendlyName;
 echo "Google Pixel 3a" > sargo/friendlyName;
-echo 2 > bonito/status-17.1;
-echo 2 > sargo/status-17.1;
+echo 1 > bonito/status-17.1;
+echo 1 > sargo/status-17.1;
 echo -e "Fastboot\nYes, Untested\nYes" > bonito/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > sargo/bootloader_information;
 
@@ -190,7 +190,7 @@ echo -e "Fastboot (LGE)\nNo*\nNo" > us997/bootloader_information;
 
 echo "LG V20 INTL" > h990/friendlyName;
 echo "LG V20 US" > us996/friendlyName;
-echo 4 > h990/status-18.1;
+echo 0 > h990/status-18.1;
 echo 0 > us996/status-18.1;
 echo -e "Exploit\nNot Unlockable\nNo" > h990/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > us996/bootloader_information;
@@ -304,7 +304,7 @@ echo 0 > oneplus3/status-18.1;
 echo -e "Fastboot\nYes, test-keys only?\nYes" > oneplus3/bootloader_information;
 
 echo "Moto G 2015" > osprey/friendlyName;
-echo 0 > osprey/status-17.1;
+echo 5 > osprey/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > osprey/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
@@ -363,7 +363,7 @@ echo 2 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
-echo 2 > vayu/status-18.1;
+echo 1 > vayu/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
