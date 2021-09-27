@@ -16,12 +16,12 @@
 
 $handler = true;
 include "config.php";
-if($SBNR_CAPTCHA_WALL === false && sizeof($SBNR_CAPTCHA_WALL_PAGES) === 0) { exit; }
-
 include "security.php";
 include "captcha.php";
 include "utils.php";
 include "pre.php";
+
+if($SBNR_CAPTCHA_WALL === false && sizeof($SBNR_CAPTCHA_WALL_PAGES) === 0 && empty($_SESSION['SBNR_CAPTCHA_WALL_URI'])) { exit; }
 
 if(isset($_POST["CSRF_TOKEN"], $_POST["blackBear"])) {
 	if(noHTML($_POST["CSRF_TOKEN"]) === $_SESSION['SBNR_CSRF_TOKEN'] && (noHTML($_POST["blackBear"]) === "roar") && empty($_POST["brownBear"])) {
