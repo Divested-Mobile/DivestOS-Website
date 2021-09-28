@@ -41,6 +41,7 @@ https://groups.google.com/g/alt.privacy/c/fbOKM-6pXoU
 https://groups.google.com/g/maru-os-dev/c/OAlUehwwYLo
 https://hub.libranet.de/wiki/and-priv-sec/wiki/verified-boot
 https://lemmy.eus/post/8317
+https://linuxfr.org/forums/linux-android/posts/divestos-fork-de-lineageos
 https://marzzzello.gitlab.io/mirror-monitor/repo/divestos.org:fdroid:official.html
 https://marzzzello.gitlab.io/mirror-monitor/repo/divestos.org:fdroid:unofficial.html
 https://mastodon.blake-hofer.net/@dblake/106659907731895651
