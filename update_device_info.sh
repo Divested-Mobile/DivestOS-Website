@@ -259,7 +259,7 @@ echo "Samsung Galaxy Nexus GSM" > maguro/friendlyName;
 echo "Samsung Galaxy Nexus VZW" > toro/friendlyName;
 echo "Samsung Galaxy Nexus SPR" > toroplus/friendlyName;
 echo 0 > maguro/status-14.1;
-echo 4 > toro/status-14.1;
+echo 0 > toro/status-14.1;
 echo 0 > toroplus/status-14.1;
 echo -e "Fastboot\nTested Working\nNo" > maguro/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nNo" > toro/bootloader_information;
