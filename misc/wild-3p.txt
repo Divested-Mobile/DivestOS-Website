@@ -118,6 +118,7 @@ https://old.reddit.com/r/MicroG/comments/nbh0q9/anyone_use_divestos_with_microg/
 https://old.reddit.com/r/MicroG/comments/p3qwcm/this_is_libreav_from_fdroid_im_curious_if_its/
 https://old.reddit.com/r/nextdns/comments/ppazpq/secure_connection_failed_using_mull_browser/
 https://old.reddit.com/r/nexus5x/comments/njnaj7/secure_simple_rom_for_5x/
+https://old.reddit.com/r/Nexus7/comments/pz657s/install_custom_recovery_on_a_n7_gen2_without_usb/
 https://old.reddit.com/r/OpenSourceApps/comments/n0eucz/mull_browser_android/
 https://old.reddit.com/r/OpenSourceApps/comments/p99c7u/gmaps_wv_android/
 https://old.reddit.com/r/privacy/comments/o01rjz/hi_could_recommend_me_good_roms_focused_on_privacy/
