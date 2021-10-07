@@ -69,6 +69,9 @@ createTable() {
 	if [[ " ${hasVendorPartitionAsBlob[@]} " =~ " ${name} " ]]; then
 		blobCount+=" + has vendor.img";
 	fi;
+	if [[ " ${hasVendorPartitionFromStock[@]} " =~ " ${name} " ]]; then
+		blobCount+=" + has stock /vendor";
+	fi;
 
 	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel">'$kernelVersion'</td>\n\t<td data-label="Blob Count">'$blobCount'</td>\n</tr>';
 }
@@ -78,6 +81,7 @@ getLineCount () {
 }
 
 hasVendorPartitionAsBlob=('bullhead' 'dragon' 'flounder' 'angler');
+hasVendorPartitionFromStock=('enchilada' 'fajita' 'enchilada/fajita' 'starlte' 'star2lte');
 
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 createTable alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
