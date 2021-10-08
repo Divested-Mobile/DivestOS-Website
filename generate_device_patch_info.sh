@@ -57,15 +57,14 @@ createTable() {
 	kernelPath=$4;
 	vASB=$(getVendorPatchLevel $version $devicePath)
 	kernelVersion=$(getKernelVersion $version $kernelPath);
-	blobCount=$(getLineCount "Build/$version/device/$devicePath/*proprietary*.txt");
-	if [ -n "$5" ]; then
-		extraBlobs=$(getLineCount "Build/$version/device/$5/*proprietary*.txt");
-		blobCount=$(($blobCount + $extraBlobs));
-	fi;
-	if [ -n "$6" ]; then
-		extraBlobs=$(getLineCount "Build/$version/device/$6/*proprietary*.txt");
-		blobCount=$(($blobCount + $extraBlobs));
-	fi;
+
+	nameStripped=$(echo -n $name | sed 's|/||g');
+	blobCountVanillaVar=blobCountVanilla_$nameStripped;
+	blobCountVanilla=${!blobCountVanillaVar};
+	blobCountDeblobbedVar=blobCountDeblobbed_$nameStripped;
+	blobCountDeblobbed=${!blobCountDeblobbedVar};
+	blobCountDelta=$(($blobCountVanilla-$blobCountDeblobbed));
+	blobCount="$blobCountVanilla, -$blobCountDelta";
 	if [[ " ${hasVendorPartitionAsBlob[@]} " =~ " ${name} " ]]; then
 		blobCount+=" + has vendor.img";
 	fi;
@@ -74,10 +73,6 @@ createTable() {
 	fi;
 
 	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel">'$kernelVersion'</td>\n\t<td data-label="Blob Count">'$blobCount'</td>\n</tr>';
-}
-
-getLineCount () {
-	cat $1 | sed '/^\s*#/d;/^\s*$/d' | wc -l || true;
 }
 
 hasVendorPartitionAsBlob=('bullhead' 'dragon' 'flounder' 'angler');
@@ -89,7 +84,7 @@ createTable angler LineageOS-15.1 huawei/angler huawei/angler;
 createTable aura LineageOS-18.1 razer/aura razer/sdm845;
 createTable avicii LineageOS-17.1 oneplus/avicii oneplus/sm7250;
 createTable axon7 LineageOS-15.1 zte/axon7 zte/msm8996;
-createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974;
+createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974 oppo/common;
 createTable beryllium LineageOS-18.1 xiaomi/sdm845-common xiaomi/sdm845;
 createTable bonito/sargo LineageOS-17.1 google/bonito google/msm-4.9 google/bonito/bonito;
 createTable bonito/sargo LineageOS-18.1 google/bonito google/msm-4.9 google/bonito/bonito;
