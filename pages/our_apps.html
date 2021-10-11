@@ -1,13 +1,13 @@
 				<div class="card fluid">
 					<h2>Our Apps</h2>
-					<p>All of the following apps are FOSS and are available via our F-Droid repository. If you are running DivestOS the repository is already added and avaialble to you. For others the repository information is available below. Most are also available in the official F-Droid repository, with the last coming soon.</p>
+					<p>All of the following apps are FOSS and are available via our F-Droid repository. If you are running DivestOS the repository is already added and avaialble to you. For others the repository information is available below. Many are also available in the official F-Droid repository.</p>
 					<div class="section" id="hypatia">
 						<h3>Hypatia<a href="#hypatia">¶</a></h3>
 						<p>The first open source real-time malware scanner for Android. It is powered by ClamAV style signature databases. Over 450k malware signatures can be detected by default, and configurable up to over 4 million. Real-time scanning can scan average sized files in 5-40ms and has a near zero impact on device performance and battery life. All operations are done locally on the device. Internet is only used to download signature databases. Your files and/or their metadata will never leave your device.</p>
 						<ul>
 							<li>License: GPL-3.0-or-later</li>
 							<li>Source Code: <a href="https://github.com/divested-mobile/hypatia" target="_blank" rel="nofollow noopener noreferrer">GitHub</a>, <a href="https://gitlab.com/divested-mobile/hypatia" target="_blank" rel="nofollow noopener noreferrer">GitLab</a></li>
-							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.malwarescanner/" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a>, <a href="https://gitlab.com/divested-mobile/hypatia/-/jobs/artifacts/stable/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (unsigned debug .apk)</a></li>
+							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.malwarescanner/" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a>, <a href="https://gitlab.com/divested-mobile/hypatia/-/jobs/artifacts/stable/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (debug .apk)</a></li>
 							<li>Test File: Have Hypatia running? Save <a href="/images/hypatia-test-file.png" target="_blank">this</a> file to test it!</li>
 						</ul>
 						<div class="collapse">
@@ -24,7 +24,7 @@
 						<ul>
 							<li>License: GPL-3.0-or-later</li>
 							<li>Source Code: <a href="https://github.com/divested-mobile/extirpater" target="_blank" rel="nofollow noopener noreferrer">GitHub</a>, <a href="https://gitlab.com/divested-mobile/extirpater" target="_blank" rel="nofollow noopener noreferrer">GitLab</a></li>
-							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.extirpater/" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a>, <a href="https://gitlab.com/divested-mobile/extirpater/-/jobs/artifacts/master/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (unsigned debug .apk)</a></li>
+							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.extirpater/" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a>, <a href="https://gitlab.com/divested-mobile/extirpater/-/jobs/artifacts/master/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (debug .apk)</a></li>
 						</ul>
 						<div class="collapse">
 							<input type="checkbox" id="collapse-section-extirpater" aria-hidden="true">
@@ -51,13 +51,22 @@
 							</div>
 						</div>
 					</div>
+					<div class="section" id="mulch">
+						<h3>Mulch<a href="#mulch">¶</a></h3>
+						<p>This is a security oriented web browser based on Chromium. It includes many patches from the <a href="https://github.com/GrapheneOS/Vanadium" target="_blank" rel="nofollow noopener noreferrer">Vanadium project</a>, plus some extras from the <a href="https://github.com/bromite/bromite" target="_blank" rel="nofollow noopener noreferrer">Bromite project</a>. The source repo also includes prebuilts and makefiles to allow other ROMs to include Mulch as their system WebView.</p>
+						<ul>
+							<li>License: BSD, MIT, GPL-3.0, Apache-2.0 + Various Others</li>
+							<li>Source Code: <a href="https://gitlab.com/divested-mobile/mulch" target="_blank" rel="nofollow noopener noreferrer">GitLab</a></li>
+							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.mulch/" target="_blank" rel="nofollow noopener noreferrer">DivestOS F-Droid Repo</a></li>
+						</ul>
+					</div>
 					<div class="section" id="gmapswv">
 						<h3>GMaps WV<a href="#gmapswv">¶</a></h3>
 						<p>This is a restricted WebView wrapper for accessing the web version of Google Maps. Intended for use when OpenStreetMap isn't enough.</p>
 						<ul>
 							<li>License: GPL-3.0-or-later</li>
 							<li>Source Code: <a href="https://github.com/divested-mobile/maps" target="_blank" rel="nofollow noopener noreferrer">GitHub</a>, <a href="https://gitlab.com/divested-mobile/maps" target="_blank" rel="nofollow noopener noreferrer">GitLab</a></li>
-							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.maps/" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a>, <a href="https://gitlab.com/divested-mobile/maps/-/jobs/artifacts/master/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (unsigned debug .apk)</a></li>
+							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.maps/" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a>, <a href="https://gitlab.com/divested-mobile/maps/-/jobs/artifacts/master/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (debug .apk)</a></li>
 						</ul>
 					</div>
 					<div class="section" id="mergedwifinlp">
@@ -66,7 +75,7 @@
 						<ul>
 							<li>License: GPL-3.0-or-later</li>
 							<li>Source Code: <a href="https://github.com/divested-mobile/wlanbackend" target="_blank" rel="nofollow noopener noreferrer">GitHub</a>, <a href="https://gitlab.com/divested-mobile/wlanbackend" target="_blank" rel="nofollow noopener noreferrer">GitLab</a></li>
-							<li>Download: <a href="https://f-droid.org/en/packages/info.spotcomms.wlanbackend/" target="_blank" rel="nofollow noopener noreferrer"><strike>F-Droid</strike></a><a href="https://gitlab.com/fdroid/fdroiddata/-/merge_requests/8966" target="_blank" rel="nofollow noopener noreferrer"> (pending)</a>, <a href="https://gitlab.com/divested-mobile/wlanbackend/-/jobs/artifacts/master/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (unsigned debug .apk)</a></li>
+							<li>Download: <a href="https://f-droid.org/en/packages/info.spotcomms.wlanbackend/" target="_blank" rel="nofollow noopener noreferrer"><strike>F-Droid</strike></a><a href="https://gitlab.com/fdroid/fdroiddata/-/merge_requests/8966" target="_blank" rel="nofollow noopener noreferrer"> (pending)</a>, <a href="https://gitlab.com/divested-mobile/wlanbackend/-/jobs/artifacts/master/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (debug .apk)</a></li>
 						</ul>
 					</div>
 					<div class="section" id="motionlock">
@@ -75,7 +84,7 @@
 						<ul>
 							<li>License: GPL-3.0-or-later</li>
 							<li>Source Code: <a href="https://github.com/divested-mobile/motionlock" target="_blank" rel="nofollow noopener noreferrer">GitHub</a>, <a href="https://gitlab.com/divested-mobile/motionlock" target="_blank" rel="nofollow noopener noreferrer">GitLab</a></li>
-							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.motionlock/" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a>, <a href="https://gitlab.com/divested-mobile/motionlock/-/jobs/artifacts/master/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (unsigned debug .apk)</a></li>
+							<li>Download: <a href="https://f-droid.org/en/packages/us.spotco.motionlock/" target="_blank" rel="nofollow noopener noreferrer">F-Droid</a>, <a href="https://gitlab.com/divested-mobile/motionlock/-/jobs/artifacts/master/browse?job=assembleDebug" target="_blank" rel="nofollow noopener noreferrer">CI Artifacts (debug .apk)</a></li>
 						</ul>
 					</div>
 					<div class="section" id="repos">
