@@ -29,7 +29,7 @@ echo 0 > angler/status-15.1;
 echo -e "Fastboot\nTested Working\nYes" > angler/bootloader_information;
 
 echo "Razer Phone 2" > aura/friendlyName;
-echo 2 > aura/status-18.1;
+echo 1 > aura/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
@@ -265,7 +265,7 @@ echo -e "Fastboot\nTested Working\nNo" > maguro/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nNo" > toro/bootloader_information;
 echo -e "Fastboot\nTested Working\nNo" > toroplus/bootloader_information;
 
-echo "Google Nexus 4" > mako/friendlyName;
+echo "Google Nexus 4 (repartitioned)" > mako/friendlyName;
 echo 0 > mako/status-18.1;
 echo -e "Fastboot\nTested Working\nNo" > mako/bootloader_information;
 

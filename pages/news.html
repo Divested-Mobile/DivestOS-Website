@@ -1,6 +1,45 @@
 				<div class="card fluid">
 					<h2>Project News</h2>
 					<p>Occasional updates about DivestOS.<br><a href="index.php?page=news-future">(Upcoming News)</a></p>
+					<div class="section" id="2021-10">
+						<h3>October 11th 2021 Update<a href="#2021-10">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>18.1 October ASB builds were published on October 10th.</li>
+							<li>14.1, 15.1, 16.0, and 17.1 release canidate #1 October ASB builds were published on October 7th.</li>
+							<li>[upstream] Updated to October ASB.</li>
+							<li>A new `Support` app is included with links to common resources. <a href="https://gitlab.com/divested-mobile/supportdivestos" target="_blank" rel="nofollow noopener noreferrer">git repository</a></li>
+							<li>17.1 rebuilds were published on October 3rd.</li>
+							<li>14.1, 15.1, and 16.0 rebuilds were published on October 2nd.</li>
+							<li>18.1 had full wildcard hosts support fixed after more testing.</li>
+							<li>DivestOS now includes its own WebView build named Mulch. Previously DivestOS depended on the LineageOS WebView. However this limited how quickly we could release security updates and prevented our ability to disable various anti-features in Chromium. Mulch is largely based off of and will track closely the Vanadium browser from GrapheneOS. A standalone version of Mulch is also available to all Android users on our F-Droid repository. <a href="https://gitlab.com/divested-mobile/mulch" target="_blank" rel="nofollow noopener noreferrer">git repository</a></li>
+							<li>17.1 and 18.1 now feature a quick settings tile to globally block all apps from accessing the camera, microphones, and sensors.</li>
+							<li>All versions now have an option to disable sensors on a per-app basis, thanks to @MSe1969</li>
+							<li>All 3.4 devices have received numerous (3-30) prima (Wi-Fi driver) related security patches.</li>
+							<li>hardenDefconfig function has been reworked to better ensure all changes are made to all devices. Previously there were some cases where changes were only partially applied.</li>
+							<li>It has been shown some devices have an extremely long command line passed to the kernel by the bootloader. The hardenBootArgs function excerbated this issue and caused some devices to not boot. It has now been shortened dramatically.</li>
+							<li>The hamper analytics patches have been fixed after converting the booleans to strings.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>i9100 has fallen behind due to space constraints.</li>
+							<li>Bluetooth on thor has likely been fixed.</li>
+							<li>klte build 20210913 had a broken recovery due to kernel commandline. If installed, you will need to manually update. Steps <a href="https://github.com/Divested-Mobile/DivestOS-Build/issues/11#issuecomment-920114006" target="_blank" rel="nofollow noopener noreferrer">here</a></li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Updated Mulch (WebView) to Chromium 94.0.4606.71-3 and 94.0.4606.80-1, has many security fixes.</li>
+							<li>Mull 93.1.0 was made available.</li>
+							<li>[upstream] Updated WebView to Chromium 94.0.4606.61, has many security fixes. <a href="https://review.lineageos.org/c/LineageOS/android_external_chromium-webview/+/316600/2" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
+							<li>Hypatia 2.22 was released, mostly internal changes, and should be much more responsive.</li>
+							<li>[upstream] Updated WebView to Chromium 93.0.4577.82, has many security fixes. <a href="https://review.lineageos.org/c/LineageOS/android_external_chromium-webview/+/316084/1" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The Patch Levels page now details the number of proprietary blobs each device includes and has removed.</li>
+							<li>Credits section has been made more readable</li>
+						</ul>
+					</div>
 					<div class="section" id="2021-09">
 						<h3>September 14th 2021 Update<a href="#2021-09">¶</a></h3>
 						<h4>System Updates</h4>
@@ -52,7 +91,6 @@
 						<ul>
 							<li>The privacy policy has been updated to better comply with GDPR regulations.</li>
 							<li>An F-Droid repository for serving system <a href="https://divestos.org/fdroid/webview?fingerprint=FB426DA1750A53D7724C8A582B4D34174E64A84B38940E5D5A802E1DFF9A40D2" target="_blank">WebView updates</a> out-of-band is now included. You might need to manually add it.</li>
-							<li>Periodic reminder that this is not a company or team and is just myself Tad. Please consider donating <a href="https://divested.dev/donate" target="_blank" rel="nofollow noopener noreferrer">here</a> if you enjoy my offerings.</li>
 						</ul>
 					</div>
 					<div class="section" id="2021-08">
@@ -144,10 +182,6 @@
 							<li>All but one of our apps are now available on the official F-Droid repository.</li>
 							<li>Mull 90.1.1 and 90.1.1-2 were made available.</li>
 							<li>IR Remote has received a translation into Spanish thanks to Diego Sanguinetti!</li>
-						</ul>
-						<h4>Other Updates</h4>
-						<ul>
-							<li>DivestOS has been publically available for over a year. If you've been enjoying our work please consider donating <a href="https://divested.dev/donate" target="_blank" rel="nofollow noopener noreferrer">here</a>.</li>
 						</ul>
 					</div>
 					<div class="section" id="2021-06">
