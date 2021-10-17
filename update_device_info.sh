@@ -353,7 +353,9 @@ echo 0 > walleye/status-18.1;
 echo -e "Fastboot\nTested Working\nYes" > taimen/bootloader_information;
 echo -e "Fastboot\nTested Working\nYes" > walleye/bootloader_information;
 
+echo "Amazon Kindle Fire HDX 8.9" > apollo/friendlyName;
 echo "Amazon Kindle Fire HDX 7" > thor/friendlyName;
+echo 4 > apollo/status-14.1;
 echo 0 > thor/status-14.1;
 echo -e "Bulk Mode\nNot Unlockable\nNo" > apollo/bootloader_information;
 echo -e "Bulk Mode\nNot Unlockable\nNo" > thor/bootloader_information;

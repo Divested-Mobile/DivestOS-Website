@@ -1,6 +1,7 @@
 blobCountVanilla_Amber=961
 blobCountVanilla_alioth=699
 blobCountVanilla_angler=65
+blobCountVanilla_apollo=411
 blobCountVanilla_aura=1006
 blobCountVanilla_avicii=2155
 blobCountVanilla_axon7=819

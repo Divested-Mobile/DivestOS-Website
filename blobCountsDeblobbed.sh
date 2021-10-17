@@ -1,6 +1,7 @@
 blobCountDeblobbed_Amber=793
 blobCountDeblobbed_alioth=538
 blobCountDeblobbed_angler=38
+blobCountDeblobbed_apollo=349
 blobCountDeblobbed_aura=820
 blobCountDeblobbed_avicii=1846
 blobCountDeblobbed_axon7=717

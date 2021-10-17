@@ -81,6 +81,7 @@ hasVendorPartitionFromStock=('enchilada' 'fajita' 'enchilada/fajita' 'starlte' '
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 createTable alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 createTable angler LineageOS-15.1 huawei/angler huawei/angler;
+createTable apollo LineageOS-14.1 amazon/apollo amazon/hdx-common amazon/hdx-common;
 createTable aura LineageOS-18.1 razer/aura razer/sdm845;
 createTable avicii LineageOS-17.1 oneplus/avicii oneplus/sm7250;
 createTable axon7 LineageOS-15.1 zte/axon7 zte/msm8996;
