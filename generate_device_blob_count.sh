@@ -129,5 +129,5 @@ getBlobCount victara LineageOS-18.1 motorola/victara motorola/msm8974;
 getBlobCount yellowstone LineageOS-16.0 google/yellowstone google/yellowstone;
 getBlobCount yellowstone LineageOS-17.1 google/yellowstone google/yellowstone;
 getBlobCount Z00T LineageOS-15.1 asus/msm8916-common asus/msm8916 asus/Z00T;
-getBlobCount z2_plus LineageOS-17.1 zuk/msm8996-common zuk/msm8996 zuk/z2_plus;
+getBlobCount z2_plus LineageOS-18.1 zuk/msm8996-common zuk/msm8996 zuk/z2_plus;
 getBlobCount zenfone3 LineageOS-16.0 asus/zenfone3 asus/msm8953;

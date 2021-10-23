@@ -29,7 +29,7 @@ getVendorPatchLevel() {
 		level="Unknown";
 	fi;
 	if [ "$level" = '$(PLATFORM_SECURITY_PATCH)' ]; then
-		level="2021-09";
+		level="2021-10";
 	fi;
 	echo -n $(sed -e 's/^"//' -e 's/"$//' <<< "$level");
 }
@@ -167,5 +167,5 @@ createTable victara LineageOS-18.1 motorola/victara motorola/msm8974;
 createTable yellowstone LineageOS-16.0 google/yellowstone google/yellowstone;
 createTable yellowstone LineageOS-17.1 google/yellowstone google/yellowstone;
 createTable Z00T LineageOS-15.1 asus/msm8916-common asus/msm8916 asus/Z00T;
-createTable z2_plus LineageOS-17.1 zuk/msm8996-common zuk/msm8996 zuk/z2_plus;
+createTable z2_plus LineageOS-18.1 zuk/msm8996-common zuk/msm8996 zuk/z2_plus;
 createTable zenfone3 LineageOS-16.0 asus/zenfone3 asus/msm8953;

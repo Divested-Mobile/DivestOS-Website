@@ -382,6 +382,7 @@ echo -e "Fastboot (ASUS)\nNo\nNo" > z00t/bootloader_information;
 
 echo "ZUK Z2 Plus" > z2_plus/friendlyName;
 echo 0 > z2_plus/status-17.1;
+echo 4 > z2_plus/status-18.1;
 echo -e "Fastboot (ZUK)\nUnknown\nYes" > z2_plus/bootloader_information;
 
 echo "ASUS Zenfone 3" > zenfone3/friendlyName;
