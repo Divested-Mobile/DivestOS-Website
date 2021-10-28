@@ -138,6 +138,8 @@ https://old.reddit.com/r/OpenSourceApps/comments/p99c7u/gmaps_wv_android/
 https://old.reddit.com/r/privacy/comments/o01rjz/hi_could_recommend_me_good_roms_focused_on_privacy/
 https://old.reddit.com/r/PrivacyGuides/comments/q5f0kx/mull_browser_for_windows/
 https://old.reddit.com/r/PrivacyGuides/comments/q89qj2/how_do_i_harden_firefox_on_android/
+https://old.reddit.com/r/PrivacyGuides/comments/qc46c5/what_is_better_mull_or_fennec/
+https://old.reddit.com/r/PrivacyGuides/comments/qd2nm0/bromite_vs_mull/
 https://old.reddit.com/r/privacytoolsIO/comments/iafkq2/what_do_you_think_about_divestos/
 https://old.reddit.com/r/privacytoolsIO/comments/l9uzyf/what_are_the_differences_between_the_fennec/
 https://old.reddit.com/r/privacytoolsIO/comments/mhv7ip/mull_browser_privacy_hardened_fork_of_firefox_for/

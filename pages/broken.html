@@ -6,9 +6,9 @@
 						<p>Devices listed as "Works" on Downloads page will not be listed here if they are fully working as expected and do not have any quirks.</p>
 						<h4 id="all">All Devices<a href="#all">¶</a></h4>
 						<ul>
-							<li>'Developer options' will crash on older releases due to null PDB handle. [upstream?]</li>
+							<li>'Developer options' will crash on 15.1 due to null PDB handle. [upstream?]</li>
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. These devices typically are unable to be encrypted on the very first boot.</li>
-							<li>Devices with less than 2GB of RAM will likely out-of-memory more often than usual. [various]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/64" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
+							<li>Devices with less than 2GB of RAM *will* likely out-of-memory more often than usual. [various]</li>
 							<li>Fenix based browsers such as a 'Mull' or 'Fennec F-Droid' might cause a reboot on launch. Please report your device if it does to be fixed.</li>
 							<li>IMS may or may not work. [upstream? deblobber?]</li>
 							<li>Incremental updates will often fail to successfully apply on non update-engine devices. [releasetools]</li>
@@ -28,7 +28,6 @@
 						<h4 id="clark">clark<a href="#clark">¶</a></h4>
 						<ul>
 							<li>Camera is very slow to start and sometimes won't start at all. [upstream]</li>
-							<li>TWRP is required for flashing images due to modem firmware being compressed. [recovery]<a href="https://dl.twrp.me/clark/" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
 						</ul>
 						<h4 id="d852">d852<a href="#d852">¶</a></h4>
 						<ul>
@@ -36,6 +35,7 @@
 						</ul>
 						<h4 id="g3-common">d852/d855/g3<a href="#g3-common">¶</a></h4>
 						<ul>
+							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?]</li>
 							<li>Device will often fail on reboot and become unresponsive, requiring the battery to be pulled. [hardware]</li>
 						</ul>
 						<h4 id="op6-common">enchilada/fajita<a href="#op6-common">¶</a></h4>
@@ -69,7 +69,7 @@
 						<h4 id="klte">klte<a href="#klte">¶</a></h4>
 						<ul>
 							<li>SD cards might fail to mount or format. [vold + selinux?]</li>
-							<li>USB ADB does not work. [selinux]</li>
+							<li>USB ADB does not work. [FunctionFS corruption]</li>
 						</ul>
 						<h4 id="maguro">maguro/toro/toroplus<a href="#maguro">¶</a></h4>
 						<ul>
@@ -78,7 +78,6 @@
 						</ul>
 						<h4 id="mako">mako<a href="#mako">¶</a></h4>
 						<ul>
-							<li>Excessive battery drain when powered-off. Likely fixed by <a href="https://github.com/Divested-Mobile/DivestOS-Build/commit/b56929d3d9ade1fd5484ba3b4c2b391a41056f12" target="_blank" rel="nofollow noopener noreferrer">b56929d3</a>. [???]<a href="https://github.com/voron00/android_device_lge_mako/commit/df0867237e71a03aea1646a92c7b022c9906a945#comments" target="_blank" rel="nofollow noopener noreferrer">[relevant]</a></li>
 							<li>/system needs to be resized to fit 17.1 or higher. [too small partition]</li>
 							<li>Will fail to boot on first boot. Force off once after 3 minutes. [modem subsystem service startup failure with forceencrypt]</li>
 						</ul>
