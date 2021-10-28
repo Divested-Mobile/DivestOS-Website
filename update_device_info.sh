@@ -14,7 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte land lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 2 > alioth/status-18.1;
@@ -242,6 +242,10 @@ echo "Samsung Galaxy S5" > klte/friendlyName;
 echo 0 > klte/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > klte/bootloader_information;
 
+echo "Xiaomi Redmi 3S/3X" > land/friendlyName;
+echo 2 > land/status-16.0;
+echo -e "Fastboot (Xiaomi)\nUnknown\nNo" > land/bootloader_information;
+
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
 echo 2 > lmi/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > lmi/bootloader_information;
@@ -314,6 +318,10 @@ echo -e "Fastboot\nYes, Untested\nYes" > pro1/bootloader_information;
 echo "Google Pixel 5" > redfin/friendlyName;
 echo 2 > redfin/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > redfin/bootloader_information;
+
+echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
+echo 2 > santoni/status-16.0;
+echo -e "Fastboot (Xiaomi)\nUnknown\nNo" > santoni/bootloader_information;
 
 echo "Galaxy S4 Mini INTL (3G)" > serrano3gxx/friendlyName;
 echo 0 > serrano3gxx/status-18.1;

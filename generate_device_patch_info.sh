@@ -134,6 +134,7 @@ createTable i9305 LineageOS-14.1 samsung/i9305 samsung/smdk4412 samsung/smdk4412
 createTable jfltexx LineageOS-18.1 samsung/jfltexx samsung/jf;
 createTable kipper LineageOS-16.0 wileyfox/kipper cyanogen/msm8916 cyanogen/msm8916-common;
 createTable klte LineageOS-18.1 samsung/klte-common samsung/msm8974;
+createTable land LineageOS-16.0 xiaomi/land xiaomi/msm8937 xiaomi/msm8937-common;
 createTable lmi LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 createTable m7 LineageOS-14.1 htc/m7 htc/msm8960 htc/m7-common htc/msm8960-common;
 createTable m8 LineageOS-17.1 htc/m8-common htc/msm8974 htc/m8 htc/msm8974-common;
@@ -152,6 +153,7 @@ createTable osprey LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motor
 createTable pro1 LineageOS-18.1 fxtec/pro1 fxtec/msm8998;
 createTable raphael LineageOS-18.1 xiaomi/sm8150-common xiaomi/sm8150;
 createTable redfin LineageOS-18.1 google/redbull google/redbull google/redfin;
+createTable santoni LineageOS-16.0 xiaomi/santoni xiaomi/msm8937 xiaomi/msm8937-common;
 createTable serrano3gxx/serranoltexx LineageOS-18.1 samsung/serrano-common samsung/msm8930-common;
 createTable shamu LineageOS-15.1 moto/shamu moto/shamu;
 createTable shamu LineageOS-18.1 moto/shamu moto/shamu;

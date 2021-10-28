@@ -96,6 +96,7 @@ getBlobCount i9305 LineageOS-14.1 samsung/i9305 samsung/smdk4412 samsung/smdk441
 getBlobCount jfltexx LineageOS-18.1 samsung/jfltexx samsung/jf;
 getBlobCount kipper LineageOS-16.0 wileyfox/kipper cyanogen/msm8916 cyanogen/msm8916-common;
 getBlobCount klte LineageOS-18.1 samsung/klte-common samsung/msm8974;
+getBlobCount land LineageOS-16.0 xiaomi/land xiaomi/msm8937 xiaomi/msm8937-common;
 getBlobCount lmi LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 getBlobCount m7 LineageOS-14.1 htc/m7 htc/msm8960 htc/m7-common htc/msm8960-common;
 getBlobCount m8 LineageOS-17.1 htc/m8-common htc/msm8974 htc/m8 htc/msm8974-common;
@@ -114,6 +115,7 @@ getBlobCount osprey LineageOS-17.1 motorola/msm8916-common motorola/msm8916 moto
 getBlobCount pro1 LineageOS-18.1 fxtec/pro1 fxtec/msm8998;
 getBlobCount raphael LineageOS-18.1 xiaomi/sm8150-common xiaomi/sm8150;
 getBlobCount redfin LineageOS-18.1 google/redbull google/redbull google/redfin;
+getBlobCount santoni LineageOS-16.0 xiaomi/santoni xiaomi/msm8937 xiaomi/msm8937-common;
 getBlobCount serrano3gxx/serranoltexx LineageOS-18.1 samsung/serrano-common samsung/msm8930-common;
 getBlobCount shamu LineageOS-15.1 moto/shamu moto/shamu;
 getBlobCount shamu LineageOS-18.1 moto/shamu moto/shamu;
