@@ -55,6 +55,7 @@ createTable() {
 	versionStripped=$(echo "$version" | sed 's/.*-//')
 	devicePath=$3;
 	kernelPath=$4;
+	kernelName=$(echo "$kernelPath" | sed 's|/|_|');
 	vASB=$(getVendorPatchLevel $version $devicePath)
 	kernelVersion=$(getKernelVersion $version $kernelPath);
 
@@ -72,7 +73,7 @@ createTable() {
 		blobCount+=" + has stock /vendor";
 	fi;
 
-	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel">'$kernelVersion'</td>\n\t<td data-label="Blob Count">'$blobCount'</td>\n</tr>';
+	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel"><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer">'$kernelVersion'</td>\n\t<td data-label="Blob Count">'$blobCount'</td>\n</tr>';
 }
 
 hasVendorPartitionAsBlob=('bullhead' 'dragon' 'flounder' 'angler');
