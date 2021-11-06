@@ -79,6 +79,7 @@ createTable() {
 hasVendorPartitionAsBlob=('bullhead' 'dragon' 'flounder' 'angler');
 hasVendorPartitionFromStock=('enchilada' 'fajita' 'enchilada/fajita' 'starlte' 'star2lte');
 
+#TODO: kccat6 lentislte
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 createTable alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 createTable angler LineageOS-15.1 huawei/angler huawei/angler;

@@ -58,7 +58,7 @@ sudo apt clean;</code></pre>
 						<pre><code>echo 'if [ $container="firejail" ]; then unset PROMPT_COMMAND; fi;' >> .bashrc;
 firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
 						<h4>Checking out the code</h4>
-						<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a separate drive from your system drive.</p>
+						<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a separate drive from your system drive. Bash or a similar shell is required.</p>
 						<pre><code>umask 0022;
 git clone https://gitlab.com/divested-mobile/divestos-build.git DivestOS;
 cd DivestOS;

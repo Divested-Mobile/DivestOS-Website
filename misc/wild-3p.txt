@@ -23,6 +23,7 @@ https://community.e.foundation/t/week-41-development-and-testing-updates/35345/6
 https://community.e.foundation/t/what-are-the-best-applications-or-what-you-find-the-best-list-here-what-you-use-or-recommend/7343/45
 https://community.e.foundation/t/where-can-i-find-apk-file-for-e-app-store/19347/13
 https://degoogle.jmoore.dev/
+https://distrowatch.com/weekly.php?issue=20211101#comment-128
 https://edit.tosdr.org/services/2550
 https://egg.5ch.net/test/read.cgi/android/1593896268/83-n
 https://en.wikipedia.org/wiki/List_of_custom_Android_distributions
@@ -92,6 +93,7 @@ https://old.reddit.com/r/androidapps/comments/or95j6/do_you_use_any_virusmalware
 https://old.reddit.com/r/androidapps/comments/pw5wkr/what_is_the_best_firefox_browser_for_android_2021/
 https://old.reddit.com/r/androidapps/comments/pxo3gj/looking_for_a_good_browser_that_protects_my/
 https://old.reddit.com/r/androidapps/comments/py9tue/moving_from_chrome_to_fennec/
+https://old.reddit.com/r/androidapps/comments/qn6i79/bromite_vs_kiwi/
 https://old.reddit.com/r/AppHunt/comments/po6tfd/hypatia_first_foss_malware_scanner_for_android/
 https://old.reddit.com/r/Bitwarden/comments/p8ou0g/mull_browser_android_no_pop_up/
 https://old.reddit.com/r/CalyxOS/comments/pxwpsk/firewall_rule_change_require_restart_to_take/

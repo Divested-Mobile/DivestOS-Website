@@ -40,6 +40,7 @@ getLineCount () {
 	cat $1 | sed '/^\s*#/d;/^\s*$/d' | wc -l || true;
 }
 
+#TODO: kccat6 lentislte
 getBlobCount Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 getBlobCount alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 getBlobCount angler LineageOS-15.1 huawei/angler huawei/angler;

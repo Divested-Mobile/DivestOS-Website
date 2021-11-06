@@ -14,7 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kipper klte land lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kccat6 kipper klte land lentislte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 2 > alioth/status-18.1;
@@ -234,6 +234,10 @@ echo "Samsung Galaxy S4" > jfltexx/friendlyName;
 echo 0 > jfltexx/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > jfltexx/bootloader_information;
 
+echo "Samsung Galaxy S5 Plus" > kccat6/friendlyName;
+echo 2 > kccat6/status-16.0;
+echo -e "Heimdall\nNot Unlockable\nNo" > kccat6/bootloader_information;
+
 echo "Wileyfox Storm" > kipper/friendlyName;
 echo 2 > kipper/status-16.0;
 echo -e "Fastboot\nUnknown\nNo" > kipper/bootloader_information;
@@ -245,6 +249,10 @@ echo -e "Heimdall\nNot Unlockable\nNo" > klte/bootloader_information;
 echo "Xiaomi Redmi 3S/3X" > land/friendlyName;
 echo 2 > land/status-16.0;
 echo -e "Fastboot (Xiaomi)\nUnknown\nNo" > land/bootloader_information;
+
+echo "Samsung Galaxy S5 LTE-A" > lentislte/friendlyName;
+echo 2 > lentislte/status-16.0;
+echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
 echo 2 > lmi/status-18.1;
