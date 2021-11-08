@@ -40,7 +40,6 @@ getLineCount () {
 	cat $1 | sed '/^\s*#/d;/^\s*$/d' | wc -l || true;
 }
 
-#TODO: kccat6 lentislte
 getBlobCount Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 getBlobCount alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 getBlobCount angler LineageOS-15.1 huawei/angler huawei/angler;
@@ -95,9 +94,11 @@ getBlobCount i9100 LineageOS-14.1 samsung/galaxys2-common samsung/smdk4412 samsu
 getBlobCount i9300 LineageOS-14.1 samsung/i9300 samsung/smdk4412 samsung/smdk4412-common;
 getBlobCount i9305 LineageOS-14.1 samsung/i9305 samsung/smdk4412 samsung/smdk4412-common;
 getBlobCount jfltexx LineageOS-18.1 samsung/jfltexx samsung/jf;
+getBlobCount kccat6 LineageOS-16.0 samsung/kccat6 samsung/apq8084 samsung/apq8084-common;
 getBlobCount kipper LineageOS-16.0 wileyfox/kipper cyanogen/msm8916 cyanogen/msm8916-common;
 getBlobCount klte LineageOS-18.1 samsung/klte-common samsung/msm8974;
 getBlobCount land LineageOS-16.0 xiaomi/land xiaomi/msm8937 xiaomi/msm8937-common;
+getBlobCount lentislte LineageOS-16.0 samsung/lentislte samsung/apq8084 samsung/apq8084-common;
 getBlobCount lmi LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 getBlobCount m7 LineageOS-14.1 htc/m7 htc/msm8960 htc/m7-common htc/msm8960-common;
 getBlobCount m8 LineageOS-17.1 htc/m8-common htc/msm8974 htc/m8 htc/msm8974-common;

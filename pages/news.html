@@ -1,12 +1,68 @@
 				<div class="card fluid">
 					<h2>Project News</h2>
 					<p>Occasional updates about DivestOS.<br><a href="index.php?page=news-future">(Upcoming News)</a></p>
+					<div class="section" id="2021-11">
+						<h3>November 8th 2021 Update<a href="#2021-11">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>18.1 release candidate #2 November ASB builds were published on November 7th.</li>
+							<li>14.1, 16.0, and 17.1 release candidate #2 November ASB builds were published on November 6th.</li>
+							<li>[upstream] Updated to October ASB.</li>
+							<li>15.1 rebuilds were published on November 5th and 6th. They do not contain November ASB patches.</li>
+							<li>The per-app sensors permission patches have been disabled on 14.1, 15.1 and 16.0 due to breakage in select cases.</li>
+							<li>14.1 release candidate #1 November ASB builds were published on November 3rd.</li>
+							<li>Many verified boot fixes and improvements.</li>
+							<li>The script used to change the default DNS has been expanded to cover more files.</li>
+							<li>The `Private DNS` menu of the Settings app on 17.1+ now includes thirteen presets for various DNS providers. Based off of work by CalyxOS.</li>
+							<li>Firmware inclusion has been disabled for select devices, pending update and re-enablement.</li>
+							<li>The included HOSTS file has been further reduced in size after making our wildcard optimizer more thorough.</li>
+							<li>There have been many new kernel CVE patches as usual.</li>
+						</ul>
+						<h4>Workspace Updates</h4>
+						<ul>
+							<li>All scripts have been verified working as intended.</li>
+							<li>Various script fixes.</li>
+							<li>Scripts will now fail loudly.</li>
+							<li>Some patches had minor adjustments to them for `git am` correctness.</li>
+							<li>A non-critical patch was found to not have been applied due to a typo.</li>
+							<li>Patches are now refreshed on apply.</li>
+							<li>Patches are now applied via a helper function based on `git am` instead of `patch -p1 <`.</li>
+							<li>Workspace reset function has been made more thorough.</li>
+							<li>All branches have been deleted and re-downloaded.</li>
+							<li>Manifests have been trimmed.</li>
+							<li>11.0/KitKat support has been removed.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>The recovery firmware extraction script has been tested working on clark after resolving SELinux denials. Likely also fixes osprey and surnia.</li>
+							<li>z2_plus has been moved to 18.1, untested.</li>
+							<li>The enchilada/fajita kernel has been updated to 4.9.277 from 4.9.227.</li>
+						</ul>
+						<h4>Roster Updates</h4>
+						<ul>
+							<li>kccat6, lentislte, land, and santoni 16.0 builds are now available, untested.</li>
+							<li>apollo 14.1 builds are now available, untested.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Mull 94.1.0 and 94.1.1 were made available.</li>
+							<li>Updated Mulch (WebView) to Chromium 95.0.4638.50-1 and 95.0.4638.74-1, has many security fixes.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The patch levels page now has direct links to kernel CVE patchers.</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>Google has finally stopped support Linux 3.18, resulting in a grand total of 339 additional CVE patches after official support ended.</li>
+						</ul>
+					</div>
 					<div class="section" id="2021-10">
 						<h3>October 11th 2021 Update<a href="#2021-10">¶</a></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>18.1 October ASB builds were published on October 10th.</li>
-							<li>14.1, 15.1, 16.0, and 17.1 release canidate #1 October ASB builds were published on October 7th.</li>
+							<li>14.1, 15.1, 16.0, and 17.1 release candidate #1 October ASB builds were published on October 7th.</li>
 							<li>[upstream] Updated to October ASB.</li>
 							<li>A new `Support` app is included with links to common resources. <a href="https://gitlab.com/divested-mobile/supportdivestos" target="_blank" rel="nofollow noopener noreferrer">git repository</a></li>
 							<li>17.1 rebuilds were published on October 3rd.</li>
@@ -45,12 +101,12 @@
 						<h4>System Updates</h4>
 						<ul>
 							<li>18.1 September ASB builds were published on September 13th and 14th.</li>
-							<li>14.1, 15.1, 16.0, and 17.1 release canidate #3 September ASB builds were published on September 12th.</li>
+							<li>14.1, 15.1, 16.0, and 17.1 release candidate #3 September ASB builds were published on September 12th.</li>
 							<li>slub_nomerge has been enabled for pre 3.18 kernels, providing some of the slab_nomerge benefits.</li>
 							<li><a href="https://cateee.net/lkddb/web-lkddb/PROC_PAGE_MONITOR.html" target="_blank" rel="nofollow noopener noreferrer">PROC_PAGE_MONITOR</a> is no longer disabled, fixing app and service memory stats (eg. previously 0B shown in Settings).</li>
-							<li>14.1 and 15.1 release canidate #2 September ASB builds were published on September 12th.</li>
+							<li>14.1 and 15.1 release candidate #2 September ASB builds were published on September 12th.</li>
 							<li>[upstream] The APN list has been updated, especially many changes for carriers in China.</li>
-							<li>14.1 and 15.1 release canidate #1 September ASB builds were published on September 9th.</li>
+							<li>14.1 and 15.1 release candidate #1 September ASB builds were published on September 9th.</li>
 							<li>[upstream] Updated to September ASB.</li>
 							<li>There have been many new kernel CVE patches as usual.</li>
 							<li>TalkBack is now included on all versions. This is thanks to our work <a href="https://gitlab.com/divested-mobile/talkback/-/commit/74df73825d050641ccc2605d41874f7264c0f17c" target="_blank" rel="nofollow noopener noreferrer">removing</a> its proprietary blobs back in July and the subsequent <a href="https://gitlab.com/fdroid/fdroiddata/-/merge_requests/9367/" target="_blank" rel="nofollow noopener noreferrer">upstreaming</a> to F-Droid. Notably it is the first libre-build featuring the Braille keyboard.</li>
@@ -101,7 +157,7 @@
 							<li>14.1, 15.1, 16.0, and 17.1 August ASB builds were published on August 6th.</li>
 							<li>[upstream] Updated to August ASB.</li>
 							<li>[upstream] Updated WebView to Chromium 92.0.4515.131, has many security fixes. <a href="https://review.lineageos.org/c/LineageOS/android_external_chromium-webview/+/313782/3" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
-							<li>14.1 release canidate #1 August ASB builds were published on August 4th.</li>
+							<li>14.1 release candidate #1 August ASB builds were published on August 4th.</li>
 							<li>A path quoting <a href="https://gitlab.com/divested-mobile/cve_checker/-/commit/56ccdbaefd8312fb8ef036d597bcd8d1cef57dfd" target="_blank" rel="nofollow noopener noreferrer">issue</a> in the CVE patcher was fixed that now allows correctly applying alternate root patches. Now fixed, many devices have received a fair number of added patches. Alternate root patches are primarily used for the Qualcomm Wi-Fi drivers.</li>
 							<li>[upstream] Updated WebView to Chromium 92.0.4515.115, has many security fixes. <a href="https://review.lineageos.org/c/LineageOS/android_external_chromium-webview/+/313782/2" target="_blank" rel="nofollow noopener noreferrer">commit</a></li>
 						</ul>
@@ -157,7 +213,7 @@
 							<li>18.1 July ASB builds were published on July 14th.</li>
 							<li>15.1, 16.0, and 17.1 July ASB builds were published on July 13th.</li>
 							<li>14.1 July ASB builds were published on July 12th.</li>
-							<li>14.1 release canidate #1 July ASB builds were published on early July 10th and again later in the day.</li>
+							<li>14.1 release candidate #1 July ASB builds were published on early July 10th and again later in the day.</li>
 							<li>14.1, 15.1, 16.0 June rebuilds were published on July 5th.</li>
 							<li>July 5th 14.1 builds had a broken bootanimation due to overzealous optipng.</li>
 							<li>Fallback DNS has been changed from Cloudflare to Quad9.</li>

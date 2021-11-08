@@ -66,9 +66,6 @@ createTable() {
 	blobCountDeblobbed=${!blobCountDeblobbedVar};
 	blobCountDelta=$(($blobCountVanilla-$blobCountDeblobbed));
 	blobCount="$blobCountVanilla, -$blobCountDelta";
-	if [[ " ${hasVendorPartitionAsBlob[@]} " =~ " ${name} " ]]; then
-		blobCount+=" + has vendor.img";
-	fi;
 	if [[ " ${hasVendorPartitionFromStock[@]} " =~ " ${name} " ]]; then
 		blobCount+=" + has stock /vendor";
 	fi;
@@ -76,10 +73,8 @@ createTable() {
 	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel"><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer">'$kernelVersion'</td>\n\t<td data-label="Blob Count">'$blobCount'</td>\n</tr>';
 }
 
-hasVendorPartitionAsBlob=('bullhead' 'dragon' 'flounder' 'angler');
-hasVendorPartitionFromStock=('enchilada' 'fajita' 'enchilada/fajita' 'starlte' 'star2lte');
+hasVendorPartitionFromStock=('enchilada' 'fajita' 'enchilada/fajita' 'starlte' 'star2lte' 'bullhead' 'dragon' 'flounder' 'angler');
 
-#TODO: kccat6 lentislte
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 createTable alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 createTable angler LineageOS-15.1 huawei/angler huawei/angler;
@@ -134,9 +129,11 @@ createTable i9100 LineageOS-14.1 samsung/galaxys2-common samsung/smdk4412 samsun
 createTable i9300 LineageOS-14.1 samsung/i9300 samsung/smdk4412 samsung/smdk4412-common;
 createTable i9305 LineageOS-14.1 samsung/i9305 samsung/smdk4412 samsung/smdk4412-common;
 createTable jfltexx LineageOS-18.1 samsung/jfltexx samsung/jf;
+createTable kccat6 LineageOS-16.0 samsung/kccat6 samsung/apq8084 samsung/apq8084-common;
 createTable kipper LineageOS-16.0 wileyfox/kipper cyanogen/msm8916 cyanogen/msm8916-common;
 createTable klte LineageOS-18.1 samsung/klte-common samsung/msm8974;
 createTable land LineageOS-16.0 xiaomi/land xiaomi/msm8937 xiaomi/msm8937-common;
+createTable lentislte LineageOS-16.0 samsung/lentislte samsung/apq8084 samsung/apq8084-common;
 createTable lmi LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250;
 createTable m7 LineageOS-14.1 htc/m7 htc/msm8960 htc/m7-common htc/msm8960-common;
 createTable m8 LineageOS-17.1 htc/m8-common htc/msm8974 htc/m8 htc/msm8974-common;

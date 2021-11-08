@@ -80,7 +80,7 @@ echo -e "Fastboot\nTested Working\nYes" > cheeseburger/bootloader_information;
 echo -e "Fastboot\nTested Working\nYes" > dumpling/bootloader_information;
 
 echo "Razer Phone" > cheryl/friendlyName;
-echo 2 > cheryl/status-18.1;
+echo 4 > cheryl/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > cheryl/bootloader_information;
 
 echo "Moto X Pure 2015" > clark/friendlyName;
@@ -105,8 +105,8 @@ echo -e "LG UP\nNot Unlockable\nNo" > d802/bootloader_information;
 
 echo "LG G3 CAN" > d852/friendlyName;
 echo "LG G3 INTL" > d855/friendlyName;
-echo 0 > d852/status-18.1;
-echo 0 > d855/status-18.1;
+echo 5 > d852/status-18.1;
+echo 5 > d855/status-18.1;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d852/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
@@ -120,7 +120,7 @@ echo -e "Fastboot\nYes, but will error\nYes" > dragon/bootloader_information;
 
 echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
-echo 4 > enchilada/status-18.1;
+echo 0 > enchilada/status-18.1;
 echo 0 > fajita/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > enchilada/bootloader_information;
 echo -e "Fastboot\nYes, Tested Working\nYes" > fajita/bootloader_information;
@@ -247,7 +247,7 @@ echo 0 > klte/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > klte/bootloader_information;
 
 echo "Xiaomi Redmi 3S/3X" > land/friendlyName;
-echo 2 > land/status-16.0;
+echo 4 > land/status-16.0;
 echo -e "Fastboot (Xiaomi)\nUnknown\nNo" > land/bootloader_information;
 
 echo "Samsung Galaxy S5 LTE-A" > lentislte/friendlyName;
@@ -328,7 +328,7 @@ echo 2 > redfin/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > redfin/bootloader_information;
 
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
-echo 2 > santoni/status-16.0;
+echo 0 > santoni/status-16.0;
 echo -e "Fastboot (Xiaomi)\nUnknown\nNo" > santoni/bootloader_information;
 
 echo "Galaxy S4 Mini INTL (3G)" > serrano3gxx/friendlyName;
@@ -371,7 +371,7 @@ echo -e "Fastboot\nTested Working\nYes" > walleye/bootloader_information;
 
 echo "Amazon Kindle Fire HDX 8.9" > apollo/friendlyName;
 echo "Amazon Kindle Fire HDX 7" > thor/friendlyName;
-echo 4 > apollo/status-14.1;
+echo 0 > apollo/status-14.1;
 echo 0 > thor/status-14.1;
 echo -e "Bulk Mode\nNot Unlockable\nNo" > apollo/bootloader_information;
 echo -e "Bulk Mode\nNot Unlockable\nNo" > thor/bootloader_information;
