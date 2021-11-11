@@ -14,7 +14,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead herolte himaul hotdog hotdogb i9100 i9300 i9305 jfltexx kccat6 kipper klte land lentislte lmi m7 m8 maguro mako manta marlin mata n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead harpia herolte himaul hotdog hotdogb i9100 i9300 i9305 jellypro jfltexx kccat6 kipper klte land lentislte lmi m7 m8 maguro mako manta marlin mata merlin n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 2 > alioth/status-18.1;
@@ -204,6 +204,10 @@ echo 0 > hammerhead/status-15.1;
 echo 0 > hammerhead/status-16.0;
 echo -e "Fastboot\nYes, Untested\nNo" > hammerhead/bootloader_information;
 
+echo "Moto G4 Play" > harpia/friendlyName;
+echo 4 > harpia/status-17.1;
+echo -e "Fastboot (Motorola)\nNo*\nNo" > harpia/bootloader_information;
+
 echo "Samsung Galaxy S7" > herolte/friendlyName;
 echo 1 > herolte/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > herolte/bootloader_information;
@@ -229,6 +233,10 @@ echo 0 > i9300/status-14.1;
 echo 0 > i9305/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > i9300/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > i9305/bootloader_information;
+
+echo "Unihertz Jelly Pro" > jellypro/friendlyName;
+echo 1 > jellypro/status-14.1;
+echo -e "Unknown\nUnknown\nNo" > jellypro/bootloader_information;
 
 echo "Samsung Galaxy S4" > jfltexx/friendlyName;
 echo 0 > jfltexx/status-18.1;
@@ -296,6 +304,10 @@ echo "Essential PH-1" > mata/friendlyName;
 echo 0 > mata/status-18.1;
 echo -e "Fastboot\nTested Working\nYes" > mata/bootloader_information;
 
+echo "Moto G3 Turbo" > merlin/friendlyName;
+echo 4 > merlin/status-17.1;
+echo -e "Fastboot (Motorola)\nNo*\nNo" > merlin/bootloader_information;
+
 echo "Samsung Galaxy Note 8.0" > n5110/friendlyName;
 echo 2 > n5110/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > n5110/bootloader_information;
@@ -316,7 +328,7 @@ echo 0 > oneplus3/status-18.1;
 echo -e "Fastboot\nYes, test-keys only?\nYes" > oneplus3/bootloader_information;
 
 echo "Moto G 2015" > osprey/friendlyName;
-echo 5 > osprey/status-17.1;
+echo 4 > osprey/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > osprey/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
