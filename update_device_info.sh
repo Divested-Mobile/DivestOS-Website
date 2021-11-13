@@ -45,7 +45,7 @@ echo 0 > bacon/status-18.1;
 echo -e "Fastboot\nYes, but irreversible\nNo" > bacon/bootloader_information;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
-echo 1 > beryllium/status-18.1;
+echo 5 > beryllium/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > beryllium/bootloader_information;
 
 echo "Google Pixel 3" > blueline/friendlyName;
