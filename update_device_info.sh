@@ -96,11 +96,11 @@ echo -e "Fastboot\nYes, Untested\nYes" > coral/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > flame/bootloader_information;
 
 echo "Wileyfox Swift" > crackling/friendlyName;
-echo 2 > crackling/status-17.1;
+echo 4 > crackling/status-17.1;
 echo -e "Fastboot\nUnknown\nNo" > crackling/bootloader_information;
 
 echo "LG G2 INTL" > d802/friendlyName;
-echo 2 > d802/status-18.1;
+echo 4 > d802/status-18.1;
 echo -e "LG UP\nNot Unlockable\nNo" > d802/bootloader_information;
 
 echo "LG G3 CAN" > d852/friendlyName;
@@ -111,7 +111,7 @@ echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d852/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
 echo "Xiaomi Redmi K20 / Mi 9T" > davinci/friendlyName;
-echo 2 > davinci/status-17.1;
+echo 4 > davinci/status-17.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > davinci/bootloader_information;
 
 echo "Google Pixel C" > dragon/friendlyName;
@@ -183,8 +183,8 @@ echo -e "Fastboot (LGE)\nNo*\nNo" > rs988/bootloader_information;
 
 echo "LG G6 INTL" > h870/friendlyName;
 echo "LG G6 US" > us997/friendlyName;
-echo 2 > h870/status-15.1;
-echo 2 > us997/status-15.1;
+echo 4 > h870/status-15.1;
+echo 4 > us997/status-15.1;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h870/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > us997/bootloader_information;
 
@@ -205,7 +205,7 @@ echo 0 > hammerhead/status-16.0;
 echo -e "Fastboot\nYes, Untested\nNo" > hammerhead/bootloader_information;
 
 echo "Moto G4 Play" > harpia/friendlyName;
-echo 4 > harpia/status-17.1;
+echo 0 > harpia/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > harpia/bootloader_information;
 
 echo "Samsung Galaxy S7" > herolte/friendlyName;
@@ -328,7 +328,7 @@ echo 0 > oneplus3/status-18.1;
 echo -e "Fastboot\nYes, test-keys only?\nYes" > oneplus3/bootloader_information;
 
 echo "Moto G 2015" > osprey/friendlyName;
-echo 4 > osprey/status-17.1;
+echo 0 > osprey/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > osprey/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
