@@ -100,7 +100,9 @@ function contains($haystack, $needle) {
 
 function containsArr($haystack, $needles) {
 	foreach ($needles as $needle) {
-		return contains($haystack, $needle);
+		if(contains($haystack, $needle)) {
+			return true;
+		}
 	}
 }
 
