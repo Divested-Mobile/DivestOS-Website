@@ -20,36 +20,41 @@ include "sbnr/security.php";
 include "sbnr/utils.php";
 include "sbnr/pre.php";
 
-$base = noHTML($_GET["base"]);
-$base = str_replace("&period;", ".", $base);
-$device = strtolower(noHTML($_GET["device"]));
-$device = str_replace("&lowbar;", "_", $device);
-$inc = noHTML($_GET["inc"]);
-$token = noHTML($_GET["token"]);
-$tokenFile = "updater.token.php";
-$validToken = "";
-if(file_exists($tokenFile)) {
-	include $tokenFile;
-}
-if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0 && (empty($inc) || (!empty($inc) && strlen($inc) < 22)) && !isLikelyBot() /*&& $token === $validToken*/) {
-	$rootdir = "builds/" . $base . "/" . $device;
-	$rootdirInc = $rootdir . "/incrementals/";
-	if(is_dir($rootdir)) {
-		$result = getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
-		$result = str_replace("invalid://invalid.invalid", getBaseURL(true, $SBNR_DOMAIN_ALLOWLIST), $result);
-		if(contains($result, "invalid://invalid.invalid")) {
-			print("Invalid request");
-			http_response_code(400);
+if(!isLikelyBot() /*&& $token === $validToken*/) {
+	$base = noHTML($_GET["base"]);
+	$base = str_replace("&period;", ".", $base);
+	$device = strtolower(noHTML($_GET["device"]));
+	$device = str_replace("&lowbar;", "_", $device);
+	$inc = noHTML($_GET["inc"]);
+	$token = noHTML($_GET["token"]);
+	$tokenFile = "updater.token.php";
+	$validToken = "";
+	if(file_exists($tokenFile)) {
+		include $tokenFile;
+	}
+	if(!is_null($base) && strlen($base) > 0 && substr_count($base, '.') <= 1 && substr_count($base, '/') == 0 && !is_null($device) && strlen($device) > 0 && substr_count($device, '.') == 0 && substr_count($device, '/') == 0 && (empty($inc) || (!empty($inc) && strlen($inc) < 22))) {
+		$rootdir = "builds/" . $base . "/" . $device;
+		$rootdirInc = $rootdir . "/incrementals/";
+		if(is_dir($rootdir)) {
+			$result = getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
+			$result = str_replace("invalid://invalid.invalid", getBaseURL(true, $SBNR_DOMAIN_ALLOWLIST), $result);
+			if(contains($result, "invalid://invalid.invalid")) {
+				print("Invalid request");
+				http_response_code(400);
+			} else {
+				print($result);
+			}
 		} else {
-			print($result);
+			print("Unknown base/device");
+			http_response_code(404);
 		}
 	} else {
-		print("Unknown base/device");
-		http_response_code(404);
+		print("Invalid request");
+		http_response_code(400);
 	}
 } else {
-	print("Invalid request");
-	http_response_code(400);
+	print("Forbidden");
+	http_response_code(401);
 }
 
 function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {

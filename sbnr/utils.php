@@ -76,7 +76,7 @@ function isLikelyBot() {
 		return true;
 	}
 	$lowerAgent = strtolower($_SERVER["HTTP_USER_AGENT"]);
-	$headlessAgents = array("headless", "crawler", "spider", "scraper", "phantom", "selenium", "webdriver", "python-requests/", "python-urllib/", "okhttp/", "curl/", "wget/", "go-http-client/", "powershell/", "libwww-perl/", "httpunit", "httrack", "apache-httpclient/", "php-curl-class/", "aiohttp/", "analytics" /*, "/bot" */);
+	$headlessAgents = array("headless", "crawler", "spider", "scraper", "phantom", "selenium", "webdriver", "python-requests/", "python-urllib/", "okhttp/", "curl/", "wget/", "go-http-client/", "powershell/", "libwww-perl/", "httpunit", "httrack", "apache-httpclient/", "php-curl-class/", "aiohttp/", "analytics", "chrome/34.0.1847.131" /*, "/bot" */);
 	if(containsArr($lowerAgent, $headlessAgents)) {
 		return true;
 	}
