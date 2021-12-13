@@ -50,8 +50,8 @@ echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > beryllium/bootloader_informati
 
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
-echo 2 > blueline/status-18.1;
-echo 2 > crosshatch/status-18.1;
+echo 4 > blueline/status-18.1;
+echo 4 > crosshatch/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > blueline/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > crosshatch/bootloader_information;
 
@@ -96,7 +96,7 @@ echo -e "Fastboot\nYes, Untested\nYes" > coral/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > flame/bootloader_information;
 
 echo "Wileyfox Swift" > crackling/friendlyName;
-echo 4 > crackling/status-17.1;
+echo 0 > crackling/status-17.1;
 echo -e "Fastboot\nUnknown\nNo" > crackling/bootloader_information;
 
 echo "LG G2 INTL" > d802/friendlyName;
@@ -111,7 +111,7 @@ echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d852/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
 echo "Xiaomi Redmi K20 / Mi 9T" > davinci/friendlyName;
-echo 4 > davinci/status-17.1;
+echo 0 > davinci/status-17.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > davinci/bootloader_information;
 
 echo "Google Pixel C" > dragon/friendlyName;
@@ -263,7 +263,7 @@ echo 2 > lentislte/status-16.0;
 echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
-echo 2 > lmi/status-18.1;
+echo 5 > lmi/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > lmi/bootloader_information;
 
 echo "HTC One" > m7/friendlyName;
