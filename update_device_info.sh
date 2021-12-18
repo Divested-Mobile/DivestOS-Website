@@ -17,7 +17,7 @@
 mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead harpia herolte himaul hotdog hotdogb i9100 i9300 i9305 jellypro jfltexx kccat6 kipper klte land lentislte lmi m7 m8 maguro mako manta marlin mata merlin n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
-echo 2 > alioth/status-18.1;
+echo 4 > alioth/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > alioth/bootloader_information;
 
 echo "Yandex Phone" > amber/friendlyName;
@@ -263,7 +263,7 @@ echo 2 > lentislte/status-16.0;
 echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
-echo 5 > lmi/status-18.1;
+echo 0 > lmi/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > lmi/bootloader_information;
 
 echo "HTC One" > m7/friendlyName;
