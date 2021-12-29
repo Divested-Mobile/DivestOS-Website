@@ -17,7 +17,7 @@
 mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead harpia herolte himaul hotdog hotdogb i9100 i9300 i9305 jellypro jfltexx kccat6 kipper klte land lentislte lmi m7 m8 maguro mako manta marlin mata merlin n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
-echo 4 > alioth/status-18.1;
+echo 0 > alioth/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > alioth/bootloader_information;
 
 echo "Yandex Phone" > amber/friendlyName;
@@ -151,7 +151,7 @@ echo 0 > fp3/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > fp3/bootloader_information;
 
 echo "Google Nexus Player" > fugu/friendlyName;
-echo 2 > fugu/status-15.1;
+echo 0 > fugu/status-15.1;
 echo -e "Fastboot\nYes, Untested\nNo" > fugu/bootloader_information;
 
 echo "Moto Z" > griffin/friendlyName;
@@ -165,8 +165,8 @@ echo -e "Fastboot\nWill Brick\nNo" > tilapia/bootloader_information;
 
 echo "OnePlus 7 Pro" > guacamole/friendlyName;
 echo "OnePlus 7" > guacamoleb/friendlyName;
-echo 1 > guacamole/status-18.1;
-echo 1 > guacamoleb/status-17.1;
+echo 4 > guacamole/status-18.1;
+echo 4 > guacamoleb/status-17.1;
 echo -e "Fastboot\nYes, Untested\nYes" > guacamole/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > guacamoleb/bootloader_information;
 
@@ -218,8 +218,8 @@ echo -e "Fastboot (HTC)\nNo*\nNo" > himaul/bootloader_information;
 
 echo "OnePlus 7T Pro" > hotdog/friendlyName;
 echo "OnePlus 7T" > hotdogb/friendlyName;
-echo 1 > hotdog/status-18.1;
-echo 1 > hotdogb/status-18.1;
+echo 4 > hotdog/status-18.1;
+echo 4 > hotdogb/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > hotdog/bootloader_information;
 echo -e "Fastboot\nYes, Untested\nYes" > hotdogb/bootloader_information;
 
@@ -393,7 +393,7 @@ echo 2 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
-echo 1 > vayu/status-18.1;
+echo 2 > vayu/status-18.1;
 echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
