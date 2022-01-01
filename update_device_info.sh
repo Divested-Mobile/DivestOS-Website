@@ -18,7 +18,7 @@ mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline b
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 0 > alioth/status-18.1;
-echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > alioth/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > alioth/bootloader_information;
 
 echo "Yandex Phone" > amber/friendlyName;
 echo 2 > amber/status-17.1;
@@ -46,7 +46,7 @@ echo -e "Fastboot\nYes, but irreversible\nNo" > bacon/bootloader_information;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
 echo 5 > beryllium/status-18.1;
-echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > beryllium/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > beryllium/bootloader_information;
 
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
@@ -112,7 +112,7 @@ echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
 echo "Xiaomi Redmi K20 / Mi 9T" > davinci/friendlyName;
 echo 0 > davinci/status-17.1;
-echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > davinci/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > davinci/bootloader_information;
 
 echo "Google Pixel C" > dragon/friendlyName;
 echo 0 > dragon/status-15.1;
@@ -256,7 +256,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > klte/bootloader_information;
 
 echo "Xiaomi Redmi 3S/3X" > land/friendlyName;
 echo 4 > land/status-16.0;
-echo -e "Fastboot (Xiaomi)\nUnknown\nNo" > land/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nLikely not possible\nNo" > land/bootloader_information;
 
 echo "Samsung Galaxy S5 LTE-A" > lentislte/friendlyName;
 echo 2 > lentislte/status-16.0;
@@ -264,7 +264,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
 echo 0 > lmi/status-18.1;
-echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > lmi/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > lmi/bootloader_information;
 
 echo "HTC One" > m7/friendlyName;
 echo 2 > m7/status-14.1;
@@ -341,7 +341,7 @@ echo -e "Fastboot\nYes, Untested\nYes" > redfin/bootloader_information;
 
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
 echo 0 > santoni/status-16.0;
-echo -e "Fastboot (Xiaomi)\nUnknown\nNo" > santoni/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nLikely not possible\nNo" > santoni/bootloader_information;
 
 echo "Galaxy S4 Mini INTL (3G)" > serrano3gxx/friendlyName;
 echo 0 > serrano3gxx/status-18.1;
@@ -368,7 +368,7 @@ echo 2 > sunfish/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
-echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > raphael/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > raphael/bootloader_information;
 
 echo "Moto E 2015 LTE" > surnia/friendlyName;
 echo 0 > surnia/status-17.1;
@@ -394,7 +394,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
 echo 4 > vayu/status-18.1;
-echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > vayu/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
 echo 4 > victara/status-18.1;
