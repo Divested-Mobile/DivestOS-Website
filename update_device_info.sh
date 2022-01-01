@@ -18,7 +18,7 @@ mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline b
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 0 > alioth/status-18.1;
-echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > alioth/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > alioth/bootloader_information;
 
 echo "Yandex Phone" > amber/friendlyName;
 echo 2 > amber/status-17.1;
@@ -33,7 +33,7 @@ echo 1 > aura/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
-echo 2 > avicii/status-17.1;
+echo 4 > avicii/status-17.1;
 echo -e "Fastboot\nYes, Untested\nYes" > avicii/bootloader_information;
 
 echo "ZTE Axon 7" > axon7/friendlyName;
@@ -46,7 +46,7 @@ echo -e "Fastboot\nYes, but irreversible\nNo" > bacon/bootloader_information;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
 echo 5 > beryllium/status-18.1;
-echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > beryllium/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > beryllium/bootloader_information;
 
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
@@ -112,7 +112,7 @@ echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
 echo "Xiaomi Redmi K20 / Mi 9T" > davinci/friendlyName;
 echo 0 > davinci/status-17.1;
-echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > davinci/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > davinci/bootloader_information;
 
 echo "Google Pixel C" > dragon/friendlyName;
 echo 0 > dragon/status-15.1;
@@ -122,7 +122,7 @@ echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
 echo 0 > enchilada/status-18.1;
 echo 0 > fajita/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > enchilada/bootloader_information;
+echo -e "Fastboot\nYes, Tested Working\nYes" > enchilada/bootloader_information;
 echo -e "Fastboot\nYes, Tested Working\nYes" > fajita/bootloader_information;
 
 echo "Nextbit Robin" > ether/friendlyName;
@@ -264,7 +264,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
 echo 0 > lmi/status-18.1;
-echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > lmi/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > lmi/bootloader_information;
 
 echo "HTC One" > m7/friendlyName;
 echo 2 > m7/status-14.1;
@@ -368,7 +368,7 @@ echo 2 > sunfish/status-18.1;
 echo -e "Fastboot\nYes, Untested\nYes" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
-echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > raphael/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > raphael/bootloader_information;
 
 echo "Moto E 2015 LTE" > surnia/friendlyName;
 echo 0 > surnia/status-17.1;
@@ -393,11 +393,11 @@ echo 2 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
-echo 2 > vayu/status-18.1;
-echo -e "Fastboot (Xiaomi)\nYes, Untested\nYes" > vayu/bootloader_information;
+echo 4 > vayu/status-18.1;
+echo -e "Fastboot (Xiaomi)\nLikely Not Possible\nYes" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
-echo 2 > victara/status-18.1;
+echo 4 > victara/status-18.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > victara/bootloader_information;
 
 echo "Google Project Tango Tablet" > yellowstone/friendlyName;
