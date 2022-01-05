@@ -393,7 +393,7 @@ echo 2 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
-echo 4 > vayu/status-18.1;
+echo 0 > vayu/status-18.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;

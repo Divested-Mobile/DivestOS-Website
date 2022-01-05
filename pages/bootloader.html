@@ -41,7 +41,13 @@
 								<li>Enable 'Allow OEM unlocking' under 'Developer options' in Settings if available</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li><code>$ fastboot oem unlock</code> or <code>$ fastboot flashing unlock</code></li>
-								<li>If fastboot.zip available: fastboot update fastboot.zip</li>
+								<li>If fastboot.zip available:
+									<ol>
+										<li><code>$ fastboot update fastboot.zip</code></li>
+										<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
+										<li><code>$ adb sideload system.zip</code></li>
+									</ol>
+								</li>
 								<li>If recovery.img available:
 									<ol>
 										<li><code>$ fastboot flash recovery recovery.img</code></li>
@@ -56,6 +62,7 @@
 							<p><mark class="secondary">Locking your bootloader with an incorrectly signed system image or on unsupported device can result in a permanent brick!</mark></p>
 							<p><mark class="secondary">Locking your bootloader may be irreversible on some devices!</mark></p>
 							<p><mark class="secondary">Do not attempt to lock your bootloader on an untested device unless you are absolutely OK with it potentially being destroyed!</mark></p>
+							<p><mark class="secondary">On A/B systems firmware in both slots must be in sync/latest! Or else next installed update might be unbootable, and potentially brick.</mark></p>
 							<ol>
 								<li>After install of a properly signed system you must verify boot, verify functionality, verify update support, and verify the ability to factory reset.</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
