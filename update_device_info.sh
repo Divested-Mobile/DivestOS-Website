@@ -243,7 +243,7 @@ echo 0 > jfltexx/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > jfltexx/bootloader_information;
 
 echo "Samsung Galaxy S5 Plus" > kccat6/friendlyName;
-echo 2 > kccat6/status-16.0;
+echo 1 > kccat6/status-16.0;
 echo -e "Heimdall\nNot Unlockable\nNo" > kccat6/bootloader_information;
 
 echo "Wileyfox Storm" > kipper/friendlyName;
@@ -259,7 +259,7 @@ echo 4 > land/status-16.0;
 echo -e "Fastboot (Xiaomi)\nLikely not possible\nNo" > land/bootloader_information;
 
 echo "Samsung Galaxy S5 LTE-A" > lentislte/friendlyName;
-echo 2 > lentislte/status-16.0;
+echo 1 > lentislte/status-16.0;
 echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
