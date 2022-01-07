@@ -14,7 +14,17 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p alioth amber angler apollo aura avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamoleb guacamole h815 h850 h870 h990 ham hammerhead harpia herolte himaul hotdog hotdogb i9100 i9300 i9305 jellypro jfltexx kccat6 kipper klte land lentislte lmi m7 m8 maguro mako manta marlin mata merlin n5110 n7100 nex oneplus2 oneplus3 osprey pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen tilapia thor toro toroplus us996 us997 v1awifi vayu victara walleye yellowstone z00t z2_plus zenfone3;
+mkdir -p akari alioth amber angler apollo aura aurora avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb discovery dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamole guacamoleb h815 h850 h870 h910 h990 ham hammerhead harpia herolte himaul hotdog hotdogb i9100 i9300 i9305 jellypro jfltexx kccat6 kipper klte land lavender lentislte lmi m7 m8 maguro mako manta marlin mata merlin n5110 n7100 nex oneplus2 oneplus3 osprey pioneer pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen thor tilapia toro toroplus us996 us997 v1awifi vayu victara voyager walleye xz2c yellowstone z00t z2_plus zenfone3;
+
+echo "Sony Xperia XZ2" > akari/friendlyName;
+echo "Sony Xperia XZ2 Premium" > aurora/friendlyName;
+echo "Sony Xperia XZ2 Compact" > xz2c/friendlyName;
+echo 2 > akari/status-18.1;
+echo 2 > aurora/status-18.1;
+echo 2 > xz2c/status-18.1;
+echo -e "Fastboot (Sony)\nUnknown\nYes" > akari/bootloader_information;
+echo -e "Fastboot (Sony)\nUnknown\nYes" > aurora/bootloader_information;
+echo -e "Fastboot (Sony)\nUnknown\nYes" > xz2c/bootloader_information;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 0 > alioth/status-18.1;
@@ -188,10 +198,13 @@ echo 4 > us997/status-15.1;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h870/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > us997/bootloader_information;
 
+echo "LG V20 ATT" > h910/friendlyName;
 echo "LG V20 INTL" > h990/friendlyName;
 echo "LG V20 US" > us996/friendlyName;
+echo 4 > h910/status-18.1
 echo 0 > h990/status-18.1;
 echo 0 > us996/status-18.1;
+echo -e "Exploit\nNot Unlockable\nNo" > h910/bootloader_information;
 echo -e "Exploit\nNot Unlockable\nNo" > h990/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > us996/bootloader_information;
 
@@ -257,6 +270,10 @@ echo -e "Heimdall\nNot Unlockable\nNo" > klte/bootloader_information;
 echo "Xiaomi Redmi 3S/3X" > land/friendlyName;
 echo 4 > land/status-16.0;
 echo -e "Fastboot (Xiaomi)\nLikely not possible\nNo" > land/bootloader_information;
+
+echo "Xiaomi Redmi Note 7" > lavender/friendlyName;
+echo 2 > lavender/status-18.1;
+echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > lavender/bootloader_information;
 
 echo "Samsung Galaxy S5 LTE-A" > lentislte/friendlyName;
 echo 1 > lentislte/status-16.0;
@@ -330,6 +347,16 @@ echo -e "Fastboot\nYes, test-keys only?\nYes" > oneplus3/bootloader_information;
 echo "Moto G 2015" > osprey/friendlyName;
 echo 0 > osprey/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > osprey/bootloader_information;
+
+echo "Sony Xperia XA2" > pioneer/friendlyName;
+echo "Sony Xperia XA2 Plus" > voyager/friendlyName;
+echo "Sony Xperia XA2 Ultra" > discovery/friendlyName;
+echo 2 > pioneer/status-18.1;
+echo 2 > voyager/status-18.1;
+echo 2 > discovery/status-18.1;
+echo -e "Fastboot (Sony)\nUnknown\nNo" > pioneer/bootloader_information;
+echo -e "Fastboot (Sony)\nUnknown\nNo" > voyager/bootloader_information;
+echo -e "Fastboot (Sony)\nUnknown\nNo" > discovery/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
 echo 2 > pro1/status-18.1;
