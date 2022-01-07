@@ -22,29 +22,29 @@ echo "Sony Xperia XZ2 Compact" > xz2c/friendlyName;
 echo 2 > akari/status-18.1;
 echo 2 > aurora/status-18.1;
 echo 2 > xz2c/status-18.1;
-echo -e "Fastboot (Sony)\nUnknown\nYes" > akari/bootloader_information;
-echo -e "Fastboot (Sony)\nUnknown\nYes" > aurora/bootloader_information;
-echo -e "Fastboot (Sony)\nUnknown\nYes" > xz2c/bootloader_information;
+echo -e "Fastboot (Sony)\nUnknown\n2.0" > akari/bootloader_information;
+echo -e "Fastboot (Sony)\nUnknown\n2.0" > aurora/bootloader_information;
+echo -e "Fastboot (Sony)\nUnknown\n2.0" > xz2c/bootloader_information;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 0 > alioth/status-18.1;
-echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > alioth/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > alioth/bootloader_information;
 
 echo "Yandex Phone" > amber/friendlyName;
 echo 2 > amber/status-17.1;
-echo -e "Fastboot (Yandex)\nUnknown\nYes" > amber/bootloader_information;
+echo -e "Fastboot (Yandex)\nUnknown\n2.0" > amber/bootloader_information;
 
 echo "Google Nexus 6P" > angler/friendlyName;
 echo 0 > angler/status-15.1;
-echo -e "Fastboot\nTested Working\nYes" > angler/bootloader_information;
+echo -e "Fastboot\nTested Working\n1.0" > angler/bootloader_information;
 
 echo "Razer Phone 2" > aura/friendlyName;
 echo 1 > aura/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > aura/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
 echo 4 > avicii/status-17.1;
-echo -e "Fastboot\nYes, Untested\nYes" > avicii/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > avicii/bootloader_information;
 
 echo "ZTE Axon 7" > axon7/friendlyName;
 echo 2 > axon7/status-15.1;
@@ -56,29 +56,29 @@ echo -e "Fastboot\nYes, but irreversible\nNo" > bacon/bootloader_information;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
 echo 5 > beryllium/status-18.1;
-echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > beryllium/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > beryllium/bootloader_information;
 
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
 echo 4 > blueline/status-18.1;
 echo 4 > crosshatch/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > blueline/bootloader_information;
-echo -e "Fastboot\nYes, Untested\nYes" > crosshatch/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > blueline/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > crosshatch/bootloader_information;
 
 echo "Google Pixel 3a XL" > bonito/friendlyName;
 echo "Google Pixel 3a" > sargo/friendlyName;
 echo 1 > bonito/status-17.1;
 echo 1 > sargo/status-17.1;
-echo -e "Fastboot\nYes, Untested\nYes" > bonito/bootloader_information;
-echo -e "Fastboot\nYes, Untested\nYes" > sargo/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > bonito/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > sargo/bootloader_information;
 
 echo "Google Pixel 4a 5G" > bramble/friendlyName;
 echo 2 > bramble/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > bramble/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > bramble/bootloader_information;
 
 echo "Google Nexus 5X" > bullhead/friendlyName;
 echo 0 > bullhead/status-15.1;
-echo -e "Fastboot\nTested Working\nYes" > bullhead/bootloader_information;
+echo -e "Fastboot\nTested Working\n1.0" > bullhead/bootloader_information;
 
 echo "OnePlus 5" > cheeseburger/friendlyName;
 echo "OnePlus 5T" > dumpling/friendlyName;
@@ -86,12 +86,12 @@ echo 0 > cheeseburger/status-16.0;
 echo 0 > cheeseburger/status-18.1;
 echo 0 > dumpling/status-16.0;
 echo 0 > dumpling/status-18.1;
-echo -e "Fastboot\nTested Working\nYes" > cheeseburger/bootloader_information;
-echo -e "Fastboot\nTested Working\nYes" > dumpling/bootloader_information;
+echo -e "Fastboot\nTested Working\n1.0" > cheeseburger/bootloader_information;
+echo -e "Fastboot\nTested Working\n1.0" > dumpling/bootloader_information;
 
 echo "Razer Phone" > cheryl/friendlyName;
 echo 4 > cheryl/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > cheryl/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n1.0" > cheryl/bootloader_information;
 
 echo "Moto X Pure 2015" > clark/friendlyName;
 echo 0 > clark/status-14.1;
@@ -102,8 +102,8 @@ echo "Pixel 4 XL" > coral/friendlyName;
 echo "Pixel 4" > flame/friendlyName;
 echo 2 > coral/status-18.1;
 echo 2 > flame/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > coral/bootloader_information;
-echo -e "Fastboot\nYes, Untested\nYes" > flame/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > coral/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > flame/bootloader_information;
 
 echo "Wileyfox Swift" > crackling/friendlyName;
 echo 0 > crackling/status-17.1;
@@ -122,18 +122,18 @@ echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
 
 echo "Xiaomi Redmi K20 / Mi 9T" > davinci/friendlyName;
 echo 0 > davinci/status-17.1;
-echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > davinci/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > davinci/bootloader_information;
 
 echo "Google Pixel C" > dragon/friendlyName;
 echo 0 > dragon/status-15.1;
-echo -e "Fastboot\nYes, but will error\nYes" > dragon/bootloader_information;
+echo -e "Fastboot\nYes, but will error\n1.0" > dragon/bootloader_information;
 
 echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
 echo 0 > enchilada/status-18.1;
 echo 0 > fajita/status-18.1;
-echo -e "Fastboot\nYes, Tested Working\nYes" > enchilada/bootloader_information;
-echo -e "Fastboot\nYes, Tested Working\nYes" > fajita/bootloader_information;
+echo -e "Fastboot\nYes, Tested Working\n2.0" > enchilada/bootloader_information;
+echo -e "Fastboot\nYes, Tested Working\n2.0" > fajita/bootloader_information;
 
 echo "Nextbit Robin" > ether/friendlyName;
 echo 0 > ether/status-15.1;
@@ -150,7 +150,7 @@ echo -e "Fastboot\nTested Working\nNo" > flox/bootloader_information;
 
 echo "Google Nexus 9" > flounder/friendlyName;
 echo 0 > flounder/status-15.1;
-echo -e "Fastboot\nYes, Untested\nYes" > flounder/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n1.0" > flounder/bootloader_information;
 
 echo "Fairphone 2" > fp2/friendlyName;
 echo 0 > fp2/status-18.1;
@@ -158,7 +158,7 @@ echo -e "Pre-Unlocked\nUnknown\nNo" > fp2/bootloader_information;
 
 echo "Fairphone 3" > fp3/friendlyName;
 echo 0 > fp3/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > fp3/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > fp3/bootloader_information;
 
 echo "Google Nexus Player" > fugu/friendlyName;
 echo 0 > fugu/status-15.1;
@@ -177,8 +177,8 @@ echo "OnePlus 7 Pro" > guacamole/friendlyName;
 echo "OnePlus 7" > guacamoleb/friendlyName;
 echo 4 > guacamole/status-18.1;
 echo 4 > guacamoleb/status-17.1;
-echo -e "Fastboot\nYes, Untested\nYes" > guacamole/bootloader_information;
-echo -e "Fastboot\nYes, Untested\nYes" > guacamoleb/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > guacamole/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > guacamoleb/bootloader_information;
 
 echo "LG G4 INTL" > h815/friendlyName;
 echo 2 > h815/status-14.1;
@@ -233,8 +233,8 @@ echo "OnePlus 7T Pro" > hotdog/friendlyName;
 echo "OnePlus 7T" > hotdogb/friendlyName;
 echo 4 > hotdog/status-18.1;
 echo 4 > hotdogb/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > hotdog/bootloader_information;
-echo -e "Fastboot\nYes, Untested\nYes" > hotdogb/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > hotdog/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > hotdogb/bootloader_information;
 
 echo "Samsung Galaxy S2" > i9100/friendlyName;
 echo 0 > i9100/status-14.1;
@@ -273,7 +273,7 @@ echo -e "Fastboot (Xiaomi)\nLikely not possible\nNo" > land/bootloader_informati
 
 echo "Xiaomi Redmi Note 7" > lavender/friendlyName;
 echo 2 > lavender/status-18.1;
-echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > lavender/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > lavender/bootloader_information;
 
 echo "Samsung Galaxy S5 LTE-A" > lentislte/friendlyName;
 echo 1 > lentislte/status-16.0;
@@ -281,7 +281,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
 echo 0 > lmi/status-18.1;
-echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > lmi/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > lmi/bootloader_information;
 
 echo "HTC One" > m7/friendlyName;
 echo 2 > m7/status-14.1;
@@ -314,12 +314,12 @@ echo "Google Pixel XL" > marlin/friendlyName;
 echo "Google Pixel" > sailfish/friendlyName;
 echo 0 > marlin/status-17.1;
 echo 0 > sailfish/status-17.1;
-echo -e "Fastboot\nYes, Untested\nYes" > marlin/bootloader_information;
-echo -e "Fastboot\nTested Working\nYes" > sailfish/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n1.0" > marlin/bootloader_information;
+echo -e "Fastboot\nTested Working\n1.0" > sailfish/bootloader_information;
 
 echo "Essential PH-1" > mata/friendlyName;
 echo 0 > mata/status-18.1;
-echo -e "Fastboot\nTested Working\nYes" > mata/bootloader_information;
+echo -e "Fastboot\nTested Working\n1.0" > mata/bootloader_information;
 
 echo "Moto G3 Turbo" > merlin/friendlyName;
 echo 4 > merlin/status-17.1;
@@ -342,7 +342,7 @@ echo -e "Fastboot\nYes, but irreversible\nNo" > oneplus2/bootloader_information;
 
 echo "OnePlus 3/T" > oneplus3/friendlyName;
 echo 0 > oneplus3/status-18.1;
-echo -e "Fastboot\nYes, test-keys only?\nYes" > oneplus3/bootloader_information;
+echo -e "Fastboot\nYes, test-keys only?\n1.0" > oneplus3/bootloader_information;
 
 echo "Moto G 2015" > osprey/friendlyName;
 echo 0 > osprey/status-17.1;
@@ -360,11 +360,11 @@ echo -e "Fastboot (Sony)\nUnknown\nNo" > discovery/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
 echo 2 > pro1/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > pro1/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > pro1/bootloader_information;
 
 echo "Google Pixel 5" > redfin/friendlyName;
 echo 2 > redfin/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > redfin/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > redfin/bootloader_information;
 
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
 echo 0 > santoni/status-16.0;
@@ -381,7 +381,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > serranoltexx/bootloader_information;
 echo "Google Nexus 6" > shamu/friendlyName;
 echo 4 > shamu/status-15.1;
 echo 0 > shamu/status-18.1;
-echo -e "Fastboot\nTested Working\nYes" > shamu/bootloader_information;
+echo -e "Fastboot\nTested Working\n1.0" > shamu/bootloader_information;
 
 echo "Samsung Galaxy S9" > starlte/friendlyName;
 echo "Samsung Galaxy S9+" > star2lte/friendlyName;
@@ -392,10 +392,10 @@ echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 
 echo "Google Pixel 4a" > sunfish/friendlyName;
 echo 2 > sunfish/status-18.1;
-echo -e "Fastboot\nYes, Untested\nYes" > sunfish/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
-echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > raphael/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > raphael/bootloader_information;
 
 echo "Moto E 2015 LTE" > surnia/friendlyName;
 echo 0 > surnia/status-17.1;
@@ -405,8 +405,8 @@ echo "Google Pixel 2 XL" > taimen/friendlyName;
 echo "Google Pixel 2" > walleye/friendlyName;
 echo 0 > taimen/status-18.1;
 echo 0 > walleye/status-18.1;
-echo -e "Fastboot\nTested Working\nYes" > taimen/bootloader_information;
-echo -e "Fastboot\nTested Working\nYes" > walleye/bootloader_information;
+echo -e "Fastboot\nTested Working\n2.0" > taimen/bootloader_information;
+echo -e "Fastboot\nTested Working\n2.0" > walleye/bootloader_information;
 
 echo "Amazon Kindle Fire HDX 8.9" > apollo/friendlyName;
 echo "Amazon Kindle Fire HDX 7" > thor/friendlyName;
@@ -421,7 +421,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
 echo 0 > vayu/status-18.1;
-echo -e "Fastboot (Xiaomi)\nWill Brick\nYes" > vayu/bootloader_information;
+echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
 echo 4 > victara/status-18.1;
@@ -438,7 +438,7 @@ echo -e "Fastboot (ASUS)\nNo\nNo" > z00t/bootloader_information;
 echo "ZUK Z2 Plus" > z2_plus/friendlyName;
 echo 0 > z2_plus/status-17.1;
 echo 4 > z2_plus/status-18.1;
-echo -e "Fastboot (ZUK)\nUnknown\nYes" > z2_plus/bootloader_information;
+echo -e "Fastboot (ZUK)\nUnknown\n1.0" > z2_plus/bootloader_information;
 
 echo "ASUS Zenfone 3" > zenfone3/friendlyName;
 echo 2 > zenfone3/status-16.0;
