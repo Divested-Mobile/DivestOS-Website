@@ -272,7 +272,7 @@ echo 4 > land/status-16.0;
 echo -e "Fastboot (Xiaomi)\nLikely not possible\nNo" > land/bootloader_information;
 
 echo "Xiaomi Redmi Note 7" > lavender/friendlyName;
-echo 2 > lavender/status-18.1;
+echo 0 > lavender/status-18.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > lavender/bootloader_information;
 
 echo "Samsung Galaxy S5 LTE-A" > lentislte/friendlyName;

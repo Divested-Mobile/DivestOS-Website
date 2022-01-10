@@ -1,177 +1,153 @@
 				<div class="card fluid">
 					<h2>Browser Comparison Table</h2>
-					<p>All of the available browsers have each of their own faults as documented in the table below.</p>
-					<p>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.</p>
-					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.</p>
+					<p>All of the available browsers have each of their own faults as documented in the table below.<br>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.<br>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Both lists are sorted by order of recommendation, closer to the top the more we'd recommend.<br>For more detailed technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.</p>
 					<div class="section" id="full">
 						<h3>Full Fledged Browsers<a href="#full">¶</a></h3>
 						<table class="striped" style="max-height: 100%;">
 							<thead>
 								<tr>
 									<th>Name</th>
-									<th>FOSS?</th>
-									<th>Hardened?</th>
-									<th>Insecure?</th>
-									<th>Leaky?</th>
-									<th>Limited?</th>
-									<th>Private?</th>
-									<th>Unstable?</th>
-									<th>Updated?</th>
+									<th>Free and Open Source</th>
+									<th>Per-Site Data Isolation</th>
+									<th>Per-Site Process Isolation</th>
+									<th>Fingerprinting Protection</th>
+									<th>Content Blocker</th>
+									<th>Maintained</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td data-label="Name">Mull (Fenix)</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#FFC107;">Eh</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
+									<td data-label="Name">Mull</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
+									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
 									<td data-label="Name">Bromite</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
+									<td data-label="Fingerprinting Protection" style="color:#FFC107;">Basic</td>
+									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
+									<td data-label="Maintained">Within two weeks</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Fennec F-Droid (Fenix)</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#673AB7;">No</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
+									<td data-label="Name">Tor Browser</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
+									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">uBlock Origin</td>
+									<td data-label="Maintained">Within a month</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Tor Browser (Fenix)</td>
-									<td data-label="FOSS?" style="color:#FFC107;">Almost</td>
-									<td data-label="Hardened?" style="color:#FFC107;">Eh</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Sure</td>
-									<td data-label="Unstable?" style="color:#FFC107;">Sometimes</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
+									<td data-label="Name">Fennec F-Droid</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
+									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
+									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Firefox (Fenix)</td>
-									<td data-label="FOSS?" style="color:#FFC107;">Almost</td>
-									<td data-label="Hardened?" style="color:#673AB7;">No</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes</td>
+									<td data-label="Name">Firefox</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
+									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
+									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Chromium (getChromium)</td>
-									<td data-label="FOSS?" style="color:#FFC107;">Almost</td>
-									<td data-label="Hardened?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Insecure?" style="color:#f44336;">Yes (test-keys)</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
-									<td data-label="Unstable?" style="color:#FFC107;">Sometimes</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Trunk</td>
+									<td data-label="Name">Chromium</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
+									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
+									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
+									<td data-label="Content Blocker" style="color:#f44336;">No</td>
+									<td data-label="Maintained">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Brave</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
+									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">Yes</td>
+									<td data-label="Maintained">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Firefox Focus/Klar</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
+									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
+									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
+									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
+									<td data-label="Maintained">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Iceraven</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
+									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
+									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="Maintained">Within two months</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					<div class="section" id="webview">
-						<h3>WebView Based Browsers<a href="#webview">¶</a></h3>
-						<p>These browsers <b>must</b> be combined with an up to date WebView provider to be secure</p>
+						<h3>WebView Browsers<a href="#webview">¶</a></h3>
+						<p>These browsers <b>must</b> be combined with an up to date WebView provider to be secure.<br>If you are on stock/OEM version of Android or have Google Apps installed, you are likely using the Chrome WebView with extra telemetry.<br>While WebView browers utilize the Chromium WebView, they cannot offer any per-site process isolation.</p>
 						<table class="striped" style="max-height: 100%;">
 							<thead>
 								<tr>
 									<th>Name</th>
-									<th>FOSS?</th>
-									<th>Hardened?</th>
-									<th>Insecure?</th>
-									<th>Leaky?</th>
-									<th>Limited?</th>
-									<th>Private?</th>
-									<th>Unstable?</th>
-									<th>Updated?</th>
+									<th>Free and Open Source</th>
+									<th>Per-Site Data Isolation</th>
+									<th>Fingerprinting Protection</th>
+									<th>Content Blocker</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td data-label="Name">Privacy Browser</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#4CAF50;">Yes*</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes*</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
+									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
+									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 								</tr>
 								<tr>
 									<td data-label="Name">FOSS Browser</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#4CAF50;">Yes*</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#4CAF50;">No</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#4CAF50;">Basically</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes*</td>
-								</tr>
-								<tr>
-									<td data-label="Name">Lightning</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#4CAF50;">Yes*</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#4CAF50;">No</td>
-									<td data-label="Private?" style="color:#FFC107;">Eh</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes*</td>
-								</tr>
-								<tr>
-									<td data-label="Name">Firefox Klar</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#4CAF50;">Yes*</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#f44336;">Yes</td>
-									<td data-label="Private?" style="color:#FFC107;">Eh</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes*</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
+									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
+									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 								</tr>
 								<tr>
 									<td data-label="Name">DuckDuckGo Browser</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#4CAF50;">Yes*</td>
-									<td data-label="Insecure?" style="color:#4CAF50;">No</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#f44336;">Yes</td>
-									<td data-label="Private?" style="color:#f44336;">No</td>
-									<td data-label="Unstable?" style="color:#4CAF50;">No</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes*</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
+									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">Strong</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Lightning</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
+									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
+									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 								</tr>
 								<tr>
 									<td data-label="Name">Jelly</td>
-									<td data-label="FOSS?" style="color:#4CAF50;">Yes</td>
-									<td data-label="Hardened?" style="color:#4CAF50;">Yes*</td>
-									<td data-label="Insecure?" style="color:#f44336;">Yes</td>
-									<td data-label="Leaky?" style="color:#f44336;">Yes</td>
-									<td data-label="Limited?" style="color:#f44336;">Yes</td>
-									<td data-label="Private?" style="color:#f44336;">No</td>
-									<td data-label="Unstable?" style="color:#FFC107;">Eh</td>
-									<td data-label="Updated?" style="color:#4CAF50;">Yes*</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
+									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
+									<td data-label="Content Blocker" style="color:#f44336;">No</td>
 								</tr>
 							</tbody>
 						</table>
