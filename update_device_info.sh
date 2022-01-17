@@ -175,8 +175,8 @@ echo -e "Fastboot\nWill Brick\nNo" > tilapia/bootloader_information;
 
 echo "OnePlus 7 Pro" > guacamole/friendlyName;
 echo "OnePlus 7" > guacamoleb/friendlyName;
-echo 4 > guacamole/status-18.1;
-echo 4 > guacamoleb/status-17.1;
+echo 5 > guacamole/status-18.1;
+echo 5 > guacamoleb/status-17.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > guacamole/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0" > guacamoleb/bootloader_information;
 

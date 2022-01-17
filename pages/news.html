@@ -1,6 +1,46 @@
 				<div class="card fluid">
 					<h2>Project News</h2>
 					<p>Occasional updates about DivestOS.<br><a href="index.php?page=news-future">(Upcoming News)</a></p>
+					<div class="section" id="#2022-01-incident">
+						<h3>January 2022 Incident<a href="#2022-01-incident">¶</a></h3>
+						<h4>What Happened</h4>
+						<ul>
+							<li>Builds for twenty devices were pulled due to boot failure and rebuilt versions were later uploaded.</li>
+						</ul>
+						<h4>Impact</h4>
+						<ul>
+							<li>Affected devices: alioth, Amber, avicii, bramble, coral, davinci, discovery, flame, guacamole, guacamoleb, hotdog, hotdogb, lmi, pioneer, redfin, sunfish, vayu, voyager, z2_plus</li>
+						</ul>
+						<h4>Timeline</h4>
+						<ul>
+							<li>Jan 13th: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=35306eb23814444bd4021f8a1c3047d3cb0c8b2b" target="_blank" rel="nofollow noopener noreferrer">Patches</a> for CVE-2021-4203 were added to the Linux patch repo.</li>
+							<li>Builds containing this patch were released on Jan 14th and 16th.</li>
+							<li>Jan 16th @ 20:08: A report was received of guacamole not booting, initially suspected to be firmware related.</li>
+							<li>Jan 16th @ 23:02: The report of guacamole not booting was confirmed and ruled out firmware.</li>
+							<li>Jan 16th @ 23:18: All guacamole* and hotdog* builds were pulled.</li>
+							<li>Using the error message ("creds_are_invalid") and `git blame` the CVE-2021-4203 patches were identified as the issue.</li>
+							<li>Jan 16th @ 23:45: All devices that included the patch were pulled.</li>
+							<li>In-depth checking of why this broke led to <a href="https://cateee.net/lkddb/web-lkddb/DEBUG_CREDENTIALS.html" target="_blank" rel="nofollow noopener noreferrer">DEBUG_CREDENTIALS</a> catching the NULL credential objects, due to missing <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f06bc03339ad4c1baa964a5f0606247ac1c3c50b" target="_blank" rel="nofollow noopener noreferrer">this</a> patch.</li>
+							<li>This is confirmed by <a href="https://lwn.net/Articles/872035/" target="_blank" rel="nofollow noopener noreferrer">looking</a> at the Linux stable patches released on Oct 6th, both patches are included.</li>
+							<li>Jan 17th @ 00:24: CVE patchers were regenerated and rebuilds of the affected devices started.</li>
+							<li>Jan 17th @ 10:31: Rebuilds of the 15 affected 18.1 devices started uploading. Finished @ 13:10.</li>
+							<li>Jan 17th @ 13:11: Rebuilds of the 5 affected 17.1 devices started uploading. Finished @ 14:50.</li>
+						</ul>
+						<h4>Steps to take if you installed the broken build</h4>
+						<ul>
+							<li>If your bootloader is unlocked or your recovery is still functional, simply flash the newest fixed build.</li>
+							<li>If your bootloader is locked and your recovery is not functional, you will have to unlock (which wipes your device) and reinstall the newest fixed build. Then restore your data from backup.</li>
+						</ul>
+						<h4>Steps to take as a user in the future</h4>
+						<ul>
+							<li>Keep a copy of the most recent known working build for your device.</li>
+							<li>Backup your data before every update.</li>
+						</ul>
+						<h4>Steps we plan to take in the future</h4>
+						<ul>
+							<li>Acquire more devices for testing, to catch such issues before release.</li>
+						</ul>
+					</div>
 					<div class="section" id="2022-01">
 						<h3>January 16th 2022 Update<a href="#2022-01">¶</a></h3>
 						<h4>System Updates</h4>
@@ -14,10 +54,6 @@
 							<li>A handful of additional tracker libraries are now disabled after overhauling our `hamper analytics` patchset.</li>
 							<li>Much work went into reducing the number of falsely blocked hosts in the included HOSTS file. Please report any others you find.</li>
 							<li>Firmware inclusion repository has had further improvements. Notably enabling updates for enchilada/fajita.</li>
-						</ul>
-						<h4>Device Updates</h4>
-						<ul>
-							<li>guacamole*/hotdog*: There was a report of the latest guacamole build not booting, but likely caused by firmware slots being out of sync. As always please backup first.</li>
 						</ul>
 						<h4>Roster Updates</h4>
 						<ul>
