@@ -1,0 +1,40 @@
+last updated: 2022/01/21
+
+- latest stable: 97.0.4692.98
+  - https://omahaproxy.appspot.com/
+- GrapheneOS Vanadium: 97.0.4692.98
+  - https://github.com/GrapheneOS/Vanadium/commits/12
+- DivestOS Mulch: 97.0.4692.98
+  - https://gitlab.com/divested-mobile/mulch
+
+- CalyxOS: 95.0.4638.50
+  - https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+
+- LineageOS: 96.0.4664.104, with 97.0.4692.87 pending
+  - https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
+- ArrowOS: 96.0.4664.104
+  - https://github.com/ArrowOS/android_external_chromium-webview
+  - note: uses LineageOS prebuilts
+- ProtonAOSP: 86.0.4240.185 or 91.0.4472.114?
+  - https://android.googlesource.com/platform/external/chromium-webview/+log/c8187ca9e2dd5fd69f108c67e9aea44be37fb4e6
+  - https://github.com/ProtonAOSP/android_external_chromium-webview
+  - note: maybe/previously uses LineageOS prebuilts
+- OmniROM: 86.0.4240.75 or 83.0.4103.120?
+  - https://android.googlesource.com/platform/external/chromium-webview/+log/7a2388596635621f1c70fc1c7bc288435ba1dcf7
+  - https://github.com/omnirom/android_external_chromium-webview/tree/android-11
+  - note: maybe/previously uses LineageOS prebuilts
+
+- Bromite: 96.0.4664.54
+  - https://github.com/bromite/bromite/releases
+- /e/OS: 96.0.4664.54
+  - https://gitlab.e.foundation/e/apps/browser/-/commits/master
+  - note: downstream of Bromite
+
+- DotOS: 83.0.4103.120
+  - https://android.googlesource.com/platform/external/chromium-webview/+log/7a2388596635621f1c70fc1c7bc288435ba1dcf7
+    - https://github.com/DotOS/manifest/blob/dot11/default.xml#L138
+    - https://github.com/DotOS/manifest/blob/dot11/default.xml#L7
+
+See something wrong? Open an issue or merge request:
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/ch-dates.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/misc/ch-dates.txt

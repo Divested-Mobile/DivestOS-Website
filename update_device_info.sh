@@ -175,9 +175,9 @@ echo -e "Fastboot\nWill Brick\nNo" > tilapia/bootloader_information;
 
 echo "OnePlus 7 Pro" > guacamole/friendlyName;
 echo "OnePlus 7" > guacamoleb/friendlyName;
-echo 5 > guacamole/status-18.1;
-echo 5 > guacamoleb/status-17.1;
-echo -e "Fastboot\nYes, Untested\n2.0" > guacamole/bootloader_information;
+echo 0 > guacamole/status-18.1;
+echo 4 > guacamoleb/status-17.1;
+echo -e "Fastboot\nTested Working\n2.0" > guacamole/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0" > guacamoleb/bootloader_information;
 
 echo "LG G4 INTL" > h815/friendlyName;
@@ -232,9 +232,9 @@ echo -e "Fastboot (HTC)\nNo*\nNo" > himaul/bootloader_information;
 echo "OnePlus 7T Pro" > hotdog/friendlyName;
 echo "OnePlus 7T" > hotdogb/friendlyName;
 echo 4 > hotdog/status-18.1;
-echo 4 > hotdogb/status-18.1;
+echo 0 > hotdogb/status-18.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > hotdog/bootloader_information;
-echo -e "Fastboot\nYes, Untested\n2.0" > hotdogb/bootloader_information;
+echo -e "Fastboot\nTested Working\n2.0" > hotdogb/bootloader_information;
 
 echo "Samsung Galaxy S2" > i9100/friendlyName;
 echo 0 > i9100/status-14.1;
