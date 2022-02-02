@@ -1,16 +1,17 @@
-last updated: 2022/01/21
+last updated: 2022/02/01
 
-- latest stable: 97.0.4692.98
+- latest stable: 98.0.4758.87
   - https://omahaproxy.appspot.com/
-- GrapheneOS Vanadium: 97.0.4692.98
+  - https://chromiumdash.appspot.com/releases?platform=Android
+- GrapheneOS Vanadium: 98.0.4758.87
   - https://github.com/GrapheneOS/Vanadium/commits/12
-- DivestOS Mulch: 97.0.4692.98
+- DivestOS Mulch: 98.0.4758.87
   - https://gitlab.com/divested-mobile/mulch
 
 - CalyxOS: 95.0.4638.50
   - https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 
-- LineageOS: 96.0.4664.104, with 97.0.4692.87 pending
+- LineageOS: 97.0.4692.98
   - https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
 - ArrowOS: 96.0.4664.104
   - https://github.com/ArrowOS/android_external_chromium-webview

@@ -19,9 +19,9 @@ mkdir -p akari alioth amber angler apollo aura aurora avicii axon7 bacon berylli
 echo "Sony Xperia XZ2" > akari/friendlyName;
 echo "Sony Xperia XZ2 Premium" > aurora/friendlyName;
 echo "Sony Xperia XZ2 Compact" > xz2c/friendlyName;
-echo 2 > akari/status-18.1;
-echo 2 > aurora/status-18.1;
-echo 2 > xz2c/status-18.1;
+echo 4 > akari/status-18.1;
+echo 4 > aurora/status-18.1;
+echo 0 > xz2c/status-18.1;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > akari/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > aurora/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > xz2c/bootloader_information;
