@@ -158,7 +158,7 @@ echo -e "Pre-Unlocked\nUnknown\nNo" > fp2/bootloader_information;
 
 echo "Fairphone 3" > fp3/friendlyName;
 echo 0 > fp3/status-18.1;
-echo -e "Fastboot\nYes, Untested\n2.0" > fp3/bootloader_information;
+echo -e "Fastboot\nTested Working\n2.0" > fp3/bootloader_information;
 
 echo "Google Nexus Player" > fugu/friendlyName;
 echo 0 > fugu/status-15.1;
@@ -214,7 +214,7 @@ echo -e "Fastboot\nUnknown\nNo" > ham/bootloader_information;
 
 echo "Google Nexus 5" > hammerhead/friendlyName;
 echo 0 > hammerhead/status-15.1;
-echo 0 > hammerhead/status-16.0;
+echo 5 > hammerhead/status-16.0;
 echo -e "Fastboot\nYes, Untested\nNo" > hammerhead/bootloader_information;
 
 echo "Moto G4 Play" > harpia/friendlyName;

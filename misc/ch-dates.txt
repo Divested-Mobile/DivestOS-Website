@@ -1,22 +1,22 @@
-last updated: 2022/02/05
+last updated: 2022/02/07
 
-Version			Date		Known Vulns	Release Notes
-98.0.4758.87		2022/02/01	27		https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop.html
-97.0.4692.98		2022/01/19	26		https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop_19.html
+Version			Date		Security Patch Count	Release Notes
+98.0.4758.87		2022/02/01	27			https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop.html
+97.0.4692.98		2022/01/19	26			https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop_19.html
 97.0.4692.87		2022/01/11
-97.0.4692.70		2022/01/04	38		https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop.html
-96.0.4664.104		2021/12/13	5		https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop_13.html
-96.0.4664.92		2021/12/06	22		https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop.html
-96.0.4664.45		2021/11/15	25		https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html
-95.0.4638.74		2021/11/02	9		https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_28.html
-95.0.4638.50		2021/10/19	19		https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_19.html
+97.0.4692.70		2022/01/04	38			https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop.html
+96.0.4664.104		2021/12/13	5			https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop_13.html
+96.0.4664.92		2021/12/06	22			https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop.html
+96.0.4664.45		2021/11/15	25			https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html
+95.0.4638.74		2021/11/02	9			https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_28.html
+95.0.4638.50		2021/10/19	19			https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_19.html
 94.0.4606.85 		2021/10/11
-94.0.4606.80		2021/10/07	4		https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop.html
-94.0.4606.71		2021/09/30	4		https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_30.html
-94.0.4606.61		2021/09/23	1		https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_24.html
-94.0.4606.50		2021/09/21	18		https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_21.html
-93.0.4577.82		2021/09/13	10		https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop.html
-93.0.4577.62		2021/08/31	27		https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop_31.html
+94.0.4606.80		2021/10/07	4			https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop.html
+94.0.4606.71		2021/09/30	4			https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_30.html
+94.0.4606.61		2021/09/23	1			https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_24.html
+94.0.4606.50		2021/09/21	18			https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_21.html
+93.0.4577.82		2021/09/13	10			https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop.html
+93.0.4577.62		2021/08/31	27			https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop_31.html
 
 - latest stable: 98.0.4758.87
   - https://omahaproxy.appspot.com/
