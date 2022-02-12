@@ -1,4 +1,4 @@
-last updated: 2022/02/07
+last updated: 2022/02/09
 
 Version			Date		Security Patch Count	Release Notes
 98.0.4758.87		2022/02/01	27			https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop.html
@@ -26,7 +26,7 @@ Version			Date		Security Patch Count	Release Notes
 - DivestOS Mulch: 98.0.4758.87
   - https://gitlab.com/divested-mobile/mulch
 
-- CalyxOS: 97.0.4692.98
+- CalyxOS: 98.0.4758.87
   - https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 
 - LineageOS: 97.0.4692.98, with 98.0.4758.87 pending

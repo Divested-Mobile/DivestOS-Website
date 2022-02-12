@@ -154,6 +154,13 @@
 						}
 						unset($bootloaderInformationFile);
 
+						//Output the device release date
+						//$releaseDateFile = $realRootdir . $device . "/releasedate";
+						//if(file_exists($releaseDateFile)) {
+						//	$releaseDate = "<li>Release Date: " . humanTiming(strtotime(file_get_contents($releaseDateFile))) . " ago</li>";
+						//}
+						//unset($releaseDateFile);
+
 						//Updater check count
 						if(extension_loaded("redis")) {
 							$updateCounter = getRedis()->get("Counter-DivestOS+updater.php+base:" . $base . "+device:" . $device);
@@ -176,6 +183,8 @@
 						$downloads .= "<ul>";
 						$downloads .= $status;
 						unset($status);
+						//$downloads .= $releaseDate;
+						//unset($releaseDate);
 						$downloads .= $bootloaderInformation;
 						unset($bootloaderInformation);
 						$downloads .= "<li>Last updated: " . humanTiming($latestFileTime) . "</li>";
