@@ -1,4 +1,4 @@
-last updated: 2022/02/09
+last updated: 2022/02/12
 
 Version			Date		Security Patch Count	Release Notes
 98.0.4758.87		2022/02/01	27			https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop.html
