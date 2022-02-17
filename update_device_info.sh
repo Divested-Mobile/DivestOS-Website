@@ -182,7 +182,7 @@ echo -e "Fastboot\nTested Working\nNo" > flox/bootloader_information;
 
 echo "Google Nexus 9" > flounder/friendlyName;
 echo 0 > flounder/status-15.1;
-echo -e "Fastboot\nYes, Untested\n1.0" > flounder/bootloader_information;
+echo -e "Fastboot\nYes, Might Brick\n1.0" > flounder/bootloader_information;
 
 echo "Fairphone 2" > fp2/friendlyName;
 echo 0 > fp2/status-18.1;

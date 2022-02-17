@@ -6,7 +6,7 @@
 						<p>Devices listed as "Works" on Downloads page will not be listed here if they are fully working as expected and do not have any quirks.</p>
 						<h4 id="all">All Devices<a href="#all">¶</a></h4>
 						<ul>
-							<li>'Developer options' will crash on 15.1 due to null PDB handle. [upstream?]</li>
+							<li><strike>'Developer options' will crash on 15.1 due to null PDB handle. Likely fixed in late 2022-02 builds</strike></li>
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. These devices typically are unable to be encrypted on the very first boot.</li>
 							<li>Devices with less than 2GB of RAM *will* likely out-of-memory more often than usual. [various]</li>
 							<li>Fenix based browsers such as a 'Mull' or 'Fennec F-Droid' might cause a reboot on launch. Please report your device if it does to be fixed.</li>
@@ -84,7 +84,7 @@
 						<h4 id="mako">mako<a href="#mako">¶</a></h4>
 						<ul>
 							<li>/system needs to be resized to fit 17.1 or higher. [too small partition]</li>
-							<li>Will fail to boot on first boot. Force off once after 3 minutes. [modem subsystem service startup failure with forceencrypt]</li>
+							<li>Will fail to boot on first boot. Force off once after 3 minutes. Likely fixed in 2022-01 builds. [modem subsystem service startup failure with forceencrypt]</li>
 						</ul>
 						<h4 id="mata">mata<a href="#mata">¶</a></h4>
 						<ul>
@@ -100,6 +100,7 @@
 						</ul>
 						<h4 id="pixel2">taimen/walleye<a href="#pixel2">¶</a></h4>
 						<ul>
+							<li>(reported) Cellular completely non-functional. [???]</li>
 							<li>(reported) APN persistence issues. [???]</li>
 						</ul>
 						<h4 id="starlte">starlte<a href="#starlte">¶</a></h4>
