@@ -1,6 +1,7 @@
 				<div class="card fluid">
 					<h2>Browser Comparison Table</h2>
 					<p>All of the available browsers have each of their own faults as documented in the table below.<br>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.<br>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Both lists are sorted by order of recommendation, closer to the top the more we'd recommend.<br>For more detailed technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.</p>
+					<p>Firefox calls per-site process isolation <a href="https://wiki.mozilla.org/Project_Fission" target="_blank" rel="nofollow noopener noreferrer">Fission</a> and is enabled by default on desktop. Fission does not work on Android. Furthermore Firefox on Android does <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565196" target="_blank" rel="nofollow noopener noreferrer">not</a> take advantage of Android's <a href="https://developer.android.com/guide/topics/manifest/service-element" target="_blank" rel="nofollow noopener noreferrer">isolatedProcess</a> flag for completely sandboxing application services.<br>Firefox calls per-site data isolation first party isolation.<br>Chromium calls per-site data isolation state partitioning.</p>
 					<div class="section" id="full">
 						<h3>Full Fledged Browsers<a href="#full">¶</a></h3>
 						<table class="striped" style="max-height: 100%;">
@@ -23,6 +24,15 @@
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="Maintained">Within a week</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Mulch</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
+									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
+									<td data-label="Content Blocker" style="color:#f44336;">No</td>
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
@@ -64,7 +74,7 @@
 								<tr>
 									<td data-label="Name">Chromium</td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
-									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
+									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#f44336;">No</td>

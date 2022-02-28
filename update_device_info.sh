@@ -370,7 +370,9 @@ echo -e "Fastboot\nUnknown\nNo" > manta/bootloader_information;
 echo "Google Pixel XL" > marlin/friendlyName;
 echo "Google Pixel" > sailfish/friendlyName;
 echo 0 > marlin/status-17.1;
+echo 4 > marlin/status-18.1;
 echo 0 > sailfish/status-17.1;
+echo 0 > sailfish/status-18.1;
 echo -e "Fastboot\nYes, Untested\n1.0" > marlin/bootloader_information;
 echo -e "Fastboot\nTested Working\n1.0" > sailfish/bootloader_information;
 

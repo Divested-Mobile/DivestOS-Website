@@ -1,4 +1,4 @@
-last updated: 2022/02/17
+last updated: 2022/02/27
 
 Version			Date		Security Patch Count	Release Notes
 98.0.4758.101		2022/02/14	11			https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop_14.html
@@ -44,9 +44,9 @@ Version			Date		Security Patch Count	Release Notes
   - https://github.com/omnirom/android_external_chromium-webview/tree/android-11
   - note: maybe/previously uses LineageOS prebuilts
 
-- Bromite: 96.0.4664.183, special LTS release, https://chromereleases.googleblog.com/2022/02/long-term-support-channel-update.html
+- Bromite: 98.0.4758.108
   - https://github.com/bromite/bromite/releases
-- /e/OS: 96.0.4664.183
+- /e/OS: 98.0.4758.108
   - https://gitlab.e.foundation/e/apps/browser/-/commits/master
   - note: downstream of Bromite
 
