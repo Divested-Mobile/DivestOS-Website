@@ -1,4 +1,4 @@
-last updated: 2022/03/01
+last updated: 2022/03/02
 
 Version			Date		Security Patch Count	Release Notes
 99.0.4844.48		2022/03/01	28			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop.html
@@ -23,9 +23,9 @@ Version			Date		Security Patch Count	Release Notes
 - latest stable: 99.0.4844.48
   - https://omahaproxy.appspot.com/
   - https://chromiumdash.appspot.com/releases?platform=Android
-- GrapheneOS Vanadium: 98.0.4758.101, with 99.0.4844.48 pending
+- GrapheneOS Vanadium: 99.0.4844.48
   - https://github.com/GrapheneOS/Vanadium/commits/12
-- DivestOS Mulch: 98.0.4758.101
+- DivestOS Mulch: 99.0.4844.48
   - https://gitlab.com/divested-mobile/mulch
 
 - CalyxOS: 98.0.4758.87
@@ -45,16 +45,25 @@ Version			Date		Security Patch Count	Release Notes
   - https://github.com/omnirom/android_external_chromium-webview/tree/android-11
   - note: maybe/previously uses LineageOS prebuilts
 
-- Bromite: 98.0.4758.108
+- Bromite: 98.0.4758.116
   - https://github.com/bromite/bromite/releases
 - /e/OS: 98.0.4758.108
   - https://gitlab.e.foundation/e/apps/browser/-/commits/master
   - note: downstream of Bromite
 
-- DotOS: 83.0.4103.120
-  - https://android.googlesource.com/platform/external/chromium-webview/+log/7a2388596635621f1c70fc1c7bc288435ba1dcf7
-    - https://github.com/DotOS/manifest/blob/dot11/default.xml#L138
-    - https://github.com/DotOS/manifest/blob/dot11/default.xml#L7
+- Vostok: 96.0.4664.54
+  - https://gitlab.com/vostok/external_chromium-webview/-/commits/master
+
+- DotOS: 83.0.4103.120 on 11 and 91.0.4472.114 on 12
+  - https://github.com/Havoc-OS/android_manifest/blob/eleven/default.xml
+    - https://android.googlesource.com/platform/external/chromium-webview/+log/7a2388596635621f1c70fc1c7bc288435ba1dcf7
+  - https://github.com/Havoc-OS/android_manifest/blob/twelve/default.xml
+    - https://android.googlesource.com/platform/external/chromium-webview/+log/c8187ca9e2dd5fd69f108c67e9aea44be37fb4e6
+- DotOS: 83.0.4103.120 on 11 and 91.0.4472.114 on 12
+  - https://github.com/DotOS/manifest/blob/dot11/default.xml
+    - https://android.googlesource.com/platform/external/chromium-webview/+log/7a2388596635621f1c70fc1c7bc288435ba1dcf7
+  - https://github.com/DotOS/manifest/blob/dot12/default.xml
+    - https://android.googlesource.com/platform/external/chromium-webview/+log/c8187ca9e2dd5fd69f108c67e9aea44be37fb4e6
 
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/ch-dates.txt
