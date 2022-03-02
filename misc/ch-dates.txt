@@ -1,6 +1,7 @@
-last updated: 2022/02/27
+last updated: 2022/03/01
 
 Version			Date		Security Patch Count	Release Notes
+99.0.4844.48		2022/03/01	28			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop.html
 98.0.4758.101		2022/02/14	11			https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop_14.html
 98.0.4758.87		2022/02/01	27			https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop.html
 97.0.4692.98		2022/01/19	26			https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop_19.html
@@ -19,10 +20,10 @@ Version			Date		Security Patch Count	Release Notes
 93.0.4577.82		2021/09/13	10			https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop.html
 93.0.4577.62		2021/08/31	27			https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop_31.html
 
-- latest stable: 98.0.4758.101
+- latest stable: 99.0.4844.48
   - https://omahaproxy.appspot.com/
   - https://chromiumdash.appspot.com/releases?platform=Android
-- GrapheneOS Vanadium: 98.0.4758.101
+- GrapheneOS Vanadium: 98.0.4758.101, with 99.0.4844.48 pending
   - https://github.com/GrapheneOS/Vanadium/commits/12
 - DivestOS Mulch: 98.0.4758.101
   - https://gitlab.com/divested-mobile/mulch

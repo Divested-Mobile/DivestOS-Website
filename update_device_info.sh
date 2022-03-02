@@ -345,7 +345,6 @@ echo 4 > m7/status-14.1;
 echo -e "Fastboot (HTC)\nNo*\nNo" > m7/bootloader_information;
 
 echo "HTC One M8" > m8/friendlyName;
-echo 0 > m8/status-17.1;
 echo 0 > m8/status-18.1;
 echo -e "Fastboot (HTC)\nNo*\nNo" > m8/bootloader_information;
 
@@ -369,9 +368,7 @@ echo -e "Fastboot\nUnknown\nNo" > manta/bootloader_information;
 
 echo "Google Pixel XL" > marlin/friendlyName;
 echo "Google Pixel" > sailfish/friendlyName;
-echo 0 > marlin/status-17.1;
 echo 4 > marlin/status-18.1;
-echo 0 > sailfish/status-17.1;
 echo 0 > sailfish/status-18.1;
 echo -e "Fastboot\nYes, Untested\n1.0" > marlin/bootloader_information;
 echo -e "Fastboot\nTested Working\n1.0" > sailfish/bootloader_information;
@@ -496,7 +493,6 @@ echo 2 > z00t/status-15.1;
 echo -e "Fastboot (ASUS)\nNo\nNo" > z00t/bootloader_information;
 
 echo "ZUK Z2 Plus" > z2_plus/friendlyName;
-echo 0 > z2_plus/status-17.1;
 echo 4 > z2_plus/status-18.1;
 echo -e "Fastboot (ZUK)\nUnknown\n1.0" > z2_plus/bootloader_information;
 
