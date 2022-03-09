@@ -1,4 +1,4 @@
-last updated: 2022/03/05
+last updated: 2022/03/07
 
 Version			Date		Security Patch Count	Release Notes
 99.0.4844.58		2022/03/03				https://chromium.googlesource.com/chromium/src/+log/99.0.4844.48..99.0.4844.58?pretty=fuller&n=10000
@@ -46,7 +46,7 @@ Version			Date		Security Patch Count	Release Notes
   - https://github.com/omnirom/android_external_chromium-webview/tree/android-11
   - note: maybe/previously uses LineageOS prebuilts
 
-- Bromite: 98.0.4758.116
+- Bromite: 99.0.4844.55
   - https://github.com/bromite/bromite/releases
 - /e/OS: 98.0.4758.108
   - https://gitlab.e.foundation/e/apps/browser/-/commits/master
