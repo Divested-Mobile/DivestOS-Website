@@ -4,16 +4,16 @@
 					<div class="section" id="connections">
 						<h3 id="ntp">NTP</h3>
 						<ul>
-							<li>2.android.pool.ntp.org</li>
+							<li>2.android.pool.ntp.org - not Google, but a volunteer pool</li>
 						</ul>
-						<h3 id="dns">DNS (fallback only)</h3>
+						<h3 id="dns">DNS<small>fallback only, cell/Wi-Fi network overrides</small></h3>
 						<ul>
 							<li>9.9.9.9</li>
 							<li>149.112.112.112</li>
 							<li>2620:fe::fe</li>
 							<li>2620:fe::9</li>
 						</ul>
-						<h3 id="connectivity">Network Connectivity Check</h3>
+						<h3 id="connectivity">Network Connectivity Check<small>can be disabled in Settings</small></h3>
 						<ul>
 							<!--<li>https://divestos.org/gen204.php</li>
 							<li>http://divestos.org/gen204.php</li>-->
@@ -22,7 +22,7 @@
 							<li>http://www.google.com/gen_204</li>
 							<li>http://play.googleapis.com/generate_204</li>
 						</ul>
-						<h3 id="supl">SUPL</h3>
+						<h3 id="supl">SUPL<small>fallback only, carrier overrides</small></h3>
 						<ul>
 							<li>supl.google.com:727X</li>
 						</ul>
@@ -39,13 +39,15 @@
 						<h3 id="fdroid">F-Droid Repositories</h3>
 						<ul>
 							<li>https://f-droid.org/repo/</li>
-							<li>https://divestos.org/fdroid/</li>
-							<li>https://guardianproject.info/fdroid/</li>
-							<li>https://apt.izzysoft.de/fdroid/</li>
-							<li>https://microg.org/fdroid/</li>
-							<li>https://fdroid.bromite.org/fdroid/</li>
+							<li>https://divestos.org/fdroid/official/</li>
+							<li>https://divestos.org/fdroid/webview/</li>
+							<li>https://divestos.org/fdroid/unofficial/ - default disabled</li>
+							<li>https://guardianproject.info/fdroid/ - default disabled</li>
+							<li>https://apt.izzysoft.de/fdroid/ - default disabled</li>
+							<li>https://microg.org/fdroid/ - default disabled, pending removal</li>
+							<li>https://fdroid.bromite.org/fdroid/ - default disabled</li>
 						</ul>
-						<h3 id="hypatia">Hypatia</h3>
+						<h3 id="hypatia">Hypatia<small>not pre-installed</small></h3>
 						<ul>
 							<li>https://divested.dev/MalwareScannerSignatures/*.h*b.gz</li>
 						</ul>
