@@ -10,17 +10,17 @@
 							<li>If you plan on building in a virtual machine, in terms of performance: KVM > Hyper-V > VMWare > VirtualBox</li>
 							<li>You'll need a lot of available free space on your drives</li>
 							<ul>
-								<li>Source Code: 70GB + ~1-2GB per device</li>
+								<li>Source Code: 100GB + ~2GB per device</li>
 								<li>30GB per device for building</li>
-								<li>5GB per device for optional caching</li>
-								<li>250MB-650MB for each resulting build if you want to archive</li>
+								<li>5GB per device for optional ccache</li>
+								<li>~1-2GB for each resulting build</li>
 								<li>4GB for two target-files for a device to optionally generate incremental updates</li>
 								<li>Cheap: ~$60 2TB 7200RPM HDD (non-SMR)</li>
-								<li>Fast: ~$150 800GB Intel S3710 SSD</li>
-								<li>If you plan on having multiple versions available btrfs+zstd:1+dedupe is recommended.</li>
+								<li>Fast: ~$120 1TB SSD (MLC/"enterprise" preferred)</li>
+								<li>If you plan on having multiple versions available btrfs+zstd:1+duperemove is strongly recommended.</li>
 							</ul>
 						</ul>
-						<p>Second you'll want to have a decent Internet connection to download the source code and OS dependencies, 100Mbps is recommended.
+						<p>Second you'll want to have a fast Internet connection to download the source code and OS dependencies, 100Mbps is recommended.
 						<br>Lastly you'll need to have an excellent cooling solution, your computer will be running at full load for quite some time.</p>
 					</div>
 					<div class="section" id="deps">
