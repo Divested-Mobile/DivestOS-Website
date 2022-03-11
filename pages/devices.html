@@ -121,8 +121,15 @@
 						}
 						unset($fastboot);
 
-						if(file_exists($realRootdir . $device . "/avb_pkmd.bin")) { //Output the avb_pkmd.bin if it exists
-							$downloadButtons .= "<br><a href=\"/builds/" . $base . "/" . $device . "/avb_pkmd.bin\" download class=\"button inverse small\">AVB key</a>";
+						$extrasAdded = false;
+						if(file_exists($realRootdir . $device . "/avb_pkmd-" . $device . ".bin")) { //Output the avb_pkmd.bin if it exists
+							$downloadButtons .= "<br><a href=\"/builds/" . $base . "/" . $device . "/avb_pkmd-" . $device . ".bin\" download class=\"button inverse small\">AVB Key</a>";
+							$extrasAdded = true;
+						}
+
+						if(file_exists($realRootdir . $device . "/copy-partitions-" . $device . ".zip")) { //Output the copy-partitions.zip if it exists
+							if($extrasAdded === false) { $downloadButtons .= "<br>"; }
+							$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/copy-partitions-" . $device . ".zip\" download class=\"button inverse small\">Copy Parts</a>";
 						}
 
 						//Create the status message
@@ -149,7 +156,7 @@
 						$bootloaderInformationFile = $realRootdir . $device . "/bootloader_information";
 						if(file_exists($bootloaderInformationFile)) {
 							$bootloaderInformationArr = file($bootloaderInformationFile);
-							$bootloaderInformation = "<li>Unlock Method: " . $bootloaderInformationArr[0] . "</li><li>Relockable: " . $bootloaderInformationArr[1] . "</li><li>Verified Boot: " . $bootloaderInformationArr[2] . "</li>";
+							$bootloaderInformation = "<li>Install Method: " . $bootloaderInformationArr[0] . "</li><li>Relockable: " . $bootloaderInformationArr[1] . "</li><li>Verified Boot: " . $bootloaderInformationArr[2] . "</li>";
 							unset($bootloaderInformationArr);
 						}
 						unset($bootloaderInformationFile);
@@ -179,8 +186,8 @@
 						}
 						$downloads .= "<h3><a style=\"color: inherit; text-decoration: none;\" href=\"#device-" . $device . "\">" . $name . "</a></h3>";
 						unset($name);
-						$downloads .= "<p><a href=\"https://wiki.lineageos.org/devices/" . $trueName . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a> and <a href=\"https://wiki.lineageos.org/devices/" . $trueName . "/install\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Install Guide</a></p>";
 						$downloads .= "<ul>";
+						$downloads .= "<li><a href=\"https://wiki.lineageos.org/devices/" . $trueName . "\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Device Info</a></li>";
 						$downloads .= $status;
 						unset($status);
 						//$downloads .= $releaseDate;
