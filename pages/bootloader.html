@@ -1,12 +1,14 @@
 				<div class="card fluid">
-					<h2>Bootloader Unlocking (WIP)</h2>
+					<h2>Bootloader/Installation (WIP)</h2>
 					<p>In order to flash any third party system images to your device, it is essential to unlock the bootloader first.<br>Documented here are many different methods in order to do so.</p>
 					<div class="section" id="warning">
 						<div class="card fluid warning">
-							<h2>WARNING!<a href="#warning">¶</a></h2>
-							<p>Unlocking your bootloader will wipe your device!
-							<br>Locking your bootloader on most newer devices will also wipe your device!
-							<br>Please backup all of your contacts, photos, files, apps, keys, etc. first!</p>
+							<h3>WARNING!<a href="#warning">¶</a></h3>
+							<ul>
+								<li>Unlocking your bootloader will wipe your device!</li>
+								<li>Locking your bootloader on most newer devices will also wipe your device!</li>
+								<li>Please backup all of your contacts, photos, files, apps, keys, etc. first!</li>
+							</ul>
 						</div>
 					</div>
 					<div class="section" id="prereq">
@@ -19,8 +21,8 @@
 							<li>Fedora: <code>sudo dnf install android-tools</code></li>
 							<li>Debian: <code>sudo apt install android-tools-adb android-tools-fastboot</code></li>
 							<li>Mac OS: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
-							<li>Windows: Install UniversalADB from <a href="https://adb.clockworkmod.com/" target="_blank" rel="nofollow noopener noreferrer">here</a> and download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
-							<li>You'll also need a recovery.img for your specific device. Either ours or <a href="https://twrp.me" target="_blank" rel="nofollow noopener noreferrer">TWRP</a></li>
+							<li>Windows: <strike>Install UniversalADB from <a href="https://adb.clockworkmod.com/" target="_blank" rel="nofollow noopener noreferrer">here</a></strike> and download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
+							<li>You'll also need a recovery.img for your specific device. Preferably ours <strike>or <a href="https://twrp.me" target="_blank" rel="nofollow noopener noreferrer">TWRP</a></strike></li>
 						</ul>
 						<h4>On your phone</h4>
 						<ol>
@@ -41,32 +43,39 @@
 								<li>Enable 'Allow OEM unlocking' under 'Developer options' in Settings if available</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li><code>$ fastboot oem unlock</code> or <code>$ fastboot flashing unlock</code></li>
-								<li>If fastboot.zip available:
+								<li>A/B devices only without <a href="https://gitlab.com/divested-mobile/firmware-empty/-/blob/master/STATUS" target="_blank" rel="nofollow noopener noreferrer">firmware included</a>:
 									<ol>
-										<li><code>$ fastboot update fastboot.zip</code></li>
-										<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-										<li><code>$ adb sideload system.zip</code></li>
+										<li><code>$ fastboot boot lineage-version-date-recovery-device.img</code></li>
+										<li><code>$ adb sideload <a href="https://androidfilehost.com/?fid=2188818919693768129" target="_blank" rel="nofollow noopener noreferrer">copy-partitions-20210323_1922.zip</a></code></li>
 									</ol>
 								</li>
-								<li>If recovery.img available:
+								<li>If fastboot.zip available: <code>$ fastboot update divested-version-date-dos-device-fastboot.zip</code></li>
+								<li>If recovery.img available: <code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
+								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
+								<li>AVB devices only:
 									<ol>
-										<li><code>$ fastboot flash recovery recovery.img</code></li>
-										<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-										<li><code>$ adb sideload system.zip</code></li>
+										<li><code>$ fastboot erase avb_custom_key</code></li>
+										<li><code>$ fastboot flash avb_custom_key avb_pkmd.bin</code></li>
 									</ol>
 								</li>
-								<li>AVB devices only: <code>$ fastboot erase avb_custom_key</code></li>
-								<li>AVB devices only: <code>$ fastboot flash avb_custom_key avb_pkmd.bin</code></li>
 							</ol>
 							<h4>Locking</h4>
-							<p><mark class="secondary">Locking your bootloader with an incorrectly signed system image or on unsupported device can result in a permanent brick!</mark></p>
-							<p><mark class="secondary">Locking your bootloader may be irreversible on some devices!</mark></p>
-							<p><mark class="secondary">Do not attempt to lock your bootloader on an untested device unless you are absolutely OK with it potentially being destroyed!</mark></p>
-							<p><mark class="secondary">On A/B systems firmware in both slots must be in sync/latest! Or else next installed update might be unbootable, and potentially brick.</mark></p>
+							<div class="section" id="lockwarning">
+								<div class="card fluid error">
+									<ul>
+										<li>Locking your bootloader with an incorrectly signed system image or on unsupported device can result in a permanent brick!</li>
+										<li>Locking your bootloader may be irreversible on some devices!</li>
+										<li>Do not attempt to lock your bootloader on an untested device unless you are absolutely OKAY with it potentially being destroyed!</li>
+										<li>On A/B systems firmware in both slots must be in sync/latest! Or else next installed update might be unbootable, and potentially brick.</li>
+									</ul>
+								</div>
+							</div>
 							<ol>
 								<li>After install of a properly signed system you must verify boot, verify functionality, verify update support, and verify the ability to factory reset.</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
-								<li>AVB devices only, ensure you flashed the custom key slot earlier</li>
+								<li>AVB devices only, flash the custom key slot if you didn't earlier.</li>
 								<li><code>$ fastboot oem lock</code> or <code>$ fastboot flashing lock</code></li>
 								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes.</li>
 							</ol>
@@ -89,9 +98,10 @@
 								<li>Wait a few minutes for an email</li>
 								<li>Save the unlock.bin from the email and keep it for future use</li>
 								<li><code>$ fastboot flash unlock unlock.bin</code></li>
-								<li><code>$ fastboot flash recovery recovery.img</code></li>
+								<li><code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload system.zip</code></li>
+								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
 							</ol>
 						</ul>
 					</div>
@@ -112,15 +122,16 @@
 								<li>Wait a few minutes for an email</li>
 								<li>Copy the code from the email and save it for future use</li>
 								<li><code>$ fastboot oem unlock [KEY FROM EMAIL]</code></li>
-								<li><code>$ fastboot flash recovery recovery.img</code></li>
+								<li><code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload system.zip</code></li>
+								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
 							</ol>
 						</ul>
 					</div>
 					<div class="section" id="warning2">
 						<div class="card fluid error">
-							<h2>WARNING!<a href="#warning2">¶</a></h2>
+							<h3>WARNING!<a href="#warning2">¶</a></h3>
 							<p>From here on all of the following methods can very easily and irreversibly destroy your device!</p>
 						</div>
 					</div>
@@ -178,7 +189,8 @@
 								<li>Wait a few minutes</li>
 								<li>Force the device off by holding the power button</li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload system.zip</code></li>
+								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
 							</ol>
 						</ul>
 					</div>
@@ -194,10 +206,11 @@
 								<li>Attempt to gain root using each app</li>
 								<li><code>$ adb shell</code></li>
 								<li><code>$$ su</code></li>
-								<li><code>$$ dd if=/sdcard/recovery.img of=/dev/block/bootdevice/by-name/recovery</code></li>
+								<li><code>$$ dd if=/sdcard/divested-version-date-dos-device-recovery.img of=/dev/block/bootdevice/by-name/recovery</code></li>
 								<li>The output path in the above command may be different.</li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload system.zip</code></li>
+								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
 							</ol>
 						</ul>
 					</div>
