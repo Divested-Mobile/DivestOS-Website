@@ -56,7 +56,7 @@
 							<li>Use the DivestOS recovery if supported.</li>
 							<li>Do not modify any system partitions such as /system, /vendor, or /boot.</li>
 							<li>Lock the bootloader if supported.</li>
-							<li>If the device requires a token to unlock the bootloader provide it to the user.</li>
+							<li>If the device requires a token/keyfile to unlock the bootloader provide it to the user.</li>
 							<li>Leave it at the setup screen.</li>
 							<li>Leave the default wallpaper.</li>
 							<li>If you preload apps only source from the existing F-Droid repositories.</li>
@@ -65,12 +65,12 @@
 						<ul>
 							<li>Make it clear to your users that it is unofficial.</li>
 							<li>Use the branding variables in the scripts to rename it.</li>
-							<li>You must make your sources available to your users under the original repositories' respective licenses.</li>
+							<li>You must make your sources available to your users as per the original repositories' respective licenses. This is mandatory!</li>
 							<li>Consider upstreaming any appropriate changes.</li>
 						</ul>
 
 						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
-						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them. Now only update_engine/AB devices are currently supported.<br>As of 2021/08/29 that is:<br><code>Amber alioth avicii blueline bonito bramble cheryl coral crosshatch enchilada fajita flame FP3 guacamole guacamoleb marlin mata pro1 redfin sailfish sargo sunfish taimen walleye</code></p>
+						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only A/B devices have incrementals generated.<br>As of 2022/03/12 that is:<br><code>akari alioth Amber aura aurora avicii blueline bonito bramble cheryl coral crosshatch davinci discovery enchilada fajita flame FP3 guacamole guacamoleb hotdog hotdogb marlin mata pioneer pro1 redfin sailfish sargo sunfish taimen vayu voyager walleye xz2c</code></p>
 
 						<h4 id="modem">What about that gaping hole that is the baseband processor?<a href="#modem">¶</a></h4>
 						<p>We are in dire need of free hardware, but we don't have many options available currently.</p>

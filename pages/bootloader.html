@@ -46,7 +46,7 @@
 								<li>If fastboot.zip available: <code>$ fastboot update divested-version-date-dos-device-fastboot.zip</code></li>
 								<li>If recovery.img available: <code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>Choose apply update, then via sideload and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>A/B devices only without <a href="https://gitlab.com/divested-mobile/firmware-empty/-/blob/master/STATUS" target="_blank" rel="nofollow noopener noreferrer">firmware enabled</a>: <code>$ adb sideload copy-partitions-device.zip</a></code></li>
 								<li>While still in the recovery perform a factory reset</li>
 								<li>AVB devices only:
@@ -55,6 +55,7 @@
 										<li><code>$ fastboot flash avb_custom_key avb_pkmd-device.bin</code></li>
 									</ol>
 								</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
 							</ol>
 							<h4>Locking</h4>
 							<div class="section" id="lockwarning">
@@ -73,7 +74,7 @@
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li>AVB devices only, flash the custom key slot if you didn't earlier.</li>
 								<li><code>$ fastboot oem lock</code> or <code>$ fastboot flashing lock</code></li>
-								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes.</li>
+								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes (broken update, broken touchscreen, etc.).</li>
 							</ol>
 						</ul>
 					</div>
@@ -96,8 +97,9 @@
 								<li><code>$ fastboot flash unlock unlock.bin</code></li>
 								<li><code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>Choose apply update, then via sideload and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
 							</ol>
 						</ul>
 					</div>
@@ -120,8 +122,9 @@
 								<li><code>$ fastboot oem unlock [KEY FROM EMAIL]</code></li>
 								<li><code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>Choose apply update, then via sideload and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
 							</ol>
 						</ul>
 					</div>
@@ -185,8 +188,9 @@
 								<li>Wait a few minutes</li>
 								<li>Force the device off by holding the power button</li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>Choose apply update, then via sideload and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
 							</ol>
 						</ul>
 					</div>
@@ -205,8 +209,9 @@
 								<li><code>$$ dd if=/sdcard/divested-version-date-dos-device-recovery.img of=/dev/block/bootdevice/by-name/recovery</code></li>
 								<li>The output path in the above command may be different.</li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li><code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>Choose apply update, then via sideload and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
 							</ol>
 						</ul>
 					</div>
