@@ -1,5 +1,5 @@
 Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Patch Count
-98.2.0						2022/03/13							1?
+98.2.0		2022/03/14			2022/03/13				2022/03/14		1?
 98.1.1		2022/03/05			2022/03/04	2022/03/09		2022/03/08		2
 97.3.0						2022/03/04							2
 98.1.0		2022/03/02			2022/03/01	2022/03/04					7
@@ -117,7 +117,7 @@ Useful links:
 - https://gitlab.com/divested-mobile/mull
 - https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.mozilla.fennec_fdroid.yml
 - https://github.com/fork-maintainers/iceraven-browser
-- https://gitlab.com/iode/os/apps/iodebrowser, no sources after 97.1.0 as of 2022/03/13
+- https://gitlab.com/iode/os/apps/iodebrowser
 - https://github.com/iodeOS/fdroid
 
 See something wrong? Open an issue or merge request:
