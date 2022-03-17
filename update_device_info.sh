@@ -224,8 +224,8 @@ echo "2015-04-29" > h815/releasedate;
 
 echo "LG G5 INTL" > h850/friendlyName;
 echo "LG G5 US" > rs988/friendlyName;
-echo 0 > h850/status-18.1;
-echo 4 > rs988/status-18.1;
+echo 5 > h850/status-18.1;
+echo 5 > rs988/status-18.1;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h850/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > rs988/bootloader_information;
 echo "2016-04-23" > h850/releasedate;

@@ -70,7 +70,7 @@
 						</ul>
 						<h5>android_bionic</h5>
 						<ul>
-							<li>P/Q: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
+							<li>P/Q/R: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
 							<li>N/O: Support wildcards in cached hosts file</li>
 							<li>GRAPHENE_BIONIC=true:</li>
 							<li>P/Q/R: Add a real explicit_bzero implementation (GrapheneOS)</li>
@@ -108,6 +108,7 @@
 						<ul>
 							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
 							<!--<li>R: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>-->
+							<li>R: GRAPHENE_MALLOC=true: Make hardened malloc available to apexes (GrapheneOS)</li>
 						</ul>
 						<h5>android_device_qcom_sepolicy(-legacy)</h5>
 						<ul>
@@ -123,6 +124,11 @@
 						<ul>
 							<li>Update the WebView to latest if available</li>
 						</ul>
+						<h5>android_external_graphene_malloc</h5>
+						<ul>
+							<li>P: GRAPHENE_MALLOC=true: DeviceDescriptor sorting wrongly relies on malloc addresses (GrapheneOS)</li>
+							<li>P/Q/R: GRAPHENE_MALLOC=true: Expand workaround to all camera executables</li>
+						</ul>
 						<h5>android_external_sqlite</h5>
 						<ul>
 							<li>N: Enable secure_delete by default (AndroidHardening-13.0)</li>
@@ -134,7 +140,6 @@
 						</ul>
 						<h5>android_frameworks_av</h5>
 						<ul>
-							<li>Q: GRAPHENE_MALLOC=true: Fixup A2DP with hardened_malloc (GrapheneOS)</li>
 							<li>P: GRAPHENE_MALLOC=true: Don't set RLIMIT_AS for hardened_malloc support (GrapheneOS)</li>
 							<li>N: Patch CVE-2017-0592</li>
 						</ul>
@@ -355,7 +360,7 @@
 							<li>Q/R: Revert some Lineage insanity</li>
 							<li>N: Allow 4096-bit keys</li>
 							<li>!R: Always update recovery</li>
-							<li>P/Q: GRAPHENE_MALLOC=true: Increase max_map_count for hardened_malloc (GrapheneOS)</li>
+							<li>P/Q/R: GRAPHENE_MALLOC=true: Increase max_map_count for hardened_malloc (GrapheneOS)</li>
 							<li>Harden mounts with nodev/noexec/nosuid (GrapheneOS)</li>
 							<li>Misc sysctl changes</li>
 							<li>R: GRAPHENE_PTRACE_SCOPE=true: Add a property for controlling ptrace_scope (GrapheneOS)</li>
