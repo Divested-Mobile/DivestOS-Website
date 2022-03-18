@@ -52,7 +52,7 @@ echo -e "Fastboot\nYes, Untested\n2.0" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
 echo 0 > avicii/status-17.1;
-echo -e "Fastboot\nYes, Untested\n2.0" > avicii/bootloader_information;
+echo -e "Fastboot\nYes, Tested Working\n2.0" > avicii/bootloader_information;
 echo "2020-08-04" > avicii/releasedate;
 
 echo "ZTE Axon 7" > axon7/friendlyName;

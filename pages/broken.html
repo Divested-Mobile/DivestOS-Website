@@ -20,6 +20,7 @@
 							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
 							<li>'Storage Manager' is non-functional in some cases.</li>
 							<li>Older Unity based games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>When `Private DNS` is enabled for the system, Chromium based browsers will automatically handle DNS themself bypassing the /etc/hosts based blocking function. Disable `Secure DNS` to work around.</li>
 							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 						</ul>
 						<h4 id="hdx-common">apollo/thor<a href="#hdx-common">¶</a></h4>
@@ -43,7 +44,7 @@
 							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?]</li>
 							<li>Device will often fail on reboot and become unresponsive, requiring the battery to be pulled. [hardware]</li>
 						</ul>
-						<h4 id="g5-common">h850/rs988/g3<a href="#g3-common">¶</a></h4>
+						<h4 id="g5-common">h850/rs988/g5<a href="#g5-common">¶</a></h4>
 						<ul>
 							<li>NFC doesn't work. [???]</li>
 						</ul>
