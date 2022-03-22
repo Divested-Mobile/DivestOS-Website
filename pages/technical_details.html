@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The nitty gritty<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2022-03-16</p>
+						<p>Last updated: 2022-03-21</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -74,15 +74,15 @@
 							<li>N/O: Support wildcards in cached hosts file</li>
 							<li>GRAPHENE_BIONIC=true:</li>
 							<li>P/Q/R: Add a real explicit_bzero implementation (GrapheneOS)</li>
-							<li>P/Q/R: Replace brk and sbrk with stubs (GrapheneOS)</li>
-							<li>P/Q/R: Use blocking getrandom and avoid urandom fallback (GrapheneOS)</li>
+							<!--<li>P/Q/R: Replace brk and sbrk with stubs (GrapheneOS)</li>-->
+							<!--<li>P/Q/R: Use blocking getrandom and avoid urandom fallback (GrapheneOS)</li>-->
 							<li>P/Q/R: Fix undefined out-of-bounds accesses in sched.h (GrapheneOS)</li>
 							<li>P/Q/R: Stop implicitly marking mappings as mergeable (GrapheneOS)</li>
 							<li>P/Q/R: Replace VLA formatting with dprintf-like function (GrapheneOS)</li>
 							<li>P/Q/R: Increase default pthread stack to 8MiB on 64-bit (GrapheneOS)</li>
 							<li>P/Q/R: Make __stack_chk_guard read-only at runtime (GrapheneOS)</li>
 							<li>P/Q/R: On 64-bit, zero the leading stack canary byte (GrapheneOS)</li>
-							<li>P/Q/R: Switch pthread_atfork handler allocation to mmap (GrapheneOS)</li>
+							<!--<li>P/Q/R: Switch pthread_atfork handler allocation to mmap (GrapheneOS)</li>
 							<li>P/Q/R: Add memory protection for pthread_atfork handlers (GrapheneOS)</li>
 							<li>P/Q: Add memory protection for at_quick_exit (GrapheneOS)</li>
 							<li>P/Q/R: Add XOR mangling mitigation for thread-local dtors (GrapheneOS)</li>
@@ -90,7 +90,7 @@
 							<li>P: Move pthread_internal_t out of the stack mapping (GrapheneOS)</li>
 							<li>Q/R: Add guard page(s) between static_tls and stack (GrapheneOS)</li>
 							<li>Q/R: Move pthread_internal_t behind guard page (GrapheneOS)</li>
-							<li>Q/R: Add secondary stack randomization (GrapheneOS)</li>
+							<li>Q/R: Add secondary stack randomization (GrapheneOS)</li>-->
 						</ul>
 						<h5>android_build_make</h5>
 						<ul>
@@ -168,9 +168,9 @@
 							<li>!N: Enable fingerprint lockout after three failed attempts (GrapheneOS)</li>
 							<li>P/Q/R: Allow user logout (GrapheneOS)</li>
 							<li>P/Q/R: Expose the NETWORK permission (GrapheneOS)</li>
-							<li>R: Timeout for reboot (GrapheneOS)</li>
-							<li>R: Timeout for Bluetooth (GrapheneOS)</li>
-							<li>R: Timeout for Wi-Fi (GrapheneOS)</li>
+							<li>Q/R: DOS_TIMEOUTS=true: Timeout for reboot (GrapheneOS)</li>
+							<li>Q/R: DOS_TIMEOUTS=true: Timeout for Bluetooth (GrapheneOS)</li>
+							<li>Q/R: DOS_TIMEOUTS=true: Timeout for Wi-Fi (GrapheneOS)</li>
 							<li>P/Q/R: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 							<li>Q/R: Fix random reboots on broken kernels when an app has data restricted</li>
 							<li>Permission for sensors access (MSe1969)</li>
@@ -289,10 +289,10 @@
 							<li>Permission for sensors access (MSe1969)</li>
 							<li>Q/R: Remove the Sensors Off development tile</li>
 							<li>P/Q/R: More 'Private DNS' options (CalyxOS)</li>
-							<li>R: Timeout for reboot (GrapheneOS)</li>
-							<li>R: Timeout for Bluetooth (CalyxOS)</li>
-							<li>R: Timeout for Wi-Fi (CalyxOS)</li>
-							<li>R: GRAPHENE_PTRACE_SCOPE=true: Add native debugging setting (GrapheneOS)</li>
+							<li>Q/R: DOS_TIMEOUTS=true: Timeout for reboot (GrapheneOS)</li>
+							<li>Q/R: DOS_TIMEOUTS=true: Timeout for Bluetooth (CalyxOS)</li>
+							<li>Q/R: DOS_TIMEOUTS=true: Timeout for Wi-Fi (CalyxOS)</li>
+							<li>Q/R: GRAPHENE_PTRACE_SCOPE=true: Add native debugging setting (GrapheneOS)</li>
 							<li>R: UserManager app installation restrictions (GrapheneOS)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
 							<!--<li>MICROG_INCLUDED=FULL: microG doesn't support Google Backup, hide the options</li>-->
@@ -363,7 +363,7 @@
 							<li>P/Q/R: GRAPHENE_MALLOC=true: Increase max_map_count for hardened_malloc (GrapheneOS)</li>
 							<li>Harden mounts with nodev/noexec/nosuid (GrapheneOS)</li>
 							<li>Misc sysctl changes</li>
-							<li>R: GRAPHENE_PTRACE_SCOPE=true: Add a property for controlling ptrace_scope (GrapheneOS)</li>
+							<li>Q/R: GRAPHENE_PTRACE_SCOPE=true: Add a property for controlling ptrace_scope (GrapheneOS)</li>
 							<li>P/Q/R: GRAPHENE_BIONIC=true: Zero sensitive information with explicit_bzero (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_extras</h5>
@@ -380,8 +380,8 @@
 							<li>Fix -user builds for LGE devices</li>
 							<li>P/Q/R: Allow ignoring neverallows under -user</li>
 							<li>label protected_{fifos,regular} as proc_security (GrapheneOS)</li>
-							<li>R: GRAPHENE_PTRACE_SCOPE=true: Allow init to control kernel.yama.ptrace_scope (GrapheneOS)</li>
-							<li>R: GRAPHENE_PTRACE_SCOPE=true: Allow system to use persist.native_debug (GrapheneOS)</li>
+							<li>Q/R: GRAPHENE_PTRACE_SCOPE=true: Allow init to control kernel.yama.ptrace_scope (GrapheneOS)</li>
+							<li>Q/R: GRAPHENE_PTRACE_SCOPE=true: Allow system to use persist.native_debug (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_update_engine</h5>
 						<ul>

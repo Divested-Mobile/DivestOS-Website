@@ -1,4 +1,4 @@
-last updated: 2022/03/17
+last updated: 2022/03/21
 
 Version			Date		Security Patch Count	Release Notes
 100.0.xxxx.xx		2022/03/29
@@ -27,18 +27,18 @@ Version			Date		Security Patch Count	Release Notes
 
 - CalyxOS, 12		99.0.4844.73				https://gitlab.com/CalyxOS/platform_prebuilts_calyx_chromium_arm64/-/commits/android12L
 - CarbonROM, 12		96.0.4664.111				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
-- DivestOS/Mulch	99.0.4844.58				https://gitlab.com/divested-mobile/mulch
+- DivestOS/Mulch	99.0.4844.73				https://gitlab.com/divested-mobile/mulch
 - GrapheneOS Vanadium	99.0.4844.73				https://github.com/GrapheneOS/Vanadium/commits/12.1
 - OmniROM, 11		94.0.4606.102				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-11
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
-- LineageOS		98.0.4758.101, 99.0.4844.58 pending	https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
+- LineageOS		99.0.4844.73				https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
 - ArrowOS, 11		96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, 11		tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
 - iodéOS		???
 - Replicant		???
 
-- Bromite		99.0.4844.58				https://github.com/bromite/bromite/releases
+- Bromite		99.0.4844.77				https://github.com/bromite/bromite/releases
 - /e/OS			98.0.4758.108, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		99.0.4844.58, Bromite prebuilts		https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 
