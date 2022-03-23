@@ -73,9 +73,9 @@ echo "2018-08-01" > beryllium/releasedate; #?
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
 echo 4 > blueline/status-18.1;
-echo 4 > crosshatch/status-18.1;
+echo 0 > crosshatch/status-18.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > blueline/bootloader_information;
-echo -e "Fastboot\nYes, Untested\n2.0" > crosshatch/bootloader_information;
+echo -e "Fastboot\nTested Working\n2.0" > crosshatch/bootloader_information;
 echo "2018-10-18" > blueline/releasedate;
 echo "2018-10-18" > crosshatch/releasedate;
 

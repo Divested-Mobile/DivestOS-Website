@@ -42,7 +42,7 @@
 							<li>15.1, 16.0, and 17.1 rebuilds were published on March 8th.</li>
 							<li>14.1 rebuilds were published on March 7th.</li>
 							<li>There have been many new kernel CVE patches as usual, with CVE-2022-0847 and CVE-2022-25375 patches applied to 15 and 24 trees respectively.</li>
-							<li>FIFO and regular file protections were enabled back in 2019, however were not actually enabled due to missing SELinux labels. Now fixed thanks to a patch from GrapheneOS.</li>
+							<li>FIFO and regular file protections were enabled back in 2019, however were not actually enabled on select devices due to missing SELinux labels. Now fixed thanks to a patch from GrapheneOS.</li>
 							<li>Many duplicate or incorrectly applied CVE patches have been removed from the kernel patchers after a thorough cleanup. Should fix some latent camera, Wi-Fi, Bluetooth, and display issues across devices.</li>
 							<li>Some kernels are broken and when combined with usage of the app data restriction options on 17.1/18.1 would cause a "random reboot". A workaround is now in place to retry the restriction instead of crashing the system server. This is known to affect cheeseburger, dumpling, and maybe a few other Linux 4.4 series devices.</li>
 						</ul>

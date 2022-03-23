@@ -1,6 +1,6 @@
 				<div class="card fluid">
 					<h2>Browser Comparison Table</h2>
-					<p>All of the available browsers have each of their own faults as documented in the table below.<br>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.<br>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Both lists are sorted by order of recommendation, closer to the top the more we'd recommend.<br>For more detailed technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.<br>Release comparisions are also available for <a href="/misc/ffa-dates.txt" target="_blank">Firefox</a> and <a href="/misc/ch-dates.txt" target="_blank">Chromium</a></p>
+					<p>All of the available browsers have each of their own faults as documented in the table below.<br>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.<br>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Both lists are sorted by order of recommendation, closer to the top the more we'd recommend.<br>For more detailed privacy related technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.<br>Release comparisions are also available for <a href="/misc/ffa-dates.txt" target="_blank">Firefox</a> and <a href="/misc/ch-dates.txt" target="_blank">Chromium</a></p>
 					<p>Firefox calls per-site process isolation <a href="https://wiki.mozilla.org/Project_Fission" target="_blank" rel="nofollow noopener noreferrer">Fission</a> and is enabled by default on desktop. Fission does not work on Android. Furthermore Firefox on Android does <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565196" target="_blank" rel="nofollow noopener noreferrer">not</a> take advantage of Android's <a href="https://developer.android.com/guide/topics/manifest/service-element" target="_blank" rel="nofollow noopener noreferrer">isolatedProcess</a> flag for completely sandboxing application services.</p>
 					<p>Firefox calls per-site data isolation first party isolation.<br>Chromium calls per-site data isolation state partitioning.</p>
 					<div class="section" id="full">
@@ -10,17 +10,17 @@
 								<tr>
 									<th>Name</th>
 									<th>Free and Open Source</th>
-									<th>Per-Site Data Isolation</th>
-									<th>Per-Site Process Isolation</th>
-									<th>Fingerprinting Protection</th>
-									<th>Content Blocker</th>
-									<th>Maintained</th>
+									<th>Per-Site Data Isolation <small>(Privacy)</small></th>
+									<th>Per-Site Process Isolation <small>(Security)</small></th>
+									<th>Fingerprinting Protection <small>(Privacy)</small></th>
+									<th>Content Blocker <small>(Privacy)</small></th>
+									<th>Maintained <small>(Security)</small></th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td data-label="Name">Mull <small>(Fenix)</small></td>
-									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://gitlab.com/divested-mobile/mull-fenix/-/blob/master/fenix-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.com/divested-mobile/mull-fenix/-/blob/master/gecko-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
@@ -38,7 +38,7 @@
 								</tr>
 								<tr>
 									<td data-label="Name">Bromite <small>(Chromium)</small></td>
-									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://github.com/bromite/bromite/blob/master/build/patches/Remove-binary-blob-integrations.patch" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
 									<td data-label="Fingerprinting Protection" style="color:#FFC107;">Basic</td>
@@ -46,8 +46,8 @@
 									<td data-label="Maintained">Within two weeks</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Tor Browser  <small>(Fenix)</small></td>
-									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Name">Tor Browser <small>(Fenix)</small></td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="https://gitlab.torproject.org/tpo/applications/fenix/-/blob/tor-browser-96.3.0-11.0-1/buildSrc/src/main/java/Dependencies.kt#L248" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.torproject.org/tpo/applications/fenix/-/commit/eb540c7ab1d4a924a79ddb70fdeb6184ff043657" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
@@ -56,7 +56,7 @@
 								</tr>
 								<tr>
 									<td data-label="Name">Fennec F-Droid <small>(Fenix)</small></td>
-									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://gitlab.com/relan/fennecbuild/-/blob/master/fenix-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.com/relan/fennecbuild/-/blob/master/gecko-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
@@ -83,7 +83,7 @@
 								</tr>
 								<tr>
 									<td data-label="Name">Brave <small>(Chromium)</small></td>
-									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="/images/Brave-GMS.png" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
@@ -101,7 +101,7 @@
 								</tr>
 								<tr>
 									<td data-label="Name">Iceraven <small>(Fenix)</small></td>
-									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="/images/Iceraven-GMS.png" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
@@ -119,9 +119,9 @@
 								<tr>
 									<th>Name</th>
 									<th>Free and Open Source</th>
-									<th>Per-Site Data Isolation</th>
-									<th>Fingerprinting Protection</th>
-									<th>Content Blocker</th>
+									<th>Per-Site Data Isolation <small>(Privacy)</small></th>
+									<th>Fingerprinting Protection <small>(Privacy)</small></th>
+									<th>Content Blocker <small>(Privacy)</small></th>
 								</tr>
 							</thead>
 							<tbody>
