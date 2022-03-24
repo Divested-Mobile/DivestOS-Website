@@ -52,7 +52,7 @@ echo -e "Fastboot\nYes, Untested\n2.0" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
 echo 0 > avicii/status-17.1;
-echo -e "Fastboot\nYes, Tested Working\n2.0" > avicii/bootloader_information;
+echo -e "Fastboot\nTested Working\n2.0" > avicii/bootloader_information;
 echo "2020-08-04" > avicii/releasedate;
 
 echo "ZTE Axon 7" > axon7/friendlyName;
@@ -161,15 +161,15 @@ echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
 echo 0 > enchilada/status-18.1;
 echo 0 > fajita/status-18.1;
-echo -e "Fastboot\nYes, Tested Working\n2.0" > enchilada/bootloader_information;
-echo -e "Fastboot\nYes, Tested Working\n2.0" > fajita/bootloader_information;
+echo -e "Fastboot\nTested Working\n2.0" > enchilada/bootloader_information;
+echo -e "Fastboot\nTested Working\n2.0" > fajita/bootloader_information;
 echo "2018-05-02" > enchilada/releasedate;
 echo "2018-11-06" > fajita/releasedate;
 
 echo "Nextbit Robin" > ether/friendlyName;
 echo 0 > ether/status-15.1;
 echo 0 > ether/status-18.1;
-echo -e "Fastboot\nYes, Tested Working\nNo" > ether/bootloader_information;
+echo -e "Fastboot\nTested Working\nNo" > ether/bootloader_information;
 echo "2016-02-16" > ether/releasedate;
 
 echo "Google Nexus 7 [2013]" > flo/friendlyName;

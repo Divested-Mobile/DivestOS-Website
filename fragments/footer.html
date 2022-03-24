@@ -1,4 +1,4 @@
-				<?php if(!$SBNR_AT_CAPTCHA_WALL && !contains(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile")) : ?>
+				<?php if(!$SBNR_AT_CAPTCHA_WALL && !containsArr(strtolower($_SERVER["HTTP_USER_AGENT"]), array("phone", "mobile"))) : ?>
 				<div id="bearprompt" style="float: right; right:32px; position: -webkit-sticky; position: sticky; z-index: 1101; bottom: 0;">
 					<div class="centero card small" style="background: #009688;">
 						<h5><img class="section media" style="height:48px; transform: rotate(-30deg);" src="images/bear-optimized.svg" title="An orange bear" alt="An orange bear" integrity="sha384-6+V39wMPfXAhsC1iEpArI6i4WOGmHzCERkBG/PKN3iYVpJrn6FYJX9Ej3Zxn14bB"/><br>Bear needs your support!</h5>
