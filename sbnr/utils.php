@@ -104,6 +104,7 @@ function containsArr($haystack, $needles) {
 			return true;
 		}
 	}
+	return false;
 }
 
 //Credit (CC BY-SA 3.0): https://stackoverflow.com/a/10473026
