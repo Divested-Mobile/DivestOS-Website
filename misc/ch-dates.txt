@@ -1,4 +1,4 @@
-last updated: 2022/03/26
+last updated: 2022/03/28
 
 Version			Date		Security Patch Count	Release Notes
 100.0.xxxx.xx		2022/03/29
@@ -24,9 +24,29 @@ Version			Date		Security Patch Count	Release Notes
 93.0.4577.82		2021/09/13	10			https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop.html
 93.0.4577.62		2021/08/31	27			https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop_31.html
 
+Version		Chromium	Bromite		Vanadium	Mulch
+99.0.4844.88	2022/03/25			2022/03/25	2022/03/26
+99.0.4844.73	2022/03/15	2022/03/19	2022/03/16	2022/03/18
+99.0.4844.58	2022/03/03	2022/03/12	2022/03/04	2022/03/05
+99.0.4844.48	2022/03/01	2022/03/07	2022/03/02	2022/03/02
+98.0.4758.101	2022/02/14	2022/02/21	2022/02/15	2022/02/15
+98.0.4758.87	2022/02/01			2022/02/01	2022/02/01
+97.0.4692.98	2022/01/19	2022/02/17	2022/01/20	2022/01/21
+97.0.4692.87	2022/01/11			2022/01/14	2022/01/19
+97.0.4692.70	2022/01/04			2022/01/05	2022/01/05
+96.0.4664.183			2022/02/05
+96.0.4664.104	2021/12/13	2022/02/04	2021/12/14	2021/12/14
+96.0.4664.92	2021/12/06			2021/12/08	2021/12/07
+96.0.4664.45	2021/11/15	2021/12/04	2021/11/15	2021/11/15
+95.0.4638.74	2021/11/02	2021/11/07	2021/11/04	2021/11/02
+95.0.4638.50	2021/10/19			2021/10/19	2021/10/19
+94.0.4606.85	2021/10/11	2021/10/16	2021/10/12
+94.0.4606.80	2021/10/07			2021/10/08	2021/10/08
+94.0.4606.71	2021/09/30			2021/09/30	2021/10/02
+
 - latest stable		99.0.4844.88				https://chromiumdash.appspot.com/releases?platform=Android
 
-- CalyxOS, 12		99.0.4844.73				https://gitlab.com/CalyxOS/platform_prebuilts_calyx_chromium_arm64/-/commits/android12L
+- CalyxOS, 12		99.0.4844.88				https://gitlab.com/CalyxOS/platform_prebuilts_calyx_chromium_arm64/-/commits/android12L
 - CarbonROM, 12		96.0.4664.111				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
 - DivestOS/Mulch	99.0.4844.88				https://gitlab.com/divested-mobile/mulch
 - GrapheneOS Vanadium	99.0.4844.88				https://github.com/GrapheneOS/Vanadium/commits/12.1
