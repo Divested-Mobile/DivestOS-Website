@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The nitty gritty<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2022-03-21</p>
+						<p>Last updated: 2022-04-03</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -98,6 +98,7 @@
 							<li>P/Q: Add back PicoTTS and language files</li>
 							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
 							<li>Add correct keys to recovery for OTA verification</li>
+							<li>R: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
 							<li>Enable auto-add-overlay for packages, this allows the vendor overlay to easily work across all branches.</li>
 							<li>Replace the Messaging app with Silence</li>
 							<li>Q/R: Disable APEX</li>
@@ -107,8 +108,8 @@
 						<h5>android_build_soong</h5>
 						<ul>
 							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
-							<!--<li>R: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>-->
 							<li>R: GRAPHENE_MALLOC=true: Make hardened malloc available to apexes (GrapheneOS)</li>
+							<li>Q: Enable -ftrivial-auto-var-init=zero (GrapheneOS)</li>
 						</ul>
 						<h5>android_device_qcom_sepolicy(-legacy)</h5>
 						<ul>
@@ -163,7 +164,7 @@
 							<li>Always restrict access to Build.SERIAL (GrapheneOS)</li>
 							<li>Don't grant location permission to system browsers (GrapheneOS)</li>
 							<li>P/Q/R: Allow SystemUI to directly manage Bluetooth/WiFi (GrapheneOS)</li>
-							<!--<li>P/Q: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>-->
+							<li>P/Q/R: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
 							<li>Don't send IMSI to SUPL (MSe1969)</li>
 							<li>!N: Enable fingerprint lockout after three failed attempts (GrapheneOS)</li>
 							<li>P/Q/R: Allow user logout (GrapheneOS)</li>
@@ -172,6 +173,7 @@
 							<li>Q/R: DOS_TIMEOUTS=true: Timeout for Bluetooth (GrapheneOS)</li>
 							<li>Q/R: DOS_TIMEOUTS=true: Timeout for Wi-Fi (GrapheneOS)</li>
 							<li>P/Q/R: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+							<li>Q/R: Add option of always randomizing MAC addresses (GrapheneOS)</li>
 							<li>Q/R: Fix random reboots on broken kernels when an app has data restricted</li>
 							<li>Permission for sensors access (MSe1969)</li>
 							<li>Q/R: Restore the Sensors Off tile</li>
@@ -199,6 +201,7 @@
 						<h5>android_frameworks_opt_net_wifi</h5>
 						<ul>
 							<li>P/Q: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+							<li>Q/R: Add support for always generating new random MAC (GrapheneOS)</li>
 						</ul>
 						<h5>android_hardware_ti_omap4</h5>
 						<ul>
@@ -223,7 +226,7 @@
 						</ul>
 						<h5>android_libcore</h5>
 						<ul>
-							<!--<li>Q/R: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>-->
+							<li>Q/R: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
 							<li>P/Q/R: Expose the NETWORK permission (GrapheneOS)</li>
 							<li>P/Q/R: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 						</ul>
@@ -293,6 +296,8 @@
 							<li>Q/R: DOS_TIMEOUTS=true: Timeout for Bluetooth (CalyxOS)</li>
 							<li>Q/R: DOS_TIMEOUTS=true: Timeout for Wi-Fi (CalyxOS)</li>
 							<li>Q/R: GRAPHENE_PTRACE_SCOPE=true: Add native debugging setting (GrapheneOS)</li>
+							<li>Q/R: GRAPHENE_EXEC=true: Add exec spawning toggle (GrapheneOS)</li>
+							<li>Q/R: Add option to always randomize MAC (GrapheneOS</li>
 							<li>R: UserManager app installation restrictions (GrapheneOS)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
 							<!--<li>MICROG_INCLUDED=FULL: microG doesn't support Google Backup, hide the options</li>-->
@@ -330,15 +335,19 @@
 							<li>Remove voice input key</li>
 							<li>Disable personalization dictionary by default (GrapheneOS)</li>
 						</ul>
-						<h5>android_providers_DownloadProvider</h5>
+						<h5>android_packages_modules_NetworkStack</h5>
+						<ul>
+							<li>R: Avoid reusing DHCP state for full MAC randomization (GrapheneOS)</li>
+						</ul>
+						<h5>android_packages_providers_DownloadProvider</h5>
 						<ul>
 							<li>P/Q/R: Expose the NETWORK permission (GrapheneOS)</li>
 						</ul>
-						<h5>android_providers_MediaProvider</h5>
+						<h5>android_packages_providers_MediaProvider</h5>
 						<ul>
 							<li>O: Fix permission denial</li>
 						</ul>
-						<h5>android_providers_TelephonyProvider</h5>
+						<h5>android_packages_providers_TelephonyProvider</h5>
 						<ul>
 							<li>R: Cherrypick 304614: mcc/mnc fix</li>
 							<li>R: Cherrypick 312102: mnc fix</li>
@@ -346,6 +355,10 @@
 						<h5>android_packages_services_Telephony</h5>
 						<ul>
 							<li>N/O/P: Add an LTE only option</li>
+						</ul>
+						<h5>android_prebuilts_abi-dumps_vndk/h5>
+						<ul>
+							<li>Q: Work around ABI changes from compiler hardening (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_bt</h5>
 						<ul>
@@ -389,10 +402,11 @@
 						</ul>
 						<h5>android_vendor_lineage</h5>
 						<ul>
-							<li>Use the WebView overlay in vendor_divested instead</li>
+							<!--<li>Use the WebView overlay in vendor_divested instead</li>-->
 							<li>Remove Lineage keys</li>
 							<li>Remove analytics</li>
 							<li>Remove Lineage wallpaper</li>
+							<li>R: Do not set device model as DHCP hostname</li>
 							<li>Make sure our hosts is always used</li>
 							<li>Remove Weather</li>
 							<li>Unset default backup provider</li>
@@ -428,6 +442,7 @@
 							<li>hardenBootArgs()</li>
 							<li>Q/R: disableAPEX()</li>
 							<li>removeBuildFingerprints()</li>
+							<li>P/Q/R: GRAPHENE_EXEC=true: disableEnforceRRO() (GrapheneOS)</li>
 							<li>Many proprietary blobs are disabled/removed via Deblob.sh</li>
 						</ul>
 						<h5>Automated mass changes to android_kernel_*</h5>
@@ -436,6 +451,7 @@
 							<li>Fix builds with GCC 10</li>
 							<li>Verified boot keys are copied into their respective kernels</li>
 							<li>Change the VM_MAX_READAHEAD value from the default 128KB to 512KB</li>
+							<li>-ftrivial-auto-var-init=zero is enabled if supported (GrapheneOS)</li>
 							<li>Many CVE (and some hardening) patches are applied to each and every kernel as applicably determined by the CVE checker.</li>
 						</ul>
 						<h5>Automated mass changes to android_vendor_*</h5>

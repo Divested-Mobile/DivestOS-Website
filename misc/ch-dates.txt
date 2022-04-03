@@ -1,7 +1,7 @@
-last updated: 2022/03/28
+last updated: 2022/03/31
 
 Version			Date		Security Patch Count	Release Notes
-100.0.xxxx.xx		2022/03/29
+100.0.4896.58		2022/03/29	28			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
 99.0.4844.88		2022/03/25	1			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_25.html
 99.0.4844.73		2022/03/15	11			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_15.html
 99.0.4844.58		2022/03/03				https://chromium.googlesource.com/chromium/src/+log/99.0.4844.48..99.0.4844.58?pretty=fuller&n=10000
@@ -25,6 +25,7 @@ Version			Date		Security Patch Count	Release Notes
 93.0.4577.62		2021/08/31	27			https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop_31.html
 
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS
+100.0.4896.58	2022/03/29	2022/03/29	2022/03/29	2022/03/30
 99.0.4844.88	2022/03/25			2022/03/25	2022/03/26			2022/03/27
 99.0.4844.73	2022/03/15	2022/03/19	2022/03/16	2022/03/18	2022/03/19	2022/03/17
 99.0.4844.58	2022/03/03	2022/03/12	2022/03/04	2022/03/05			2022/03/12
@@ -44,22 +45,22 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS
 94.0.4606.80	2021/10/07			2021/10/08	2021/10/08
 94.0.4606.71	2021/09/30			2021/09/30	2021/10/02	2021/10/03
 
-- latest stable		99.0.4844.88				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		100.0.4896.58				https://chromiumdash.appspot.com/releases?platform=Android
 
-- CalyxOS, 12		99.0.4844.88				https://gitlab.com/CalyxOS/platform_prebuilts_calyx_chromium_arm64/-/commits/android12L
+- CalyxOS, 12		99.0.4844.88				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - CarbonROM, 12		96.0.4664.111				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
-- DivestOS/Mulch	99.0.4844.88				https://gitlab.com/divested-mobile/mulch
-- GrapheneOS Vanadium	99.0.4844.88				https://github.com/GrapheneOS/Vanadium/commits/12.1
-- OmniROM, 11		94.0.4606.102				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-11
+- DivestOS/Mulch	100.0.4896.58				https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	100.0.4896.58				https://github.com/GrapheneOS/Vanadium/commits/12.1
+- OmniROM, 11		96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
-- LineageOS		99.0.4844.73				https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
+- LineageOS		99.0.4844.73, 100.0.4896.58 pending	https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
 - ArrowOS, 11		96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, 11		tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
 - iodéOS		???
 - Replicant		???
 
-- Bromite		99.0.4844.77				https://github.com/bromite/bromite/releases
+- Bromite		100.0.4896.57				https://github.com/bromite/bromite/releases
 - /e/OS			98.0.4758.108, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		99.0.4844.58, Bromite prebuilts		https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 

@@ -1,6 +1,32 @@
 				<div class="card fluid">
 					<h2>Project News</h2>
 					<p>Occasional updates about DivestOS.<br><a href="index.php?page=news-future">(Upcoming News)</a></p>
+					<div class="section" id="2022-04">
+						<h3>April 3rd 2022 Update Update<a href="#2022-04">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>18.1 rebuilds were published on April 3rd.</li>
+							<li>Kernel defconfig hardening function has been adjusted to ensure init_on_alloc/free is used over page_poision when available.</li>
+							<li>14.1, 15.1, 16.0, and 17.1 rebuilds were published on April 2nd.</li>
+							<li>15.1 rebuilds were published on April 1st and were discovered to not boot due to the WebView overlay change added on March 14th. Less than 5 users were likely impacted. Sideload the latest build to fix.</li>
+							<li>APN and Visual VoiceMail configs have been synced from LineageOS 19.1.</li>
+							<li>There have been many new kernel CVE patches as usual.</li>
+							<li>Clang's -ftrivial-auto-var-init=zero is now enabled on 22 supported kernels and additionally on all of 17.1 userspace just like Android 11+ thanks to a patchset from GrapheneOS.</li>
+							<li>17.1 and 18.1 now include an option to always <a href="/index.php?page=faq#randomMAC" target="_blank">randomize</a> Wi-Fi MAC addresses by default thanks to GrapheneOS. Be sure to enable it on any applicable existing saved networks.</li>
+							<li>17.1 and 18.1 now sports a toggle to disable and enable the exec spawning feature thanks to GrapheneOS. You might consider using it if you don't want the app launch delay or increased memory usage.</li>
+							<li>16.0 and higher now feature the powerful exec spawning patchset from GrapheneOS.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Mull 99.1.x is delayed due to a <a href="https://gitlab.com/relan/fennecbuild/-/merge_requests/13" target="_blank" rel="nofollow noopener noreferrer">bug</a> with extensions being non-functional.</li>
+							<li>Updated Mulch (WebView) to Chromium 99.0.4844.88-1 and 100.0.4896.58-1, has 1 and 28 security fixes respectively.</li>
+							<li>Updated Mull to 98.3.0.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The Chromium versions <a href="/misc/ch-dates.txt" target="_blank">table</a> now has past release dates for select variants.</li>
+						</ul>
+					</div>
 					<div class="section" id="2022-03.3">
 						<h3>March 22nd 2022 Update<a href="#2022-03.3">¶</a><small>Ruff ruff!</small></h3>
 						<h4>System Updates</h4>

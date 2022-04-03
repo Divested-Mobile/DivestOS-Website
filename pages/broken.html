@@ -22,6 +22,9 @@
 							<li>Older Unity based games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>When `Private DNS` is enabled for the system, Chromium based browsers will automatically handle DNS themself bypassing the /etc/hosts based blocking function. Disable `Secure DNS` to work around.</li>
 							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>Simple Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround.</li>
+							<li>Block encrypted devices will fail to shutdown from secure boot screen on 18.1. Force power off via power button to workaround.</li>
+							<li>Bluetooth phone calls may not work.</li>
 						</ul>
 						<h4 id="hdx-common">apollo/thor<a href="#hdx-common">¶</a></h4>
 						<ul>
@@ -47,6 +50,8 @@
 						<h4 id="g5-common">h850/rs988/g5<a href="#g5-common">¶</a></h4>
 						<ul>
 							<li>NFC doesn't work. [???]</li>
+							<li>GPS doesn't work. [???]</li>
+							<li>Torch doesn't work. [???]</li>
 						</ul>
 						<h4 id="davinci">davinci<a href="#davinci">¶</a></h4>
 						<ul>
