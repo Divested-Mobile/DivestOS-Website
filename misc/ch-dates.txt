@@ -1,6 +1,7 @@
-last updated: 2022/03/31
+last updated: 2022/04/04
 
 Version			Date		Security Patch Count	Release Notes
+100.0.4896.79		2022/04/04	1			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop.html
 100.0.4896.58		2022/03/29	28			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
 99.0.4844.88		2022/03/25	1			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_25.html
 99.0.4844.73		2022/03/15	11			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_15.html
@@ -25,7 +26,8 @@ Version			Date		Security Patch Count	Release Notes
 93.0.4577.62		2021/08/31	27			https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop_31.html
 
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS
-100.0.4896.58	2022/03/29	2022/03/29	2022/03/29	2022/03/30
+100.0.4896.79	2022/04/04
+100.0.4896.58	2022/03/29	2022/03/29	2022/03/29	2022/03/30	2022/04/03
 99.0.4844.88	2022/03/25			2022/03/25	2022/03/26			2022/03/27
 99.0.4844.73	2022/03/15	2022/03/19	2022/03/16	2022/03/18	2022/03/19	2022/03/17
 99.0.4844.58	2022/03/03	2022/03/12	2022/03/04	2022/03/05			2022/03/12
@@ -45,7 +47,7 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS
 94.0.4606.80	2021/10/07			2021/10/08	2021/10/08
 94.0.4606.71	2021/09/30			2021/09/30	2021/10/02	2021/10/03
 
-- latest stable		100.0.4896.58				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		100.0.4896.79				https://chromiumdash.appspot.com/releases?platform=Android
 
 - CalyxOS, 12		99.0.4844.88				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - CarbonROM, 12		96.0.4664.111				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
@@ -54,9 +56,10 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS
 - OmniROM, 11		96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
-- LineageOS		99.0.4844.73, 100.0.4896.58 pending	https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
+- LineageOS		100.0.4896.58				https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
 - ArrowOS, 11		96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, 11		tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
+- crDroid, 11/12	tracks LineageOS/master			https://github.com/crdroidandroid/android/blob/12.1/snippets/lineage.xml
 - iodéOS		???
 - Replicant		???
 

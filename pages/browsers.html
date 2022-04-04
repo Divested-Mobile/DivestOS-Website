@@ -3,10 +3,11 @@
 					<p>All of the available browsers have each of their own faults as documented in the table below.<br>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.</p>
 					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Fennec F-Droid is Fenix based, not Fennec based despite its name.</p>
 					<p>Both lists are sorted by order of recommendation, closer to the top the more we'd recommend.<br>For more detailed privacy related technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.<br>Release comparisions are also available for <a href="/misc/ffa-dates.txt" target="_blank">Firefox</a> and <a href="/misc/ch-dates.txt" target="_blank">Chromium</a>.</p>
-					<p>Per-site process isolation is a powerful security feature that seeks to limit exposure of a malicious website/script abusing a security vulnerability.<br>Firefox calls per-site process isolation <a href="https://wiki.mozilla.org/Project_Fission" target="_blank" rel="nofollow noopener noreferrer">Fission</a> and is enabled by default on desktop. Fission does not work on Android. Furthermore Firefox on Android does <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565196" target="_blank" rel="nofollow noopener noreferrer">not</a> take advantage of Android's <a href="https://developer.android.com/guide/topics/manifest/service-element" target="_blank" rel="nofollow noopener noreferrer">isolatedProcess</a> flag for completely sandboxing application services.<br>Standalone Chromium based browsers strictly isolate websites to their own process.</p>
+					<p>Per-site process isolation is a powerful security feature that seeks to limit exposure of a malicious website/script abusing a security vulnerability.<br>Firefox calls per-site process isolation <a href="https://wiki.mozilla.org/Project_Fission" target="_blank" rel="nofollow noopener noreferrer">Fission</a> and is enabled by default on desktop. Fission does not yet work on Android. Furthermore Firefox on Android does <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565196" target="_blank" rel="nofollow noopener noreferrer">not</a> take advantage of Android's <a href="https://developer.android.com/guide/topics/manifest/service-element" target="_blank" rel="nofollow noopener noreferrer">isolatedProcess</a> flag for completely sandboxing application services.<br>Standalone Chromium based browsers strictly isolate websites to their own process.</p>
 					<p>The goal of per-site data isolation is to prevent say a third party script from being able to store data and use that to track you across many websites, instead any data set will be keyed to the website it was set from. This concept is further detailed <a href="https://github.com/michaelkleber/privacy-model" target="_blank" rel="nofollow noopener noreferrer">here</a>.<br>Firefox calls per-site data isolation first party isolation (FPI) or enhanced tracking protection (ETP) strict/dynamic FPI. Fenix does not support dFPI yet, Focus however does.<br>Chromium calls per-site data isolation (network) state partitioning.</p>
-					<div class="section" id="full">
-						<h3>Full Fledged Browsers<a href="#full">¶</a></h3>
+					<h3>Full Fledged Browsers</h3>
+					<div class="section" id="fenix-based">
+						<h4>Gecko Based Browsers<a href="#fenix-based">¶</a></h4>
 						<table class="striped" style="max-height: 100%;">
 							<thead>
 								<tr>
@@ -21,7 +22,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td data-label="Name">Mull <small>(Fenix)</small></td>
+									<td data-label="Name">Mull ★</td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://gitlab.com/divested-mobile/mull-fenix/-/blob/master/fenix-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.com/divested-mobile/mull-fenix/-/blob/master/gecko-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -30,25 +31,7 @@
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Mulch <small>(Chromium)</small></td>
-									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
-									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
-									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
-									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
-									<td data-label="Content Blocker" style="color:#f44336;">No</td>
-									<td data-label="Maintained">Within a week</td>
-								</tr>
-								<tr>
-									<td data-label="Name">Bromite <small>(Chromium)</small></td>
-									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://github.com/bromite/bromite/blob/master/build/patches/Remove-binary-blob-integrations.patch" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
-									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
-									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
-									<td data-label="Fingerprinting Protection" style="color:#FFC107;">Basic</td>
-									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
-									<td data-label="Maintained">Within two weeks</td>
-								</tr>
-								<tr>
-									<td data-label="Name">Tor Browser <small>(Fenix)</small></td>
+									<td data-label="Name">Tor Browser ★</td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="https://gitlab.torproject.org/tpo/applications/fenix/-/blob/tor-browser-96.3.0-11.0-1/buildSrc/src/main/java/Dependencies.kt#L248" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.torproject.org/tpo/applications/fenix/-/commit/eb540c7ab1d4a924a79ddb70fdeb6184ff043657" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -57,7 +40,7 @@
 									<td data-label="Maintained">Within a month</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Fennec F-Droid <small>(Fenix)</small></td>
+									<td data-label="Name">Fennec F-Droid</td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://gitlab.com/relan/fennecbuild/-/blob/master/fenix-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.com/relan/fennecbuild/-/blob/master/gecko-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -66,13 +49,67 @@
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Firefox <small>(Fenix)</small></td>
+									<td data-label="Name">Firefox</td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
 									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
 									<td data-label="Maintained">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Firefox Focus/Klar</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
+									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
+									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
+									<td data-label="Maintained">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Iceraven</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="/images/Iceraven-GMS.png" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
+									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
+									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
+									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="Maintained">Within two months</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="section" id="chromium-based">
+						<h4>Chromium Based Browsers<a href="#chromium-based">¶</a></h4>
+						<table class="striped" style="max-height: 100%;">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Free and Open Source</th>
+									<th>Per-Site Data Isolation <small>(Privacy)</small></th>
+									<th>Per-Site Process Isolation <small>(Security)</small></th>
+									<th>Fingerprinting Protection <small>(Privacy)</small></th>
+									<th>Content Blocker <small>(Privacy)</small></th>
+									<th>Maintained <small>(Security)</small></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-label="Name">Bromite ★</td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://github.com/bromite/bromite/blob/master/build/patches/Remove-binary-blob-integrations.patch" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
+									<td data-label="Fingerprinting Protection" style="color:#FFC107;">Basic</td>
+									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
+									<td data-label="Maintained">Within two weeks</td>
+								</tr>
+								<tr>
+									<td data-label="Name">Mulch</td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
+									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
+									<td data-label="Content Blocker" style="color:#f44336;">No</td>
+									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
 									<td data-label="Name">Chromium</td>
@@ -84,31 +121,13 @@
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Brave <small>(Chromium)</small></td>
+									<td data-label="Name">Brave</td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="/images/Brave-GMS.png" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Yes</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Yes</td>
 									<td data-label="Maintained">Yes</td>
-								</tr>
-								<tr>
-									<td data-label="Name">Firefox Focus/Klar <small>(GeckoView)</small></td>
-									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
-									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
-									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
-									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
-									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
-									<td data-label="Maintained">Yes</td>
-								</tr>
-								<tr>
-									<td data-label="Name">Iceraven <small>(Fenix)</small></td>
-									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="/images/Iceraven-GMS.png" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
-									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
-									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
-									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
-									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
-									<td data-label="Maintained">Within two months</td>
 								</tr>
 							</tbody>
 						</table>
@@ -128,14 +147,14 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td data-label="Name">Privacy Browser</td>
+									<td data-label="Name">Privacy Browser ★</td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
 									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 								</tr>
 								<tr>
-									<td data-label="Name">FOSS Browser</td>
+									<td data-label="Name">FOSS Browser ★</td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
 									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
