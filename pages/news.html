@@ -1,6 +1,32 @@
 				<div class="card fluid">
 					<h2>Project News</h2>
 					<p>Occasional updates about DivestOS.<br><a href="index.php?page=news-future">(Upcoming News)</a></p>
+					<div class="section" id="2022-04.2">
+						<h3>April 10th 2022 Update<a href="#2022-04.2">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>16.0 release candidate #1 April ASB builds were published on April 9th.</li>
+							<li>Rebuilds for beryllium, lavender, lmi, and vayu along with enchdilada and fajita were published on April 9th with AVB permissive again after boot issues. If your device was affected you should be able to update to new build via adb sideload without issue. However, lavender was reported non-functional and would not boot anything after despite having an unlocked bootloader.</li>
+							<li>14.1 release candidate #1 April ASB builds were published on April 8th.</li>
+							<li>UnifiedNlp and backends are no longer included due to potential privacy concerns.</li>
+							<li>18.1 release candidate #1 April ASB builds were published on April 8th.</li>
+							<li>17.1 release candidate #1 April ASB builds were published on April 7th.</li>
+							<li>During bringup of 19.1 it was discovered that all AVB devices had AVB set permissive. This has been corrected and new builds will be released soon. <strong>Please make a backup and ensure OEM unlocking toggle is allowed/enabled before updating.</strong> The offending code was added 11 months ago to actually enable AVB after LineageOS had disabled it, however it was incorrect. If you have knowledge of Android systems and the free time please kindly take a stroll through our source code for any further issues, I cannot do this all on my own.</li>
+							<li>There have been many new kernel CVE patches as usual.</li>
+							<li>The kernel CVE patcher now supports pulling patches from the CIP 4.4 branch. While 4.4 was EOL in 2022-02, CIP 4.4 has support until 2027-01.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Mull 99.1.x is still delayed due to a <a href="https://gitlab.com/relan/fennecbuild/-/merge_requests/13" target="_blank" rel="nofollow noopener noreferrer">bug</a> with extensions being non-functional.</li>
+							<li>Updated Mulch (WebView) to Chromium 100.0.4896.79-1, has 1 security fix.</li>
+							<li>Hypatia now supports custom server endpoints.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>A new <a href="/misc/a-dates.txt" target="_blank">table</a> is now available that shows historical patch level dates for a handful of Android projects.</li>
+							<li>The full browser table has been split up.</li>
+						</ul>
+					</div>
 					<div class="section" id="2022-04">
 						<h3>April 3rd 2022 Update Update<a href="#2022-04">¶</a></h3>
 						<h4>System Updates</h4>
@@ -18,7 +44,6 @@
 						</ul>
 						<h4>App Updates</h4>
 						<ul>
-							<li>Mull 99.1.x is delayed due to a <a href="https://gitlab.com/relan/fennecbuild/-/merge_requests/13" target="_blank" rel="nofollow noopener noreferrer">bug</a> with extensions being non-functional.</li>
 							<li>Updated Mulch (WebView) to Chromium 99.0.4844.88-1 and 100.0.4896.58-1, has 1 and 28 security fixes respectively.</li>
 							<li>Updated Mull to 98.3.0.</li>
 						</ul>

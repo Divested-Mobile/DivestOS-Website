@@ -1,4 +1,4 @@
-last updated: 2022/04/03
+last updated: 2022/04/09
 
 Mull and Fennec F-Droid are currently unable to ship 99.x due to a bug:
 https://gitlab.com/relan/fennecbuild/-/merge_requests/13

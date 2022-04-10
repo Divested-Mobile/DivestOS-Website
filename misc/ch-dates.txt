@@ -1,4 +1,4 @@
-last updated: 2022/04/04
+last updated: 2022/04/09
 
 Version			Date		Security Patch Count	Release Notes
 100.0.4896.79		2022/04/04	1			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop.html
@@ -64,7 +64,7 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS
 - Replicant		???
 
 - Bromite		100.0.4896.57				https://github.com/bromite/bromite/releases
-- /e/OS			98.0.4758.108, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
+- /e/OS			100.0.4896.57, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		99.0.4844.58, Bromite prebuilts		https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 
 - AOSP, 10		74.0.3729.186				https://android.googlesource.com/platform/external/chromium-webview/+log/61ed7b619808827dd73d9bdd44efc5f87a2b769b
