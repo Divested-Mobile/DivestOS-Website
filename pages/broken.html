@@ -42,12 +42,12 @@
 						<ul>
 							<li>Sensors will not work unless you have a hybrid v220k modem which requires an a10b bootloader. [firmware]</li>
 						</ul>
-						<h4 id="g3-common">d852/d855/g3<a href="#g3-common">¶</a></h4>
+						<h4 id="g3-common">d850/d851/d852/d855/f400/ls990/vs985/G3<a href="#g3-common">¶</a></h4>
 						<ul>
 							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?]</li>
 							<li>Device will often fail on reboot and become unresponsive, requiring the battery to be pulled. [hardware]</li>
 						</ul>
-						<h4 id="g5-common">h850/rs988/g5<a href="#g5-common">¶</a></h4>
+						<h4 id="g5-common">h830/h850/rs988/G5<a href="#g5-common">¶</a></h4>
 						<ul>
 							<li>NFC doesn't work. [???]</li>
 							<li>GPS doesn't work. [???]</li>
@@ -73,7 +73,7 @@
 							<li>Relocking bootloader with an AOSP/Lineage/DivestOS recovery flashed will result in a *permanent hard brick* unless you have acquired your NvFlash recovery token! [bootloader]<a href="https://web.archive.org/web/20171225183216/http://www.androidroot.mobi/pages/guides/tegra3-guide-nvflash-jellybean/" target="_blank" rel="nofollow noopener noreferrer">[guide]</a></li>
 						</ul>
 						</ul>
-						<h4 id="herolte">herolte<a href="#herolte">¶</a></h4>
+						<h4 id="s7-common">herolte/hero2lte/S7<a href="#s7-common">¶</a></h4>
 						<ul>
 							<li>(reported) bootloops. [???]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/62" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
 						</ul>
@@ -94,6 +94,10 @@
 						<ul>
 							<li>SD cards might fail to mount or format. [vold + selinux?]</li>
 							<li>USB ADB does not work. [FunctionFS corruption]</li>
+						</ul>
+						<h4 id="m8">m8/m8d<a href="#m8">¶</a></h4>
+						<ul>
+							<li>Screen artifacting when using video camera [???]</li>
 						</ul>
 						<h4 id="maguro">maguro/toro/toroplus<a href="#maguro">¶</a></h4>
 						<ul>
