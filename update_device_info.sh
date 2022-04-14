@@ -16,7 +16,7 @@
 
 #TODO: finish adding release dates
 
-mkdir -p akari alioth amber angler apollo aura aurora avicii axon7 bacon beryllium blueline bonito bramble bullhead cheeseburger cheryl clark coral crackling crosshatch d802 d852 d855 davinci deb discovery dragon dumpling enchilada ether fajita flame flo flounder flox fp2 fp3 fugu griffin grouper guacamole guacamoleb h815 h850 h870 h910 h990 ham hammerhead harpia herolte himaul hotdog hotdogb i9100 i9300 i9305 jellypro jfltexx kccat6 kipper klte land lavender lentislte lmi m7 m8 maguro mako manta marlin mata merlin n5110 n7100 nex oneplus2 oneplus3 osprey pioneer pro1 raphael redfin rs988 sailfish santoni sargo serrano3gxx serranoltexx shamu star2lte starlte sunfish surnia taimen thor tilapia toro toroplus us996 us997 v1awifi vayu victara voyager walleye xz2c yellowstone z00t z2_plus zenfone3;
+mkdir -p a5y17lte akari alioth amber angler apollo aura aurora avicii axon7 bacon beryllium blueline bonito bramble bullhead cepheus channel cheeseburger cheryl clark coral crackling crosshatch d2att d2spr d2tmo d2vzw d800 d801 d802 d803 d850 d851 d852 d855 davinci deb discovery dragon dumpling enchilada ether f400 fajita flame flo flounder flounder_lte flox foster fp2 fp3 fp4 fugu ginkgo griffin grouper gta4xlwifi guacamole guacamoleb h811 h815 h830 h850 h870 h910 h918 h990 ham hammerhead harpia hero2lte herolte himaul himawl hotdog hotdogb huashan i9100 i9300 i9305 instantnoodle instantnoodlep jactivelte jellypro jflteatt jfltespr jfltevzw jfltexx jfvelte kccat6 kebab kipper kirin klte klteaio kltechn kltechnduo klteduos kltedv kltekdi kltekor ks01ltexx lake land lavender lemonade lemonadep lentislte lmi ls990 ls997 m7 m8 m8d maguro mako manta marlin mata merlin mermaid miatol montana n5100 n5110 n5120 n7100 nex ocean oneplus2 oneplus3 onyx osprey payton pioneer pl2 pro1 raphael redfin river roth rs988 sailfish santoni sargo seed serrano3gxx serranoltexx shamu shieldtablet star2lte starlte sunfish surnia surya taimen targa thor tilapia toro toroplus us996 us997 v1awifi vayu victara voyager vs985 vs995 walleye xz2c yellowstone Z00T z00t z2_plus z3 z3c zenfone3;
 
 echo "Sony Xperia XZ2" > akari/friendlyName;
 echo "Sony Xperia XZ2 Premium" > aurora/friendlyName;
@@ -73,7 +73,9 @@ echo "2018-08-01" > beryllium/releasedate; #?
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
 echo 4 > blueline/status-18.1;
+echo 3 > blueline/status-19.1;
 echo 0 > crosshatch/status-18.1;
+echo 3 > crosshatch/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > blueline/bootloader_information;
 echo -e "Fastboot\nTested Working\n2.0" > crosshatch/bootloader_information;
 echo "2018-10-18" > blueline/releasedate;
@@ -133,17 +135,41 @@ echo "Wileyfox Swift" > crackling/friendlyName;
 echo 0 > crackling/status-17.1;
 echo -e "Fastboot\nUnknown\nNo" > crackling/bootloader_information;
 
+echo "LG G2 ATT" > d800/friendlyName;
+echo "LG G2 TMO" > d801/friendlyName;
 echo "LG G2 INTL" > d802/friendlyName;
+echo "LG G2 CAN" > d803/friendlyName;
+echo 4 > d800/status-18.1;
+echo 4 > d801/status-18.1;
 echo 4 > d802/status-18.1;
+echo 4 > d803/status-18.1;
+echo -e "LG UP\nNot Unlockable\nNo" > d800/bootloader_information;
+echo -e "LG UP\nNot Unlockable\nNo" > d801/bootloader_information;
 echo -e "LG UP\nNot Unlockable\nNo" > d802/bootloader_information;
+echo -e "LG UP\nNot Unlockable\nNo" > d803/bootloader_information;
 echo "2013-09-12" > d802/releasedate;
 
+echo "LG G3 ATT" > d850/friendlyName;
+echo "LG G3 TMO" > d851/friendlyName;
 echo "LG G3 CAN" > d852/friendlyName;
 echo "LG G3 INTL" > d855/friendlyName;
+echo "LG G3 KOR" > f400/friendlyName;
+echo "LG G3 SPR" > ls990/friendlyName;
+echo "LG G3 VZW" > vs985/friendlyName;
+echo 2 > d850/status-18.1;
+echo 2 > d851/status-18.1;
 echo 5 > d852/status-18.1;
 echo 5 > d855/status-18.1;
+echo 2 > f400/status-18.1;
+echo 2 > ls990/status-18.1;
+echo 2 > vs985/status-18.1;
+echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d850/bootloader_information;
+echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d851/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d852/bootloader_information;
 echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > d855/bootloader_information;
+echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > f400/bootloader_information;
+echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > ls990/bootloader_information;
+echo -e "LG UP/LG LAF\nNot Unlockable\nNo" > vs985/bootloader_information;
 echo "2014-05-28" > d852/releasedate;
 echo "2014-05-28" > d855/releasedate;
 
@@ -160,6 +186,7 @@ echo "2015-12-08" > dragon/releasedate;
 echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
 echo 0 > enchilada/status-18.1;
+echo 3 > enchilada/status-19.1;
 echo 0 > fajita/status-18.1;
 echo 6 > fajita/status-19.1;
 echo -e "Fastboot\nTested Working\n2.0" > enchilada/bootloader_information;
@@ -173,8 +200,10 @@ echo 0 > ether/status-18.1;
 echo -e "Fastboot\nTested Working\nNo" > ether/bootloader_information;
 echo "2016-02-16" > ether/releasedate;
 
+echo "Google Nexus 7 LTE [2013]" > deb/friendlyName;
 echo "Google Nexus 7 [2013]" > flo/friendlyName;
 echo "Google Nexus 7 [2013] (repartitioned)" > flox/friendlyName;
+echo 4 > deb/status-15.1;
 echo 0 > flo/status-15.1;
 echo 0 > flox/status-18.1;
 echo -e "Fastboot\nYes, Untested\nNo" > deb/bootloader_information;
@@ -182,8 +211,11 @@ echo -e "Fastboot\nTested Working\nNo" > flo/bootloader_information;
 echo -e "Fastboot\nTested Working\nNo" > flox/bootloader_information;
 
 echo "Google Nexus 9" > flounder/friendlyName;
+echo "Google Nexus 9 LTE" > flounder_lte/friendlyName;
 echo 0 > flounder/status-15.1;
+echo 4 > flounder_lte/status-15.1;
 echo -e "Fastboot\nYes, Might Brick\n1.0" > flounder/bootloader_information;
+echo -e "Fastboot\nYes, Might Brick\n1.0" > flounder_lte/bootloader_information;
 
 echo "Fairphone 2" > fp2/friendlyName;
 echo 0 > fp2/status-18.1;
@@ -218,15 +250,21 @@ echo -e "Fastboot\nYes, Untested\n2.0" > guacamoleb/bootloader_information;
 echo "2019-05-14" > guacamole/releasedate;
 echo "2019-05-14" > guacamoleb/releasedate;
 
+echo "LG G4 TMO" > h811/friendlyName;
 echo "LG G4 INTL" > h815/friendlyName;
+echo 2 > h811/status-14.1;
 echo 2 > h815/status-14.1;
+echo -e "Fastboot (LGE)\nNo*\nNo" > h811/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h815/bootloader_information;
 echo "2015-04-29" > h815/releasedate;
 
+echo "LG G5 TMO" > h830/friendlyName;
 echo "LG G5 INTL" > h850/friendlyName;
 echo "LG G5 US" > rs988/friendlyName;
+echo 2 > h830/status-18.1;
 echo 5 > h850/status-18.1;
 echo 5 > rs988/status-18.1;
+echo -e "Fastboot (LGE)\nNo*\nNo" > h830/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h850/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > rs988/bootloader_information;
 echo "2016-04-23" > h850/releasedate;
@@ -242,14 +280,23 @@ echo "2017-02-26" > h870/releasedate;
 echo "2017-02-26" > us997/releasedate;
 
 echo "LG V20 ATT" > h910/friendlyName;
+echo "LG V20 TMO" > h918/friendlyName;
 echo "LG V20 INTL" > h990/friendlyName;
+echo "LG V20 SPR" > ls997/friendlyName;
 echo "LG V20 US" > us996/friendlyName;
+echo "LG V20 VZW" > vs995/friendlyName;
 echo 4 > h910/status-18.1
+echo 4 > h918/status-18.1
 echo 0 > h990/status-18.1;
+echo 4 > ls997/status-18.1
 echo 0 > us996/status-18.1;
+echo 4 > vs995/status-18.1
 echo -e "Exploit\nNot Unlockable\nNo" > h910/bootloader_information;
+echo -e "Exploit\nNot Unlockable\nNo" > h918/bootloader_information;
 echo -e "Exploit\nNot Unlockable\nNo" > h990/bootloader_information;
-echo -e "Fastboot (LGE)\nNo*\nNo" > us996/bootloader_information;
+echo -e "Exploit\nNot Unlockable\nNo" > ls997/bootloader_information;
+echo -e "Exploit\nNot Unlockable\nNo" > us996/bootloader_information;
+echo -e "Exploit\nNot Unlockable\nNo" > vs995/bootloader_information;
 echo "2016-10-01" > h910/releasedate; #?
 echo "2016-11-01" > h990/releasedate; #?
 echo "2016-10-01" > us996/releasedate; #?
@@ -271,13 +318,19 @@ echo -e "Fastboot (Motorola)\nNo*\nNo" > harpia/bootloader_information;
 echo "2016-05-17" > harpia/releasedate;
 
 echo "Samsung Galaxy S7" > herolte/friendlyName;
+echo "Samsung Galaxy S7 Edge" > hero2lte/friendlyName;
 echo 1 > herolte/status-14.1;
+echo 1 > hero2lte/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > herolte/bootloader_information;
+echo -e "Heimdall\nNot Unlockable\nNo" > hero2lte/bootloader_information;
 echo "2016-03-11" > herolte/releasedate;
 
-echo "HTC One M9" > himaul/friendlyName;
+echo "HTC One M9 GSM" > himaul/friendlyName;
+echo "HTC One M9 VZW" > himawl/friendlyName;
 echo 2 > himaul/status-14.1;
+echo 2 > himawl/status-14.1;
 echo -e "Fastboot (HTC)\nNo*\nNo" > himaul/bootloader_information;
+echo -e "Fastboot (HTC)\nNo*\nNo" > himawl/bootloader_information;
 echo "2015-04-10" > himaul/releasedate;
 
 echo "OnePlus 7T Pro" > hotdog/friendlyName;
@@ -303,13 +356,35 @@ echo -e "Heimdall\nNot Unlockable\nNo" > i9305/bootloader_information;
 echo "2012-05-29" > i9300/releasedate;
 echo "2012-05-29" > i9305/releasedate;
 
+echo "Samsung Galaxy S3 ATT" > d2att/friendlyName;
+echo "Samsung Galaxy S3 SPR" > d2spr/friendlyName;
+echo "Samsung Galaxy S3 TMO" > d2tmo/friendlyName;
+echo "Samsung Galaxy S3 VZW" > d2vzw/friendlyName;
+echo 2 > d2att/status-14.1;
+echo 2 > d2spr/status-14.1;
+echo 2 > d2tmo/status-14.1;
+echo 2 > d2vzw/status-14.1;
+echo -e "Heimdall\nNot Unlockable\nNo" > d2att/bootloader_information;
+echo -e "Heimdall\nNot Unlockable\nNo" > d2spr/bootloader_information;
+echo -e "Heimdall\nNot Unlockable\nNo" > d2tmo/bootloader_information;
+echo -e "Heimdall\nNot Unlockable\nNo" > d2vzw/bootloader_information;
+
 echo "Unihertz Jelly Pro" > jellypro/friendlyName;
 echo 1 > jellypro/status-14.1;
 echo -e "Unknown\nUnknown\nNo" > jellypro/bootloader_information;
 
 echo "Samsung Galaxy S4" > jfltexx/friendlyName;
+echo "Samsung Galaxy S4 ATT" > jflteatt/friendlyName;
+echo "Samsung Galaxy S4 SPR" > jfltespr/friendlyName;
+echo "Samsung Galaxy S4 VZW" > jfltevzw/friendlyName;
 echo 0 > jfltexx/status-18.1;
+echo 4 > jflteatt/status-18.1;
+echo 4 > jfltespr/status-18.1;
+echo 4 > jfltevzw/status-18.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > jfltexx/bootloader_information;
+echo -e "Heimdall\nNot Unlockable\nNo" > jflteatt/bootloader_information;
+echo -e "Heimdall\nNot Unlockable\nNo" > jfltespr/bootloader_information;
+echo -e "Heimdall\nNot Unlockable\nNo" > jfltevzw/bootloader_information;
 echo "2013-04-27" > jfltexx/releasedate;
 
 echo "Samsung Galaxy S5 Plus" > kccat6/friendlyName;
@@ -346,8 +421,11 @@ echo 4 > m7/status-14.1;
 echo -e "Fastboot (HTC)\nNo*\nNo" > m7/bootloader_information;
 
 echo "HTC One M8" > m8/friendlyName;
+echo "HTC One M8 DS" > m8d/friendlyName;
 echo 0 > m8/status-18.1;
+echo 4 > m8d/status-18.1;
 echo -e "Fastboot (HTC)\nNo*\nNo" > m8/bootloader_information;
+echo -e "Fastboot (HTC)\nNo*\nNo" > m8d/bootloader_information;
 
 echo "Samsung Galaxy Nexus GSM" > maguro/friendlyName;
 echo "Samsung Galaxy Nexus VZW" > toro/friendlyName;
@@ -382,9 +460,15 @@ echo "Moto G3 Turbo" > merlin/friendlyName;
 echo 4 > merlin/status-17.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > merlin/bootloader_information;
 
-echo "Samsung Galaxy Note 8.0" > n5110/friendlyName;
+echo "Samsung Galaxy Note 8.0 GSM" > n5100/friendlyName;
+echo "Samsung Galaxy Note 8.0 Wi-Fi" > n5110/friendlyName;
+echo "Samsung Galaxy Note 8.0 LTE" > n5120/friendlyName;
+echo 2 > n5100/status-14.1;
 echo 2 > n5110/status-14.1;
+echo 2 > n5120/status-14.1;
+echo -e "Heimdall\nNot Unlockable\nNo" > n5100/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > n5110/bootloader_information;
+echo -e "Heimdall\nNot Unlockable\nNo" > n5120/bootloader_information;
 
 echo "Samsung Galaxy Note 2" > n7100/friendlyName;
 echo -e "Heimdall\nNot Unlockable\nNo" > n7100/bootloader_information;
@@ -464,6 +548,7 @@ echo "Google Pixel 2" > walleye/friendlyName;
 echo 0 > taimen/status-18.1;
 echo 6 > taimen/status-19.1;
 echo 0 > walleye/status-18.1;
+echo 3 > walleye/status-19.1;
 echo -e "Fastboot\nTested Working\n2.0" > taimen/bootloader_information;
 echo -e "Fastboot\nTested Working\n2.0" > walleye/bootloader_information;
 

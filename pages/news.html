@@ -1,12 +1,29 @@
 				<div class="card fluid">
 					<h2>Project News</h2>
 					<p>Occasional updates about DivestOS.<br><a href="index.php?page=news-future">(Upcoming News)</a></p>
+					<div class="section" id="2022-04.3">
+						<h3>April 13th 2022 Update<a href="#2022-04.3">¶</a><small>May I have another RAM please?</small></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>14.1, 15.1, 16.0, 17.1, and partial 18.1 rebuilds were published on April 13th.</li>
+							<li>The FDroidPrivExt has been (hopefully temporarily) dropped due to breakage caused by the per-app sensors permission patchset.</li>
+							<li>The exec spawning feature has been default disabled due to usability issues, especially on devices with <=4GB of RAM.</li>
+							<li>In order to improve usabilty, the following additional devices now have low RAM tweaks applied: clark, crackling, flox, fp2, fugu, harpia, jfltexx, klte, m8, mako, merlin, osprey, serrano3gxx, serranoltexx, surnia, victara</li>
+							<li>16.0/17.1/18.1 have switched to the more robust GrapheneOS implementation of per-app sensors permission.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Mull 99.1.x is still delayed due to a <a href="https://gitlab.com/relan/fennecbuild/-/merge_requests/13" target="_blank" rel="nofollow noopener noreferrer">bug</a> with extensions being non-functional.</li>
+							<li>Updated Mulch (WebView) to Chromium 100.0.4896.88-1, has 11 security fixes.</li>
+							<li>Hypatia received a translation into Finnish thanks to @huuhaa!</li>
+						</ul>
+					</div>
 					<div class="section" id="2022-04.2">
 						<h3>April 10th 2022 Update<a href="#2022-04.2">¶</a></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>16.0 release candidate #1 April ASB builds were published on April 9th.</li>
-							<li>Rebuilds for beryllium, lavender, lmi, and vayu along with enchdilada and fajita were published on April 9th with AVB permissive again after boot issues. If your device was affected you should be able to update to new build via adb sideload without issue. However, lavender was reported non-functional and would not boot anything after despite having an unlocked bootloader.</li>
+							<li>Rebuilds for beryllium, lavender, lmi, and vayu along with enchdilada and fajita were published on April 9th with AVB permissive again after boot issues. If your device was affected you should be able to update to new build via adb sideload without issue.</li>
 							<li>14.1 release candidate #1 April ASB builds were published on April 8th.</li>
 							<li>UnifiedNlp and backends are no longer included due to potential privacy concerns.</li>
 							<li>18.1 release candidate #1 April ASB builds were published on April 8th.</li>
@@ -17,7 +34,7 @@
 						</ul>
 						<h4>App Updates</h4>
 						<ul>
-							<li>Mull 99.1.x is still delayed due to a <a href="https://gitlab.com/relan/fennecbuild/-/merge_requests/13" target="_blank" rel="nofollow noopener noreferrer">bug</a> with extensions being non-functional.</li>
+							<li>GMapsWV had a bugfix release to fix cases where cookies were not cleared.</li>
 							<li>Updated Mulch (WebView) to Chromium 100.0.4896.79-1, has 1 security fix.</li>
 							<li>Hypatia now supports custom server endpoints.</li>
 						</ul>
