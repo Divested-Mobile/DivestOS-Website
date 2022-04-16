@@ -29,7 +29,7 @@ getVendorPatchLevel() {
 		level="Unknown";
 	fi;
 	if [ "$level" = '$(PLATFORM_SECURITY_PATCH)' ]; then
-		level="2021-10"; #TODO: this will need special handling when 19.0 is stable
+		level="2021-10"; #TODO: this will need special handling when 19.1 is stable
 	fi;
 	echo -n $(sed -e 's/^"//' -e 's/"$//' <<< "$level");
 }
@@ -75,6 +75,7 @@ createTable() {
 
 hasVendorPartitionFromStock=('enchilada' 'fajita' 'enchilada/fajita' 'starlte' 'star2lte' 'bullhead' 'dragon' 'flounder' 'angler');
 
+#TODO: device additions in 4b6a86a4730e299a252112cc42e6398131769a06
 createTable akari LineageOS-18.1 sony/tama-common sony/sdm845 sony/akari;
 createTable alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;

@@ -272,8 +272,8 @@ echo "2016-04-23" > rs988/releasedate;
 
 echo "LG G6 INTL" > h870/friendlyName;
 echo "LG G6 US" > us997/friendlyName;
-echo 4 > h870/status-15.1;
-echo 4 > us997/status-15.1;
+echo 1 > h870/status-15.1;
+echo 1 > us997/status-15.1;
 echo -e "Fastboot (LGE)\nNo*\nNo" > h870/bootloader_information;
 echo -e "Fastboot (LGE)\nNo*\nNo" > us997/bootloader_information;
 echo "2017-02-26" > h870/releasedate;

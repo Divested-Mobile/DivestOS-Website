@@ -40,6 +40,7 @@ getLineCount () {
 	cat $1 | sed '/^\s*#/d;/^\s*$/d' | wc -l || true;
 }
 
+#TODO: device additions in 4b6a86a4730e299a252112cc42e6398131769a06
 getBlobCount akari LineageOS-18.1 sony/tama-common sony/sdm845 sony/akari;
 getBlobCount alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
 getBlobCount Amber LineageOS-17.1 yandex/Amber yandex/sdm660;

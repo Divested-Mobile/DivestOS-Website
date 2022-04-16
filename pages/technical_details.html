@@ -40,17 +40,17 @@
 							<li>N: Theme.sh is executed, this changes the teal accents to orange ones</li>
 						</ul>
 						<h4 id="changes">The Changes<a href="#changes">¶</a></h4>
-						<p>We currently support 14.1 (Nougat), 15.1 (Oreo), 16.0 (Pie), 17.1 (Q), and 18.1 (R). We try our best to ensure parity between them. The below is non-exhaustive and does not include the many changes made using the vendor overlay.</p>
+						<p>We currently support 14.1 (Nougat), 15.1 (Oreo), 16.0 (Pie), 17.1 (Q), 18.1 (R), and 19.1 (S). We try our best to ensure parity between them. The below is non-exhaustive and does not include the many changes made using the vendor overlay.</p>
 						<h5 id="includedApps">Included Apps<a href="#includedApps">¶</a></h5>
 						<ul>
-							<li>F-Droid+PrivExt: An app catalogue for FOSS apps</li>
+							<li>F-Droid An app catalogue for FOSS apps</li>
 							<li>Etar: An improved calendar app. Replaces AOSP Calendar</li>
 							<li>OpenCamera: An improved camera app. Replaces Camera2/Snap</li>
 							<!--<li>microG + Backends: Allows for using apps that depend on the proprietary Google Play Services and also battery efficient location lookups.</li>-->
 							<li>Mull: A browser hardened against trackers by default. Replaces AOSP Browser/LineageOS Jelly</li>
 							<li>Silence: An improved SMS app that allows for end-to-end encrypted messages between other Silence users. Replaces AOSP Messaging</li>
 							<li>Simple Gallery: An improved gallery app. Replaces AOSP Gallery</li>
-							<li>UnifiedNlp + Backends: Fused location provider that uses plugins to provide battery efficient location lookups.</li>
+							<!--<li>UnifiedNlp + Backends: Fused location provider that uses plugins to provide battery efficient location lookups.</li>-->
 						</ul>
 
 						<h5>android_art</h5>
@@ -411,7 +411,7 @@
 							<li>Remove Weather</li>
 							<li>Unset default backup provider</li>
 							<li>DEBLOBBER_REMOVE_AUDIOFX=true: Remove AudioFX</li>
-							<li>MICROG_INCLUDED=NLP: Adjust the fused providers</li>
+							<!--<li>MICROG_INCLUDED=NLP: Adjust the fused providers</li>-->
 							<li>Change buildtype to dos</li>
 							<li>Include our customizations</li>
 							<li>Update APN list</li>
@@ -444,6 +444,8 @@
 							<li>removeBuildFingerprints()</li>
 							<li>P/Q/R: GRAPHENE_EXEC=true: disableEnforceRRO() (GrapheneOS)</li>
 							<li>Many proprietary blobs are disabled/removed via Deblob.sh</li>
+							<li>Camera pinning is disabled for reduced memory usage.</li>
+							<li>USAP is disabled for reduced memory usage.</li>
 						</ul>
 						<h5>Automated mass changes to android_kernel_*</h5>
 						<ul>
