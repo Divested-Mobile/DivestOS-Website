@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The nitty gritty<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2022-04-18</p>
+						<p>Last updated: 2022-04-21</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -71,7 +71,9 @@
 						<h5>android_bionic</h5>
 						<ul>
 							<li>P/Q/R: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
-							<li>N/O: Support wildcards in cached hosts file (LineageOS)</li>
+							<li>S: Sort and cache hosts file data for fast lookup (tdm)</li>
+							<li>N/O/S: Support wildcards in cached hosts file (tdm)</li>
+							<li>R/S: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
 							<li>GRAPHENE_BIONIC=true:</li>
 							<li>P/Q/R: Add a real explicit_bzero implementation (GrapheneOS)</li>
 							<!--<li>P/Q/R: Replace brk and sbrk with stubs (GrapheneOS)</li>-->
@@ -91,13 +93,14 @@
 							<li>Q/R: Add guard page(s) between static_tls and stack (GrapheneOS)</li>
 							<li>Q/R: Move pthread_internal_t behind guard page (GrapheneOS)</li>
 							<li>Q/R: Add secondary stack randomization (GrapheneOS)</li>-->
+
 						</ul>
 						<h5>android_build_make</h5>
 						<ul>
 							<li>Re-enable the downgrade check</li>
-							<li>P/Q: Add back PicoTTS and language files</li>
+							<li>P/Q: Add back PicoTTS and language files (DivestOS)</li>
 							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
-							<li>Add correct keys to recovery for OTA verification</li>
+							<li>Add correct keys to recovery for OTA verification (DivestOS)</li>
 							<li>R/S: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
 							<li>Enable auto-add-overlay for packages, this allows the vendor overlay to easily work across all branches.</li>
 							<li>Replace the Messaging app with Silence</li>
@@ -114,9 +117,9 @@
 						</ul>
 						<h5>android_device_qcom_sepolicy(-legacy)</h5>
 						<ul>
-							<li>!S: Fix camera on -user builds</li>
+							<li>!S: Fix camera on -user builds (DivestOS)</li>
 							<li>P/Q/R: Ignore neverallow violations</li>
-							<li>N: Cherrypick 248649: msm_irqbalance: Allow read for stats and interrupts</li>
+							<li>N: Cherrypick 248649: msm_irqbalance: Allow read for stats and interrupts (syphyr)</li>
 						</ul>
 						<h5>android_external_conscrypt</h5>
 						<ul>
@@ -129,7 +132,7 @@
 						<h5>android_external_graphene_malloc</h5>
 						<ul>
 							<li>P: GRAPHENE_MALLOC=true: DeviceDescriptor sorting wrongly relies on malloc addresses (GrapheneOS)</li>
-							<li>P/Q/R/S: GRAPHENE_MALLOC=true: Expand workaround to all camera executables</li>
+							<li>P/Q/R/S: GRAPHENE_MALLOC=true: Expand workaround to all camera executables (DivestOS)</li>
 						</ul>
 						<h5>android_external_sqlite</h5>
 						<ul>
@@ -143,7 +146,7 @@
 						<h5>android_frameworks_av</h5>
 						<ul>
 							<li>P: GRAPHENE_MALLOC=true: Don't set RLIMIT_AS for hardened_malloc support (GrapheneOS)</li>
-							<li>N: Patch CVE-2017-0592</li>
+							<li>N: Patch CVE-2017-0592 (AOSP)</li>
 						</ul>
 						<h5>android_frameworks_base</h5>
 						<ul>
@@ -154,8 +157,8 @@
 							<li>!N: Skip strict update compatibility checks</li>
 							<li>!N: Disable partition fingerprint mismatch warnings</li>
 							<li>Decrease the strong auth prompt timeout to occur more often</li>
-							<li>N: Cherrypick 248599: Make SET_TIME_ZONE permission match SET_TIME</li>
-							<li>N: Allow reducing resolution to save power</li>
+							<li>N: Cherrypick 248599: Make SET_TIME_ZONE permission match SET_TIME (AOSP)</li>
+							<li>N: Allow reducing resolution to save power (DivestOS)</li>
 							<li>Change the default DNS servers</li>
 							<li>R/S: Enable app compaction by default (GrapheneOS)</li>
 							<li>R: Enable app freezer by default (GrapheneOS)</li>
@@ -182,10 +185,11 @@
 							<li>Q/R/S: DOS_TIMEOUTS=true: Timeout for Wi-Fi (GrapheneOS)</li>
 							<li>P/Q/R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 							<li>Q/R/S: Add option of always randomizing MAC addresses (GrapheneOS)</li>
-							<li>Q/R: Fix random reboots on broken kernels when an app has data restricted</li>
+							<li>Q/R: Fix random reboots on broken kernels when an app has data restricted (DivestOS)</li>
+							<li>Q/R/S: Warn when running activity from 32 bit app on ARM64 devices. (AOSP)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
-							<li>Q/R: Restore the Sensors Off tile</li>
-							<li>P/Q/R: More 'Private DNS' options (CalyxOS)</li>
+							<li>Q/R: Restore the Sensors Off tile (DivestOS)</li>
+							<li>P/Q/R: More 'Private DNS' options (based off of a CalyxOS patch)</li>
 							<!--<li>P/Q/R/S: Add Open Camera to aux camera allowlist</li>-->
 							<li>!MICROG_INCLUDED=FULL: Remove CompanionDeviceManager, used to support Android Wear</li>
 							<li>N/O/Q: Remove Osu, Automatic Wi-Fi connection non-sense</li>
@@ -205,7 +209,7 @@
 						</ul>
 						<!--<h5>android_frameworks_opt_net_ims</h5>
 						<ul>
-							<li>DEBLOBBER_REMOVE_IMS=true: Fix calling when IMS is removed</li>
+							<li>DEBLOBBER_REMOVE_IMS=true: Fix calling when IMS is removed (DivestOS)</li>
 						</ul>-->
 						<h5>android_frameworks_opt_net_wifi</h5>
 						<ul>
@@ -214,24 +218,24 @@
 						</ul>
 						<h5>android_hardware_ti_omap4</h5>
 						<ul>
-							<li>N: Fix camera on tuna</li>
+							<li>N: Fix camera on tuna (repinski)</li>
 						</ul>
 						<h5>android_hardware_ti_wlan</h5>
 						<ul>
-							<li>N: Cherrypick 209209: wl12xx: Update SR and MR firmwares versions</li>
-							<li>N: Cherrypick 209210: wl12xx: Update SR PLT firmwares</li>
+							<li>N: Cherrypick 209209: wl12xx: Update SR and MR firmwares versions (Texas Instruments)</li>
+							<li>N: Cherrypick 209210: wl12xx: Update SR PLT firmwares (Texas Instruments)</li>
 						</ul>
 						<h5>android_hardware_qcom_audio</h5>
 						<ul>
-							<li>Q/R/S: audio_extn: Fix unused parameter warning in utils.c</li>
+							<li>Q/R/S: audio_extn: Fix unused parameter warning in utils.c (codeworkx)</li>
 						</ul>
 						<h5>android_hardware_qcom_display</h5>
 						<ul>
-							<li>!S: Patch CVE-2019-2306</li>
+							<li>!S: Patch CVE-2019-2306 (Qualcomm)</li>
 						</ul>
 						<h5>android_hardware_qcom_gps</h5>
 						<ul>
-							<li>N/O: Fix week rollover</li>
+							<li>N/O: Fix week rollover (jlask)</li>
 						</ul>
 						<h5>android_libcore</h5>
 						<ul>
@@ -267,13 +271,13 @@
 						</ul>
 						<h5>android_packages_apps_CMParts</h5>
 						<ul>
-							<li>N: Remove analytics</li>
-							<li>N: Allow reducing resolution to save power</li>
+							<li>N: Remove analytics (DivestOS)</li>
+							<li>N: Allow reducing resolution to save power (DivestOS)</li>
 							<li>N: Various rebranding</li>
 						</ul>
 						<h5>android_packages_apps_LineageParts</h5>
 						<ul>
-							<li>Remove analytics</li>
+							<li>Remove analytics (DivestOS)</li>
 							<li>Various rebranding</li>
 						</ul>
 						<h5>android_packages_apps_Nfc</h5>
@@ -284,7 +288,7 @@
 						</ul>
 						<h5>android_packages_apps_PackageInstaller</h5>
 						<ul>
-							<li>N: Fix an issue with Permission Review</li>
+							<li>N: Fix an issue with Permission Review (AOSP)</li>
 						</ul>
 						<h5>android_packages_apps_PermissionController</h5>
 						<ul>
@@ -303,12 +307,12 @@
 						<h5>android_packages_apps_Settings</h5>
 						<ul>
 							<li>!R/!S: Don't hide OEM unlock</li>
-							<li>N: Cherrypick 201113: wifi: Add world regulatory domain country code</li>
+							<li>N: Cherrypick 201113: wifi: Add world regulatory domain country code (syphyr)</li>
 							<li>O: Fix crashes when the PersistentDataBlockManager service isn't available</li>
 							<li>Add option to disable captive portal checks (MSe1969)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
-							<li>Q/R: Remove the Sensors Off development tile</li>
-							<li>P/Q/R: More 'Private DNS' options (CalyxOS)</li>
+							<li>Q/R: Remove the Sensors Off development tile (DivestOS)</li>
+							<li>P/Q/R: More 'Private DNS' options (based off of a CalyxOS patch)</li>
 							<li>Q/R/S: DOS_TIMEOUTS=true: Timeout for reboot (GrapheneOS)</li>
 							<li>Q/R/S: DOS_TIMEOUTS=true: Timeout for Bluetooth (CalyxOS)</li>
 							<li>Q/R/S: DOS_TIMEOUTS=true: Timeout for Wi-Fi (CalyxOS)</li>
@@ -316,6 +320,7 @@
 							<li>Q/R/S: GRAPHENE_EXEC=true: Add exec spawning toggle (GrapheneOS)</li>
 							<li>Q/R/S: Add option to always randomize MAC (GrapheneOS</li>
 							<li>R/S: UserManager app installation restrictions (GrapheneOS)</li>
+							<li>R/S: Add a toggle to disable /etc/hosts lookup (based off of a GrapheneOS patch)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
 							<li>Disable "Instant Apps"</li>
 							<li>Always reset animation scales to 0.5</li>
@@ -323,7 +328,7 @@
 						</ul>
 						<h5>android_packages_apps_SetupWizard</h5>
 						<ul>
-							<li>Remove analytics</li>
+							<li>Remove analytics (DivestOS)</li>
 							<li>R/S: Always update recovery by default</li>
 							<li>Various rebranding</li>
 						</ul>
@@ -334,8 +339,8 @@
 						</ul>
 						<h5>android_packages_apps_Updater</h5>
 						<ul>
-							<li>Switch to our server</li>
-							<li>Add Tor support</li>
+							<li>Switch to our server (DivestOS)</li>
+							<li>Add Tor support (DivestOS)</li>
 							<li>Q/R/S: Remove periods from incremental version</li>
 							<li>R/S: Always update recovery by default</li>
 							<li>Various rebranding</li>
@@ -348,7 +353,7 @@
 						</ul>
 						<h5>android_packages_inputmethods_LatinIME</h5>
 						<ul>
-							<li>Remove voice input key</li>
+							<li>Remove voice input key (DivestOS)</li>
 							<li>Disable personalization dictionary by default (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_modules_Connectivity</h5>
@@ -359,8 +364,9 @@
 						</ul>
 						<h5>android_packages_modules_DnsResolver</h5>
 						<ul>
-							<li>S: Sort and cache hosts file data for fast lookup (LineageOS)</li>
-							<li>S: Support wildcards in cached hosts file (LineageOS)</li>
+							<li>S: Sort and cache hosts file data for fast lookup (tdm)</li>
+							<li>S: Support wildcards in cached hosts file (tdm)</li>
+							<li>R/S: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
 						</ul>
 						<h5>android_packages_modules_NetworkStack</h5>
 						<ul>
@@ -374,28 +380,29 @@
 						<ul>
 							<li>P/Q/R/S: Expose the NETWORK permission (GrapheneOS)</li>
 						</ul>
-						<h5>android_packages_providers_MediaProvider</h5>
+						<h5>android_packages_providers_MediaProvider (luca.stefani)</h5>
 						<ul>
 							<li>O: Fix permission denial</li>
 						</ul>
 						<h5>android_packages_providers_TelephonyProvider</h5>
 						<ul>
-							<li>R: Cherrypick 304614: mcc/mnc fix</li>
-							<li>R: Cherrypick 312102: mnc fix</li>
+							<li>R: Cherrypick 304614: mcc/mnc fix (Sony)</li>
+							<li>R: Cherrypick 312102: mnc fix (Sony)</li>
 						</ul>
 						<h5>android_packages_services_Telephony</h5>
 						<ul>
-							<li>N/O/P: Add an LTE only option</li>
+							<li>N/O/P: Add an LTE only option (DivestOS)</li>
 						</ul>
-						<h5>android_prebuilts_abi-dumps_vndk/h5>
+						<h5>android_prebuilts_abi-dumps_vndk</h5>
 						<ul>
 							<li>Q: Work around ABI changes from compiler hardening (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_bt</h5>
 						<ul>
-							<li>N: Cherrypick topic bt-sbc-hd-dualchannel-nougat</li>
-							<li>N: Cherrypick 242134: avrc_bld_get_attrs_rsp - fix attribute length position off by one</li>
-							<li>R: Cherrypick topic a2dp-master-fixes</li>
+							<li>N: Add an option to let devices opt-out of the HCI_READ_ENCR_KEY_SIZE_SUPPORTED assert (DivestOS)</li>
+							<li>N: Cherrypick topic bt-sbc-hd-dualchannel-nougat (ValdikSS)</li>
+							<li>N: Cherrypick 242134: avrc_bld_get_attrs_rsp - fix attribute length position off by one (cprhokie)</li>
+							<li>R: Cherrypick topic a2dp-master-fixes (AOSP)</li>
 							<li>Q/R/S: Add alloc_size attributes to the allocator (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_core</h5>
@@ -420,8 +427,8 @@
 						</ul>
 						<h5>android_system_sepolicy</h5>
 						<ul>
-							<li>N: Cherrypick 248600: Restrict access to timing information in /proc</li>
-							<li>Fix -user builds for LGE devices</li>
+							<li>N: Cherrypick 248600: Restrict access to timing information in /proc (AndoridHardening)</li>
+							<li>Fix -user builds for LGE devices (DivestOS)</li>
 							<li>P/Q/R: Allow ignoring neverallows under -user</li>
 							<li>label protected_{fifos,regular} as proc_security (GrapheneOS)</li>
 							<li>Q/R/S: GRAPHENE_PTRACE_SCOPE=true: Allow init to control kernel.yama.ptrace_scope (GrapheneOS)</li>
@@ -430,6 +437,10 @@
 						<h5>android_system_update_engine</h5>
 						<ul>
 							<li>Q/R/S: Do not skip payload signature verification</li>
+						</ul>
+						<h5>android_system_vold</h5>
+						<ul>
+							<li>N/O: Add a variable for enabling AES-256 bit encryption (DivestOS)</li>
 						</ul>
 						<h5>android_vendor_lineage</h5>
 						<ul>
@@ -485,6 +496,7 @@
 							<li>Verified boot keys are copied into their respective kernels</li>
 							<li>Change the VM_MAX_READAHEAD value from the default 128KB to 512KB</li>
 							<li>-ftrivial-auto-var-init=zero is enabled if supported (GrapheneOS)</li>
+							<li>Wi-Fi regulations database is updated to latest on supported kernels.</li>
 							<li>Many CVE (and some hardening) patches are applied to each and every kernel as applicably determined by the CVE checker.</li>
 						</ul>
 						<h5>Automated mass changes to android_vendor_*</h5>

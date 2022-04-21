@@ -1,4 +1,4 @@
-last updated: 2022/04/17
+last updated: 2022/04/19
 
 Chromium History
 ================
@@ -33,7 +33,7 @@ Version			Date		Security Patch Count	Release Notes
 OS History
 ==========
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS
-100.0.4896.127	2022/04/14			2022/04/16	2022/04/16	pending		2022/04/15
+100.0.4896.127	2022/04/14	2022/04/18	2022/04/16	2022/04/16	2022/04/19	2022/04/15
 100.0.4896.88	2022/04/11	2022/04/15	2022/04/13	2022/04/12
 100.0.4896.79	2022/04/04	2022/04/11	2022/04/04	2022/04/04
 100.0.4896.58	2022/03/29	2022/03/29	2022/03/29	2022/03/30	2022/04/03
@@ -70,7 +70,7 @@ Standalone:
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS		100.0.4896.58, .127 pending		https://review.lineageos.org/q/project:LineageOS/android_external_chromium-webview
+- LineageOS		100.0.4896.127				https://review.lineageos.org/q/webview
 - ArrowOS, 11		96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, 11		tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
 - crDroid, 11/12	tracks LineageOS/master			https://github.com/crdroidandroid/android/blob/12.1/snippets/lineage.xml
@@ -78,7 +78,7 @@ Lineage related:
 - Replicant		???
 
 Bromite related:
-- Bromite		100.0.4896.92,				https://github.com/bromite/bromite/releases
+- Bromite		100.0.4896.135				https://github.com/bromite/bromite/commits/master
 - /e/OS			100.0.4896.57, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		99.0.4844.58, Bromite prebuilts		https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 
