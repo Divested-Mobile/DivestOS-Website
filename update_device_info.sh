@@ -283,7 +283,7 @@ echo "LG V20 INTL" > h990/friendlyName;
 echo "LG V20 SPR" > ls997/friendlyName;
 echo "LG V20 US" > us996/friendlyName;
 echo "LG V20 VZW" > vs995/friendlyName;
-echo 4 > h910/status-18.1
+echo 8 > h910/status-18.1
 echo 4 > h918/status-18.1
 echo 8 > h990/status-18.1;
 echo 4 > ls997/status-18.1
@@ -300,7 +300,7 @@ echo "2016-11-01" > h990/releasedate; #?
 echo "2016-10-01" > us996/releasedate; #?
 
 echo "Zuk Z1" > ham/friendlyName;
-echo 2 > ham/status-16.0;
+echo 4 > ham/status-16.0;
 echo -e "Fastboot\nUnknown\nNo" > ham/bootloader_information;
 echo "2015-08-11" > ham/releasedate;
 
