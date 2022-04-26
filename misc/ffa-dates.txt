@@ -1,9 +1,10 @@
-last updated: 2022/04/24
+last updated: 2022/04/26
 
 Mull and Fennec F-Droid are currently unable to ship 99.x due to a bug:
 https://gitlab.com/relan/fennecbuild/-/merge_requests/13
 
 Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Patch Count	Security Advisory
+100.1.0						2022/04/26							?
 99.2.0						2022/04/12
 99.1.0						2022/03/31				2022/03/31
 99.1.0						2022/03/29							11			https://www.mozilla.org/en-US/security/advisories/mfsa2022-13/
