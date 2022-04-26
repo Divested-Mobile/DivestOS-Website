@@ -85,9 +85,7 @@ echo "2018-10-18" > crosshatch/releasedate;
 
 echo "Google Pixel 3a XL" > bonito/friendlyName;
 echo "Google Pixel 3a" > sargo/friendlyName;
-echo 2 > bonito/status-17.1;
 echo 2 > bonito/status-19.1;
-echo 2 > sargo/status-17.1;
 echo 2 > sargo/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > bonito/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0" > sargo/bootloader_information;
@@ -378,7 +376,6 @@ echo -e "Heimdall\nNot Unlockable\nNo" > d2tmo/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > d2vzw/bootloader_information;
 
 echo "Unihertz Jelly Pro" > jellypro/friendlyName;
-echo 1 > jellypro/status-14.1;
 echo -e "Unknown\nUnknown\nNo" > jellypro/bootloader_information;
 
 echo "Samsung Galaxy S4" > jfltexx/friendlyName;
