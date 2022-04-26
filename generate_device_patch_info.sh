@@ -60,20 +60,9 @@ createTable() {
 	kernelVersion=$(getKernelVersion $version $kernelPath);
 
 	nameStripped=$(echo -n $name | sed 's|/||g');
-	blobCountVanillaVar=blobCountVanilla_$nameStripped;
-	blobCountVanilla=${!blobCountVanillaVar};
-	blobCountDeblobbedVar=blobCountDeblobbed_$nameStripped;
-	blobCountDeblobbed=${!blobCountDeblobbedVar};
-	blobCountDelta=$(($blobCountVanilla-$blobCountDeblobbed));
-	blobCount="$blobCountVanilla, -$blobCountDelta";
-	if [[ " ${hasVendorPartitionFromStock[@]} " =~ " ${name} " ]]; then
-		blobCount+=" + has stock /vendor";
-	fi;
 
-	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel"><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer">'$kernelVersion'</td>\n\t<td data-label="Blob Count">'$blobCount'</td>\n</tr>';
+	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel"><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer">'$kernelVersion'</td></tr>';
 }
-
-hasVendorPartitionFromStock=('enchilada' 'fajita' 'enchilada/fajita' 'starlte' 'star2lte' 'bullhead' 'dragon' 'flounder' 'angler');
 
 createTable akari LineageOS-18.1 sony/tama-common sony/sdm845 sony/akari;
 createTable alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
