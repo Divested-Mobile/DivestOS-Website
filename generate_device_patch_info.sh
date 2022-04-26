@@ -29,7 +29,19 @@ getVendorPatchLevel() {
 		level="Unknown";
 	fi;
 	if [ "$level" = '$(PLATFORM_SECURITY_PATCH)' ]; then
-		level="2021-10"; #TODO: this will need special handling when 19.1 is stable
+		if [ $1 == "LineageOS-15.1" ]; then
+			level="2018-12";
+		elif [ $1 == "LineageOS-16.0" ]; then
+			level="2019-08";
+		elif [ $1 == "LineageOS-17.1" ]; then
+			level="2020-08";
+		elif [ $1 == "LineageOS-18.1" ]; then
+			level="2021-10";
+		elif [ $1 == "LineageOS-19.1" ]; then
+			level="2022-04";
+		else
+			level="Unknown";
+		fi;
 	fi;
 	echo -n $(sed -e 's/^"//' -e 's/"$//' <<< "$level");
 }
@@ -61,7 +73,7 @@ createTable() {
 
 	nameStripped=$(echo -n $name | sed 's|/||g');
 
-	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel"><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer">'$kernelVersion'</td></tr>';
+	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel"><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer">'$kernelVersion'</td>\n</tr>';
 }
 
 createTable akari LineageOS-18.1 sony/tama-common sony/sdm845 sony/akari;
@@ -85,7 +97,7 @@ createTable cheeseburger LineageOS-18.1 oneplus/msm8998-common oneplus/msm8998 o
 createTable cheryl LineageOS-18.1 razer/cheryl oneplus/msm8998;
 createTable clark LineageOS-14.1 motorola/clark motorola/msm8992;
 createTable clark LineageOS-17.1 motorola/clark motorola/msm8992;
-createTable coral LineageOS-19.1 google/coral google/coral google/coral/coral;
+createTable coral LineageOS-19.1 google/coral google/msm-4.14 google/coral/coral;
 createTable crackling LineageOS-17.1 wileyfox/crackling cyanogen/msm8916 cyanogen/msm8916-common;
 createTable crosshatch LineageOS-18.1 google/crosshatch google/msm-4.9 google/crosshatch/crosshatch;
 createTable crosshatch LineageOS-19.1 google/crosshatch google/msm-4.9 google/crosshatch/crosshatch;
@@ -114,7 +126,7 @@ createTable ether LineageOS-18.1 nextbit/ether nextbit/msm8992;
 createTable f400 LineageOS-18.1 lge/g3-common lge/g3 lge/f400;
 createTable fajita LineageOS-18.1 oneplus/sdm845-common oneplus/sdm845 oneplus/fajita;
 createTable fajita LineageOS-19.1 oneplus/sdm845-common oneplus/sdm845 oneplus/fajita;
-createTable flame LineageOS-19.1 google/coral google/coral google/coral/flame;
+createTable flame LineageOS-19.1 google/coral google/msm-4.14 google/coral/flame;
 createTable flo LineageOS-15.1 asus/flo google/msm;
 createTable flounder LineageOS-15.1 htc/flounder htc/flounder;
 createTable flounder_lte LineageOS-15.1 htc/flounder_lte htc/flounder htc/flounder;
@@ -181,7 +193,7 @@ createTable osprey LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motor
 createTable pioneer LineageOS-18.1 sony/nile-common sony/sdm660 sony/pioneer;
 createTable pioneer LineageOS-19.1 sony/nile-common sony/sdm660 sony/pioneer;
 createTable pro1 LineageOS-19.1 fxtec/pro1 fxtec/msm8998;
-createTable raphael LineageOS-18.1 xiaomi/sm8150-common xiaomi/sm8150 xiaomi/raphael;
+#createTable raphael LineageOS-18.1 xiaomi/sm8150-common xiaomi/sm8150 xiaomi/raphael;
 createTable redfin LineageOS-19.1 google/redbull google/redbull google/redfin;
 createTable rs988 LineageOS-18.1 lge/g5-common lge/msm8996 lge/msm8996-common lge/rs988;
 createTable sailfish LineageOS-18.1 google/marlin google/marlin google/marlin/sailfish;
@@ -191,7 +203,7 @@ createTable serrano3gxx LineageOS-18.1 samsung/serrano-common samsung/msm8930-co
 createTable serranoltexx LineageOS-18.1 samsung/serrano-common samsung/msm8930-common samsung/serranoltexx;
 createTable shamu LineageOS-15.1 moto/shamu moto/shamu;
 createTable shamu LineageOS-18.1 moto/shamu moto/shamu;
-createTable sunfish LineageOS-19.1 google/sunfish google/sunfish;
+createTable sunfish LineageOS-19.1 google/sunfish google/msm-4.14;
 createTable surnia LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/surnia;
 createTable taimen/walleye LineageOS-18.1 google/wahoo google/wahoo google/muskie;
 createTable taimen/walleye LineageOS-19.1 google/wahoo google/wahoo google/muskie;

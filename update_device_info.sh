@@ -47,7 +47,6 @@ echo -e "Fastboot\nReported Working\n1.0" > angler/bootloader_information;
 echo "2015-09-29" > angler/releasedate;
 
 echo "Razer Phone 2" > aura/friendlyName;
-echo 2 > aura/status-18.1;
 echo 2 > aura/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > aura/bootloader_information;
 
@@ -93,7 +92,6 @@ echo "2019-05-07" > bonito/releasedate;
 echo "2019-05-07" > sargo/releasedate;
 
 echo "Google Pixel 4a 5G" > bramble/friendlyName;
-echo 2 > bramble/status-18.1;
 echo 2 > bramble/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > bramble/bootloader_information;
 echo "2020-08-20" > bramble/releasedate;
@@ -125,9 +123,7 @@ echo "2015-09-02" > clark/releasedate;
 
 echo "Pixel 4 XL" > coral/friendlyName;
 echo "Pixel 4" > flame/friendlyName;
-echo 2 > coral/status-18.1;
 echo 2 > coral/status-19.1;
-echo 2 > flame/status-18.1;
 echo 2 > flame/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > coral/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0" > flame/bootloader_information;
@@ -508,12 +504,10 @@ echo -e "Fastboot (Sony)\nUnknown\nNo" > voyager/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\nNo" > discovery/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
-echo 2 > pro1/status-18.1;
 echo 2 > pro1/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > pro1/bootloader_information;
 
 echo "Google Pixel 5" > redfin/friendlyName;
-echo 2 > redfin/status-18.1;
 echo 2 > redfin/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > redfin/bootloader_information;
 
@@ -542,7 +536,6 @@ echo -e "Heimdall\nNot Unlockable\nNo" > starlte/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 
 echo "Google Pixel 4a" > sunfish/friendlyName;
-echo 2 > sunfish/status-18.1;
 echo 2 > sunfish/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > sunfish/bootloader_information;
 
