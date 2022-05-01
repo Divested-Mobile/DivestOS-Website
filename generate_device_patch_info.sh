@@ -94,7 +94,8 @@ createTable bonito LineageOS-19.1 google/bonito google/msm-4.9 google/bonito/bon
 createTable bramble LineageOS-19.1 google/redbull google/redbull google/bramble;
 createTable bullhead LineageOS-15.1 lge/bullhead lge/bullhead;
 createTable cheeseburger LineageOS-18.1 oneplus/msm8998-common oneplus/msm8998 oneplus/cheeseburger;
-createTable cheryl LineageOS-18.1 razer/cheryl oneplus/msm8998;
+createTable cheryl LineageOS-18.1 razer/cheryl razer/msm8998;
+createTable cheryl LineageOS-19.1 razer/cheryl razer/msm8998;
 createTable clark LineageOS-14.1 motorola/clark motorola/msm8992;
 createTable clark LineageOS-17.1 motorola/clark motorola/msm8992;
 createTable coral LineageOS-19.1 google/coral google/msm-4.14 google/coral/coral;
@@ -137,6 +138,7 @@ createTable fugu LineageOS-15.1 asus/fugu asus/fugu;
 createTable griffin LineageOS-17.1 motorola/griffin motorola/msm8996;
 createTable grouper LineageOS-14.1 asus/grouper asus/grouper;
 createTable guacamoleb LineageOS-17.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamoleb oneplus/common;
+createTable guacamoleb LineageOS-19.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamoleb oneplus/common;
 createTable guacamole LineageOS-18.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamole oneplus/common;
 createTable guacamole LineageOS-19.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamole oneplus/common;
 createTable h811 LineageOS-14.1 lge/h811 lge/msm8992 lge/g4-common;

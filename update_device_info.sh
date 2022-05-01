@@ -67,7 +67,7 @@ echo "2014-04-23" > bacon/releasedate;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
 echo 5 > beryllium/status-18.1;
-echo 2 > beryllium/status-19.1;
+echo 4 > beryllium/status-19.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > beryllium/bootloader_information;
 echo "2018-08-01" > beryllium/releasedate; #?
 
@@ -112,6 +112,7 @@ echo "2017-11-21" > dumpling/releasedate;
 
 echo "Razer Phone" > cheryl/friendlyName;
 echo 8 > cheryl/status-18.1;
+echo 2 > cheryl/status-19.1;
 echo -e "Fastboot\nYes, Untested\n1.0" > cheryl/bootloader_information;
 echo "2017-11-15" > cheryl/releasedate;
 
@@ -245,6 +246,7 @@ echo "OnePlus 7" > guacamoleb/friendlyName;
 echo 7 > guacamole/status-18.1;
 echo 7 > guacamole/status-19.1;
 echo 8 > guacamoleb/status-17.1;
+echo 2 > guacamoleb/status-19.1;
 echo -e "Fastboot\nReported Working\n2.0" > guacamole/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0" > guacamoleb/bootloader_information;
 echo "2019-05-14" > guacamole/releasedate;
@@ -568,7 +570,7 @@ echo 2 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
-echo 7 > vayu/status-18.1;
+echo 5 > vayu/status-18.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
