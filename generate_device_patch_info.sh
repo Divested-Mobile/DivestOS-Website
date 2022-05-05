@@ -81,8 +81,6 @@ createTable() {
 		vASBStyle="style=\"color:#4CAF50;\"";
 	elif [[ $vASB == "2021-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
-	elif [[ $vASB == "Unknown" ]]; then
-		vASBStyle="style=\"color:#03A9F4;\"";
 	else
 		vASBStyle="style=\"color:#F44336;\"";
 	fi;
@@ -98,6 +96,10 @@ createTable() {
 
 	if [[ $versionStyle =~ "4CAF50" ]] && [[ $vASBStyle =~ "4CAF50" ]] && [[ $kernelStyle =~ "4CAF50" ]]; then
 		allGreen=" ★";
+	#elif [[ $versionStyle =~ "FFC107" ]] && [[ $vASBStyle =~ "FFC107" ]] && [[ $kernelStyle =~ "FFC107" ]]; then
+	#	allGreen=" ☆";
+	#elif [[ $versionStyle =~ "F44336" ]] || [[ $vASBStyle =~ "F44336" ]] || [[ $kernelStyle =~ "F44336" ]]; then
+	#	allGreen=" ✘";
 	else
 		allGreen="";
 	fi;
@@ -241,8 +243,10 @@ createTable shamu LineageOS-15.1 moto/shamu moto/shamu;
 createTable shamu LineageOS-18.1 moto/shamu moto/shamu;
 createTable sunfish LineageOS-19.1 google/sunfish google/msm-4.14;
 createTable surnia LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/surnia;
-createTable taimen/walleye LineageOS-18.1 google/wahoo google/wahoo google/muskie;
-createTable taimen/walleye LineageOS-19.1 google/wahoo google/wahoo google/muskie;
+createTable taimen LineageOS-18.1 google/wahoo google/wahoo google/muskie;
+createTable walleye LineageOS-18.1 google/wahoo google/wahoo google/muskie;
+createTable taimen LineageOS-19.1 google/wahoo google/wahoo google/muskie;
+createTable walleye LineageOS-19.1 google/wahoo google/wahoo google/muskie;
 createTable thor LineageOS-14.1 amazon/thor amazon/hdx-common amazon/hdx-common;
 createTable toro LineageOS-14.1 samsung/toro samsung/tuna samsung/tuna;
 createTable toroplus LineageOS-14.1 samsung/toroplus samsung/tuna samsung/tuna;
