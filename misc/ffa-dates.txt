@@ -5,7 +5,7 @@ https://gitlab.com/relan/fennecbuild/-/merge_requests/13
 
 Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Patch Count	Security Advisory
 100.1.1						2022/04/28
-100.1.0						2022/04/26				2022/04/28		?
+100.1.0						2022/04/26				2022/04/28		9			https://www.mozilla.org/en-US/security/advisories/mfsa2022-16/
 99.2.0						2022/04/12
 99.1.0						2022/03/31				2022/03/31
 99.1.0						2022/03/29							11			https://www.mozilla.org/en-US/security/advisories/mfsa2022-13/

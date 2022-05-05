@@ -1,5 +1,5 @@
 #!/bin/bash
-#Copyright (c) 2021 Divested Computing Group
+#Copyright (c) 2021-2022 Divested Computing Group
 #
 #This program is free software: you can redistribute it and/or modify
 #it under the terms of the GNU General Public License as published by
@@ -65,15 +65,46 @@ createTable() {
 	name=$1;
 	version=$2;
 	versionStripped=$(echo "$version" | sed 's/.*-//')
+	if [[ $versionStripped == "19.1" ]]; then
+		versionStyle="style=\"color:#4CAF50;\"";
+	elif [[ $versionStripped == "17.1" ]] || [[ $versionStripped == "18.1" ]]; then
+		versionStyle="style=\"color:#FFC107;\"";
+	else
+		versionStyle="style=\"color:#F44336;\"";
+	fi;
+
 	devicePath=$3;
 	kernelPath=$4;
 	kernelName=$(echo "$kernelPath" | sed 's|/|_|');
 	vASB=$(getVendorPatchLevel $version $devicePath)
+	if [[ $vASB == "2022-"* ]]; then
+		vASBStyle="style=\"color:#4CAF50;\"";
+	elif [[ $vASB == "2021-"* ]]; then
+		vASBStyle="style=\"color:#FFC107;\"";
+	elif [[ $vASB == "Unknown" ]]; then
+		vASBStyle="style=\"color:#03A9F4;\"";
+	else
+		vASBStyle="style=\"color:#F44336;\"";
+	fi;
+
 	kernelVersion=$(getKernelVersion $version $kernelPath);
+	if [[ $kernelVersion == "4.9."* ]] || [[ $kernelVersion == "4.1"* ]] || [[ $kernelVersion == "5."* ]]; then
+		kernelStyle="style=\"color:#4CAF50;\"";
+	elif [[ $kernelVersion == "4.4."* ]]; then
+		kernelStyle="style=\"color:#FFC107;\"";
+	else
+		kernelStyle="style=\"color:#F44336;\"";
+	fi;
+
+	if [[ $versionStyle =~ "4CAF50" ]] && [[ $vASBStyle =~ "4CAF50" ]] && [[ $kernelStyle =~ "4CAF50" ]]; then
+		allGreen=" ★";
+	else
+		allGreen="";
+	fi;
 
 	nameStripped=$(echo -n $name | sed 's|/||g');
 
-	echo -e '<tr>\n\t<td data-label="Device">'$name'</td>\n\t<td data-label="Version">'$versionStripped'</td>\n\t<td data-label="V-ASB">'$vASB'</td>\n\t<td data-label="Kernel"><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer">'$kernelVersion'</td>\n</tr>';
+	echo -e '<tr>\n\t<td data-label="Device">'$name$allGreen'</td>\n\t<td data-label="Version" '$versionStyle'>'$versionStripped'</td>\n\t<td data-label="V-ASB" '$vASBStyle'>'$vASB'</td>\n\t<td data-label="Kernel" '$kernelStyle'><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer" style="color: inherit; text-decoration: none;">'$kernelVersion'</td>\n</tr>';
 }
 
 createTable akari LineageOS-18.1 sony/tama-common sony/sdm845 sony/akari;
@@ -94,6 +125,7 @@ createTable bonito LineageOS-19.1 google/bonito google/msm-4.9 google/bonito/bon
 createTable bramble LineageOS-19.1 google/redbull google/redbull google/bramble;
 createTable bullhead LineageOS-15.1 lge/bullhead lge/bullhead;
 createTable cheeseburger LineageOS-18.1 oneplus/msm8998-common oneplus/msm8998 oneplus/cheeseburger;
+createTable cheeseburger LineageOS-19.1 oneplus/msm8998-common oneplus/msm8998 oneplus/cheeseburger;
 createTable cheryl LineageOS-18.1 razer/cheryl razer/msm8998;
 createTable cheryl LineageOS-19.1 razer/cheryl razer/msm8998;
 createTable clark LineageOS-14.1 motorola/clark motorola/msm8992;
@@ -120,6 +152,7 @@ createTable discovery LineageOS-18.1 sony/nile-common sony/sdm660 sony/discovery
 createTable discovery LineageOS-19.1 sony/nile-common sony/sdm660 sony/discovery;
 createTable dragon LineageOS-15.1 google/dragon google/dragon;
 createTable dumpling LineageOS-18.1 oneplus/msm8998-common oneplus/msm8998 oneplus/dumpling;
+createTable dumpling LineageOS-19.1 oneplus/msm8998-common oneplus/msm8998 oneplus/dumpling;
 createTable enchilada LineageOS-18.1 oneplus/sdm845-common oneplus/sdm845 oneplus/enchilada;
 createTable enchilada LineageOS-19.1 oneplus/sdm845-common oneplus/sdm845 oneplus/enchilada;
 createTable ether LineageOS-15.1 nextbit/ether nextbit/msm8992;
@@ -185,6 +218,7 @@ createTable mako LineageOS-18.1 lge/mako lge/mako;
 createTable manta LineageOS-14.1 samsung/manta samsung/manta;
 createTable marlin LineageOS-18.1 google/marlin google/marlin google/marlin/marlin;
 createTable mata LineageOS-18.1 essential/mata essential/msm8998;
+createTable mata LineageOS-19.1 essential/mata essential/msm8998;
 createTable merlin LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/merlin;
 createTable n5100 LineageOS-14.1 samsung/n5100 samsung/smdk4412 samsung/smdk4412-common samsung/kona-common;
 createTable n5110 LineageOS-14.1 samsung/n5110 samsung/smdk4412 samsung/smdk4412-common samsung/kona-common;

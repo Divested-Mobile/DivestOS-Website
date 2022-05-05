@@ -1,5 +1,5 @@
 #!/bin/bash
-#Copyright (c) 2021 Divested Computing Group
+#Copyright (c) 2021-2022 Divested Computing Group
 #
 #This program is free software: you can redistribute it and/or modify
 #it under the terms of the GNU General Public License as published by
@@ -104,7 +104,9 @@ echo "2015-10-22" > bullhead/releasedate;
 echo "OnePlus 5" > cheeseburger/friendlyName;
 echo "OnePlus 5T" > dumpling/friendlyName;
 echo 0 > cheeseburger/status-18.1;
+echo 1 > cheeseburger/status-19.1;
 echo 7 > dumpling/status-18.1;
+echo 1 > dumpling/status-19.1;
 echo -e "Fastboot\nTested Working\n1.0" > cheeseburger/bootloader_information;
 echo -e "Fastboot\nReported Working\n1.0" > dumpling/bootloader_information;
 echo "2017-06-20" > cheeseburger/releasedate;
@@ -457,6 +459,7 @@ echo -e "Fastboot\nTested Working\n1.0" > sailfish/bootloader_information;
 
 echo "Essential PH-1" > mata/friendlyName;
 echo 0 > mata/status-18.1;
+echo 0 > mata/status-19.1;
 echo -e "Fastboot\nTested Working\n1.0" > mata/bootloader_information;
 
 echo "Moto G3 Turbo" > merlin/friendlyName;
