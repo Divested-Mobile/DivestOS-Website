@@ -248,7 +248,7 @@ echo "OnePlus 7" > guacamoleb/friendlyName;
 echo 7 > guacamole/status-18.1;
 echo 7 > guacamole/status-19.1;
 echo 8 > guacamoleb/status-17.1;
-echo 2 > guacamoleb/status-19.1;
+echo 7 > guacamoleb/status-19.1;
 echo -e "Fastboot\nReported Working\n2.0" > guacamole/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0" > guacamoleb/bootloader_information;
 echo "2019-05-14" > guacamole/releasedate;
