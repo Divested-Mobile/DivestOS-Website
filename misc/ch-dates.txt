@@ -34,29 +34,29 @@ Version			Date		Security Patch Count	Release Notes
 
 OS History
 ==========
-Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS
+Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 101.0.4951.61	2022/05/09			2022/05/10	2022/05/10
 101.0.4951.41	2022/04/26	2022/05/02	2022/04/29	2022/04/27
 100.0.4896.127	2022/04/14	2022/04/18	2022/04/16	2022/04/16	2022/04/19	2022/04/15
 100.0.4896.88	2022/04/11	2022/04/15	2022/04/13	2022/04/12
 100.0.4896.79	2022/04/04	2022/04/11	2022/04/04	2022/04/04
-100.0.4896.58	2022/03/29	2022/03/29	2022/03/29	2022/03/30	2022/04/03
+100.0.4896.58	2022/03/29	2022/03/29	2022/03/29	2022/03/30	2022/04/03			2022/04/01
 99.0.4844.88	2022/03/25			2022/03/25	2022/03/26			2022/03/27
-99.0.4844.73	2022/03/15	2022/03/19	2022/03/16	2022/03/18	2022/03/19	2022/03/17
+99.0.4844.73	2022/03/15	2022/03/19	2022/03/16	2022/03/18	2022/03/19	2022/03/17	2022/03/22
 99.0.4844.58	2022/03/03	2022/03/12	2022/03/04	2022/03/05			2022/03/12
-99.0.4844.48	2022/03/01	2022/03/07	2022/03/02	2022/03/02
-98.0.4758.101	2022/02/14	2022/02/21	2022/02/15	2022/02/15	2022/02/16
+99.0.4844.48	2022/03/01	2022/03/07	2022/03/02	2022/03/02					2022/03/08
+98.0.4758.101	2022/02/14	2022/02/21	2022/02/15	2022/02/15	2022/02/16			2022/02/24
 98.0.4758.87	2022/02/01			2022/02/01	2022/02/01			2022/02/08
-97.0.4692.98	2022/01/19	2022/02/17	2022/01/20	2022/01/21	2022/01/21	2022/02/03
+97.0.4692.98	2022/01/19	2022/02/17	2022/01/20	2022/01/21	2022/01/21	2022/02/03	2022/02/18
 97.0.4692.87	2022/01/11			2022/01/14	2022/01/19
 97.0.4692.70	2022/01/04			2022/01/05	2022/01/05
-96.0.4664.183			2022/02/05
+96.0.4664.183			2022/02/05									2022/02/16
 96.0.4664.104	2021/12/13	2022/02/04	2021/12/14	2021/12/14	2021/12/15
 96.0.4664.92	2021/12/06			2021/12/08	2021/12/07
 96.0.4664.45	2021/11/15	2021/12/04	2021/11/15	2021/11/15
 95.0.4638.74	2021/11/02	2021/11/07	2021/11/04	2021/11/02
 95.0.4638.50	2021/10/19			2021/10/19	2021/10/19	2021/10/21	2021/11/07
-94.0.4606.85	2021/10/11	2021/10/16	2021/10/12					2021/10/13
+94.0.4606.85	2021/10/11	2021/10/16	2021/10/12					2021/10/13	20221/12/06
 94.0.4606.80	2021/10/07			2021/10/08	2021/10/08
 94.0.4606.71	2021/09/30			2021/09/30	2021/10/02	2021/10/03
 
@@ -103,6 +103,14 @@ Note:
   Furthermore most users of the above operating systems will install Google Apps if not included.
 - This document is only correct in the context that Google Apps are *not* used.
 - If you want your OS added/removed, please ask.
+- This tracks dates the version was commited to a repository, *not* the date it was pushed out to users or shipped in a system image.
+  - DivestOS pushes updates same day via an F-Droid repository.
+  - GrapheneOS ships them out rapidly within a day or two via their Seamless Updater.
+  - CalyxOS pushes updates via an F-Droid repository.
+  - Bromite pushes updates via an F-Droid repository, but is sometimes a few days behind the version available via GitHub Releases.
+    Users can choose to use FFUpdater to get GitHub release notifications.
+  - Users with Google Apps would have Google Chrome+Google WebView pushed via Play Store updates, notably however Google does staged rollouts.
+  - /e/OS appears to hold releases and only ships them once per stable release.
 
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/ch-dates.txt
