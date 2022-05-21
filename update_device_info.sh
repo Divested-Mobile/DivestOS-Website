@@ -67,7 +67,7 @@ echo "2014-04-23" > bacon/releasedate;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
 echo 5 > beryllium/status-18.1;
-echo 1 > beryllium/status-19.1;
+echo 5 > beryllium/status-19.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > beryllium/bootloader_information;
 echo "2018-08-01" > beryllium/releasedate; #?
 
@@ -104,9 +104,9 @@ echo "2015-10-22" > bullhead/releasedate;
 echo "OnePlus 5" > cheeseburger/friendlyName;
 echo "OnePlus 5T" > dumpling/friendlyName;
 echo 0 > cheeseburger/status-18.1;
-echo 1 > cheeseburger/status-19.1;
+echo 0 > cheeseburger/status-19.1;
 echo 7 > dumpling/status-18.1;
-echo 1 > dumpling/status-19.1;
+echo 7 > dumpling/status-19.1;
 echo -e "Fastboot\nTested Working\n1.0" > cheeseburger/bootloader_information;
 echo -e "Fastboot\nReported Working\n1.0" > dumpling/bootloader_information;
 echo "2017-06-20" > cheeseburger/releasedate;
