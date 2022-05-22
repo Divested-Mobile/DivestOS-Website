@@ -3,7 +3,7 @@
 					<p>A list of what doesn't work on DivestOS</p>
 					<div class="section" id="devices">
 						<h3>Devices<a href="#devices">¶</a></h3>
-						<p>Devices listed as "Works" on Downloads page will not be listed here if they are fully working as expected and do not have any quirks.</p>
+						<p>Devices listed as "Tested/Reported Working" on Downloads page will not be listed here if they are fully working as expected and do not have any quirks.</p>
 						<h4 id="all">All Devices<a href="#all">¶</a></h4>
 						<ul>
 							<li><strike>'Developer options' will crash on 15.1 due to null PDB handle. Likely fixed in late 2022-02 builds</strike></li>
@@ -25,6 +25,7 @@
 							<li>Simple Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround.</li>
 							<li>Block encrypted devices will fail to shutdown from secure boot screen on 18.1. Force power off via power button to workaround.</li>
 							<li>Bluetooth phone calls may not work.</li>
+							<li>Fingerprint readers may work inconsistently.</li>
 						</ul>
 						<h4 id="hdx-common">apollo/thor<a href="#hdx-common">¶</a></h4>
 						<ul>
@@ -59,13 +60,12 @@
 						</ul>
 						<h4 id="op6-common">enchilada/fajita<a href="#op6-common">¶</a></h4>
 						<ul>
-							<li>Uses the stock /vendor partition, making many of the deblobber benefits unavailable.</li>
-							<li>Builds before 2021/09/02 on the 11.0 bootloader/firmware will enter CrashDump mode. Hold volume up + power to exit and then use fastboot to flash a newer build. [firmware]<a href="https://review.lineageos.org/c/LineageOS/android_kernel_oneplus_sdm845/+/315208" target="_blank" rel="nofollow noopener noreferrer">[upstream fix]</a></li>
+							<li>18.1 ONLY: Uses the stock /vendor partition, making many of the deblobber benefits unavailable.</li>
+							<strike><li>Builds before 2021/09/02 on the 11.0 bootloader/firmware will enter CrashDump mode. Hold volume up + power to exit and then use fastboot to flash a newer build. [firmware]<a href="https://review.lineageos.org/c/LineageOS/android_kernel_oneplus_sdm845/+/315208" target="_blank" rel="nofollow noopener noreferrer">[upstream fix]</a></li></strike>
 						</ul>
 						<h4 id="op7-common">guacamole*/hotdog*<a href="#op7-common">¶</a></h4>
 						<ul>
 							<li>Second SIM non-functional. [disabled, some variants lack the necessary firmware]</li>
-							<li>(reported) Fingerprint unlock issues. [???]</li>
 						</ul>
 						<h4 id="flox">flox<a href="#flox">¶</a></h4>
 						<ul>

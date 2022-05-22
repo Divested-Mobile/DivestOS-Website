@@ -1,9 +1,31 @@
 				<div class="card fluid">
 					<h2>Frequently Asked Questions</h2>
 					<div class="section">
+						<h3>Device Choice</h3>
+
+						<h4 id="guidelines">Any guidelines for choosing a device?<a href="#guidelines">¶</a></h4>
+						<p>Yes, please for your own sake avoid devices with the following:</p>
+						<ul>
+							<li>Carrier branding</li>
+							<li>No access to fastboot and/or requiring to create an account</li>
+							<li>Less than 4GB of RAM</li>
+							<li>Less than 64GB of storage</li>
+							<li>Less than a 2000mAh battery</li>
+							<li>Released before 2017</li>
+							<li>Non-Qualcomm SoC, eg. MediaTek/Exynos/Tegra/OMAP</li>
+							<li>Kernel older than 4.4</li>
+						</ul>
+						<p>And for the best experience:</p>
+						<ul>
+							<li>At least 6GB of RAM</li>
+							<li>At least 128GB of storage</li>
+							<li>At least an SD845 SoC</li>
+							<li>At least kernel 4.9, preferably newer.</li>
+						</ul>
+
 						<h4 id="recommendPhone">What phone do you recommend?<a href="#recommendPhone">¶</a></h4>
 						<p>If you can acquire/afford a Pixel 6 (or the upcoming 6a) go buy one and use GrapheneOS, otherwise consider the following:</p>
-						<p>Sorted by patch level and price. Phones in this list have been largely tested/reported working.</p>
+						<p>Sorted by patch level and price. Phones in this list have been largely tested/reported working, but do not necessarily meet the above guidelines.</p>
 						<ul>
 							<li>SD855/2019: Google Pixel 4 (coral/flame) (untested), OnePlus 7/7Pro/7T/7TPro (guacamole*/hotdog*)</li>
 							<li>Note: The below devices are end of life by their vendor.</li>
@@ -25,28 +47,115 @@
 							<li>Google Nexus 7 2013 (flox)</li>
 						</ul>
 
+						<h4 id="install">Can I send you my phone to install DivestOS for me?<a href="#install">¶</a></h4>
+						<p>Not at the moment, maybe in the future. You can however join the chat room and ask for install help.</p>
+
 						<h4 id="pixelWarning">A note on Google Pixels<a href="#pixelWarning">¶</a></h4>
 						<p>Seemingly any Verizon, Telus, Rogers, EE, or IMEIs starting with 35 cannot be bootloader unlocked. In general always avoid carrier variants.</p>
+					</div>
 
-						<h4 id="guidelines">Any other guidelines for choosing a device?<a href="#guidelines">¶</a></h4>
-						<p>Yes, please for your own sake avoid devices with the following:</p>
+					<div class="section">
+						<h3>Device Support</h3>
+
+						<h4 id="supportStatus">Are all devices supported equally?<a href="#supportStatus">¶</a></h4>
+						<p>No, some devices have much better support than others.</p>
+
+						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
+						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only A/B devices have incrementals generated.<br>As of 2022/03/12 that is:<br><code>akari alioth Amber aura aurora avicii blueline bonito bramble cheryl coral crosshatch davinci discovery enchilada fajita flame FP3 guacamole guacamoleb hotdog hotdogb marlin mata pioneer pro1 redfin sailfish sargo sunfish taimen vayu voyager walleye xz2c</code></p>
+
+						<h4 id="randomMAC">What devices support Wi-Fi MAC randomization?<a href="#randomMAC">¶</a></h4>
+						<p>As of 2022/04/01:<br><code>akari alioth Amber aura aurora avicii beryllium blueline bonito cheeseburger cheryl coral crosshatch davinci discovery dumpling enchilada fajita flame guacamole guacamoleb hotdog hotdogb lavender lmi mata pioneer pro1 raphael redbull sargo sunfish taimen vayu voyager walleye xz2c</code></p>
+
+						<h4 id="kernelCFI">What devices have CFI enabled kernels?<a href="#kernelCFI">¶</a></h4>
+						<p>As of 2022/05/21:</p>
 						<ul>
-							<li>Carrier branding</li>
-							<li>No access to fastboot and/or requiring to create an account</li>
-							<li>Less than 4GB of RAM</li>
-							<li>Less than 64GB of storage</li>
-							<li>Less than a 2000mAh battery</li>
-							<li>Released before 2017</li>
-							<li>Non-Qualcomm SoC, eg. MediaTek/Exynos/Tegra/OMAP</li>
-							<li>Kernel older than 4.4</li>
+							<li>CFI enabled: none yet</li>
+							<li>CFI and SCS enabled: blueline/crosshatch, bonito/sargo, coral/flame/sunfish, bramble/redfin</li>
+							<li>CFI supported, but not enabled: akari/aurora/xz2c, avicii, cheryl, beryllium, davinci, FP3</li>
+							<li>CFI and SCS supported, but not enabled: alioth/lmi, guacamole*/hotdog*, vayu</li>
+							<li>CFI supported, but tested non-functional as is: enchilada/fajita</li>
 						</ul>
-						<p>And for the best experience:</p>
-						<ul>
-							<li>At least 6GB of RAM</li>
-							<li>At least 128GB of storage</li>
-							<li>At least an SD845 SoC</li>
-							<li>At least kernel 4.9, preferably newer.</li>
-						</ul>
+
+						<h4 id="gsi">Will you provide GSI images?<a href="#gsi">¶</a></h4>
+						<p>No, many of the features in DivestOS such as the deblobber and kernel patching/hardening are incompatible with how GSI images work.</p>
+
+						<h4 id="x86">Will you provide X86 images?<a href="#x86">¶</a></h4>
+						<p>No, there is no support in AOSP for running on traditional desktop/laptop computers. It is recommended you instead use Fedora with our Brace package.</p>
+
+						<h4 id="supportOfficial">Can you support X device, that does have an official LineageOS port?<a href="#supportOfficial">¶</a></h4>
+						<p>If there is enough demand, yes.</p>
+
+						<h4 id="supportUnofficial">Can you support X device, that doesn't have an (un)official LineageOS port?<a href="#supportUnofficial">¶</a></h4>
+						<p>No.</p>
+					</div>
+
+					<div class="section">
+						<h3>Operating System</h3>
+
+						<h4 id="networkOnly">Should I use the 'XG only' network mode option (if available)?<a href="#networkOnly">¶</a></h4>
+						<p>2G has no encryption, 3G has decent encryption, and LTE has end-to-end encryption (simplified, 3G and LTE still have many leaks). Malicious cell interception devices capable of intercepting 3G/LTE are very expensive kits, so the lesser ones downgrade you to 2G where they can work. These network modes offer enhanced protection against interception by pinning to a mode. As always there are various other ways for your device to be compromised or to have your data intercepted.</p>
+						<p>Which to use? If your device has VoLTE available, you should choose 'LTE only'. If it has LTE but you can make calls over 3G, choose 'LTE/3G only'. If it does not have LTE, but can make calls over 3G, choose '3G only'. If you can't make calls over 3G, you will sadly have to use the regular LTE or 3G modes (which happily downgrade to 2G).</p>
+
+						<h4 id="dns">Why haven't you completely changed the default DNS servers?<a href="#dns">¶</a></h4>
+						<p>Currently Quad9 is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
+
+						<h4 id="base">Why isn't DivestOS based on X operating system?<a href="#base">¶</a></h4>
+						<p>LineageOS has superb device compatibility across the board. Our build scripts are mostly universal so adding an alternate base if needed is easily doable.</p>
+
+						<h4 id="volte">Why did you only partially remove VoLTE?<a href="#volte">¶</a></h4>
+						<p>Many carriers are phasing out their 2G/3G cell towers. Soon it will only be possible to make calls using VoLTE.</p>
+
+						<h4 id="weather">Why did you remove the weather providers?<a href="#weather">¶</a></h4>
+						<p>Because they all transmit your location on a somewhat fixed schedule over HTTP.</p>
+
+						<h4 id="theming">Will you add that one theme engine?<a href="#theming">¶</a></h4>
+						<p>No.</p>
+
+						<h4 id="rootSupport">Why isn't root included/supported?<a href="#rootSupport">¶</a></h4>
+						<p>DivestOS does not support or encourage the use of root or runtime modification frameworks.
+						<br>Such tools will break the following functions:
+							<ul>
+								<li>Bootloader locking on verified boot capable devices, preventing the system from booting.</li>
+								<li>Verified boot on capable devices, preventing the system from booting.</li>
+								<li>Incremental delta OTA updates, will fail to flash.</li>
+								<li>You will not be able to use the DivestOS recovery. DivestOS recovery only flashes same-signed ZIPs.</li>
+								<li>Lineage add-on backuptool is removed from DivestOS, you will have to reflash your changes every update.</li>
+								<li>Will break the trust model that AOSP employs and reduce the integrity of the system.</li>
+							</ul>
+						Here are some common use cases of rooting and alternatives if available:
+							<ul>
+								<li>Network Restriction: DivestOS already lets you restrict network for each app by connection type (cellular/Wi-Fi/VPN), when in the background, and optionally completely revoke NETWORK permission.</li>
+								<li>Ad/Tracker Blocking: DivestOS includes a tailored <a href="https://divested.dev/index.php?page=dnsbl" target="_blank" rel="nofollow noopener noreferrer">HOSTS</a> file by default for such blocking. The user can further choose to use an alternative DNS or use a local VPN app such as <a href="https://f-droid.org/en/packages/org.jak_linux.dns66" target="_blank" rel="nofollow noopener noreferrer">DNS66</a> or <a href="https://f-droid.org/en/packages/eu.faircode.netguard" target="_blank" rel="nofollow noopener noreferrer">NetGuard</a>.</li>
+								<li>Permission Control: Modern AOSP provides far more control of permissions than older versions.</li>
+								<li>Data Spoofing: You can run apps in a work profile via <a href="https://f-droid.org/en/packages/net.typeblog.shelter" target="_blank" rel="nofollow noopener noreferrer">Shelter</a>/<a href="https://f-droid.org/en/packages/com.oasisfeng.island.fdroid" target="_blank" rel="nofollow noopener noreferrer">Insular</a> or in a separate user profile to minimize data available to apps when granted related permissions.</li>
+								<li>Backup: DivestOS includes <a href="https://calyxinstitute.org/projects/seedvault-encrypted-backup-for-android" target="_blank" rel="nofollow noopener noreferrer">SeedVault</a> on Q/R/S for backing up apps and their data to Nextcloud or USB OTG.</li>
+								<li>Overclocking: Most mobile system-on-chips have their RAM stacked above the processor. Heat kills. Overclocking can and will reduce the life-span of your device.</li>
+								<li>App Removal: Modern AOSP already lets you strictly disable most system installed apps. Furthermore DivestOS already includes <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">far fewer</a> system apps compared to most other operating systems.</li>
+								<li>Battery Saving: Modern AOSP lets you prohibit apps from running in the background completely and has more advanced idle battery saving features.</li>
+								<li>Battery Analysis: You can use <a href="https://developer.android.com/topic/performance/power/setup-battery-historian" target="_blank" rel="nofollow noopener noreferrer">Battery Historian</a> via ADB for extremely detailed battery usage reports.</li>
+							</ul>
+						</p>
+					</div>
+
+					<div class="section">
+						<h3>Security</h3>
+
+						<h4 id="modem">What about that gaping hole that is the baseband processor?<a href="#modem">¶</a></h4>
+						<p>We are in dire need of free hardware, but we don't have many options available currently.</p>
+					</div>
+
+					<div class="section">
+						<h3>Freedom</h3>
+
+						<h4 id="proprietary-git">Why are you hosting on GitHub and GitLab if they are proprietary?<a href="#proprietary-git">¶</a></h4>
+						<p>Because a lot of people have existing accounts on them which reduces the barrier to entry for contributing. You are otherwise free to e-mail patches to us if you prefer.</p>
+
+						<h4 id="slowDeath">Why are you wasting your time with Android? Its clear that Google has been slowly killing AOSP every release!<a href="#slowDeath">¶</a></h4>
+						<p>Android is a legitimately fantastic operating system and no other mobile platform has as many open source apps as it does. F-Droid as of March 2021 has over 3,000 FOSS apps!</p>
+					</div>
+
+					<div class="section">
+						<h3>Third Parties</h3>
 
 						<h4 id="preloading">I want to sell devices with DivestOS preloaded, what should I know?<a href="#preloading">¶</a></h4>
 						<p>Selling devices with official builds of DivestOS installed is OKAY and within the license. Some preferred suggestions:</p>
@@ -71,88 +180,5 @@
 							<li>You must make your sources available to your users as per the original repositories' respective licenses. This is mandatory!</li>
 							<li>Consider upstreaming any appropriate changes.</li>
 						</ul>
-
-						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
-						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only A/B devices have incrementals generated.<br>As of 2022/03/12 that is:<br><code>akari alioth Amber aura aurora avicii blueline bonito bramble cheryl coral crosshatch davinci discovery enchilada fajita flame FP3 guacamole guacamoleb hotdog hotdogb marlin mata pioneer pro1 redfin sailfish sargo sunfish taimen vayu voyager walleye xz2c</code></p>
-
-						<h4 id="randomMAC">What devices support Wi-Fi MAC randomization?<a href="#randomMAC">¶</a></h4>
-						<p>As of 2022/04/01:<br><code>akari alioth Amber aura aurora avicii beryllium blueline bonito cheeseburger cheryl coral crosshatch davinci discovery dumpling enchilada fajita flame guacamole guacamoleb hotdog hotdogb lavender lmi mata pioneer pro1 raphael redbull sargo sunfish taimen vayu voyager walleye xz2c</code></p>
-
-						<h4 id="kernelCFI">What devices have CFI enabled kernels?<a href="#kernelCFI">¶</a></h4>
-						<ul>
-							<li>CFI enabled: none yet</li>
-							<li>CFI and SCS enabled: blueline/crosshatch, bonito/sargo, coral/flame/sunfish, bramble/redfin</li>
-							<li>CFI supported, but not enabled: akari/aurora/xz2c, avicii, cheryl, beryllium, davinci, FP3</li>
-							<li>CFI and SCS supported, but not enabled: alioth/lmi, guacamole*/hotdog*, vayu</li>
-							<li>CFI supported, but tested non-functional as is: enchilada/fajita</li>
-						</ul>
-
-						<h4 id="logcat">What commands should I use to collect logs?<a href="#logcat">¶</a></h4>
-						<ul>
-							<li>All errors: <code>adb logcat -b all *:E</code></li>
-							<li>SELinux denials: <code>adb logcat -b all | grep -i audit</code></li>
-							<li>GPS issues: <code>adb logcat -b all | grep -i -e locsvc -e izat -e gps -e gnss -e location -e xtra</code></li>
-							<li>Radio issues: <code>adb logcat -b all | grep -i -e radio -e modem -e network -e connect -e phone -e tele</code></li>
-							<li>Library issues: <code>adb logcat -b all | grep -i -e dlopen</code></li>
-						</ul>
-
-						<h4 id="modem">What about that gaping hole that is the baseband processor?<a href="#modem">¶</a></h4>
-						<p>We are in dire need of free hardware, but we don't have many options available currently.</p>
-
-						<h4 id="proprietary-git">Why are you hosting on GitHub and GitLab if they are proprietary?<a href="#proprietary-git">¶</a></h4>
-						<p>Because a lot of people have existing accounts on them which reduces the barrier to entry for contributing. You are otherwise free to e-mail patches to us if you prefer.</p>
-
-						<h4 id="base">Why isn't DivestOS based on X operating system?<a href="#base">¶</a></h4>
-						<p>LineageOS has superb device compatibility across the board. Our build scripts are mostly universal so adding an alternate base if needed is easily doable.</p>
-
-						<h4 id="supportUnofficial">Can you support X device, that doesn't have an (un)official LineageOS port?<a href="#supportUnofficial">¶</a></h4>
-						<p>No.</p>
-
-						<h4 id="supportOfficial">Can you support X device, that does have an official LineageOS port?<a href="#supportOfficial">¶</a></h4>
-						<p>If there is enough demand, yes.</p>
-
-						<h4 id="theming">Will you add that one theme engine?<a href="#theming">¶</a></h4>
-						<p>No.</p>
-
-						<h4 id="weather">Why did you remove the weather providers?<a href="#weather">¶</a></h4>
-						<p>Because they all transmit your location on a somewhat fixed schedule over HTTP.</p>
-
-						<h4 id="volte">Why did you only partially remove VoLTE?<a href="#volte">¶</a></h4>
-						<p>Many carriers are phasing out their 2G/3G cell towers. Soon it will only be possible to make calls using VoLTE.</p>
-
-						<h4 id="networkOnly">Should I use the 'XG only' network mode option (if available)?<a href="#networkOnly">¶</a></h4>
-						<p>2G has no encryption, 3G has decent encryption, and LTE has end-to-end encryption (simplified, 3G and LTE still have many leaks). Malicious cell interception devices capable of intercepting 3G/LTE are very expensive kits, so the lesser ones downgrade you to 2G where they can work. These network modes offer enhanced protection against interception by pinning to a mode. As always there are various other ways for your device to be compromised or to have your data intercepted.</p>
-						<p>Which to use? If your device has VoLTE available, you should choose 'LTE only'. If it has LTE but you can make calls over 3G, choose 'LTE/3G only'. If it does not have LTE, but can make calls over 3G, choose '3G only'. If you can't make calls over 3G, you will sadly have to use the regular LTE or 3G modes (which happily downgrade to 2G).</p>
-
-						<h4 id="dns">Why haven't you completely changed the default DNS servers?<a href="#dns">¶</a></h4>
-						<p>Currently Quad9 (after trying many other public resolvers) is used for DNS fallback and for tethering. Switching it by default for cell would break VoLTE, SMS, MMS, and Visual Voicemail. And switching it for Wi-Fi could potentially break access to some LAN devices.</p>
-
-						<h4 id="rootSupport">Why isn't root included/supported?<a href="#rootSupport">¶</a></h4>
-						<p>DivestOS does not support or encourage the use of root or runtime modification frameworks.
-						<br>Such tools will break the following functions:
-							<ul>
-								<li>Bootloader locking on verified boot capable devices, preventing the system from booting.</li>
-								<li>Verified boot on capable devices, preventing the system from booting.</li>
-								<li>Incremental delta OTA updates, will fail to flash.</li>
-								<li>You will not be able to use the DivestOS recovery. DivestOS recovery only flashes same-signed ZIPs.</li>
-								<li>Lineage add-on backuptool is removed from DivestOS, you will have to reflash your changes every update.</li>
-								<li>Will break the trust model that AOSP employs and reduce the integrity of the system.</li>
-							</ul>
-						Here are some common use cases of rooting and alternatives if available:
-							<ul>
-								<li>Network Restriction: DivestOS already lets you restrict network for each app by connection type (cellular/Wi-Fi/VPN), when in the background, and optionally completely revoke NETWORK permission.</li>
-								<li>Ad/Tracker Blocking: DivestOS includes a tailored <a href="https://divested.dev/index.php?page=dnsbl" target="_blank" rel="nofollow noopener noreferrer">HOSTS</a> file by default for such blocking. The user can further choose to use an alternative DNS or use a local VPN app such as <a href="https://f-droid.org/en/packages/org.jak_linux.dns66" target="_blank" rel="nofollow noopener noreferrer">DNS66</a> or <a href="https://f-droid.org/en/packages/eu.faircode.netguard" target="_blank" rel="nofollow noopener noreferrer">NetGuard</a>.</li>
-								<li>Permission Control: Modern AOSP provides far more control of permissions than older versions.</li>
-								<li>Data Spoofing: You can run apps in a work profile via <a href="https://f-droid.org/en/packages/net.typeblog.shelter" target="_blank" rel="nofollow noopener noreferrer">Shelter</a>/<a href="https://f-droid.org/en/packages/com.oasisfeng.island.fdroid" target="_blank" rel="nofollow noopener noreferrer">Insular</a> or in a separate user profile to minimize data available to apps when granted related permissions.</li>
-								<li>Backup: DivestOS includes <a href="https://calyxinstitute.org/projects/seedvault-encrypted-backup-for-android" target="_blank" rel="nofollow noopener noreferrer">SeedVault</a> on Q and R for backing up apps and their data to Nextcloud or USB OTG.</li>
-								<li>Overclocking: Most mobile system-on-chips have their RAM stacked above the processor. Heat kills. Overclocking can and will reduce the life-span of your device.</li>
-								<li>App Removal: Modern AOSP already lets you strictly disable most system installed apps. Furthermore DivestOS already includes <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">far fewer</a> system apps compared to most other operating systems.</li>
-								<li>Battery Saving: Modern AOSP lets you prohibit apps from running in the background completely and has more advanced idle battery saving features.</li>
-								<li>Battery Analysis: You can use <a href="https://developer.android.com/topic/performance/power/setup-battery-historian" target="_blank" rel="nofollow noopener noreferrer">Battery Historian</a> via ADB for extremely detailed battery usage reports.</li>
-							</ul>
-						</p>
-
-						<h4 id="slowDeath">Why are you wasting your time with Android? Its clear that Google has been slowly killing AOSP every release!<a href="#slowDeath">¶</a></h4>
-						<p>Android is a legitimately fantastic operating system and no other mobile platform has as many open source apps as it does. F-Droid as of March 2021 has over 3,000 FOSS apps!</p>
 					</div>
 				</div>
