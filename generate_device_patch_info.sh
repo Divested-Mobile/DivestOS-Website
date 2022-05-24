@@ -119,22 +119,22 @@ createTable aurora LineageOS-18.1 sony/tama-common sony/sdm845 sony/aurora;
 createTable avicii LineageOS-17.1 oneplus/avicii oneplus/sm7250;
 createTable axon7 LineageOS-15.1 zte/axon7 zte/msm8996;
 createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974 oppo/common oppo/msm8974-common;
-createTable beryllium LineageOS-18.1 xiaomi/sdm845-common xiaomi/sdm845;
+createTable beryllium LineageOS-18.1 xiaomi/sdm845-common xiaomi/sdm845; #superseded
 createTable beryllium LineageOS-19.1 xiaomi/sdm845-common xiaomi/sdm845;
-createTable blueline LineageOS-18.1 google/crosshatch google/msm-4.9 google/crosshatch/blueline;
+createTable blueline LineageOS-18.1 google/crosshatch google/msm-4.9 google/crosshatch/blueline; #superseded
 createTable blueline LineageOS-19.1 google/crosshatch google/msm-4.9 google/crosshatch/blueline;
 createTable bonito LineageOS-19.1 google/bonito google/msm-4.9 google/bonito/bonito;
 createTable bramble LineageOS-19.1 google/redbull google/redbull google/bramble;
 createTable bullhead LineageOS-15.1 lge/bullhead lge/bullhead;
-createTable cheeseburger LineageOS-18.1 oneplus/msm8998-common oneplus/msm8998 oneplus/cheeseburger;
+createTable cheeseburger LineageOS-18.1 oneplus/msm8998-common oneplus/msm8998 oneplus/cheeseburger; #superseded
 createTable cheeseburger LineageOS-19.1 oneplus/msm8998-common oneplus/msm8998 oneplus/cheeseburger;
-createTable cheryl LineageOS-18.1 razer/cheryl razer/msm8998;
+createTable cheryl LineageOS-18.1 razer/cheryl razer/msm8998; #superseded
 createTable cheryl LineageOS-19.1 razer/cheryl razer/msm8998;
 createTable clark LineageOS-14.1 motorola/clark motorola/msm8992;
 createTable clark LineageOS-17.1 motorola/clark motorola/msm8992;
 createTable coral LineageOS-19.1 google/coral google/msm-4.14 google/coral/coral;
 createTable crackling LineageOS-17.1 wileyfox/crackling cyanogen/msm8916 cyanogen/msm8916-common;
-createTable crosshatch LineageOS-18.1 google/crosshatch google/msm-4.9 google/crosshatch/crosshatch;
+createTable crosshatch LineageOS-18.1 google/crosshatch google/msm-4.9 google/crosshatch/crosshatch; #superseded
 createTable crosshatch LineageOS-19.1 google/crosshatch google/msm-4.9 google/crosshatch/crosshatch;
 createTable d2att LineageOS-14.1 samsung/d2att samsung/d2 samsung/msm8960-common samsung/d2-common;
 createTable d2spr LineageOS-14.1 samsung/d2spr samsung/d2 samsung/msm8960-common samsung/d2-common;
@@ -150,17 +150,17 @@ createTable d852 LineageOS-18.1 lge/g3-common lge/g3 lge/d852;
 createTable d855 LineageOS-18.1 lge/g3-common lge/g3 lge/d855;
 createTable davinci LineageOS-17.1 xiaomi/sm6150-common xiaomi/sm6150 xiaomi/davinci;
 createTable deb LineageOS-15.1 asus/deb google/msm asus/flo;
-createTable discovery LineageOS-18.1 sony/nile-common sony/sdm660 sony/discovery;
+createTable discovery LineageOS-18.1 sony/nile-common sony/sdm660 sony/discovery; #superseded
 createTable discovery LineageOS-19.1 sony/nile-common sony/sdm660 sony/discovery;
 createTable dragon LineageOS-15.1 google/dragon google/dragon;
-createTable dumpling LineageOS-18.1 oneplus/msm8998-common oneplus/msm8998 oneplus/dumpling;
+createTable dumpling LineageOS-18.1 oneplus/msm8998-common oneplus/msm8998 oneplus/dumpling; #superseded
 createTable dumpling LineageOS-19.1 oneplus/msm8998-common oneplus/msm8998 oneplus/dumpling;
-createTable enchilada LineageOS-18.1 oneplus/sdm845-common oneplus/sdm845 oneplus/enchilada;
+createTable enchilada LineageOS-18.1 oneplus/sdm845-common oneplus/sdm845 oneplus/enchilada; #superseded
 createTable enchilada LineageOS-19.1 oneplus/sdm845-common oneplus/sdm845 oneplus/enchilada;
 createTable ether LineageOS-15.1 nextbit/ether nextbit/msm8992;
 createTable ether LineageOS-18.1 nextbit/ether nextbit/msm8992;
 createTable f400 LineageOS-18.1 lge/g3-common lge/g3 lge/f400;
-createTable fajita LineageOS-18.1 oneplus/sdm845-common oneplus/sdm845 oneplus/fajita;
+createTable fajita LineageOS-18.1 oneplus/sdm845-common oneplus/sdm845 oneplus/fajita; #superseded
 createTable fajita LineageOS-19.1 oneplus/sdm845-common oneplus/sdm845 oneplus/fajita;
 createTable flame LineageOS-19.1 google/coral google/msm-4.14 google/coral/flame;
 createTable flo LineageOS-15.1 asus/flo google/msm;
@@ -172,9 +172,9 @@ createTable FP3 LineageOS-18.1 fairphone/FP3 fairphone/sdm632;
 createTable fugu LineageOS-15.1 asus/fugu asus/fugu;
 createTable griffin LineageOS-17.1 motorola/griffin motorola/msm8996;
 createTable grouper LineageOS-14.1 asus/grouper asus/grouper;
-createTable guacamoleb LineageOS-17.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamoleb oneplus/common;
+createTable guacamoleb LineageOS-17.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamoleb oneplus/common; #superseded
 createTable guacamoleb LineageOS-19.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamoleb oneplus/common;
-createTable guacamole LineageOS-18.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamole oneplus/common;
+createTable guacamole LineageOS-18.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamole oneplus/common; #superseded
 createTable guacamole LineageOS-19.1 oneplus/sm8150-common oneplus/sm8150 oneplus/guacamole oneplus/common;
 createTable h811 LineageOS-14.1 lge/h811 lge/msm8992 lge/g4-common;
 createTable h815 LineageOS-14.1 lge/h815 lge/msm8992 lge/g4-common;
@@ -192,9 +192,9 @@ createTable hero2lte LineageOS-14.1 samsung/hero2lte samsung/universal8890 samsu
 createTable herolte LineageOS-14.1 samsung/herolte samsung/universal8890 samsung/hero-common;
 createTable himaul LineageOS-14.1 htc/himaul htc/msm8994 htc/hima-common;
 createTable himawl LineageOS-14.1 htc/himawl htc/msm8994 htc/hima-common;
-createTable hotdogb LineageOS-18.1 oneplus/sm8150-common oneplus/sm8150 oneplus/hotdogb oneplus/common;
+createTable hotdogb LineageOS-18.1 oneplus/sm8150-common oneplus/sm8150 oneplus/hotdogb oneplus/common; #superseded
 createTable hotdogb LineageOS-19.1 oneplus/sm8150-common oneplus/sm8150 oneplus/hotdogb oneplus/common;
-createTable hotdog LineageOS-18.1 oneplus/sm8150-common oneplus/sm8150 oneplus/hotdog oneplus/common;
+createTable hotdog LineageOS-18.1 oneplus/sm8150-common oneplus/sm8150 oneplus/hotdog oneplus/common; #superseded
 createTable hotdog LineageOS-19.1 oneplus/sm8150-common oneplus/sm8150 oneplus/hotdog oneplus/common;
 createTable i9100 LineageOS-14.1 samsung/i9100 samsung/smdk4412 samsung/smdk4412-common samsung/galaxys2-common;
 createTable i9300 LineageOS-14.1 samsung/i9300 samsung/smdk4412 samsung/smdk4412-common;
@@ -219,7 +219,7 @@ createTable maguro LineageOS-14.1 samsung/maguro samsung/tuna samsung/tuna;
 createTable mako LineageOS-18.1 lge/mako lge/mako;
 createTable manta LineageOS-14.1 samsung/manta samsung/manta;
 createTable marlin LineageOS-18.1 google/marlin google/marlin google/marlin/marlin;
-createTable mata LineageOS-18.1 essential/mata essential/msm8998;
+createTable mata LineageOS-18.1 essential/mata essential/msm8998; #superseded
 createTable mata LineageOS-19.1 essential/mata essential/msm8998;
 createTable merlin LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/merlin;
 createTable n5100 LineageOS-14.1 samsung/n5100 samsung/smdk4412 samsung/smdk4412-common samsung/kona-common;
@@ -228,7 +228,7 @@ createTable n5120 LineageOS-14.1 samsung/n5120 samsung/smdk4412 samsung/smdk4412
 createTable oneplus2 LineageOS-17.1 oneplus/oneplus2 oneplus/msm8994 oppo/common;
 createTable oneplus3 LineageOS-18.1 oneplus/oneplus3 oneplus/msm8996;
 createTable osprey LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/osprey;
-createTable pioneer LineageOS-18.1 sony/nile-common sony/sdm660 sony/pioneer;
+createTable pioneer LineageOS-18.1 sony/nile-common sony/sdm660 sony/pioneer; #superseded
 createTable pioneer LineageOS-19.1 sony/nile-common sony/sdm660 sony/pioneer;
 createTable pro1 LineageOS-19.1 fxtec/pro1 fxtec/msm8998;
 #createTable raphael LineageOS-18.1 xiaomi/sm8150-common xiaomi/sm8150 xiaomi/raphael;
@@ -243,9 +243,9 @@ createTable shamu LineageOS-15.1 moto/shamu moto/shamu;
 createTable shamu LineageOS-18.1 moto/shamu moto/shamu;
 createTable sunfish LineageOS-19.1 google/sunfish google/msm-4.14;
 createTable surnia LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/surnia;
-createTable taimen LineageOS-18.1 google/wahoo google/wahoo google/muskie;
-createTable walleye LineageOS-18.1 google/wahoo google/wahoo google/muskie;
+createTable taimen LineageOS-18.1 google/wahoo google/wahoo google/muskie; #superseded
 createTable taimen LineageOS-19.1 google/wahoo google/wahoo google/muskie;
+createTable walleye LineageOS-18.1 google/wahoo google/wahoo google/muskie; #superseded
 createTable walleye LineageOS-19.1 google/wahoo google/wahoo google/muskie;
 createTable thor LineageOS-14.1 amazon/thor amazon/hdx-common amazon/hdx-common;
 createTable toro LineageOS-14.1 samsung/toro samsung/tuna samsung/tuna;
@@ -255,7 +255,7 @@ createTable us997 LineageOS-15.1 lge/g6-common lge/msm8996 lge/msm8996-common lg
 createTable v1awifi LineageOS-14.1 samsung/v1awifi samsung/exynos5420 samsung/exynos5420-common;
 createTable vayu LineageOS-18.1 xiaomi/sm8150-common xiaomi/sm8150 xiaomi/vayu;
 createTable victara LineageOS-18.1 motorola/victara motorola/msm8974;
-createTable voyager LineageOS-18.1 sony/nile-common sony/sdm660 sony/voyager;
+createTable voyager LineageOS-18.1 sony/nile-common sony/sdm660 sony/voyager; #superseded
 createTable voyager LineageOS-19.1 sony/nile-common sony/sdm660 sony/voyager;
 createTable vs985 LineageOS-18.1 lge/g3-common lge/g3 lge/vs985;
 createTable vs995 LineageOS-18.1 lge/v20-common lge/msm8996 lge/msm8996-common lge/vs995;
