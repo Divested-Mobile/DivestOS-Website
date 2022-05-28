@@ -127,9 +127,9 @@
 							$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/avb_pkmd-" . $device . ".bin\" download class=\"button inverse small\">AVB Key</a>";
 						}
 
-						if(file_exists($realRootdir . $device . "/copy-partitions-" . $device . ".zip")) { //Output the copy-partitions.zip if it exists
+						if(file_exists($realRootdir . $device . "/copy-partitions-" . $device . "-release.zip")) { //Output the copy-partitions.zip if it exists
 							if($extrasAdded === false) { $downloadButtons .= "<br>"; $extrasAdded = true; }
-							$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/copy-partitions-" . $device . ".zip\" download class=\"button inverse small\">A/B Sync</a>";
+							$downloadButtons .= "<a href=\"/builds/" . $base . "/" . $device . "/copy-partitions-" . $device . "-release.zip\" download class=\"button inverse small\">A/B Sync</a>";
 						}
 
 						//Create the status message
