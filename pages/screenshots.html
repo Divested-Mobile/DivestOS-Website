@@ -1,6 +1,6 @@
 				<div class="card centero fluid">
 					<h2>Screenshots</h2>
-					<p>Various screenshots of the system and apps</p>
+					<p>Various screenshots of the system and apps<br><?php if(!$SBNR_GEN_DARKMODE) { if($pageRaw === "screenshots_dark") { print('<a href="index.php?page=screenshots">View in light mode</a>'); } else { print('<a href="index.php?page=screenshots_dark">View in dark mode</a>'); } } ?></p>
 					<div class="section">
 						<div class="row">
 <?php
@@ -37,7 +37,7 @@ $screenshotHTML='
 <div class="card centero"><div class="section" id="support"><h3>Support</h3></div><img class="section media" style="height:auto;" loading="lazy" src="images/screenshots/12/Support.png"/></div>
 <div class="card centero"><div class="section" id="braille"><h3>Braille Keyboard</h3></div><img class="section media" style="height:auto;" loading="lazy" src="images/screenshots/12/Braille.png"/></div>
 ';
-if($SBNR_GEN_DARKMODE) { $screenshotHTML = str_replace("/12/", "/12-dark/", $screenshotHTML); }
+if($SBNR_GEN_DARKMODE || $pageRaw === "screenshots_dark") { $screenshotHTML = str_replace("/12/", "/12-dark/", $screenshotHTML); }
 print($screenshotHTML);
 ?>
 						</div>
