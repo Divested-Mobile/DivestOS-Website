@@ -185,6 +185,23 @@ echo 0 > dragon/status-15.1;
 echo -e "Fastboot\nYes, but will error\n1.0" > dragon/bootloader_information;
 echo "2015-12-08" > dragon/releasedate;
 
+echo "OnePlus 8" > instantnoodle/friendlyName;
+echo "OnePlus 8 Pro" > instantnoodlep/friendlyName;
+echo "OnePlus 8T" > kebab/friendlyName;
+echo 2 > instantnoodle/status-19.1;
+echo 2 > instantnoodlep/status-19.1;
+echo 2 > kebab/status-19.1;
+echo -e "Fastboot\nYes, Untested\n2.0" > instantnoodle/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > instantnoodlep/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > kebab/bootloader_information;
+
+echo "OnePlus 9" > lemonade/friendlyName;
+echo "OnePlus 9 Pro" > lemonadep/friendlyName;
+echo 2 > lemonade/status-19.1;
+echo 2 > lemonadep/status-19.1;
+echo -e "Fastboot\nYes, Untested\n2.0" > lemonade/bootloader_information;
+echo -e "Fastboot\nYes, Untested\n2.0" > lemonadep/bootloader_information;
+
 echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
 echo 7 > enchilada/status-18.1;
@@ -419,6 +436,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
 echo 7 > lmi/status-18.1;
+echo 1 > lmi/status-19.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > lmi/bootloader_information;
 
 echo "HTC One" > m7/friendlyName;

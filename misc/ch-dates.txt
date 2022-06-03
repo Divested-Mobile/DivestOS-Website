@@ -1,4 +1,4 @@
-last updated: 2022/05/31
+last updated: 2022/06/02
 
 Chromium History
 ================
@@ -70,7 +70,6 @@ OS Current Versions
 - latest stable		102.0.5005.78				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
-- CalyxOS, 12		100.0.4896.127				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - CarbonROM, 12		96.0.4664.111, 12 is not shipping yet	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
 - DivestOS/Mulch	102.0.5005.78				https://gitlab.com/divested-mobile/mulch
 - GrapheneOS Vanadium	102.0.5005.78				https://github.com/GrapheneOS/Vanadium/commits/12.1
@@ -87,6 +86,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		102.0.5005.67				https://github.com/bromite/bromite/commits/master
+- CalyxOS, 12		100.0.4896.127, .78 pending		https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			100.0.4896.57, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		101.0.4951.53, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 
