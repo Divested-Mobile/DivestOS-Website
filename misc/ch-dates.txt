@@ -1,4 +1,4 @@
-last updated: 2022/06/02
+last updated: 2022/06/03
 
 Chromium History
 ================
@@ -37,7 +37,7 @@ Version			Date		Security Patch Count	Release Notes
 OS History
 ==========
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-102.0.5005.78	2022/05/28			2022/05/30	2022/05/30
+102.0.5005.78	2022/05/28			2022/05/30	2022/05/30	2022/06/03	2022/06/03
 102.0.5005.59	2022/05/24	2022/05/28	2022/05/24	2022/05/24
 101.0.4951.61	2022/05/09	2022/05/15	2022/05/10	2022/05/10	2022/05/13
 101.0.4951.41	2022/04/26	2022/05/02	2022/04/29	2022/04/27
@@ -77,7 +77,7 @@ Standalone:
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS		101.0.4951.61, .78 pending		https://review.lineageos.org/q/webview
+- LineageOS		102.0.5005.78				https://review.lineageos.org/q/webview
 - ArrowOS, 11		96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, 11		tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
 - crDroid, 11/12	tracks LineageOS/master			https://github.com/crdroidandroid/android/blob/12.1/snippets/lineage.xml
@@ -86,7 +86,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		102.0.5005.67				https://github.com/bromite/bromite/commits/master
-- CalyxOS, 12		100.0.4896.127, .78 pending		https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- CalyxOS, 12		102.0.5005.78				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			100.0.4896.57, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		101.0.4951.53, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 
