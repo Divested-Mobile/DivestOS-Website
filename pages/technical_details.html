@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The nitty gritty<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2022-05-18</p>
+						<p>Last updated: 2022-06-07</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -140,6 +140,7 @@
 						<h5>android_external_graphene_malloc</h5>
 						<ul>
 							<li>P: GRAPHENE_MALLOC=true: DeviceDescriptor sorting wrongly relies on malloc addresses (GrapheneOS)</li>
+							<li>S: Workarounds for Pixel 3 SoC era camera driver bugs (GrapheneOS)</li>
 							<li>P/Q/R/S: GRAPHENE_MALLOC=true: Expand workaround to all camera executables (DivestOS)</li>
 						</ul>
 						<h5>android_external_sqlite</h5>
@@ -178,6 +179,7 @@
 							<li>!N: Enable fingerprint lockout after three failed attempts (GrapheneOS)</li>
 							<li>P/Q/R/S: Allow user logout (GrapheneOS)</li>
 							<li>P/Q/R/S: Support new special runtime permissions (GrapheneOS)</li>
+							<li>S: Extend special runtime permission implementation (GrapheneOS)</li>
 							<li>P/Q/R/S: Make INTERNET into a special runtime permission (GrapheneOS)</li>
 							<li>P/Q/R/S: Add a NETWORK permission group for INTERNET (GrapheneOS)</li>
 							<li>Q/R: Enforce INTERNET as a runtime permission. (GrapheneOS)</li>
@@ -194,6 +196,10 @@
 							<li>P/Q/R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 							<li>Q/R/S: Add option of always randomizing MAC addresses (GrapheneOS)</li>
 							<li>Q/R: Fix random reboots on broken kernels when an app has data restricted (DivestOS)</li>
+							<li>S: Don't report statementservice crashes (GrapheneOS)</li>
+							<li>S: Skip screen on animation when wake and unlock via biometrics (jesec)</li>
+							<li>S: SystemUI: Skip screen-on animation in all scenarios (kdrag0n)</li>
+							<li>R/S: SystemUI: add burnIn protection (arter97)</li>
 							<li>Q/R/S: Warn when running activity from 32 bit app on ARM64 devices. (AOSP)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
 							<li>Q/R: Restore the Sensors Off tile (DivestOS)</li>
@@ -277,6 +283,8 @@
 						<ul>
 							<li>!N: Remove Privacy Policy and Terms of Service links (GrapheneOS)</li>
 							<li>Q/R/S: Backups are not sent to Google (GrapheneOS)</li>
+							<li>!N: Don't prompt to add account when creating a contact (CalyxOS)</li>
+							<li>Use common intent for directions instead of Google Maps URL (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_apps_Dialer</h5>
 						<ul>
@@ -499,7 +507,7 @@
 							<li>DEBLOBBER_REMOVE_IMS=false: volteOverride()</li>
 							<li>enableDexPreOpt()</li>
 							<li>hardenUserdata()</li>
-							<li>hardenBootArgs()</li>
+							<!--<li>hardenBootArgs()</li>-->
 							<li>Q/R/S: disableAPEX()</li>
 							<li>removeBuildFingerprints()</li>
 							<li>AVB chaining is disabled</li>

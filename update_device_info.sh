@@ -222,7 +222,7 @@ echo "2016-02-16" > ether/releasedate;
 echo "Google Nexus 7 LTE [2013]" > deb/friendlyName;
 echo "Google Nexus 7 [2013]" > flo/friendlyName;
 echo "Google Nexus 7 [2013] (repartitioned)" > flox/friendlyName;
-echo 4 > deb/status-15.1;
+echo 1 > deb/status-15.1;
 echo 0 > flo/status-15.1;
 echo 0 > flox/status-18.1;
 echo -e "Fastboot\nYes, Untested\nNo" > deb/bootloader_information;
