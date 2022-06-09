@@ -1,6 +1,7 @@
-last updated: 2022/06/02
+last updated: 2022/06/09
 
 Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Patch Count	Security Advisory
+101.2.0		2022/06/09			2022/06/08
 101.1.1		2022/05/27			2022/05/26	2022/05/31
 101.1.0		2022/05/23			2022/05/23							13
 100.3.0		2022/05/20			2022/05/19	2022/05/21					2,  2 critical		https://www.mozilla.org/en-US/security/advisories/mfsa2022-19/

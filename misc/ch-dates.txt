@@ -1,8 +1,9 @@
-last updated: 2022/06/03
+last updated: 2022/06/07
 
 Chromium History
 ================
 Version			Date		Security Patch Count	Release Notes
+102.0.5005.99		2022/06/07				https://chromereleases.googleblog.com/2022/06/chrome-for-android-update.html
 102.0.5005.78		2022/05/28				https://chromereleases.googleblog.com/2022/05/chrome-for-android-update_28.html
 102.0.5005.59		2022/05/24	32, 1 critical		https://chromereleases.googleblog.com/2022/05/stable-channel-update-for-desktop_24.html
 101.0.4951.61		2022/05/09	13			https://chromereleases.googleblog.com/2022/05/chrome-for-android-update.html
@@ -37,7 +38,8 @@ Version			Date		Security Patch Count	Release Notes
 OS History
 ==========
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-102.0.5005.78	2022/05/28			2022/05/30	2022/05/30	2022/06/03	2022/06/03
+102.0.5005.99	2022/06/07			2022/06/07	2022/06/07
+102.0.5005.78	2022/05/28	2022/06/05	2022/05/30	2022/05/30	2022/06/03	2022/06/03
 102.0.5005.59	2022/05/24	2022/05/28	2022/05/24	2022/05/24
 101.0.4951.61	2022/05/09	2022/05/15	2022/05/10	2022/05/10	2022/05/13
 101.0.4951.41	2022/04/26	2022/05/02	2022/04/29	2022/04/27
@@ -67,12 +69,12 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		102.0.5005.78				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		102.0.5005.99				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
 - CarbonROM, 12		96.0.4664.111, 12 is not shipping yet	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
-- DivestOS/Mulch	102.0.5005.78				https://gitlab.com/divested-mobile/mulch
-- GrapheneOS Vanadium	102.0.5005.78				https://github.com/GrapheneOS/Vanadium/commits/12.1
+- DivestOS/Mulch	102.0.5005.99				https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	102.0.5005.99				https://github.com/GrapheneOS/Vanadium/commits/12.1
 - OmniROM, 11		96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
@@ -85,7 +87,7 @@ Lineage related:
 - Replicant		???
 
 Bromite related:
-- Bromite		102.0.5005.67				https://github.com/bromite/bromite/commits/master
+- Bromite		102.0.5005.92				https://github.com/bromite/bromite/commits/master
 - CalyxOS, 12		102.0.5005.78				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			100.0.4896.57, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		101.0.4951.53, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master

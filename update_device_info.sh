@@ -553,8 +553,8 @@ echo -e "Fastboot\nReported Working\n1.0" > shamu/bootloader_information;
 
 echo "Samsung Galaxy S9" > starlte/friendlyName;
 echo "Samsung Galaxy S9+" > star2lte/friendlyName;
-echo 1 > starlte/status-17.1;
-echo 1 > star2lte/status-17.1;
+echo 2 > starlte/status-17.1;
+echo 2 > star2lte/status-17.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > starlte/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 

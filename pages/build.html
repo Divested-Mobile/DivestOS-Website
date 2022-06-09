@@ -5,16 +5,17 @@
 						<p>You want to build for yourself? Awesome!
 						<br>First things first, you're going to need a pretty decent computer if you want timely builds.</p>
 						<ul>
-							<li>For builds under 3 hours you'll want to have at least a powerful quad core processor, 8GB of RAM, and a 7200RPM drive.</li>
-							<li>For builds under an hour you'll want to have a processor that gets a score of 15k+ or higher on <a href="https://www.cpubenchmark.net/cpu_list.php" target="_blank" rel="nofollow noopener noreferrer">Passmark</a>, 16GB+ of RAM, and fast storage</li>
+							<li>For builds under 3 hours you'll want to have at least a powerful quad core processor, 32GB of RAM, and a 7200RPM drive.</li>
+							<li>For builds under an hour you'll want to have a processor that gets a score of 30k+ or higher on <a href="https://www.cpubenchmark.net/cpu_list.php" target="_blank" rel="nofollow noopener noreferrer">Passmark</a>, 64GB of RAM, and a large SSD.</li>
+							<li>It may be possible to get by with 16GB + zram, regardless zram is recommended in all cases.</li>
 							<li>If you plan on building in a virtual machine, in terms of performance: KVM > Hyper-V > VMWare > VirtualBox</li>
 							<li>You'll need a lot of available free space on your drives</li>
 							<ul>
-								<li>Source Code: 100GB + ~2GB per device</li>
-								<li>30GB per device for building</li>
-								<li>5GB per device for optional ccache</li>
-								<li>~1-2GB for each resulting build</li>
-								<li>4GB for two target-files for a device to optionally generate incremental updates</li>
+								<li>Source Code: 200GB + ~3GB per device</li>
+								<li>~100GB per device for building</li>
+								<li>~10GB per device for optional ccache</li>
+								<li>~1-4GB for each resulting build</li>
+								<li>~4-8GB for two target-files for a device to optionally generate incremental updates</li>
 								<li>Cheap: ~$60 2TB 7200RPM HDD (non-SMR)</li>
 								<li>Fast: ~$120 1TB SSD (MLC/"enterprise" preferred)</li>
 								<li>If you plan on having multiple versions available btrfs+zstd:1+duperemove is strongly recommended.</li>
