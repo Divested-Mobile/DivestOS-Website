@@ -10,13 +10,13 @@
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. These devices typically are unable to be encrypted on the very first boot.</li>
 							<li>Devices with less than 2GB of RAM *will* likely out-of-memory more often than usual. [various]</li>
 							<li><strike>Fenix based browsers such as a 'Mull' or 'Fennec F-Droid' might cause a reboot on launch. Please report your device if it does to be fixed.</strike></li>
-							<li>IMS/VoLTE may or may not work. [upstream? deblobber?]</li>
+							<li>IMS/VoLTE may or may not work. [upstream? deblobber? carrier?]</li>
 							<li>Incremental updates will often fail to successfully apply on non update-engine devices. [releasetools]</li>
 							<li>MediaProvider error toast on some boots. [permission issue?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>Most devices will take longer to acquire a GPS lock. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
 							<li>Phone call audio is distored sometimes until speaker phone is toggled. [deblobber?]</li>
 							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
-							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w optional enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
+							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w (optional/required) enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
 							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
 							<li>'Storage Manager' is non-functional in some cases.</li>
 							<li>Older Unity based games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
@@ -26,6 +26,14 @@
 							<li>Block encrypted devices will fail to shutdown from secure boot screen on 18.1. Force power off via power button to workaround.</li>
 							<li>Bluetooth phone calls may not work.</li>
 							<li>Fingerprint readers may work inconsistently.</li>
+							<li>Mull is not installed by default, only an empty shim is. F-Droid will prompt you to "update" it on first run which will install it.</li>
+							<li>F-Droid will not suggest updates for Mull if the version on the official F-Droid repo is older than the DivestOS repo.</li>
+							<li>F-Droid will reset its database on the second start in rare cases.</li>
+							<li>The secondary user logout button on the lockscreen will overlap the unlock icon on some devices.</li>
+							<li>Disabling Storage Manager is strongly recommended, it may choose to delete your files after 90 days otherwise.</li>
+							<li>The Updater will show the currently installed update, this is expected.</li>
+							<li>If Seedvault is set to backup to a USB flash drive and it is later plugged in, the automatically started backup may fail. If so, you must invoke the backup manually.</li>
+							<li>Special permissions of apps may be randomly reset after reboots. This is an unknown and widespread issue affecting many other operating systems.</li>
 						</ul>
 						<h4 id="hdx-common">apollo/thor<a href="#hdx-common">¶</a></h4>
 						<ul>
@@ -84,7 +92,7 @@
 						</ul>
 						<h4 id="s3-common">i9300/i9305/S3<a href="#s3-common">¶</a></h4>
 						<ul>
-							<li>No web browsers open at all. [kernel? ram?]</li>
+							<li>No web browsers open at all. [kernel? memory?]</li>
 							<li>USB MTP is likely not functioning. [SELinux?]</li>
 							<li>NFC is likely not functioning. [SELinux?]</li>
 							<li>(reported) SIM card detection issues. Likely fixed in 2021-06 build. [SELinux]<a href="https://github.com/divestos/divestos/issues/1" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
@@ -127,15 +135,11 @@
 						<h4 id="pixel2">taimen/walleye<a href="#pixel2">¶</a></h4>
 						<ul>
 							<li>(reported) APN persistence issues. [???]</li>
+							<li>(reported) SIM detection issues. [???]</li>
 						</ul>
-						<h4 id="starlte">starlte<a href="#starlte">¶</a></h4>
+						<h4 id="starlte">star*lte<a href="#starlte">¶</a></h4>
 						<ul>
 							<li>Uses the stock /vendor partition, making many of the deblobber benefits unavailable.</li>
-						</ul>
-						<h4 id="vayu">vayu<a href="#vayu">¶</a></h4>
-						<ul>
-							<li>(reported) Audio playback issues. [???]</li>
-							<li>(reported) Microphone issues. [???]</li>
 						</ul>
 					</div>
 					<div class="section" id="hardware">
