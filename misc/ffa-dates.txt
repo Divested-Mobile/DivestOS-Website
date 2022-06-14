@@ -123,7 +123,7 @@ Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Patch Co
 
 Note:
 - Not all security issues/patches impact the Android version
-- Most security advisorises collapse many security issues into one
+- Most security advisories collapse many security issues into one
 - If anyone wants to make a merge request that sorts the columns, it'd be much appreciated.
 
 Useful links:

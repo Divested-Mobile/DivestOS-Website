@@ -109,7 +109,7 @@ Note:
   Furthermore most users of the above operating systems will install Google Apps if not included.
 - This document is only correct in the context that Google Apps are *not* used.
 - If you want your OS added/removed, please ask.
-- This tracks dates the version was commited to a repository, *not* the date it was pushed out to users or shipped in a system image.
+- This tracks dates the version was committed to a repository, *not* the date it was pushed out to users or shipped in a system image.
   - DivestOS pushes updates same day via an F-Droid repository.
   - GrapheneOS ships them out rapidly within a day or two via their Seamless Updater.
   - CalyxOS pushes updates via an F-Droid repository.
