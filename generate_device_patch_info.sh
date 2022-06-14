@@ -25,6 +25,9 @@ getVendorPatchLevel() {
 	if [ -z "$level" ] && [ -f "$devicePath/system.prop" ]; then
 		level=$(sed -n '/vendor_security_patch/s/.*=//p' $devicePath/system.prop);
 	fi;
+	if [ "$level" = '$(BOOT_SECURITY_PATCH)' ]; then
+		level=$(sed -n '/BOOT_SECURITY_PATCH :=/s/.*= //p' $devicePath/*.mk);
+	fi;
 	if [ -z "$level" ]; then
 		level="Unknown";
 	fi;
@@ -38,7 +41,7 @@ getVendorPatchLevel() {
 		elif [ $1 == "LineageOS-18.1" ]; then
 			level="2021-10";
 		elif [ $1 == "LineageOS-19.1" ]; then
-			level="2022-05";
+			level="2022-06";
 		else
 			level="Unknown";
 		fi;

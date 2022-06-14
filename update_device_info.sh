@@ -33,6 +33,7 @@ echo "2018-04-05" > xz2c/releasedate;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 7 > alioth/status-18.1;
+echo 1 > alioth/status-19.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > alioth/bootloader_information;
 echo "2021-03-04" > alioth/releasedate;
 
@@ -592,6 +593,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
 echo 7 > vayu/status-18.1;
+echo 1 > vayu/status-19.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;

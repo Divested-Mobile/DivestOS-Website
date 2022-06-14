@@ -3,6 +3,51 @@
 					<p>Occasional updates about DivestOS.</p>
 					<h2>Upcoming News</h2>
 					<?php print(file_get_contents("pages/news-future.html")); ?>
+					<h2>Current News</h2>
+					<div class="section" id="2022-06">
+						<h3>June 14th 2022 Update<a href="#2022-06">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>19.1 release candidate #1 June ASB builds were published on June 14th.</li>
+							<li>18.1 release candidate #1 June ASB builds were published on June 13th.</li>
+							<li>14.1 and 17.1 release candidate #1 June ASB builds were published on June 12th.</li>
+							<li>15.1, and 16.0 rebuilds were published on June 12th.</li>
+							<li>Passwords up to 64 characters are now supported thanks to a patch from GrapheneOS.</li>
+							<li>There was a report of not being able to successfully boot flounder with this update, however cannot be reproduced by us.</li>
+							<li>18.1 rebuilds were published on June 7th.</li>
+							<li>14.1, 15.1, 16.0, and 17.1 rebuilds were published on June 5th.</li>
+							<li>18.1 and 19.1 now have unconditional AMOLED burn-in protection for the status and navigation bars, thanks to old patches from @arter97.</li>
+							<li>Page sanitization was found missing from nearly all 3.18 kernels, and has been added.</li>
+							<li>SLUB debugging has been disabled to reduce memory fragmentation and restore performance. This comes at the loss of sanity checks and redzoning on all kernels, along with SLUB sanitization on 3.0, 3.4 and 4.4 kernels. Redzoning was also suspected to cause boot issues on numerous devices.</li>
+							<li>copy-partitions.zip has been resigned for all devices to fix incompatibility with 19.1 recoveries not containing -extra keys.</li>
+							<li>14.1 rebuilds were published on May 27th.</li>
+							<li>More (Google Pixel specific) proprietary blobs have been removed.</li>
+							<li>ZRAM enabled devices now use 75% of RAM on 1GB devices and 50% of RAM on all other devices.</li>
+							<li>Private DNS options are now available on 19.1</li>
+							<li>Location indicator spam on 19.1 has been fixed.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>davinci and z2_plus both failed to compile this cycle.</li>
+						</ul>
+						<h4>Roster Updates</h4>
+						<ul>
+							<li>A handful of new 19.1 devices, untested: instantnoodle, instantnoodlep, kebab, lemonade, lemonadep</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Updated Mulch (WebView) to Chromium 102.0.5005.59-1, 102.0.5005.78-1, 102.0.5005.99-1, and 102.0.5005.125-1, has 32, 0, 0, and 7 security fixes respectively.</li>
+							<li>Updated Mull to 100.1.3, 100.3.0, 101.1.0, 101.1.1, and 101.2.0, has 0, 2, 13, 0, and 0 security fixes respectively.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The Functionality Tables page now documents notes and quirks of the system.</li>
+							<li>Screenshots have been updated to showcase 19.1.</li>
+							<li>Future news is now always shown as upcoming news.</li>
+							<li>Troubleshooting page now has commands for collecting logs.</li>
+							<li>FAQ page has received many improvements.</li>
+						</ul>
+					</div>
 					<h2>Past News</h2>
 					<div class="section" id="2022-05">
 						<h3>May 11th 2022 Update<a href="#2022-05">¶</a></h3>

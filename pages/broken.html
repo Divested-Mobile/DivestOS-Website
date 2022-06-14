@@ -11,14 +11,11 @@
 							<li>Compiling is non-trivial and has many undocumented steps.</li>
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. These devices typically are unable to be encrypted on the very first boot.</li>
 							<li>Encryption cannot be disabled.</li>
-							<li>`fastboot update xyz.zip` does not replace your bootloader.</li>
 							<li>Fonts cannot be easily added to the system.</li>
-							<li>Google Apps or microG or Sandboxed Play Services are NOT supporte.</li>
-							<li>If you encounter a serious issue, wiping is almost never the solution.</li>
+							<li>Google Apps or microG or Sandboxed Play Services are NOT supported.</li>
 							<li>If your device is not detected by your computer use a USB 2.0 port. If you don't have any USB 2.0 ports use a USB 2.0 hub. If that still doesn't work try another cable.</li>
 							<li>IMS/VoLTE may or may not work. [upstream? deblobber? carrier?]</li>
 							<li>Incremental updates will often fail to successfully apply on non update-engine devices. [releasetools]</li>
-							<li>In-place upgrades are supported whenever possible.</li>
 							<li>It is strongly recommended to leave OEM unlocked enabled to allow for recovery if unbootable and locked.</li>
 							<li>Other WebView providers such as Bromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.</li>
 							<li>Remote desktop host apps like AnyDesk and TeamViewer are not supported. They rely on special system permissions enabled by vendors signing helper apps on their behalf.</li>
@@ -35,8 +32,6 @@
 							<li>Torrents will not be offered for downloads/updates. They don't work well on mobile and they leak IP addresses of users.</li>
 							<li>To use gmail.com with FairEmail you must use an App Password.</li>
 							<li>When sideloading a final percent of 90-94% is expected and not signs of failure.</li>
-							<li>Wiping cache does absolutely nothing.</li>
-							<li>You can still install updates when locked.</li>
 						</ul>
 						<h4 id="papercuts">Papercuts<a href="#papercuts">¶</a></h4>
 						<ul>
@@ -52,7 +47,7 @@
 							<li>If you have banking or game apps that do not work, ensure the `Enable native code debugging` toggle is enabled in Settings > Security. Such apps use ptrace as a form of crude anti-tamper mechanism.</li>
 							<li>MediaProvider error toast on some boots. [permission issue?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>Most devices will take up to the full 12.5 minutes to acquire a GPS lock. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
-							<li>Mull has WebAssembly disabled by default. This is often used for web apps Go to about:config and change javascript.options.wasm to true if needed, this is however a security risk.</li>
+							<li>Mull has WebAssembly disabled by default. This is often used for web apps. Go to about:config and change javascript.options.wasm to true if needed, this is however a security risk.</li>
 							<li>Mull has WebGL disabled by default. This is often used for games and maps. Go to about:config and change webgl.disabled to false if needed, this is however a privacy risk.</li>
 							<li>Mull has WebRTC disabled by default. This is often used for audio/video calls. Go to about:config and change media.peerconnection.enabled to true if needed, this is however a privacy risk.</li>
 							<li>Mull is not installed by default, only an empty shim is. F-Droid will prompt you to "update" it on first run which will install it.</li>
@@ -60,6 +55,7 @@
 							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
 							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
 							<li>Simple Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround.</li>
+							<li>The Changelog link in the Updater links to the LineageOS changelog for your device. However devices Lineage no longer compiles for don't have such a page.</li>
 							<li>The secondary user logout button on the lockscreen will overlap the unlock icon on some devices.</li>
 							<li>TWRP often cannot decrypt/unlock /data.</li>
 							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
