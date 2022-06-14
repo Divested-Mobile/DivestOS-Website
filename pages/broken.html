@@ -3,70 +3,75 @@
 					<p>A list of what doesn't work on DivestOS</p>
 					<div class="section" id="system">
 						<h3>System<a href="#system">¶</a></h3>
-						<h4 id="all">General Issues/Quirks<a href="#all">¶</a></h4>
+						<h4 id="notes">Notes<a href="#notes">¶</a></h4>
 						<ul>
-							<li><strike>'Developer options' will crash on 15.1 due to null PDB handle. Likely fixed in late 2022-02 builds</strike></li>
+							<li>16.0 and higher will warn when running an app that is not targeting Android 9.0 API for the first time.</li>
+							<li>17.1 and higher will warn when running a 32-bit app for the first time on a 64-bit device. Sometimes this warning is not accurate.</li>
+							<li>Changing device identifiers like the IMEI is NOT supported and is illegal in many countries.</li>
+							<li>Compiling is non-trivial and has many undocumented steps.</li>
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. These devices typically are unable to be encrypted on the very first boot.</li>
-							<li>Devices with less than 2GB of RAM *will* likely out-of-memory more often than usual. [various]</li>
-							<li><strike>Fenix based browsers such as a 'Mull' or 'Fennec F-Droid' might cause a reboot on launch. Please report your device if it does to be fixed.</strike></li>
+							<li>Encryption cannot be disabled.</li>
+							<li>`fastboot update xyz.zip` does not replace your bootloader.</li>
+							<li>Fonts cannot be easily added to the system.</li>
+							<li>Google Apps or microG or Sandboxed Play Services are NOT supporte.</li>
+							<li>If you encounter a serious issue, wiping is almost never the solution.</li>
+							<li>If your device is not detected by your computer use a USB 2.0 port. If you don't have any USB 2.0 ports use a USB 2.0 hub. If that still doesn't work try another cable.</li>
 							<li>IMS/VoLTE may or may not work. [upstream? deblobber? carrier?]</li>
 							<li>Incremental updates will often fail to successfully apply on non update-engine devices. [releasetools]</li>
-							<li>MediaProvider error toast on some boots. [permission issue?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
-							<li>Most devices will take longer to acquire a GPS lock. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
-							<li>Phone call audio is distorted sometimes until speaker phone is toggled. [deblobber?]</li>
-							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
-							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w (optional/required) enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
-							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
+							<li>In-place upgrades are supported whenever possible.</li>
+							<li>It is strongly recommended to leave OEM unlocked enabled to allow for recovery if unbootable and locked.</li>
+							<li>Other WebView providers such as Bromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.</li>
+							<li>Remote desktop host apps like AnyDesk and TeamViewer are not supported. They rely on special system permissions enabled by vendors signing helper apps on their behalf.</li>
+							<li>SELinux is always enforcing and cannot be set permissive.</li>
+							<li>Sensors Off toggle on 17.1/18.1 also turns off the camera and microphone.</li>
+							<li>Signature spoofing is NOT supported.</li>
+							<li>SIM ToolKit is not included and may cause issues with some carriers. STK however can be installed afterwards, you can request it if you need it.</li>
 							<li>'Storage Manager' is non-functional in some cases.</li>
-							<li>Older Unity based games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
-							<li>When `Private DNS` is enabled for the system, Chromium based browsers will automatically handle DNS themself bypassing the /etc/hosts based blocking function. Disable `Secure DNS` to work around.</li>
-							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
-							<li>Simple Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround.</li>
+							<li>The ADB toggle in developer options has absolutely zero effect on whether or not you can use ADB in recovery.</li>
+							<li>The default password for Android encryption is `defaultpassword`.</li>
+							<li>The DivestOS recovery is automatically installed on supported devices each successful boot. If you externally change it, you must not boot the system to use it.</li>
+							<li>The Updater may not show very recent updates due to the server's 12 hour cache.</li>
+							<li>The Updater will show the currently installed update, this is expected.</li>
+							<li>Torrents will not be offered for downloads/updates. They don't work well on mobile and they leak IP addresses of users.</li>
+							<li>To use gmail.com with FairEmail you must use an App Password.</li>
+							<li>When sideloading a final percent of 90-94% is expected and not signs of failure.</li>
+							<li>Wiping cache does absolutely nothing.</li>
+							<li>You can still install updates when locked.</li>
+						</ul>
+						<h4 id="papercuts">Papercuts<a href="#papercuts">¶</a></h4>
+						<ul>
 							<li>Block encrypted devices will fail to shutdown from secure boot screen on 18.1. Force power off via power button to workaround.</li>
 							<li>Bluetooth phone calls may not work.</li>
-							<li>Fingerprint readers may work inconsistently.</li>
-							<li><mark>Note: the below lines were recently haphazardly added and will be corrected/sorted later</mark></li>
-							<li>Mull is not installed by default, only an empty shim is. F-Droid will prompt you to "update" it on first run which will install it.</li>
+							<li>Devices with less than 2GB of RAM *will* likely out-of-memory more often than usual. [various]</li>
+							<li>Disabling Storage Manager is strongly recommended, it may choose to delete your files after 90 days otherwise.</li>
 							<li>F-Droid will not suggest updates for Mull if the version on the official F-Droid repo is older than the DivestOS repo.</li>
 							<li>F-Droid will reset its database on the second start in rare cases.</li>
-							<li>The secondary user logout button on the lockscreen will overlap the unlock icon on some devices.</li>
-							<li>Disabling Storage Manager is strongly recommended, it may choose to delete your files after 90 days otherwise.</li>
-							<li>The Updater will show the currently installed update, this is expected.</li>
-							<li>If Seedvault is set to backup to a USB flash drive and it is later plugged in, the automatically started backup may fail. If so, you must invoke the backup manually.</li>
-							<li>Special permissions of apps may be randomly reset after reboots. This is an unknown and widespread issue affecting many other operating systems.</li>
-							<li>The Updater may not show very recent updates due to the server's 12 hour cache.</li>
-							<li>Encryption cannot be disabled</li>
-							<li>The default password for Android encryption is `defaultpassword`</li>
-							<li>TWRP often cannot decrypt/unlock /data</li>
-							<li>If your device is not detected by your computer use a USB 2.0 port. If you don't have any USB 2.0 ports use a USB 2.0 hub. If that still doesn't work try another cable.</li>
-							<li>Google Apps or microG or Sandboxed Play Services are NOT supported</li>
-							<li>Signature spoofing is NOT supported</li>
-							<li>Compiling is non-trivial and has many undocumented steps</li>
-							<li>SIM ToolKit is not included and may cause issues with some carriers. STK however can be installed afterwards, you can request it if you need it.</li>
-							<li>It is strongly recommended to leave OEM unlocked enabled to allow for recovery if unbootable and locked.</li>
-							<li>Remote desktop host apps like AnyDesk and TeamViewer are not supported. They rely on special system permissions enabled by vendors signing helper apps on their behalf.</li>
-							<li>SELinux is always enforcing and cannot be set permissive</li>
-							<li>17.1 and higher will warn when running a 32-bit app for the first time on a 64-bit device. Sometimes this warning is not accurate.</li>
-							<li>16.0 and higher will warn when running an app that is not targeting Android 9.0 API for the first time.</li>
-							<li>Sensors Off toggle on 17.1/18.1 also turns off the camera and microphone</li>
-							<li>In-place upgrades are supported whenever possible</li>
-							<li>You can still install updates when locked</li>
-							<li>If you encounter a serious issue, wiping is almost never the solution</li>
-							<li>GPS can take up to 12.5 minutes to acquire a fix/lock</li>
-							<li>The ADB toggle in developer options has absolutely zero effect on whether or not you can use ADB in recovery.</li>
-							<li>To use gmail.com with FairEmail you must use an App Password</li>
-							<li>`fastboot update xyz.zip` does not replace your bootloader</li>
-							<li>Fonts cannot be easily added to the system</li>
-							<li>If you have (banking) apps that do not work, ensure the `Enable native code debugging` toggle is enabled in Settings > Security</li>
-							<li>Torrents will not be offered for downloads/updates. They don't work well on mobile and they leak IP addresses of users.</li>
-							<li>Mull has WebGL disabled by default, go to about:config and change webgl.disabled to false if needed. This is however a privacy risk</li>
-							<li>Mull has WebAssembly disabled by default, go to about:config and change javascript.options.wasm to true if needed. This is however a security risk</li>
-							<li>Changing device identifiers like the IMEI is NOT supported and is illegal in many countries</li>
-							<li>Other WebView providers such as Bromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.</li>
-							<li>The DivestOS recovery is automatically installed on supported devices each successful boot. If you externally change it, you must not boot the system to use it.</li>
-							<li>Wiping cache does absolutely nothing.</li>
-							<li>When sideloading a final percent of 90-94% is expected and not signs of failure.</li>
+							<li>Fingerprint readers may work inconsistently.</li>
 							<li>If `fastboot update` fails on identifying device you can extract the zip and `fastboot flash` each partition manually.</li>
+							<li>If Seedvault is set to backup to a USB flash drive and it is later plugged in, the automatically started backup may fail. If so, you must invoke the backup manually.</li>
+							<li>If you have banking or game apps that do not work, ensure the `Enable native code debugging` toggle is enabled in Settings > Security. Such apps use ptrace as a form of crude anti-tamper mechanism.</li>
+							<li>MediaProvider error toast on some boots. [permission issue?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>Most devices will take up to the full 12.5 minutes to acquire a GPS lock. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
+							<li>Mull has WebAssembly disabled by default. This is often used for web apps Go to about:config and change javascript.options.wasm to true if needed, this is however a security risk.</li>
+							<li>Mull has WebGL disabled by default. This is often used for games and maps. Go to about:config and change webgl.disabled to false if needed, this is however a privacy risk.</li>
+							<li>Mull has WebRTC disabled by default. This is often used for audio/video calls. Go to about:config and change media.peerconnection.enabled to true if needed, this is however a privacy risk.</li>
+							<li>Mull is not installed by default, only an empty shim is. F-Droid will prompt you to "update" it on first run which will install it.</li>
+							<li>Phone call audio is distorted sometimes until speaker phone is toggled. [deblobber?]</li>
+							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
+							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
+							<li>Simple Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround.</li>
+							<li>The secondary user logout button on the lockscreen will overlap the unlock icon on some devices.</li>
+							<li>TWRP often cannot decrypt/unlock /data.</li>
+							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>When `Private DNS` is enabled for the system, Chromium based browsers will automatically handle DNS themself bypassing the /etc/hosts based blocking function. Disable `Secure DNS` to work around.</li>
+						</ul>
+						<h4 id="bugs">Bugs<a href="#bugs">¶</a></h4>
+						<ul>
+							<li>Older Unity engine games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w (optional/required) enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
+							<li>Special permissions of apps may be randomly reset after reboots. This is an unknown and widespread issue affecting many other operating systems.</li>
+							<li><strike>'Developer options' will crash on 15.1 due to null PDB handle. Likely fixed in late 2022-02 builds</strike></li>
+							<li><strike>Fenix based browsers such as a 'Mull' or 'Fennec F-Droid' might cause a reboot on launch. Please report your device if it does to be fixed.</strike></li>
 						</ul>
 					</div>
 					<div class="section" id="devices">
