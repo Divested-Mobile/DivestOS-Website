@@ -3,15 +3,7 @@
 					<p>Solutions to various problems</p>
 					<div class="section" id="general">
 						<h3>General Issues<a href="#general">¶</a></h3>
-
-						<h4>Commands for collecting logs</h4>
-						<ul>
-							<li>All errors: <code>adb logcat -b all -d *:E</code></li>
-							<li>SELinux denials: <code>adb logcat -b all -d | grep -i audit</code></li>
-							<li>GPS issues: <code>adb logcat -b all -d | grep -i -e locsvc -e izat -e gps -e gnss -e location -e xtra</code></li>
-							<li>Radio issues: <code>adb logcat -b all -d | grep -i -e radio -e modem -e network -e connect -e phone -e tele</code></li>
-							<li>Library issues: <code>adb logcat -b all -d | grep -i -e dlopen</code></li>
-						</ul>
+						<p>Please see the <a href="index.php?page=bug_reporting">bug reporting</a> page if necessary.</>
 
 						<h4>Upon first install device gets stuck at 'Encrypting...' screen</h4>
 						<p>Most devices have duplicate fstab entries in order to allow the user to choose between an ext4 or F2FS /data partition. If you improperly wiped your device beforehand (erased instead of formatted /data) the system won't know what to do and will just hang there. Simply format /data via TWRP or fastboot to fix.</p>

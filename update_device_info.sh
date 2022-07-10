@@ -38,7 +38,7 @@ echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > alioth/bootloader_information;
 echo "2021-03-04" > alioth/releasedate;
 
 echo "Yandex Phone" > amber/friendlyName;
-echo 2 > amber/status-17.1;
+echo 8 > amber/status-17.1;
 echo -e "Fastboot (Yandex)\nUnknown\n2.0" > amber/bootloader_information;
 echo "2018-12-05" > amber/releasedate;
 
