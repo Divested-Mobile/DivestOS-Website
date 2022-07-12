@@ -112,14 +112,16 @@ createTable() {
 	echo -e '<tr>\n\t<td data-label="Device">'$name$allGreen'</td>\n\t<td data-label="Version" '$versionStyle'>'$versionStripped'</td>\n\t<td data-label="V-ASB" '$vASBStyle'>'$vASB'</td>\n\t<td data-label="Kernel" '$kernelStyle'><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer" style="color: inherit; text-decoration: none;">'$kernelVersion'</td>\n</tr>';
 }
 
-createTable akari LineageOS-18.1 sony/tama-common sony/sdm845 sony/akari;
+createTable akari LineageOS-18.1 sony/tama-common sony/sdm845 sony/akari; #superseded
+createTable akari LineageOS-19.1 sony/tama-common sony/sdm845 sony/akari;
 createTable alioth LineageOS-18.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth; #superseded
 createTable alioth LineageOS-19.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 createTable angler LineageOS-15.1 huawei/angler huawei/angler;
 createTable apollo LineageOS-14.1 amazon/apollo amazon/hdx-common amazon/hdx-common;
 createTable aura LineageOS-19.1 razer/aura razer/sdm845;
-createTable aurora LineageOS-18.1 sony/tama-common sony/sdm845 sony/aurora;
+createTable aurora LineageOS-18.1 sony/tama-common sony/sdm845 sony/aurora; #superseded
+createTable aurora LineageOS-19.1 sony/tama-common sony/sdm845 sony/aurora;
 createTable avicii LineageOS-17.1 oneplus/avicii oneplus/sm7250;
 createTable axon7 LineageOS-15.1 zte/axon7 zte/msm8996;
 createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974 oppo/common oppo/msm8974-common;
@@ -163,7 +165,8 @@ createTable flounder LineageOS-15.1 htc/flounder htc/flounder;
 createTable flounder_lte LineageOS-15.1 htc/flounder_lte htc/flounder htc/flounder;
 createTable flox LineageOS-18.1 asus/flox google/msm;
 createTable FP2 LineageOS-18.1 fairphone/FP2 fairphone/msm8974;
-createTable FP3 LineageOS-18.1 fairphone/FP3 fairphone/sdm632;
+createTable FP3 LineageOS-18.1 fairphone/FP3 fairphone/sdm632; #superseded
+createTable FP3 LineageOS-19.1 fairphone/FP3 fairphone/sdm632;
 createTable fugu LineageOS-15.1 asus/fugu asus/fugu;
 createTable griffin LineageOS-17.1 motorola/griffin motorola/msm8996;
 createTable grouper LineageOS-14.1 asus/grouper asus/grouper;
@@ -252,7 +255,8 @@ createTable voyager LineageOS-19.1 sony/nile-common sony/sdm660 sony/voyager;
 createTable vs985 LineageOS-18.1 lge/g3-common lge/g3 lge/vs985;
 createTable vs995 LineageOS-18.1 lge/v20-common lge/msm8996 lge/msm8996-common lge/vs995;
 createTable walleye LineageOS-19.1 google/wahoo google/wahoo google/muskie;
-createTable xz2c LineageOS-18.1 sony/tama-common sony/sdm845 sony/xz2c;
+createTable xz2c LineageOS-18.1 sony/tama-common sony/sdm845 sony/xz2c; #superseded
+createTable xz2c LineageOS-19.1 sony/tama-common sony/sdm845 sony/xz2c;
 createTable yellowstone LineageOS-16.0 google/yellowstone google/yellowstone;
 createTable Z00T LineageOS-15.1 asus/msm8916-common asus/msm8916 asus/Z00T;
 createTable z2_plus LineageOS-18.1 zuk/msm8996-common zuk/msm8996 zuk/z2_plus;
