@@ -5,11 +5,13 @@
 						<h3>Apps<a href="#appIssues">¶</a></h3>
 						<h4 id="mull">Mull<a href="#mull">¶</a></h4>
 						<ul>
-							<li>Mull has strict certificate revocation checks. The CA revocation servers are frequently down/blocked/inaccessible and will result in a "Secure Connection Failed" error. Go to about:config and change security.OCSP.require to false, this is however a security and privacy risk.</li>
-							<li>Mull has stripped referrers. This often breaks loading of images on websites with hotlink protection. Go to about:config and change network.http.referer.XOriginPolicy to 1 or 0 until functional, this is however a privacy risk.</li>
-							<li>Mull has WebAssembly disabled by default. This is often used for web apps. Go to about:config and change javascript.options.wasm to true if needed, this is however a security risk.</li>
-							<li>Mull has WebGL disabled by default. This is often used for games and maps. Go to about:config and change webgl.disabled to false if needed, this is however a privacy risk.</li>
-							<li>Mull has WebRTC disabled by default. This is often used for audio/video calls. Go to about:config and change media.peerconnection.enabled to true if needed, this is however a privacy risk.</li>
+							<li>Dark mode for websites is disabled due to resist fingerprinting. Please do not disable RFP.</li>
+							<li>Refresh rate is capped to 60hz due to resist fingerprinting. Please do not disable RFP.</li>
+							<li>Mull has strict certificate revocation checks. The CA revocation servers are frequently down/blocked/inaccessible and will result in a "Secure Connection Failed" error. Go to about:config and change <code>security.OCSP.require</code> to false, this is however a security and privacy risk.</li>
+							<li>Mull has stripped referrers. This often breaks loading of images on websites with hotlink protection. Go to about:config and change <code>network.http.referer.XOriginPolicy</code> to 1, this is however a privacy risk.</li>
+							<li>Mull has WebAssembly disabled by default. This is often used for web apps. Go to about:config and change <code>javascript.options.wasm</code> to true if needed, this is however a security risk.</li>
+							<li>Mull has WebGL disabled by default. This is often used for games and maps. Go to about:config and change <code>webgl.disabled</code> to false if needed, this is however a privacy risk.</li>
+							<li>Mull has WebRTC disabled by default. This is often used for audio/video calls. Go to about:config and change <code>media.peerconnection.enabled</code> to true if needed, this is however a privacy risk.</li>
 						</ul>
 						<h4 id="others">Others<a href="#others">¶</a></h4>
 						<ul>
