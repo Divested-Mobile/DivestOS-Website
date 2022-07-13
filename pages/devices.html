@@ -61,7 +61,7 @@
 			$cacheKey = "DivestOS+devices.php+base:" . $base . "+version:" . $version;
 			if(($result = getRedis()->get($cacheKey)) == false) {
 				$result = getDevices($base, $rootdir, $realRootdir, $devices, $version);
-				getRedis()->setEx($cacheKey, 7200, $result); //2 hours
+				getRedis()->setEx($cacheKey, 3600, $result); //1 hour
 			}
 			return $result;
 		} else {
@@ -142,7 +142,11 @@
 							$statusFile = $statusFileGeneric;
 						}
 						unset($statusFileGeneric); unset($statusFileVersioned);
-						list($color, $statusMessage) = getStatus(file_get_contents($statusFile), $outdated);
+						if(file_exists($statusFile)) {
+							list($color, $statusMessage) = getStatus(file_get_contents($statusFile), $outdated);
+						} else {
+							list($color, $statusMessage) = getStatus(false, $outdated);
+						}
 						unset($statusFile);
 						unset($outdated);
 						$status = "<li style=\"color: #" . $color . ";\">Status: " . $statusMessage . "</li>";

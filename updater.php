@@ -73,7 +73,7 @@ function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 		}
 		if(($result = $redis->get($cacheKey)) == false) {
 			$result = getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
-			$redis->setEx($cacheKey, 43200, $result); //12 hours
+			$redis->setEx($cacheKey, 3600, $result); //1 hour
 		}
 		$redis->close();
 		return $result;
