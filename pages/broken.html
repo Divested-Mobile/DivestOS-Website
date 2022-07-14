@@ -25,25 +25,30 @@
 					<hr>
 					<div class="section" id="system">
 						<h3>System<a href="#system">¶</a></h3>
+						<h4 id="unsupported">Not Supported<a href="#unsupported">¶</a></h4>
+						<ul>
+							<li>Changing device identifiers like the IMEI is NOT supported and is illegal in many countries.</li>
+							<li>Encryption cannot be disabled.</li>
+							<li>Fonts cannot be easily added to the system.</li>
+							<li>Google Apps or microG or Sandboxed Play Services are NOT supported.</li>
+							<li>Other WebView providers such as Bromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.</li>
+							<li>Remote desktop host apps like AnyDesk and TeamViewer are not supported. They rely on special system permissions enabled by vendors signing helper apps on their behalf.</li>
+							<li>Root is <a href="index.php?page=faq#rootSupport">NOT supported</a>.</li>
+							<li>SELinux is always enforcing and cannot be set permissive or disabled.</li>
+							<li>Signature spoofing is NOT supported.</li>
+							<li>Torrents will not be offered for downloads/updates. They don't work well on mobile and they leak IP addresses of users.</li>
+						</ul>
 						<h4 id="notes">Notes<a href="#notes">¶</a></h4>
 						<ul>
 							<li>16.0 and higher will warn when running an app that is not targeting Android 9.0 API for the first time.</li>
 							<li>17.1 and higher will warn when running a 32-bit app for the first time on a 64-bit device. Sometimes this warning is not accurate.</li>
-							<li>Changing device identifiers like the IMEI is NOT supported and is illegal in many countries.</li>
 							<li>Compiling is non-trivial and has many undocumented steps.</li>
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. These devices typically are unable to be encrypted on the very first boot.</li>
-							<li>Encryption cannot be disabled.</li>
-							<li>Fonts cannot be easily added to the system.</li>
-							<li>Google Apps or microG or Sandboxed Play Services are NOT supported.</li>
 							<li>If your device is not detected by your computer use a USB 2.0 port. If you don't have any USB 2.0 ports use a USB 2.0 hub. If that still doesn't work try another cable.</li>
 							<li>IMS/VoLTE may or may not work. [upstream? deblobber? carrier?]</li>
 							<li>Incremental updates will often fail to successfully apply on non update-engine devices. [releasetools]</li>
 							<li>It is strongly recommended to leave OEM unlocked enabled to allow for recovery if unbootable and locked.</li>
-							<li>Other WebView providers such as Bromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.</li>
-							<li>Remote desktop host apps like AnyDesk and TeamViewer are not supported. They rely on special system permissions enabled by vendors signing helper apps on their behalf.</li>
-							<li>SELinux is always enforcing and cannot be set permissive.</li>
 							<li>Sensors Off toggle on 17.1/18.1 also turns off the camera and microphone.</li>
-							<li>Signature spoofing is NOT supported.</li>
 							<li>SIM ToolKit is not included and may cause issues with some carriers. STK however can be installed afterwards, you can request it if you need it.</li>
 							<li>'Storage Manager' is non-functional in some cases.</li>
 							<li>The ADB toggle in developer options has absolutely zero effect on whether or not you can use ADB in recovery.</li>
@@ -52,7 +57,6 @@
 							<li>The 'enable native code debugging'/ptrace_scope toggle does nothing on devices without stacked YAMA, ie. kernels before 3.10.</li>
 							<li>The Updater may not show very recent updates due to the server's 12 hour cache.</li>
 							<li>The Updater will show the currently installed update, this is expected.</li>
-							<li>Torrents will not be offered for downloads/updates. They don't work well on mobile and they leak IP addresses of users.</li>
 							<li>When sideloading a final percent of 90-94% is expected and not signs of failure.</li>
 						</ul>
 						<h4 id="papercuts">Papercuts<a href="#papercuts">¶</a></h4>
