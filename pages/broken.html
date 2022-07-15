@@ -7,11 +7,12 @@
 						<ul>
 							<li>Dark mode for websites is disabled due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>Refresh rate is capped to 60hz due to resist fingerprinting. Please do not disable RFP.</li>
-							<li>Mull has strict certificate revocation checks. The CA revocation servers are frequently down/blocked/inaccessible and will result in a "Secure Connection Failed" error. Go to about:config and change <code>security.OCSP.require</code> to false, this is however a security and privacy risk.</li>
-							<li>Mull has stripped referrers. This often breaks loading of images on websites with hotlink protection. Go to about:config and change <code>network.http.referer.XOriginPolicy</code> to 1, this is however a privacy risk.</li>
-							<li>Mull has WebAssembly disabled by default. This is often used for web apps. Go to about:config and change <code>javascript.options.wasm</code> to true if needed, this is however a security risk.</li>
-							<li>Mull has WebGL disabled by default. This is often used for games and maps. Go to about:config and change <code>webgl.disabled</code> to false if needed, this is however a privacy risk.</li>
-							<li>Mull has WebRTC disabled by default. This is often used for audio/video calls. Go to about:config and change <code>media.peerconnection.enabled</code> to true if needed, this is however a privacy risk.</li>
+							<li>If audio/video content fails to play in private tabs navigate to <code>about:config</code> and change <code>browser.privatebrowsing.forceMediaMemoryCache</code> to false.</li>
+							<li>Mull has strict certificate revocation checks. The CA revocation servers are frequently down/blocked/inaccessible and will result in a "Secure Connection Failed" error. Navigate to <code>about:config</code> and change <code>security.OCSP.require</code> to false, this is however a security and privacy risk.</li>
+							<li>Mull has stripped referrers. This often breaks loading of images on websites with hotlink protection. Navigate to <code>about:config</code> and change <code>network.http.referer.XOriginPolicy</code> to 1, this is however a privacy risk.</li>
+							<li>Mull has WebAssembly disabled by default. This is often used for web apps. Navigate to <code>about:config</code> and change <code>javascript.options.wasm</code> to true if needed, this is however a security risk.</li>
+							<li>Mull has WebGL disabled by default. This is often used for games and maps. Navigate to <code>about:config</code> and change <code>webgl.disabled</code> to false if needed, this is however a privacy risk.</li>
+							<li>Mull has WebRTC disabled by default. This is often used for audio/video calls. Navigate to <code>about:config</code> and change <code>media.peerconnection.enabled</code> to true if needed, this is however a privacy risk.</li>
 						</ul>
 						<h4 id="others">Others<a href="#others">¶</a></h4>
 						<ul>
@@ -22,7 +23,6 @@
 							<li>Simple Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround.</li>
 						</ul>
 					</div>
-					<hr>
 					<div class="section" id="system">
 						<h3>System<a href="#system">¶</a></h3>
 						<h4 id="unsupported">Not Supported<a href="#unsupported">¶</a></h4>
@@ -89,7 +89,6 @@
 							<li><strike>Fenix based browsers such as a 'Mull' or 'Fennec F-Droid' might cause a reboot on launch. Please report your device if it does to be fixed.</strike></li>
 						</ul>
 					</div>
-					<hr>
 					<div class="section" id="devices">
 						<h3>Devices<a href="#devices">¶</a></h3>
 						<p>Devices listed as "Tested/Reported Working" on Downloads page will not be listed here if they are fully working as expected and do not have any quirks.</p>

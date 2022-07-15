@@ -1,7 +1,7 @@
 				<div class="card fluid">
 					<h2>Browser Comparison Table</h2>
 					<p>All of the available browsers have each of their own faults as documented in the table below.<br>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.</p>
-					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Fennec F-Droid is Fenix based, not Fennec based despite its name.</p>
+					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Fennec F-Droid <strong>is Fenix based, not Fennec based</strong> despite its name.</p>
 					<p>Both lists are sorted by order of recommendation, closer to the top the more we'd recommend.<br>For more detailed privacy related technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.<br>Release comparisons are also available for <a href="/misc/ffa-dates.txt" target="_blank">Firefox</a> and <a href="/misc/ch-dates.txt" target="_blank">Chromium</a>.</p>
 					<p>Per-site process isolation is a powerful security feature that seeks to limit exposure of a malicious website/script abusing a security vulnerability.<br>Firefox calls per-site process isolation <a href="https://wiki.mozilla.org/Project_Fission" target="_blank" rel="nofollow noopener noreferrer">Fission</a> and is enabled by default on desktop. Fission is not yet enabled by default on Android, and when manually enabled it results in a severely degraded/broken experience. Furthermore Firefox on Android does <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565196" target="_blank" rel="nofollow noopener noreferrer">not</a> take advantage of Android's <a href="https://developer.android.com/guide/topics/manifest/service-element" target="_blank" rel="nofollow noopener noreferrer">isolatedProcess</a> flag for completely sandboxing application services.<br>Standalone Chromium based browsers strictly isolate websites to their own process.</p>
 					<p>The goal of per-site data isolation is to prevent say a third party script from being able to store data and use that to track you across many websites, instead any data set will be keyed to the website it was set from. This concept is further detailed <a href="https://github.com/michaelkleber/privacy-model" target="_blank" rel="nofollow noopener noreferrer">here</a>.<br>Firefox calls per-site data isolation first party isolation (FPI) or enhanced tracking protection (ETP) strict/dynamic FPI. Fenix does not support dFPI yet, Focus however does.<br>Chromium calls per-site data isolation (network) state partitioning.</p>
@@ -22,7 +22,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td data-label="Name">Mull ★</td>
+									<td data-label="Name"><a href="index.php?page=our_apps#mull" target="_blank" rel="nofollow noopener noreferrer">Mull</a> ★</td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://gitlab.com/divested-mobile/mull-fenix/-/blob/master/fenix-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.com/divested-mobile/mull-fenix/-/blob/master/gecko-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -31,7 +31,7 @@
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Tor Browser ★</td>
+									<td data-label="Name"><a href="https://www.torproject.org" target="_blank" rel="nofollow noopener noreferrer">Tor Browser</a> ★</td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="https://gitlab.torproject.org/tpo/applications/fenix/-/blob/tor-browser-96.3.0-11.0-1/buildSrc/src/main/java/Dependencies.kt#L248" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.torproject.org/tpo/applications/fenix/-/commit/eb540c7ab1d4a924a79ddb70fdeb6184ff043657" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -40,7 +40,7 @@
 									<td data-label="Maintained">Within a month</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Fennec F-Droid</td>
+									<td data-label="Name"><a href="https://f-droid.org/en/packages/org.mozilla.fennec_fdroid" target="_blank" rel="nofollow noopener noreferrer">Fennec F-Droid</a> (Fenix)</td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://gitlab.com/relan/fennecbuild/-/blob/master/fenix-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">1</a>, <a href="https://gitlab.com/relan/fennecbuild/-/blob/master/gecko-liberate.patch" target="_blank" rel="nofollow noopener noreferrer">2</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -49,7 +49,7 @@
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Firefox</td>
+									<td data-label="Name"><a href="https://www.mozilla.org/en-US/firefox/" target="_blank" rel="nofollow noopener noreferrer">Firefox</a></td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
 									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -58,7 +58,7 @@
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Firefox Focus/Klar</td>
+									<td data-label="Name"><a href="https://www.mozilla.org/en-US/firefox/browsers/mobile/focus/" target="_blank" rel="nofollow noopener noreferrer">Firefox Focus/Klar</a></td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -67,7 +67,7 @@
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Iceraven</td>
+									<td data-label="Name"><a href="https://github.com/fork-maintainers/iceraven-browser" target="_blank" rel="nofollow noopener noreferrer">Iceraven</a></td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="/images/Iceraven-GMS.png" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -76,7 +76,7 @@
 									<td data-label="Maintained">Within two months</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Icecat (Fennec)</td>
+									<td data-label="Name"><a href="https://f-droid.org/packages/org.gnu.icecat" target="_blank" rel="nofollow noopener noreferrer">Icecat</a> (Fennec)</td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
 									<td data-label="Per-Site Data Isolation" style="color:#f44336;">No</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
@@ -103,7 +103,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td data-label="Name">Bromite ★</td>
+									<td data-label="Name"><a href="https://www.bromite.org" target="_blank" rel="nofollow noopener noreferrer">Bromite</a> ★</td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://github.com/bromite/bromite/blob/master/build/patches/Remove-binary-blob-integrations.patch" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
@@ -112,7 +112,7 @@
 									<td data-label="Maintained">Within two weeks</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Mulch ★</td>
+									<td data-label="Name"><a href="index.php?page=our_apps#mulch" target="_blank" rel="nofollow noopener noreferrer">Mulch</a> ★</td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
@@ -121,7 +121,7 @@
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Chromium</td>
+									<td data-label="Name"><a href="https://www.chromium.org/Home/" target="_blank" rel="nofollow noopener noreferrer">Chromium</a></td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
 									<td data-label="Per-Site Data Isolation" style="color:#FFC107;">Basic</td>
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
@@ -130,12 +130,12 @@
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Brave</td>
+									<td data-label="Name"><a href="https://brave.com" target="_blank" rel="nofollow noopener noreferrer">Brave</a></td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries: <a href="/images/Brave-GMS.png" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
-									<td data-label="Content Blocker" style="color:#4CAF50;">Yes</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">Strong</td>
 									<td data-label="Maintained">Yes</td>
 								</tr>
 							</tbody>
@@ -156,35 +156,35 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td data-label="Name">Privacy Browser</td>
+									<td data-label="Name"><a href="https://f-droid.org/packages/com.stoutner.privacybrowser.standard" target="_blank" rel="nofollow noopener noreferrer">Privacy Browser</a></td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
 									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 								</tr>
 								<tr>
-									<td data-label="Name">FOSS Browser</td>
+									<td data-label="Name"><a href="https://f-droid.org/packages/de.baumann.browser" target="_blank" rel="nofollow noopener noreferrer">FOSS Browser</a></td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
 									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 								</tr>
 								<tr>
-									<td data-label="Name">DuckDuckGo Browser</td>
+									<td data-label="Name"><a href="https://f-droid.org/packages/com.duckduckgo.mobile.android" target="_blank" rel="nofollow noopener noreferrer">DuckDuckGo Browser</a></td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
 									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Strong</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Lightning</td>
+									<td data-label="Name"><a href="https://f-droid.org/packages/acr.browser.lightning" target="_blank" rel="nofollow noopener noreferrer">Lightning</a></td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
 									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 								</tr>
 								<tr>
-									<td data-label="Name">Jelly</td>
+									<td data-label="Name"><a href="https://github.com/LineageOS/android_packages_apps_Jelly" target="_blank" rel="nofollow noopener noreferrer">Jelly</a></td>
 									<td data-label="FOSS" style="color:#4CAF50;">Yes</td>
 									<td data-label="Per-Site Data Isolation" style="color:#673AB7;">Very basic</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
