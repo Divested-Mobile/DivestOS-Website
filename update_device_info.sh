@@ -22,11 +22,11 @@ echo "Sony Xperia XZ2" > akari/friendlyName;
 echo "Sony Xperia XZ2 Premium" > aurora/friendlyName;
 echo "Sony Xperia XZ2 Compact" > xz2c/friendlyName;
 echo 4 > akari/status-18.1;
-echo 2 > akari/status-19.1;
+echo 1 > akari/status-19.1;
 echo 4 > aurora/status-18.1;
-echo 2 > aurora/status-19.1;
+echo 1 > aurora/status-19.1;
 echo 7 > xz2c/status-18.1;
-echo 2 > xz2c/status-19.1;
+echo 1 > xz2c/status-19.1;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > akari/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > aurora/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > xz2c/bootloader_information;
@@ -36,7 +36,7 @@ echo "2018-04-05" > xz2c/releasedate;
 
 echo "Xiaomi POCO F3 / Redmi K40 / Mi 11X" > alioth/friendlyName;
 echo 7 > alioth/status-18.1;
-echo 1 > alioth/status-19.1;
+echo 4 > alioth/status-19.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > alioth/bootloader_information;
 echo "2021-03-04" > alioth/releasedate;
 
@@ -239,6 +239,7 @@ echo "2015-12-01" > fp2/releasedate; #?
 
 echo "Fairphone 3" > fp3/friendlyName;
 echo 7 > fp3/status-18.1;
+echo 7 > fp3/status-19.1;
 echo -e "Fastboot\nReported Working\n2.0" > fp3/bootloader_information;
 echo "2019-09-03" > fp3/releasedate;
 
@@ -428,7 +429,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
 echo 7 > lmi/status-18.1;
-echo 1 > lmi/status-19.1;
+echo 7 > lmi/status-19.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > lmi/bootloader_information;
 
 echo "HTC One" > m7/friendlyName;
