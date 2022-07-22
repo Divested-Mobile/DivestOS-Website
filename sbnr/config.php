@@ -6,7 +6,7 @@ $SBNR_DOMAIN_ALLOWLIST = array($SBNR_DOMAIN_PRIMARY, "divestoseb5nncsydt7zzf5hrf
 $SBNR_GEN_ONE_PAGE = false;
 $SBNR_GEN_DARKMODE = false;
 $SBNR_CAPTCHA_STANDALONE_ENABLED = false;
-$SBNR_CACHABLE_PAGES = array("bootloader", "broken", "browsers", "build", "bug_reporting", "faq", "functionality_tables", "history", "home", "messengers", "network_connections", "news", "news-future", "our_apps", "patch_levels", "post_install", "privacy_policy", "recommended_apps", "saving_data", "screenshots", "technical_details", "terms_of_service", "troubleshooting", "verified_boot_hashes");
+$SBNR_CACHABLE_PAGES = array("bootloader", "broken", "browsers", "build", "bug_reporting", "community", "faq", "functionality_tables", "history", "home", "messengers", "network_connections", "news", "news-future", "our_apps", "patch_levels", "post_install", "privacy_policy", "recommended_apps", "saving_data", "screenshots", "technical_details", "terms_of_service", "troubleshooting", "verified_boot_hashes");
 
 //Footer
 $SBNR_FOOTER_LEGAL = true;
