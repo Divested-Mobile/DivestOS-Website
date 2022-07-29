@@ -1,0 +1,100 @@
+last updated: 2022/07/29
+
+Nice Aspects
+============
+- Publishes sources and largely develops in open
+- Largely credits the projects they fork
+- Friendly and active forum
+- Wide device support
+- Reasonable pricing for cloud service
+- Reasonable markup for device sales
+- Maybe the most successful company trying to sell an aftermarket mobile OS to the general public
+
+
+Web Browser
+===========
+- Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 113 known security vulnerabilities
+ - https://gitlab.e.foundation/e/os/browser/-/commit/453791f1afea6795a1312d9af7f4a061519609b0
+ - https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
+ - https://divestos.org/misc/ch-dates.txt
+
+- Disables the Bromite patch which enables use of HTTPS by default
+ - https://gitlab.e.foundation/e/os/browser/-/commit/f89382c8229a256ab6949dda75dce87e5ccb6def
+
+
+Advanced Privacy
+================
+- Routes users over Tor without actually mentioning it is Tor, only an "IP scrambler"
+
+- Ships an end-of-life version of Tor 0.4.4.6 from 2020/11/12
+ - https://gitlab.e.foundation/e/os/orbotservice/-/blob/e1cc6aef65eb646f347d28174a6b00840c1cb94d/build.gradle#L48
+ - https://blog.torproject.org/new-releases-tor-03512-0437-and-0446/
+ - https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/CoreTorReleases#end-of-life
+
+- Includes the proprietary Mapbox library
+ - https://gitlab.e.foundation/e/os/advanced-privacy/-/blob/3ca73e64ddd25c7c20eca2e4e0db77032db848c0/dependencies.gradle#L86
+ - https://github.com/mapbox/mapbox-gl-native-android/commit/165dd987cfc33bfb67ffa1ee09fe551b70e427f0
+
+
+PDF Viewer
+==========
+- Underlying PDF library is from 2018 and has at least 28 known security vulnerabilities
+ - https://gitlab.e.foundation/e/os/pdfviewer/-/blob/master/app/build.gradle#L100
+  - https://github.com/barteksc/AndroidPdfViewer
+   - https://github.com/barteksc/PdfiumAndroid
+ - https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=PDFium
+
+
+microG
+======
+- Phones home to Google out of box, despite being "degoogled"
+ - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L9
+
+- Enables Safetynet checks by default which downloads and executes obfuscated proprietary code from Google
+ - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L13
+
+
+System
+======
+- Uses test-keys for verified boot enablement
+ - A system with verified boot must boot yellow state with an aftermarket system
+ - The FP4 is known to trust test-keys by default
+ - /e/OS when booted on FP4 does not display yellow, meaning test-keys are in use
+  - https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/2
+
+- Includes proprietary Google Widevine DRM on nearly all devices
+ - https://gitlab.e.foundation/e/devices/android_device_fairphone_FP4/-/blob/c0117a4288fe1323bcd5b6cf490c1e3079701af0/proprietary-files.txt#L373-378
+ - Even advertises Netflix on the website, see the third carousel image in the third phone mockup down
+  - https://web.archive.org/web/20220720210209/https://e.foundation/e-os/
+
+- Directly uses non-vendored pool.ntp.org address for NTP
+ - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/38
+ - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/39
+ - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/37
+ - https://www.ntppool.org/en/vendors.html
+
+
+Device Sales
+============
+- Sells devices like the Samsung Galaxy S9 which lacks VoLTE under custom operating systems
+ - Many carriers are phasing out 2G/3G, making VoLTE mandatory for placing and receiving phone calls
+ - https://web.archive.org/web/20220720210035/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
+ - https://community.e.foundation/t/samsung-s9-currently-unusable-in-usa-without-volte/39255
+
+
+Weather (deprecated)
+====================
+- Performs requests over HTTP
+ - https://gitlab.e.foundation/e/os/Weather/-/blob/2c623c7a9b4a341dd3fb6a2545e84ebf850d780b/app/src/main/java/foundation/e/weather/utils/Constants.java#L73
+
+
+Not Covered (nuanced or needs research/sources)
+===============================================
+- The use of CleanAPK
+- The state of kernel security patching
+- The use/recommendation of TWRP for recovery
+- IMSI to SUPL
+- Which SUPL server is default?
+- Signature spoofing support, with no restrictions
+- Website requires JavaScript
+- E2EE isn't offered on their Nextcloud instance, citing data loss concerns
