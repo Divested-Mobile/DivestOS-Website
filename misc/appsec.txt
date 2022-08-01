@@ -41,6 +41,12 @@ Libraries:
 		- APV PDF Viewer 0.4.0, https://github.com/mpietrzak/apv/tree/a6510d26791fdd94baecaaf346dfc821e76bd8da/pdfview/deps
 		- PDF Reader 0.4.0, https://github.com/droidapps/pdfreader4Android/tree/6857aa422cf9bd26e992fecbc8090e0f49888e17
 		- VuDroid 1.4
+- PDF.js:
+	- Changelog: https://github.com/mozilla/pdf.js/releases
+	- PDF.js 1.5.188 from 2016-04-21
+		- Status: Has ~1 known security issues
+		- Dependent Apps:
+			- CuprumPDF v1.3.0, https://github.com/paride/CopperPDF/blob/v1.3.0/app/src/main/assets/pdf.js#L31
 - PDFBox
 	- CVEs: https://www.cvedetails.com/vulnerability-list/vendor_id-45/product_id-33936/Apache-Pdfbox.html
 	- com.tom-roush:pdfbox-android:2.0.1.0 using PDFBox 2.0.1 from 2016-04-22
