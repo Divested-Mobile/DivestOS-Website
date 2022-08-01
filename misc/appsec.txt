@@ -42,7 +42,7 @@ last updated: 2022/08/01
 - Various F-Droid apps using WebRTC@M86 from 2020-08-27
 	Status: Has ~10 known security issues
 	Impacted apps: Conversations 2.10.2.1+fcr, Quicksy 2.10.2.1+fcr, Snikket 2.10.2+fcr, CWeb 0.1.6+free, Monocles Chat 1.5.1
-	Impacted apps with an even older WebRTC library: Blabber.im 3.0.8 using M79, CSipSimple 1.02.03-2459 using ???
+	Impacted apps with an even older WebRTC library: Blabber.im 3.0.8 using M79, CSipSimple 1.02.03-2459 using M56
 	Dependency Changelog: https://groups.google.com/g/discuss-webrtc/search?q=psa%20release%20notes
 	Dependency Changelog (old): https://webrtc.github.io/webrtc-org/release-notes/
 	Security Issue(s): https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=chrom%20webrtc
