@@ -1,4 +1,4 @@
-last updated: 2022/07/27
+last updated: 2022/07/31
 
 Chromium History
 ================
@@ -106,12 +106,13 @@ AOSP related:
 - AOSP, 10		74.0.3729.186				https://android.googlesource.com/platform/external/chromium-webview/+log/61ed7b619808827dd73d9bdd44efc5f87a2b769b
 - AOSP, 11		83.0.4103.120				https://android.googlesource.com/platform/external/chromium-webview/+log/7a2388596635621f1c70fc1c7bc288435ba1dcf7
 - AOSP, 12		91.0.4472.114				https://android.googlesource.com/platform/external/chromium-webview/+log/c8187ca9e2dd5fd69f108c67e9aea44be37fb4e6
-- ArrowOS, 12		AOSP prebuilts				https://github.com/ArrowOS/android_manifest/blob/arrow-12.0/default.xml
-- DotOS, 11/12		AOSP prebuilts				https://github.com/DotOS/manifest
-- HavocOS, 11/12	AOSP prebuilts				https://github.com/Havoc-OS/android_manifest
-- Paranoid Android, 12	AOSP prebuilts				https://github.com/AOSPA/manifest
-- ProtonAOSP, 12	AOSP prebuilts				https://github.com/ProtonAOSP/android_manifest
-- StagOS, 11/12		AOSP prebuilts				https://github.com/StagOS/manifest
+- AOSP, 12.1		95.0.4638.74				https://android.googlesource.com/platform/external/chromium-webview/+/3a8d2089900522ca542c39055d51b08188fb11cb
+- ArrowOS, 12.1		AOSP prebuilts				https://github.com/ArrowOS/android_manifest/blob/arrow-12.1/default.xml
+- DotOS, 11/12.1	AOSP prebuilts				https://github.com/DotOS/manifest
+- HavocOS, 11/12.1	AOSP prebuilts				https://github.com/Havoc-OS/android_manifest
+- Paranoid Android, 12?	AOSP prebuilts				https://github.com/AOSPA/manifest
+- ProtonAOSP, 12.1	AOSP prebuilts				https://github.com/ProtonAOSP/android_manifest
+- StagOS, 11/12.1	AOSP prebuilts				https://github.com/StagOS/manifest
 
 
 Note:
