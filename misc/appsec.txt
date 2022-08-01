@@ -1,0 +1,48 @@
+last updated: 2022/08/01
+
+- Document Viewer 2.8.2 uses MuPDF 1.11 +4 patches from 2017-04-11
+	Status: Has ~27 known security issues
+	+4 patches: https://github.com/SufficientlySecure/document-viewer/commit/0bfb13b1b65cc27145b4526a3c2564ecdb468674
+	Version declared: https://github.com/SufficientlySecure/document-viewer/commits/c9bcd30849bb6648bbbe247229e9639c43cf61b8/document-viewer/jni/mupdf
+	Dependency Changelog: https://mupdf.com/releases/history.html
+	Security Issue(s): https://www.cvedetails.com/vulnerability-list/vendor_id-10846/product_id-20840/Artifex-Mupdf.html
+
+- Pdf Viewer Plus 3.7 and /e/OS PDF Viewer use PDFium@32b639d from 2016-01-14
+	Status: Has ~55 known security issues
+	Version declared: https://github.com/JavaCafe01/PdfViewer/blob/b6c8186d94c3822b7ea82860c00e6394424d2668/app/build.gradle#L79
+	Version declared: https://gitlab.e.foundation/e/os/pdfviewer/-/blob/821386ac069f16393a8ccff0cc8fc3a4b22e85f7/app/build.gradle#L100
+	Implementor Library 1: https://github.com/barteksc/AndroidPdfViewer/blob/d243b39377f19c3eae41e227067da254ebbf731b/android-pdf-viewer/build.gradle#L41
+	Implementor Library 2: https://github.com/barteksc/PdfiumAndroid/tree/103d5855f797af78a6f33f94cb306ef1c23b2290
+	Dependency Changelog: https://pdfium.googlesource.com/pdfium/+log/32b639de35f905a5e5559f305d9032cde5ae5c77
+	Security Issue(s): https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=PDFium
+
+- Book Reader 1.15.2 uses PDFium@dc397e0 from 2020-02-01
+	Status: Has ~12 known security issues
+	Version declared: https://gitlab.com/axet/android-book-reader/-/blob/bb6a59db056a7761d5ba2ccfcef8d8d9045e7704/app/build.gradle#L59
+	Implementor Library: https://gitlab.com/axet/android-pdfium/-/commit/1fb9f9e4d45ef393574b247fad57c04795342586
+	Dependency Changelog: https://pdfium.googlesource.com/pdfium/+log/dc397e0
+	Security Issue(s): https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=PDFium
+
+- LibreOffice Viewer 6.1.0 is from 2018-01-26
+	Status: Has ~15 known security issues
+	Dependency Changelog: https://cgit.freedesktop.org/libreoffice/core/commit/?id=484d0ea842da
+	Security Issue(s): https://www.cvedetails.com/vulnerability-list/vendor_id-11439/product_id-21008/Libreoffice-Libreoffice.html
+
+- PDF Converter 8.8.1 uses iText 5.5.10 from 2016-10-07
+	Status: Has ~5 known security issues
+	Version declared: https://github.com/Swati4star/Images-to-PDF/blob/e4440d73bae7ca018ffb41532275ea89d3fc2733/app/build.gradle#L101
+	Dependency Changelog: https://github.com/itext/itextpdf/releases
+
+- Tinc 0.33 uses lzo-2.10 from 2017-03-01
+	Status: Has 1 security issue?
+	Version declared: https://github.com/pacien/tincapp/blob/234b97c14fa8df899291b760602b9bfc7abdad36/app/CMakeLists.txt
+	Dependency Changelog: https://www.oberhumer.com/opensource/lzo/
+	Security Issue(s): https://github.com/ckolivas/lrzip/issues/163
+
+- Various F-Droid apps using WebRTC@M86 from 2020-08-27
+	Status: Has ~10 known security issues
+	Impacted apps: Conversations 2.10.2.1+fcr, Quicksy 2.10.2.1+fcr, Snikket 2.10.2+fcr, CWeb 0.1.6+free, Monocles Chat 1.5.1
+	Impacted apps with an even older WebRTC library: Blabber.im 3.0.8 using M79, CSipSimple 1.02.03-2459 using ???
+	Dependency Changelog: https://groups.google.com/g/discuss-webrtc/search?q=psa%20release%20notes
+	Dependency Changelog (old): https://webrtc.github.io/webrtc-org/release-notes/
+	Security Issue(s): https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=chrom%20webrtc

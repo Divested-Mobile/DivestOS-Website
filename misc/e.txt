@@ -38,11 +38,7 @@ Advanced Privacy
 
 PDF Viewer
 ==========
-- Underlying PDF library is from 2018 and has at least 28 known security vulnerabilities
- - https://gitlab.e.foundation/e/os/pdfviewer/-/blob/master/app/build.gradle#L100
-  - https://github.com/barteksc/AndroidPdfViewer
-   - https://github.com/barteksc/PdfiumAndroid
- - https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=PDFium
+- See https://divestos.org/misc/appsec.txt
 
 
 microG
