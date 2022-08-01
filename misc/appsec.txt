@@ -1,9 +1,9 @@
 last updated: 2022/08/01
 
 Preface:
-- This is a list of dependencies and apps that may have known vulnerbilitiies
-- These apps may not actually expose the vulnerble functionality
-- These apps may have mechnisms in places to mitigate the vulnerble functionality
+- This is a list of dependencies and apps that may have known vulnerabilities
+- These apps may not actually expose the vulnerable functionality
+- These apps may have mechanisms in places to mitigate the vulnerable functionality
 - The primary focus is F-Droid variants of the apps, upstream versions may not be impacted
 - This is not meant to be treated as "perfectly correct" or any form of audit, just a cursory check
 
@@ -30,7 +30,7 @@ Libraries:
 - PDFium
 	- CVEs: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=PDFium
 	- com.github.barteksc:android-pdf-viewer:3.2.0 using PDFium@32b639d from 2016-01-14
-		- Implementor Libraries:
+		- Implementer Libraries:
 			- https://github.com/barteksc/AndroidPdfViewer/blob/d243b39377f19c3eae41e227067da254ebbf731b/android-pdf-viewer/build.gradle#L41
 			- https://github.com/barteksc/PdfiumAndroid/tree/pdfium-android-1.9.0
 		- Status: Has ~55 known security issues
@@ -39,7 +39,7 @@ Libraries:
 			- Pdf Viewer Plus 3.7, https://github.com/JavaCafe01/PdfViewer/blob/v3.7/app/build.gradle#L79
 			- /e/OS PDF Viewer, https://gitlab.e.foundation/e/os/pdfviewer/-/blob/821386ac069f16393a8ccff0cc8fc3a4b22e85f7/app/build.gradle#L100
 	- com.github.axet:pdfium:2.0.15 using PDFium@dc397e0 from 2020-02-01
-		- Implementor Library: https://gitlab.com/axet/android-pdfium/-/tree/pdfium-2.0.15
+		- Implementer Library: https://gitlab.com/axet/android-pdfium/-/tree/pdfium-2.0.15
 		- Status: Has ~12 known security issues
 		- Dependency Changelog: https://pdfium.googlesource.com/pdfium/+log/dc397e0
 		- Dependent Apps:
@@ -62,7 +62,7 @@ Libraries:
 		- Status: Has ~25 known security issues
 		- Dependent Apps:
 			- Blabber.im 3.0.8, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/de.pixart.messenger.yml#L250
-	- WebRTC@M56
+	- WebRTC@M56 from 2016-12-12
 		- Status: Has a ton of known security issues
 		- Dependent Apps:
 			- CSipSimple 1.02.03-2459, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.csipsimple.yml#L58
