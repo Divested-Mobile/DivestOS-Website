@@ -1,4 +1,4 @@
-last updated: 2022/08/01
+last updated: 2022/08/02
 
 Preface:
 - This is a list of dependencies and apps that may have known vulnerabilities
@@ -17,47 +17,63 @@ Libraries:
 	- com.itextpdf:itextg:5.5.10 from 2016-10-07
 		- Status: Has ~5 known security issues
 		- Dependent Apps:
-			- Attestation de déplacement 3.7.0, https://github.com/AdrienPoupa/AttestationDeplacement/blob/3.7.0/app/build.gradle#L42
-			- PDF Converter 8.8.1, https://github.com/Swati4star/Images-to-PDF/blob/8.8.1/app/build.gradle#L98
-			- PDF Creator 3.8, https://github.com/scoute-dich/PDFCreator/blob/v3.8/app/build.gradle#L34
+			- Attestation de déplacement 3.7.0:
+				- https://github.com/AdrienPoupa/AttestationDeplacement/blob/3.7.0/app/build.gradle#L42
+				- https://github.com/AdrienPoupa/AttestationDeplacement/issues/131
+			- PDF Converter 8.8.1:
+				- https://github.com/Swati4star/Images-to-PDF/blob/8.8.1/app/build.gradle#L98
+				- https://github.com/Swati4star/Images-to-PDF/issues/1083
+			- PDF Creator 3.8:
+				- https://github.com/scoute-dich/PDFCreator/blob/v3.8/app/build.gradle#L34
+				- Repository archived, not reported
 	- com.itextpdf:itextg:5.5.6 from 2015-05-08
 		- Status: Has ~5 known security issues
 		- Dependent Apps:
-			- ePUBator 0.12, https://sourceforge.net/p/epubator/code/ci/master/tree/ePUBator/lib/
-
+			- ePUBator 0.12:
+				- https://sourceforge.net/p/epubator/code/ci/master/tree/ePUBator/lib/
+				- App hasn't been updated since 2015, not reported
 - MuPDF
 	- Changelog: https://mupdf.com/releases/history.html
 	- CVEs: https://www.cvedetails.com/vulnerability-list/vendor_id-10846/product_id-20840/Artifex-Mupdf.html
 	- MuPDF 1.16.1 from 2019-08-02
 		- Status: Has ~5 known security issues
 		- Dependent Apps:
-			- Orion Viewer 0.81.2, https://github.com/max-kammerer/orion-viewer/commits/0.81.2_fdroid/nativeLibs/mupdfModule
+			- Orion Viewer 0.81.2:
+				- https://github.com/max-kammerer/orion-viewer/commits/0.81.2_fdroid/nativeLibs/mupdfModule
+				- https://github.com/max-kammerer/orion-viewer/issues/40
 	- MuPDF 1.11 from 2017-04-11
 		- Status: Has ~31 known security issues
 		- Dependent Apps:
-			- Document Viewer 2.8.2, https://github.com/SufficientlySecure/document-viewer/commits/v2.8.2/document-viewer/jni/mupdf
+			- Document Viewer 2.8.2
+				- https://github.com/SufficientlySecure/document-viewer/commits/v2.8.2/document-viewer/jni/mupdf
 				- Note has 4 issues patched: https://github.com/SufficientlySecure/document-viewer/commit/0bfb13b1b65cc27145b4526a3c2564ecdb468674
-	- Ancient versions:
+				- https://github.com/SufficientlySecure/document-viewer/issues/277
+	- Ancient versions (unmaintained and not reported):
 		- APV PDF Viewer 0.4.0, https://github.com/mpietrzak/apv/tree/a6510d26791fdd94baecaaf346dfc821e76bd8da/pdfview/deps
-		- PDF Reader 0.4.0, https://github.com/droidapps/pdfreader4Android/tree/6857aa422cf9bd26e992fecbc8090e0f49888e17
+		- PDF Reader 0.4.0, https://github.com/droidapps/pdfreader4Android/tree/0.4.0-patched/jni/mupdf/pdf
 		- VuDroid 1.4
 - PDF.js:
 	- Changelog: https://github.com/mozilla/pdf.js/releases
 	- PDF.js 1.5.188 from 2016-04-21
 		- Status: Has ~1 known security issues
 		- Dependent Apps:
-			- CuprumPDF v1.3.0, https://github.com/paride/CopperPDF/blob/v1.3.0/app/src/main/assets/pdf.js#L31
+			- CuprumPDF v1.3.0
+				- https://github.com/paride/CopperPDF/blob/v1.3.0/app/src/main/assets/pdf.js#L31
+				- Repository archived, not reported
 - PDFBox
 	- CVEs: https://www.cvedetails.com/vulnerability-list/vendor_id-45/product_id-33936/Apache-Pdfbox.html
 	- com.tom-roush:pdfbox-android:2.0.1.0 using PDFBox 2.0.1 from 2016-04-22
 		- Implementer Library: https://github.com/TomRoush/PdfBox-Android/releases
 		- Status: Has ~5 known security issues
 		- Dependent Apps:
-			- Green Pass PDF Wallet 2.3.1, https://github.com/michaeltroger/greenpass-android/blob/40/app/build.gradle#L99
+			- Green Pass PDF Wallet 2.3.1
+				- https://github.com/michaeltroger/greenpass-android/blob/40/app/build.gradle#L99
+				- https://github.com/michaeltroger/greenpass-android/issues/68
 - PDFium
 	- CVEs: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=PDFium
 	- com.github.axet:pdfium:2.0.15 using PDFium@dc397e0 from 2020-02-01
 		- Implementer Library: https://gitlab.com/axet/android-pdfium/-/tree/pdfium-2.0.15
+		- Report: https://gitlab.com/axet/android-pdfium/-/issues/6
 		- Status: Has ~12 known security issues
 		- Dependency Changelog: https://pdfium.googlesource.com/pdfium/+log/dc397e0
 		- Dependent Apps:
@@ -69,17 +85,27 @@ Libraries:
 		- Status: Has ~55 known security issues
 		- Dependency Changelog: https://pdfium.googlesource.com/pdfium/+log/32b639de35f905a5e5559f305d9032cde5ae5c77
 		- Dependent Apps:
-			- Pdf Viewer Plus 3.7, https://github.com/JavaCafe01/PdfViewer/blob/v3.7/app/build.gradle#L79
-			- /e/OS PDF Viewer, https://gitlab.e.foundation/e/os/pdfviewer/-/blob/821386ac069f16393a8ccff0cc8fc3a4b22e85f7/app/build.gradle#L100
-			- Sav PDF Viewer Pro 1.9, https://github.com/Sav22999/sav-pdf-viewer-pro/blob/1.9/app/build.gradle#L54
+			- Pdf Viewer Plus 3.7
+				- https://github.com/JavaCafe01/PdfViewer/blob/v3.7/app/build.gradle#L79
+				- https://github.com/JavaCafe01/PdfViewer/issues/175
+			- /e/OS PDF Viewer
+				- https://gitlab.e.foundation/e/os/pdfviewer/-/blob/821386ac069f16393a8ccff0cc8fc3a4b22e85f7/app/build.gradle#L100
+				- no account, not reported
+			- Sav PDF Viewer Pro 1.9
+				- https://github.com/Sav22999/sav-pdf-viewer-pro/blob/1.9/app/build.gradle#L54
+				- https://github.com/Sav22999/sav-pdf-viewer-pro/issues/28
 	- com.github.tibbi:AndroidPdfViewer:da57ff410e using PDFium@32b639d from 2016-01-14
-		- Note: prebuilts are unclear, may actually be based off of M90 from 2021-03 instead
-		- Status: Has ~5 or ~55 known security issues depending on note above
 		- Implementer Libraries:
 			- https://github.com/tibbi/AndroidPdfViewer/blob/da57ff410e3fb7bba831f5c7816834f2ed2d638d/android-pdf-viewer/build.gradle#L13
 			- https://github.com/DineroRegnskab/PdfiumAndroid/commits/pdfium-android-1.9.2
+				- Report: Issues are disabled, not reported
+		- Report: Issues are disabled, not reported
+		- Note: prebuilts are unclear, may actually be based off of M90 from 2021-03 instead
+		- Status: Has ~5 or ~55 known security issues depending on note above
 		- Dependent Apps:
-			- Simple File Manager Pro 6.13.0, https://github.com/SimpleMobileTools/Simple-File-Manager/blob/6.13.0/app/build.gradle#L68
+			- Simple File Manager Pro 6.13.0
+				- https://github.com/SimpleMobileTools/Simple-File-Manager/blob/6.13.0/app/build.gradle#L68
+				- pinged: https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11496/#note_1047350429
 - WebRTC
 	- Changelog:
 		- https://groups.google.com/g/discuss-webrtc/search?q=psa%20release%20notes
@@ -108,7 +134,6 @@ Apps:
 	- Status: Has ~15 known security issues
 	- Dependency Changelog: https://cgit.freedesktop.org/libreoffice/core/commit/?id=484d0ea842da
 	- CVEs: https://www.cvedetails.com/vulnerability-list/vendor_id-11439/product_id-21008/Libreoffice-Libreoffice.html
-
 - Tinc 0.33 uses lzo-2.10 from 2017-03-01
 	- Status: Has 1 security issue?
 	- Version Declared: https://github.com/pacien/tincapp/blob/234b97c14fa8df899291b760602b9bfc7abdad36/app/CMakeLists.txt
