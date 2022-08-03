@@ -1,4 +1,4 @@
-last updated: 2022/08/02
+last updated: 2022/08/03
 
 Preface:
 - This is a list of dependencies and apps that may have known vulnerabilities
@@ -71,13 +71,6 @@ Libraries:
 				- https://github.com/michaeltroger/greenpass-android/issues/68
 - PDFium
 	- CVEs: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=PDFium
-	- com.github.axet:pdfium:2.0.15 using PDFium@dc397e0 from 2020-02-01
-		- Implementer Library: https://gitlab.com/axet/android-pdfium/-/tree/pdfium-2.0.15
-		- Report: https://gitlab.com/axet/android-pdfium/-/issues/6
-		- Status: Has ~12 known security issues
-		- Dependency Changelog: https://pdfium.googlesource.com/pdfium/+log/dc397e0
-		- Dependent Apps:
-			- Book Reader 1.15.2, https://gitlab.com/axet/android-book-reader/-/blob/bookreader-1.15.2/app/build.gradle#L59
 	- com.github.barteksc:android-pdf-viewer:3.2.0 using PDFium@32b639d from 2016-01-14
 		- Implementer Libraries:
 			- https://github.com/barteksc/AndroidPdfViewer/blob/d243b39377f19c3eae41e227067da254ebbf731b/android-pdf-viewer/build.gradle#L41

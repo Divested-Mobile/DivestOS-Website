@@ -167,6 +167,7 @@ createTable flox LineageOS-18.1 asus/flox google/msm;
 createTable FP2 LineageOS-18.1 fairphone/FP2 fairphone/msm8974;
 createTable FP3 LineageOS-18.1 fairphone/FP3 fairphone/sdm632; #superseded
 createTable FP3 LineageOS-19.1 fairphone/FP3 fairphone/sdm632;
+createTable FP4 LineageOS-19.1 fairphone/FP4 fairphone/sm7225;
 createTable fugu LineageOS-15.1 asus/fugu asus/fugu;
 createTable griffin LineageOS-17.1 motorola/griffin motorola/msm8996;
 createTable grouper LineageOS-14.1 asus/grouper asus/grouper;
