@@ -91,12 +91,6 @@ Device: z2_plus
 ================================================================================
 AVB Keys
 ================================================================================
-Device: FP3
-	SHA-256:
-		51C96041FD098DB8
-		D5F2DC03B1A91FD2
-		6912E7C9F71EB74F
-		2EE2E195DA852181
 Device: akari
 	SHA-256:
 		C088493360359878
@@ -187,6 +181,18 @@ Device: flame
 		B266EE7FE0BFAAA1
 		C69B4720A7DF9BD6
 		9173159566CBDA65
+Device: FP3
+	SHA-256:
+		51C96041FD098DB8
+		D5F2DC03B1A91FD2
+		6912E7C9F71EB74F
+		2EE2E195DA852181
+Device: FP4
+	SHA-256:
+		3C00BF7BAE11FC7C
+		B32FF7EE7343617B
+		0235750C9CB3538C
+		BF490BF5179ADECD
 Device: guacamole
 	SHA-256:
 		FCC909C38CE08F75
@@ -310,8 +316,8 @@ Device: xz2c
 ================================================================================
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQS4dE1n+fHhThRd/Y5/Yn6SDzFplAUCYrsVFgAKCRB/Yn6SDzFp
-lKxvAQDudJ1y/WFWIbZ7hWohAU5KE/NXlOtJiEPRFuAnWPvtZwD/fTK5sbi34Pcn
-7Vx4XP2dHiWRvB/mtE62V1GWtu64Jw0=
-=S5kV
+iHUEARYKAB0WIQS4dE1n+fHhThRd/Y5/Yn6SDzFplAUCYuqsOwAKCRB/Yn6SDzFp
+lPcuAQDqOAqeg1LN7TzQA0XUMOByU6jUjamNi0ZiHyNOXBQ0pwD/dTfa/2imd+lJ
+odl55WXijWqslCq+CPFNsKkHmuZvyAU=
+=9BCY
 -----END PGP SIGNATURE-----

@@ -4,6 +4,38 @@
 					<h2>Upcoming News</h2>
 					<?php print(file_get_contents("pages/news-future.html")); ?>
 					<h2>Current News</h2>
+					<div class="section" id="2022-08">
+						<h3>August 8th 2022 Update<a href="#2022-08">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>16.0 and 19.1 release candidate #1 August ASB builds were published on August 8th.</li>
+							<li>18.1 release candidate #1 August ASB builds were published on August 7th.</li>
+							<li>17.1 release candidate #1 August ASB builds were published on August 6th.</li>
+							<li>15.1 and 16.0 rebuilds were published on August 5th.</li>
+							<li>14.1 release candidate #1 August ASB builds were published on August 5th.</li>
+							<li>16.0 release candidate #1 July ASB builds were published on July 15th.</li>
+						</ul>
+						<h4>Roster Updates</h4>
+						<ul>
+							<li>Untested 19.1 builds for FP4 are now available.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Mull has received a new icon in the shape of a <strike>raccoon</strike> badger.</li>
+							<li>Updated Mulch (WebView) to Chromium 103.0.5060.129-1 and 104.0.5112.69-1, has 0 and 27 security fixes respectively.</li>
+							<li>Updated Mull to 103.1.0-1, has 8 security fixes.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>All chat/forums links have been moved to a new <a href="index.php?page=community">community</a> page.</li>
+							<li>Browser and Messenger tables now have links to each app.</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>The chat room is now available via the Matrix Bifrost. This was blocked previously due to severe issues with the bridge implementation.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2022-07">
 						<h3>July 14th 2022 Update<a href="#2022-07">¶</a></h3>
 						<h4>System Updates</h4>
@@ -38,7 +70,6 @@
 							<li>Thanks to a large donation recently there is now an additional Ryzen 5900X+64GB RAM system used for compiling.</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2022-06">
 						<h3>June 14th 2022 Update<a href="#2022-06">¶</a></h3>
 						<h4>System Updates</h4>
@@ -122,6 +153,21 @@
 						<h4>Other Updates</h4>
 						<ul>
 							<li>The /r/DivestOS subreddit is now the official DivestOS subreddit for those who prefer the non-free Reddit.</li>
+						</ul>
+					</div>
+					<div class="section" id="twelve">
+						<h3>Initial addition of 19.1<a href="#twelve">¶</a></h3>
+						<p>Support for 19.1 was added last month and has largely stabilized, builds for many devices are already available available.</p>
+						<ul>
+							<li>[parity] The captive portal toggle in Settings is not available yet.</li>
+							<li>[improvement] Many legacy hacks have been dropped.</li>
+							<li>[improvement] Full bionic hardening patchset from GrapheneOS has been enabled.</li>
+							<li>[issue] Network restrictions on other profiles are quirky, pending upstream patchset.</li>
+							<li>Only devices with kernel 4.4 or higher will be supported due to increased requirements.</li>
+							<li>In-place upgrade from 11 to 12 while locked has been tested working.</li>
+							<li>Please report any issues you find.</li>
+							<li>Make a backup before upgrading!</li>
+							<li>Sensors Off toggle must be disabled before upgrading.</li>
 						</ul>
 					</div>
 					<div class="section" id="dropSilence">

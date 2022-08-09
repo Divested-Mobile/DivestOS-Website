@@ -1,4 +1,4 @@
-last updated: 2022/08/03
+last updated: 2022/08/08
 
 Chromium History
 ================
@@ -44,7 +44,7 @@ Version			Date		Security Patch Count	Release Notes
 OS History
 ==========
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-104.0.5112.69	2022/08/02			2022/08/02	2022/08/02
+104.0.5112.69	2022/08/02	2022/08/08	2022/08/02	2022/08/02
 103.0.5060.129	2022/07/19	2022/07/25	2022/07/20	2022/07/19
 103.0.5060.71	2022/07/04	2022/07/12	2022/07/04	2022/07/04	2022/07/12	2022/07/04
 103.0.5060.70	2022/06/29			2022/06/30	2022/06/29			2022/06/30
@@ -99,7 +99,7 @@ Lineage related:
 - Replicant		???
 
 Bromite related:
-- Bromite		103.0.5060.140				https://github.com/bromite/bromite/commits/master
+- Bromite		104.0.5112.63				https://github.com/bromite/bromite/commits/master
 - CalyxOS, 12		103.0.5060.71				https://review.calyxos.org/q/chromium
 - /e/OS			100.0.4896.57, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		103.0.5060.126, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
