@@ -117,7 +117,7 @@ AOSP related:
 - StagOS, 11/12.1	AOSP prebuilts				https://github.com/StagOS/manifest
 
 
-Note:
+Notes:
 - Most of the above operating systems are available in a Google Apps variant with Chrome/Google WebView included.
   Furthermore most users of the above operating systems will install Google Apps if not included.
 - This document is only correct in the context that Google Apps are *not* used.

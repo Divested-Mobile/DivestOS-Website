@@ -127,7 +127,7 @@ Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Patch Co
 60.0		2018/01/24
 59.0		2017/12/26
 
-Note:
+Notes:
 - Not all security issues/patches impact the Android version
 - Most security advisories collapse many security issues into one
 - If anyone wants to make a merge request that sorts the columns, it'd be much appreciated.

@@ -22,7 +22,7 @@ Android		GrapheneOS	DivestOS 14.1	DivestOS 15.1	DivestOS 16.0	DivestOS 17.1	Dive
 2021-02-01	2021-02-02	[		2021-02-06 through 2021-02-08		]					2021-02-03
 2021-01-04	2021-01-05	[		2021-01-10 through 2021-01-14		]					2021-01-26
 
-Note:
+Notes:
 - Final dates, not earlier RC or test builds
 - DivestOS 14.1/15.1/16.0, based on Android 7/8/9 respectively, are END OF LIFE and receive patches on best effort basis
 
@@ -31,6 +31,8 @@ Useful links:
 - https://divestos.org/index.php?page=news
 - https://grapheneos.org/releases#changelog
 - https://calyxos.org/news
+
+See also the patch counts table here: https://divestos.org/misc/a-counts.txt
 
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/a-dates.txt
