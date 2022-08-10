@@ -32,7 +32,7 @@ Useful links:
 - https://grapheneos.org/releases#changelog
 - https://calyxos.org/news
 
-See also the patch counts table here: https://divestos.org/misc/a-counts.txt
+See also the patch counts table here: https://divestos.org/index.php?page=patch_counts
 
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/a-dates.txt
