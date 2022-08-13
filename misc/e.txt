@@ -69,6 +69,9 @@ System
  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/37
  - https://www.ntppool.org/en/vendors.html
 
+- Includes the proprietary Magic Earth app for navigation
+ - Despite FOSS user friendly alternatives existing such as OSMAnd and Organic Maps
+
 
 Device Sales
 ============

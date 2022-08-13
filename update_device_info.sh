@@ -244,7 +244,7 @@ echo -e "Fastboot\nReported Working\n2.0" > fp3/bootloader_information;
 echo "2019-09-03" > fp3/releasedate;
 
 echo "Fairphone 4" > fp4/friendlyName;
-echo 2 > fp4/status-19.1;
+echo 7 > fp4/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > fp4/bootloader_information;
 
 echo "Google Nexus Player" > fugu/friendlyName;
