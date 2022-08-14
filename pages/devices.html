@@ -354,20 +354,6 @@ sha512sum -c divested*sha512sum;
 							</div>
 						</div>
 					</div>
-					<div class="section hidden" id="nameYourPrice" style="text-align: center;">
-						<h3><strong>Name Your Price</strong></h3>
-						<input type="radio" id="radPriceFree" name="radPrice" checked>
-						<label for="radPriceFree" id="lblPriceFree">FREE</label><br>
-						<input type="radio" id="radPriceOne" name="radPrice">
-						<label for="radPriceOne">$1</label><br>
-						<input type="radio" id="radPriceFive" name="radPrice">
-						<label for="radPriceFive">$5</label><br>
-						<input type="radio" id="radPriceTen" name="radPrice">
-						<label for="radPriceTen">$10</label><br>
-						<input type="radio" id="radPriceFifteen" name="radPrice">
-						<label for="radPriceFifteen">$15</label><br>
-						<p id="lblThanks" hidden>Thank you for your contribution!</p>
-					</div>
 					<?php if(noHTML($_GET["base"]) === "LineageOS") : ?>
 					<div class="section" id="devices">
 						<h2 class="centero">19.1 / 12.1 / S</h2>
@@ -412,6 +398,3 @@ sha512sum -c divested*sha512sum;
 					<?php endif; ?>
 					<?php closeRedis(); ?>
 				</div>
-
-				<!--<script defer type="text/javascript" src="/assets/js/purchase.js" integrity="sha384-OAZV2KpYfERtCMcmejXpc54p2QROsxz6JCMKdufjS6/oxFuEpapPGnxwUd6uz6dW"></script>
-				<script defer type="text/javascript" src="/assets/js/donate-devices.js" integrity="sha384-jjbr2aTMPOhu6cDDXgIa4uvvx6I/6975IVhCvczEQqWxHvSD5sZkelnS5f2Xj0sY"></script>-->
