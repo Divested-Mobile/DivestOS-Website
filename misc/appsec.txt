@@ -1,4 +1,4 @@
-last updated: 2022/08/03
+last updated: 2022/08/16
 
 Preface:
 - This is a list of dependencies and apps that may have known vulnerabilities
@@ -87,6 +87,8 @@ Libraries:
 			- Sav PDF Viewer Pro 1.9
 				- https://github.com/Sav22999/sav-pdf-viewer-pro/blob/1.9/app/build.gradle#L54
 				- https://github.com/Sav22999/sav-pdf-viewer-pro/issues/28
+			- MJ PDF Reader@e117e555
+				- https://gitlab.com/mudlej_android/mj_pdf_reader/-/blob/e117e5556f2fff182d5217daf474d9b8bd3497f7/AndroidPdfViewer/android-pdf-viewer/build.gradle#L39
 	- com.github.tibbi:AndroidPdfViewer:da57ff410e using PDFium@32b639d from 2016-01-14
 		- Implementer Libraries:
 			- https://github.com/tibbi/AndroidPdfViewer/blob/da57ff410e3fb7bba831f5c7816834f2ed2d638d/android-pdf-viewer/build.gradle#L13
@@ -98,25 +100,21 @@ Libraries:
 		- Dependent Apps:
 			- Simple File Manager Pro 6.13.0
 				- https://github.com/SimpleMobileTools/Simple-File-Manager/blob/6.13.0/app/build.gradle#L68
-				- pinged: https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11496/#note_1047350429
+				- https://github.com/SimpleMobileTools/Simple-File-Manager/issues/619
 - WebRTC
 	- Changelog:
 		- https://groups.google.com/g/discuss-webrtc/search?q=psa%20release%20notes
 		- https://webrtc.github.io/webrtc-org/release-notes/
 	- CVEs: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=chrom%20webrtc
+	- TODO: check ch.threema:webrtc-android:100.0.0
+		- M100 notably has no release notes
+		- and is before CVE-2022-2294 was fixed
 	- org.webrtc:google-webrtc:1.0.32006 (M86) from 2020-08-27
 		- Status: Has ~17 known security issues
 		- Dependent Apps:
-			- Conversations 2.10.2.1+fcr, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/eu.siacs.conversations.yml#L2087
-			- Quicksy 2.10.2.1+fcr, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/im.quicksy.client.yml#L585
 			- Snikket 2.10.2+fcr, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.snikket.android.yml#L65
 			- CWeb 0.1.6+free, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.cweb.messenger.yml#L39
-			- Monocles Chat 1.5.1, https://codeberg.org/Arne/monocles_chat/src/tag/v1.5.1/build.gradle#L51
 			- Cheogram 2.10.6-1+free, https://git.singpolyma.net/cheogram-android/tree/2.10.6-1-fdroid/item/build.gradle#L106
-	- org.webrtc:google-webrtc:1.0.30039 (M79) from 2019-12-09
-		- Status: Has ~25 known security issues
-		- Dependent Apps:
-			- Blabber.im 3.0.8, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/de.pixart.messenger.yml#L250
 	- WebRTC@M56 from 2016-12-12
 		- Status: Has a ton of known security issues
 		- Dependent Apps:
