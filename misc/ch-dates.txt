@@ -1,4 +1,4 @@
-last updated: 2022/08/16
+last updated: 2022/08/20
 
 Chromium History
 ================
@@ -44,8 +44,9 @@ Version			Date		Security Patch Count	Release Notes
 
 OS History
 ==========
+note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-104.0.5112.97	2022/08/16			2022/08/16	2022/08/16
+104.0.5112.97	2022/08/16	11ksv		2022/08/16	2022/08/16	38ksv		38ksv		151ksv
 104.0.5112.69	2022/08/02	2022/08/08	2022/08/02	2022/08/02
 103.0.5060.129	2022/07/19	2022/07/25	2022/07/20	2022/07/19
 103.0.5060.71	2022/07/04	2022/07/12	2022/07/04	2022/07/04	2022/07/12	2022/07/04
