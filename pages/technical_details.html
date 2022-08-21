@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The nitty gritty<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2022-06-07</p>
+						<p>Last updated: 2022-08-21</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -70,7 +70,7 @@
 						</ul>
 						<h5>android_bionic</h5>
 						<ul>
-							<li>P/Q/R: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
+							<li>P/Q/R/S: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
 							<li>S: Sort and cache hosts file data for fast lookup (tdm)</li>
 							<li>N/O/S: Support wildcards in cached hosts file (tdm)</li>
 							<li>R/S: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
@@ -201,6 +201,7 @@
 							<li>S: Skip screen on animation when wake and unlock via biometrics (jesec)</li>
 							<li>S: SystemUI: Skip screen-on animation in all scenarios (kdrag0n)</li>
 							<li>R/S: SystemUI: add burnIn protection (arter97)</li>
+							<li>S: Make monet based theming user configurable (GrapheneOS)</li>
 							<li>Q/R/S: Warn when running activity from 32 bit app on ARM64 devices. (AOSP)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
 							<li>Q/R: Restore the Sensors Off tile (DivestOS)</li>
@@ -296,11 +297,13 @@
 							<li>N: Remove analytics (DivestOS)</li>
 							<li>N: Allow reducing resolution to save power (DivestOS)</li>
 							<li>N: Various rebranding</li>
+							<li>N: Update LineageOS contributors cloud</li>
 						</ul>
 						<h5>android_packages_apps_LineageParts</h5>
 						<ul>
 							<li>Remove analytics (DivestOS)</li>
 							<li>Various rebranding</li>
+							<li>Update LineageOS contributors cloud</li>
 						</ul>
 						<h5>android_packages_apps_Nfc</h5>
 						<ul>
@@ -353,6 +356,10 @@
 							<li>Remove analytics (DivestOS)</li>
 							<li>R/S: Always update recovery by default</li>
 							<li>Various rebranding</li>
+						</ul>
+						<h5>android_packages_apps_ThemePicker</h5>
+						<ul>
+							<li>S: Add a UI for enabling Material You (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_apps_Trebuchet</h5>
 						<ul>
@@ -457,7 +464,7 @@
 							<li>label protected_{fifos,regular} as proc_security (GrapheneOS)</li>
 							<li>Q/R/S: Allow init to control kernel.yama.ptrace_scope (GrapheneOS)</li>
 							<li>Q/R/S: Allow system to use persist.native_debug (GrapheneOS)</li>
-							<li>R/S: Disable unused gmscore_app domain (GrapheneOS)</li>
+							<li>!MICROG_INCLUDED=FULL: R/S: Disable unused gmscore_app domain (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_update_engine</h5>
 						<ul>

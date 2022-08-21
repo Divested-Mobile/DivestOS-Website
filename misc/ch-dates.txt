@@ -1,4 +1,4 @@
-last updated: 2022/08/20
+last updated: 2022/08/21
 
 Chromium History
 ================
@@ -46,7 +46,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-104.0.5112.97	2022/08/16	11ksv		2022/08/16	2022/08/16	38ksv		38ksv		151ksv
+104.0.5112.97	2022/08/16	<11ksv		2022/08/16	2022/08/16	2022/08/21	38ksv		151ksv
 104.0.5112.69	2022/08/02	2022/08/08	2022/08/02	2022/08/02
 103.0.5060.129	2022/07/19	2022/07/25	2022/07/20	2022/07/19
 103.0.5060.71	2022/07/04	2022/07/12	2022/07/04	2022/07/04	2022/07/12	2022/07/04
@@ -89,12 +89,12 @@ OS Current Versions
 Standalone:
 - CarbonROM, 12		96.0.4664.111, 12 is not shipping yet	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
 - DivestOS/Mulch	104.0.5112.97				https://gitlab.com/divested-mobile/mulch
-- GrapheneOS Vanadium	104.0.5112.97				https://github.com/GrapheneOS/Vanadium/commits/12.1
+- GrapheneOS Vanadium	104.0.5112.97				https://github.com/GrapheneOS/Vanadium/commits/13
 - OmniROM, 11		96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS		103.0.5060.71				https://review.lineageos.org/q/webview
+- LineageOS		104.0.5112.97				https://review.lineageos.org/q/webview
 - ArrowOS, 11		96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, 11		tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
 - crDroid, 11/12	tracks LineageOS/master			https://github.com/crdroidandroid/android/blob/12.1/snippets/lineage.xml
