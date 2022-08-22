@@ -87,8 +87,6 @@ Libraries:
 			- Sav PDF Viewer Pro 1.9
 				- https://github.com/Sav22999/sav-pdf-viewer-pro/blob/1.9/app/build.gradle#L54
 				- https://github.com/Sav22999/sav-pdf-viewer-pro/issues/28
-			- MJ PDF Reader@e117e555
-				- https://gitlab.com/mudlej_android/mj_pdf_reader/-/blob/e117e5556f2fff182d5217daf474d9b8bd3497f7/AndroidPdfViewer/android-pdf-viewer/build.gradle#L39
 	- com.github.tibbi:AndroidPdfViewer:da57ff410e using PDFium@32b639d from 2016-01-14
 		- Implementer Libraries:
 			- https://github.com/tibbi/AndroidPdfViewer/blob/da57ff410e3fb7bba831f5c7816834f2ed2d638d/android-pdf-viewer/build.gradle#L13

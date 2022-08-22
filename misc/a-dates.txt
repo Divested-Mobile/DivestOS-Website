@@ -1,4 +1,4 @@
-last updated: 2022/08/21
+last updated: 2022/08/22
 
 Android		GrapheneOS	DivestOS 14.1	DivestOS 15.1	DivestOS 16.0	DivestOS 17.1	DivestOS 18.1	DivestOS 19.1	CalyxOS
 2022-08-01	2022-08-05	2022-08-05	2022-08-13	2022-08-08	2022-08-06	2022-08-07	2022-08-08	pending: https://review.calyxos.org/q/topic:aug22
