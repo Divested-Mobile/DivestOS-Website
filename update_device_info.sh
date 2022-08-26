@@ -189,16 +189,16 @@ echo "OnePlus 8T" > kebab/friendlyName;
 echo 8 > instantnoodle/status-19.1;
 echo 8 > instantnoodlep/status-19.1;
 echo 8 > kebab/status-19.1;
-echo -e "Fastboot\nYes, Untested\n2.0" > instantnoodle/bootloader_information;
-echo -e "Fastboot\nYes, Untested\n2.0" > instantnoodlep/bootloader_information;
-echo -e "Fastboot\nYes, Untested\n2.0" > kebab/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > instantnoodle/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > instantnoodlep/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > kebab/bootloader_information;
 
 echo "OnePlus 9" > lemonade/friendlyName;
 echo "OnePlus 9 Pro" > lemonadep/friendlyName;
 echo 1 > lemonade/status-19.1;
 echo 1 > lemonadep/status-19.1;
-echo -e "Fastboot\nYes, Untested\n2.0" > lemonade/bootloader_information;
-echo -e "Fastboot\nYes, Untested\n2.0" > lemonadep/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > lemonade/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > lemonadep/bootloader_information;
 
 echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
