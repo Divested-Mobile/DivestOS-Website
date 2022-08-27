@@ -195,8 +195,8 @@ echo -e "Fastboot\nNo*\n2.0" > kebab/bootloader_information;
 
 echo "OnePlus 9" > lemonade/friendlyName;
 echo "OnePlus 9 Pro" > lemonadep/friendlyName;
-echo 1 > lemonade/status-19.1;
-echo 1 > lemonadep/status-19.1;
+echo 7 > lemonade/status-19.1;
+echo 8 > lemonadep/status-19.1;
 echo -e "Fastboot\nNo*\n2.0" > lemonade/bootloader_information;
 echo -e "Fastboot\nNo*\n2.0" > lemonadep/bootloader_information;
 

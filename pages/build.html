@@ -84,7 +84,7 @@ source build/envsetup.sh && breakfast lineage_sailfish-user && make -j20 generat
 sh Generate_Signing_Keys.sh $device; #repeat as needed for other devices
 </code></pre>
 					<h4>Setting up ccache (Optional)</h4>
-						<p>Use of ccache is highly recommended, its an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
+						<p>Use of ccache is highly recommended, it's an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
 						<pre><code>mkdir ccache;
 echo "export USE_CCACHE=1;" >> .bashrc;
 echo "export CCACHE_COMPRESS=1;" >> .bashrc;
@@ -104,7 +104,7 @@ ccache -M 128GB; #Optionally set a size limit</code></pre>
 							<li>/Misc - This is for storing misc. snippets of anything</li>
 							<li>/Patches - This is where all repo patches are stored</li>
 							<li>/Scripts - This is where all scripts are stored</li>
-							<li>/Signing_Keys - This is the default signing key store, its recommended to store these using gocryptfs or similar.</li>
+							<li>/Signing_Keys - This is the default signing key store, it's recommended to store these using gocryptfs or similar.</li>
 						</ul>
 					</div>
 					<div class="section" id="compile">
