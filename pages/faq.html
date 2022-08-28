@@ -60,6 +60,17 @@
 						<h4 id="supportStatus">Are all devices supported equally?<a href="#supportStatus">¶</a></h4>
 						<p>No, some devices have much better support than others.</p>
 
+						<h4 id="deviceStatus">What is the difference between the different device statuses on the downloads page?<a href="#deviceStatus">¶</a></h4>
+						<ul>
+							<li>Tested Working: This is a device we've personally tested working.</li>
+							<li>Reported Working: A user has come forward and reported the device working.</li>
+							<li>Very Likely Working: The device has had many updater checks for it over a prolonged period.</li>
+							<li>Likely Working: A similar device in its series is at least `Very Likely Working`.</li>
+							<li>Mostly Working: The device is daily drivable, but some functionality may be unavailable such as the camera.</li>
+							<li>Untested: The device hasn't been tested, reported, or had any updater checks for it.</li>
+							<li>Broken: The device doesn't boot or has critical functionality impacted.</li>
+						</ul>
+
 						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
 						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only A/B devices have incrementals generated.<br>As of 2022/08/21 that is:<br><code>akari, alioth, Amber, aura, aurora, avicii, blueline, bonito, bramble, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, lemonade, lemonadep, marlin, mata, pioneer, pro1, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
 
@@ -117,6 +128,17 @@
 
 						<h4 id="bugReport">I found a bug! Where do I report it?<a href="#bugReport">¶</a></h4>
 						<p>Please see the <a href="index.php?page=bug_reporting">bug reporting</a> page.</p>
+
+						<h4 id="releaseTesting">What devices do you test on before release?<a href="#releaseTesting">¶</a></h4>
+						<ul>
+							<li>14.1: toroplus</li>
+							<li>15.1: dragon, flounder</li>
+							<li>16.0: untested</li>
+							<li>17.1: clark</li>
+							<li>18.1: bacon, d852, flox, klte, mako, sailfish</li>
+							<li>19.1: cheeseburger, fajita, mata, taimen</li>
+							<li>Have an unused device? Please consider donating it for better test coverage.</li>
+						</ul>
 
 						<h4 id="networkOnly">Should I use the 'XG only' network mode option (if available)?<a href="#networkOnly">¶</a></h4>
 						<p>2G has no encryption, 3G has decent encryption, and LTE has end-to-end encryption (simplified, 3G and LTE still have many leaks). Malicious cell interception devices capable of intercepting 3G/LTE are very expensive kits, so the lesser ones downgrade you to 2G where they can work. These network modes offer enhanced protection against interception by pinning to a mode. As always there are various other ways for your device to be compromised or to have your data intercepted.</p>
