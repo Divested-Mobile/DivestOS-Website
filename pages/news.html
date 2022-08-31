@@ -4,6 +4,59 @@
 					<h2>Upcoming News</h2>
 					<?php print(file_get_contents("pages/news-future.html")); ?>
 					<h2>Current News</h2>
+					<div class="section" id="2022-08.2">
+						<h3>August 31st 2022 Update<a href="#2022-08.2">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>19.1 rebuilds were published on August 31st.</li>
+							<li>18.1 rebuilds were published on August 29th.</li>
+							<li>17.1 rebuilds were published on August 28th.</li>
+							<li>14.1, 15.1, and 16.0 rebuilds were published on August 27th.</li>
+							<li>DEBUG_NOTIFIERS has been disabled on kernels 4.14 and higher due to an incompatibility with CFI and the Android toolchain. This has been confirmed to fix boot on OnePlus 9 series. It also likely fixes Pixel 4 and 5 series.</li>
+							<li>Most 3.18 kernels and higher have been patched against CVE-2022-2588.</li>
+							<li>The APN list, VisualVoiceMail configs, Wi-Fi regulations database, and contributors cloud database have been updated for all branches.</li>
+							<li>17.1 is likely to be end-of-life very soon.</li>
+							<li>16.0 rebuilds were published on August 14th.</li>
+							<li>15.1 release candidate #1 August ASB builds were published on August 13th. This is a total of 40 added security patches from March through August.</li>
+							<li>14.1 rebuilds were published on August 13th.</li>
+							<li>There have been many new kernel CVE patches as usual, including many 3.4 backports from Fairphone again.</li>
+						</ul>
+						<h4>Workspace Updates</h4>
+						<ul>
+							<li>The build script now verifies the GPG signatures of the DivestOS repos, the prebuilt apps, and of all the AOSP platform repos as part of ongoing protection against supply chain attacks.</li>
+							<li>A complete malware scan of every file in the workspace was performed resulting in zero detections.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>If you have one of the following devices you MUST backup before installing this update: instantnoodle*, kebab, beryllium</li>
+							<li>If you have a bootloader locked OnePlus 8 series device, you MUST unlock it before this update. Locking is no longer supported due to vendor changes.</li>
+							<li>If you have a OnePlus 8 or 9 series device, you MUST update to the Android 12 based firmware for it.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Updated Mulch (WebView) to Chromium 105.0.5195.68-1, has 24 security fixes.</li>
+							<li>Extirpater, GMaps WV, Hypatia, MergedWiFiNLP, MotionLock, and SupportDivestOS have had:
+								<ul>
+									<li>Strict dependency verification checks enabled to better protect against supply chain attacks.</li>
+									<li>Dependency updates thanks to initial patches from Patryk Miś.</li>
+								</ul>
+							</li>
+							<li>Updated Mull to 104.1.0-1, has 7 security fixes.</li>
+							<li>Updated Mulch (WebView) to Chromium 104.0.5112.97-1, has 11 security fixes.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The FAQ page has had many additions to it.</li>
+							<li>The patch levels page now better elaborates on how insecure these devices are.</li>
+							<li>The device downloads page has had the generation code overhauled to be easier to maintain.</li>
+							<li>There is a new ASB Patch Counts <a href="index.php?page=patch_counts">page</a> that documents which system ASB patches are included in which branches.</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>All git commits by Tad after 2022/08/22 should be GPG signed. See <a href="https://divested.dev/index.php?page=software#signedCommits" target="_blank" rel="nofollow noopener noreferrer">here</a> for keys.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2022-08">
 						<h3>August 8th 2022 Update<a href="#2022-08">¶</a></h3>
 						<h4>System Updates</h4>
@@ -35,7 +88,6 @@
 							<li>The chat room is now available via the Matrix Bifrost. This was blocked previously due to severe issues with the bridge implementation.</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2022-07">
 						<h3>July 14th 2022 Update<a href="#2022-07">¶</a></h3>
 						<h4>System Updates</h4>

@@ -1,8 +1,9 @@
-last updated: 2022/08/26
+last updated: 2022/08/30
 
 Chromium History
 ================
 Version			Date		Security Patch Count	Release Notes
+105.0.5195.68		2022/08/30	24, 1 critical		https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_30.html
 104.0.5112.97		2022/08/16	11, 1 wild, 1 critical	https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_16.html
 104.0.5112.69		2022/08/02	27			https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop.html
 103.0.5060.129		2022/07/19				https://chromereleases.googleblog.com/2022/07/chrome-for-android-update_01510389319.html
@@ -46,7 +47,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-104.0.5112.97	2022/08/16	<11ksv		2022/08/16	2022/08/16	2022/08/21	38ksv		151ksv
+105.0.5195.68	2022/08/30	<35ksv		2022/08/30	2022/08/30	24ksv		62ksv		175ksv
+104.0.5112.97	2022/08/16			2022/08/16	2022/08/16	2022/08/21
 104.0.5112.69	2022/08/02	2022/08/08	2022/08/02	2022/08/02
 103.0.5060.129	2022/07/19	2022/07/25	2022/07/20	2022/07/19
 103.0.5060.71	2022/07/04	2022/07/12	2022/07/04	2022/07/04	2022/07/12	2022/07/04
@@ -84,12 +86,12 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		104.0.5112.97				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		105.0.5195.68				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
 - CarbonROM, 12		96.0.4664.111, 12 is not shipping yet	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
-- DivestOS/Mulch	104.0.5112.97				https://gitlab.com/divested-mobile/mulch
-- GrapheneOS Vanadium	104.0.5112.97				https://github.com/GrapheneOS/Vanadium/commits/13
+- DivestOS/Mulch	105.0.5195.68				https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	105.0.5195.68				https://github.com/GrapheneOS/Vanadium/commits/13
 - OmniROM, 11		96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
