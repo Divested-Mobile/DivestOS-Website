@@ -93,7 +93,7 @@ echo "2019-05-07" > bonito/releasedate;
 echo "2019-05-07" > sargo/releasedate;
 
 echo "Google Pixel 4a 5G" > bramble/friendlyName;
-echo 1 > bramble/status-19.1;
+echo 2 > bramble/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > bramble/bootloader_information;
 echo "2020-08-20" > bramble/releasedate;
 
@@ -124,8 +124,8 @@ echo "2015-09-02" > clark/releasedate;
 
 echo "Pixel 4 XL" > coral/friendlyName;
 echo "Pixel 4" > flame/friendlyName;
-echo 1 > coral/status-19.1;
-echo 1 > flame/status-19.1;
+echo 2 > coral/status-19.1;
+echo 2 > flame/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > coral/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0" > flame/bootloader_information;
 echo "2019-10-24" > coral/releasedate;
@@ -195,8 +195,8 @@ echo -e "Fastboot\nNo*\n2.0" > kebab/bootloader_information;
 
 echo "OnePlus 9" > lemonade/friendlyName;
 echo "OnePlus 9 Pro" > lemonadep/friendlyName;
-echo 7 > lemonade/status-19.1;
-echo 8 > lemonadep/status-19.1;
+echo 5 > lemonade/status-19.1;
+echo 5 > lemonadep/status-19.1;
 echo -e "Fastboot\nNo*\n2.0" > lemonade/bootloader_information;
 echo -e "Fastboot\nNo*\n2.0" > lemonadep/bootloader_information;
 
@@ -524,7 +524,7 @@ echo 2 > pro1/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > pro1/bootloader_information;
 
 echo "Google Pixel 5" > redfin/friendlyName;
-echo 1 > redfin/status-19.1;
+echo 2 > redfin/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > redfin/bootloader_information;
 
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
@@ -552,7 +552,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > starlte/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 
 echo "Google Pixel 4a" > sunfish/friendlyName;
-echo 1 > sunfish/status-19.1;
+echo 8 > sunfish/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
