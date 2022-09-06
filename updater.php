@@ -123,6 +123,9 @@ function getImageJson($rootdir, $base, $device, $image) {
 			$json .= "\n\t\t\t\"id\": \"" . md5(file_get_contents($rootdir . "/". $image . ".md5sum")) . "\",";
 			$json .= "\n\t\t\t\"datetime\": " . filemtime($rootdir . "/". $image) . ",";
 			$json .= "\n\t\t\t\"size\": " . filesize($rootdir . "/". $image);
+			if(strlen($imageSplit[1]) < 5 && file_exists($rootdir . "/status-" . $imageSplit[1])) {
+				$json .=  ",\n\t\t\t\"status\": " . file_get_contents($rootdir . "/status-" . $imageSplit[1]);
+			}
 			$json .= "\n\t\t},";
 			return $json;
 		}
