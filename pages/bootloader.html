@@ -15,7 +15,7 @@
 						<h3>Prerequisites<a href="#prereq">¶</a></h3>
 						<p>Research for information surrounding your specific device model.<br>It is strongly recommended to be running the latest factory images before switching, especially if relocking. However notably some devices must be running an old version to allow installation of alternative systems.</p>
 						<p>You'll need ADB access in order to attempt any of the methods below.</p>
-						<h4>On your computer</h4>
+						<h4 id="prereqComputer">On your computer<a href="#prereqComputer">¶</a></h4>
 						<ul>
 							<li>Arch Linux: <code>sudo pacman -S android-tools android-udev</code></li>
 							<li>Fedora: <code>sudo dnf install android-tools</code></li>
@@ -24,7 +24,7 @@
 							<li>Windows: <strike>Install UniversalADB from <a href="https://adb.clockworkmod.com/" target="_blank" rel="nofollow noopener noreferrer">here</a></strike> and download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
 							<li>You'll also need a recovery.img for your specific device. Preferably ours <strike>or <a href="https://twrp.me" target="_blank" rel="nofollow noopener noreferrer">TWRP</a></strike></li>
 						</ul>
-						<h4>On your phone</h4>
+						<h4 id="prereqPhone">On your phone<a href="#prereqPhone">¶</a></h4>
 						<ol>
 							<li>Open the 'Settings' app</li>
 							<li>Navigate to the 'About' page</li>
@@ -37,7 +37,7 @@
 					<div class="section" id="fastboot">
 						<h3>Fastboot<a href="#fastboot">¶</a></h3>
 						<ul>
-							<h4>Unlocking</h4>
+							<h4 id="fastbootUnlocking">Unlocking<a href="#fastbootUnlocking">¶</a></h4>
 							<ol>
 								<li>Open the Phone app and type <code>*#*#2432546#*#*</code>, do not hit call</li>
 								<li>Enable 'Allow OEM unlocking' under 'Developer options' in Settings if available</li>
@@ -57,7 +57,7 @@
 								</li>
 								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
 							</ol>
-							<h4>Locking</h4>
+							<h4 id="fastbootLocking">Locking<a href="#fastbootLocking">¶</a></h4>
 							<div class="section" id="lockwarning">
 								<div class="card fluid error">
 									<h5>WARNING!<a href="#lockwarning">¶</a></h5>

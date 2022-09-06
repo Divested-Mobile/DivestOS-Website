@@ -1,7 +1,7 @@
 				<div class="card fluid">
 					<h2>Frequently Asked Questions</h2>
 					<div class="section">
-						<h3>Device Choice</h3>
+						<h3 id="deviceChoice">Device Choice<a href="#deviceChoice">¶</a></h3>
 
 						<h4 id="guidelines">Any guidelines for choosing a device?<a href="#guidelines">¶</a></h4>
 						<p>Yes, please for your own sake avoid devices with the following:</p>
@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="section">
-						<h3>Device Support</h3>
+						<h3 id="deviceSupport">Device Support<a href="#deviceSupport">¶</a></h3>
 
 						<h4 id="supportStatus">Are all devices supported equally?<a href="#supportStatus">¶</a></h4>
 						<p>No, some devices have much better support than others.</p>
@@ -124,7 +124,7 @@
 					</div>
 
 					<div class="section">
-						<h3>Operating System</h3>
+						<h3 id="system">Operating System<a href="#system">¶</a></h3>
 
 						<h4 id="bugReport">I found a bug! Where do I report it?<a href="#bugReport">¶</a></h4>
 						<p>Please see the <a href="index.php?page=bug_reporting">bug reporting</a> page.</p>
@@ -138,6 +138,13 @@
 							<li>18.1: bacon, d852, flox, klte, mako, sailfish</li>
 							<li>19.1: cheeseburger, fajita, mata, taimen</li>
 							<li>Have an unused device? Please consider donating it for better test coverage.</li>
+						</ul>
+
+						<h4 id="altDroid">Should I use an alternative F-Droid client?<a href="#altDroid">¶</a></h4>
+						<p>While the official F-Droid client currently has some major issues, it is not recommend to use an alternative client due to how DivestOS utilizes its own F-Droid repos for updates. If you do want to use one anyway, you MUST do the following:</p>
+						<ul>
+							<li>Add the `DivestOS WebView` repo to receive Mulch WebView updates: <a href="https://divestos.org/fdroid/webview?fingerprint=FB426DA1750A53D7724C8A582B4D34174E64A84B38940E5D5A802E1DFF9A40D2" target="_blank">https://divestos.org/fdroid/webview</a></li>
+							<li>Add the `DivestOS Official` repo to receive Mull updates: <a href="https://divestos.org/fdroid/official/?fingerprint=E4BE8D6ABFA4D9D4FEEF03CDDA7FF62A73FD64B75566F6DD4E5E577550BE8467" target="_blank">https://divestos.org/fdroid/official</a></li>
 						</ul>
 
 						<h4 id="networkOnly">Should I use the 'XG only' network mode option (if available)?<a href="#networkOnly">¶</a></h4>
@@ -186,14 +193,14 @@
 					</div>
 
 					<div class="section">
-						<h3>Security</h3>
+						<h3 id="security">Security<a href="#security">¶</a></h3>
 
 						<h4 id="modem">What about that gaping hole that is the baseband processor?<a href="#modem">¶</a></h4>
 						<p>We are in dire need of free hardware, but we don't have many options available currently.</p>
 					</div>
 
 					<div class="section">
-						<h3>Freedom</h3>
+						<h3 id="freedom">Freedom<a href="#freedom">¶</a></h3>
 
 						<h4 id="proprietary-git">Why are you hosting on GitHub and GitLab if they are proprietary?<a href="#proprietary-git">¶</a></h4>
 						<p>Because a lot of people have existing accounts on them which reduces the barrier to entry for contributing. You are otherwise free to e-mail patches to us if you prefer.</p>
@@ -203,7 +210,7 @@
 					</div>
 
 					<div class="section">
-						<h3>Other Things</h3>
+						<h3 id="other">Other Things<a href="#other">¶</a></h3>
 
 						<h4 id="community">Where can I talk to other users?<a href="#community">¶</a></h4>
 						<p>Please see the <a href="index.php?page=community">community</a> page.</p>
@@ -217,6 +224,9 @@
 						<h4 id="recommendedServices">What VPN/email/boat rental services do you recommend?<a href="#recommendedServices">¶</a></h4>
 						<p>¯\_(ツ)_/¯</p>
 
+						<h4 id="rom">Why does DivestOS not use the word "ROM" anywhere on its website?<a href="#rom">¶</a></h4>
+						<p>DivestOS is an aftermarket operating system with a strict set of standards it strives to achieve.<br>Not a poorly docuemented, code over the wall, haphazardly maintained ROM.</p>
+
 						<h4 id="misconceptions">What are some misconceptions I should be aware of?<a href="#misconceptions">¶</a></h4>
 						<ul>
 							<li>If you encounter a serious issue, wiping is almost never the solution.</li>
@@ -224,6 +234,8 @@
 							<li>Wiping cache does absolutely nothing.</li>
 							<li>You can still install updates when the bootloader is locked.</li>
 							<li>`fastboot update xyz.zip` does not replace your bootloader.</li>
+							<li>UnifiedNlp is not required for apps to acquire location.</li>
+							<li>Network location providers, such as Play and UnifiedNlp, do not make GPS acquire a lock quicker.</li>
 						</ul>
 
 						<h4 id="preloading">I want to sell devices with DivestOS preloaded, what should I know?<a href="#preloading">¶</a></h4>
@@ -235,9 +247,9 @@
 							<li>Use Extirpater + factory reset to ensure no previous user data remains.</li>
 							<li>Ensure the device firmware is up to date before flashing.</li>
 							<li>Use the DivestOS recovery if supported.</li>
-							<li>Do not modify any system partitions such as /system, /vendor, or /boot.</li>
+							<li>Do not modify any system or firmware partitions such as /system, /vendor, or /boot.</li>
 							<li>Lock the bootloader if supported.</li>
-							<li>If the device requires a token/keyfile to unlock the bootloader provide it to the user.</li>
+							<li>If the device requires a token or keyfile to unlock the bootloader, provide it to the user.</li>
 							<li>Leave it at the setup screen.</li>
 							<li>Leave the default wallpaper.</li>
 							<li>If you preload apps only source from the existing F-Droid repositories.</li>
@@ -245,8 +257,8 @@
 						<p>If you are not using official builds of DivestOS:</p>
 						<ul>
 							<li>Make it clear to your users that it is unofficial.</li>
-							<li>Use the branding variables in the scripts to rename it.</li>
-							<li>You must make your sources available to your users as per the original repositories' respective licenses. This is mandatory!</li>
+							<li>Use the branding variables in the scripts to rebrand it.</li>
+							<li>You must make your sources available to your users as per the original repositories' respective licenses. Compliance is mandatory!</li>
 							<li>Consider upstreaming any appropriate changes.</li>
 						</ul>
 					</div>
