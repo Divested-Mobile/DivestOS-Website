@@ -1,4 +1,4 @@
-last updated: 2022/09/05
+last updated: 2022/09/06
 
 Chromium History
 ================
@@ -49,7 +49,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-105.0.5195.79	2022/09/05	<36ksv		2022/09/05	2022/09/05	1ksv				176ksv
+105.0.5195.79	2022/09/05	<36ksv		2022/09/05	2022/09/05	1ksv		2022/09/06	176ksv
 105.0.5195.77	2022/09/02			2022/09/03	2022/09/02			2022/09/05
 105.0.5195.68	2022/08/30			2022/08/30	2022/08/30	2022/09/01	2022/09/02
 104.0.5112.97	2022/08/16			2022/08/16	2022/08/16	2022/08/21	2022/08/31
@@ -110,7 +110,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		104.0.5112.91				https://github.com/bromite/bromite/commits/master
-- CalyxOS, 12		105.0.5195.77				https://review.calyxos.org/q/chromium
+- CalyxOS, 12		105.0.5195.79				https://review.calyxos.org/q/chromium
 - /e/OS			100.0.4896.57, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		103.0.5060.126, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 
