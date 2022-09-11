@@ -1,8 +1,10 @@
 				<div class="card fluid">
 					<h2>Project News</h2>
 					<p>Occasional updates about DivestOS.</p>
+					<?php if(filesize("pages/news-future.html") > 0) : ?>
 					<h2>Upcoming News</h2>
 					<?php print(file_get_contents("pages/news-future.html")); ?>
+					<?php endif; ?>
 					<h2>Current News</h2>
 					<div class="section" id="2022-09">
 						<h3>September 10th 2022 Update<a href="#2022-09">¶</a></h3>
