@@ -36,6 +36,7 @@ Advanced Privacy
 - Includes the proprietary Mapbox library
  - https://gitlab.e.foundation/e/os/advanced-privacy/-/blob/3ca73e64ddd25c7c20eca2e4e0db77032db848c0/dependencies.gradle#L86
  - https://github.com/mapbox/mapbox-gl-native-android/commit/165dd987cfc33bfb67ffa1ee09fe551b70e427f0
+ - With a tracker: https://community.e.foundation/t/advanced-privacy-blocks-trackers-from-e-system/41799
 
 
 PDF Viewer
@@ -99,3 +100,4 @@ Not Covered (nuanced or needs research/sources)
 - Signature spoofing support, with no restrictions
 - Website requires JavaScript
 - E2EE isn't offered on their Nextcloud instance, citing data loss concerns
+ - leaking user data to other users: https://community.e.foundation/t/service-announcement-26-may/41252/27

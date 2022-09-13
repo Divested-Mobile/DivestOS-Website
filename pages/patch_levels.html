@@ -14,14 +14,24 @@
 						Briefly for each operating system:
 							<ul>
 								<li><a href="https://grapheneos.org" target="_blank" rel="nofollow noopener noreferrer">GrapheneOS</a>, with the exception of the Pixel 3/a, strictly only supports devices that have all parts updated.</li>
-								<li><a href="https://calyxos.org" target="_blank" rel="nofollow noopener noreferrer">CalyxOS</a>, with the exception of the Pixel 3/a and other non-Pixel devices, only supports devices that have all parts updated.</li>
+								<li><a href="https://calyxos.org" target="_blank" rel="nofollow noopener noreferrer">CalyxOS</a>, with the exception of the Pixel 3/a and other non-Pixel devices, in theory only supports devices that have all parts updated.</li>
 								<li><a href="https://lineageos.org" target="_blank" rel="nofollow noopener noreferrer">LineageOS</a> can help with 1, 2, 3, and usually 5, but if a device is out of support by its manufacturer it cannot help with 4.</li>
 								<li>DivestOS, being Lineage based helps with 1, 2, 3, can minimize 4 via the <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">deblobber</a>, and improve 5 significantly using the <a href="https://gitlab.com/divested-mobile/cve_checker" target="_blank" rel="nofollow noopener noreferrer">CVE auto-patcher</a>.</li>
 								<li>LineageOS (and derivatives) notably only apply Pixel ASB's to the most recent branch.</li>
 								<li>Any of the above operating systems will be a dramatic improvement for any device that is no longer receiving support from its manufacturer.</li>
-								<li><a href="https://replicant.us" target="_blank" rel="nofollow noopener noreferrer">Replicant</a> 6.0 is based on the LineageOS-13.0 branch and is behind on all parts.</li>
 							</ul>
-						Furthermore GrapheneOS is a substantially hardened operating system. DivestOS includes some of the security features from GrapheneOS along with its own.<br>Such hardening changes can prevent exploitation of both known and unknown issues and are not found in LineageOS, CalyxOS, or most other aftermarket systems.<br><br>If you are choosing an operating system for security the order is GrapheneOS, then DivestOS, then official LineageOS, with the choice depending on what device you have or can acquire/afford.<br>At the potential cost of freedom and/or privacy, you may even want to consider the stock OS.<br><br>A historical comparison of operating system patch levels is available <a href="/misc/a-dates.txt" target="_blank">here</a>, along with patch counts documented <a href="index.php?page=patch_counts" target="_blank">here</a>.</p>
+						Furthermore GrapheneOS is a substantially hardened operating system. DivestOS includes some of the security features from GrapheneOS along with its own.<br>Such hardening changes can prevent exploitation of both known and unknown issues and are not found in LineageOS, CalyxOS, or most other aftermarket systems.<br><br>If you are choosing an operating system for security the order is GrapheneOS, then DivestOS, then official LineageOS, with the choice depending on what device you have or can acquire/afford<br>At the potential cost of freedom and/or privacy, you may even want to consider the stock OS.<br><br>A historical comparison of operating system patch levels is available <a href="/misc/a-dates.txt" target="_blank">here</a>, along with patch counts documented <a href="index.php?page=patch_counts" target="_blank">here</a>.</p>
+
+						<h3 id="others">What about this other OS?<a href="#others">¶</a></h3>
+						<ul>
+							<li>CalyxOS occasionally falls behind updates (see <a href="/misc/ch-dates.txt" target="_blank">1</a> and <a href="/misc/a-dates.txt" target="_blank">2</a>), has no added hardening features, and primarily only supports Pixels which are better supported by GrapheneOS.</li>
+							<li>/e/OS has many severe issues as documented <a href="/misc/e.txt" target="_blank">here</a>.</li>
+							<li><a href="https://replicant.us" target="_blank" rel="nofollow noopener noreferrer">Replicant</a> 6.0 is based on the LineageOS-13.0 branch and is extremely insecure.</li>
+							<!-- needs a tactful reason <li>Proprietary aftermarket systems should be avoided, they generally do not provide anything of value over the existing open source options that are available.</li>-->
+							<li>GSIs should be avoided, they do not provide the kernel or vendor components and cannot utilize many security features.</li>
+							<!-- ianal, needs review <li>GSIs based on "treble experimentations" (such as LeOS) should be considered proprietary due to the <a href="https://github.com/phhusson/treble_experimentations/issues/1965" target="_blank" rel="nofollow noopener noreferrer">lack of license</a>.</li>-->
+							<li>Lastly many aftermarket systems often do not provide consistent and timely updates to the system WebView component as documented <a href="/misc/ch-dates.txt" target="_blank">here</a>. This is a security critical component of the system not included in the ASB that is frequently overlooked and/or ignored.</li>
+						</ul>
 
 						<h3 id="secure">Does DivestOS make my device secure?<a href="#secure">¶</a></h3>
 						<p>The short answer: No.<br>The long answer is that DivestOS is likely the best harm reduction option if your device is no longer in support by its manufacturer or vendor.<br>Any project or product claiming they make end-of-life devices secure should be rigorously scrutinized.<br>If you want a reasonably secure and well-maintained device, please acquire a newer Pixel that is fully supported by GrapheneOS and use it instead.<br>Lastly it must be noted that privacy and security go hand-in-hand, there is a fundamental limit of how much privacy you can achieve if you do not have security backing it up.</p>
@@ -101,7 +111,7 @@
 									<td data-label="EOL">2026-12</td>
 								</tr>
 								<tr>
-									<td data-label="Version">5.41/td>
+									<td data-label="Version">5.4</td>
 									<td data-label="Last">5.4.212</td>
 									<td data-label="EOL">2025-12</td>
 								</tr>
@@ -150,7 +160,7 @@
 					</div>
 					<div class="section" id="devices">
 						<h3>Devices<a href="#devices">¶</a></h3>
-						<p>Last updated: 2022-09-10</p>
+						<p>Last updated: 2022-09-10<br>Of note, DivestOS only includes firmware on select devices as documented <a href="https://gitlab.com/divested-mobile/firmware-empty/-/blob/master/STATUS" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
 						<table class="striped" style="max-height: 100%;">
 							<thead>
 								<tr>
