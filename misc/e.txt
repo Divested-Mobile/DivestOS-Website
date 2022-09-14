@@ -101,3 +101,6 @@ Not Covered (nuanced or needs research/sources)
 - Website requires JavaScript
 - E2EE isn't offered on their Nextcloud instance, citing data loss concerns
  - leaking user data to other users: https://community.e.foundation/t/service-announcement-26-may/41252/27
+- /e/OS App Lounge shipping outdated versions of apps
+ - See here Mull 91.2.0 as the "latest" version, despite a years worth of newer versions available: https://community.e.foundation/t/new-standard-browser-librewolf/42791/41
+  - https://divestos.org/misc/ffa-dates.txt

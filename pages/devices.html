@@ -34,6 +34,7 @@
 
 	function getDownloads($version) {
 		$base = noHTML($_GET["base"]);
+		$golden = (noHTML($_GET["golden"]) === "true");
 		if(is_null($base) || strlen($base) == 0 || !(substr_count($base, '/') == 0)) {
 			error();
 			return;
@@ -52,24 +53,25 @@
 			return;
 		}
 
-		print(getCachedDevices($base, $rootdir, $realRootdir, $devices, $version));
+		print(getCachedDevices($base, $rootdir, $realRootdir, $devices, $version, $golden));
 	}
 
-	function getCachedDevices($base, $rootdir, $realRootdir, $devices, $version) {
+	function getCachedDevices($base, $rootdir, $realRootdir, $devices, $version, $golden) {
 		if(extension_loaded("redis")) {
 			$result = "";
 			$cacheKey = "DivestOS+devices.php+base:" . $base . "+version:" . $version;
+			if($golden) { $cacheKey .= "+golden"; }
 			if(($result = getRedis()->get($cacheKey)) == false) {
-				$result = getDevices($base, $rootdir, $realRootdir, $devices, $version);
+				$result = getDevices($base, $rootdir, $realRootdir, $devices, $version, $golden);
 				getRedis()->setEx($cacheKey, 3600, $result); //1 hour
 			}
 			return $result;
 		} else {
-			return getDevices($base, $rootdir, $realRootdir, $devices, $version);
+			return getDevices($base, $rootdir, $realRootdir, $devices, $version, $golden);
 		}
 	}
 
-	function getDevices($base, $rootdir, $realRootdir, $devices, $version) {
+	function getDevices($base, $rootdir, $realRootdir, $devices, $version, $golden) {
 		$downloads = "";
 		$lastSecRelease = 1567728000; //The timestamp of when LineageOS merged the latest Android security bulletin patches, XXX: MUST BE MANUALLY UPDATED
 		$curTime = time(); //Used to check if builds are older than 40 days as a fallback if the above isn't updated
@@ -196,6 +198,12 @@
 						}
 
 						//OUTPUT THE ROW/CARD
+						if (!$golden ||
+							($golden && (
+								($resultStatusMessage == "Tested Working" || $resultStatusMessage == "Reported Working")
+								&& ($resultRelockable == "Tested Working\n" || $resultRelockable == "Reported Working\n")
+							))
+						) {
 						$downloads .= "<div class=\"card centero\" id=\"device-" . $device . "\">";
 						$downloads .= "<h3><a style=\"color: inherit; text-decoration: none;\" href=\"#device-" . $device . "\">" . $trueName . "<small>" . $resultFriendlyName . "</small></a></h3>";
 						$downloads .= "<ul>";
@@ -226,6 +234,7 @@
 						$downloads .= $resultExtras;
 
 						$downloads .= "</div>";
+						}
 
 						unset($resultOTA);
 						unset($resultHashOTA);
