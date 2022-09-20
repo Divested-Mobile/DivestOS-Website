@@ -6,3 +6,4 @@ sbnr/captcha_fonts
 sbnr/stripe_private.php
 updater.token.php
 pages/news-future.html
+*.webp
