@@ -109,6 +109,10 @@
 						<ul>
 							<li>Sensors will not work unless you have a hybrid v220k modem which requires an a10b bootloader. [firmware]</li>
 						</ul>
+						<h4 id="fp4">FP4<a href="#fp4">¶</a></h4>
+						<ul>
+							<li>Do <strong>NOT</strong> attempt to lock the bootloader if <code>fastboot flashing get_unlock_abiltity</code> returns zero or else it will brick. EDL access is not available on this device and you will have to send it in for service. [upstream]<a href="https://forum.fairphone.com/t/trapped-in-fastboot-mode-with-locked-bootloader-and-corrupted-custom-rom/809858" target="_blank" rel="nofollow noopener noreferrer">[forum thread]</a></li>
+						</ul>
 						<h4 id="g3-common">d850/d851/d852/d855/f400/ls990/vs985/G3<a href="#g3-common">¶</a></h4>
 						<ul>
 							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?]</li>
@@ -126,8 +130,9 @@
 						</ul>
 						<h4 id="op6-common">enchilada/fajita<a href="#op6-common">¶</a></h4>
 						<ul>
-							<li>18.1 ONLY: Uses the stock /vendor partition, making many of the deblobber benefits unavailable.</li>
-							<strike><li>Builds before 2021/09/02 on the 11.0 bootloader/firmware will enter CrashDump mode. Hold volume up + power to exit and then use fastboot to flash a newer build. [firmware]<a href="https://review.lineageos.org/c/LineageOS/android_kernel_oneplus_sdm845/+/315208" target="_blank" rel="nofollow noopener noreferrer">[upstream fix]</a></li></strike>
+							<li>On select devices Wi-Fi may be very broken. [???]<a href="https://gitlab.com/LineageOS/issues/android/-/issues/4667" target="_blank" rel="nofollow noopener noreferrer">[upstream tracking]</a></li>
+							<li><strike>18.1 ONLY: Uses the stock /vendor partition, making many of the deblobber benefits unavailable.</strike></li>
+							<li><strike>Builds before 2021/09/02 on the 11.0 bootloader/firmware will enter CrashDump mode. Hold volume up + power to exit and then use fastboot to flash a newer build. [firmware]<a href="https://review.lineageos.org/c/LineageOS/android_kernel_oneplus_sdm845/+/315208" target="_blank" rel="nofollow noopener noreferrer">[upstream fix]</a></strike></li>
 						</ul>
 						<h4 id="op7-common">guacamole*/hotdog*<a href="#op7-common">¶</a></h4>
 						<ul>

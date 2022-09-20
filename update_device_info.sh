@@ -98,8 +98,8 @@ echo -e "Fastboot\nYes, Untested\n2.0" > bramble/bootloader_information;
 echo "2020-08-20" > bramble/releasedate;
 
 echo "Google Nexus 5X" > bullhead/friendlyName;
-echo 7 > bullhead/status-15.1;
-echo -e "Fastboot\nReported Working\n1.0" > bullhead/bootloader_information;
+echo 0 > bullhead/status-15.1;
+echo -e "Fastboot\nTested Working\n1.0" > bullhead/bootloader_information;
 echo "2015-10-22" > bullhead/releasedate;
 
 echo "OnePlus 5" > cheeseburger/friendlyName;
@@ -327,9 +327,9 @@ echo -e "Fastboot\nUnknown\nNo" > ham/bootloader_information;
 echo "2015-08-11" > ham/releasedate;
 
 echo "Google Nexus 5" > hammerhead/friendlyName;
-echo 7 > hammerhead/status-15.1;
+echo 0 > hammerhead/status-15.1;
 echo 5 > hammerhead/status-16.0;
-echo -e "Fastboot\nYes, Untested\nNo" > hammerhead/bootloader_information;
+echo -e "Fastboot\nTested Working\nNo" > hammerhead/bootloader_information;
 echo "2013-10-31" > hammerhead/releasedate;
 
 echo "Moto G4 Play" > harpia/friendlyName;
