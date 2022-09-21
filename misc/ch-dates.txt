@@ -1,27 +1,27 @@
-last updated: 2022/09/19
+last updated: 2022/09/21
 
 Chromium History
 ================
-Version			Date		Security Patch Count	Release Notes
+Version			Date		Security Bugfix Count	Release Notes
 105.0.5195.136		2022/09/14	11			https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_14.html
 105.0.5195.124		2022/09/13				https://chromium.googlesource.com/chromium/src/+log/105.0.5195.79..105.0.5195.124?pretty=fuller&n=10000
 105.0.5195.79		2022/09/05				https://chromium.googlesource.com/chromium/src/+log/105.0.5195.77..105.0.5195.79?pretty=fuller&n=10000
 105.0.5195.77		2022/09/02	1,  1 wild		https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop.html
 105.0.5195.68		2022/08/30	24, 1 critical		https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_30.html
-104.0.5112.97		2022/08/16	11, 1 wild, 1 critical	https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_16.html
+104.0.5112.97		2022/08/16	12, 1 wild, 1 critical	https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_16.html
 104.0.5112.69		2022/08/02	27			https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop.html
 103.0.5060.129		2022/07/19				https://chromereleases.googleblog.com/2022/07/chrome-for-android-update_01510389319.html
 103.0.5060.71		2022/07/04	3,  1 wild		https://chromereleases.googleblog.com/2022/07/chrome-for-android-update.html
 103.0.5060.70		2022/06/29				https://chromium.googlesource.com/chromium/src/+log/103.0.5060.53..103.0.5060.70?pretty=fuller&n=10000
-103.0.5060.53		2022/06/21	14, 1 critical		https://chromereleases.googleblog.com/2022/06/stable-channel-update-for-desktop_21.html
+103.0.5060.53		2022/06/21	13, 1 critical		https://chromereleases.googleblog.com/2022/06/stable-channel-update-for-desktop_21.html
 102.0.5005.125		2022/06/13	7			https://chromereleases.googleblog.com/2022/06/stable-channel-update-for-desktop.html
 102.0.5005.99		2022/06/07				https://chromereleases.googleblog.com/2022/06/chrome-for-android-update.html
 102.0.5005.78		2022/05/28				https://chromereleases.googleblog.com/2022/05/chrome-for-android-update_28.html
 102.0.5005.59		2022/05/24	32, 1 critical		https://chromereleases.googleblog.com/2022/05/stable-channel-update-for-desktop_24.html
 101.0.4951.61		2022/05/09	13			https://chromereleases.googleblog.com/2022/05/chrome-for-android-update.html
-101.0.4951.41		2022/04/26	30			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_26.html
+101.0.4951.41		2022/04/26	29			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_26.html
 100.0.4896.127		2022/04/14	2,  1 wild		https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_14.html
-100.0.4896.88		2022/04/11	11			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_11.html
+100.0.4896.88		2022/04/11	12			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_11.html
 100.0.4896.79		2022/04/04	1			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop.html
 100.0.4896.58		2022/03/29	28			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
 99.0.4844.88		2022/03/25	1,  1 wild		https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_25.html
@@ -51,7 +51,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-105.0.5195.136	2022/09/14	<36ksv		2022/09/14	2022/09/15	2022/09/16	2022/09/15	187ksv
+105.0.5195.136	2022/09/14	<36ksv		2022/09/14	2022/09/15	2022/09/16	2022/09/15	186ksv
 105.0.5195.124	2022/09/13			2022/09/13	2022/09/13			2022/09/13
 105.0.5195.79	2022/09/05			2022/09/05	2022/09/05	2022/09/10	2022/09/06
 105.0.5195.77	2022/09/02			2022/09/03	2022/09/02			2022/09/05
@@ -140,7 +140,8 @@ Notes:
 - This tracks dates the version was committed to a repository, *not* the date it was pushed out to users or shipped in a system image.
   - DivestOS pushes updates same day via an F-Droid repository.
   - GrapheneOS ships them out rapidly within a day or two via their Seamless Updater.
-  - CalyxOS pushes updates via an F-Droid repository.
+  - CalyxOS primarily pushes out updates via the monthly system updates.
+    Users can opt-in to the CalyxOS testing F-Droid repository for quicker updates.
   - Bromite pushes updates via an F-Droid repository, but is sometimes a few days behind the version available via GitHub Releases.
     Users can choose to use FFUpdater to get GitHub release notifications.
   - Users with Google Apps would have Google Chrome+Google WebView pushed via Play Store updates, notably however Google does staged rollouts.
