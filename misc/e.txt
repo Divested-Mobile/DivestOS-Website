@@ -19,6 +19,7 @@ Web Browser & System WebView
   - https://gitlab.e.foundation/e/backlog/-/issues/2180
  - https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
  - https://divestos.org/misc/ch-dates.txt
+ - Note: simply using another browser doesn't mitigate this, the WebView is used by nearly all apps displaying web content
 
 - Disables the Bromite patch which enables use of HTTPS by default
  - https://gitlab.e.foundation/e/os/browser/-/commit/f89382c8229a256ab6949dda75dce87e5ccb6def
