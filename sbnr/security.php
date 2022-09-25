@@ -29,12 +29,13 @@ ini_set("session.name", $SBNR_SEC_SESSION_COOKIE_NAME);
 ini_set("session.cookie_httponly", "true");
 ini_set("session.cookie_lifetime", "0");
 ini_set("session.entropy_length", "64");
-ini_set("session.hash_bits_per_character", "5");
+ini_set("session.hash_bits_per_character", "6");
 ini_set("session.hash_function", "sha512");
 ini_set("session.use_cookies", "1");
 ini_set("session.use_only_cookies", "1");
 ini_set("session.use_strict_mode", "1");
 ini_set("session.use_trans_sid", "0");
+ini_set("session.cookie_samesite", "Strict");
 
 //Disable error/trace reporting
 ini_set("display_errors", "Off");
@@ -47,7 +48,7 @@ if($SBNR_SEC_CLIENT_HARDENING) {
 	header('X-Frame-Options: DENY'); //Prevent embedding pages
 	header('X-Xss-Protection: 1; mode=block'); //Basic XSS protection
 }
-if($SBNR_SEC_HTTPS_ONLY) {
+if($SBNR_SEC_HTTPS_ONLY || isset($_SERVER['HTTPS'])) {
 	ini_set("session.cookie_secure", "1");
 	header('Strict-Transport-Security: max-age=86400; includeSubDomains'); //Enforce HTTPS
 }
