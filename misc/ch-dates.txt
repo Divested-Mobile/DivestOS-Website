@@ -1,4 +1,4 @@
-last updated: 2022/10/02
+last updated: 2022/10/03
 
 disclosure: Mulch is a DivestOS project
 
@@ -112,6 +112,7 @@ Standalone:
 Lineage related:
 - LineageOS, †2		105.0.5195.136				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - MoKee, †2, 12.1	105.0.5195.136, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
+- OmniROM, †2, 13	105.0.5195.136				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, †2, 11	tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
 - crDroid, †2, 11/12.1	tracks LineageOS/master			https://github.com/crdroidandroid/android/blob/12.1/snippets/lineage.xml

@@ -22,11 +22,11 @@ echo "Sony Xperia XZ2" > akari/friendlyName;
 echo "Sony Xperia XZ2 Premium" > aurora/friendlyName;
 echo "Sony Xperia XZ2 Compact" > xz2c/friendlyName;
 echo 8 > akari/status-18.1;
-echo 4 > akari/status-19.1;
+echo 8 > akari/status-19.1;
 echo 8 > aurora/status-18.1;
-echo 4 > aurora/status-19.1;
+echo 8 > aurora/status-19.1;
 echo 7 > xz2c/status-18.1;
-echo 4 > xz2c/status-19.1;
+echo 8 > xz2c/status-19.1;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > akari/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > aurora/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > xz2c/bootloader_information;
@@ -51,7 +51,7 @@ echo -e "Fastboot\nReported Working\n1.0" > angler/bootloader_information;
 echo "2015-09-29" > angler/releasedate;
 
 echo "Razer Phone 2" > aura/friendlyName;
-echo 2 > aura/status-19.1;
+echo 8 > aura/status-19.1;
 echo -e "Fastboot\nYes, Untested\n2.0" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
@@ -552,8 +552,8 @@ echo -e "Heimdall\nNot Unlockable\nNo" > starlte/bootloader_information;
 echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 
 echo "Google Pixel 4a" > sunfish/friendlyName;
-echo 8 > sunfish/status-19.1;
-echo -e "Fastboot\nYes, Untested\n2.0" > sunfish/bootloader_information;
+echo 7 > sunfish/status-19.1;
+echo -e "Fastboot\nTested Working\n2.0" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > raphael/bootloader_information;

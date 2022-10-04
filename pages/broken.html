@@ -9,10 +9,12 @@
 							<li>Refresh rate is capped to 60hz due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>If audio/video content fails to play in private tabs navigate to <code>about:config</code> and change <code>browser.privatebrowsing.forceMediaMemoryCache</code> to false, this is however a privacy risk.</li>
 							<li>Mull has strict certificate revocation checks. The CA revocation servers are frequently down/blocked/inaccessible and will result in a "Secure Connection Failed" error. Navigate to <code>about:config</code> and change <code>security.OCSP.require</code> to false, this is however a security and privacy risk.</li>
-							<li>Mull has stripped referrers. This often breaks loading of images on websites with hotlink protection. Navigate to <code>about:config</code> and change <code>network.http.referer.XOriginPolicy</code> to 1, this is however a privacy risk.</li>
+							<li>Mull has strict certificate pinning. If you are using a proxy or VPN that does HTTPS manipulation you'll encounter a "Secure Connection Failed" error. Navigate to <code>about:config</code> and change <code>security.cert_pinning.enforcement_level</code> from 2 to 1, this is however a security and privacy risk.</li>
+							<li>Mull has stripped referrers. This often breaks loading of images on websites with hotlink protection. Navigate to <code>about:config</code> and change <code>network.http.referer.XOriginPolicy</code> from 2 to 1, this is however a privacy risk.</li>
 							<li>Mull has WebAssembly disabled by default. This is often used for web apps. Navigate to <code>about:config</code> and change <code>javascript.options.wasm</code> to true if needed, this is however a security risk.</li>
 							<li>Mull has WebGL disabled by default. This is often used for games and maps. Navigate to <code>about:config</code> and change <code>webgl.disabled</code> to false if needed, this is however a privacy risk.</li>
 							<li>Mull has WebRTC disabled by default. This is often used for audio/video calls. Navigate to <code>about:config</code> and change <code>media.peerconnection.enabled</code> to true if needed, this is however a privacy risk.</li>
+							<li>If the button to "Accept the risk & continue" doesn't work: navigate to <code>about:config</code> and change <code>browser.ssl_override_behavior</code> from 2 to 1.</li>
 							<li>If you want to access Onions using Mull and Orbot: navigate to <code>about:config</code> and change <code>network.dns.blockDotOnion</code> to false. Tor Browser for Android however should be preferred.</li>
 						</ul>
 						<h4 id="others">Others<a href="#others">¶</a></h4>
@@ -116,6 +118,7 @@
 						</ul>
 						<h4 id="g3-common">d850/d851/d852/d855/f400/ls990/vs985/G3<a href="#g3-common">¶</a></h4>
 						<ul>
+							<li>Wi-Fi tethering may not work. [???]</li>
 							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?]</li>
 							<li>Device will often fail on reboot and become unresponsive, requiring the battery to be pulled. [hardware]</li>
 						</ul>
@@ -149,6 +152,10 @@
 							<li>Device is extremely slow. [hardware?]</li>
 							<li>Relocking bootloader with an AOSP/Lineage/DivestOS recovery flashed will result in a *permanent hard brick* unless you have acquired your NvFlash recovery token! [bootloader]<a href="https://web.archive.org/web/20171225183216/http://www.androidroot.mobi/pages/guides/tegra3-guide-nvflash-jellybean/" target="_blank" rel="nofollow noopener noreferrer">[guide]</a></li>
 						</ul>
+						<h4 id="hammerhead">hammerhead<a href="#hammerhead">¶</a></h4>
+						<ul>
+							<li>15.1: Wi-Fi tethering doesn't work. [???]</li>
+							<li>16.0: camera, Bluetooth, and tethering doesn't work. [???]</li>
 						</ul>
 						<h4 id="s7-common">herolte/hero2lte/S7<a href="#s7-common">¶</a></h4>
 						<ul>
