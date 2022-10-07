@@ -1,9 +1,10 @@
-last updated: 2022/10/03
+last updated: 2022/10/07
 
 disclosure: Mull is a DivestOS project
 
 Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Bugfix Count	Security Advisory
-105.1.0		2022/09/19	33ksv		2022/09/19	2022/09/20		13ksv			13			https://www.mozilla.org/en-US/security/advisories/mfsa2022-40/
+105.2.0		2022/10/04	33ksv		2022/10/04	2022/10/04		13ksv
+105.1.0		2022/09/19			2022/09/19	2022/09/20					13			https://www.mozilla.org/en-US/security/advisories/mfsa2022-40/
 104.2.0		2022/09/09			2022/09/09
 104.1.0		2022/08/17			2022/08/17	2022/08/23		2022/08/17		10			https://www.mozilla.org/en-US/security/advisories/mfsa2022-33/
 103.2.0						2022/08/03
