@@ -25,6 +25,11 @@ Web Browser & System WebView
  - https://gitlab.e.foundation/e/os/browser/-/commit/f89382c8229a256ab6949dda75dce87e5ccb6def
 
 
+App Lounge
+==========
+- See https://nervuri.net/e/app-lounge
+
+
 Advanced Privacy
 ================
 - Routes users over Tor without actually mentioning it is Tor, only an "IP scrambler"

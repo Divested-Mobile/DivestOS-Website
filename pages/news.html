@@ -6,6 +6,45 @@
 					<?php print(file_get_contents("pages/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2022-10">
+						<h3>October 10th 2022 Update<a href="#2022-10">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>19.1 release candidate #1 October ASB builds were published on October 9th.</li>
+							<li>18.1 release candidate #1 October ASB builds were published on October 8th.</li>
+							<li>17.1 release candidate #1 October ASB builds were published on October 7th.</li>
+							<li>14.1, 15.1, and 16.0 rebuilds were published on October 7th.</li>
+							<li>The proprietary Data Port Mapper (DPM) and Connectivity Engine (CNE) blobs have been added back. This should fix issues with multi-SIM, along with enabling link aggregation (LTE+) and Wi-Fi calling (VoWiFi).</li>
+							<li>19.1 now has a "Show Details" button to view the error log when an app crashes, thanks to a patch from GrapheneOS.</li>
+							<li>The SIM ToolKit (STK) app has been added back to all versions. This is sometimes used for topping up cellular plans and also by some banks as a form of 2FA.</li>
+							<li>The firmware repository has had a big update:
+								<ul>
+									<li>enabled: cheryl, dumpling, cheeseburger</li>
+									<li>updated and enabled: bramble, coral, flame, redfin, sunfish</li>
+									<li>added and enabled: aura, barbet, FP3, FP4, pro1</li>
+									<li>the <a href="https://gitlab.com/divested-mobile/firmware-empty/-/blob/master/STATUS" target="_blank" rel="nofollow noopener noreferrer">table</a> was made easier to read</li>
+								</ul></li>
+							<li>Many configs/databases have been updated to improve carrier compatibility:
+								<ul>
+									<li>17.1+ now includes CarrierConfig configs from Android 13.</li>
+									<li>16.0+ now includes the carrier_list database from Android 13.</li>
+									<li>15.1+ includes a slightly updated VisualVoiceMail database from Google.</li>
+									<li>14.1+ has replaced the seven year old MMS configs with new ones from Google.</li>
+								</ul></li>
+							<li>Four bugfixes have been pulled-in for features from GrapheneOS after going through their newer patches.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>Builds for kebab are back after four months, please see the previous special notes for OnePlus 8 series <a href="#2022-08.2">here.</a></li>
+							<li>lavender had a <a href="https://old.reddit.com/r/DivestOS/comments/xzql1a/update_error_redmi_note_7_lavender/" target="_blank" rel="nofollow noopener noreferrer">report</a> of modem related reboots on this update.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Updated Mull to 105.1.0-1 and 105.2.0-1, has 13 and 0 security fixes respectively.</li>
+							<li>Updated Mulch (WebView) to Chromium 105.0.5195.124-1, 105.0.5195.136-1, 106.0.5249.65-1, and 106.0.5249.79-1, has 0, 11, 20, and 3 security fixes respectively.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2022-09">
 						<h3>September 10th 2022 Update<a href="#2022-09">¶</a></h3>
 						<h4>System Updates</h4>
@@ -22,7 +61,6 @@
 							<li>Updated Mulch (WebView) to Chromium 105.0.5195.77-1 and 105.0.5195.79-1, has 1 and 0 security fixes respectively.</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2022-08.2">
 						<h3>August 31st 2022 Update<a href="#2022-08.2">¶</a></h3>
 						<h4>System Updates</h4>
