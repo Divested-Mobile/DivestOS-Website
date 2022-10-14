@@ -6,14 +6,14 @@
 						<ul>
 							<li>2.android.pool.ntp.org - not Google, but a volunteer pool</li>
 						</ul>
-						<h3 id="dns">DNS<a href="#dns">¶</a><small>fallback only, cell/Wi-Fi network overrides</small></h3>
+						<h3 id="dns">DNS<a href="#dns">¶</a><small>fallback only, cell/Wi-Fi network or user defined 'Private DNS' overrides</small></h3>
 						<ul>
 							<li>9.9.9.9</li>
 							<li>149.112.112.112</li>
 							<li>2620:fe::fe</li>
 							<li>2620:fe::9</li>
 						</ul>
-						<h3 id="connectivity">Network Connectivity Check<a href="#connectivity">¶</a><small>can be disabled in Settings</small></h3>
+						<h3 id="connectivity">Network Connectivity Check<a href="#connectivity">¶</a><small>every connection change, can be disabled in Settings</small></h3>
 						<ul>
 							<!--<li>https://divestos.org/gen204.php</li>
 							<li>http://divestos.org/gen204.php</li>-->
@@ -22,21 +22,21 @@
 							<li>http://www.google.com/gen_204</li>
 							<li>http://play.googleapis.com/generate_204</li>
 						</ul>
-						<h3 id="supl">SUPL<a href="#supl">¶</a><small>fallback only, carrier overrides</small></h3>
+						<h3 id="supl">SUPL<a href="#supl">¶</a><small>fallback only, carrier/SIM and emergency calls will override</small></h3>
 						<ul>
 							<li>supl.google.com:727X</li>
 						</ul>
-						<h3 id="a-gps">A-GPS/PSDS<a href="#a-gps">¶</a></h3>
+						<h3 id="a-gps">A-GPS/PSDS<a href="#a-gps">¶</a><small>when acquiring a GPS lock</small></h3>
 						<ul>
-							<li>https://xtrapath[1-6].izatcloud.net/{xtra,xtra2,xtra3grc}.bin</li>
+							<li>https://xtrapath[1-9].izatcloud.net/{xtra,xtra2,xtra3grc}.bin</li>
 						</ul>
-						<h3 id="updater">Updater<a href="#updater">¶</a></h3>
+						<h3 id="updater">Updater<a href="#updater">¶</a><small>default weekly, can be disabled in Settings > Updater</small></h3>
 						<ul>
 							<li>https://divestos.org/updater.php?base=$BASE&device=$DEVICE&inc=$BUILD_ID</li>
 							<li>https://divestos.org/mirror.php?base=$BASE&file=$FILE</li>
 							<li>https://divestos.org/builds/$BASE/$DEVICE/divested-$VERSION-$DATE-dos-$DEVICE(-$INCREMENTAL).zip</li>
 						</ul>
-						<h3 id="fdroid">F-Droid Repositories<a href="#fdroid">¶</a></h3>
+						<h3 id="fdroid">F-Droid Repositories<a href="#fdroid">¶</a><small>default daily, can be disabled in F-Droid > Settings</small></h3>
 						<ul>
 							<li>https://f-droid.org/repo/</li>
 							<li>https://divestos.org/fdroid/official/</li>
@@ -46,7 +46,7 @@
 							<li>https://apt.izzysoft.de/fdroid/ - default disabled</li>
 							<li>https://fdroid.bromite.org/fdroid/ - default disabled</li>
 						</ul>
-						<h3 id="hypatia">Hypatia<a href="#hypatia">¶</a><small>not pre-installed</small></h3>
+						<h3 id="hypatia">Hypatia<a href="#hypatia">¶</a><small>not pre-installed, not automatic</small></h3>
 						<ul>
 							<li>https://divested.dev/MalwareScannerSignatures/*.h*b.gz</li>
 						</ul>
