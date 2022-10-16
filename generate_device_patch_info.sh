@@ -42,6 +42,8 @@ getVendorPatchLevel() {
 			level="2021-10";
 		elif [ $1 == "LineageOS-19.1" ]; then
 			level="2022-07";
+		elif [ $1 == "LineageOS-20.0" ]; then
+			level="2022-10";
 		else
 			level="Unknown";
 		fi;
@@ -68,9 +70,9 @@ createTable() {
 	name=$1;
 	version=$2;
 	versionStripped=$(echo "$version" | sed 's/.*-//')
-	if [[ $versionStripped == "19.1" ]]; then
+	if [[ $versionStripped == "20.0" ]]; then
 		versionStyle="style=\"color:#4CAF50;\"";
-	elif [[ $versionStripped == "17.1" ]] || [[ $versionStripped == "18.1" ]]; then
+	elif [[ $versionStripped == "17.1" ]] || [[ $versionStripped == "18.1" ]] || [[ $versionStripped == "19.1" ]]; then
 		versionStyle="style=\"color:#FFC107;\"";
 	else
 		versionStyle="style=\"color:#F44336;\"";
