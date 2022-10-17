@@ -194,9 +194,9 @@ echo "OnePlus 8T" > kebab/friendlyName;
 echo 8 > instantnoodle/status-19.1;
 echo 3 > instantnoodle/status-20.0;
 echo 8 > instantnoodlep/status-19.1;
-echo 3 > instantnoodlep/status-20.0;
+echo 7 > instantnoodlep/status-20.0;
 echo 8 > kebab/status-19.1;
-echo 3 > kebab/status-20.;
+echo 3 > kebab/status-20.0;
 echo -e "Fastboot\nNo*\n2.0" > instantnoodle/bootloader_information;
 echo -e "Fastboot\nNo*\n2.0" > instantnoodlep/bootloader_information;
 echo -e "Fastboot\nNo*\n2.0" > kebab/bootloader_information;
@@ -213,7 +213,7 @@ echo -e "Fastboot\nNo*\n2.0" > lemonadep/bootloader_information;
 echo "OnePlus 6" > enchilada/friendlyName;
 echo "OnePlus 6T" > fajita/friendlyName;
 echo 7 > enchilada/status-19.1;
-echo 10 > enchilada/status-20.0;
+echo 7 > enchilada/status-20.0;
 echo 0 > fajita/status-19.1;
 echo 0 > fajita/status-20.0;
 echo -e "Fastboot\nReported Working\n2.0" > enchilada/bootloader_information;
@@ -257,7 +257,7 @@ echo "2019-09-03" > fp3/releasedate;
 
 echo "Fairphone 4" > fp4/friendlyName;
 echo 7 > fp4/status-19.1;
-echo 3 > fp4/status-20.0;
+echo 7 > fp4/status-20.0;
 echo -e "Fastboot\nReported Working\n2.0" > fp4/bootloader_information;
 
 echo "Google Nexus Player" > fugu/friendlyName;
@@ -571,7 +571,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 
 echo "Google Pixel 4a" > sunfish/friendlyName;
 echo 7 > sunfish/status-19.1;
-echo 3 > sunfish/status-20.0;
+echo 7 > sunfish/status-20.0;
 echo -e "Fastboot\nTested Working\n2.0" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
