@@ -1,10 +1,11 @@
-last updated: 2022/10/17
+last updated: 2022/10/18
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+107.0.5304.x		2022/10/25
 106.0.5249.126		2022/10/13				https://chromium.googlesource.com/chromium/src/+log/106.0.5249.118..106.0.5249.126?pretty=fuller&n=10000
 106.0.5249.118		2022/10/11	6			https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_11.html
 106.0.5249.79		2022/09/30	3			https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_30.html

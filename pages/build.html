@@ -64,13 +64,13 @@ firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
 git clone https://gitlab.com/divested-mobile/divestos-build.git DivestOS;
 cd DivestOS;
 git submodule update --init --recursive; #must have git-lfs installed
-mkdir -p Build/LineageOS-18.1/.repo/local_manifests Builds Signing_Keys .Signing_Keys;
+mkdir -p Build/LineageOS-20.0/.repo/local_manifests Builds Signing_Keys .Signing_Keys;
 gocryptfs -init .Signing_Keys;
 gocryptfs .Signing_Keys/ Signing_Keys/;
 nano Scripts/init.sh; #Choose your options and update paths
-cd Build/LineageOS-18.1;
-cat ../../Manifests/Manifest_LAOS-18.1.xml > .repo/local_manifests/local_manifest.xml;
-repo init -u https://github.com/LineageOS/android.git -b lineage-18.1;
+cd Build/LineageOS-20.0;
+cat ../../Manifests/Manifest_LAOS-20.0.xml > .repo/local_manifests/local_manifest.xml;
+repo init -u https://github.com/LineageOS/android.git -b lineage-20.0;
 repo sync; #This part will take a while
 
 #Some systems have python3 set as default, the build scripts require python2
@@ -110,7 +110,7 @@ ccache -M 128GB; #Optionally set a size limit</code></pre>
 					<div class="section" id="compile">
 						<h3>Building<a href="#compile">¶</a></h3>
 						<p>Now that you've got your workspace ready, lets make an image. Use of bash is required, and you may need to use a Python virtualenv.</p>
-						<pre><code>cd Build/LineageOS-18.1;
+						<pre><code>cd Build/LineageOS-20.0;
 source venv/bin/activate; #Only for python3 default systems, not needed for 18.1 and higher
 source ../../Scripts/init.sh;
 resetWorkspace;

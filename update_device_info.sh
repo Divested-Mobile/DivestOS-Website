@@ -545,6 +545,10 @@ echo 2 > redfin/status-19.1;
 echo 3 > redfin/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0" > redfin/bootloader_information;
 
+echo "Google Pixel 5a" > barbet/friendlyName;
+echo 3 > redfin/status-20.0;
+echo -e "Fastboot\nYes, Untested\n2.0" > barbet/bootloader_information;
+
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
 echo 8 > santoni/status-16.0;
 echo -e "Fastboot (Xiaomi)\nLikely not possible\nNo" > santoni/bootloader_information;

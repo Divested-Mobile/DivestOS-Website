@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The deets<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2022-08-21</p>
+						<p>Last updated: 2022-10-18</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -70,10 +70,10 @@
 						</ul>
 						<h5>android_bionic</h5>
 						<ul>
-							<li>P/Q/R/S: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
-							<li>S: Sort and cache hosts file data for fast lookup (tdm)</li>
-							<li>N/O/S: Support wildcards in cached hosts file (tdm)</li>
-							<li>R/S: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
+							<li>P/Q/R/S/T: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
+							<li>S/T: Sort and cache hosts file data for fast lookup (tdm)</li>
+							<li>N/O/S/T: Support wildcards in cached hosts file (tdm)</li>
+							<li>R/S/T: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
 							<li>GRAPHENE_BIONIC=true:</li>
 							<li>P/Q/R: Add a real explicit_bzero implementation (GrapheneOS)</li>
 							<!--<li>P/Q/R: Replace brk and sbrk with stubs (GrapheneOS)</li>-->
@@ -94,13 +94,13 @@
 							<li>Q/R: Move pthread_internal_t behind guard page (GrapheneOS)</li>
 							<li>Q/R: Add secondary stack randomization (GrapheneOS)</li>-->
 							<!-- these below patches are only currently enabled on S due to boot issues with legacy devices -->
-							<li>S: Switch pthread_atfork handler allocation to mmap (GrapheneOS)</li>
-							<li>S: Add memory protection for pthread_atfork handlers (GrapheneOS)</li>
-							<li>S: Add XOR mangling mitigation for thread-local dtors (GrapheneOS)</li>
-							<li>S: Use a better pthread_attr junk filling pattern (GrapheneOS)</li>
-							<li>S: Add guard page(s) between static_tls and stack (GrapheneOS)</li>
-							<li>S: Move pthread_internal_t behind guard page (GrapheneOS)</li>
-							<li>S: Add secondary stack randomization (GrapheneOS)</li>
+							<li>S/T: Switch pthread_atfork handler allocation to mmap (GrapheneOS)</li>
+							<li>S/T: Add memory protection for pthread_atfork handlers (GrapheneOS)</li>
+							<li>S/T: Add XOR mangling mitigation for thread-local dtors (GrapheneOS)</li>
+							<li>S/T: Use a better pthread_attr junk filling pattern (GrapheneOS)</li>
+							<li>S/T: Add guard page(s) between static_tls and stack (GrapheneOS)</li>
+							<li>S/T: Move pthread_internal_t behind guard page (GrapheneOS)</li>
+							<li>S/T: Add secondary stack randomization (GrapheneOS)</li>
 
 						</ul>
 						<h5>android_build_make</h5>
@@ -109,29 +109,29 @@
 							<li>P/Q: Add back PicoTTS and language files (DivestOS)</li>
 							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
 							<li>Add correct keys to recovery for OTA verification (DivestOS)</li>
-							<li>R/S: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
+							<li>R/S/T: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
 							<li>Enable auto-add-overlay for packages, this allows the vendor overlay to easily work across all branches.</li>
 							<!--<li>Replace the Messaging app with Silence</li>-->
-							<li>Q/R/S: Disable APEX</li>
-							<li>P/Q/R/S: Set the minimum supported target SDK to Pie (GrapheneOS)</li>
+							<li>Q/R/S/T: Disable APEX</li>
+							<li>P/Q/R/S/T: Set the minimum supported target SDK to Pie (GrapheneOS)</li>
 							<li>Various rebranding</li>
 						</ul>
 						<h5>android_build_soong</h5>
 						<ul>
 							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
-							<li>R/S: GRAPHENE_MALLOC=true: Make hardened malloc available to apexes (GrapheneOS)</li>
+							<li>R/S/T: GRAPHENE_MALLOC=true: Make hardened malloc available to apexes (GrapheneOS)</li>
 							<li>Q: Enable -ftrivial-auto-var-init=zero (GrapheneOS)</li>
 							<li>!N: Disable clang-tidy (kdrag0n)</li>
 						</ul>
 						<h5>android_device_qcom_sepolicy(-legacy)</h5>
 						<ul>
-							<li>!S: Fix camera on -user builds (DivestOS)</li>
+							<li>!S/!T: Fix camera on -user builds (DivestOS)</li>
 							<li>P/Q/R: Ignore neverallow violations</li>
 							<li>N: Cherrypick 248649: msm_irqbalance: Allow read for stats and interrupts (syphyr)</li>
 						</ul>
 						<h5>android_external_conscrypt</h5>
 						<ul>
-							<li>P/Q/R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+							<li>P/Q/R/S/T: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 						</ul>
 						<h5>android_external_chromium-webview</h5>
 						<ul>
@@ -140,8 +140,8 @@
 						<h5>android_external_graphene_malloc</h5>
 						<ul>
 							<li>P: GRAPHENE_MALLOC=true: DeviceDescriptor sorting wrongly relies on malloc addresses (GrapheneOS)</li>
-							<li>S: Workarounds for Pixel 3 SoC era camera driver bugs (GrapheneOS)</li>
-							<li>P/Q/R/S: GRAPHENE_MALLOC=true: Expand workaround to all camera executables (DivestOS)</li>
+							<li>S/T: Workarounds for Pixel 3 SoC era camera driver bugs (GrapheneOS)</li>
+							<li>P/Q/R/S/T: GRAPHENE_MALLOC=true: Expand workaround to all camera executables (DivestOS)</li>
 						</ul>
 						<h5>android_external_sqlite</h5>
 						<ul>
@@ -170,18 +170,18 @@
 							<li>N: Cherrypick 248599: Make SET_TIME_ZONE permission match SET_TIME (AOSP)</li>
 							<li>N: Allow reducing resolution to save power (DivestOS)</li>
 							<li>Change the default DNS servers</li>
-							<li>R/S: Enable app compaction by default (GrapheneOS)</li>
+							<li>R/S/T: Enable app compaction by default (GrapheneOS)</li>
 							<li>R: Enable app freezer by default (GrapheneOS)</li>
 							<li>Always restrict access to Build.SERIAL (GrapheneOS)</li>
 							<li>Don't grant location permission to system browsers (GrapheneOS)</li>
 							<li>P/Q/R/S: Allow SystemUI to directly manage Bluetooth/WiFi (GrapheneOS)</li>
-							<li>P/Q/R/S: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
+							<li>P/Q/R/S/T: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
 							<li>Don't send IMSI to SUPL (MSe1969)</li>
 							<li>!N: Enable fingerprint lockout after three failed attempts (GrapheneOS)</li>
-							<li>P/Q/R/S: Allow user logout (GrapheneOS)</li>
-							<li>P/Q/R/S: Support new special runtime permissions (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Allow user logout (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Support new special runtime permissions (GrapheneOS)</li>
 							<li>S: Extend special runtime permission implementation (GrapheneOS)</li>
-							<li>P/Q/R/S: Make INTERNET into a special runtime permission (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Make INTERNET into a special runtime permission (GrapheneOS)</li>
 							<li>P/Q/R/S: Add a NETWORK permission group for INTERNET (GrapheneOS)</li>
 							<li>Q/R: Enforce INTERNET as a runtime permission. (GrapheneOS)</li>
 							<li>Q/R: Fix INTERNET enforcement for secondary users (GrapheneOS)</li>
@@ -190,18 +190,19 @@
 							<li>S: net: Notify ConnectivityService of runtime permission changes (GrapheneOS)</li>
 							<li>S: Make DownloadManager.enqueue() a no-op when INTERNET permission is revoked (GrapheneOS)</li>
 							<li>S: Make DownloadManager.query() a no-op when INTERNET permission is revoked (GrapheneOS)</li>
-							<li>P/Q/R/S: Add special runtime permission for other sensors (GrapheneOS)</li>
-							<li>Q/R/S: Timeout for reboot (GrapheneOS)</li>
-							<li>Q/R/S: Timeout for Bluetooth (GrapheneOS)</li>
-							<li>Q/R/S: Timeout for Wi-Fi (GrapheneOS)</li>
-							<li>P/Q/R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
-							<li>Q/R/S: Add option of always randomizing MAC addresses (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Add special runtime permission for other sensors (GrapheneOS)</li>
+							<li>Q/R/S/T: Timeout for reboot (GrapheneOS)</li>
+							<li>Q/R/S/T: Timeout for Bluetooth (GrapheneOS)</li>
+							<li>Q/R/S/T: Timeout for Wi-Fi (GrapheneOS)</li>
+							<li>P/Q/R/S/T: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+							<li>Q/R/S:/T Add option of always randomizing MAC addresses (GrapheneOS)</li>
 							<li>Q/R: Fix random reboots on broken kernels when an app has data restricted (DivestOS)</li>
-							<li>S: Don't report statementservice crashes (GrapheneOS)</li>
+							<li>S/T: Don't report statementservice crashes (GrapheneOS)</li>
 							<li>S: Skip screen on animation when wake and unlock via biometrics (jesec)</li>
-							<li>S: SystemUI: Skip screen-on animation in all scenarios (kdrag0n)</li>
+							<li>S/T: SystemUI: Skip screen-on animation in all scenarios (kdrag0n)</li>
 							<li>R/S: SystemUI: add burnIn protection (arter97)</li>
-							<li>S: Make monet based theming user configurable (GrapheneOS)</li>
+							<li>S/T: Make monet based theming user configurable (GrapheneOS)</li>
+							<li>S/T: Add an option to show the details of an application error to the user (GrapheneOS)</li>
 							<li>Q/R/S: Warn when running activity from 32 bit app on ARM64 devices. (AOSP)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
 							<li>Q/R: Restore the Sensors Off tile (DivestOS)</li>
@@ -215,20 +216,21 @@
 						</ul>
 						<h5>android_frameworks_ex</h5>
 						<ul>
-							<li>R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+							<li>R/S/T: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 						</ul>
 						<h5>android_frameworks_libs_net</h5>
 						<ul>
-							<li>S: More 'Private DNS' options (heavily based off of a CalyxOS patch)</li>
+							<li>S/T: More 'Private DNS' options (heavily based off of a CalyxOS patch)</li>
 						</ul>
 						<h5>android_frameworks_libs_systemui</h5>
 						<ul>
-							<li>S: Invalidate icon cache between OS releases (GrapheneOS)</li>
+							<li>S/T: Invalidate icon cache between OS releases (GrapheneOS)</li>
 						</ul>
 						<h5>android_frameworks_native</h5>
 						<ul>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
-							<li>P/Q/R/S: Require OTHER_SENSORS permission for sensors (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Require OTHER_SENSORS permission for sensors (GrapheneOS)</li>
+							<li>S/T: Protect step sensors with OTHER_SENSORS permission for targetSdk<29 apps (GrapheneOS)</li>
 							<li>R: Fix use-after-free in adbd_auth (GrapheneOS)</li>
 						</ul>
 						<!--<h5>android_frameworks_opt_net_ims</h5>
@@ -238,7 +240,7 @@
 						<h5>android_frameworks_opt_net_wifi</h5>
 						<ul>
 							<li>P/Q: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
-							<li>Q/R/S: Add support for always generating new random MAC (GrapheneOS)</li>
+							<li>Q/R/S/T: Add support for always generating new random MAC (GrapheneOS)</li>
 						</ul>
 						<h5>android_hardware_ti_omap4</h5>
 						<ul>
@@ -251,11 +253,11 @@
 						</ul>
 						<h5>android_hardware_qcom_audio</h5>
 						<ul>
-							<li>Q/R/S: audio_extn: Fix unused parameter warning in utils.c (codeworkx)</li>
+							<li>Q/R/S/T: audio_extn: Fix unused parameter warning in utils.c (codeworkx)</li>
 						</ul>
 						<h5>android_hardware_qcom_display</h5>
 						<ul>
-							<li>!S: Patch CVE-2019-2306 (Qualcomm)</li>
+							<li>!S/!T: Patch CVE-2019-2306 (Qualcomm)</li>
 						</ul>
 						<h5>android_hardware_qcom_gps</h5>
 						<ul>
@@ -263,9 +265,9 @@
 						</ul>
 						<h5>android_libcore</h5>
 						<ul>
-							<li>Q/R/S: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
-							<li>P/Q/R/S: Expose the NETWORK permission (GrapheneOS)</li>
-							<li>P/Q/R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+							<li>Q/R/S/T: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Expose the NETWORK permission (GrapheneOS)</li>
+							<li>P/Q/R/S/T: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 						</ul>
 						<h5>android_lineage-sdk</h5>
 						<ul>
@@ -280,17 +282,17 @@
 						<h5>android_packages_apps_Contacts</h5>
 						<ul>
 							<li>!N: Remove Privacy Policy and Terms of Service links (GrapheneOS)</li>
-							<li>Q/R/S: Backups are not sent to Google (GrapheneOS)</li>
+							<li>Q/R/S/T: Backups are not sent to Google (GrapheneOS)</li>
 							<li>!N: Don't prompt to add account when creating a contact (CalyxOS)</li>
 							<li>Use common intent for directions instead of Google Maps URL (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_apps_Dialer</h5>
 						<ul>
-							<li>P/Q/R/S: Add a privacy warning banner to calls (CalyxOS)</li>
+							<li>P/Q/R/S/T: Add a privacy warning banner to calls (CalyxOS)</li>
 							<li>Disable FLP</li>
 							<li>Disable PLP</li>
 							<li>Disable RLP</li>
-							<li>S: temporary workaround for black screen on incoming calls https://gitlab.com/LineageOS/issues/android/-/issues/4632</li>
+							<li>S/T: temporary workaround for black screen on incoming calls https://gitlab.com/LineageOS/issues/android/-/issues/4632</li>
 						</ul>
 						<h5>android_packages_apps_CMParts</h5>
 						<ul>
@@ -309,7 +311,7 @@
 						<ul>
 							<li>Disable NFC by default</li>
 							<li>Disable NDEF Push by default</li>
-							<li>P/Q/R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+							<li>P/Q/R/S/T: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_apps_PackageInstaller</h5>
 						<ul>
@@ -318,6 +320,7 @@
 						<h5>android_packages_apps_PermissionController</h5>
 						<ul>
 							<li>P/Q/R/S: Always treat INTERNET as a runtime permission (GrapheneOS)</li>
+							<li>T: Add special handling for INTERNET/OTHER_SENSORS (GrapheneOS)</li>
 							<li>P: Add NETWORK permission group (GrapheneOS)</li>
 							<li>Q/R/S: Add INTERNET permission toggle (GrapheneOS)</li>
 							<li>P/Q/R/S: Add OTHER_SENSORS permission group (GrapheneOS)</li>
@@ -325,27 +328,27 @@
 							<li>R/S: Refactor handling of special runtime permissions (GrapheneOS)</li>
 							<li>R/S: Don't auto revoke Network and Sensors (GrapheneOS)</li>
 							<li>R/S: UI fix for special runtime permission (GrapheneOS)</li>
-							<li>S: Fix usage UI summary for Network/Sensors (GrapheneOS)</li>
-							<li>S: Stop auto-granting location to system browsers (GrapheneOS)</li>
-							<li>S: SystemUI: Use new privacy indicators for location (GrapheneOS)</li>
+							<li>S/T: Fix usage UI summary for Network/Sensors (GrapheneOS)</li>
+							<li>S/T: Stop auto-granting location to system browsers (GrapheneOS)</li>
+							<li>S/T: SystemUI: Use new privacy indicators for location (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_apps_Settings</h5>
 						<ul>
-							<li>!R/!S: Don't hide OEM unlock</li>
+							<li>!R/!S/!T: Don't hide OEM unlock</li>
 							<li>N: Cherrypick 201113: wifi: Add world regulatory domain country code (syphyr)</li>
-							<li>!S: Add option to disable captive portal checks (MSe1969)</li>
-							<li>S: Add option to disable captive portal checks (GrapheneOS)</li>
+							<li>!S/!T: Add option to disable captive portal checks (MSe1969)</li>
+							<li>S/T: Add option to disable captive portal checks (GrapheneOS)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
 							<li>Q/R: Remove the Sensors Off development tile (DivestOS)</li>
-							<li>P/Q/R/S: More 'Private DNS' options (based off of a CalyxOS patch)</li>
-							<li>Q/R/S: Timeout for reboot (GrapheneOS)</li>
-							<li>Q/R/S: Timeout for Bluetooth (CalyxOS)</li>
-							<li>Q/R/S: Timeout for Wi-Fi (CalyxOS)</li>
-							<li>Q/R/S: Add native debugging setting (GrapheneOS)</li>
-							<li>Q/R/S: GRAPHENE_EXEC=true: Add exec spawning toggle (GrapheneOS)</li>
-							<li>Q/R/S: Add option to always randomize MAC (GrapheneOS</li>
-							<li>R/S: UserManager app installation restrictions (GrapheneOS)</li>
-							<li>R/S: Add a toggle to disable /etc/hosts lookup (based off of a GrapheneOS patch)</li>
+							<li>P/Q/R/S/T: More 'Private DNS' options (based off of a CalyxOS patch)</li>
+							<li>Q/R/S/T: Timeout for reboot (GrapheneOS)</li>
+							<li>Q/R/S/T: Timeout for Bluetooth (CalyxOS)</li>
+							<li>Q/R/S/T: Timeout for Wi-Fi (CalyxOS)</li>
+							<li>Q/R/S/T: Add native debugging setting (GrapheneOS)</li>
+							<li>Q/R/S/T: GRAPHENE_EXEC=true: Add exec spawning toggle (GrapheneOS)</li>
+							<li>Q/R/S/T: Add option to always randomize MAC (GrapheneOS</li>
+							<li>R/S/T: UserManager app installation restrictions (GrapheneOS)</li>
+							<li>R/S/T: Add a toggle to disable /etc/hosts lookup (based off of a GrapheneOS patch)</li>
 							<li>N/O/P/Q: Increase default max password length to 64 (GrapheneOS)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
 							<li>Disable "Instant Apps"</li>
@@ -355,12 +358,12 @@
 						<h5>android_packages_apps_SetupWizard</h5>
 						<ul>
 							<li>Remove analytics (DivestOS)</li>
-							<li>R/S: Always update recovery by default</li>
+							<li>R/S/T: Always update recovery by default</li>
 							<li>Various rebranding</li>
 						</ul>
 						<h5>android_packages_apps_ThemePicker</h5>
 						<ul>
-							<li>S: Add a UI for enabling Material You (GrapheneOS)</li>
+							<li>S/T: Add a UI for enabling Material You (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_apps_Trebuchet</h5>
 						<ul>
@@ -371,8 +374,8 @@
 						<ul>
 							<li>Switch to our server (DivestOS)</li>
 							<li>Add Tor support (DivestOS)</li>
-							<li>Q/R/S: Remove periods from incremental version</li>
-							<li>R/S: Always update recovery by default</li>
+							<li>Q/R/S/T: Remove periods from incremental version</li>
+							<li>R/S/T: Always update recovery by default</li>
 							<li>R: Add prop for allowing major updates (erfanoabdi)</li>
 							<li>Various rebranding</li>
 						</ul>
@@ -391,26 +394,30 @@
 						<ul>
 							<li>S: Add callback for enforcing INTERNET permission changes (GrapheneOS)</li>
 							<li>S: Use uid instead of app id (GrapheneOS)</li>
-							<li>S: Skip reportNetworkConnectivity() when permission is revoked (GrapheneOS)</li>
-							<li>S: More 'Private DNS' options (based off of a CalyxOS patch)</li>
+							<li>S/T: Skip reportNetworkConnectivity() when permission is revoked (GrapheneOS)</li>
+							<li>T: Enforce INTERNET permission per-uid instead of per-appId (GrapheneOS)</li>
+							<li>T: Don't crash INTERNET-unaware apps that try to access NsdManager (GrapheneOS)</li>
+							<li>S/T: More 'Private DNS' options (based off of a CalyxOS patch)</li>
 						</ul>
 						<h5>android_packages_modules_DnsResolver</h5>
 						<ul>
-							<li>S: Sort and cache hosts file data for fast lookup (tdm)</li>
-							<li>S: Support wildcards in cached hosts file (tdm)</li>
-							<li>R/S: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
+							<li>S/T: Sort and cache hosts file data for fast lookup (tdm)</li>
+							<li>S/T: Support wildcards in cached hosts file (tdm)</li>
+							<li>R/S/T: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
 						</ul>
 						<h5>android_packages_modules_NetworkStack</h5>
 						<ul>
-							<li>R/S: Avoid reusing DHCP state for full MAC randomization (GrapheneOS)</li>
+							<li>R/S/T: Avoid reusing DHCP state for full MAC randomization (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_modules_Wifi</h5>
 						<ul>
-							<li>S: Add support for always generating new random MAC (GrapheneOS)</li>
+							<li>S/T: Add support for always generating new random MAC (GrapheneOS)</li>
+							<li>S: Fix MAC address leak after SSR (AOSP)</li>
+							<li>S: WifiService: Capture BackendBusyException in MacRandomization (CodeAurora)</li>
 						</ul>
 						<h5>android_packages_providers_DownloadProvider</h5>
 						<ul>
-							<li>P/Q/R/S: Expose the NETWORK permission (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Expose the NETWORK permission (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_providers_MediaProvider</h5>
 						<ul>
@@ -440,18 +447,18 @@
 						<h5>android_system_core</h5>
 						<ul>
 							<li>Merge in our HOSTS file</li>
-							<li>Q/R/S: Revert some Lineage insanity</li>
+							<li>Q/R/S/T: Revert some Lineage insanity</li>
 							<li>N: Allow 4096-bit keys</li>
-							<li>!R/!S: Always update recovery</li>
-							<li>P/Q/R/S: GRAPHENE_MALLOC=true: Increase max_map_count for hardened_malloc (GrapheneOS)</li>
+							<li>!R/!S/!T: Always update recovery</li>
+							<li>P/Q/R/S/T: GRAPHENE_MALLOC=true: Increase max_map_count for hardened_malloc (GrapheneOS)</li>
 							<li>Harden mounts with nodev/noexec/nosuid (GrapheneOS)</li>
 							<li>Misc sysctl changes</li>
-							<li>Q/R/S: Add a property for controlling ptrace_scope (GrapheneOS)</li>
+							<li>Q/R/S/T: Add a property for controlling ptrace_scope (GrapheneOS)</li>
 							<li>P/Q/R: GRAPHENE_BIONIC=true: Zero sensitive information with explicit_bzero (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_extras</h5>
 						<ul>
-							<li>P/Q/R/S: File Based Encryption: pad filenames more (GrapheneOS)</li>
+							<li>P/Q/R/S/T: File Based Encryption: pad filenames more (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_netd</h5>
 						<ul>
@@ -463,13 +470,13 @@
 							<li>Fix -user builds for LGE devices (DivestOS)</li>
 							<li>P/Q/R: Allow ignoring neverallows under -user</li>
 							<li>label protected_{fifos,regular} as proc_security (GrapheneOS)</li>
-							<li>Q/R/S: Allow init to control kernel.yama.ptrace_scope (GrapheneOS)</li>
-							<li>Q/R/S: Allow system to use persist.native_debug (GrapheneOS)</li>
-							<li>!MICROG_INCLUDED=FULL: R/S: Disable unused gmscore_app domain (GrapheneOS)</li>
+							<li>Q/R/S/T: Allow init to control kernel.yama.ptrace_scope (GrapheneOS)</li>
+							<li>Q/R/S/T: Allow system to use persist.native_debug (GrapheneOS)</li>
+							<li>!MICROG_INCLUDED=FULL: R/S/T: Disable unused gmscore_app domain (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_update_engine</h5>
 						<ul>
-							<li>Q/R/S: Do not skip payload signature verification</li>
+							<li>Q/R/S/T: Do not skip payload signature verification</li>
 						</ul>
 						<h5>android_system_vold</h5>
 						<ul>
@@ -493,15 +500,16 @@
 							<!--<li>Replace the Messaging app with Silence</li>-->
 							<li>Change default notification sound to Pong</li>
 							<li>Change default alarm sound to Alarm_Buzzer</li>
+							<li>T: Ignore missing packages</li>
 							<li>Various rebranding</li>
 						</ul>
 						<h5>android_vendor_divested</h5>
 						<ul>
 							<li>Note: these are per branch changes to the overlay itself, not *the* changes made by the overlay</li>
-							<li>R/S: Remove all lookup provider overrides</li>
+							<li>R/S/T: Remove all lookup provider overrides</li>
 							<!--<li>MICROG_INCLUDED=NLP: Include UnifiedNlp and plugins</li>-->
 							<li>P/Q/R/S: Add deny usb service, all of our kernels the necessary patch</li>
-							<li>R/S: PicoTTS needs work to compile on 18.1, use eSpeak-NG instead</li>
+							<li>R/S/T: PicoTTS needs work to compile on 18.1, use eSpeak-NG instead</li>
 						</ul>
 
 						<h5>Automated mass changes to android_device_*</h5>
