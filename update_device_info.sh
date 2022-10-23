@@ -71,6 +71,7 @@ echo "2014-04-23" > bacon/releasedate;
 
 echo "Xiaomi Poco F1" > beryllium/friendlyName;
 echo 5 > beryllium/status-19.1;
+echo 3 > beryllium/status-20.0;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > beryllium/bootloader_information;
 echo "2018-08-01" > beryllium/releasedate; #?
 
@@ -538,6 +539,7 @@ echo -e "Fastboot (Sony)\nUnknown\nNo" > discovery/bootloader_information;
 
 echo "F(x)tec Pro¹" > pro1/friendlyName;
 echo 2 > pro1/status-19.1;
+echo 3 > pro1/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0" > pro1/bootloader_information;
 
 echo "Google Pixel 5" > redfin/friendlyName;
@@ -546,7 +548,7 @@ echo 3 > redfin/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0" > redfin/bootloader_information;
 
 echo "Google Pixel 5a" > barbet/friendlyName;
-echo 3 > redfin/status-20.0;
+echo 3 > barbet/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0" > barbet/bootloader_information;
 
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
