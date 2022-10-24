@@ -48,9 +48,7 @@
 							<li>OpenCamera: An improved camera app. Replaces Camera2/Snap</li>
 							<li>GrapheneOS Camera: A secure and user friendly camera app. Replaces OpenCamera on 19.1+</li>
 							<li>Mull: A browser hardened against trackers by default. Replaces AOSP Browser/LineageOS Jelly</li>
-							<!--<li>Silence: An improved SMS app that allows for end-to-end encrypted messages between other Silence users. Replaces AOSP Messaging</li>-->
 							<li>Simple Gallery: An improved gallery app. Replaces AOSP Gallery</li>
-							<!--<li>UnifiedNlp + Backends: Fused location provider that uses plugins to provide battery efficient location lookups.</li>-->
 						</ul>
 
 						<h5>android_art</h5>
@@ -111,7 +109,6 @@
 							<li>Add correct keys to recovery for OTA verification (DivestOS)</li>
 							<li>R/S/T: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
 							<li>Enable auto-add-overlay for packages, this allows the vendor overlay to easily work across all branches.</li>
-							<!--<li>Replace the Messaging app with Silence</li>-->
 							<li>Q/R/S/T: Disable APEX</li>
 							<li>P/Q/R/S/T: Set the minimum supported target SDK to Pie (GrapheneOS)</li>
 							<li>Various rebranding</li>
@@ -208,7 +205,7 @@
 							<li>Q/R: Restore the Sensors Off tile (DivestOS)</li>
 							<li>P/Q/R: More 'Private DNS' options (based off of a CalyxOS patch)</li>
 							<!--<li>P/Q/R/S: Add Open Camera to aux camera allowlist</li>-->
-							<li>!MICROG_INCLUDED=FULL: Remove CompanionDeviceManager, used to support Android Wear</li>
+							<li>Remove CompanionDeviceManager, used to support Android Wear</li>
 							<li>N/O/Q: Remove Osu, Automatic Wi-Fi connection non-sense</li>
 							<li>Remove PrintRecommendationService, Creates popups to install proprietary print apps</li>
 							<li>Set animation scales to 0.5</li>
@@ -472,7 +469,7 @@
 							<li>label protected_{fifos,regular} as proc_security (GrapheneOS)</li>
 							<li>Q/R/S/T: Allow init to control kernel.yama.ptrace_scope (GrapheneOS)</li>
 							<li>Q/R/S/T: Allow system to use persist.native_debug (GrapheneOS)</li>
-							<li>!MICROG_INCLUDED=FULL: R/S/T: Disable unused gmscore_app domain (GrapheneOS)</li>
+							<li>R/S/T: Disable unused gmscore_app domain (GrapheneOS)</li>
 						</ul>
 						<h5>android_system_update_engine</h5>
 						<ul>
@@ -493,11 +490,9 @@
 							<li>Remove Weather</li>
 							<li>Unset default backup provider</li>
 							<li>DEBLOBBER_REMOVE_AUDIOFX=true: Remove AudioFX</li>
-							<!--<li>MICROG_INCLUDED=NLP: Adjust the fused providers</li>-->
 							<li>Change buildtype to dos</li>
 							<li>Include our customizations</li>
 							<li>Update APN list</li>
-							<!--<li>Replace the Messaging app with Silence</li>-->
 							<li>Change default notification sound to Pong</li>
 							<li>Change default alarm sound to Alarm_Buzzer</li>
 							<li>T: Ignore missing packages</li>
@@ -507,7 +502,6 @@
 						<ul>
 							<li>Note: these are per branch changes to the overlay itself, not *the* changes made by the overlay</li>
 							<li>R/S/T: Remove all lookup provider overrides</li>
-							<!--<li>MICROG_INCLUDED=NLP: Include UnifiedNlp and plugins</li>-->
 							<li>P/Q/R/S: Add deny usb service, all of our kernels the necessary patch</li>
 							<li>R/S/T: PicoTTS needs work to compile on 18.1, use eSpeak-NG instead</li>
 						</ul>

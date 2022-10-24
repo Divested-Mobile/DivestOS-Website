@@ -1,4 +1,4 @@
-last updated: 2022/08/16
+last updated: 2022/10/23
 
 Preface:
 - This is a list of dependencies and apps that may have known vulnerabilities
@@ -20,6 +20,7 @@ Libraries:
 			- Attestation de déplacement 3.7.0:
 				- https://github.com/AdrienPoupa/AttestationDeplacement/blob/3.7.0/app/build.gradle#L42
 				- https://github.com/AdrienPoupa/AttestationDeplacement/issues/131
+				- Repository was archived after rpeorting
 			- PDF Converter 8.8.1:
 				- https://github.com/Swati4star/Images-to-PDF/blob/8.8.1/app/build.gradle#L98
 				- https://github.com/Swati4star/Images-to-PDF/issues/1083
@@ -44,10 +45,16 @@ Libraries:
 	- MuPDF 1.11 from 2017-04-11
 		- Status: Has ~31 known security issues
 		- Dependent Apps:
+			- Librera Reader 8.8.5
+				- app includes both MuPDF 1.11 as the default and for legacy Android 4.0 compatibility
+				- app optionally has MuPDF 1.20.4 that a user can choose to use
+				- https://github.com/foobnix/LibreraReader/blob/8.8.5/app/src/main/java/com/foobnix/pdf/info/AppsConfig.java#L30
+				- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.foobnix.pro.pdf.reader.yml#L318
 			- Document Viewer 2.8.2
 				- https://github.com/SufficientlySecure/document-viewer/commits/v2.8.2/document-viewer/jni/mupdf
 				- Note has 4 issues patched: https://github.com/SufficientlySecure/document-viewer/commit/0bfb13b1b65cc27145b4526a3c2564ecdb468674
 				- https://github.com/SufficientlySecure/document-viewer/issues/277
+				- Unmaintained
 	- Ancient versions (unmaintained and not reported):
 		- APV PDF Viewer 0.4.0, https://github.com/mpietrzak/apv/tree/a6510d26791fdd94baecaaf346dfc821e76bd8da/pdfview/deps
 		- PDF Reader 0.4.0, https://github.com/droidapps/pdfreader4Android/tree/0.4.0-patched/jni/mupdf/pdf
@@ -112,7 +119,7 @@ Libraries:
 		- Dependent Apps:
 			- Snikket 2.10.2+fcr, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.snikket.android.yml#L65
 			- CWeb 0.1.6+free, https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.cweb.messenger.yml#L39
-			- Cheogram 2.10.6-1+free, https://git.singpolyma.net/cheogram-android/tree/2.10.6-1-fdroid/item/build.gradle#L106
+			- Cheogram 2.10.10-1+free, https://git.singpolyma.net/cheogram-android/tree/2.10.10-1-fdroid/item/build.gradle#L106
 	- WebRTC@M56 from 2016-12-12
 		- Status: Has a ton of known security issues
 		- Dependent Apps:
