@@ -5,6 +5,7 @@
 						<h3>Apps<a href="#appIssues">¶</a></h3>
 						<h4 id="mull">Mull<a href="#mull">¶</a></h4>
 						<ul>
+							<li>On DivestOS 19.1 and 20.0 the initial install of Mull will not have Internet access, go to its `App info` screen then `Mobile data & Wi-Fi` and enable `Allow network access`.</li>
 							<li>Dark mode for websites is disabled due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>Refresh rate is capped to 60hz due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>If audio/video content fails to play in private tabs navigate to <code>about:config</code> and change <code>browser.privatebrowsing.forceMediaMemoryCache</code> to false, this is however a privacy risk.</li>
@@ -83,6 +84,7 @@
 							<li>TWRP often cannot decrypt/unlock /data.</li>
 							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>When `Private DNS` is enabled for the system, Chromium based browsers will automatically handle DNS themself bypassing the /etc/hosts based blocking function. Disable `Secure DNS` to work around.</li>
+							<li>When `Private DNS` is disabled for the system, using anything in the VPN slot will likely bypass the /etc/hosts based blocking function.</li>
 						</ul>
 						<h4 id="bugs">Bugs<a href="#bugs">¶</a></h4>
 						<ul>

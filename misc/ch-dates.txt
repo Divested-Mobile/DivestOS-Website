@@ -1,11 +1,12 @@
-last updated: 2022/10/22
+last updated: 2022/10/28
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
-107.0.5304.x		2022/10/25
+107.0.5304.91		2022/10/27	1, 1 wild		https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_27.html
+107.0.5304.54		2022/10/25	14			https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_25.html
 106.0.5249.126		2022/10/13				https://chromium.googlesource.com/chromium/src/+log/106.0.5249.118..106.0.5249.126?pretty=fuller&n=10000
 106.0.5249.118		2022/10/11	6			https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_11.html
 106.0.5249.79		2022/09/30	3			https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_30.html
@@ -58,10 +59,12 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-106.0.5249.126	2022/10/13	<9ksv		2022/10/13	2022/10/14	2022/10/17	2022/10/14	219ksv
+107.0.5304.91	2022/10/27	<24ksv		2022/10/27	2022/10/28	15ksv		15ksv		234ksv
+107.0.5304.54	2022/10/25			2022/10/26	2022/10/25
+106.0.5249.126	2022/10/13			2022/10/13	2022/10/14	2022/10/17	2022/10/14
 106.0.5249.118	2022/10/11			2022/10/11	2022/10/11			2022/10/12
 106.0.5249.79	2022/09/30			2022/09/30	2022/10/01	2022/10/05	2022/10/07
-106.0.5249.65	2022/09/27	2022/10/21	2022/09/27	2022/09/27			2022/09/29
+106.0.5249.65	2022/09/27	2022/10/20	2022/09/27	2022/09/27			2022/09/29
 105.0.5195.136	2022/09/14	2022/09/28	2022/09/14	2022/09/15	2022/09/16	2022/09/15
 105.0.5195.124	2022/09/13			2022/09/13	2022/09/13			2022/09/13
 105.0.5195.79	2022/09/05			2022/09/05	2022/09/05	2022/09/10	2022/09/06
@@ -105,12 +108,12 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		106.0.5249.126				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		107.0.5304.91				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
-- GrapheneOS Vanadium	106.0.5249.126				https://github.com/GrapheneOS/Vanadium/commits/13
-- DivestOS/Mulch	106.0.5249.126				https://gitlab.com/divested-mobile/mulch
-- CarbonROM, †2, 12	96.0.4664.111, 12 is not shipping yet	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
+- GrapheneOS Vanadium	107.0.5304.91				https://github.com/GrapheneOS/Vanadium/commits/13
+- DivestOS/Mulch	107.0.5304.91				https://gitlab.com/divested-mobile/mulch
+- CarbonROM, †2, 12	96.0.4664.111, 12 is not shipping yet?	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
 - OmniROM, †2, 11	96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
@@ -153,6 +156,7 @@ Notes:
 - †2: Users are likely to install Google Apps if not included.
 - This document tracks versions used in the context that Google Apps are *not* used.
 - If you want your OS added/removed, please ask.
+- Not all security issues impact the Android version
 - This tracks dates the version was committed to a repository, *not* the date it was pushed out to users or shipped in a system image.
   - DivestOS pushes updates same day via an F-Droid repository.
   - GrapheneOS ships them out rapidly within a day or two via their Seamless Updater.
@@ -162,6 +166,8 @@ Notes:
     Users can choose to use FFUpdater to get GitHub release notifications.
   - Users with Google Apps would have Google Chrome+Google WebView pushed via Play Store updates, notably however Google does staged rollouts.
   - /e/OS appears to hold releases and only ships them once per stable release.
+- Bromite has diverged from shipping stable release versions and often ships pre-release or LTS versions instead.
+  These do not align cleanly with the table here, and makes it hard to determine how many security issues actually impact it.
 
 There is a Firefox equivalent of this table here: https://divestos.org/misc/ffa-dates.txt
 

@@ -1,10 +1,10 @@
-last updated: 2022/10/22
+last updated: 2022/10/28
 
 disclosure: Mull is a DivestOS project
 
 Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Bugfix Count	Security Advisory
-106.1.0		2022/10/17	41ksv		2022/10/17	2022/10/21		21ksv			8			https://www.mozilla.org/en-US/security/advisories/mfsa2022-44/
-105.2.0		2022/10/04			2022/10/04	2022/10/04
+106.1.0		2022/10/17	41ksv		2022/10/17	2022/10/21		8ksv			8			https://www.mozilla.org/en-US/security/advisories/mfsa2022-44/
+105.2.0		2022/10/04			2022/10/04	2022/10/04		2022/10/04
 105.1.0		2022/09/19			2022/09/19	2022/09/20					13			https://www.mozilla.org/en-US/security/advisories/mfsa2022-40/
 104.2.0		2022/09/09			2022/09/09
 104.1.0		2022/08/17			2022/08/17	2022/08/23		2022/08/17		10			https://www.mozilla.org/en-US/security/advisories/mfsa2022-33/
@@ -137,6 +137,7 @@ Version		Mull		Iceraven	Firefox		Fennec F-Droid		Iode Browser		Security Bugfix C
 Notes:
 - The cumulative count of known security vulnerabilities (ksv) is noted if behind
 - Not all security issues impact the Android version
+- This tracks dates the version was committed to a repository, *not* the date it was pushed out to users.
 - If anyone wants to make a merge request that sorts the columns, it'd be much appreciated.
 
 Useful links:
