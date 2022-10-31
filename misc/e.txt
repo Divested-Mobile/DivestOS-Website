@@ -105,6 +105,8 @@ Not Covered (nuanced or needs research/sources)
 - Which SUPL server is default?
 - Signature spoofing support, with no restrictions
 - Website requires JavaScript
+- Trackers in their newsletter
+ - https://community.e.foundation/t/tracker-into-the-e-foundation-letter/38178
 - E2EE isn't offered on their Nextcloud instance, citing data loss concerns
  - leaking user data to other users: https://community.e.foundation/t/service-announcement-26-may/41252/27
 - /e/OS App Lounge shipping outdated versions of apps
