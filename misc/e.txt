@@ -29,6 +29,13 @@ App Lounge
 ==========
 - See https://nervuri.net/e/app-lounge
 
+- /e/OS App Lounge shipping outdated versions of apps
+ - See here Signal 5.52 as the "latest" version, despite eleven newer versions being available at that time
+  - https://community.e.foundation/t/problem-registration-signal-app-fairphone-3/44853/4
+ - See here Mull 91.2.0 as the "latest" version, despite a years worth of newer versions available
+  - https://community.e.foundation/t/new-standard-browser-librewolf/42791/41
+  - https://divestos.org/misc/ffa-dates.txt
+
 
 Advanced Privacy
 ================
@@ -109,9 +116,3 @@ Not Covered (nuanced or needs research/sources)
  - https://community.e.foundation/t/tracker-into-the-e-foundation-letter/38178
 - E2EE isn't offered on their Nextcloud instance, citing data loss concerns
  - leaking user data to other users: https://community.e.foundation/t/service-announcement-26-may/41252/27
-- /e/OS App Lounge shipping outdated versions of apps
- - See here Signal 5.52 as the "latest" version, despite eleven newer versions being available at that time
-  - https://community.e.foundation/t/problem-registration-signal-app-fairphone-3/44853/4
- - See here Mull 91.2.0 as the "latest" version, despite a years worth of newer versions available
-  - https://community.e.foundation/t/new-standard-browser-librewolf/42791/41
-  - https://divestos.org/misc/ffa-dates.txt

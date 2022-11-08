@@ -1,4 +1,4 @@
-F12last updated: 2022/10/31
+last updated: 2022/11/07
 
 disclosure: Mulch is a DivestOS project
 
@@ -59,7 +59,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-107.0.5304.91	2022/10/27	<15ksv		2022/10/27	2022/10/28	pending		15ksv		234ksv
+107.0.5304.91	2022/10/27	<15ksv		2022/10/27	2022/10/28	2022/11/01	15ksv		234ksv
 107.0.5304.54	2022/10/25			2022/10/26	2022/10/25
 106.0.5249.126	2022/10/13	2022/10/31	2022/10/13	2022/10/14	2022/10/17	2022/10/14
 106.0.5249.118	2022/10/11			2022/10/11	2022/10/11			2022/10/12
@@ -118,13 +118,13 @@ Standalone:
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS, †2		106.0.5249.126				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
+- LineageOS, †2		107.0.5304.91				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - MoKee, †2, 12.1	105.0.5195.136, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
 - OmniROM, †2, 13	105.0.5195.136, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, †2, 11	tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
 - crDroid, †2, 11/12.1	tracks LineageOS/master			https://github.com/crdroidandroid/android/blob/12.1/snippets/lineage.xml
-- iodéOS		???
+- iodéOS		tracks LineageOS/master			https://gitlab.com/iode/os/public/manifests/android/-/blob/v3-staging/snippets/lineage.xml
 - Replicant		???
 
 Bromite related:

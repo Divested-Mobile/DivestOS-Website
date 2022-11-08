@@ -1,4 +1,4 @@
-last updated: 2022/10/23
+last updated: 2022/11/07
 
 Preface:
 - This is a list of dependencies and apps that may have known vulnerabilities
@@ -20,7 +20,7 @@ Libraries:
 			- Attestation de déplacement 3.7.0:
 				- https://github.com/AdrienPoupa/AttestationDeplacement/blob/3.7.0/app/build.gradle#L42
 				- https://github.com/AdrienPoupa/AttestationDeplacement/issues/131
-				- Repository was archived after rpeorting
+				- Repository was archived after reporting
 			- PDF Converter 8.8.1:
 				- https://github.com/Swati4star/Images-to-PDF/blob/8.8.1/app/build.gradle#L98
 				- https://github.com/Swati4star/Images-to-PDF/issues/1083
@@ -67,15 +67,6 @@ Libraries:
 			- CuprumPDF v1.3.0
 				- https://github.com/paride/CopperPDF/blob/v1.3.0/app/src/main/assets/pdf.js#L31
 				- Repository archived, not reported
-- PDFBox
-	- CVEs: https://www.cvedetails.com/vulnerability-list/vendor_id-45/product_id-33936/Apache-Pdfbox.html
-	- com.tom-roush:pdfbox-android:2.0.1.0 using PDFBox 2.0.1 from 2016-04-22
-		- Implementer Library: https://github.com/TomRoush/PdfBox-Android/releases
-		- Status: Has ~5 known security issues
-		- Dependent Apps:
-			- Green Pass PDF Wallet 2.3.1
-				- https://github.com/michaeltroger/greenpass-android/blob/40/app/build.gradle#L99
-				- https://github.com/michaeltroger/greenpass-android/issues/68
 - PDFium
 	- CVEs: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=PDFium
 	- com.github.barteksc:android-pdf-viewer:3.2.0 using PDFium@32b639d from 2016-01-14
@@ -88,6 +79,8 @@ Libraries:
 			- Pdf Viewer Plus 3.7
 				- https://github.com/JavaCafe01/PdfViewer/blob/v3.7/app/build.gradle#L79
 				- https://github.com/JavaCafe01/PdfViewer/issues/175
+			- iodéOS PDF Viewer
+				- https://gitlab.com/iode/os/apps/PdfViewerPlus/-/blob/v1/app/build.gradle#L79
 			- /e/OS PDF Viewer
 				- https://gitlab.e.foundation/e/os/pdfviewer/-/blob/821386ac069f16393a8ccff0cc8fc3a4b22e85f7/app/build.gradle#L100
 				- no account, not reported
