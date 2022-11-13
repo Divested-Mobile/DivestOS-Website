@@ -43,7 +43,7 @@ getVendorPatchLevel() {
 		elif [ $1 == "LineageOS-19.1" ]; then
 			level="2022-07";
 		elif [ $1 == "LineageOS-20.0" ]; then
-			level="2022-10";
+			level="2022-11";
 		else
 			level="Unknown";
 		fi;

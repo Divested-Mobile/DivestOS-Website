@@ -52,6 +52,7 @@ echo "2015-09-29" > angler/releasedate;
 
 echo "Razer Phone 2" > aura/friendlyName;
 echo 8 > aura/status-19.1;
+echo 3 > aura/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
@@ -78,7 +79,9 @@ echo "2018-08-01" > beryllium/releasedate; #?
 echo "Google Pixel 3" > blueline/friendlyName;
 echo "Google Pixel 3 XL" > crosshatch/friendlyName;
 echo 1 > blueline/status-19.1;
+echo 1 > blueline/status-20.0;
 echo 1 > crosshatch/status-19.1;
+echo 1 > crosshatch/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0" > blueline/bootloader_information;
 echo -e "Fastboot\nReported Working\n2.0" > crosshatch/bootloader_information;
 echo "2018-10-18" > blueline/releasedate;
@@ -87,7 +90,9 @@ echo "2018-10-18" > crosshatch/releasedate;
 echo "Google Pixel 3a XL" > bonito/friendlyName;
 echo "Google Pixel 3a" > sargo/friendlyName;
 echo 1 > bonito/status-19.1;
+echo 3 > bonito/status-20.0;
 echo 1 > sargo/status-19.1;
+echo 3 > sargo/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0" > bonito/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0" > sargo/bootloader_information;
 echo "2019-05-07" > bonito/releasedate;
@@ -281,8 +286,8 @@ echo 7 > guacamole/status-19.1;
 echo 3 > guacamole/status-20.0;
 echo 7 > guacamoleb/status-19.1;
 echo 3 > guacamoleb/status-20.0;
-echo -e "Fastboot\nReported Working\n2.0" > guacamole/bootloader_information;
-echo -e "Fastboot\nYes, Untested\n2.0" > guacamoleb/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > guacamole/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > guacamoleb/bootloader_information;
 echo "2019-05-14" > guacamole/releasedate;
 echo "2019-05-14" > guacamoleb/releasedate;
 
@@ -375,8 +380,8 @@ echo 8 > hotdog/status-19.1;
 echo 3 > hotdog/status-20.0;
 echo 7 > hotdogb/status-19.1;
 echo 3 > hotdogb/status-20.0;
-echo -e "Fastboot\nYes, Untested\n2.0" > hotdog/bootloader_information;
-echo -e "Fastboot\nReported Working\n2.0" > hotdogb/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > hotdog/bootloader_information;
+echo -e "Fastboot\nNo*\n2.0" > hotdogb/bootloader_information;
 echo "2019-10-17" > hotdog/releasedate;
 echo "2019-09-28" > hotdogb/releasedate;
 
