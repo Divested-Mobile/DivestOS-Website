@@ -26,14 +26,8 @@
 					</div>
 					<div class="section" id="deps">
 						<h3>Installing Dependencies<a href="#deps">¶</a></h3>
-						<p>Run the few commands below to get your system up to date and install all necessary dependencies.</p>
-						<h4>On Arch Linux</h4>
-							<p>@p4block has created a handy metapackage for installing the necessary dependencies, use your favorite AUR helper to install it. There is also a more minimal one included in our build repository that you can install with makepkg.</p>
-							<pre><code>sudo pacman -Syu;
-aurman -S lineageos-devel firejail;
-sudo paccache -rk0;</code></pre>
-
-						<h4>On Fedora</h4>
+						<p>Run the few commands below to get your system up to date and install all necessary dependencies. Of note the DivestOS build scripts are only tested on Fedora.</p>
+						<h4>On Fedora (strongly recommended)</h4>
 							<p>The latest Fedora release is recommended.</p>
 							<pre><code>sudo dnf update;
 
@@ -42,9 +36,13 @@ sudo dnf install @development-tools android-tools automake bc bison bzip2 bzip2-
 curl https://storage.googleapis.com/git-repo-downloads/repo >> ~/bin/repo;
 chmod a+x ~/bin/repo;
 sudo ln -sf /usr/share/crypto-policies/LEGACY/java.txt /etc/crypto-policies/back-ends/java.config;</code></pre>
-
-						<h4>On Ubuntu</h4>
-							<p>Ubuntu 18.04 is recommended, newer should work fine with little change.</p>
+						<h4>On Arch Linux (not recommended)</h4>
+							<p>@p4block has created a handy metapackage for installing the necessary dependencies, use your favorite AUR helper to install it. There is also a more minimal one included in our build repository that you can install with makepkg.</p>
+							<pre><code>sudo pacman -Syu;
+aurman -S lineageos-devel firejail;
+sudo paccache -rk0;</code></pre>
+						<h4>On Ubuntu (not recommended)</h4>
+							<p>Ubuntu <strike>18.04</strike> is recommended, newer should work fine with little change.</p>
 							<pre><code>sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt -f install && sudo apt autoremove;
 sudo ln -s /usr/include/asm-generic /usr/include/asm;
 
