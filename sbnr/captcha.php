@@ -54,6 +54,18 @@ function generateTextCaptcha($captchaText) {
 	return $captcha;
 }
 
+function mangleText($text) {
+	if (preg_match("/^\d+$/", $text)) {
+		$similar = array("A", "B", "C", "F", "G", "H", "K", "M", "N", "P", "R", "T", "U", "V", "W", "X", "Y", "Z");
+	}
+	if(isset($similar)) {
+		for ($i = 0; $i < rand(1, 2); $i++) {
+			$text = substr_replace($text, $similar[rand(0, count($similar))], rand(0, strlen($text)), 0);
+		}
+	}
+	return $text;
+}
+
 function getCaptchaText($clear = true) {
 	if($clear) { clearCaptchaStore(); }
 	$captchaText = generateRandomString(6, true);
@@ -123,31 +135,32 @@ function getCaptchaMultiple($numParts = 2) {
 	return $outputImage;
 }
 
-function getJSChallenge($haystack = 255) {
-	$strAnswer = generateRandomString(8, true);
-	$strAnswerHash = hash("sha512", $strAnswer);
-	$_SESSION['SBNR_CAPTCHA_ANSWER_JS'] = $strAnswer;
-	$arrPotentials = array($strAnswer);
-	for ($i = 0; $i < $haystack; $i++) {
-		array_push($arrPotentials, generateRandomString(8, false));
-	}
-	shuffle($arrPotentials); //XXX: this is not secure
-
-	foreach ($arrPotentials as $potential) {
-		$strPotentials .= "'" . $potential . "',";
-	}
+function getJSChallenge() {
+	$countCeilingMax = 20000; //The scale
+	$countFloor = random_int(1000, 4000); //XXX: A smart client could skip the first 1000
+	$countCeiling = random_int(10000, $countCeilingMax); //Ensure no fixed ceiling
+	$strWorkNum = random_int($countFloor, $countCeiling); //Client needs to solve for this
+	$strWorkRandom = generateRandomString(16, true); //Used as a salt
+	$strAnswerHashInitial = hash("sha512", $strWorkRandom . "-" . $strWorkNum); //Allow the client to determine answer
+	$strAnswerHashResult = hash("sha512", $strAnswerHashInitial . "-" . $strWorkNum); //The true answer
+	$_SESSION['SBNR_CAPTCHA_ANSWER_JS'] = $strAnswerHashResult;
 
 $challenge = '
 <script type="text/javascript">
 window.onload = (event) => {
-	let strAnswerHash = "' . $strAnswerHash . '";
-	let arrPotentials = [' . $strPotentials . '];
+	let strWorkRandom = "' . $strWorkRandom . '";
+	let strAnswerHashInitial = "' . $strAnswerHashInitial . '";
+	document.getElementById("btnSubmit").value = "Please wait";
+	let arrPotentials = Array.from(Array(' . $countCeilingMax . ').keys());
 
 	arrPotentials.every(async function(item, index, array) {
-		const hash = await sha512(item);
-		if(hash == strAnswerHash) {
-			document.getElementById("txtJSChallenge").value = item;
-			console.log("SBNR JS Challenge: Solved at " + index);
+		const hash = await sha512(strWorkRandom + "-" + item);
+		if(hash == strAnswerHashInitial) {
+			const hashResult = await sha512(strAnswerHashInitial + "-" + item);
+			document.getElementById("txtJSChallenge").value = hashResult;
+			document.getElementById("btnSubmit").value = "Submit";
+			document.getElementById("btnSubmit").disabled = false;
+			console.log("SBNR JS PoW Challenge: Solved at " + index);
 			return false;
 		}
 		return true;

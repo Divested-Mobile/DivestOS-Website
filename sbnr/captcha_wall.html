@@ -9,14 +9,14 @@
 		</div>
 		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" autocomplete="off" required autofocus/>
 		<?php if($SBNR_CAPTCHA_WALL_JS_REQUIRED) : print(getJSChallenge()); ?>
-		<input type="text" name="txtJSChallenge" id="txtJSChallenge" minlength="8" maxlength="8" style="display: none;" required/>
+		<input type="text" name="txtJSChallenge" id="txtJSChallenge" minlength="128" maxlength="128" style="display: none;" required/>
 		<?php endif; ?>
 	</div>
 	<br>
 	<div class="input-group">
 		<input type="text" name="blackBear" id="blackBear" style="display: none;" placeholder="ROAR!" value="roar" required/>
 		<input type="text" name="brownBear" id="brownBear" style="display: none;" placeholder="Zzzz..." value=""/>
-		<input class="button primary" type="submit" id="btnSubmit" value="Submit">
+		<input class="button primary" type="submit" id="btnSubmit" value="Submit" <?php if($SBNR_CAPTCHA_WALL_JS_REQUIRED) print("disabled"); ?>>
 	</div>
 	<p>Note:<br>Cookies are required.<br>JavaScript is <?php if(!$SBNR_CAPTCHA_WALL_JS_REQUIRED) print("not"); ?> required.</p>
 </form>
