@@ -8,8 +8,8 @@
 			<?php print(getCaptchaAudio()); ?>
 		</div>
 		<input type="text" name="txtCaptcha" id="txtCaptcha" minlength="1" maxlength="10" placeholder="Please solve image" autocomplete="off" required autofocus/>
-		<?php if($SBNR_CAPTCHA_WALL_JS_REQUIRED) : print(getJSChallenge()); ?>
-		<input type="text" name="txtJSChallenge" id="txtJSChallenge" minlength="128" maxlength="128" style="display: none;" required/>
+		<?php if($SBNR_CAPTCHA_WALL_JS_REQUIRED || $SBNR_CAPTCHA_WALL_JS_SUBSTITUTE) : print(getJSChallenge()); ?>
+		<input type="text" name="txtJSChallenge" id="txtJSChallenge" minlength="128" maxlength="128" style="display: none;" <?php if(!$SBNR_CAPTCHA_WALL_JS_SUBSTITUTE) print("required"); ?>/>
 		<?php endif; ?>
 	</div>
 	<br>

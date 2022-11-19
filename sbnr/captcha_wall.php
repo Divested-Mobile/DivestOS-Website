@@ -25,7 +25,7 @@ if($SBNR_CAPTCHA_WALL === false && sizeof($SBNR_CAPTCHA_WALL_PAGES) === 0 && emp
 
 if(isset($_POST["CSRF_TOKEN"], $_POST["blackBear"])) {
 	if(noHTML($_POST["CSRF_TOKEN"]) === $_SESSION['SBNR_CSRF_TOKEN'] && (noHTML($_POST["blackBear"]) === "roar") && empty($_POST["brownBear"])) {
-		if(checkCaptchaAnswer(noHTML($_POST["txtCaptcha"]), true) && ($SBNR_CAPTCHA_WALL_JS_REQUIRED === false || checkJSChallengeAnswer(noHTML($_POST["txtJSChallenge"])))) {
+		if(checkCaptchaAnswer(noHTML($_POST["txtCaptcha"]), true) && ($SBNR_CAPTCHA_WALL_JS_REQUIRED === false || checkJSChallengeAnswer(noHTML($_POST["txtJSChallenge"]))) || ($SBNR_CAPTCHA_WALL_JS_SUBSTITUTE === true && checkJSChallengeAnswer(noHTML($_POST["txtJSChallenge"])))) {
 			$_SESSION['SBNR_CAPTCHA_WALL_PASSED'] = true;
 			http_response_code(200);
 		} else {

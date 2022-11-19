@@ -144,6 +144,7 @@ function getJSChallenge() {
 	$strAnswerHashInitial = hash("sha512", $strWorkRandom . "-" . $strWorkNum); //Allow the client to determine answer
 	$strAnswerHashResult = hash("sha512", $strAnswerHashInitial . "-" . $strWorkNum); //The true answer
 	$_SESSION['SBNR_CAPTCHA_ANSWER_JS'] = $strAnswerHashResult;
+	if($GLOBALS['SBNR_CAPTCHA_WALL_JS_SUBSTITUTE']) { $autoSubmit = "document.getElementById(\"txtCaptcha\").required = false; document.getElementById(\"btnSubmit\").click();"; }
 
 $challenge = '
 <script type="text/javascript">
@@ -161,6 +162,7 @@ window.onload = (event) => {
 			document.getElementById("btnSubmit").value = "Submit";
 			document.getElementById("btnSubmit").disabled = false;
 			console.log("SBNR JS PoW Challenge: Solved at " + index);
+			' . $autoSubmit . '
 			return false;
 		}
 		return true;
