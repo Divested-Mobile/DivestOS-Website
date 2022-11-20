@@ -92,8 +92,8 @@
 						<ul>
 							<li>jemalloc for 32-bit and 64-bit: all 14.1 and 15.1 devices</li>
 							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 16.0 devices</li>
-							<li>scudo for 32-bit and hardened_malloc for 64-bit: all 17.1, 18.1, and 19.1 devices</li>
-							<li>Exception: These devices use jemalloc for 32-bit instead of scudo: akari, aurora, cheryl, klte, xz2c</li>
+							<li>scudo for 32-bit and hardened_malloc for 64-bit: all 17.1, 18.1, 19.1, and 20.0 devices</li>
+							<li>Exception: These devices use jemalloc for 32-bit instead of scudo: akari/aurora/xz2c, cheryl, klte</li>
 						</ul>
 
 						<h4 id="volte">Why does VoLTE not work on my device?<a href="#volte">¶</a></h4>
@@ -139,6 +139,18 @@
 							<li>19.1: cheeseburger, mata</li>
 							<li>20.0: fajita, taimen</li>
 							<li>Have an unused device? Please consider donating it for better test coverage.</li>
+						</ul>
+
+						<h4 id="privateDNS">Should I use Private DNS?<a href="#privateDNS">¶</a></h4>
+						<p>Generally yes you should, otherwise whatever DNS server is advertised by your carrier or Wi-Fi network will be used.<br>Do note however that Private DNS despite its name has limited privacy benefits (due to lack of ESNI/ECH), but does have security benefits and when combined with a DNSSEC enabled resolver will better ensure your DNS requests are not tampered with.</p>
+
+						<h4 id="privateDNSwVPN">Should I use Private DNS when using a VPN/Tor?<a href="#privateDNSwVPN">¶</a></h4>
+						<ul>
+							<li>If you want to use the built-in content blocker of DivestOS you must enable Private DNS.</li>
+							<li>If you use NetGuard/RethinkDNS/DNS66/Blokada or any VPN provider with a built-in content blocker you should disable Private DNS.</li>
+							<li>If you're using Tor via Orbot's VPN mode and want an app to access Onion Services you must disable Private DNS.</li>
+							<li>Otherwise you should consider what you value more: the content blocker or ensuring onthe VPN handles DNS.</li>
+							<li>In the case you do use Private DNS with Tor or a real VPN, the Private DNS host will not learn your true IP as the requests will be routed over the VPN slot.</li>
 						</ul>
 
 						<h4 id="FDroidIssues">Why is F-Droid used?<a href="#FDroidIssues">¶</a></h4>
