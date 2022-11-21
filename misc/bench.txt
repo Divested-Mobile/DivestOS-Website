@@ -1,3 +1,17 @@
+Take these results with a grain of salt
+These numbers are primarily used to determine if a device is performing as expected
+These are largely CPU tests and don't account for RAM, storage speed, or other factors
+
+----------------------------------------------------------------
+
+Andhrystone
+===========
+https://f-droid.org/en/packages/net.teknoraver.andhrystone/
+
+first number is single-thread score
+second number is multi-thread score
+score is in (m)illion points
+
 OMAP4
 	maguro/14.1 - 4.5/9.0m - reported
 	toroplus/14.1 - 4.5/9.5m
@@ -58,3 +72,17 @@ SD865
 
 SD670
 	sargo/stock 12 - 20.0/93.0m - reported
+
+----------------------------------------------------------------
+
+Octane
+======
+https://chromium.github.io/octane/
+
+9200	Mull 107.1.0		fajita		DivestOS 20.0
+6800	Mull 107.1.0		mata		DivestOS 19.1
+6200	Mull 107.1.0		taimen		DivestOS 20.0
+4700	Mull 107.1.0		sailfish	DivestOS 18.1
+3400	Mull 107.1.0		bullhead	DivestOS 15.1
+3100	Mull 107.1.0		clark		DivestOS 17.1
+test failed to complete on: bacon, d852, klte, hammerhead

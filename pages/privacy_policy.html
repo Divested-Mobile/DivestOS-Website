@@ -1,6 +1,7 @@
 				<div class="card fluid">
-					<h2>Privacy Policy (2021-08-30)</h2>
+					<h2>Privacy Policy (2022-11-21)</h2>
 					<p>User privacy is one of the primary goals of DivestOS.<br>Detailed below is everything you need to know about how your data is handled.<br>Please see our <a href="https://divested.dev/index.php?page=infrastructure" target="_blank" rel="nofollow noopener noreferrer">infrastructure page</a> to learn how we keep our services safe.</p>
+					<p>History of this privacy policy can be viewed on <a href="https://gitlab.com/divested-mobile/divestos-website/-/blame/master/pages/privacy_policy.html" target="_blank" rel="nofollow noopener noreferrer">GitLab</a> or on <a href="https://github.com/Divested-Mobile/DivestOS-Website/blame/master/pages/privacy_policy.html" target="_blank" rel="nofollow noopener noreferrer">GitHub</a></p>
 					<div class="section" id="control">
 						<h3>Control over your data<a href="#control">¶</a></h3>
 						<ul>
@@ -74,14 +75,14 @@
 								<li>The operating system does not contain any analytics and any requests are used only for supporting it</li>
 							</ul>
 							<!-- Corresponding patch is currently disabled -->
-							<!--<li id="fpCaptivePortal">OS: Captive Portal Check<a href="#fpCaptivePortal">¶</a></li>
+							<!--<li id="fpConnectivityChecks">OS: Connectivity Checks<a href="#fpConnectivityChecks">¶</a></li>
 							<ul>
 								<li>What is received: Static User Agent, IP Address</li>
 								<li>How often: On every Wi-Fi and cell connection</li>
-								<li>Why it is received: Used to determine if there is an Internet connection</li>
+								<li>Why it is received: Used to determine if there is a working connection and if there is a captive portal</li>
 								<li>When it will be deleted: All requests to gen204.php are never logged</li>
 								<li>What else will it be used for: Nothing else</li>
-								<li>How to disable: Captive portal toggle in settings app or <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
+								<li>How to disable: Toggle in settings app (noted below) or <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
 								<li>Settings can be accessed via:<ul>
 									<li>14.1/15.1: Settings > Network > Data usage > Disable Captive Portal</li>
 									<li>16.0/17.1/18.1: Settings > Network & Internet > Advanced > Captive portal mode</li>
@@ -152,19 +153,35 @@
 								<li>How to disable: Requests to Stripe's servers will not occur until you attempt to donate</li>
 								<li>Privacy Policy: <a href="https://stripe.com/us/privacy" target="_blank" rel="nofollow noopener noreferrer">Stripe Privacy Policy</a></li>
 							</ul>
-							<li id="googleCaptivePortal">OS: Captive Portal Check<a href="#googleCaptivePortal">¶</a></li>
+							<li id="googleConnectivityChecks">OS: Connectivity Checks<a href="#googleConnectivityChecks">¶</a></li>
 							<ul>
 								<li>Who: Google</li>
-								<li>Description: Used to determine if there is a captive portal</li>
+								<li>Description: Used to determine if there is a working connection and if there is a captive portal</li>
 								<li>What they receive: Static User Agent, IP Address</li>
 								<li>How often: On every Wi-Fi and cell connection</li>
-								<li>How to disable: Captive portal toggle in settings app or <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
+								<li>How to disable: Toggle in settings app (noted below) or <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
 								<li>Settings can be accessed via:<ul>
 									<li>14.1/15.1: Settings > Network > Data usage > Disable Captive Portal</li>
 									<li>16.0/17.1/18.1: Settings > Network & Internet > Advanced > Captive portal mode</li>
 									<li>19.1/20.0: Settings > Network & Internet > Advanced > Internet connectivity check</li>
 								</ul></li>
 								<li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Google Privacy Policy</a></li>
+							</ul>
+							<li id="ntp">OS: Network Time Protocol<a href="#ntp">¶</a></li>
+							<ul>
+								<li>Who: pool.ntp.org volunteers</li>
+								<li>Description: Used to set an accurate (clock) time</li>
+								<li>What they receive: IP Address</li>
+								<li>How often: On every boot</li>
+								<li>Privacy Policy: unavailable</li>
+							</ul>
+							<li id="dns">OS: Fallback Domain Name System Lookups<a href="#dns">¶</a></li>
+							<ul>
+								<li>Who: Quad9</li>
+								<li>Description: Used to translate domain names into IP addresses to establish network connections, only when no other DNS was advertised by the network</li>
+								<li>What they receive: DNS requests, IP Address</li>
+								<li>How often: Every network request to a non-cached and non-expired domain</li>
+								<li>Privacy Policy: <a href="https://www.quad9.net/privacy/policy" target="_blank" rel="nofollow noopener noreferrer">Quad9 Privacy Policy</a></li>
 							</ul>
 							<li id="fdroid">OS: F-Droid Official Repo<a href="#fdroid">¶</a></li>
 							<ul>
