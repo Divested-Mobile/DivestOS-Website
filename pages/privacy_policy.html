@@ -36,8 +36,8 @@
 									<script>
 										var cookieCount = document.cookie.split(';').length;
 										if(document.cookie.length == 0) { cookieCount--; }
-										document.write('<li><mark>Cookie status: ' + cookieCount + ' currently set</mark></li>');
-										document.write('<li><a href="javascript:deleteAllCookies()">Click here to delete all cookies from your browser</a></li>')
+										document.write('<li><mark>Cookie status: 1+' + cookieCount + ' currently set</mark></li>');
+										document.write('<li><a href="javascript:deleteAllCookies()">Click here to delete all non-HttpOnly cookies from your browser</a></li>');
 									</script>
 									<noscript><li><mark>Cookie status: Unknown</mark></li></noscript>
 								</ul>
