@@ -34,6 +34,7 @@
 							<li>GPS issues: <code>adb logcat -b all -d | grep -i -e locsvc -e izat -e gps -e gnss -e location -e xtra</code></li>
 							<li>Radio issues: <code>adb logcat -b all -d | grep -i -e radio -e modem -e network -e connect -e phone -e tele</code></li>
 							<li>Library issues: <code>adb logcat -b all -d | grep -i -e dlopen</code></li>
+							<li>hardened_malloc terminations: <code>adb logcat -b all -d | grep -i -e hardened_malloc</code></li>
 						</ul>
 					</div>
 				</div>

@@ -1,8 +1,7 @@
 				<div class="card fluid">
 					<h2>Messenger Comparison Table</h2>
 					<p>This is not intended to be an extremely comprehensive list, but enough to get a grasp on the situation.</p>
-					<p>The only client for now that we recommend is Conversations, a top notch XMPP client, fully supports the OMEMO XEP, is easy on the battery, and doesn't force you into a walled garden. It is not the easiest thing getting your friends and family to switch apps, so at the very least any apps with end-to-end encryption support should always be preferred over apps without.</p>
-					<p>As noted below the Signal protocol (double ratchet) is the current gold standard for end-to-end asynchronous messaging encryption.</p>
+					<p>The only client for now that we recommend is Conversations, a top notch XMPP client, fully supports the OMEMO XEP, is easy on the battery, and doesn't force you into a walled garden. It is not the easiest thing getting your friends and family to switch apps, so at the very least any apps with end-to-end encryption (E2EE) support should always be preferred over apps without.</p>
 					<div class="section">
 						<table class="striped horizontal" style="max-height: 100%;">
 							<thead>
@@ -33,11 +32,11 @@
 									<td data-label="Name"><a href="https://f-droid.org/en/packages/eu.siacs.conversations" target="_blank" rel="nofollow noopener noreferrer">Conversations</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv3</td>
 									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">F-Droid: No, Play: Yes</td>
-									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: prosody/ejabberd</td>
-									<td data-label="Protocol">XMPP</td>
+									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: <a href="https://prosody.im/" target="_blank" rel="nofollow noopener noreferrer">prosody</a>/<a href="https://www.ejabberd.im/" target="_blank" rel="nofollow noopener noreferrer">ejabberd</a></td>
+									<td data-label="Protocol"><a href="https://xmpp.org/" target="_blank" rel="nofollow noopener noreferrer">XMPP</a></td>
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + OMEMO (Double Ratchet) E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + <a href="https://en.wikipedia.org/wiki/OMEMO" target="_blank" rel="nofollow noopener noreferrer">OMEMO</a> E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#FFC107;">To contacts with OMEMO</td>
 									<td data-label="Battery Drain" style="color:#4CAF50;">Minimal</td>
 									<td data-label="Data Usage" style="color:#4CAF50;">Minimal</td>
@@ -52,11 +51,11 @@
 									<td data-label="Name"><a href="https://f-droid.org/en/packages/im.vector.app" target="_blank" rel="nofollow noopener noreferrer">Element/Riot</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">Apache</td>
 									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">F-Droid: No, Play: Yes</td>
-									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: synapse</td>
-									<td data-label="Protocol">Matrix</td>
+									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: <a href="https://github.com/matrix-org/synapse" target="_blank" rel="nofollow noopener noreferrer">synapse</a></td>
+									<td data-label="Protocol"><a href="https://matrix.org/" target="_blank" rel="nofollow noopener noreferrer">Matrix</a></td>
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + Megolm E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + <a href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/olm.md" target="_blank" rel="nofollow noopener noreferrer">Olm</a>/<a href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/megolm.md" target="_blank" rel="nofollow noopener noreferrer">Megolm</a> E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#f44336;">Not yet</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -75,7 +74,7 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#FFC107;">To contacts with Signal</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -90,11 +89,11 @@
 									<td data-label="Name"><a href="https://f-droid.org/en/packages/cx.ring" target="_blank" rel="nofollow noopener noreferrer">Jami/Ring</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv3</td>
 									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">No</td>
-									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: opendht</td>
+									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: <a href="https://github.com/savoirfairelinux/opendht" target="_blank" rel="nofollow noopener noreferrer">opendht</a></td>
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated">N/A</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + SRTP + Custom E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + SRTP + Custom E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
 									<td data-label="Battery Drain" style="color:#f44336;">High</td>
 									<td data-label="Data Usage">?</td>
@@ -113,7 +112,7 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated">N/A</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">Custom E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -132,7 +131,7 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated">N/A</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">Custom E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -147,11 +146,11 @@
 									<td data-label="Name"><a href="https://github.com/simplex-chat/simplex-chat" target="_blank" rel="nofollow noopener noreferrer">SimpleX</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">AGPLv3</td>
 									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">No</td>
-									<td data-label="FOSS Server" style="color:#4CAF50;">Yes</td>
+									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: <a href="https://github.com/simplex-chat/simplexmq" target="_blank" rel="nofollow noopener noreferrer">SimpleXMQ SMP</a></td>
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">Custom E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -163,14 +162,14 @@
 									<td data-label="Offline Messaging">Unknown</td>
 								</tr>
 								<tr>
-									<td data-label="Name"><a href="https://f-droid.org/en/packages/org.smssecure.smssecure" target="_blank" rel="nofollow noopener noreferrer">Silence</a></td>
+									<td data-label="Name"><a href="https://f-droid.org/en/packages/org.smssecure.smssecure" target="_blank" rel="nofollow noopener noreferrer">Silence (deprecated)</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv3</td>
 									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">No</td>
 									<td data-label="FOSS Server" style="color:#673AB7;">N/A</td>
 									<td data-label="Protocol">SMS</td>
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">Signal E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">Signal E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#FFC107;">To contacts with Silence</td>
 									<td data-label="Battery Drain" style="color:#4CAF50;">Minimal</td>
 									<td data-label="Data Usage" style="color:#4CAF50;">Minimal</td>
@@ -181,15 +180,15 @@
 									<td data-label="Multi-Device Support">No</td>
 									<td data-label="Offline Messaging">Maybe?</td>
 								</tr>
-								<tr>
+								<!--<tr>
 									<td data-label="Name"><a href="https://f-droid.org/en/packages/com.xabber.android" target="_blank" rel="nofollow noopener noreferrer">Xabber</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv3</td>
 									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">No</td>
-									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: prosody/ejabberd</td>
+									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: <a href="https://prosody.im/" target="_blank" rel="nofollow noopener noreferrer">prosody</a>/<a href="https://www.ejabberd.im/" target="_blank" rel="nofollow noopener noreferrer">ejabberd</a></td>
 									<td data-label="Protocol">XMPP</td>
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + OTR E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + OTR E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#f44336;">No</td>
 									<td data-label="Battery Drain" style="color:#4CAF50;">Low</td>
 									<td data-label="Data Usage" style="color:#4CAF50;">Low</td>
@@ -199,7 +198,7 @@
 									<td data-label="Video Calling" style="color:#f44336;">No</td>
 									<td data-label="Multi-Device Support">Yes</td>
 									<td data-label="Offline Messaging">Yes</td>
-								</tr>
+								</tr>-->
 								<tr>
 									<td data-label="Name"><a href="https://f-droid.org/en/packages/org.telegram.messenger" target="_blank" rel="nofollow noopener noreferrer">Telegram</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv2</td>
@@ -208,7 +207,7 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#f44336;">No</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -220,14 +219,14 @@
 									<td data-label="Offline Messaging">Yes</td>
 								</tr>
 								<tr>
-									<td data-label="Name"><a href="https://f-droid.org/en/packages/org.kontalk" target="_blank" rel="nofollow noopener noreferrer">Kontalk</a></td>
+									<td data-label="Name"><a href="https://f-droid.org/en/packages/org.kontalk" target="_blank" rel="nofollow noopener noreferrer">Kontalk (deprecated)</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv3</td>
 									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">No</td>
 									<td data-label="FOSS Server" style="color:#4CAF50;">Yes</td>
 									<td data-label="Protocol">XMPP</td>
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + OpenPGP E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + OpenPGP E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -246,7 +245,7 @@
 									<td data-label="Protocol">E-Mail</td>
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + OpenPGP E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + OpenPGP E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#FFC107;">To contacts with AutoCrypt</td>
 									<td data-label="Battery Drain" style="color:#4CAF50;">Low</td>
 									<td data-label="Data Usage" style="color:#4CAF50;">Minimal</td>
@@ -265,7 +264,7 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">Custom E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -284,7 +283,7 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">Custom E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -303,7 +302,7 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
@@ -322,7 +321,7 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2E</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
 									<td data-label="Encrypted by Default" style="color:#f44336;">No</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
