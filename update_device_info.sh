@@ -41,7 +41,7 @@ echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > alioth/bootloader_information;
 echo "2021-03-04" > alioth/releasedate;
 
 echo "Yandex Phone" > amber/friendlyName;
-echo 8 > amber/status-17.1;
+echo 7 > amber/status-17.1;
 echo -e "Fastboot (Yandex)\nUnknown\n2.0" > amber/bootloader_information;
 echo "2018-12-05" > amber/releasedate;
 
@@ -610,7 +610,7 @@ echo -e "Bulk Mode\nNot Unlockable\nNo" > apollo/bootloader_information;
 echo -e "Bulk Mode\nNot Unlockable\nNo" > thor/bootloader_information;
 
 echo "Samsung Galaxy Note Pro 12.2" > v1awifi/friendlyName;
-echo 2 > v1awifi/status-14.1;
+echo 4 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
@@ -619,7 +619,7 @@ echo 7 > vayu/status-19.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > vayu/bootloader_information;
 
 echo "Moto X 2014" > victara/friendlyName;
-echo 4 > victara/status-18.1;
+echo 7 > victara/status-18.1;
 echo -e "Fastboot (Motorola)\nNo*\nNo" > victara/bootloader_information;
 
 echo "Google Project Tango Tablet" > yellowstone/friendlyName;
