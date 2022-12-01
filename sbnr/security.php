@@ -46,7 +46,7 @@ if($SBNR_SEC_CLIENT_HARDENING) {
 	header('Referrer-Policy: origin-when-cross-origin'); //Prevent sending referrer information to 3rd parties
 	header('X-Content-Type-Options: nosniff'); //Force IE to respect headers
 	header('X-Frame-Options: DENY'); //Prevent embedding pages
-	header('X-Xss-Protection: 1; mode=block'); //Basic XSS protection
+	//header('X-Xss-Protection: 1; mode=block'); //Basic XSS protection
 }
 if($SBNR_SEC_HTTPS_ONLY || isset($_SERVER['HTTPS'])) {
 	ini_set("session.cookie_secure", "1");
