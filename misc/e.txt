@@ -1,4 +1,4 @@
-last updated: 2022/07/29
+last updated: 2022/12/03
 
 Nice Aspects
 ============
@@ -13,44 +13,51 @@ Nice Aspects
 
 Web Browser & System WebView
 ============================
-- Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 273 known security vulnerabilities
+- Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 274 known security vulnerabilities
  - 2022/11/19: work in progress rebase: https://gitlab.e.foundation/e/os/browser/-/commits/000-main-upstream_browser
  - https://gitlab.e.foundation/e/os/browser/-/commit/453791f1afea6795a1312d9af7f4a061519609b0
-  - https://gitlab.e.foundation/e/backlog/-/issues/5986
-  - https://gitlab.e.foundation/e/backlog/-/issues/2180
+  - currently: https://gitlab.e.foundation/e/backlog/-/issues/5986
+  - previously: https://gitlab.e.foundation/e/backlog/-/issues/2180
  - https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
- - https://divestos.org/misc/ch-dates.txt
+ - history: https://divestos.org/misc/ch-dates.txt
  - Note: simply using another browser doesn't mitigate this, the WebView is used by nearly all apps displaying web content
 
-- Disables the Bromite patch which enables use of HTTPS by default
+- [Invalidated] Disables the Bromite patch which enables use of HTTPS by default
  - https://gitlab.e.foundation/e/os/browser/-/commit/f89382c8229a256ab6949dda75dce87e5ccb6def
+ - Upstream (Bromite) later actually removed this too
 
 
 App Lounge
 ==========
 - See https://nervuri.net/e/app-lounge
 
-- /e/OS App Lounge shipping outdated versions of apps
+- /e/OS App Lounge repeatedly shipping outdated versions of apps
  - See here Signal 5.52 as the "latest" version, despite eleven newer versions being available at that time
   - https://community.e.foundation/t/problem-registration-signal-app-fairphone-3/44853/4
  - See here Mull 91.2.0 as the "latest" version, despite a years worth of newer versions available
   - https://community.e.foundation/t/new-standard-browser-librewolf/42791/41
   - https://divestos.org/misc/ffa-dates.txt
+ - More examples
+  - https://community.e.foundation/t/outdated-apps-in-store/45739
+  - https://community.e.foundation/t/outdated-app-in-app-lounge-newer-version-not-available/44259
 
 
 Advanced Privacy
 ================
 - Routes users over Tor without actually mentioning it is Tor, only an "IP scrambler"
 
-- Ships an end-of-life version of Tor 0.4.4.6 from 2020/11/12
+- Includes the proprietary Mapbox library
+ - https://gitlab.e.foundation/e/os/advanced-privacy/-/blob/d4136b0fd1246a3dc30b721b1dfbf0853115c0ff/dependencies.gradle#L115-118
+ - https://github.com/mapbox/mapbox-gl-native-android/commit/165dd987cfc33bfb67ffa1ee09fe551b70e427f0
+ - With a tracker: https://community.e.foundation/t/advanced-privacy-blocks-trackers-from-e-system/41799
+
+- [FIXED] Ships an end-of-life version of Tor 0.4.4.6 from 2020/11/12
+ - 2022/12/03: appears to be shipping Tor 0.4.7.8 now
+  - https://gitlab.e.foundation/e/os/orbotservice/-/commits/e_16.6.2-RC-4
+  - https://github.com/guardianproject/orbot/releases/tag/16.6.2-RC-4-tor.0.4.7.8.1
  - https://gitlab.e.foundation/e/os/orbotservice/-/blob/e1cc6aef65eb646f347d28174a6b00840c1cb94d/build.gradle#L48
  - https://blog.torproject.org/new-releases-tor-03512-0437-and-0446/
  - https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/CoreTorReleases#end-of-life
-
-- Includes the proprietary Mapbox library
- - https://gitlab.e.foundation/e/os/advanced-privacy/-/blob/3ca73e64ddd25c7c20eca2e4e0db77032db848c0/dependencies.gradle#L86
- - https://github.com/mapbox/mapbox-gl-native-android/commit/165dd987cfc33bfb67ffa1ee09fe551b70e427f0
- - With a tracker: https://community.e.foundation/t/advanced-privacy-blocks-trackers-from-e-system/41799
 
 
 PDF Viewer
@@ -64,7 +71,7 @@ microG
  - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L9
 
 - Enables Safetynet checks by default which downloads and executes obfuscated proprietary code from Google
- - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L13
+ - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L13-14
 
 
 System
@@ -76,7 +83,7 @@ System
   - https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/2
 
 - Includes proprietary Google Widevine DRM on nearly all devices
- - https://gitlab.e.foundation/e/devices/android_device_fairphone_FP4/-/blob/c0117a4288fe1323bcd5b6cf490c1e3079701af0/proprietary-files.txt#L373-378
+ - https://gitlab.e.foundation/e/devices/android_device_fairphone_FP4/-/blob/7b2f827428830ad08e6c6aea4f32c69206d41c54/proprietary-files.txt#L373-378
  - Even advertises Netflix on the website, see the third carousel image in the third phone mockup down
   - https://web.archive.org/web/20220720210209/https://e.foundation/e-os/
 
@@ -94,11 +101,17 @@ Device Sales
 ============
 - Sells devices like the Samsung Galaxy S9 which lacks VoLTE under custom operating systems
  - Many carriers are phasing out 2G/3G, making VoLTE mandatory for placing and receiving phone calls
- - https://web.archive.org/web/20220720210035/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
+ - https://web.archive.org/web/20221203154649/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
  - https://community.e.foundation/t/samsung-s9-currently-unusable-in-usa-without-volte/39255
+- Sells devices that are END OF LIFE, like the Galaxy S9
+ - EOL devices cannot receive any firmware/blob security updates
+ - https://web.archive.org/web/20221203154649/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
+ - https://9to5google.com/2022/04/04/samsung-galaxy-s9-android-updates-drop-support/
+ - https://www.androidauthority.com/samsung-galaxy-s9-end-of-software-support-3149055/
+- Sells devices with outdated kernels/blobs/etc.
+ - 2+ years old!: https://web.archive.org/web/20221203154521/https://community.e.foundation/t/my-e-exit-interview/45687/8
 
-
-Weather (deprecated)
+Weather [DEPRECATED]
 ====================
 - Performs requests over HTTP
  - https://gitlab.e.foundation/e/os/Weather/-/blob/2c623c7a9b4a341dd3fb6a2545e84ebf850d780b/app/src/main/java/foundation/e/weather/utils/Constants.java#L73
@@ -114,6 +127,7 @@ Not Covered (nuanced or needs research/sources)
 - Signature spoofing support, with no restrictions
 - Website requires JavaScript
 - Trackers in their newsletter
- - https://community.e.foundation/t/tracker-into-the-e-foundation-letter/38178
+ - https://web.archive.org/web/20221203154857/https://community.e.foundation/t/tracker-into-the-e-foundation-letter/38178
 - E2EE isn't offered on their Nextcloud instance, citing data loss concerns
  - leaking user data to other users: https://community.e.foundation/t/service-announcement-26-may/41252/27
+ - https://en.wikipedia.org/wiki//e/OS#Data_leakage_incident
