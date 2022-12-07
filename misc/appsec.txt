@@ -75,7 +75,7 @@ Libraries:
 		- Implementer Libraries:
 			- https://github.com/barteksc/AndroidPdfViewer/blob/d243b39377f19c3eae41e227067da254ebbf731b/android-pdf-viewer/build.gradle#L41
 			- https://github.com/barteksc/PdfiumAndroid/tree/pdfium-android-1.9.0
-		- Status: Has ~55 known security issues
+		- Status: Has ~60 known security issues
 		- Dependency Changelog: https://pdfium.googlesource.com/pdfium/+log/32b639de35f905a5e5559f305d9032cde5ae5c77
 		- Dependent Apps:
 			- Pdf Viewer Plus 3.7
@@ -97,7 +97,7 @@ Libraries:
 				- Report: Issues are disabled, not reported
 		- Report: Issues are disabled, not reported
 		- Note: prebuilts are unclear, may actually be based off of M90 from 2021-03 instead
-		- Status: Has ~5 or ~55 known security issues depending on note above
+		- Status: Has ~5 or ~60 known security issues depending on note above
 		- Dependent Apps:
 			- Simple File Manager Pro 6.14.3
 				- Reference: https://github.com/SimpleMobileTools/Simple-File-Manager/blob/6.14.3/app/build.gradle#L68
