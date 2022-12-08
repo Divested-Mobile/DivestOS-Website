@@ -76,6 +76,9 @@ microG
 
 System
 ======
+- Is consistently behind on the basic monthly AOSP security updates
+ - See https://divestos.org/misc/a-dates.txt
+
 - Uses test-keys for verified boot enablement
  - A system with verified boot must boot yellow state with an aftermarket system
  - The FP4 is known to trust test-keys by default
@@ -103,11 +106,13 @@ Device Sales
  - Many carriers are phasing out 2G/3G, making VoLTE mandatory for placing and receiving phone calls
  - https://web.archive.org/web/20221203154649/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
  - https://community.e.foundation/t/samsung-s9-currently-unusable-in-usa-without-volte/39255
+
 - Sells devices that are END OF LIFE, like the Galaxy S9
  - EOL devices cannot receive any firmware/blob security updates
  - https://web.archive.org/web/20221203154649/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
  - https://9to5google.com/2022/04/04/samsung-galaxy-s9-android-updates-drop-support/
  - https://www.androidauthority.com/samsung-galaxy-s9-end-of-software-support-3149055/
+
 - Sells devices with outdated kernels/blobs/etc.
  - 2+ years old!: https://web.archive.org/web/20221203154521/https://community.e.foundation/t/my-e-exit-interview/45687/8
 
