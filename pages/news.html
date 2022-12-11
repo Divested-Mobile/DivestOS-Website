@@ -6,6 +6,54 @@
 					<?php print(file_get_contents("pages/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2022-12">
+						<h3>December 11th 2022 Update<a href="#2022-12">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>20.0 release candidate #1 December ASB builds were published on December 11th.</li>
+							<li>14.1 and 19.1 release candidate #1 December ASB builds were published on December 10th.</li>
+							<li>17.1 and 18.1 release candidate #1 December ASB builds were published on December 9th.</li>
+							<li>14.1, 15.1, and 16.0 rebuilds were published on December 7th.</li>
+							<li>Partial 20.0 rebuilds were published on November 25th and 27th.</li>
+							<li>Patches for CVE-2018-9422 were pointed out to be incorrect by @voron00. They have since been fixed which should fix issues with latent random reboots on kernel <4.4 devices.</li>
+							<li>There have been many new kernel CVE patches as usual, including many 3.4 backports from Fairphone again.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>taimen/walleye 20.0 builds after 11/15 had a broken recovery due to a (likely conflicting) upstream change. Fixed builds were released on 12/03.</li>
+							<li>OnePlus 7 users who installed the 11/15 update on a device with A11 firmware and have no touch screen can flash today's update or manually install the A12 firmware only if unlocked. All other users must backup, unlock and migrate to these new builds.</li>
+							<li>2022/11/16: New 19.1 builds for OnePlus 7 series were uploaded with A12 firmware included and flashing fixed. <a href="https://github.com/Divested-Mobile/DivestOS-Build/issues/167" target="_blank" rel="nofollow noopener noreferrer">See here for more information.</a></li>
+							<li>OnePlus 7 series users must update with extreme caution. MAKE A BACKUP FIRST!</li>
+							<li>If you have a bootloader locked OnePlus 7 series device, you MUST unlock it before this update. Locking is no longer supported due to vendor changes.</li>
+							<li>If you have one of the following devices you MUST backup before installing this update: guacamole*, hotdog*.</li>
+							<li>Firmware is now included again on guacamole* and hotdog*.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Hypatia has had a handful of fixes and improvements:
+								<ul>
+									<li>It was missing the ability to read all files on Android 11 and higher. This was a major oversight on our part and has since been fixed.</li>
+									<li>Refinements to the Spanish translations thanks to @senpai33.</li>
+									<li>Features a new signature database from Amnesty International's Investigations.</li>
+								</ul>
+							</li>
+							<li>IR Remote has had a Xiaomi remote added and a handful of bug fixes, thanks to @godbless96.</li>
+							<li>Updated Mulch (WebView) to Chromium 107.0.5304.141-1, 108.0.5359.61-1, and 108.0.5359.79-1, has 1, 28, and 1 security fixes respectively.</li>
+							<li>Updated Mull to 107.1.0-1 and 107.2.0-1, has 21 and 0 security fixes respectively. Mull 107.1.0-2 was released in-between with the functionality to use a custom addon collection restored.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The messengers page has had many updates.</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>A <a href="https://divested.dev/index.php?page=community_rules">selection of rules</a> has been enacted for community areas such as the chat room.</li>
+							<li>The domains/services have had some security improvements thanks to suggestions from @tommytran732 and @strcat.</li>
+							<li>The Onion services have been switched to SingleHopMode, which should help reduce latency and increase throughput for users.</li>
+							<li>The web server has been <a href="https://divested.dev/index.php?page=infrastructure#spotco.us" target="_blank" rel="nofollow noopener noreferrer">upgraded</a> thanks to user donations. This will better handle traffic and allow keeping more old builds.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2022-11">
 						<h3>November 14th 2022 Update<a href="#2022-11">¶</a></h3>
 						<h4>System Updates</h4>
@@ -34,7 +82,6 @@
 							<li>Updated Mulch (WebView) to Chromium 107.0.5304.54-1, 107.0.5304.91-1, and 107.0.5304.105-1, has 14, 1 and 10 security fixes respectively.</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2022-10.2">
 						<h3>October 25th 2022 Update<a href="#2022-10.2">¶</a></h3>
 						<h4>System Updates</h4>

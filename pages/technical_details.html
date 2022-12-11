@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The deets<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2022-10-18</p>
+						<p>Last updated: 2022-12-11</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -53,6 +53,7 @@
 
 						<h5>android_art</h5>
 						<ul>
+							<li>N: Workaround for mmap error when building (AOSP)</li>
 							<li>P/Q/R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
 						</ul>
 						<h5>android_bootable_recovery</h5>
@@ -73,15 +74,15 @@
 							<li>N/O/S/T: Support wildcards in cached hosts file (tdm)</li>
 							<li>R/S/T: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
 							<li>GRAPHENE_BIONIC=true:</li>
-							<li>P/Q/R: Add a real explicit_bzero implementation (GrapheneOS)</li>
-							<!--<li>P/Q/R: Replace brk and sbrk with stubs (GrapheneOS)</li>-->
-							<!--<li>P/Q/R: Use blocking getrandom and avoid urandom fallback (GrapheneOS)</li>-->
-							<li>P/Q/R: Fix undefined out-of-bounds accesses in sched.h (GrapheneOS)</li>
-							<li>P/Q/R: Stop implicitly marking mappings as mergeable (GrapheneOS)</li>
-							<li>P/Q/R: Replace VLA formatting with dprintf-like function (GrapheneOS)</li>
-							<li>P/Q/R: Increase default pthread stack to 8MiB on 64-bit (GrapheneOS)</li>
-							<li>P/Q/R: Make __stack_chk_guard read-only at runtime (GrapheneOS)</li>
-							<li>P/Q/R: On 64-bit, zero the leading stack canary byte (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Add a real explicit_bzero implementation (GrapheneOS)</li>
+							<!--<li>P/Q/R/S/T: Replace brk and sbrk with stubs (GrapheneOS)</li>-->
+							<!--<li>P/Q/R/S/T: Use blocking getrandom and avoid urandom fallback (GrapheneOS)</li>-->
+							<li>P/Q/R/S/T: Fix undefined out-of-bounds accesses in sched.h (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Stop implicitly marking mappings as mergeable (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Replace VLA formatting with dprintf-like function (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Increase default pthread stack to 8MiB on 64-bit (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Make __stack_chk_guard read-only at runtime (GrapheneOS)</li>
+							<li>P/Q/R/S/T: On 64-bit, zero the leading stack canary byte (GrapheneOS)</li>
 							<!--<li>P/Q/R: Switch pthread_atfork handler allocation to mmap (GrapheneOS)</li>
 							<li>P/Q/R: Add memory protection for pthread_atfork handlers (GrapheneOS)</li>
 							<li>P/Q: Add memory protection for at_quick_exit (GrapheneOS)</li>
@@ -139,6 +140,7 @@
 							<li>P: GRAPHENE_MALLOC=true: DeviceDescriptor sorting wrongly relies on malloc addresses (GrapheneOS)</li>
 							<li>S/T: Workarounds for Pixel 3 SoC era camera driver bugs (GrapheneOS)</li>
 							<li>P/Q/R/S/T: GRAPHENE_MALLOC=true: Expand workaround to all camera executables (DivestOS)</li>
+							<li>T: Add workaround for OnePlus 8 & 9 display driver crash (DivestOS)</li>
 						</ul>
 						<h5>android_external_sqlite</h5>
 						<ul>
@@ -200,6 +202,8 @@
 							<li>R/S: SystemUI: add burnIn protection (arter97)</li>
 							<li>S: Make monet based theming user configurable (GrapheneOS)</li>
 							<li>S/T: Add an option to show the details of an application error to the user (GrapheneOS)</li>
+							<li>T: Make sure PackageInstaller UI returns a result (GrapheneOS)</li>
+							<li>T: Don't leak device-wide package list to apps when work profile is present (GrapheneOS)</li>
 							<li>Q/R/S: Warn when running activity from 32 bit app on ARM64 devices. (AOSP)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
 							<li>Q/R: Restore the Sensors Off tile (DivestOS)</li>
