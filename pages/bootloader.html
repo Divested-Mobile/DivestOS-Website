@@ -16,6 +16,7 @@
 						<p>You are strongly encouraged to read, or at least skim, through the entire website. It has an abundance of information that will answer many questions and help set expectations of what is and is not provided. Failure to do so will only be a detriment to yourself and waste the time of others.</p>
 						<p>Research for information surrounding your specific device model.<br>It is strongly recommended to be running the latest factory images before switching, especially if relocking. However notably some devices must be running an old version to allow installation of alternative systems.</p>
 						<p>You'll need ADB access in order to attempt any of the methods below.</p>
+						<li>Run the below <code>fastboot</code> commands at the <i>bootloader</s> menu (via key combination), not to be confused with <i>fastbootd</i> which is part of the recovery.</li>
 						<p>You must backup your device.</p>
 						<h4 id="prereqComputer">On your computer<a href="#prereqComputer">¶</a></h4>
 						<ul>
@@ -55,6 +56,7 @@
 								<li>While still in the recovery perform a factory reset</li>
 								<li>AVB devices only:
 									<ol>
+										<li>Reboot to the bootloader</li>
 										<li><code>$ fastboot erase avb_custom_key</code></li>
 										<li><code>$ fastboot flash avb_custom_key avb_pkmd-device.bin</code></li>
 									</ol>
