@@ -1,10 +1,11 @@
-last updated: 2022/12/11
+last updated: 2022/12/14
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+108.0.5359.128		2022/12/12	8			https://chromereleases.googleblog.com/2022/12/stable-channel-update-for-desktop_13.html
 108.0.5359.79		2022/12/02	1, 1 wild		https://chromereleases.googleblog.com/2022/12/stable-channel-update-for-desktop.html
 108.0.5359.61		2022/11/29	28			https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop_29.html
 107.0.5304.141		2022/11/24	1, 1 wild		https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop_24.html
@@ -63,7 +64,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-108.0.5359.79	2022/12/02	2022/12/03	2022/12/02	2022/12/02	2022/12/06	2022/12/02	274ksv
+108.0.5359.128	2022/12/12			2022/12/12	2022/12/12					282ksv
+108.0.5359.79	2022/12/02	2022/12/03	2022/12/02	2022/12/02	2022/12/06	2022/12/02
 108.0.5359.61	2022/11/29	2022/12/02	2022/11/29	2022/11/29			2022/12/01
 107.0.5304.141	2022/11/24			2022/11/24	2022/11/24			2022/11/25
 107.0.5304.105	2022/11/08	2022/11/19	2022/11/08	2022/11/08	2022/11/12	2022/11/09
@@ -116,11 +118,11 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		108.0.5359.79				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		108.0.5359.128				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
-- GrapheneOS Vanadium	108.0.5359.79				https://github.com/GrapheneOS/Vanadium/commits/13
-- DivestOS/Mulch	108.0.5359.79				https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	108.0.5359.128				https://github.com/GrapheneOS/Vanadium/commits/13
+- DivestOS/Mulch	108.0.5359.128				https://gitlab.com/divested-mobile/mulch
 - CarbonROM, †2, 12	96.0.4664.111, 12 is not shipping yet?	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
 - OmniROM, †2, 11	96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
@@ -150,7 +152,7 @@ AOSP related:
 - AOSP, 11		83.0.4103.120				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-11.0.0_r62
 - AOSP, 12		91.0.4472.114				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-12.0.0_r42
 - AOSP, 12.1		95.0.4638.74				https://android.googlesource.com/platform/external/chromium-webview/+log/android-12.1.0_r27
-- AOSP, 13		101.0.4951.61				https://android.googlesource.com/platform/external/chromium-webview/+log/android-13.0.0_r13
+- AOSP, 13		101.0.4951.61				https://android.googlesource.com/platform/external/chromium-webview/+log/android-13.0.0_r16
 - ArrowOS, †1, 12.1	AOSP prebuilts				https://github.com/ArrowOS/android_manifest/blob/arrow-12.1/default.xml
 - DotOS, †1, 11/12.1	AOSP prebuilts				https://github.com/DotOS/manifest
 - HavocOS, †1, 11/12.1	AOSP prebuilts				https://github.com/Havoc-OS/android_manifest

@@ -210,9 +210,9 @@ echo -e "Fastboot\nNo*\n2.0" > kebab/bootloader_information;
 echo "OnePlus 9" > lemonade/friendlyName;
 echo "OnePlus 9 Pro" > lemonadep/friendlyName;
 echo 8 > lemonade/status-19.1;
-echo 8 > lemonade/status-20.0;
+echo 5 > lemonade/status-20.0;
 echo 8 > lemonadep/status-19.1;
-echo 8 > lemonadep/status-20.0;
+echo 5 > lemonadep/status-20.0;
 echo -e "Fastboot\nNo*\n2.0" > lemonade/bootloader_information;
 echo -e "Fastboot\nNo*\n2.0" > lemonadep/bootloader_information;
 
@@ -555,6 +555,21 @@ echo -e "Fastboot\nYes, Untested\n2.0" > redfin/bootloader_information;
 echo "Google Pixel 5a" > barbet/friendlyName;
 echo 3 > barbet/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0" > barbet/bootloader_information;
+
+echo "Google Pixel 6" > oriole/friendlyName;
+echo -e "Fastboot\nYes, Untested\n2.0" > oriole/bootloader_information;
+
+echo "Google Pixel 6 Pro" > raven/friendlyName;
+echo -e "Fastboot\nYes, Untested\n2.0" > raven/bootloader_information;
+
+echo "Google Pixel 6a" > bluejay/friendlyName;
+echo -e "Fastboot\nYes, Untested\n2.0" > bluejay/bootloader_information;
+
+echo "Google Pixel 7" > panther/friendlyName;
+echo -e "Fastboot\nYes, Untested\n2.0" > panther/bootloader_information;
+
+echo "Google Pixel 7 Pro" > cheetah/friendlyName;
+echo -e "Fastboot\nYes, Untested\n2.0" > cheetah/bootloader_information;
 
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
 echo 8 > santoni/status-16.0;

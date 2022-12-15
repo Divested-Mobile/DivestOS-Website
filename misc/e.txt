@@ -13,7 +13,7 @@ Nice Aspects
 
 Web Browser & System WebView
 ============================
-- Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 274 known security vulnerabilities
+- Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 282 known security vulnerabilities
  - 2022/11/19: work in progress rebase: https://gitlab.e.foundation/e/os/browser/-/commits/000-main-upstream_browser
  - https://gitlab.e.foundation/e/os/browser/-/commit/453791f1afea6795a1312d9af7f4a061519609b0
   - currently: https://gitlab.e.foundation/e/backlog/-/issues/5986
