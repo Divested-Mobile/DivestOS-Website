@@ -3,7 +3,7 @@
 					<p>This is not intended to be an extremely comprehensive list, but enough to get a grasp on the situation.</p>
 					<p>The only client for now that we recommend is Conversations, a top notch XMPP client, fully supports the OMEMO XEP, is easy on the battery, and doesn't force you into a walled garden. It is not the easiest thing getting your friends and family to switch apps, so at the very least any apps with end-to-end encryption (E2EE) support should always be preferred over apps without.</p>
 					<p>For a much larger list of messengers, albeit in German, see this <a href="https://www.freie-messenger.de/en/systemvergleich/" target="_blank" rel="nofollow noopener noreferrer">overview</a> and their <a href="https://www.freie-messenger.de/en/warumnicht/" target="_blank" rel="nofollow noopener noreferrer">"Why Not?" list</a>.</p>
-					<p>Last updated: 2022/11/28</p>
+					<p>Last updated: 2022/12/17</p>
 					<div class="section">
 						<table class="striped horizontal" style="max-height: 100%;">
 							<thead>
@@ -16,7 +16,7 @@
 									<th>Federated</th>
 									<th>Decentralized</th>
 									<th>Encryption</th>
-									<th>Encrypted by Default</th>
+									<th>E2EE by Default</th>
 									<th>Battery Drain</th>
 									<th>Data Usage</th>
 									<th>Desktop Client</th>
@@ -39,7 +39,7 @@
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + <a href="https://en.wikipedia.org/wiki/OMEMO" target="_blank" rel="nofollow noopener noreferrer">OMEMO</a> E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#FFC107;">To contacts with OMEMO</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">In private chats</td>
 									<td data-label="Battery Drain" style="color:#4CAF50;">Minimal</td>
 									<td data-label="Data Usage" style="color:#4CAF50;">Minimal</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -58,7 +58,7 @@
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + <a href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/olm.md" target="_blank" rel="nofollow noopener noreferrer">Olm</a>/<a href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/megolm.md" target="_blank" rel="nofollow noopener noreferrer">Megolm</a> E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#FFC107;">For private chats</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">In private chats</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -77,7 +77,7 @@
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#FFC107;">To contacts with Signal</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -96,7 +96,7 @@
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized">No</td>
 									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -114,8 +114,8 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated">N/A</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + SRTP + Custom E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="Battery Drain" style="color:#f44336;">High</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -134,7 +134,7 @@
 									<td data-label="Federated">N/A</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
 									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">In private chats</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -153,7 +153,7 @@
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + OpenPGP E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#FFC107;">To contacts with AutoCrypt</td>
+									<td data-label="E2EE by Default" style="color:#FFC107;">To contacts with AutoCrypt</td>
 									<td data-label="Battery Drain" style="color:#4CAF50;">Low</td>
 									<td data-label="Data Usage" style="color:#4CAF50;">Minimal</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -172,7 +172,7 @@
 									<td data-label="Federated">N/A</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
 									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#FFC107;">WIP</td>
@@ -191,7 +191,7 @@
 									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
 									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
 									<td data-label="Encryption" style="color:#4CAF50;">Signal E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#FFC107;">To contacts with Silence</td>
+									<td data-label="E2EE by Default" style="color:#FFC107;">To contacts with Silence</td>
 									<td data-label="Battery Drain" style="color:#4CAF50;">Minimal</td>
 									<td data-label="Data Usage" style="color:#4CAF50;">Minimal</td>
 									<td data-label="Desktop Client" style="color:#f44336;">No</td>
@@ -201,44 +201,6 @@
 									<td data-label="Multi-Device Support">No</td>
 									<td data-label="Offline Messaging">Maybe?</td>
 								</tr>
-								<!--<tr>
-									<td data-label="Name"><a href="https://f-droid.org/en/packages/org.kontalk" target="_blank" rel="nofollow noopener noreferrer">Kontalk (deprecated)</a></td>
-									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv3</td>
-									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">No</td>
-									<td data-label="FOSS Server" style="color:#4CAF50;">Yes</td>
-									<td data-label="Protocol">XMPP</td>
-									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
-									<td data-label="Decentralized" style="color:#4CAF50;">Yes</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + OpenPGP E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
-									<td data-label="Battery Drain">?</td>
-									<td data-label="Data Usage">?</td>
-									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
-									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
-									<td data-label="Voice Calling" style="color:#f44336;">No</td>
-									<td data-label="Video Calling" style="color:#f44336;">No</td>
-									<td data-label="Multi-Device Support">Yes</td>
-									<td data-label="Offline Messaging">Yes</td>
-								</tr>-->
-								<!--<tr>
-									<td data-label="Name"><a href="https://f-droid.org/en/packages/com.xabber.android" target="_blank" rel="nofollow noopener noreferrer">Xabber</a></td>
-									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv3</td>
-									<td data-label="Non-Free Dependencies" style="color:#4CAF50;">No</td>
-									<td data-label="FOSS Server" style="color:#4CAF50;">Yes: <a href="https://prosody.im/" target="_blank" rel="nofollow noopener noreferrer">prosody</a>/<a href="https://www.ejabberd.im/" target="_blank" rel="nofollow noopener noreferrer">ejabberd</a></td>
-									<td data-label="Protocol">XMPP</td>
-									<td data-label="Federated" style="color:#4CAF50;">Yes</td>
-									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">TLS + OTR E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#f44336;">No</td>
-									<td data-label="Battery Drain" style="color:#4CAF50;">Low</td>
-									<td data-label="Data Usage" style="color:#4CAF50;">Low</td>
-									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
-									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
-									<td data-label="Voice Calling" style="color:#f44336;">No</td>
-									<td data-label="Video Calling" style="color:#f44336;">No</td>
-									<td data-label="Multi-Device Support">Yes</td>
-									<td data-label="Offline Messaging">Yes</td>
-								</tr>-->
 								<tr>
 									<td data-label="Name"><a href="https://f-droid.org/en/packages/com.wire" target="_blank" rel="nofollow noopener noreferrer">Wire</a></td>
 									<td data-label="FOSS Client" style="color:#4CAF50;">GPLv3</td>
@@ -247,8 +209,8 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -266,8 +228,8 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#FFC107;">Web</td>
@@ -286,7 +248,7 @@
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#f44336;">No</td>
+									<td data-label="E2EE by Default" style="color:#f44336;">No</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
@@ -305,7 +267,7 @@
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#FFC107;">Web</td>
@@ -324,7 +286,7 @@
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
-									<td data-label="Encrypted by Default" style="color:#f44336;">No</td>
+									<td data-label="E2EE by Default" style="color:#f44336;">No</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#FFC107;">Web</td>
@@ -343,7 +305,7 @@
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
 									<td data-label="Encryption" style="color:#673AB7;">TLS</td>
-									<td data-label="Encrypted by Default" style="color:#f44336;">No</td>
+									<td data-label="E2EE by Default" style="color:#f44336;">No</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#FFC107;">Web</td>
@@ -361,8 +323,8 @@
 									<td data-label="Protocol">Custom</td>
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
-									<td data-label="Encryption" style="color:#673AB7;">TLS</td>
-									<td data-label="Encrypted by Default" style="color:#f44336;">No</td>
+									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
+									<td data-label="E2EE by Default" style="color:#f44336;">No</td>
 									<td data-label="Battery Drain">?</td>
 									<td data-label="Data Usage">?</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
