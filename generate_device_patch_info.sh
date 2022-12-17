@@ -128,14 +128,14 @@ createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974 oppo/common oppo/msm
 createTable barbet LineageOS-20.0 google/redbull google/redbull google/barbet;
 createTable beryllium LineageOS-19.1 xiaomi/sdm845-common xiaomi/sdm845; #superseded
 createTable beryllium LineageOS-20.0 xiaomi/sdm845-common xiaomi/sdm845;
-createTable bluejay LineageOS-20.0 google/bluejay google/gs101/private/gs-google google/gs101;
+createTable bluejay LineageOS-20.0 google/gs101 google/gs101/private/gs-google google/bluejay;
 createTable blueline LineageOS-20.0 google/crosshatch google/msm-4.9 google/crosshatch/blueline;
 createTable bonito LineageOS-20.0 google/bonito google/msm-4.9 google/bonito/bonito;
 createTable bramble LineageOS-20.0 google/redbull google/redbull google/bramble;
 createTable bullhead LineageOS-15.1 lge/bullhead lge/bullhead;
 createTable cheeseburger LineageOS-19.1 oneplus/msm8998-common oneplus/msm8998 oneplus/cheeseburger; #superseded
 createTable cheeseburger LineageOS-20.0 oneplus/msm8998-common oneplus/msm8998 oneplus/cheeseburger;
-createTable cheetah LineageOS-20.0 google/pantah google/gs201/private/gs-google google/gs201;
+createTable cheetah LineageOS-20.0 google/gs201 google/gs201/private/gs-google google/pantah;
 createTable cheryl LineageOS-19.1 razer/cheryl razer/msm8998;
 createTable clark LineageOS-14.1 motorola/clark motorola/msm8992;
 createTable clark LineageOS-17.1 motorola/clark motorola/msm8992;
@@ -243,12 +243,12 @@ createTable n5110 LineageOS-14.1 samsung/n5110 samsung/smdk4412 samsung/smdk4412
 createTable n5120 LineageOS-14.1 samsung/n5120 samsung/smdk4412 samsung/smdk4412-common samsung/kona-common;
 createTable oneplus2 LineageOS-17.1 oneplus/oneplus2 oneplus/msm8994 oppo/common;
 createTable oneplus3 LineageOS-18.1 oneplus/oneplus3 oneplus/msm8996;
-createTable oriole LineageOS-20.0 google/raviole google/gs101/private/gs-google google/gs101;
+createTable oriole LineageOS-20.0 google/gs101 google/gs101/private/gs-google google/raviole;
 createTable osprey LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/osprey;
-createTable panther LineageOS-20.0 google/pantah google/gs201/private/gs-google google/gs201;
+createTable panther LineageOS-20.0 google/gs201 google/gs201/private/gs-google google/pantah;
 createTable pioneer LineageOS-19.1 sony/nile-common sony/sdm660 sony/pioneer;
 createTable pro1 LineageOS-20.0 fxtec/pro1 fxtec/msm8998;
-createTable raven LineageOS-20.0 google/raviole google/gs101/private/gs-google google/gs101;
+createTable raven LineageOS-20.0 google/gs101 google/gs101/private/gs-google google/raviole;
 createTable redfin LineageOS-20.0 google/redbull google/redbull google/redfin;
 createTable rs988 LineageOS-18.1 lge/g5-common lge/msm8996 lge/msm8996-common lge/rs988;
 createTable sailfish LineageOS-18.1 google/marlin google/marlin google/marlin/sailfish;
