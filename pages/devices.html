@@ -168,6 +168,9 @@
 							$resultInstallMethod = $bootloaderInformationArr[0];
 							$resultRelockable = $bootloaderInformationArr[1];
 							$resultVerifiedBoot = $bootloaderInformationArr[2];
+							if(!is_null($bootloaderInformationArr[3])) {
+								$resultFirmwareIncluded = $bootloaderInformationArr[3];
+							}
 							unset($bootloaderInformationArr);
 						}
 						unset($bootloaderInformationFile);
@@ -212,6 +215,12 @@
 						$downloads .= "<li>Install Method: " . $resultInstallMethod . "</li>";
 						$downloads .= "<li>Relockable: " . $resultRelockable . "</li>";
 						$downloads .= "<li>Verified Boot: " . $resultVerifiedBoot . "</li>";
+						//if(isset($resultReleaseDate)) {
+						//	$downloads .= "<li>Release Date: " . $resultReleaseDate . "</li>";
+						//}
+						if(isset($resultFirmwareIncluded)) {
+							$downloads .= "<li>Firmware Included: " . $resultFirmwareIncluded . "</li>";
+						}
 						$downloads .= "<li>Last updated: " . $resultLastUpdated . "</li>";
 						$downloads .= $resultUpdaterChecks;
 						$downloads .= "</ul><hr>";
@@ -225,11 +234,16 @@
 						$resultExtras = "";
 						if(isset($resultKeyAVB)) {
 							if(strlen($resultExtras) == 0) { $resultExtras .= "<br>"; }
-							$resultExtras .= "<a href=\"" . $resultKeyAVB . "\" download class=\"button inverse small\">AVB Key</a>";
+							$resultExtras .= "<a href=\"" . $resultKeyAVB . "\" download class=\"button inverse small\"><strong>AVB Key</strong></a>";
 						}
 						if(isset($resultCopyParts)) {
 							if(strlen($resultExtras) == 0) { $resultExtras .= "<br>"; }
-							$resultExtras .= "<a href=\"" . $resultCopyParts . "\" download class=\"button inverse small\">A/B Sync</a>";
+							$btnSyncTxt = "A/B Sync";
+							if(isset($resultFirmwareIncluded)) {
+								$btnSyncTxt = "<strike>A/B Sync</strike>";
+							}
+							$resultExtras .= "<a href=\"" . $resultCopyParts . "\" download class=\"button inverse small\">" . $btnSyncTxt . "</a>";
+							unset($btnSyncTxt);
 						}
 						$downloads .= $resultExtras;
 
@@ -251,6 +265,7 @@
 						unset($resultRelockable);
 						unset($resultVerifiedBoot);
 						unset($resultReleaseDate);
+						unset($resultFirmwareIncluded);
 						unset($resultFriendlyName);
 						unset($resultFriendlyNameAlt);
 						unset($resultUpdaterChecks);

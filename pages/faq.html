@@ -153,6 +153,23 @@
 							<li>In the case you do use Private DNS with Tor or a real VPN, the Private DNS host will not learn your true IP as the requests will be routed over the VPN slot.</li>
 						</ul>
 
+						<h4 id="btCodecs">What Bluetooth audio codecs are available (if supported by device)?<a href="#btCodecs">¶</a></h4>
+						<ul>
+							<li>SBC is available on all versions.</li>
+							<li>SBC-XQ is available on select versions, see <a href="#btSBCXQ">below</a>.</li>
+							<li>AAC and LDAC are available on 15.1 and higher.</li>
+							<li>LC3 (LE Audio) is available on 20.0 and higher.</li>
+							<li>aptX is currently removed, but will be available on supported devices in the January 2023 update.</li>
+						</ul>
+
+						<h4 id="btSBCXQ">Is Bluetooth SBC-XQ (dual channel SBC) available?<a href="#btSBCXQ">¶</a></h4>
+						<ul>
+							<li><a href="https://review.lineageos.org/q/topic:bt-sbc-hd-dualchannel-nougat" target="_blank" rel="nofollow noopener noreferrer">14.1</a> has the patches included, but it can only be enabled globally with root which is not supported.</li>
+							<li><a href="https://review.lineageos.org/q/topic:bt-sbc-hd-dualchannel" target="_blank" rel="nofollow noopener noreferrer">15.1</a>, <a href="https://review.lineageos.org/q/topic:bt-sbc-hd-dualchannel-pie" target="_blank" rel="nofollow noopener noreferrer">16.0</a>, and <a href="https://review.lineageos.org/q/topic:eleven-bt-sbc-hd-dualchannel" target="_blank" rel="nofollow noopener noreferrer">18.1</a> have it in the per-device Bluetooth settings menu.</li>
+							<li><a href="https://review.lineageos.org/q/topic:ten-bt-sbc-hd-dualchannel" target="_blank" rel="nofollow noopener noreferrer">17.1</a> and <a href="https://review.lineageos.org/q/topic:twelve-bt-sbc-hd-dualchannel" target="_blank" rel="nofollow noopener noreferrer">19.1</a> had incoomplete patches made, and not merged.</li>
+							<li>20.0 has not yet received a port of it.</li>
+						</ul>
+
 						<h4 id="FDroidIssues">Why is F-Droid used?<a href="#FDroidIssues">¶</a></h4>
 						<p>While F-Droid currently has _<a href="https://gitlab.com/fdroid/fdroidserver/-/issues/1004" target="_blank" rel="nofollow noopener noreferrer">some</a>_ _<a href="https://wonderfall.dev/fdroid-issues/" target="_blank" rel="nofollow noopener noreferrer">major</a>_ _<a href="https://gitlab.com/fdroid/fdroiddata/-/issues/2753" target="_blank" rel="nofollow noopener noreferrer">issues</a>_, it is the largest repository of FOSS apps around with <em>some</em> rails in place along with an active community.</p>
 

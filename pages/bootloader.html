@@ -48,19 +48,20 @@
 								<li>Did you backup your device?</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li><code>$ fastboot oem unlock</code> or <code>$ fastboot flashing unlock</code></li>
+								<li>Reboot the device reboot, then reboot back to bootloader</li>
+								<li>If 'AVB Key' (avb_pkmd.bin) is available:
+									<ol>
+										<li><code>$ fastboot erase avb_custom_key</code></li>
+										<li><code>$ fastboot flash avb_custom_key avb_pkmd-device.bin</code></li>
+										<li>Reboot to the bootloader</li>
+									</ol>
+								</li>
 								<li>If fastboot.zip available: <code>$ fastboot update divested-version-date-dos-device-fastboot.zip</code></li>
 								<li>If recovery.img available: <code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li>A/B devices only without <a href="https://gitlab.com/divested-mobile/firmware-empty/-/blob/master/STATUS" target="_blank" rel="nofollow noopener noreferrer">firmware enabled</a>: <code>$ adb sideload copy-partitions-device.zip</a></code></li>
+								<li>If 'A/B Sync' (copy-partitions.zip) is available and NOT striked out: <code>$ adb sideload copy-partitions-device.zip</a></code></li>
 								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>While still in the recovery perform a factory reset</li>
-								<li>AVB devices only:
-									<ol>
-										<li>Reboot to the bootloader</li>
-										<li><code>$ fastboot erase avb_custom_key</code></li>
-										<li><code>$ fastboot flash avb_custom_key avb_pkmd-device.bin</code></li>
-									</ol>
-								</li>
 								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
 								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
 							</ol>
