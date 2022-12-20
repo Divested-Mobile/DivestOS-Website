@@ -82,9 +82,10 @@ createTable() {
 	kernelPath=$4;
 	kernelName=$(echo "$kernelPath" | sed 's|/|_|');
 	vASB=$(getVendorPatchLevel $version $devicePath)
-	if [[ $vASB == "2022-"* ]]; then
+	#keep 4 months + 1 future
+	if [[ $vASB == "2023-01"* ]] || [[ $vASB == "2022-12"* ]] || [[ $vASB == "2022-11"* ]] || [[ $vASB == "2022-10"* ]] || [[ $vASB == "2022-09"* ]]; then
 		vASBStyle="style=\"color:#4CAF50;\"";
-	elif [[ $vASB == "2021-"* ]]; then
+	elif [[ $vASB == "2022-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
 	else
 		vASBStyle="style=\"color:#F44336;\"";
