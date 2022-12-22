@@ -1,4 +1,4 @@
-last updated: 2022/12/20
+last updated: 2022/12/22
 
 disclosure: Mull is a DivestOS project
 
