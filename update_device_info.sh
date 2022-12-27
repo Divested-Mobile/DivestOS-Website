@@ -124,8 +124,8 @@ echo "2015-09-02" > clark/releasedate;
 
 echo "Pixel 4 XL" > coral/friendlyName;
 echo "Pixel 4" > flame/friendlyName;
-echo 1 > coral/status-20.0;
-echo 1 > flame/status-20.0;
+echo 2 > coral/status-20.0;
+echo 2 > flame/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > coral/bootloader_information;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > flame/bootloader_information;
 echo "2019-10-24" > coral/releasedate;
@@ -534,31 +534,31 @@ echo 2 > pro1/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > pro1/bootloader_information;
 
 echo "Google Pixel 5" > redfin/friendlyName;
-echo 1 > redfin/status-20.0;
+echo 2 > redfin/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > redfin/bootloader_information;
 
 echo "Google Pixel 5a" > barbet/friendlyName;
-echo 1 > barbet/status-20.0;
+echo 2 > barbet/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > barbet/bootloader_information;
 
 echo "Google Pixel 6" > oriole/friendlyName;
-echo 1 > oriole/status-20.0;
+echo 2 > oriole/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > oriole/bootloader_information;
 
 echo "Google Pixel 6 Pro" > raven/friendlyName;
-echo 1 > raven/status-20.0;
+echo 2 > raven/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > raven/bootloader_information;
 
 echo "Google Pixel 6a" > bluejay/friendlyName;
-echo 1 > bluejay/status-20.0;
-echo -e "Fastboot\nYes, Untested\n2.0\nYes" > bluejay/bootloader_information;
+echo 0 > bluejay/status-20.0;
+echo -e "Fastboot\nTested Working\n2.0\nYes" > bluejay/bootloader_information;
 
 echo "Google Pixel 7" > panther/friendlyName;
-echo 1 > panther/status-20.0;
+echo 2 > panther/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > panther/bootloader_information;
 
 echo "Google Pixel 7 Pro" > cheetah/friendlyName;
-echo 1 > cheetah/status-20.0;
+echo 2 > cheetah/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > cheetah/bootloader_information;
 
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
@@ -587,7 +587,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > star2lte/bootloader_information;
 
 echo "Google Pixel 4a" > sunfish/friendlyName;
 echo 7 > sunfish/status-20.0;
-echo -e "Fastboot\nTested Working\n2.0\nYes" > sunfish/bootloader_information;
+echo -e "Fastboot\nReported Working\n2.0\nYes" > sunfish/bootloader_information;
 
 echo "Xiaomi Mi 9T Pro" > raphael/friendlyName;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > raphael/bootloader_information;

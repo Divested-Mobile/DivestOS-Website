@@ -83,6 +83,7 @@
 							<li>P/Q/R/S/T: Increase default pthread stack to 8MiB on 64-bit (GrapheneOS)</li>
 							<li>P/Q/R/S/T: Make __stack_chk_guard read-only at runtime (GrapheneOS)</li>
 							<li>P/Q/R/S/T: On 64-bit, zero the leading stack canary byte (GrapheneOS)</li>
+							<!-- disabled due to boot isssues -->
 							<!--<li>P/Q/R: Switch pthread_atfork handler allocation to mmap (GrapheneOS)</li>
 							<li>P/Q/R: Add memory protection for pthread_atfork handlers (GrapheneOS)</li>
 							<li>P/Q: Add memory protection for at_quick_exit (GrapheneOS)</li>
@@ -92,14 +93,13 @@
 							<li>Q/R: Add guard page(s) between static_tls and stack (GrapheneOS)</li>
 							<li>Q/R: Move pthread_internal_t behind guard page (GrapheneOS)</li>
 							<li>Q/R: Add secondary stack randomization (GrapheneOS)</li>-->
-							<!-- these below patches are only currently enabled on S due to boot issues with legacy devices -->
 							<li>S/T: Switch pthread_atfork handler allocation to mmap (GrapheneOS)</li>
 							<li>S/T: Add memory protection for pthread_atfork handlers (GrapheneOS)</li>
-							<li>S/T: Add XOR mangling mitigation for thread-local dtors (GrapheneOS)</li>
+							<!--<li>S/T: Add XOR mangling mitigation for thread-local dtors (GrapheneOS)</li>
 							<li>S/T: Use a better pthread_attr junk filling pattern (GrapheneOS)</li>
 							<li>S/T: Add guard page(s) between static_tls and stack (GrapheneOS)</li>
 							<li>S/T: Move pthread_internal_t behind guard page (GrapheneOS)</li>
-							<li>S/T: Add secondary stack randomization (GrapheneOS)</li>
+							<li>S/T: Add secondary stack randomization (GrapheneOS)</li>-->
 
 						</ul>
 						<h5>android_build_make</h5>
@@ -351,6 +351,7 @@
 							<li>R/S/T: UserManager app installation restrictions (GrapheneOS)</li>
 							<li>R/S/T: Add a toggle to disable /etc/hosts lookup (based off of a GrapheneOS patch)</li>
 							<li>N/O/P/Q: Increase default max password length to 64 (GrapheneOS)</li>
+							<li>Q/R/S/T: Add LTE-only mode option (GrapheneOS)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
 							<li>Disable "Instant Apps"</li>
 							<li>Always reset animation scales to 0.5</li>
