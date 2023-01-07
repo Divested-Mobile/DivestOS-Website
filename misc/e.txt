@@ -14,6 +14,7 @@ Nice Aspects
 Web Browser & System WebView
 ============================
 - Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 282 known security vulnerabilities
+ - 2023/01/03: they finally updated after being 280 days behind, but not available to users until v1.8 (eta Feb. 2023?)
  - 2022/12/23: work in progress rebase: https://gitlab.e.foundation/e/os/browser/-/commits/5986-master-upstream
  - https://gitlab.e.foundation/e/os/browser/-/commit/453791f1afea6795a1312d9af7f4a061519609b0
   - currently: https://gitlab.e.foundation/e/backlog/-/issues/5986
@@ -128,7 +129,7 @@ Not Covered (nuanced or needs research/sources)
 - The state of kernel security patching
 - The use/recommendation of TWRP for recovery
 - IMSI to SUPL
-- Which SUPL server is default?
+- Which SUPL server is default? (for example many "degoogled" systems use supl.vodafone.com... which is just a CNAME to Google)
 - Signature spoofing support, with no restrictions
 - Website requires JavaScript
 - Trackers in their newsletter
