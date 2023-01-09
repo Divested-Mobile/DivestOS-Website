@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The deets<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2022-12-11</p>
+						<p>Last updated: 2023-01-09</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -46,7 +46,7 @@
 							<li>F-Droid An app catalog for FOSS apps</li>
 							<li>Etar: An improved calendar app. Replaces AOSP Calendar</li>
 							<li>OpenCamera: An improved camera app. Replaces Camera2/Snap</li>
-							<li>GrapheneOS Camera: A secure and user friendly camera app. Replaces OpenCamera on 19.1+</li>
+							<li>GrapheneOS Camera: A secure and user friendly camera app. Replaces OpenCamera on 19.1</li>
 							<li>Mull: A browser hardened against trackers by default. Replaces AOSP Browser/LineageOS Jelly</li>
 							<li>Simple Gallery: An improved gallery app. Replaces AOSP Gallery</li>
 						</ul>
@@ -110,7 +110,8 @@
 							<li>Add correct keys to recovery for OTA verification (DivestOS)</li>
 							<li>R/S/T: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
 							<li>Enable auto-add-overlay for packages, this allows the vendor overlay to easily work across all branches.</li>
-							<li>Q/R/S/T: Disable APEX</li>
+							<li>Q/R/S: Disable APEX</li>
+							<li>T: Only enable APEX on 6th/7th gen Pixel devices (GrapheneOS)</li>
 							<li>P/Q/R/S/T: Set the minimum supported target SDK to Pie (GrapheneOS)</li>
 							<li>Various rebranding</li>
 						</ul>
@@ -199,7 +200,7 @@
 							<li>S/T: Don't report statementservice crashes (GrapheneOS)</li>
 							<li>S: Skip screen on animation when wake and unlock via biometrics (jesec)</li>
 							<li>S/T: SystemUI: Skip screen-on animation in all scenarios (kdrag0n)</li>
-							<li>R/S: SystemUI: add burnIn protection (arter97)</li>
+							<li>R/S/T: SystemUI: add burnIn protection (arter97)</li>
 							<li>S: Make monet based theming user configurable (GrapheneOS)</li>
 							<li>S/T: Add an option to show the details of an application error to the user (GrapheneOS)</li>
 							<li>T: Make sure PackageInstaller UI returns a result (GrapheneOS)</li>
@@ -275,6 +276,10 @@
 							<li>Disable Weather</li>
 							<li>DEBLOBBER_REMOVE_AUDIOFX=true: Remove AudioFX</li>
 							<li>Various rebranding</li>
+						</ul>
+						<h5>android_packages_apps_Aperture</h5>
+						<ul>
+							<li>T: Enable stabilization by default (DivestOS)</li>
 						</ul>
 						<h5>android_packages_apps_Bluetooth</h5>
 						<ul>

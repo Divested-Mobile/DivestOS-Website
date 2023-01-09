@@ -72,13 +72,13 @@
 						</ul>
 
 						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
-						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only A/B devices have incrementals generated.<br>As of 2022/12/31 that is:<br><code>'akari, alioth, Amber, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, lemonade, lemonadep, marlin, mata, oriole, panther, pioneer, pro1, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c'</code></p>
+						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only A/B devices have incrementals generated.<br>As of 2023/01/09 that is:<br><code>'akari, alioth, Amber, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, lemonade, lemonadep, marlin, mata, oriole, panther, pioneer, pro1, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c'</code></p>
 
 						<h4 id="randomMAC">What devices support Wi-Fi MAC randomization?<a href="#randomMAC">¶</a></h4>
-						<p>As of 2022/12/31:<br><code>akari, alioth, Amber, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, discovery, dumpling, enchilada, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebba, lavender, lemonade, lemonadep, lmi, mata, oriole, panther, pioneer, pro1, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
+						<p>As of 2023/01/09:<br><code>akari, alioth, Amber, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, discovery, dumpling, enchilada, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebba, lavender, lemonade, lemonadep, lmi, mata, oriole, panther, pioneer, pro1, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
 
 						<h4 id="kernelCFI">What devices have CFI enabled kernels?<a href="#kernelCFI">¶</a></h4>
-						<p>As of 2022/12/31:</p>
+						<p>As of 2023/01/09:</p>
 						<ul>
 							<li>CFI enabled: none yet</li>
 							<li>CFI and SCS enabled: blueline/crosshatch, bonito/sargo, coral/flame/sunfish, bramble/redfin/barbet, oriole/raven/bluejay, cheetah/panther, FP4, lemonade*</li>
@@ -88,7 +88,7 @@
 						</ul>
 
 						<h4 id="mallocUse">What memory allocator is used?<a href="#mallocUse">¶</a></h4>
-						<p>As of 2022/12/31:</p>
+						<p>As of 2023/01/09:</p>
 						<ul>
 							<li>jemalloc for 32-bit and 64-bit: all 14.1 and 15.1 devices</li>
 							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 16.0 devices</li>
@@ -157,9 +157,8 @@
 						<ul>
 							<li>SBC is available on all versions.</li>
 							<li>SBC-XQ is available on select versions, see <a href="#btSBCXQ">below</a>.</li>
-							<li>AAC and LDAC are available on 15.1 and higher.</li>
+							<li>AAC, aptX, and LDAC are available on 15.1 and higher.</li>
 							<li>LC3 (LE Audio) is available on 20.0 and higher.</li>
-							<li>aptX is currently removed, but will be available on supported devices in the January 2023 update.</li>
 						</ul>
 
 						<h4 id="btSBCXQ">Is Bluetooth SBC-XQ (dual channel SBC) available?<a href="#btSBCXQ">¶</a></h4>
@@ -216,7 +215,7 @@
 								<li>Ad/Tracker Blocking: DivestOS includes a tailored <a href="https://divested.dev/index.php?page=dnsbl" target="_blank" rel="nofollow noopener noreferrer">HOSTS</a> file by default for such blocking. The user can further choose to use an alternative DNS or use a local VPN app such as <a href="https://f-droid.org/en/packages/org.jak_linux.dns66" target="_blank" rel="nofollow noopener noreferrer">DNS66</a> or <a href="https://f-droid.org/en/packages/eu.faircode.netguard" target="_blank" rel="nofollow noopener noreferrer">NetGuard</a>.</li>
 								<li>Permission Control: Modern AOSP provides far more control of permissions than older versions.</li>
 								<li>Data Spoofing: You can run apps in a work profile via <a href="https://f-droid.org/en/packages/net.typeblog.shelter" target="_blank" rel="nofollow noopener noreferrer">Shelter</a>/<a href="https://f-droid.org/en/packages/com.oasisfeng.island.fdroid" target="_blank" rel="nofollow noopener noreferrer">Insular</a> or in a separate user profile to minimize data available to apps when granted related permissions.</li>
-								<li>Backup: DivestOS includes <a href="https://calyxinstitute.org/projects/seedvault-encrypted-backup-for-android" target="_blank" rel="nofollow noopener noreferrer">SeedVault</a> on Q/R/S for backing up apps and their data to Nextcloud or USB OTG.</li>
+								<li>Backup: DivestOS includes <a href="https://calyxinstitute.org/projects/seedvault-encrypted-backup-for-android" target="_blank" rel="nofollow noopener noreferrer">SeedVault</a> on Q/R/S/T for backing up apps and their data to Nextcloud or USB OTG.</li>
 								<li>Overclocking: Most mobile system-on-chips have their RAM stacked above the processor. Heat kills. Overclocking can and will reduce the life-span of your device.</li>
 								<li>App Removal: Modern AOSP already lets you strictly disable most system installed apps. Furthermore DivestOS already includes <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">far fewer</a> system apps compared to most other operating systems.</li>
 								<li>Battery Saving: Modern AOSP lets you prohibit apps from running in the background completely and has more advanced idle battery saving features.</li>

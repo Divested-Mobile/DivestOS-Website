@@ -1,4 +1,4 @@
-last updated: 2023/01/07
+last updated: 2023/01/09
 
 disclosure: Mulch is a DivestOS project
 
@@ -130,7 +130,7 @@ Standalone:
 Lineage related:
 - LineageOS, †2		108.0.5359.128				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - MoKee, †2, 12.1	108.0.5359.128, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
-- OmniROM, †2, 13	105.0.5195.136, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
+- OmniROM, †2, 13	108.0.5359.109, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
 - CarbonROM, †2, 11	tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
 - crDroid, †2, 11/12.1	tracks LineageOS/master			https://github.com/crdroidandroid/android/blob/12.1/snippets/lineage.xml
@@ -142,7 +142,7 @@ Bromite related:
 - CalyxOS		108.0.5359.128				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			108.0.5359.156, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
-- lin-microG		108.0.5359.106, Bromite prebuilts	https://github.com/MSe1969/android_external_bromite-webview
+- lin-microG		108.0.5359.156, Bromite prebuilts	https://github.com/MSe1969/android_external_bromite-webview
 
 AOSP related:
 - AOSP, 7.1.2		52.7243.100				https://android.googlesource.com/platform/external/chromium-webview/+log/android-7.1.2_r39

@@ -6,6 +6,53 @@
 					<?php print(file_get_contents("pages/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2023-01">
+						<h3>January 9th 2023 Update<a href="#2023-01">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>20.0 release candidate #1 January ASB builds were published on January 9th.</li>
+							<li>15.1 and 16.0 release candidate #1 January ASB builds were published on January 8th.</li>
+							<li>16.0 was found to be missing two security patches for external/dtc, one from 2022-11 and another from 2022-12.</li>
+							<li>18.1 and 19.1 release candidate #2 January ASB builds were published on January 8th, they both contain two additional security fixes compared to RC#1.</li>
+							<li>14.1 and 17.1 release candidate #1 January ASB builds were published on January 6th and 7th respectively.</li>
+							<li>20.0 rebuilds were published on December 26th.</li>
+							<li>This update has had many fixes put in place which has been largely confirmed to fix Pixel 5/6/7 series being non-functional:<ul>
+								<li>The deblobber has been further adjusted to handle Tensor devices.</li>
+								<li>The disablement aspects of the defconfig hardener have been reigned in a bit.</li>
+								<li>A handful of the bionic hardening patches have been disabled.</li>
+							</ul></li>
+							<li>17.1 and up now have LTE-only mode as an option thanks to patches from GrapheneOS.</li>
+							<li>The proprietary library for aptX support is no longer removed.</li>
+							<li>15.1 and 16.0 release candidate #1 December ASB builds were published on December 12th.</li>
+						</ul>
+						<h4>Roster Updates</h4>
+						<ul>
+							<li>Untested 20.0 builds for oriole, raven, bluejay, panther, and cheetah are now available.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Hypatia has received many optimizations to reduce memory usage significantly. Database downloads are also smaller too without any loss.</li>
+							<li>Updated Mulch (WebView) to Chromium 108.0.5359.128-1, has 8 security fixes.</li>
+							<li>Updated Mull to 108.1.0-1, 108.1.1-1, and 108.2.0-1, has 20, 0, and 0 security fixes respectively.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The Installation page has had some refinements.</li>
+							<li>The Devices page now notes which ones include firmware.</li>
+							<li>The Messengers page has many improvements.</li>
+						</ul>
+					</div>
+					<div class="section" id="thirteen">
+						<h3>Initial addition of 20.0<a href="#thirteen">¶</a></h3>
+						<p>Support for 20.0 has been added in October and largely stablized since then. The majority of 12 devices have moved to 13 with the rest following soon.</p>
+						<ul>
+							<li>In-place upgrade from 12 to 13 while locked has been tested working on fajita, cheeseburger, and taimen, plus many additional successful user reports.</li>
+							<li>Only one report of failed upgrade so far.</li>
+							<li>TalkBack and Simple Gallery don't show up, despite being included in images. Suspected signing issue, logs say no v2 signature, apksigner says otherwise.</li>
+							<li>Make a backup before upgrading!</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2022-12">
 						<h3>December 11th 2022 Update<a href="#2022-12">¶</a></h3>
 						<h4>System Updates</h4>
@@ -53,7 +100,7 @@
 							<li>The web server has been <a href="https://divested.dev/index.php?page=infrastructure#spotco.us" target="_blank" rel="nofollow noopener noreferrer">upgraded</a> thanks to user donations. This will better handle traffic and allow keeping more old builds.</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
+
 					<div class="section" id="2022-11">
 						<h3>November 14th 2022 Update<a href="#2022-11">¶</a></h3>
 						<h4>System Updates</h4>
