@@ -1,4 +1,4 @@
-last updated: 2022/12/03
+last updated: 2023/01/15
 
 Preface:
 - This is a list of dependencies and apps that may have known vulnerabilities
@@ -50,6 +50,7 @@ Libraries:
 			- Librera Reader 8.8.5
 				- Reference: https://github.com/foobnix/LibreraReader/blob/8.8.5/app/src/main/java/com/foobnix/pdf/info/AppsConfig.java#L30
 				- Reference: https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.foobnix.pro.pdf.reader.yml#L318
+				- Report: https://github.com/foobnix/LibreraReader/issues/1030
 				- app includes both MuPDF 1.11 as the default and for legacy Android 4.0 compatibility
 				- app optionally has MuPDF 1.20.4 that a user can choose to use
 			- Document Viewer 2.8.2
@@ -88,18 +89,6 @@ Libraries:
 			- Sav PDF Viewer Pro 1.9
 				- Reference: https://github.com/Sav22999/sav-pdf-viewer-pro/blob/1.9/app/build.gradle#L54
 				- Report: https://github.com/Sav22999/sav-pdf-viewer-pro/issues/28
-	- com.github.tibbi:AndroidPdfViewer:da57ff410e using PDFium@32b639d from 2016-01-14
-		- Implementer Libraries:
-			- https://github.com/tibbi/AndroidPdfViewer/blob/da57ff410e3fb7bba831f5c7816834f2ed2d638d/android-pdf-viewer/build.gradle#L13
-			- https://github.com/DineroRegnskab/PdfiumAndroid/commits/pdfium-android-1.9.2
-				- Report: Issues are disabled, not reported
-		- Report: Issues are disabled, not reported
-		- Note: prebuilts are unclear, may actually be based off of M90 from 2021-03 instead
-		- Status: Has ~5 or ~60 known security issues depending on note above
-		- Dependent Apps:
-			- Simple File Manager Pro 6.14.3
-				- Reference: https://github.com/SimpleMobileTools/Simple-File-Manager/blob/6.14.3/app/build.gradle#L68
-				- Report: https://github.com/SimpleMobileTools/Simple-File-Manager/issues/619
 	- Projects to keep an eye on:
 		- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.github.axet.bookreader.yml
 		- https://gitlab.com/iode/os/apps/PdfViewerPlus
@@ -111,12 +100,6 @@ Libraries:
 	- TODO: check ch.threema:webrtc-android:100.0.0
 		- M100 notably has no release notes
 		- and is before CVE-2022-2294 was fixed
-	- org.webrtc:google-webrtc:1.0.32006 (M86) from 2020-08-27
-		- Status: Has ~17 known security issues
-		- Dependent Apps:
-			- Snikket 2.10.2+fcr, Reference: https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.snikket.android.yml#L65
-			- Cheogram 2.10.10-1+free, Reference: https://git.singpolyma.net/cheogram-android/tree/2.10.10-3-fdroid/item/build.gradle#L114
-				- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.cheogram.android.yml
 	- WebRTC@M56 from 2016-12-12
 		- Status: Has a ton of known security issues
 		- Dependent Apps:
@@ -128,12 +111,10 @@ Libraries:
 		- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/eu.siacs.conversations.yml
 		- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/eu.sum7.conversations.yml
 		- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/im.quicksy.client.yml
+		- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.snikket.android.yml
+		- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.cheogram.android.yml
 
 Apps:
-- LibreOffice Viewer 6.1.0 is from 2018-01-26
-	- Status: Has ~15 known security issues
-	- Dependency Changelog: https://cgit.freedesktop.org/libreoffice/core/commit/?id=484d0ea842da
-	- CVEs: https://www.cvedetails.com/vulnerability-list/vendor_id-11439/product_id-21008/Libreoffice-Libreoffice.html
 - Tinc 0.33 uses lzo-2.10 from 2017-03-01
 	- Status: Has 1 security issue?
 	- Version Declared: https://github.com/pacien/tincapp/blob/234b97c14fa8df899291b760602b9bfc7abdad36/app/CMakeLists.txt
