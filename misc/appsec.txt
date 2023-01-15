@@ -82,8 +82,6 @@ Libraries:
 				- Reference: https://github.com/JavaCafe01/PdfViewer/blob/v3.7/app/build.gradle#L79
 				- Report: https://github.com/JavaCafe01/PdfViewer/issues/175
 					- Repository was archived after reporting
-			- iodéOS PDF Viewer
-				- Reference: https://gitlab.com/iode/os/apps/PdfViewerPlus/-/blob/v1/app/build.gradle#L79
 			- /e/OS PDF Viewer
 				- Reference: https://gitlab.e.foundation/e/os/pdfviewer/-/blob/0d7ac995a928f37d10988222a31a14a8458582a5/app/build.gradle#L95
 				- no account, not reported
@@ -104,6 +102,7 @@ Libraries:
 				- Report: https://github.com/SimpleMobileTools/Simple-File-Manager/issues/619
 	- Projects to keep an eye on:
 		- https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.github.axet.bookreader.yml
+		- https://gitlab.com/iode/os/apps/PdfViewerPlus
 - WebRTC
 	- Changelog:
 		- https://groups.google.com/g/discuss-webrtc/search?q=psa%20release%20notes

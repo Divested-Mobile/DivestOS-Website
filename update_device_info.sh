@@ -21,9 +21,9 @@ mkdir -p a3xelte a52q a5xelte a5y17lte a6020 a72q a7xelte a7y17lte addison ahann
 echo "Sony Xperia XZ2" > akari/friendlyName;
 echo "Sony Xperia XZ2 Premium" > aurora/friendlyName;
 echo "Sony Xperia XZ2 Compact" > xz2c/friendlyName;
-echo 8 > akari/status-19.1;
-echo 8 > aurora/status-19.1;
-echo 8 > xz2c/status-19.1;
+echo 8 > akari/status-20.0;
+echo 8 > aurora/status-20.0;
+echo 7 > xz2c/status-20.0;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > akari/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > aurora/bootloader_information;
 echo -e "Fastboot (Sony)\nUnknown\n2.0" > xz2c/bootloader_information;
