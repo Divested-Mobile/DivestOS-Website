@@ -2,14 +2,20 @@ In order to properly support gen204.php you need the following in your Apache vi
 
 	HTTP VirtualHost
 		#Disable logging of gen204.php requests
-		SetEnvIf REQUEST_URI "^/gen204.php$" dontlog
-		CustomLog ${APACHE_LOG_DIR}/access.log combined env=!dontlog
+		SetEnvIf REQUEST_URI "^/generate_204$" dontlog
+		CustomLog "logs/access_log" combined env=!dontlog
+		RewriteEngine on
 		#Disable forced HTTPS redirect for gen204.php requests
-		RewriteCond %{REQUEST_URI} !^/gen204.php$
-		RewriteCond %{SERVER_NAME} =divestos.org
-		RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,QSA,R=permanent]
+		RewriteCond %{REQUEST_URI} !^/generate_204$
+		RewriteCond %{HTTPS} !=on
+		RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+		#Handle the 204
+		RewriteRule /generate_204$ - [END,NE,R=204]
 
 	HTTPS VirtualHost
 		#Disable logging of gen204.php requests
-		SetEnvIf REQUEST_URI "^/gen204.php$" dontlog
-		CustomLog ${APACHE_LOG_DIR}/access.log combined env=!dontlog
+		SetEnvIf REQUEST_URI "^/generate_204$" dontlog
+		CustomLog "logs/access_log" combined env=!dontlog
+		RewriteEngine on
+		#Handle the 204
+		RewriteRule /generate_204$ - [END,NE,R=204]
