@@ -35,6 +35,7 @@
 						<ul>
 							<li>Changing device identifiers like the IMEI is NOT supported and may be illegal in some countries.</li>
 							<li>Encryption cannot be disabled.</li>
+							<li>eSIMs are not supported.</li>
 							<li>Fonts cannot be easily added to the system.</li>
 							<li>Google Apps or microG or Sandboxed Play Services are NOT supported.</li>
 							<li>Other WebView providers such as Bromite are not currently supported. They were briefly supported in the past but caused boot issues on 15.1 for unknown reasons.</li>
@@ -90,6 +91,7 @@
 						</ul>
 						<h4 id="bugs">Bugs<a href="#bugs">¶</a></h4>
 						<ul>
+							<li>Flutter-based apps may show graphical artifacting on older (msm8974 era) devices.</li>
 							<li>Older Unity engine games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w (optional/required) enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
 							<li>Special permissions of apps may be randomly reset after reboots. This is an unknown and widespread issue affecting many other operating systems.</li>
@@ -111,6 +113,7 @@
 						<h4 id="clark">clark<a href="#clark">¶</a></h4>
 						<ul>
 							<li>Camera is very slow to start and sometimes won't start at all. [upstream]</li>
+							<li>Camera can be very slow to take pictures at higher resoutions. [???]</li>
 						</ul>
 						<h4 id="d852">d852<a href="#d852">¶</a></h4>
 						<ul>
@@ -139,13 +142,11 @@
 						</ul>
 						<h4 id="davinci">davinci<a href="#davinci">¶</a></h4>
 						<ul>
-							<li>FM radio causes reboot on headphone plug event, app can be disabled as workaround. [???]</li>
+							<li>FM radio causes reboot on headphone plug/unplug, app can be disabled as workaround. [???]</li>
 						</ul>
 						<h4 id="op6-common">enchilada/fajita<a href="#op6-common">¶</a></h4>
 						<ul>
-							<li>On select devices Wi-Fi may be very broken. [???]<a href="https://gitlab.com/LineageOS/issues/android/-/issues/4667" target="_blank" rel="nofollow noopener noreferrer">[upstream tracking]</a></li>
-							<li><strike>18.1 ONLY: Uses the stock /vendor partition, making many of the deblobber benefits unavailable.</strike></li>
-							<li><strike>Builds before 2021/09/02 on the 11.0 bootloader/firmware will enter CrashDump mode. Hold volume up + power to exit and then use fastboot to flash a newer build. [firmware]<a href="https://review.lineageos.org/c/LineageOS/android_kernel_oneplus_sdm845/+/315208" target="_blank" rel="nofollow noopener noreferrer">[upstream fix]</a></strike></li>
+							<li>On select devices Wi-Fi may be very broken. [hardware?]<a href="https://gitlab.com/LineageOS/issues/android/-/issues/4667" target="_blank" rel="nofollow noopener noreferrer">[upstream tracking]</a></li>
 						</ul>
 						<h4 id="op7-common">guacamole*/hotdog*<a href="#op7-common">¶</a></h4>
 						<ul>
@@ -165,7 +166,7 @@
 						<h4 id="hammerhead">hammerhead<a href="#hammerhead">¶</a></h4>
 						<ul>
 							<li>15.1: Wi-Fi tethering doesn't work. [???]</li>
-							<li>16.0: camera, Bluetooth, and tethering doesn't work. [???]</li>
+							<li>16.0: Camera, Bluetooth, and Wi-Fi tethering doesn't work. [???]</li>
 						</ul>
 						<h4 id="s7-common">herolte/hero2lte/S7<a href="#s7-common">¶</a></h4>
 						<ul>
@@ -185,7 +186,7 @@
 						<h4 id="klte">klte<a href="#klte">¶</a></h4>
 						<ul>
 							<li>SD cards might fail to mount or format. [vold + selinux?]</li>
-							<li>USB ADB does not work. [FunctionFS corruption]</li>
+							<li>USB ADB only works when MTP mode isn't set. [FunctionFS corruption?]</li>
 						</ul>
 						<h4 id="m8">m8/m8d<a href="#m8">¶</a></h4>
 						<ul>
@@ -205,7 +206,6 @@
 						<ul>
 							<li>Images will often fail to install via recovery. [fstab /vendor/firmware_mnt]</li>
 							<li>Speaker phone volume cannot be changed from maximum.</li>
-							<li>Phone call audio over Bluetooth inconsistently works.</li>
 						</ul>
 						<h4 id="nexn900">nex/n900<a href="#nexn900">¶</a></h4>
 						<ul>

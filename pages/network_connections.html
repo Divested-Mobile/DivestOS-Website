@@ -2,10 +2,6 @@
 					<h2>Network Connections<a href="#connections">¶</a></h2>
 					<p>Here is a list of expected network connections for security/verification purposes. It should however be assumed incomplete.</p>
 					<div class="section" id="connections">
-						<h3 id="ntp">NTP<a href="#ntp">¶</a><small>not Google but a volunteer pool, <a href="index.php?page=privacy_policy#ntp">privacy policy</a></small></h3>
-						<ul>
-							<li>2.android.pool.ntp.org</li>
-						</ul>
 						<h3 id="dns">DNS<a href="#dns">¶</a><small>Quad9, fallback only, cell/Wi-Fi network or user defined 'Private DNS' overrides, <a href="index.php?page=privacy_policy#dns">privacy policy</a></small></h3>
 						<ul>
 							<li>9.9.9.9</li>
@@ -13,30 +9,45 @@
 							<li>2620:fe::fe</li>
 							<li>2620:fe::9</li>
 						</ul>
-						<h3 id="connectivity">Network Connectivity Check<a href="#connectivity">¶</a><small>Google, every connection change, can be disabled in <a href="index.php?page=privacy_policy#googleConnectivityChecks">Settings, privacy policy</a></small></h3>
+
+						<h3 id="connectivity">Network Connectivity Check<a href="#connectivity">¶</a><small>every connection change, can be disabled (14.1+) or changed (18.1+) in Settings</small></h3>
+						<p>Default: Google - <a href="index.php?page=privacy_policy#googleConnectivityChecks">privacy policy</a></p>
 						<ul>
-							<!--<li>https://divestos.org/gen204.php</li>
-							<li>http://divestos.org/gen204.php</li>-->
 							<li>http://connectivitycheck.gstatic.com/generate_204</li>
 							<li>https://www.google.com/generate_204</li>
 							<li>http://www.google.com/gen_204</li>
 							<li>http://play.googleapis.com/generate_204</li>
 						</ul>
+						<p>Optional: DivestOS - <a href="index.php?page=privacy_policy#fpConnectivityChecks">privacy policy</a></p>
+						<ul>
+							<li>https://divestos.org/generate_204</li>
+							<li>http://divestos.org/generate_204</li>
+						</ul>
+
+						<h3 id="ntp">NTP<a href="#ntp">¶</a><small>volunteer pool, <a href="index.php?page=privacy_policy#ntp">privacy policy</a></small></h3>
+						<ul>
+							<li>2.android.pool.ntp.org</li>
+						</ul>
+
+						<h3 id="psds">PSDS<a href="#psds">¶</a><small>when acquiring a GPS lock</small></h3>
+						<ul>
+							<li>Qualcomm: https://{,xtra}path[1-9].izatcloud.net/{xtra,xtra2,xtra3grc}.bin</li>
+							<li>Google Tensor: https://agnss.goog/{lto2,rto,rtistatus}.dat</li>
+							<li>Broadcom: https://gllto.glpals.com</li>
+						</ul>
+
 						<h3 id="supl">SUPL<a href="#supl">¶</a><small>Google, fallback only, carrier/SIM and emergency calls will override</small></h3>
 						<ul>
 							<li>supl.google.com:727X</li>
 						</ul>
-						<h3 id="a-gps">A-GPS/PSDS<a href="#a-gps">¶</a><small>when acquiring a GPS lock</small></h3>
-						<ul>
-							<li>Qualcomm: https://xtrapath[1-9].izatcloud.net/{xtra,xtra2,xtra3grc}.bin</li>
-							<li>Tensor: https://agnss.goog</li>
-						</ul>
+
 						<h3 id="updater">Updater<a href="#updater">¶</a><small>default weekly, can be disabled in Settings > Updater, <a href="index.php?page=privacy_policy#systemUpdater">privacy policy</a></small></h3>
 						<ul>
 							<li>https://divestos.org/updater.php?base=$BASE&device=$DEVICE&inc=$BUILD_ID</li>
 							<li>https://divestos.org/mirror.php?base=$BASE&file=$FILE</li>
 							<li>https://divestos.org/builds/$BASE/$DEVICE/divested-$VERSION-$DATE-dos-$DEVICE(-$INCREMENTAL).zip</li>
 						</ul>
+
 						<h3 id="fdroid">F-Droid Repositories<a href="#fdroid">¶</a><small>default daily, can be disabled in F-Droid > Settings</small></h3>
 						<ul>
 							<li>https://f-droid.org/repo/ - <a href="index.php?page=privacy_policy#fdroid">privacy policy</a></li>
@@ -47,6 +58,7 @@
 							<li>https://apt.izzysoft.de/fdroid/ - default disabled - <a href="https://android.izzysoft.de/impressum.php" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
 							<li>https://fdroid.bromite.org/fdroid/ - default disabled - <a href="https://www.bromite.org/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
 						</ul>
+
 						<h3 id="hypatia">Hypatia<a href="#hypatia">¶</a><small>not pre-installed, not automatic, <a href="index.php?page=privacy_policy#hypatia">privacy policy</a></small></h3>
 						<ul>
 							<li>https://divested.dev/MalwareScannerSignatures/*.h*b.gz</li>

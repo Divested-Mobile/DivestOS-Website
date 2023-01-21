@@ -1,4 +1,4 @@
-In order to properly support gen204.php you need the following in your Apache virtualhosts config
+In order to properly support generate_204 requests you need the following in your Apache virtualhosts config
 
 	HTTP VirtualHost
 		#Disable logging of gen204.php requests
