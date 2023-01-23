@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The deets<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2023-01-09</p>
+						<p>Last updated: 2023-01-23</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -72,7 +72,7 @@
 							<li>P/Q/R/S/T: GRAPHENE_MALLOC=true: Use hardened_malloc (GrapheneOS)</li>
 							<li>S/T: Sort and cache hosts file data for fast lookup (tdm)</li>
 							<li>N/O/S/T: Support wildcards in cached hosts file (tdm)</li>
-							<li>R/S/T: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
+							<li>Q/R/S/T: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
 							<li>GRAPHENE_BIONIC=true:</li>
 							<li>P/Q/R/S/T: Add a real explicit_bzero implementation (GrapheneOS)</li>
 							<!--<li>P/Q/R/S/T: Replace brk and sbrk with stubs (GrapheneOS)</li>-->
@@ -136,8 +136,9 @@
 						<ul>
 							<li>Update the WebView to latest if available</li>
 						</ul>
-						<h5>android_external_graphene_malloc</h5>
+						<h5>android_external_hardened_malloc</h5>
 						<ul>
+							<!--<li>O: Compile fixes (DivestOS)</li>-->
 							<li>P: GRAPHENE_MALLOC=true: DeviceDescriptor sorting wrongly relies on malloc addresses (GrapheneOS)</li>
 							<li>S/T: Workarounds for Pixel 3 SoC era camera driver bugs (GrapheneOS)</li>
 							<li>P/Q/R/S/T: GRAPHENE_MALLOC=true: Expand workaround to all camera executables (DivestOS)</li>
@@ -205,6 +206,9 @@
 							<li>S/T: Add an option to show the details of an application error to the user (GrapheneOS)</li>
 							<li>T: Make sure PackageInstaller UI returns a result (GrapheneOS)</li>
 							<li>T: Don't leak device-wide package list to apps when work profile is present (GrapheneOS)</li>
+							<li>T: Don't allow updating system packages to the same versionCode (GrapheneOS)</li>
+							<li>T: Prefer package from OS image over equal version of upgraded system package (GrapheneOS)</li>
+							<li>T: Replace agnss.goog with the Broadcom PSDS server (heavily based off of a GrapheneOS patch)</li>
 							<li>Q/R/S: Warn when running activity from 32 bit app on ARM64 devices. (AOSP)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
 							<li>Q/R: Restore the Sensors Off tile (DivestOS)</li>
@@ -342,8 +346,8 @@
 						<ul>
 							<li>!R/!S/!T: Don't hide OEM unlock</li>
 							<li>N: Cherrypick 201113: wifi: Add world regulatory domain country code (syphyr)</li>
-							<li>!S/!T: Add option to disable captive portal checks (MSe1969)</li>
-							<li>S/T: Add option to disable captive portal checks (GrapheneOS)</li>
+							<li>N/O/P/Q: Add option to disable captive portal checks (MSe1969)</li>
+							<li>R/S/T: Add option to disable captive portal checks (GrapheneOS + DivestOS modifications for additonal choices)</li>
 							<!--<li>N/O: Permission for sensors access (MSe1969)</li>-->
 							<li>Q/R: Remove the Sensors Off development tile (DivestOS)</li>
 							<li>P/Q/R/S/T: More 'Private DNS' options (based off of a CalyxOS patch)</li>
@@ -354,7 +358,7 @@
 							<li>Q/R/S/T: GRAPHENE_EXEC=true: Add exec spawning toggle (GrapheneOS)</li>
 							<li>Q/R/S/T: Add option to always randomize MAC (GrapheneOS</li>
 							<li>R/S/T: UserManager app installation restrictions (GrapheneOS)</li>
-							<li>R/S/T: Add a toggle to disable /etc/hosts lookup (based off of a GrapheneOS patch)</li>
+							<li>Q/R/S/T: Add a toggle to disable /etc/hosts lookup (based off of a GrapheneOS patch)</li>
 							<li>N/O/P/Q: Increase default max password length to 64 (GrapheneOS)</li>
 							<li>Q/R/S/T: Add LTE-only mode option (GrapheneOS)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
@@ -470,6 +474,7 @@
 						<h5>android_system_netd</h5>
 						<ul>
 							<li>Q/R/S: Expose the NETWORK permission (GrapheneOS)</li>
+							<li>Q: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
 						</ul>
 						<h5>android_system_sepolicy</h5>
 						<ul>

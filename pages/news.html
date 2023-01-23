@@ -6,6 +6,36 @@
 					<?php print(file_get_contents("pages/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2023-01.2">
+						<h3>January 23rd 2023 Update<a href="#2023-01.2">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>20.0 rebuilds were published on January 23rd.</li>
+							<li>18.1 and 19.1 rebuilds were published on January 22nd.</li>
+							<li>An issue was found with the DHCP client sending device hostname in requests on 19.1 and 20.0. Caused by path change of config file, resulting in it not being patched.</li>
+							<li>14.1, 15.1, 16.0, and 17.1 rebuilds were published on January 21st.</li>
+							<li>Google Pixel 6 and 7 series now use the Broadcom PSDS server instead of Google's.</li>
+							<li>Requests to the Broadcom PSDS server should now use HTTPS instead of plain HTTP.</li>
+							<li>The content blocker toggle was found to improperly handle localhost resolution due to an incorrect check and has been fixed.</li>
+							<li>17.1 now has the option to disable the content blocker (hosts) like 18.1+.</li>
+							<li>18.1 and up now feature more server choices for the `Network Connectivity Check` option.</li>
+							<li>20.0 now features a patch from GrapheneOS which prohibits installing updates to system apps with the same version code. This mitigates downgrade attacks, as system apps usually only have their version bumped each major Android revision.</li>
+							<li>Rebuilds for guacamole*, hotdog*, vayu, and davinci were published on January 13th with a confirmed fix for the video playback issue introduced in the January update.</li>
+							<li>Reverse loose versioning has been added to the CVE checker which will apply 3.4 patches to 3.10 if no match is available. Yields 20-40 additional patches.</li>
+							<li>Loose versioning of the CVE checker has been adjusted to apply 4.14 patches to 4.9 now that it is EOL. Yields 5 to 10 additional patches.</li>
+							<li>The early January update for OnePlus 9 series has broken Bluetooth offload, use the `Disable A2DP offload` toggle in Developer Options to workaround until next update.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Updated Mull to 109.1.1-1, has 21 security fixes.</li>
+							<li>Updated Mulch (WebView) to Chromium 109.0.5414.86-1, has 17 security fixes.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The Network Connections page has many improvements.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2023-01">
 						<h3>January 9th 2023 Update<a href="#2023-01">¶</a></h3>
 						<h4>System Updates</h4>
@@ -52,7 +82,6 @@
 							<li>Make a backup before upgrading!</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2022-12">
 						<h3>December 11th 2022 Update<a href="#2022-12">¶</a></h3>
 						<h4>System Updates</h4>
