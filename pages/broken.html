@@ -22,18 +22,18 @@
 						<h4 id="others">Others<a href="#others">¶</a></h4>
 						<ul>
 							<li>F-Droid will not suggest updates for Mull if the version on the official F-Droid repo is older than the DivestOS repo. Enable "Unstable updates" in its Settings for faster updates.</li>
-							<li>F-Droid will reset its database on the second start in many cases.</li>
-							<li>F-Droid will sometimes crash when downloading large apps.</li>
+							<li>F-Droid will reset its database on the second start in many cases. [upstream]</li>
+							<li>F-Droid will sometimes crash when downloading large apps. [upstream]</li>
 							<li>To use gmail.com with FairEmail you must use an App Password.</li>
 							<li>Silence will crash if first started without a SIM-card inserted. [upstream]</li>
-							<li>Simple Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround.</li>
+							<li>Simple Gallery will fail to render images on select older devices. Disable 'deep zooming' in its settings to workaround. [hardware limitations]</li>
 						</ul>
 					</div>
 					<div class="section" id="system">
 						<h3>System<a href="#system">¶</a></h3>
 						<h4 id="unsupported">Not Supported<a href="#unsupported">¶</a></h4>
 						<ul>
-							<li>Changing device identifiers like the IMEI is NOT supported and may be illegal in some countries.</li>
+							<li>Changing device identifiers like the IMEI is NOT supported.</li>
 							<li>Encryption cannot be disabled.</li>
 							<li>eSIMs are not supported.</li>
 							<li>Fonts cannot be easily added to the system.</li>
@@ -52,8 +52,8 @@
 							<li>Compiling is non-trivial and has many undocumented steps.</li>
 							<li>Devices using 'encryptable=footer' in their fstab will not be encrypted by default. These devices typically are unable to be encrypted on the very first boot.</li>
 							<li>If your device is not detected by your computer use a USB 2.0 port. If you don't have any USB 2.0 ports use a USB 2.0 hub. If that still doesn't work try another cable.</li>
-							<li>IMS/VoLTE may or may not work. [upstream? deblobber? carrier?]</li>
-							<li>Incremental updates will often fail to successfully apply on non update-engine devices. [releasetools]</li>
+							<li>IMS/VoLTE <a href="index.php?page=faq#volte">may or may not work</a>. [upstream? deblobber? carrier?]</li>
+							<li>Incremental updates will often fail to successfully apply on non <a href="index.php?page=faq#incrementalSupport">update-engine</a> devices. [releasetools]</li>
 							<li>It is strongly recommended to leave OEM unlocked enabled to allow for recovery if unbootable and locked.</li>
 							<li>Sensors Off toggle on 17.1/18.1 also turns off the camera and microphone.</li>
 							<li>'Storage Manager' is non-functional in some cases.</li>
@@ -70,31 +70,31 @@
 							<li>Block encrypted devices will fail to shutdown from secure boot screen on 18.1. Force power off via power button to workaround.</li>
 							<li>Bluetooth phone calls may not work.</li>
 							<li>Devices with less than 2GB of RAM *will* likely out-of-memory more often than usual. [various]</li>
-							<li>Disabling Storage Manager is strongly recommended, it may choose to delete your files after 90 days otherwise.</li>
-							<li>Fingerprint readers may work inconsistently.</li>
-							<li>If `fastboot update` fails on identifying device you can extract the zip and `fastboot flash` each partition manually.</li>
-							<li>If Seedvault is set to backup to a USB flash drive and it is later plugged in, the automatically started backup may fail. If so, you must invoke the backup manually.</li>
+							<li>Disabling Storage Manager is strongly recommended, it may choose to delete your old files after 90 days otherwise.</li>
+							<li>Fingerprint readers may work inconsistently, this is usually not actually caused by DivestOS.</li>
+							<li>If `fastboot update` fails on identifying device you can try the force option, otherwise extract the zip and `fastboot flash` each partition manually.</li>
+							<li>If Seedvault is set to backup to a USB flash drive and it is later plugged in, the automatically started backup may fail. If so, you must invoke the backup manually. [upstream]</li>
 							<li>If you have banking or game apps that do not work, ensure the `Enable native code debugging` toggle is enabled in Settings > Security. Such apps use ptrace as a form of crude anti-tamper mechanism.</li>
-							<li>MediaProvider error toast on some boots. [permission issue?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
-							<li>Most devices will take up to the full 12.5 minutes to acquire a GPS lock. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
-							<li>Mull is not installed by default, only an empty shim is. F-Droid will prompt you to "update" it on first run which will install it.</li>
+							<li>MediaProvider error toast on some boots of <=16.0. [permission issue?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>Most devices may take up to the full 12.5 minutes to acquire a GPS lock. Locks will often be quicker, especially if recently locked. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
+							<li>Mull is not installed by default, only an empty shim/placeholder is. F-Droid will prompt you to "update" it on first run which will install it.</li>
 							<li>Phone call audio is distorted sometimes until speaker phone is toggled. [deblobber?]</li>
 							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
 							<li>The OLED screen protection mechanism may push the clock off the screen for a minute every now and then.</li>
 							<li>The changelog link in the Updater links to the LineageOS changelog for your device. However devices Lineage no longer compiles for don't have such a page.</li>
 							<li>The secondary user logout button on the lockscreen will overlap the unlock icon on some devices.</li>
 							<li>Trebuchet, the launcher, on older versions will randomly enter a half-broken state where you cannot long press any apps. Force stop Trebuchet from Settings or reboot to fix.</li>
-							<li>TWRP often cannot decrypt/unlock /data.</li>
+							<li>TWRP (which isn't supported) often cannot decrypt/unlock /data due to it being incompatible/outdated.</li>
 							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>When `Private DNS` is enabled for the system, Chromium based browsers will automatically handle DNS themself bypassing the /etc/hosts based blocking function. Disable `Secure DNS` to work around.</li>
-							<li>When `Private DNS` is disabled for the system, using anything in the VPN slot will likely bypass the /etc/hosts based blocking function.</li>
+							<li>When `Private DNS` is disabled for the system, using anything in the VPN slot will likely bypass the /etc/hosts based blocking function. <a href="index.php?page=faq#privateDNS">Read here</a> for more information.</li>
 						</ul>
 						<h4 id="bugs">Bugs<a href="#bugs">¶</a></h4>
 						<ul>
 							<li>Flutter-based apps may show graphical artifacting on older (msm8974 era) devices.</li>
 							<li>Older Unity engine games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w (optional/required) enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
-							<li>Special permissions of apps may be randomly reset after reboots. This is an unknown and widespread issue affecting many other operating systems.</li>
+							<li>Special permissions of apps may be randomly reset after reboots on 19.1 and higher. This is an unknown and widespread issue affecting many other operating systems. [upstream]</li>
 							<li><strike>'Developer options' will crash on 15.1 due to null PDB handle. Likely fixed in late 2022-02 builds</strike></li>
 							<li><strike>Fenix based browsers such as a 'Mull' or 'Fennec F-Droid' might cause a reboot on launch. Please report your device if it does to be fixed.</strike></li>
 						</ul>
@@ -190,7 +190,7 @@
 						</ul>
 						<h4 id="m8">m8/m8d<a href="#m8">¶</a></h4>
 						<ul>
-							<li>Screen artifacting when using video camera [???]</li>
+							<li>Screen artifacting when using video camera. [???]</li>
 						</ul>
 						<h4 id="maguro">maguro/toro/toroplus<a href="#maguro">¶</a></h4>
 						<ul>
@@ -216,11 +216,11 @@
 						<h4 id="pixel2">taimen/walleye<a href="#pixel2">¶</a></h4>
 						<ul>
 							<li>(reported) APN persistence issues. [???]</li>
-							<li>(reported) SIM detection issues. [???]</li>
+							<li>(reported) SIM detection issues. [???][upstream]</li>
 						</ul>
 						<h4 id="starlte">star*lte<a href="#starlte">¶</a></h4>
 						<ul>
-							<li>Uses the stock /vendor partition, making many of the deblobber benefits unavailable.</li>
+							<li>Uses the stock /vendor partition, making many of the deblobber benefits unavailable. [upstream]</li>
 						</ul>
 					</div>
 				</div>
