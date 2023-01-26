@@ -82,7 +82,7 @@ Octane
 ======
 https://chromium.github.io/octane/
 
-19085	Mull 108.1.1		bluejay		DivestOS 20.0
+19600	Mull 109.1.1		bluejay		DivestOS 20.0
 9200	Mull 107.1.0		fajita		DivestOS 20.0
 6800	Mull 107.1.0		mata		DivestOS 19.1
 6200	Mull 107.1.0		taimen		DivestOS 20.0
