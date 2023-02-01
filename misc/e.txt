@@ -101,6 +101,17 @@ System
  - Despite FOSS user friendly alternatives existing such as OSMAnd and Organic Maps
 
 
+Sentry Tracker
+==============
+- Opt-in and with a disclaimer:
+ - https://gitlab.e.foundation/e/os/apps/-/merge_requests/261
+ - https://gitlab.e.foundation/e/os/BlissLauncher/-/merge_requests/141
+ - https://gitlab.e.foundation/e/os/advanced-privacy/-/merge_requests/112
+ - https://gitlab.e.foundation/e/os/android_packages_apps_Settings/-/merge_requests/134
+ - https://gitlab.e.foundation/e/os/android_packages_apps_Settings/-/merge_requests/132
+ - https://gitlab.e.foundation/e/os/android_packages_apps_Settings/-/merge_requests/133
+
+
 Device Sales
 ============
 - Sells devices like the Samsung Galaxy S9 which lacks VoLTE under custom operating systems
