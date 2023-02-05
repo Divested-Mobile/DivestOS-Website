@@ -484,6 +484,7 @@ echo -e "Fastboot\nTested Working\n1.0\nYes" > sailfish/bootloader_information;
 
 echo "Essential PH-1" > mata/friendlyName;
 echo 0 > mata/status-19.1;
+echo 0 > mata/status-20.0;
 echo -e "Fastboot\nTested Working\n1.0\nYes" > mata/bootloader_information;
 
 echo "Moto G3 Turbo" > merlin/friendlyName;
