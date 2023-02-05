@@ -48,7 +48,7 @@ echo "2015-09-29" > angler/releasedate;
 
 echo "Razer Phone 2" > aura/friendlyName;
 echo 8 > aura/status-19.1;
-echo 2 > aura/status-20.0;
+echo 8 > aura/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > aura/bootloader_information;
 
 echo "OnePlus Nord" > avicii/friendlyName;
@@ -91,7 +91,7 @@ echo "2019-05-07" > bonito/releasedate;
 echo "2019-05-07" > sargo/releasedate;
 
 echo "Google Pixel 4a 5G" > bramble/friendlyName;
-echo 4 > bramble/status-20.0;
+echo 8 > bramble/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > bramble/bootloader_information;
 echo "2020-08-20" > bramble/releasedate;
 
@@ -418,7 +418,7 @@ echo -e "Heimdall\nNot Unlockable\nNo" > jfltevzw/bootloader_information;
 echo "2013-04-27" > jfltexx/releasedate;
 
 echo "Samsung Galaxy S5 Plus" > kccat6/friendlyName;
-echo 1 > kccat6/status-16.0;
+echo 4 > kccat6/status-16.0;
 echo -e "Heimdall\nNot Unlockable\nNo" > kccat6/bootloader_information;
 
 echo "Wileyfox Storm" > kipper/friendlyName;
@@ -439,7 +439,7 @@ echo 7 > lavender/status-18.1;
 echo -e "Fastboot (Xiaomi)\nWill Brick\n2.0" > lavender/bootloader_information;
 
 echo "Samsung Galaxy S5 LTE-A" > lentislte/friendlyName;
-echo 1 > lentislte/status-16.0;
+echo 4 > lentislte/status-16.0;
 echo -e "Heimdall\nNot Unlockable\nNo" > lentislte/bootloader_information;
 
 echo "Xiaomi POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition" > lmi/friendlyName;
@@ -539,15 +539,15 @@ echo 7 > redfin/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > redfin/bootloader_information;
 
 echo "Google Pixel 5a" > barbet/friendlyName;
-echo 4 > barbet/status-20.0;
+echo 8 > barbet/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > barbet/bootloader_information;
 
 echo "Google Pixel 6" > oriole/friendlyName;
-echo 4 > oriole/status-20.0;
+echo 8 > oriole/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > oriole/bootloader_information;
 
 echo "Google Pixel 6 Pro" > raven/friendlyName;
-echo 4 > raven/status-20.0;
+echo 8 > raven/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > raven/bootloader_information;
 
 echo "Google Pixel 6a" > bluejay/friendlyName;
@@ -555,11 +555,11 @@ echo 0 > bluejay/status-20.0;
 echo -e "Fastboot\nTested Working\n2.0\nYes" > bluejay/bootloader_information;
 
 echo "Google Pixel 7" > panther/friendlyName;
-echo 4 > panther/status-20.0;
+echo 8 > panther/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > panther/bootloader_information;
 
 echo "Google Pixel 7 Pro" > cheetah/friendlyName;
-echo 4 > cheetah/status-20.0;
+echo 8 > cheetah/status-20.0;
 echo -e "Fastboot\nYes, Untested\n2.0\nYes" > cheetah/bootloader_information;
 
 echo "Xiaomi Redmi 4/4X" > santoni/friendlyName;
@@ -615,7 +615,7 @@ echo -e "Bulk Mode\nNot Unlockable\nNo" > apollo/bootloader_information;
 echo -e "Bulk Mode\nNot Unlockable\nNo" > thor/bootloader_information;
 
 echo "Samsung Galaxy Note Pro 12.2" > v1awifi/friendlyName;
-echo 4 > v1awifi/status-14.1;
+echo 8 > v1awifi/status-14.1;
 echo -e "Heimdall\nNot Unlockable\nNo" > v1awifi/bootloader_information;
 
 echo "Xiaomi POCO X3 Pro" > vayu/friendlyName;
