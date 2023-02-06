@@ -63,13 +63,8 @@ function getCachedDeviceJson($rootdir, $rootdirInc, $base, $device, $inc) {
 		$redis = new Redis();
 		$redis->connect('127.0.0.1');
 		$cacheKey = "DivestOS+updater.php+base:" . $base . "+device:" . $device;
-		$uptimeKey = "DivestOS+updater.php+uptime";
 		if(!empty($inc)) {
-			$redis->incr("Counter-" . $cacheKey);
 			$cacheKey .= "+inc:" . $inc;
-		}
-		if(($redis->get($uptimeKey)) == false) {
-			$redis->set($uptimeKey, time());
 		}
 		if(($result = $redis->get($cacheKey)) == false) {
 			$result = getDeviceJson($rootdir, $rootdirInc, $base, $device, $inc);
