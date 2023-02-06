@@ -1,0 +1,235 @@
+				<div class="card fluid">
+					<h2>Bootloader/Installation</h2>
+					<p>In order to flash any third party system images to your device, it is essential to unlock the bootloader first.<br>Documented here are many different methods in order to do so.</p>
+					<div class="section" id="warning">
+						<div class="card fluid warning">
+							<h3>WARNING!<a href="#generalwarning">¶</a></h3>
+							<ul>
+								<li>Unlocking your bootloader will wipe your device!</li>
+								<li>Locking your bootloader on most newer devices will also wipe your device!</li>
+								<li>Please backup all of your contacts, photos, files, apps, keys, etc. first!</li>
+							</ul>
+						</div>
+					</div>
+					<div class="section" id="prereq">
+						<h3>Prerequisites<a href="#prereq">¶</a></h3>
+						<p>You are strongly encouraged to read, or at least skim, through the entire website. It has an abundance of information that will answer many questions and help set expectations of what is and is not provided. Failure to do so will only be a detriment to yourself and waste the time of others.</p>
+						<p>Research for information surrounding your specific device model.<br>It is strongly recommended to be running the latest factory images before switching, especially if relocking. However notably some devices must be running an old version to allow installation of alternative systems.</p>
+						<p>You'll need ADB access in order to attempt any of the methods below.</p>
+						<p>Run the below <code>fastboot</code> commands at the <i>bootloader</i> menu (via key combination), not to be confused with <i>fastbootd</i> which is part of the recovery.</p>
+						<p>You must backup your device.</p>
+						<h4 id="prereqComputer">On your computer<a href="#prereqComputer">¶</a></h4>
+						<ul>
+							<li>Arch Linux: <code>sudo pacman -S android-tools android-udev</code></li>
+							<li>Fedora: <code>sudo dnf install android-tools</code></li>
+							<li>Debian: <code>sudo apt install android-tools-adb android-tools-fastboot</code></li>
+							<li>Linux: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
+							<li>macOS: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
+							<li>Windows: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
+						</ul>
+						<h4 id="prereqPhone">On your phone<a href="#prereqPhone">¶</a></h4>
+						<ol>
+							<li>Open the 'Settings' app</li>
+							<li>Navigate to the 'About' page</li>
+							<li>Tap on the field labeled 'Build number' 7 times</li>
+							<li>A toast should appear saying that developer mode has been enabled</li>
+							<li>There should now be an screen in the 'Settings' app labeled 'Developer options'</li>
+							<li>Under 'Developer options', enable 'Android debugging'</li>
+						</ol>
+					</div>
+					<div class="section" id="fastboot">
+						<h3>Fastboot<a href="#fastboot">¶</a></h3>
+						<ul>
+							<h4 id="fastbootUnlocking">Unlocking<a href="#fastbootUnlocking">¶</a></h4>
+							<ol>
+								<li>Backup your device.</li>
+								<li>Open the Phone app and type <code>*#*#2432546#*#*</code>, do not hit call</li>
+								<li>Enable 'Allow OEM unlocking' under 'Developer options' in Settings if available</li>
+								<li>Did you backup your device?</li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
+								<li><code>$ fastboot oem unlock</code> or <code>$ fastboot flashing unlock</code></li>
+								<li>Reboot the device, then reboot back to bootloader</li>
+								<li>If 'AVB Key' (avb_pkmd.bin) is available:
+									<ol>
+										<li><code>$ fastboot erase avb_custom_key</code></li>
+										<li><code>$ fastboot flash avb_custom_key avb_pkmd-device.bin</code></li>
+										<li>Reboot to the bootloader</li>
+									</ol>
+								</li>
+								<li>If fastboot.zip available: <code>$ fastboot update divested-version-date-dos-device-fastboot.zip</code></li>
+								<li>If recovery.img available: <code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
+								<li>If 'A/B Sync' (copy-partitions.zip) is available and NOT striked out: <code>$ adb sideload copy-partitions-device.zip</a></code></li>
+								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
+								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
+							</ol>
+							<h4 id="fastbootLocking">Locking<a href="#fastbootLocking">¶</a></h4>
+							<div class="section" id="lockwarning">
+								<div class="card fluid error">
+									<h5>WARNING!<a href="#lockwarning">¶</a></h5>
+									<ul>
+										<li>Locking your bootloader with an incorrectly signed system image or on unsupported device can result in a permanent brick!</li>
+										<li>Locking your bootloader may be irreversible on some devices, such as: bacon, oneplus2</li>
+										<li>Do not attempt to lock your bootloader on an untested device unless you are absolutely OKAY with it potentially being destroyed!</li>
+										<li>On A/B systems firmware in both slots must be in sync/latest! Or else next installed update might be unbootable, and potentially brick.</li>
+										<li>Some devices must be locked with extreme caution, see: <a href="/pages/broken#fp4" style="color:black;">Fairphone 4</a></li>
+									</ul>
+								</div>
+							</div>
+							<ol>
+								<li>After install of a properly signed system you must verify boot, verify functionality, verify update support, and verify the ability to factory reset.</li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
+								<li>AVB devices only, flash the custom key slot if you didn't earlier.</li>
+								<li><code>$ fastboot oem lock</code> or <code>$ fastboot flashing lock</code></li>
+								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes (broken update, broken touchscreen, etc.).</li>
+							</ol>
+						</ul>
+					</div>
+					<div class="section" id="fastbootLGE">
+						<h3>Fastboot (LGE)<a href="#fastbootLGE">¶</a></h3>
+						<ul>
+							<li>Devices Supported: Select LGE Phones</li>
+							<li>LGE has their own unlocking method, and prevents most devices from being unlocked.</li>
+							<ol>
+								<li>First check <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
+								<li>Create an LG Developer account</li>
+								<li>Backup your device.</li>
+								<li>Note down your IMEI (From original box or from Settings -> About -> Status)</li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
+								<li><code>$ fastboot oem device-id</code></li>
+								<li>Combine the two lines</li>
+								<li>Paste it into the site along with the IMEI</li>
+								<li>Click 'Confirm'</li>
+								<li>Wait a few minutes for an email</li>
+								<li>Save the unlock.bin from the email and keep it for future use</li>
+								<li><code>$ fastboot flash unlock unlock.bin</code></li>
+								<li><code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
+								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
+								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
+							</ol>
+						</ul>
+					</div>
+					<div class="section" id="fastbootMotorola">
+						<h3>Fastboot (Motorola)<a href="#fastbootMotorola">¶</a></h3>
+						<ul>
+							<li>Devices Supported: Select Motorola Phones</li>
+							<li>Motorola also has their own unlocking method, and prevents some devices from being unlocked.</li>
+							<ol>
+								<li>First check <a href="https://mobilesupport.lenovo.com/us/en/solution/MS87215" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
+								<li>If it does, click the 'Unlock' link for your device</li>
+								<li>Create a Motorola or Google account</li>
+								<li>Backup your device.</li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
+								<li><code>$ fastboot oem get_unlock_data</code></li>
+								<li>Use the little tool on the site to format the above output</li>
+								<li>Paste it into the field</li>
+								<li>Click 'Request Unlock Key' and then 'I Agree'</li>
+								<li>Wait a few minutes for an email</li>
+								<li>Copy the code from the email and save it for future use</li>
+								<li><code>$ fastboot oem unlock [KEY FROM EMAIL]</code></li>
+								<li><code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
+								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
+								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
+							</ol>
+						</ul>
+					</div>
+					<div class="section" id="warning2">
+						<div class="card fluid error">
+							<h3>WARNING!<a href="#destructionwarning">¶</a></h3>
+							<p>From here on all of the following methods can very easily and irreversibly destroy your device!</p>
+						</div>
+					</div>
+					<div class="section" id="lgUP">
+						<h3>LG UP<a href="#lgUP">¶</a></h3>
+						<ul>
+							<li>Devices Supported: Select LG devices</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
+							<ol>
+								<li>Windows is required for this. KVM USB passthrough has been confirmed to work.</li>
+								<li>[TO BE COMPLETED]</li>
+							</ol>
+						</ul>
+					</div>
+					<div class="section" id="lgLAF">
+						<h3>LG LAF<a href="#lgLAF">¶</a></h3>
+						<ul>
+							<li>Devices Supported: Select LG devices</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
+							<ol>
+								<li>[TO BE COMPLETED]</li>
+							</ol>
+						</ul>
+					</div>
+					<div class="section" id="heimdall">
+						<h3>Heimdall<a href="#heimdall">¶</a></h3>
+						<ul>
+							<li>Devices Supported: Select Samsung devices</li>
+							<ol>
+								<li>[TO BE COMPLETED]</li>
+							</ol>
+						</ul>
+					</div>
+					<div class="section" id="bulkMode">
+						<h3>Bulk Mode<a href="#bulkMode">¶</a></h3>
+						<ul>
+							<li>Devices Supported: Kindle Fire HDX 7/8 2014 (apollo/thor)</li>
+							<li>Credit/Source: <a href="https://forum.xda-developers.com/showpost.php?p=71430759&postcount=736" target="_blank" rel="nofollow noopener noreferrer">@draxie</a></li>
+							<li>This method is simple, but dangerous.</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).</li>
+							<ol>
+								<li>Windows is required for this. KVM USB pass through has been confirmed to work</li>
+								<li>Download dd from <a href="http://www.chrysocome.net/downloads/dd-0.5.zip" target="_blank" rel="nofollow noopener noreferrer">here</a></li>
+								<li>Backup your device.</li>
+								<li>Connect your device</li>
+								<li><code>> wmic partition where index=22 get diskindex</code></li>
+								<li><code>> wmic partition where (index=17 and numberofblocks=20480) get diskindex</code></li>
+								<li><code>> wmic partition where (index=5 and numberofblocks=4096) get diskindex</code></li>
+								<li>The above 3 commands should all return the same DiskIndex</li>
+								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
+								<li><code>> fastboot -i 0x1949 erase aboot</code></li>
+								<li><code>> fastboot -i 0x1949 reboot</code></li>
+								<li><code>> dd of=\\?\Device\Harddisk[DiskIndex]\Partition6 if=aboot_vuln.mbn</code></li>
+								<li><code>> dd of=\\?\Device\Harddisk[DiskIndex]\Partition18 if=twrp_cubed.img</code></li>
+								<li>If you get the error "Error reading file: 87 The parameter is incorrect", ignore it</li>
+								<li>Wait a few minutes</li>
+								<li>Force the device off by holding the power button</li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
+								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
+								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
+							</ol>
+						</ul>
+					</div>
+					<div class="section" id="exploit">
+						<h3>Kernel Exploit<a href="#exploit">¶</a></h3>
+						<ul>
+							<li>This method works by first getting root, then overriding the recovery.</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).</li>
+							<ol>
+								<li>Download the following apps: <a href="https://forum.xda-developers.com/showthread.php?t=1044765" target="_blank" rel="nofollow noopener noreferrer">GingerBreak (CVE-2011-1823)</a>, <a href="https://towelroot.com/tr.apk" target="_blank" rel="nofollow noopener noreferrer">Towelroot (CVE-2014-3153)</a>, <a href="https://forum.xda-developers.com/showthread.php?t=3525120" target="_blank" rel="nofollow noopener noreferrer">croowt (CVE-2016-5195)</a></li>
+								<li>Backup your device.</li>
+								<li><code>$ adb install *.apk</code></li>
+								<li><code>$ adb push recovery.img /sdcard/recovery.img</code></li>
+								<li>Attempt to gain root using each app</li>
+								<li><code>$ adb shell</code></li>
+								<li><code>$$ su</code></li>
+								<li><code>$$ dd if=/sdcard/divested-version-date-dos-device-recovery.img of=/dev/block/bootdevice/by-name/recovery</code></li>
+								<li>The output path in the above command may be different.</li>
+								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
+								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
+								<li>While still in the recovery perform a factory reset</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
+								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
+							</ol>
+						</ul>
+					</div>
+				</div>

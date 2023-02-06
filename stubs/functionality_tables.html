@@ -1,0 +1,228 @@
+				<div class="card fluid">
+					<h2>Functionality Tables</h2>
+					<p>This page documents what hardware and software features are expected to be non-functional on DivestOS. See also the <a href="/pages/broken">known issues</a> page and the <a href="/pages/bug_reporting">bug reporting</a> page if necessary.</p>
+					<div class="section" id="hardware">
+						<h3>Hardware Features<a href="#hardware">¶</a></h3>
+						<p>While some hardware might not require proprietary userspace blobs, the hardware itself is non-free and runs proprietary firmware.</p>
+						<table class="striped" style="max-height: 100%;">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Status</th>
+									<th>Information</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Accelerometer/Gyro</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Some devices utilize blobs for sensors</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Audio</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Some audio blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Bluetooth</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Some devices utilize blobs for Bluetooth</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">Camera</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No camera blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Cell Service</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Many radio blobs are removed, but is kept fully functional</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Compass</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No blobs are required for the compass</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">GPS</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Many location blobs are removed, but is kept fully functional</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">GPU</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No GPU blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">HW Audio Decoding</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No DSP/Hexagon blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">HW Encryption</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Some TrustZone/Keystore blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">HW Packet Processor</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No blobs are required for Qualcomm's IPA</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">HW Video Decoding</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No Venus blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">IR Transceiver</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No IR blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Light Sensor</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No blobs are required for the light sensor</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">NFC</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Some devices utilize blobs for NFC</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Proximity Sensor</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No blobs are required for the proximity sensor</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Wi-Fi</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Some devices utilize blobs for Wi-Fi</td>
+								</tr>
+								<tr style="--table-body-fore-color: #FFC107;">
+									<td data-label="Name">Wireless Charging</td>
+									<td data-label="Status">Depends</td>
+									<td data-label="Information">All Qualcomm WiPower blobs are removed, newer devices utilizing WiPower will not work</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="section" id="software">
+						<h3>Software Features<a href="#software">¶</a></h3>
+						<table class="striped" style="max-height: 100%;">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Status</th>
+									<th>Information</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style="--table-body-fore-color: #f44336;">
+									<td data-label="Name">AudioFX</td>
+									<td data-label="Status">Does not work</td>
+									<td data-label="Information">Many AudioFX blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #f44336;">
+									<td data-label="Name">Chromecast</td>
+									<td data-label="Status">Does not work</td>
+									<td data-label="Information">No Play Services</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">Device Encryption</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Some TrustZone/Keystore blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">DRM/HDCP</td>
+									<td data-label="Status">Does not work</td>
+									<td data-label="Information">All DRM and HDCP blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #f44336;">
+									<td data-label="Name">Google SafetyNet</td>
+									<!--<td data-label="Status">Depends</td>-->
+									<td data-label="Status">Does not work</td>
+									<td data-label="Information">No Play Services</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">IMS/VoLTE</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Select IMS blobs are removed, but is kept working</td>
+								</tr>
+								<tr style="--table-body-fore-color: #673AB7;">
+									<td data-label="Name">Qualcomm aptX</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">On devices where it is available</td>
+								</tr>
+								<tr style="--table-body-fore-color: #f44336;">
+									<td data-label="Name">RCS</td>
+									<td data-label="Status">Does not work</td>
+									<td data-label="Information">All RCS blobs are removed</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Tethering (BT/USB/Wi-Fi)</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">No blobs are required for Tethering</td>
+								</tr>
+								<tr style="--table-body-fore-color: #3498db;">
+									<td data-label="Name">Wireless Display</td>
+									<td data-label="Status">Unknown</td>
+									<td data-label="Information">There are many different protocols. All Qualcomm Wireless Display blobs are removed.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="section" id="apps">
+						<h3>Apps<a href="#apps">¶</a></h3>
+						<table class="striped" style="max-height: 100%;">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Status</th>
+									<th>Information</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style="--table-body-fore-color: #3498db;">
+									<td data-label="Name">Amazon Music</td>
+									<td data-label="Status">Untested: Potentially Works</td>
+									<td data-label="Information">Amazon Prime Video relies on Google's Widevine DRM</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Apple Music</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Reported working 2022/11/27</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Google Play Music</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Doesn't rely on DRM. Tested working 2017/07/13.</td>
+								</tr>
+								<tr style="--table-body-fore-color: #f44336;">
+									<td data-label="Name">Netflix</td>
+									<td data-label="Status">Broken</td>
+									<td data-label="Information">Relies on Google's Widevine DRM</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Pandora</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Doesn't rely on DRM</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Spotify</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Doesn't demand DRM? Reported working 2022/05.</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Soundcloud</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Doesn't rely on DRM</td>
+								</tr>
+								<tr style="--table-body-fore-color: #4CAF50;">
+									<td data-label="Name">Square Point of Sale</td>
+									<td data-label="Status">Works</td>
+									<td data-label="Information">Doesn't rely on Google SafetyNet</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>

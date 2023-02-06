@@ -1,0 +1,71 @@
+<?php
+//Copyright (c) 2017-2022 Divested Computing Group
+//
+//This program is free software: you can redistribute it and/or modify
+//it under the terms of the GNU Affero General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU Affero General Public License for more details.
+//
+//You should have received a copy of the GNU Affero General Public License
+//along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+	function getDownloads($base, $golden) {
+		$goldenReal = ($golden === true);
+		$deviceHtmlPath = "generated/" . $base . "-" . $golden . ".html";
+		if(checkString($base, 4, 32, 0, 0, 0) && file_exists($deviceHtmlPath) && ($base === "LineageOS")) {
+			print(file_get_contents($deviceHtmlPath));
+		} else {
+			print("<h2>Invalid base!</h2>");
+		}
+	}
+
+?>
+				<div class="card fluid">
+					<h2>Device Downloads</h2>
+					<p>Releases are typically done on a monthly schedule unless there are major or security related changes.<br>Please only download what you need, server bandwidth is limited.</p>
+					<div class="section">
+						<div class="row">
+							<div class="card centero large" id="disclaimer">
+								<h3>Disclaimer<a href="#disclaimer">¶</a></h3>
+								<p>Rarely will these builds be fully tested as we don't have every device we build for, due to that these are provided without warranty and can damage your device. We are not liable for any damage done by using these, and you yourself will be at fault.</p>
+							</div>
+							<div class="card centero large" id="root">
+								<h3>Root<a href="#root">¶</a></h3>
+								<p>These are 'user' builds, root is not included. It is not recommended to flash any other zips alongside our builds. Root frameworks and runtime modification frameworks will severely decrease the security of your device.</p>
+							</div>
+							<div class="card centero large" id="signing">
+								<h3>Signed Builds<a href="#signing">¶</a></h3>
+								<p>All builds published are signed with our signing keys, unlike other operating systems that simply use test-keys. This means that when switching to or away from our builds, you will be prompted to wipe /data.</p>
+							</div>
+							<div class="card centero large" id="contribute">
+								<h3>Contribute<a href="#contribute">¶</a></h3>
+								<p>Please consider contributing in the form of testing, promoting, bug reports, code review, merge requests, translations, mirrors, and financially to ensure the project's longevity.</p>
+								<a href="https://divested.dev/donate" class="button primary" target="_blank" rel="nofollow noopener noreferrer">Donate</a>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="row">
+							<div class="card centero large" id="verify">
+						<h3>Verification<a href="#verify">¶</a></h3>
+						<p>All files available below have a corresponding GPG signed .sha512sum file available. This can be used to verify builds have not been tampered with by this server or in transit.
+<pre><code>
+#B874 4D67 F9F1 E14E 145D  FD8E 7F62 7E92 0F31 6994
+gpg --import divestos_signing.key;
+gpg --verify divested*sha512sum;
+sha512sum -c divested*sha512sum;
+</code></pre>
+<a href="/divestos_signing.key" download class="button primary" target="_blank">GPG Public Key</a><br><a href="https://gitlab.com/divested-mobile/divestos-website/-/raw/master/divestos_signing.key" download class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 1</a><a href="https://raw.githubusercontent.com/Divested-Mobile/divestos-website/master/divestos_signing.key" download class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 2</a><a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/12" class="button" target="_blank" rel="nofollow noopener noreferrer">Mirror 3</a></p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<?php getDownloads($argv[2], $argv[3]); ?>
+					</div>
+
+				</div>

@@ -1,18 +1,14 @@
-Copyright (c) 2017-2021 Divested Computing Group
+Copyright (c) 2017-2023 Divested Computing Group
 
 Below are the license mappings for all of the files found in this repository.
 All attempts have been made to ensure accuracy of the corresponding license files.
 If you've found an issue please file an issue or pull request.
 
-assets/css/mini-*.min.css - MIT - v3.0.1 - https://github.com/Chalarangelo/mini.css
-assets/fonts/fira* - OFL - https://github.com/mozilla/Fira
-assets/js/devtools-detect.js - MIT - v2.2.0 - https://github.com/sindresorhus/devtools-detect
-assets/js/particles.min.js - MIT - v2.0.0 - https://github.com/VincentGarreau/particles.js
-images/Tri_Mako-By_Victor_Stuber.png (frame) - "Free for personal and commercial use." - https://dribbble.com/shots/1185538-Free-Nexus-4-PSD
-stripe/ - MIT - ? - https://github.com/stripe/stripe-php
-sbnr/ - LGPL-3.0-or-later
-get_captcha.php - LGPL-3.0-or-later
-index.php - LGPL-3.0-or-later
+static/assets/css/mini-*.min.css - MIT - v3.0.1 - https://github.com/Chalarangelo/mini.css
+static/assets/fonts/fira* - OFL - https://github.com/mozilla/Fira
+static/assets/js/devtools-detect.js - MIT - v2.2.0 - https://github.com/sindresorhus/devtools-detect
+static/assets/js/particles.min.js - MIT - v2.0.0 - https://github.com/VincentGarreau/particles.js
+static/images/Tri_Mako-By_Victor_Stuber.png (frame) - "Free for personal and commercial use." - https://dribbble.com/shots/1185538-Free-Nexus-4-PSD
 [EVERYTHING ELSE] - AGPL-3.0-or-later
 
 Please see the included LICENSE.* files for the corresponding full license texts.

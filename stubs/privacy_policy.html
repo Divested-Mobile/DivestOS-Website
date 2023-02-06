@@ -1,0 +1,176 @@
+				<div class="card fluid">
+					<h2>Privacy Policy (2022-12-01)</h2>
+					<p>User privacy is one of the primary goals of DivestOS.<br>Detailed below is everything you need to know about how your data is handled.<br>Please see our <a href="https://divested.dev/index.php?page=infrastructure" target="_blank" rel="nofollow noopener noreferrer">infrastructure page</a> to learn how we keep our services safe.</p>
+					<p>History of this privacy policy can be viewed on <a href="https://gitlab.com/divested-mobile/divestos-website/-/blame/master/pages/privacy_policy.html" target="_blank" rel="nofollow noopener noreferrer">GitLab</a> or on <a href="https://github.com/Divested-Mobile/DivestOS-Website/blame/master/pages/privacy_policy.html" target="_blank" rel="nofollow noopener noreferrer">GitHub</a></p>
+					<div class="section" id="control">
+						<h3>Control over your data<a href="#control">¶</a></h3>
+						<ul>
+							<li>Requesting your data:
+								<ul>
+									<li>Web server logs will not be provided.</li>
+									<li>konvers.me chat logs of your user can be retrieved by joining the room with an XMPP client supporting (MUC-)MAM.</li>
+									<li>Donation history via Stripe can be provided upon request from a matching email address.</li>
+								</ul>
+							</li>
+							<li>Correction of your data: We do not believe we have any data that can be corrected, but do reach out if necessary.</li>
+							<li>Deletion of your data:
+								<ul>
+									<li>Web server logs are kept for no longer than two weeks.</li>
+									<li>konvers.me access logs are deleted weekly.</li>
+									<li>konvers.me messages can be deleted upon special request.</li>
+								</ul>
+							</li>
+							<li>Expressing concerns: We are always open to suggestions and collaboration on how we can further improve user privacy. Please e-mail us or open an issue on the project repository and lets get a discussion going!</li>
+						</ul>
+						<p>E-Mail: <script>document.write(atob("PGEgaHJlZj0ibWFpbHRvOnN1cHBvcnQrcHJpdmFjeUBkaXZlc3Rvcy5vcmciPnN1cHBvcnQrcHJpdmFjeUBkaXZlc3Rvcy5vcmc8L2E+"));</script><noscript>JavaScript Protected</noscript></p>
+					</div>
+					<div class="section" id="fpCollect">
+						<h3>What data we (Divested Computing Group) collect<a href="#fpCollect">¶</a></h3>
+						<ul>
+							<li id="website">Website<a href="#website">¶</a></li>
+							<ul>
+								<li>What is received: Cookies (detailed below), Page Visited, Referring Page, User Agent, and IP Address</li>
+								<li>Cookies</li>
+								<ul>
+									<li>PHPSESSID - Set by the server to maintain variables such as CSRF tokens</li>
+									<script>
+										var cookieCount = document.cookie.split(';').length;
+										if(document.cookie.length == 0) { cookieCount--; }
+										document.write('<li><mark>Cookie status: 1+' + cookieCount + ' currently set</mark></li>');
+										document.write('<li><a href="javascript:deleteAllCookies()">Click here to delete all non-HttpOnly cookies from your browser</a></li>');
+									</script>
+									<noscript><li><mark>Cookie status: Unknown</mark></li></noscript>
+								</ul>
+								<li>How often: On every page visit</li>
+								<li>Why it is received: Used to serve the web pages to users</li>
+								<li>When it will be deleted: Web server logs are kept for no longer than two weeks</li>
+								<li>What else will it be used for: Nothing else</li>
+								<li>How to anonymize: Visit the site using the Tor Browser</li>
+								<li>Example: <code>[IP Address] - - [Timestamp] "GET /index.php?page=privacy_policy HTTP/2.0" 200 3441 "-" "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0"</code></li>
+							</ul>
+							<li id="system">Operating System<a href="#system">¶</a></li>
+							<ul>
+								<li>The operating system does not contain any analytics and any requests are used only for supporting it</li>
+							</ul>
+							<li id="fpConnectivityChecks">OS: Connectivity Checks<a href="#fpConnectivityChecks">¶</a></li>
+							<ul>
+								<li>What is received: Static User Agent, IP Address</li>
+								<li>How often: On every Wi-Fi and cell connection</li>
+								<li>Why it is received: Used to determine if there is a working connection and if there is a captive portal</li>
+								<li>When it will be deleted: All requests to generate_204 are <a href="https://gitlab.com/divested-mobile/divestos-website/-/blob/master/gen204.txt" target="_blank" rel="nofollow noopener noreferrer">never logged</a></li>
+								<li>What else will it be used for: Nothing else</li>
+								<li>How to disable: Toggle in settings app (noted below) or <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
+								<li>Settings can be accessed via:<ul>
+									<li>14.1/15.1: Settings > Network > Data usage > Disable Captive Portal</li>
+									<li>16.0/17.1: Settings > Network & Internet > Advanced > Captive portal mode</li>
+									<li>18.1/19.1/20.0: Settings > Network & Internet > Advanced > Internet connectivity check</li>
+								</ul></li>
+							</ul>
+							<li id="systemUpdater">OS: Updater<a href="#systemUpdater">¶</a></li>
+							<ul>
+								<li>What is received: Device Model, Incremental Build ID, Default User Agent, IP Address</li>
+								<li>How often: On every boot and also once per week (note: 14.1 only is daily)</li>
+								<li>Why it is received: Used to serve system updates</li>
+								<li>When it will be deleted: Web server logs are kept for no longer than two weeks</li>
+								<li>What else will it be used for: Will be occasionally used to determine how many users we have and what percent are up-to-date or not</li>
+								<li>How to anonymize: Install Orbot and enable 'Perform requests over Tor'</li>
+								<li>How to disable: Disable 'Auto updates check'</li>
+								<li>Settings can be accessed via:<ul>
+									<li>9+: Settings > System > Advanced > DivestOS updates > 3dot > Preferences</li>
+									<li><9: Settings > About > DivestOS updates > 3dot > Preferences</li>
+								</ul></li>
+								<li>Example: <code>[IP Address] - - [Timestamp] "GET /updater.php?base=LineageOS&device=mata&inc=engemy20210814031730 HTTP/1.1" 200 276 "-" "Dalvik/2.1.0 (Linux; U; Android 11; PH-1 Build/RQ3A.210805.001.A1)"</code></li>
+							</ul>
+							<li id="fpRepos">OS: DivestOS F-Droid Repos<a href="#fpRepos">¶</a></li>
+							<ul>
+								<li>What is received: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
+								<li>How often: Once per day</li>
+								<li>Why it is received: Used to serve apps and their updates</li>
+								<li>When it will be deleted: Web server logs are kept for no longer than two weeks</li>
+								<li>What else will it be used for: Nothing else</li>
+								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
+								<li>How to reduce: Decrease the 'Automatic update interval' in F-Droid > Settings</li>
+								<li>How to disable: Disable the 'DivestOS' repos in F-Droid > Settings > Repositories</li>
+								<li>Example: <code>[IP Address] - - [Timestamp] "HEAD /fdroid/official/index-v1.jar HTTP/1.1" 200 - "-" "F-Droid 1.13.1"</code></li>
+							</ul>
+							<li id="hypatia">App: Hypatia<a href="#hypatia">¶</a></li>
+							<ul>
+								<li>What is received: Signature Database Requests, IP Address</li>
+								<li>How often: Manually</li>
+								<li>Why it is received: Used to serve signature databases</li>
+								<li>When it will be deleted: Web server logs are kept for no longer than two weeks</li>
+								<li>What else will it be used for: Nothing else</li>
+								<li>How to anonymize: Install Orbot and enable 'Download over Tor'</li>
+								<li>Example: <code>[IP Address] - - [Timestamp] "GET /MalwareScannerSignatures/Android.hsb.gz HTTP/1.1" 304 - "-" "Hypatia"</code></li>
+							</ul>
+							<li id="xmpp">Chat rooms (MUC) available on xmpp:konvers.me<a href="#xmpp">¶</a></li>
+							<ul>
+								<li>What is received: JID, nickname, avatar, messages you send, your server IP address, your client IP address only if fetching an HTTP uploaded image</li>
+								<li>How often: When you join and are connected to a room</li>
+								<li>Why it is received: Used to provide the chat service to you</li>
+								<li>When it will be deleted: Messages are not deleted per default MAM policy, but are pruned after backups. Access logs are deleted weekly. IP addresses are not stored in the access logs.</li>
+								<li>What else will it be used for: Nothing else</li>
+								<li>How to anonymize: Use a throwaway JID and nickname. Route your XMPP client over Tor.</li>
+							</ul>
+						</ul>
+					</div>
+					<div class="section" id="3rdparty">
+						<h3>What data third parties collect<a href="#3rdparty">¶</a></h3>
+						<p>Third parties are used to support specific features and apps</p>
+						<ul>
+							<li id="stripe">Website Payments<a href="#stripe">¶</a></li>
+							<ul>
+								<li>Who: Stripe</li>
+								<li>What they receive: Name, Bank Card, E-Mail Address, User Agent, Browser Fingerprint, IP Address, Location from Geo-IP</li>
+								<li>What we receive: Name, Bank Name, E-Mail Address, User Agent, Location from Geo-IP</li>
+								<li>How often: When you donate</li>
+								<li>Why they receive: Used to process the payment</li>
+								<li>What else will we use it for: Nothing else</li>
+								<li>How to anonymize: Use a fake name, debit gift card, disposable e-mail address, and connect via a computer at your local library</li>
+								<li>How to disable: Requests to Stripe's servers will not occur until you attempt to donate</li>
+								<li>Privacy Policy: <a href="https://stripe.com/us/privacy" target="_blank" rel="nofollow noopener noreferrer">Stripe Privacy Policy</a></li>
+							</ul>
+							<li id="googleConnectivityChecks">OS: Connectivity Checks<a href="#googleConnectivityChecks">¶</a></li>
+							<ul>
+								<li>Who: Google</li>
+								<li>Description: Used to determine if there is a working connection and if there is a captive portal</li>
+								<li>What they receive: Static User Agent, IP Address</li>
+								<li>How often: On every Wi-Fi and cell connection</li>
+								<li>How to disable: Toggle in settings app (noted below) or <code>$ adb shell settings put global captive_portal_mode 0;</code></li>
+								<li>Settings can be accessed via:<ul>
+									<li>14.1/15.1: Settings > Network > Data usage > Disable Captive Portal</li>
+									<li>16.0/17.1: Settings > Network & Internet > Advanced > Captive portal mode</li>
+									<li>18.1/19.1/20.0: Settings > Network & Internet > Advanced > Internet connectivity check</li>
+								</ul></li>
+								<li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Google Privacy Policy</a></li>
+							</ul>
+							<li id="ntp">OS: Network Time Protocol<a href="#ntp">¶</a></li>
+							<ul>
+								<li>Who: pool.ntp.org volunteers</li>
+								<li>Description: Used to set an accurate (clock) time</li>
+								<li>What they receive: IP Address</li>
+								<li>How often: On every boot</li>
+								<li>Privacy Policy: unavailable</li>
+							</ul>
+							<li id="dns">OS: Fallback Domain Name System Lookups<a href="#dns">¶</a></li>
+							<ul>
+								<li>Who: Quad9</li>
+								<li>Description: Used to translate domain names into IP addresses to establish network connections, only when no other DNS was advertised by the network</li>
+								<li>What they receive: DNS requests, IP Address</li>
+								<li>How often: Every network request to a non-cached and non-expired domain</li>
+								<li>Privacy Policy: <a href="https://www.quad9.net/privacy/policy" target="_blank" rel="nofollow noopener noreferrer">Quad9 Privacy Policy</a></li>
+							</ul>
+							<li id="fdroid">OS: F-Droid Official Repo<a href="#fdroid">¶</a></li>
+							<ul>
+								<li>Who: F-Droid</li>
+								<li>What they receive: Repo Index Requests/App APK Requests/App Icon Requests, F-Droid Version, IP Address</li>
+								<li>How often: Once per day</li>
+								<li>Why they receive: Used to serve apps and their updates</li>
+								<li>How to anonymize: Install Orbot and enable 'Use Tor' in F-Droid > Settings</li>
+								<li>How to reduce: Decrease the 'Automatic update interval' in F-Droid > Settings</li>
+								<li>How to disable: Disable the 'F-Droid' repos in F-Droid > Settings > Repositories</li>
+								<li>Privacy Policy: <a href="https://f-droid.org/en/docs/Security_Model" target="_blank" rel="nofollow noopener noreferrer">F-Droid Security Information</a></li>
+							</ul>
+						</ul>
+					</div>
+				</div>

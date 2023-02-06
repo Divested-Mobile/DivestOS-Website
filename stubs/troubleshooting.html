@@ -1,0 +1,29 @@
+				<div class="card fluid">
+					<h2>Troubleshooting</h2>
+					<p>Solutions to various problems</p>
+					<div class="section" id="general">
+						<h3>General Issues<a href="#general">¶</a></h3>
+						<p>Please see the <a href="/pages/bug_reporting">bug reporting</a> page if necessary.</>
+
+						<h4>Upon first install device gets stuck at 'Encrypting...' screen</h4>
+						<p>Most devices have duplicate fstab entries in order to allow the user to choose between an ext4 or F2FS /data partition. If you improperly wiped your device beforehand (erased instead of formatted /data) the system won't know what to do and will just hang there. Simply format /data via TWRP or fastboot to fix.</p>
+
+						<h4>No mobile service</h4>
+						<p>Select the proper APN for your carrier under Settings > Network > Mobile network > Advanced > Access Point Names</p>
+					</div>
+					<div class="section" id="device">
+						<h3>Device Specific Issues<a href="#device">¶</a></h3>
+
+						<h4>LG G3: No radio, no sensors, no brightness control, etc.</h4>
+						<p>Please update your modem to a version extracted from a 5.0/V20x image. If you cannot find an image available for your specific model, you can extract a .KDZ to get the .DZ, extract that and flash the relevant files (dbi, factory, modem, rpm, tz). Please note you <i>must</i> use the aboot and laf partitions from a V10x image or else your device will end up in bulk mode. The version should show as 00053 under Settings > About > Baseband version</p>
+
+						<h4>Apollo/Thor: Boot-looping into recovery</h4>
+						<p>If you installed a system update with a recovery that doesn't know where the /misc partition is the update flag will never be cleared. The fix is to run the following<br><code>$ fastboot format misc</code></p>
+					</div>
+					<div class="section" id="other">
+						<h3>Other Issues<a href="#other">¶</a></h3>
+
+						<h4>Black screen or only wallpaper showing after upgrading to 15.1 from 14.1</h4>
+						<p>Pull down from the notification drawer to get into Settings, enable Development Mode, turn on ADB and then run the following<br><code>$ adb shell am start org.lineageos.setupwizard/org.lineageos.setupwizard.SetupWizardExitActivity</code></p>
+					</div>
+				</div>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-padding-top: 4em;">
 	<head>
-		<title><?php $title=ucwords(str_replace("&lowbar;", " ", noHTML($_GET["page"]))); if(strlen($title) > 0) { print($title . " - "); } ?>DivestOS Mobile</title>
+		<title><?php $title=ucwords(str_replace("_", " ", $pageRaw)); if(strlen($title) > 0) { print($title . " - "); } ?>DivestOS Mobile</title>
 		<meta charset="utf-8" />
 		<meta name="theme-color" content="#212121">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--<link async href="images/favicon.svg" rel="shortcut icon" type="image/svg+xml" integrity="sha384-QzBd0HzP8FdNPUIy8lM0PJAxqN+jR1QxFdzI76BAA5nS9XAaBD8Qndlj6yYuZYzO">-->
-		<link async href="images/favicon.png" rel="shortcut icon" type="image/png" integrity="sha384-7loQf2TJ+siBPhi5idRnLCRdWHrbtisZKlxOJBPPkcI+PYjbJHmQvzIhAL+xEIUV+g==">
-		<?php if($saveData === false) : ?><link rel="stylesheet" href="assets/css/fira.css" integrity="sha384-qs2nxaQtWaoeQTWy2qEK+yb/3Yd56H3wS7l0unGiJG0O5MVvbVzIZgzdd0Q1iFFP"><?php endif; ?>
+		<!--<link async href="/images/favicon.svg" rel="shortcut icon" type="image/svg+xml" integrity="sha384-QzBd0HzP8FdNPUIy8lM0PJAxqN+jR1QxFdzI76BAA5nS9XAaBD8Qndlj6yYuZYzO">-->
+		<link async href="/images/favicon.png" rel="shortcut icon" type="image/png" integrity="sha384-7loQf2TJ+siBPhi5idRnLCRdWHrbtisZKlxOJBPPkcI+PYjbJHmQvzIhAL+xEIUV+g==">
+		<link rel="stylesheet" href="/assets/css/fira.css" integrity="sha384-qs2nxaQtWaoeQTWy2qEK+yb/3Yd56H3wS7l0unGiJG0O5MVvbVzIZgzdd0Q1iFFP">
 		<?php
-			$lightTheme = '<link rel="stylesheet" href="assets/css/mini-default.min.css" integrity="sha384-grfnlbFNIiMDbCsJPG8vpNan6LXDYRloFcUlQIoW/t6XRE+tbZtlffNIRcIuq96o">' . PHP_EOL;
-			$darkTheme = '<link rel="stylesheet" href="assets/css/mini-dark.min.css" integrity="sha384-Ea4sveuxxdZqzlfaDF0+BttWvyhbyRMMQzOVgvZH83dXvg0WNWa6AGdE07uI0VhC">' . PHP_EOL;
-			$splashCSS = '<link rel="stylesheet" href="assets/css/splash.css" integrity="sha384-bg1hY/7L94gRkUwN9g3UzwW+z7p2fejWlGiT5TsFFvcNor7ndhItss/SsJPE+wSG">' . PHP_EOL;
-			$splashCSSDark = '<link rel="stylesheet" href="assets/css/splash-dark.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">' . PHP_EOL;
+			$lightTheme = '<link rel="stylesheet" href="/assets/css/mini-default.min.css" integrity="sha384-grfnlbFNIiMDbCsJPG8vpNan6LXDYRloFcUlQIoW/t6XRE+tbZtlffNIRcIuq96o">' . PHP_EOL;
+			$darkTheme = '<link rel="stylesheet" href="/assets/css/mini-dark.min.css" integrity="sha384-Ea4sveuxxdZqzlfaDF0+BttWvyhbyRMMQzOVgvZH83dXvg0WNWa6AGdE07uI0VhC">' . PHP_EOL;
+			$splashCSS = '<link rel="stylesheet" href="/assets/css/splash.css" integrity="sha384-bg1hY/7L94gRkUwN9g3UzwW+z7p2fejWlGiT5TsFFvcNor7ndhItss/SsJPE+wSG">' . PHP_EOL;
+			$splashCSSDark = '<link rel="stylesheet" href="/assets/css/splash-dark.css" integrity="sha384-mpty26abkG9GYzjFDiORzz4fzc3sYFiyatTZ/EoHOLfJMfKM/PXLKi/hL8nOGgEd">' . PHP_EOL;
 
 			if($SBNR_GEN_DARKMODE || $pageRaw === "screenshots_dark") {
 				print($darkTheme);
@@ -22,25 +22,27 @@
 				if($pageIsHome) { print($splashCSS); }
 			}
 		?>
-		<link rel="stylesheet" href="assets/css/extras.css" integrity="sha384-dmXLXj/JNtbnD7lJ6CSV3T+xFuFLYnSnm7VinPb7rAobh9MQbmd4W69fD1W1ZQge">
+		<link rel="stylesheet" href="/assets/css/extras.css" integrity="sha384-dmXLXj/JNtbnD7lJ6CSV3T+xFuFLYnSnm7VinPb7rAobh9MQbmd4W69fD1W1ZQge">
 	</head>
 
 	<?php
-		if($SBNR_OBF_DISABLE_CLIPBOARD || $SBNR_AT_CAPTCHA_WALL) { //Credit (CC BY-SA 3.0): https://stackoverflow.com/a/21743328
+		$bodyOverrides = '';
+		$styleOverrides = '';
+		if($SBNR_OBF_DISABLE_CLIPBOARD) { //Credit (CC BY-SA 3.0): https://stackoverflow.com/a/21743328
 			$bodyOverrides .= ' oncopy="return false;" oncut="return false;" onpaste="return false;"';
 		}
-		if($SBNR_OBF_DISABLE_HIGHLIGHT || $SBNR_AT_CAPTCHA_WALL) { //Credit (CC BY-SA 4.0): https://stackoverflow.com/a/4407335
+		if($SBNR_OBF_DISABLE_HIGHLIGHT) { //Credit (CC BY-SA 4.0): https://stackoverflow.com/a/4407335
 			$bodyOverrides .= ' draggable="false" ondragstart="return false;"';
 			$styleOverrides .= ' user-drag: none;';
 			$styleOverrides .= ' user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; -webkit-touch-callout: none; -webkit-user-select: none;';
 		}
-		if($SBNR_OBF_DISABLE_RIGHT_CLICK || $SBNR_AT_CAPTCHA_WALL) {
+		if($SBNR_OBF_DISABLE_RIGHT_CLICK) {
 			$bodyOverrides .= ' oncontextmenu="return false;"';
 		}
 		print ('<body ' . $bodyOverrides . ' style="' . $styleOverrides . '" >');
 	?>
 
-		<?php if($pageIsHome && !$SBNR_AT_CAPTCHA_WALL) : ?>
+		<?php if($pageIsHome) : ?>
 		<div class="index-splash">
 			<div class="index-splash-bg" id="splash"></div>
 			<h1 class="splash">DivestOS Mobile</h1>
@@ -49,10 +51,9 @@
 		</div>
 		<?php endif; ?>
 
-		<?php if(!$SBNR_AT_CAPTCHA_WALL) : ?>
 		<?php if($SBNR_GEN_ONE_PAGE) : ?>
 		<header class="sticky centero">
-			<a href="index.php#splash" class="logo" style="color: #FF5722; font-weight: bold;">DivestOS Mobile</a>
+			<a href="index.html#splash" class="logo" style="color: #FF5722; font-weight: bold;">DivestOS Mobile</a>
 			<label for="drawer-control" class="button drawer-toggle"></label>
 		</header>
 
@@ -64,49 +65,45 @@
 			<div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
 		<?php else : ?>
 		<header class="sticky" style="text-align: center;">
-			<a href="index.php" class="logo col-sm-3" style="color: #FF5722; font-weight: bold;">DivestOS Mobile</a>
+			<a href="/index.html" class="logo col-sm-3" style="color: #FF5722; font-weight: bold;">DivestOS Mobile</a>
 			<label for="drawer-control" class="button drawer-toggle"></label>
 		</header>
 		<div class="row" id="content">
 			<input type="checkbox" id="drawer-control" class="drawer">
 			<nav class="col-md-3 col-lg-2">
 				<label for="drawer-control" class="drawer-close"></label>
-				<a href="index.php?page=home">Home</a>
+				<a href="/index.html">Home</a>
 				<span>Get Started</span>
-					<a class="sublink-1" href="index.php?page=devices&base=LineageOS&golden=false">Device Downloads</a>
-					<a class="sublink-1" href="index.php?page=bootloader">Installation</a>
-					<a class="sublink-1" href="index.php?page=post_install">Post Install</a>
-					<a class="sublink-1" href="index.php?page=our_apps">Our Apps</a>
-					<a class="sublink-1" href="index.php?page=recommended_apps">Recommended Apps</a>
-					<a class="sublink-1" href="index.php?page=community">Community</a>
+					<a class="sublink-1" href="/pages/devices">Device Downloads</a>
+					<a class="sublink-1" href="/pages/bootloader">Installation</a>
+					<a class="sublink-1" href="/pages/post_install">Post Install</a>
+					<a class="sublink-1" href="/pages/our_apps">Our Apps</a>
+					<a class="sublink-1" href="/pages/recommended_apps">Recommended Apps</a>
+					<a class="sublink-1" href="/pages/community">Community</a>
 					<a class="sublink-1" href="https://divested.dev/donate" target="_blank" rel="nofollow noopener noreferrer">Donate</a>
 				<span>Docs</span>
-					<a class="sublink-1" href="index.php?page=faq">FAQ</a>
-					<a class="sublink-1" href="index.php?page=news">News</a>
-					<a class="sublink-1" href="index.php?page=history">History</a>
-					<a class="sublink-1" href="index.php?page=screenshots">Screenshots</a>
-					<a class="sublink-1" href="index.php?page=broken">Known Issues</a>
-					<a class="sublink-1" href="index.php?page=functionality_tables">Functionality Tables</a>
-					<a class="sublink-1" href="index.php?page=troubleshooting">Troubleshooting</a>
-					<a class="sublink-1" href="index.php?page=bug_reporting">Bug Reporting</a>
-					<a class="sublink-1" href="index.php?page=patch_levels">Patch Levels</a>
-					<a class="sublink-1" href="index.php?page=patch_counts">Patch Counts</a>
-					<a class="sublink-1" href="index.php?page=technical_details">Technical Details</a>
-					<a class="sublink-1" href="index.php?page=network_connections">Network Connections</a>
-					<a class="sublink-1" href="index.php?page=saving_data">Saving Data</a>
-					<a class="sublink-1" href="index.php?page=browsers">Browser Tables</a>
-					<a class="sublink-1" href="index.php?page=messengers">Messenger Tables</a>
-					<a class="sublink-1" href="index.php?page=verified_boot_hashes">Verified Boot Hashes</a>
-					<a class="sublink-1" href="index.php?page=build">Build Guide</a>
+					<a class="sublink-1" href="/pages/faq">FAQ</a>
+					<a class="sublink-1" href="/pages/news">News</a>
+					<a class="sublink-1" href="/pages/history">History</a>
+					<a class="sublink-1" href="/pages/screenshots">Screenshots</a>
+					<a class="sublink-1" href="/pages/broken">Known Issues</a>
+					<a class="sublink-1" href="/pages/functionality_tables">Functionality Tables</a>
+					<a class="sublink-1" href="/pages/troubleshooting">Troubleshooting</a>
+					<a class="sublink-1" href="/pages/bug_reporting">Bug Reporting</a>
+					<a class="sublink-1" href="/pages/patch_levels">Patch Levels</a>
+					<a class="sublink-1" href="/pages/patch_counts">Patch Counts</a>
+					<a class="sublink-1" href="/pages/technical_details">Technical Details</a>
+					<a class="sublink-1" href="/pages/network_connections">Network Connections</a>
+					<a class="sublink-1" href="/pages/saving_data">Saving Data</a>
+					<a class="sublink-1" href="/pages/browsers">Browser Tables</a>
+					<a class="sublink-1" href="/pages/messengers">Messenger Tables</a>
+					<a class="sublink-1" href="/pages/verified_boot_hashes">Verified Boot Hashes</a>
+					<a class="sublink-1" href="/pages/build">Build Guide</a>
 				<a href="https://gitlab.com/divested-mobile" target="_blank" rel="nofollow noopener noreferrer">Source Code on GitLab</a>
 				<a href="https://github.com/divested-mobile" target="_blank" rel="nofollow noopener noreferrer">Source Code on GitHub</a>
-				<a href="index.php?page=about">About</a>
+				<a href="/pages/about">About</a>
 				<br><br>
 			</nav>
 
 			<div class="col-sm-12 col-md-9 col-lg-10">
-		<?php endif; ?>
-		<?php else : ?>
-		<div class="row" id="content">
-			<div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
 		<?php endif; ?>

@@ -1,58 +1,31 @@
-				<?php if(!$SBNR_AT_CAPTCHA_WALL && !containsArr(strtolower($_SERVER["HTTP_USER_AGENT"]), array("phone", "mobile"))) : ?>
-				<div id="bearprompt" style="float: right; right:32px; position: -webkit-sticky; position: sticky; z-index: 1101; bottom: 0;">
-					<div class="centero card small" style="background: #009688;">
-						<h5><img class="section media" style="height:48px; transform: rotate(-30deg);" src="images/bear-optimized.svg" title="An orange bear" alt="An orange bear" integrity="sha384-6+V39wMPfXAhsC1iEpArI6i4WOGmHzCERkBG/PKN3iYVpJrn6FYJX9Ej3Zxn14bB"/><br>Tad needs your support!</h5>
-						<a href="https://divested.dev/donate" class="button small inverse" target="_blank" rel="nofollow noopener noreferrer">Donate Now</a>
-					</div>
-				</div>
-				<?php endif; ?>
 			</div>
 		</div>
 
 		<footer style="text-align: center;">
 			<p><a href="https://divested.dev" target="_blank" rel="nofollow noopener noreferrer">Divested Computing Group</a> &copy; 2017-2022
 			<br><a href="https://divested.dev/donate" target="_blank" rel="nofollow noopener noreferrer">Support our work!</a>
-			<br><a href="index.php?page=bug_reporting" target="_blank" rel="nofollow noopener noreferrer">Bug Reporting</a> || <a href="index.php?page=community" target="_blank" rel="nofollow noopener noreferrer">Community</a>
-			<?php if($SBNR_FOOTER_LEGAL && !$SBNR_AT_CAPTCHA_WALL) : ?>
-			<br><a href="index.php?page=privacy_policy">Privacy Policy</a> || <a href="index.php?page=terms_of_service">Terms of Service</a>
+			<br><a href="/pages/bug_reporting" target="_blank" rel="nofollow noopener noreferrer">Bug Reporting</a> || <a href="/pages/community" target="_blank" rel="nofollow noopener noreferrer">Community</a>
+			<?php if($SBNR_FOOTER_LEGAL) : ?>
+			<br><a href="/pages/privacy_policy">Privacy Policy</a> || <a href="/pages/terms_of_service">Terms of Service</a>
 			<?php endif; ?>
-			<?php if($SBNR_FOOTER_POWEREDBY && !$SBNR_AT_CAPTCHA_WALL) : ?>
+			<?php if($SBNR_FOOTER_POWEREDBY) : ?>
 			<br>Powered by <a href="https://web.archive.org/web/20220418142847/https://minicss.org/" target="_blank" rel="nofollow noopener noreferrer">mini.css</a> (MIT) and <a href="https://github.com/divestedcg/sbnr" target="_blank" rel="nofollow noopener noreferrer">SBNR</a> (LGPLv3)
 			<?php endif; ?>
 			</p>
 		</footer>
 
 		<!-- Scripts -->
-		<script type="text/javascript" src="assets/js/utils.js" integrity="sha384-SVgiaz5e1pRi465w54wy15L/wVY6kggHUdXCxR0gTUQljNwj/q94dsu4doLFpaKc"></script>
-		<?php if(!$pageIsCached) : ?>
-		<script type="text/javascript">
-			function getCSRFToken() {
-				return "<?php print($_SESSION['SBNR_CSRF_TOKEN']); ?>";
-			}
-		</script>
+		<script type="text/javascript" src="/assets/js/utils.js" integrity="sha384-SVgiaz5e1pRi465w54wy15L/wVY6kggHUdXCxR0gTUQljNwj/q94dsu4doLFpaKc"></script>
+		<?php if($SBNR_OBF_DISABLE_CLIPBOARD) : ?>
+		<script defer type="text/javascript" src="/assets/js/noclip.js" integrity="sha384-VLG60n4nTulX5xVohu8xtN1YsHpk18vX3FYfTBwe/g5YDGAkQ6JJrYwk+8LMzuDS"></script>
 		<?php endif; ?>
-		<?php
-			if($SBNR_ANALYTICS_ENABLED) {
-				print(file_get_contents($SBNR_ANALYTICS_CUSTOM_PATH));
-			}
-			if($SBNR_SHADOW_ENABLED) {
-				if($SBNR_SHADOW_BASIC || $saveData) { $basic = "-basic"; }
-				$snippet = file_get_contents("sbnr/analytics-shadow" . $basic . ".html");
-				$snippet = str_replace("[PLACEHOLDER_INSTANCE]", $SBNR_SHADOW_INSTANCE, $snippet);
-				$snippet = str_replace("[PLACEHOLDER_LANDSCAPE]", $SBNR_SHADOW_LANDSCAPE, $snippet);
-				print($snippet);
-			}
-		?>
-		<?php if($SBNR_OBF_DISABLE_CLIPBOARD || $SBNR_AT_CAPTCHA_WALL) : ?>
-		<script defer type="text/javascript" src="assets/js/noclip.js" integrity="sha384-VLG60n4nTulX5xVohu8xtN1YsHpk18vX3FYfTBwe/g5YDGAkQ6JJrYwk+8LMzuDS"></script>
-		<?php endif; ?>
-		<?php if($SBNR_OBF_DISABLE_DEVTOOLS || $SBNR_AT_CAPTCHA_WALL) : ?>
-		<script defer type="text/javascript" src="assets/js/devtools-detect.js" integrity="sha384-opU/k/i2uQ0DUG1mxi6Alx8Q+hYa5ofxZPtIgqELoTpsRXfto3CJUwgN4svlrWB8"></script>
-		<script defer type="text/javascript" src="assets/js/nodev.js" integrity="sha384-aCjLTeSWNE4KWmUmbwT8t8GxqxKjLYFY0J2PoQLUc2SqITZgBR5tH00MHQi1356X"></script>
+		<?php if($SBNR_OBF_DISABLE_DEVTOOLS) : ?>
+		<script defer type="text/javascript" src="/assets/js/devtools-detect.js" integrity="sha384-opU/k/i2uQ0DUG1mxi6Alx8Q+hYa5ofxZPtIgqELoTpsRXfto3CJUwgN4svlrWB8"></script>
+		<script defer type="text/javascript" src="/assets/js/nodev.js" integrity="sha384-aCjLTeSWNE4KWmUmbwT8t8GxqxKjLYFY0J2PoQLUc2SqITZgBR5tH00MHQi1356X"></script>
 		<?php endif; ?>
 
-                <?php if(false && $saveData === false && $pageIsHome) : ?>
-                <script src="assets/js/particles.min.js" integrity="sha384-d+UOwmNNIC7V4izkTAKSXzWhjC2GxiS9PTykO1XdOPC3nc2z65UOS7SP6QdKPA70"></script>
+                <?php if(false && $pageIsHome) : ?>
+                <script src="/assets/js/particles.min.js" integrity="sha384-d+UOwmNNIC7V4izkTAKSXzWhjC2GxiS9PTykO1XdOPC3nc2z65UOS7SP6QdKPA70"></script>
                 <script type="text/javascript">
                         particlesJS.load('splash', 'assets/particlesjs-config.json', undefined);
                 </script>
