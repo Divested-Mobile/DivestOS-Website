@@ -25,23 +25,7 @@
 		<link rel="stylesheet" href="/assets/css/extras.css" integrity="sha384-dmXLXj/JNtbnD7lJ6CSV3T+xFuFLYnSnm7VinPb7rAobh9MQbmd4W69fD1W1ZQge">
 	</head>
 
-	<?php
-		$bodyOverrides = '';
-		$styleOverrides = '';
-		if($SBNR_OBF_DISABLE_CLIPBOARD) { //Credit (CC BY-SA 3.0): https://stackoverflow.com/a/21743328
-			$bodyOverrides .= ' oncopy="return false;" oncut="return false;" onpaste="return false;"';
-		}
-		if($SBNR_OBF_DISABLE_HIGHLIGHT) { //Credit (CC BY-SA 4.0): https://stackoverflow.com/a/4407335
-			$bodyOverrides .= ' draggable="false" ondragstart="return false;"';
-			$styleOverrides .= ' user-drag: none;';
-			$styleOverrides .= ' user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; -webkit-touch-callout: none; -webkit-user-select: none;';
-		}
-		if($SBNR_OBF_DISABLE_RIGHT_CLICK) {
-			$bodyOverrides .= ' oncontextmenu="return false;"';
-		}
-		print ('<body ' . $bodyOverrides . ' style="' . $styleOverrides . '" >');
-	?>
-
+	<body>
 		<?php if($pageIsHome) : ?>
 		<div class="index-splash">
 			<div class="index-splash-bg" id="splash"></div>
@@ -51,19 +35,6 @@
 		</div>
 		<?php endif; ?>
 
-		<?php if($SBNR_GEN_ONE_PAGE) : ?>
-		<header class="sticky centero">
-			<a href="index.html#splash" class="logo" style="color: #FF5722; font-weight: bold;">DivestOS Mobile</a>
-			<label for="drawer-control" class="button drawer-toggle"></label>
-		</header>
-
-		<input type="checkbox" id="drawer-control" class="drawer">
-		<nav class="hidden-md hidden-lg">
-			<label for="drawer-control" class="drawer-close"></label>
-		</nav>
-		<div class="row" id="content">
-			<div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-		<?php else : ?>
 		<header class="sticky" style="text-align: center;">
 			<a href="/index.html" class="logo col-sm-3" style="color: #FF5722; font-weight: bold;">DivestOS Mobile</a>
 			<label for="drawer-control" class="button drawer-toggle"></label>
@@ -106,4 +77,3 @@
 			</nav>
 
 			<div class="col-sm-12 col-md-9 col-lg-10">
-		<?php endif; ?>

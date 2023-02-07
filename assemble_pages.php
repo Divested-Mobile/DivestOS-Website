@@ -15,21 +15,9 @@
 //along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 //General
-$SBNR_GEN_ONE_PAGE = false;
 $SBNR_GEN_DARKMODE = false;
 
-//Footer
-$SBNR_FOOTER_LEGAL = true;
-$SBNR_FOOTER_POWEREDBY = true;
-
-//Obfuscation
-$SBNR_OBF_DISABLE_CACHE = false;
-$SBNR_OBF_DISABLE_CLIPBOARD = false;
-$SBNR_OBF_DISABLE_DEVTOOLS = false;
-$SBNR_OBF_DISABLE_HIGHLIGHT = false;
-$SBNR_OBF_DISABLE_RIGHT_CLICK = false;
-
-#Utils
+//Utils
 //Credit (CC BY-SA 3.0): https://stackoverflow.com/a/6225706
 function minifyWhitespace($buffer) {
 	$search = array(
@@ -57,7 +45,7 @@ $page = $argv[1];
 $pageRaw = $page;
 $page = "stubs/" . $page . ".html";
 if(file_exists($page)) { //check if page exists
-	$pageIsHome = ($page === "stubs/home.html" || $page === "stubs/home-1p.html");
+	$pageIsHome = ($page === "stubs/home.html");
 	include "fragments/header.html";
 	include $page;
 	include "fragments/footer.html";
