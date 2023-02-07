@@ -15,4 +15,4 @@ done;
 asmpage devices LineageOS false > "output/pages/devices.html";
 asmpage devices LineageOS true > "output/pages/devices_golden.html";
 
-mv output/pages/home.html output/index.html;
+ln -sf pages/home.html output/index.html;
