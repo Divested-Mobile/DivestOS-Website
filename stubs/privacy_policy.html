@@ -29,18 +29,7 @@
 						<ul>
 							<li id="website">Website<a href="#website">¶</a></li>
 							<ul>
-								<li>What is received: Cookies (detailed below), Page Visited, Referring Page, User Agent, and IP Address</li>
-								<li>Cookies</li>
-								<ul>
-									<li>PHPSESSID - Set by the server to maintain variables such as CSRF tokens</li>
-									<script>
-										var cookieCount = document.cookie.split(';').length;
-										if(document.cookie.length == 0) { cookieCount--; }
-										document.write('<li><mark>Cookie status: 1+' + cookieCount + ' currently set</mark></li>');
-										document.write('<li><a href="javascript:deleteAllCookies()">Click here to delete all non-HttpOnly cookies from your browser</a></li>');
-									</script>
-									<noscript><li><mark>Cookie status: Unknown</mark></li></noscript>
-								</ul>
+								<li>What is received: Cookies (none currently), Page Visited, Referring Page, User Agent, and IP Address</li>
 								<li>How often: On every page visit</li>
 								<li>Why it is received: Used to serve the web pages to users</li>
 								<li>When it will be deleted: Web server logs are kept for no longer than two weeks</li>

@@ -6,8 +6,6 @@ If you've found an issue please file an issue or pull request.
 
 static/assets/css/mini-*.min.css - MIT - v3.0.1 - https://github.com/Chalarangelo/mini.css
 static/assets/fonts/fira* - OFL - https://github.com/mozilla/Fira
-static/assets/js/devtools-detect.js - MIT - v2.2.0 - https://github.com/sindresorhus/devtools-detect
-static/assets/js/particles.min.js - MIT - v2.0.0 - https://github.com/VincentGarreau/particles.js
 static/images/Tri_Mako-By_Victor_Stuber.png (frame) - "Free for personal and commercial use." - https://dribbble.com/shots/1185538-Free-Nexus-4-PSD
 [EVERYTHING ELSE] - AGPL-3.0-or-later
 
