@@ -1,3 +1,4 @@
+divestos.org/index.php divestos.org
 divestos.org/index.php?page=about divestos.org/pages/about
 divestos.org/index.php?page=bootloader divestos.org/pages/bootloader
 divestos.org/index.php?page=broken divestos.org/pages/broken

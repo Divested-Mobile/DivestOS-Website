@@ -5,7 +5,6 @@ extras/
 sbnr/captcha_fonts
 sbnr/stripe_private.php
 updater.token.php
-pages/news-future.html
 *.webp
 generated/LineageOS-false.html
 generated/LineageOS-true.html

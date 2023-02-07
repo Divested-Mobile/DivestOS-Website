@@ -15,4 +15,7 @@ done;
 asmpage devices LineageOS false > "output/pages/devices.html";
 asmpage devices LineageOS true > "output/pages/devices_golden.html";
 
+#gzip -k output/pages/*.html output/assets/css/*.css;
+#brotli -k output/pages/*.html output/assets/css/*.css;
+
 ln -sf pages/home.html output/index.html;
