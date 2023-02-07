@@ -30,7 +30,26 @@ $SBNR_OBF_DISABLE_HIGHLIGHT = false;
 $SBNR_OBF_DISABLE_RIGHT_CLICK = false;
 
 #Utils
-include "utils.php";
+//Credit (CC BY-SA 3.0): https://stackoverflow.com/a/6225706
+function minifyWhitespace($buffer) {
+	$search = array(
+	'/\>[^\S ]+/s',     // strip whitespaces after tags, except space
+	'/[^\S ]+\</s',     // strip whitespaces before tags, except space
+	'/(\s)+/s',         // shorten multiple whitespace sequences
+	'/<!--(.|\s)*?-->/' // remove HTML comments
+	);
+
+	$replace = array(
+	'>',
+	'<',
+	'\\1',
+	''
+	);
+
+	$buffer = preg_replace($search, $replace, $buffer);
+
+	return $buffer;
+}
 ob_start("minifyWhitespace");
 
 //Page handling
