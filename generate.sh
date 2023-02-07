@@ -1,6 +1,6 @@
 #!/bin/bash
 rm -rf output;
-cp -r static output;
+cp -r --reflink=auto static output;
 mkdir output/pages;
 
 alias asmpage='bwrap --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload php assemble_pages.php';
