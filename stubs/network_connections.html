@@ -14,8 +14,12 @@
 							</ul>
 						</div>
 
-						<h3 id="dns">Domain Name System (<a href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank" rel="nofollow noopener noreferrer">DNS</a>)<a href="#dns">¶</a></h3>
-						<p>Purpose: Used to resolve domains to IP addresses when making connections to websites and services.<br>Note: This is overridden by activated cellular/Wi-Fi network or by the user chosen 'Private DNS'.</p>
+						<h3 id="dns">Domain Name System (<a href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank" rel="nofollow noopener noreferrer">DNS</a>)<a href="#dns">¶</a><small>when connecting to servers via a domain name</small></h3>
+						<p>Purpose: Used to resolve domains to IP addresses when making connections to websites and services.
+						<br>Notes:<ul>
+							<li>This is overridden by activated cellular/Wi-Fi network or by the user chosen 'Private DNS'.</li>
+							<li>DivestOS 17.1 and higher offers thirteen presets for `Private DNS` since 2021/11/08, users are strongly recommended to take advantage of them.</li>
+						</ul></p>
 						<div>
 							<p>Fallback: Quad9 - <a href="/pages/privacy_policy#dns">privacy policy</a></p>
 							<ul>
@@ -24,11 +28,15 @@
 								<li>2620:fe::fe</li>
 								<li>2620:fe::9</li>
 							</ul>
-							<p>DivestOS 17.1 and higher offers thirteen presets for `Private DNS` since 2021/11/08, users are strongly recommended to take advantage of them.</p>
 						</div>
 
-						<h3 id="connectivity">Internet Connectivity Checks<a href="#connectivity">¶</a><small>every connection change, can be disabled (14.1+) or changed (18.1+) in Settings</small></h3>
-						<p>Purpose: Used to determine if a given network interface truly has an Internet connection and if there is a <a href="https://en.wikipedia.org/wiki/Captive_portal" target="_blank" rel="nofollow noopener noreferrer">captive portal</a> which needs to be accepted by the user.<br>Note: When a VPN is used, this connection is performed twice: once outside of the VPN and once through the VPN even when `Block connections` is enabled.</p>
+						<h3 id="connectivity">Internet Connectivity Checks<a href="#connectivity">¶</a><small>every connection change</small></h3>
+						<p>Purpose: Used to determine if a given network interface truly has an Internet connection and if there is a <a href="https://en.wikipedia.org/wiki/Captive_portal" target="_blank" rel="nofollow noopener noreferrer">captive portal</a> which needs to be accepted by the user.
+						<br>Notes:<ul>
+							<li>Can be disabled (14.1+) or changed (18.1+) in Settings.</li>
+							<li>When a VPN is used, this connection is performed twice: once outside of the VPN and once through the VPN even when `Block connections` is enabled.</li>
+							<li>DivestOS 18.1 and higher offers nine presets for the `Internet Connectivity Check` server since 2023/01/23, users are strongly recommended to take advantage of them.</li>
+						</ul></p>
 						<div>
 							<p>Default: Google - <a href="/pages/privacy_policy#googleConnectivityChecks">privacy policy</a></p>
 							<ul>
@@ -42,10 +50,9 @@
 								<li>http://divestos.org/generate_204</li>
 								<li>https://divestos.org/generate_204</li>
 							</ul>
-							<p>DivestOS 18.1 and higher offers nine presets for the `Internet Connectivity Check` server since 2023/01/23, users are strongly recommended to take advantage of them.</p>
 						</div>
 
-						<h3 id="ntp">Network Time Protocol (<a href="https://en.wikipedia.org/wiki/Network_Time_Protocol" target="_blank" rel="nofollow noopener noreferrer">NTP</a>)<a href="#ntp">¶</a></h3>
+						<h3 id="ntp">Network Time Protocol (<a href="https://en.wikipedia.org/wiki/Network_Time_Protocol" target="_blank" rel="nofollow noopener noreferrer">NTP</a>)<a href="#ntp">¶</a><small>on every boot, and periodically afterwards</small></h3>
 						<p>Purpose: Used to have an accurate system time.</p>
 						<div>
 							<p>Default: volunteer pool - <a href="/pages/privacy_policy#ntp">privacy policy</a><p>
@@ -54,7 +61,7 @@
 							</ul>
 						</div>
 
-						<h3 id="psds">Predicted Satellite Data Service (PSDS)<a href="#psds">¶</a></h3>
+						<h3 id="psds">Predicted Satellite Data Service (PSDS)<a href="#psds">¶</a><small>when actively using GPS</small></h3>
 						<p>Purpose: Used to <a href="https://en.wikipedia.org/wiki/Time_to_first_fix" target="_blank" rel="nofollow noopener noreferrer">speedup</a> the process of acquiring a GPS lock.</p>
 						<div>
 							<p>Qualcomm devices</p>
@@ -69,7 +76,7 @@
 							</ul>
 						</div>
 
-						<h3 id="supl">Secure User Plane Location (<a href="https://en.wikipedia.org/wiki/Assisted_GNSS#SUPL" target="_blank" rel="nofollow noopener noreferrer">SUPL)<a href="#supl">¶</a></h3>
+						<h3 id="supl">Secure User Plane Location (<a href="https://en.wikipedia.org/wiki/Assisted_GNSS#SUPL" target="_blank" rel="nofollow noopener noreferrer">SUPL)<a href="#supl">¶</a><small>when actively using GPS</small></h3>
 						<p>Purpose: Used to <a href="https://en.wikipedia.org/wiki/Time_to_first_fix" target="_blank" rel="nofollow noopener noreferrer">speedup</a> the process of acquiring a GPS lock and to provide your location when placing a call to emergency services.
 						<br>Notes:<ul>
 							<li>The carrier/SIM along with emergency calls can override this server.</li>
@@ -95,9 +102,9 @@
 							</ul>
 						</div>
 
-						<h3 id="keyProvisioning">Remote Keystore Provisioning<a href="#keyProvisioning">¶</a></h3>
-						<p>Purpose: Used by some apps for hardware backed keystore attestation. Brief overview <a href="https://android-developers.googleblog.com/2022/03/upgrading-android-attestation-remote.html" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
-						<p>Notes:<ul>
+						<h3 id="keyProvisioning">Remote Keystore Provisioning<a href="#keyProvisioning">¶</a><small>when the pool runs low</small></h3>
+						<p>Purpose: Used by some apps for hardware backed keystore attestation. Brief overview <a href="https://android-developers.googleblog.com/2022/03/upgrading-android-attestation-remote.html" target="_blank" rel="nofollow noopener noreferrer">here</a>.
+						<br>Notes:<ul>
 							<li>This is primarily only used on modern Google Pixel devices (4+).</li>
 							<li>DivestOS would like to offer a proxy for this service, however does not currently have the available resources to do so.</li>
 						</ul></p>
