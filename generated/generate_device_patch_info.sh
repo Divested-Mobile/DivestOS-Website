@@ -221,7 +221,7 @@ createTable maguro LineageOS-14.1 samsung/maguro samsung/tuna samsung/tuna;
 createTable mako LineageOS-18.1 lge/mako lge/mako;
 createTable manta LineageOS-14.1 samsung/manta samsung/manta;
 createTable marlin LineageOS-18.1 google/marlin google/marlin google/marlin/marlin;
-createTable mata LineageOS-19.1 essential/mata essential/msm8998;
+createTable mata LineageOS-20.0 essential/mata essential/msm8998;
 createTable merlin LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/merlin;
 createTable n5100 LineageOS-14.1 samsung/n5100 samsung/smdk4412 samsung/smdk4412-common samsung/kona-common;
 createTable n5110 LineageOS-14.1 samsung/n5110 samsung/smdk4412 samsung/smdk4412-common samsung/kona-common;

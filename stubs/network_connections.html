@@ -3,25 +3,32 @@
 					<p>Here is a list of expected network connections for security/verification purposes.</p>
 					<div class="section" id="connections">
 						<h3 id="carrier">Carrier Services<a href="#carrier">¶</a><small>Connections to a cellular carrier if/when a SIM is inserted.</small></h3>
-						<ul>
-							<li>Voice over LTE (<a href="https://en.wikipedia.org/wiki/Voice_over_LTE" target="_blank" rel="nofollow noopener noreferrer">VoLTE</a>): An IPsec tunnel for making calls and sending SMS messages.</li>
-							<li>Voice over Wi-Fi (<a href="https://en.wikipedia.org/wiki/Generic_Access_Network" target="_blank" rel="nofollow noopener noreferrer">VoWiFi</a>): Like VoLTE, but routed over connected Wi-Fi networks. DivestOS does not support VoWiFi due to privacy concerns.</li>
-							<li>Multimedia Messaging Service (<a href="https://en.wikipedia.org/wiki/Multimedia_Messaging_Service" target="_blank" rel="nofollow noopener noreferrer">MMS</a>): Used to send & receive MMS messages such as picture messages or group SMS chats.</li>
-							<li>Rich Communication Services (<a href="https://en.wikipedia.org/wiki/Rich_Communication_Services" target="_blank" rel="nofollow noopener noreferrer">RCS</a>): A modern replacement for SMS & MMS. DivestOS does not support RCS due to it being a fundamentally broken and proprietary replacement.</li>
-							<li>Visual VoiceMail (<a href="https://en.wikipedia.org/wiki/Visual_voicemail" target="_blank" rel="nofollow noopener noreferrer">VVM</a>): Used to listen to & manage voicemail messages in the Phone app. Can be disabled: Phone > 3dot > Settings > Voicemail > Visual voicemail.</li>
-						</ul>
+						<p>Note: These connections are largely routed over the cellular interface and when routed over the Wi-Fi interface will bypass any used VPN even with `Block connections` enabled.</p>
+						<div>
+							<ul>
+								<li>Voice over LTE (<a href="https://en.wikipedia.org/wiki/Voice_over_LTE" target="_blank" rel="nofollow noopener noreferrer">VoLTE</a>): An IPsec tunnel for making calls and sending SMS messages.</li>
+								<li>Voice over Wi-Fi (<a href="https://en.wikipedia.org/wiki/Generic_Access_Network" target="_blank" rel="nofollow noopener noreferrer">VoWiFi</a>): Like VoLTE, but routed over connected Wi-Fi networks. DivestOS does not support VoWiFi due to privacy concerns.</li>
+								<li>Multimedia Messaging Service (<a href="https://en.wikipedia.org/wiki/Multimedia_Messaging_Service" target="_blank" rel="nofollow noopener noreferrer">MMS</a>): Used to send & receive MMS messages such as picture messages or group SMS chats.</li>
+								<li>Rich Communication Services (<a href="https://en.wikipedia.org/wiki/Rich_Communication_Services" target="_blank" rel="nofollow noopener noreferrer">RCS</a>): A modern replacement for SMS & MMS. DivestOS does not support RCS due to it being a fundamentally broken and proprietary replacement.</li>
+								<li>Visual VoiceMail (<a href="https://en.wikipedia.org/wiki/Visual_voicemail" target="_blank" rel="nofollow noopener noreferrer">VVM</a>): Used to listen to & manage voicemail messages in the Phone app. Can be disabled: Phone > 3dot > Settings > Voicemail > Visual voicemail.</li>
+							</ul>
+						</div>
 
-						<h3 id="dns">Domain Name System (<a href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank" rel="nofollow noopener noreferrer">DNS</a>)<a href="#dns">¶</a><small>Quad9, fallback only, cell/Wi-Fi network or user defined 'Private DNS' overrides, <a href="/pages/privacy_policy#dns">privacy policy</a></small></h3>
-						<p>Purpose: Used to resolve domains to IP addresses when making connections to websites and services.</p>
-						<ul>
-							<li>9.9.9.9</li>
-							<li>149.112.112.112</li>
-							<li>2620:fe::fe</li>
-							<li>2620:fe::9</li>
-						</ul>
+						<h3 id="dns">Domain Name System (<a href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank" rel="nofollow noopener noreferrer">DNS</a>)<a href="#dns">¶</a></h3>
+						<p>Purpose: Used to resolve domains to IP addresses when making connections to websites and services.<br>Note: This is overridden by activated cellular/Wi-Fi network or by the user chosen 'Private DNS'.</p>
+						<div>
+							<p>Fallback: Quad9 - <a href="/pages/privacy_policy#dns">privacy policy</a></p>
+							<ul>
+								<li>9.9.9.9</li>
+								<li>149.112.112.112</li>
+								<li>2620:fe::fe</li>
+								<li>2620:fe::9</li>
+							</ul>
+							<p>DivestOS 17.1 and higher offers thirteen presets for `Private DNS` since 2021/11/08, users are strongly recommended to take advantage of them.</p>
+						</div>
 
 						<h3 id="connectivity">Internet Connectivity Checks<a href="#connectivity">¶</a><small>every connection change, can be disabled (14.1+) or changed (18.1+) in Settings</small></h3>
-						<p>Purpose: Used to determine if a given network interface truly has an Internet connection and if there is a <a href="https://en.wikipedia.org/wiki/Captive_portal" target="_blank" rel="nofollow noopener noreferrer">captive portal</a> which needs to be accepted by the user.</p>
+						<p>Purpose: Used to determine if a given network interface truly has an Internet connection and if there is a <a href="https://en.wikipedia.org/wiki/Captive_portal" target="_blank" rel="nofollow noopener noreferrer">captive portal</a> which needs to be accepted by the user.<br>Note: When a VPN is used, this connection is performed twice: once outside of the VPN and once through the VPN even when `Block connections` is enabled.</p>
 						<div>
 							<p>Default: Google - <a href="/pages/privacy_policy#googleConnectivityChecks">privacy policy</a></p>
 							<ul>
@@ -35,13 +42,17 @@
 								<li>http://divestos.org/generate_204</li>
 								<li>https://divestos.org/generate_204</li>
 							</ul>
+							<p>DivestOS 18.1 and higher offers nine presets for the `Internet Connectivity Check` server since 2023/01/23, users are strongly recommended to take advantage of them.</p>
 						</div>
 
-						<h3 id="ntp">Network Time Protocol (<a href="https://en.wikipedia.org/wiki/Network_Time_Protocol" target="_blank" rel="nofollow noopener noreferrer">NTP</a>)<a href="#ntp">¶</a><small>volunteer pool, <a href="/pages/privacy_policy#ntp">privacy policy</a></small></h3>
+						<h3 id="ntp">Network Time Protocol (<a href="https://en.wikipedia.org/wiki/Network_Time_Protocol" target="_blank" rel="nofollow noopener noreferrer">NTP</a>)<a href="#ntp">¶</a></h3>
 						<p>Purpose: Used to have an accurate system time.</p>
-						<ul>
-							<li>2.android.pool.ntp.org</li>
-						</ul>
+						<div>
+							<p>Default: volunteer pool - <a href="/pages/privacy_policy#ntp">privacy policy</a><p>
+							<ul>
+								<li>2.android.pool.ntp.org</li>
+							</ul>
+						</div>
 
 						<h3 id="psds">Predicted Satellite Data Service (PSDS)<a href="#psds">¶</a></h3>
 						<p>Purpose: Used to <a href="https://en.wikipedia.org/wiki/Time_to_first_fix" target="_blank" rel="nofollow noopener noreferrer">speedup</a> the process of acquiring a GPS lock.</p>
@@ -58,63 +69,94 @@
 							</ul>
 						</div>
 
-						<h3 id="supl">Secure User Plane Location (<a href="https://en.wikipedia.org/wiki/Assisted_GNSS#SUPL" target="_blank" rel="nofollow noopener noreferrer">SUPL)<a href="#supl">¶</a><small>Google, fallback only, carrier/SIM and emergency calls can override, disable by removing `supl` type from selected APN, <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></small></h3>
-						<p>Purpose: Used to <a href="https://en.wikipedia.org/wiki/Time_to_first_fix" target="_blank" rel="nofollow noopener noreferrer">speedup</a> the process of acquiring a GPS lock and to provide your location when placing a call to emergency services.</p>
-						<ul>
-							<li>tls://supl.google.com:727X</li>
-						</ul>
+						<h3 id="supl">Secure User Plane Location (<a href="https://en.wikipedia.org/wiki/Assisted_GNSS#SUPL" target="_blank" rel="nofollow noopener noreferrer">SUPL)<a href="#supl">¶</a></h3>
+						<p>Purpose: Used to <a href="https://en.wikipedia.org/wiki/Time_to_first_fix" target="_blank" rel="nofollow noopener noreferrer">speedup</a> the process of acquiring a GPS lock and to provide your location when placing a call to emergency services.
+						<br>Notes:<ul>
+							<li>The carrier/SIM along with emergency calls can override this server.</li>
+							<li>SUPL use can be disabled by removing the `supl` APN type from the selected APN via Settings.</li>
+							<li>This typically includes the IMSI with these requests... however thanks to @MSe1969, DivestOS has <i>not</i> done so since 2019/06/02.</li>
+							<li>This typically is used with both MSA (server calculates location) and MSB (device calculates location) modes, however DivestOS has disabled the MSA mode of operation since 2018/08/08 due to privacy concerns.</li>
+						</ul></p>
+						<div>
+							<p>Fallback: Google - <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></p>
+							<ul>
+								<li>tls://supl.google.com:727X</li>
+							</ul>
+						</div>
 
-						<h3 id="updater">Updater<a href="#updater">¶</a><small>default weekly, can be disabled in Settings > Updater, <a href="/pages/privacy_policy#systemUpdater">privacy policy</a></small></h3>
-						<p>Purpose: Used to check for and download system updates.</p>
-						<ul>
-							<li>https://divestos.org/updater.php?base=$BASE&device=$DEVICE&inc=$BUILD_ID</li>
-							<li>https://divestos.org/mirror.php?base=$BASE&file=$FILE</li>
-							<li>https://divestos.org/builds/$BASE/$DEVICE/divested-$VERSION-$DATE-dos-$DEVICE(-$INCREMENTAL).zip</li>
-						</ul>
+						<h3 id="updater">Updater<a href="#updater">¶</a><small>default weekly</small></h3>
+						<p>Purpose: Used to check for and download system updates.<br>Note: Can be disabled in Settings > Updater.</p>
+						<div>
+							<p>DivestOS - <a href="/pages/privacy_policy#systemUpdater">privacy policy</a></p>
+							<ul>
+								<li>https://divestos.org/updater.php?base=$BASE&device=$DEVICE&inc=$BUILD_ID</li>
+								<li>https://divestos.org/mirror.php?base=$BASE&file=$FILE</li>
+								<li>https://divestos.org/builds/$BASE/$DEVICE/divested-$VERSION-$DATE-dos-$DEVICE(-$INCREMENTAL).zip</li>
+							</ul>
+						</div>
 
-						<h3 id="keyProvisioning">Remote Keystore Provisioning<a href="#keyProvisioning">¶</a><small>Google, <a href="https://android-developers.googleblog.com/2022/03/upgrading-android-attestation-remote.html" target="_blank" rel="nofollow noopener noreferrer">modern</a> Pixels only, <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></small></h3>
-						<p>Purpose: Used by some apps for hardware backed keystore attestation.</p>
-						<ul>
-							<li>https://remoteprovisioning.googleapis.com</li>
-						</ul>
+						<h3 id="keyProvisioning">Remote Keystore Provisioning<a href="#keyProvisioning">¶</a></h3>
+						<p>Purpose: Used by some apps for hardware backed keystore attestation. Brief overview <a href="https://android-developers.googleblog.com/2022/03/upgrading-android-attestation-remote.html" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
+						<p>Notes:<ul>
+							<li>This is primarily only used on modern Google Pixel devices (4+).</li>
+							<li>DivestOS would like to offer a proxy for this service, however does not currently have the available resources to do so.</li>
+						</ul></p>
+						<div>
+							<p>Google - <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></p>
+							<ul>
+								<li>https://remoteprovisioning.googleapis.com</li>
+							</ul>
+						</div>
 
-						<h3 id="fdroid">F-Droid Repositories<a href="#fdroid">¶</a><small>default daily, can be disabled in F-Droid > Settings</small></h3>
-						<p>Purpose: Used to browse, install, and update apps.</p>
-						<ul>
-							<li>https://f-droid.org/repo/ - <a href="/pages/privacy_policy#fdroid">privacy policy</a></li>
-							<li>https://divestos.org/fdroid/official/ - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
-							<li>https://divestos.org/fdroid/webview/ - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
-							<li>https://divestos.org/fdroid/unofficial/ - default disabled - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
-							<li>https://guardianproject.info/fdroid/ - default disabled - <a href="https://guardianproject.info/2016/05/04/data-usage-and-protection-policies/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
-							<li>https://apt.izzysoft.de/fdroid/ - default disabled - <a href="https://android.izzysoft.de/impressum.php" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
-							<li>https://fdroid.bromite.org/fdroid/ - default disabled - <a href="https://www.bromite.org/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
-						</ul>
+						<h3 id="fdroid">F-Droid Repositories<a href="#fdroid">¶</a><small>default daily</small></h3>
+						<p>Purpose: Used to browse, install, and update apps.<br>Note: Can be disabled in F-Droid > Settings.</p>
+						<div>
+							<ul>
+								<li>https://f-droid.org/repo/ - <a href="/pages/privacy_policy#fdroid">privacy policy</a></li>
+								<li>https://divestos.org/fdroid/official/ - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
+								<li>https://divestos.org/fdroid/webview/ - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
+								<li>https://divestos.org/fdroid/unofficial/ - default disabled - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
+								<li>https://guardianproject.info/fdroid/ - default disabled - <a href="https://guardianproject.info/2016/05/04/data-usage-and-protection-policies/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
+								<li>https://apt.izzysoft.de/fdroid/ - default disabled - <a href="https://android.izzysoft.de/impressum.php" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
+								<li>https://fdroid.bromite.org/fdroid/ - default disabled - <a href="https://www.bromite.org/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
+							</ul>
+						</div>
 
-						<h3 id="mull">Mull<a href="#mull">¶</a><small>Mozilla, <a href="https://www.mozilla.org/en-US/privacy/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></small></h3>
+						<h3 id="mull">Mull<a href="#mull">¶</a></h3>
 						<p>Mull disables a lot of the <a href="https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections" target="_blank" rel="nofollow noopener noreferrer">typical requests</a> that official/vanilla Firefox makes, however still does depend on various services as noted below.</p>
-						<ul>
-							<li>https://content-signature-2.cdn.mozilla.net - Used for <a href="https://github.com/mozilla-services/autograph" target="_blank" rel="nofollow noopener noreferrer">signing/verification</a> of all other requests.</li>
-							<li>https://firefox.settings.services.mozilla.com - Used for altering various browser settings on demand and to apply monkeypatches for critical issues.</li>
-							<li>https://firefox-settings-attachments.cdn.mozilla.net - Used for miscellaneous databases.</li>
-							<br>
-							<li>https://shavar.services.mozilla.com - Used for Safe Browsing databases.</li>
-							<li>https://tracking-protection.cdn.mozilla.net - Used for Enhanced Tracking Protection (ETP) blocklists.</li>
-							<br>
-							<li>https://addons.mozilla.org - Used for add-on browsing.</li>
-							<li>https://blocked.cdn.mozilla.net - Used for add-on revocation checks and for reporting abusive add-ons.</li>
-							<li>https://services.addons.mozilla.org - Used for add-on downloads.</li>
-							<li>https://versioncheck.addons.mozilla.org - Used to determine if installed add-ons need updating.</li>
-							<br>
-							<li>https://duckduckgo.com - Default search engine - <a href="https://duckduckgo.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a> - Can be changed via Settings > Search.</li>
-							<li>Auto completion for a chosen search engine is performed by default. Can be disabled via Settings > Search > Show search suggestions.</li>
-							<br>
-							<li>Online Certificate Status Protocol (OCSP) servers may be queried to determine certificate revocation status when certificate stapling isn't used or to confirm a <a href="https://blog.mozilla.org/security/tag/crlite/" target="_blank" rel="nofollow noopener noreferrer">CRLite</a> match.</li>
-						</ul>
+						<div>
+							<p>Mozilla - <a href="https://www.mozilla.org/en-US/privacy/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></p>
+							<ul>
+								<li>https://content-signature-2.cdn.mozilla.net - Used for <a href="https://github.com/mozilla-services/autograph" target="_blank" rel="nofollow noopener noreferrer">signing/verification</a> of all other requests.</li>
+								<li>https://firefox.settings.services.mozilla.com - Used for altering various browser settings on demand and to apply monkeypatches for critical issues.</li>
+								<li>https://firefox-settings-attachments.cdn.mozilla.net - Used for miscellaneous databases.</li>
+								<br>
+								<li>https://shavar.services.mozilla.com - Used for Safe Browsing databases.</li>
+								<li>https://tracking-protection.cdn.mozilla.net - Used for Enhanced Tracking Protection (ETP) blocklists.</li>
+								<br>
+								<li>https://addons.mozilla.org - Used for add-on browsing.</li>
+								<li>https://blocked.cdn.mozilla.net - Used for add-on revocation checks and for reporting abusive add-ons.</li>
+								<li>https://services.addons.mozilla.org - Used for add-on downloads.</li>
+								<li>https://versioncheck.addons.mozilla.org - Used to determine if installed add-ons need updating.</li>
+							</ul>
+							<p>Additionals</p>
+							<ul>
+								<li>https://duckduckgo.com - Default search engine - <a href="https://duckduckgo.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a> - Can be changed via Settings > Search.</li>
+								<li>Auto completion for a chosen search engine is performed by default. Can be disabled via Settings > Search > Show search suggestions.</li>
+								<br>
+								<li>Online Certificate Status Protocol (OCSP) servers may be queried to determine certificate revocation status when certificate stapling isn't used or to confirm a <a href="https://blog.mozilla.org/security/tag/crlite/" target="_blank" rel="nofollow noopener noreferrer">CRLite</a> match.</li>
+							</ul>
+						</div>
 
-						<h3 id="hypatia">Hypatia<a href="#hypatia">¶</a><small>not pre-installed, not automatic, <a href="/pages/privacy_policy#hypatia">privacy policy</a></small></h3>
+						<h3 id="hypatia">Hypatia<a href="#hypatia">¶</a><small>not pre-installed, not automatic</small></h3>
 						<p>Purpose: Used to download and update malware signature databases.</p>
-						<ul>
-							<li>https://divested.dev/MalwareScannerSignatures/*.h*b.gz</li>
-						</ul>
+						<div>
+							<p>DivestOS - <a href="/pages/privacy_policy#hypatia">privacy policy</a></p>
+							<ul>
+								<li>https://divested.dev/MalwareScannerSignatures/*.h*b.gz</li>
+							</ul>
+						</div>
+
+						<h3 id="mulch">Mulch<a href="#mulch">¶</a><small>Analysis Pending</small></h3>
 					</div>
 				</div>
