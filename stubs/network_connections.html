@@ -34,7 +34,7 @@
 						<p>Purpose: Used to determine if a given network interface truly has an Internet connection and if there is a <a href="https://en.wikipedia.org/wiki/Captive_portal" target="_blank" rel="nofollow noopener noreferrer">captive portal</a> which needs to be accepted by the user.
 						<br>Notes:<ul>
 							<li>Can be disabled (14.1+) or changed (18.1+) in Settings.</li>
-							<li>When a VPN is used, this connection is performed twice: once outside of the VPN and once through the VPN even when `Block connections` is enabled.</li>
+							<li>When a VPN is used, this connection is performed twice: once outside of the VPN and once through the VPN, even when `Block connections` is enabled.</li>
 							<li>DivestOS 18.1 and higher offers nine presets for the `Internet Connectivity Check` server since 2023/01/23, users are strongly recommended to take advantage of them.</li>
 						</ul></p>
 						<div>
@@ -80,7 +80,8 @@
 						<p>Purpose: Used to <a href="https://en.wikipedia.org/wiki/Time_to_first_fix" target="_blank" rel="nofollow noopener noreferrer">speedup</a> the process of acquiring a GPS lock and to provide your location when placing a call to emergency services.
 						<br>Notes:<ul>
 							<li>The carrier/SIM along with emergency calls can override this server.</li>
-							<li>SUPL use can be disabled by removing the `supl` APN type from the selected APN via Settings.</li>
+							<li>DivestOS 17.1 and higher can disable SUPL via Settings > Location > Force disable SUPL toggle since 2023/02/11.</li>
+							<li>DivestOS 14.1 through 16.0 can disable SUPL by removing the `supl` APN type from the selected APN via Settings.</li>
 							<li>This typically includes the IMSI with these requests... however thanks to @MSe1969, DivestOS has <i>not</i> done so since 2019/06/02.</li>
 							<li>This typically is used with both MSA (server calculates location) and MSB (device calculates location) modes, however DivestOS has disabled the MSA mode of operation since 2018/08/08 due to privacy concerns.</li>
 						</ul></p>
@@ -121,7 +122,7 @@
 							<ul>
 								<li>https://f-droid.org/repo/ - <a href="/pages/privacy_policy#fdroid">privacy policy</a></li>
 								<li>https://divestos.org/fdroid/official/ - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
-								<li>https://divestos.org/fdroid/webview/ - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
+								<li>https://divestos.org/fdroid/webview/ - removed in 2023-02 update - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
 								<li>https://divestos.org/fdroid/unofficial/ - default disabled - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
 								<li>https://guardianproject.info/fdroid/ - default disabled - <a href="https://guardianproject.info/2016/05/04/data-usage-and-protection-policies/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
 								<li>https://apt.izzysoft.de/fdroid/ - default disabled - <a href="https://android.izzysoft.de/impressum.php" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
