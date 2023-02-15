@@ -52,8 +52,8 @@
 							</ul>
 						</div>
 
-						<h3 id="ntp">Network Time Protocol (<a href="https://en.wikipedia.org/wiki/Network_Time_Protocol" target="_blank" rel="nofollow noopener noreferrer">NTP</a>)<a href="#ntp">¶</a><small>on every boot, and periodically afterwards</small></h3>
-						<p>Purpose: Used to have an accurate system time.</p>
+						<h3 id="ntp">Network Time Protocol (<a href="https://en.wikipedia.org/wiki/Network_Time_Protocol" target="_blank" rel="nofollow noopener noreferrer">NTP</a>)<a href="#ntp">¶</a><small>on every boot, periodically afterwards, and additionally when actively using GPS</small></h3>
+						<p>Purpose: Used to have an accurate system time.<br>Note: NTP is still polled even when `Set time automatically` is disabled in Settings.</p>
 						<div>
 							<p>Default: volunteer pool - <a href="/pages/privacy_policy#ntp">privacy policy</a><p>
 							<ul>
@@ -115,6 +115,9 @@
 								<li>https://remoteprovisioning.googleapis.com</li>
 							</ul>
 						</div>
+
+						<h3 id="appLinkVerifcation">App Link Verification<a href="#appLinkVerifcation">¶</a></h3>
+						<p>Purpose: When installing an app that has defined links it wants the system to open it with by default, the system will contact the server of each declared domain to verify if it has permission to do so.<br>Note: Can be disabled by revoking `Network` permission to the `Intent Filter Verification Service` system app, however you will have to approve opener links manually then.</p>
 
 						<h3 id="fdroid">F-Droid Repositories<a href="#fdroid">¶</a><small>default daily</small></h3>
 						<p>Purpose: Used to browse, install, and update apps.<br>Note: Can be disabled in F-Droid > Settings.</p>
