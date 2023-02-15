@@ -70,6 +70,8 @@ createTable() {
 	name=$1;
 	version=$2;
 	versionStripped=$(echo "$version" | sed 's/.*-//')
+	#green: latest branch
+	#yellow: non-eol branches
 	if [[ $versionStripped == "20.0" ]]; then
 		versionStyle="style=\"color:#4CAF50;\"";
 	elif [[ $versionStripped == "17.1" ]] || [[ $versionStripped == "18.1" ]] || [[ $versionStripped == "19.1" ]]; then
@@ -82,8 +84,9 @@ createTable() {
 	kernelPath=$4;
 	kernelName=$(echo "$kernelPath" | sed 's|/|_|');
 	vASB=$(getVendorPatchLevel $version $devicePath)
-	#keep 4 months + 1 future
-	if [[ $vASB == "2023-02"* ]] || [[ $vASB == "2023-01"* ]] || [[ $vASB == "2022-12"* ]] || [[ $vASB == "2022-11"* ]] || [[ $vASB == "2022-10"* ]]; then
+	#green: keep 4 months + 1 future
+	#yellow: previous year
+	if [[ $vASB == "2023-03"* ]] || [[ $vASB == "2023-02"* ]] || [[ $vASB == "2023-01"* ]] || [[ $vASB == "2022-12"* ]] || [[ $vASB == "2022-11"* ]]; then
 		vASBStyle="style=\"color:#4CAF50;\"";
 	elif [[ $vASB == "2022-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
@@ -92,6 +95,8 @@ createTable() {
 	fi;
 
 	kernelVersion=$(getKernelVersion $version $kernelPath);
+	#green: non-eol branches
+	#yellow: most recent and externally supported branches
 	if [[ $kernelVersion == "4.1"* ]] || [[ $kernelVersion == "5."* ]] || [[ $kernelVersion == "6."* ]]; then
 		kernelStyle="style=\"color:#4CAF50;\"";
 	elif [[ $kernelVersion == "4.4."* ]] || [[ $kernelVersion == "4.9."* ]]; then
@@ -168,7 +173,8 @@ createTable flounder LineageOS-15.1 htc/flounder htc/flounder;
 createTable flounder_lte LineageOS-15.1 htc/flounder_lte htc/flounder htc/flounder;
 createTable flox LineageOS-18.1 asus/flox google/msm;
 createTable FP2 LineageOS-18.1 fairphone/FP2 fairphone/msm8974;
-createTable FP3 LineageOS-19.1 fairphone/FP3 fairphone/sdm632;
+createTable FP3 LineageOS-19.1 fairphone/FP3 fairphone/sdm632; #superseded
+createTable FP3 LineageOS-20.0 fairphone/FP3 fairphone/sdm632;
 createTable FP4 LineageOS-20.0 fairphone/FP4 fairphone/sm7225;
 createTable fugu LineageOS-15.1 asus/fugu asus/fugu;
 createTable griffin LineageOS-17.1 motorola/griffin motorola/msm8996;
