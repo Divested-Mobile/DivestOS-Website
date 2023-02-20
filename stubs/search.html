@@ -1,0 +1,14 @@
+				<link href="/pages/_pagefind/pagefind-ui.css" rel="stylesheet">
+				<script src="/pages/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+				<div class="card fluid">
+					<h2>Search</h2>
+					<p>Here you can search for anything on this website.<br>JavaScript and WebAssembly is required, search is entirely client side.<br>This is powered by the open-source <a href="https://pagefind.app/" target="_blank" rel="nofollow noopener noreferrer">Pagefind</a> library.</p>
+					<div class="section" id="search">
+
+					</div>
+					<script>
+						window.addEventListener('DOMContentLoaded', (event) => {
+							new PagefindUI({ element: "#search" });
+						});
+					</script>
+				</div>
