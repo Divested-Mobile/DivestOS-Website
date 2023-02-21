@@ -2,13 +2,34 @@
 				<script src="/pages/_pagefind/pagefind-ui.js" type="text/javascript"></script>
 				<div class="card fluid">
 					<h2>Search</h2>
-					<p>Here you can search for anything on this website.<br>JavaScript and WebAssembly is required, search is entirely client side.<br>This is powered by the open-source <a href="https://pagefind.app/" target="_blank" rel="nofollow noopener noreferrer">Pagefind</a> library.</p>
-					<div class="section" id="search">
-
+					<p>Here you can search for anything on this website.</p>
+					<div class="section" id="clientSideSearch">
+						<h3>Client Side Search<a href="#clientSideSearch">¶</a></h3>
+						<p>Downloads a tiny database and searches locally.<br>This is powered by the open-source <a href="https://pagefind.app/" target="_blank" rel="nofollow noopener noreferrer">Pagefind</a> library.<br>JavaScript and WebAssembly is required. For Tor Browser users, that is only available on the `Standard` security level.</p>
+						<div class="section" id="search"></div>
+						<script>
+							window.addEventListener('DOMContentLoaded', (event) => {
+								new PagefindUI({ element: "#search", showImages: false });
+							});
+						</script>
 					</div>
-					<script>
-						window.addEventListener('DOMContentLoaded', (event) => {
-							new PagefindUI({ element: "#search" });
-						});
-					</script>
+					<div class="section" id="thirdPartySearch">
+						<h3>Third Party Search<a href="#thirdPartySearch">¶</a></h3>
+						<p>Searches via DuckDuckGo in a new tab.<br>JavaScript is not required.</p>
+						<form target="_blank" rel="nofollow noopener noreferrer" action="https://duckduckgo.com/" id="searchform" name="searchform">
+							<input type="hidden" name="kae" value="#FF5722">
+							<input type="hidden" name="k7" value="w">
+							<input type="hidden" name="sites" value="divestos.org">
+							<input type="hidden" name="kau" value="-1">
+							<input type="hidden" name="kao" value="-1">
+							<input type="hidden" name="kaq" value="-1">
+							<input type="hidden" name="kap" value="-1">
+							<input type="hidden" name="kak" value="-1">
+							<input type="hidden" name="kax" value="-1">
+							<input type="hidden" name="k1" value="-1">
+							<input type="hidden" name="kd" value="-1">
+							<input type="search" name="q" autofocus="autofocus" placeholder="">
+							<button type="submit">Search</button>
+						</form>
+					</div>
 				</div>
