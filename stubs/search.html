@@ -5,13 +5,28 @@
 					<p>Here you can search for anything on this website.</p>
 					<div class="section" id="clientSideSearch">
 						<h3>Client Side Search<a href="#clientSideSearch">¶</a></h3>
-						<p>Downloads a tiny database and searches locally.<br>This is powered by the open-source <a href="https://pagefind.app/" target="_blank" rel="nofollow noopener noreferrer">Pagefind</a> library.<br>JavaScript and WebAssembly is required. For Tor Browser users, that is only available on the `Standard` security level.</p>
+						<p>Downloads a tiny database and searches locally.<br>This is powered by the open-source <a href="https://pagefind.app/" target="_blank" rel="nofollow noopener noreferrer">Pagefind</a> library.<br>JavaScript and WebAssembly is required.</p>
 						<div class="section" id="search"></div>
+						<!-- Credit (CC BY-SA 3.0): https://stackoverflow.com/a/47880734 -->
 						<script>
+						const supported = (() => {
+							try {
+								if (typeof WebAssembly === "object" && typeof WebAssembly.instantiate === "function") {
+									const module = new WebAssembly.Module(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00));
+									if (module instanceof WebAssembly.Module)
+										return new WebAssembly.Instance(module) instanceof WebAssembly.Instance;
+								}
+							} catch (e) {}
+							return false;
+						})();
+						if (supported) {
 							window.addEventListener('DOMContentLoaded', (event) => {
 								new PagefindUI({ element: "#search", showImages: false });
 							});
-						</script>
+						} else {
+							document.write("<p>WebAssembly appears disabled!<br><ul><li>Firefox & Mull: Set <code>javascript.options.wasm</code> to true via <code>about:config</code>.</li><li>Mulch: Tap the Lock in the URL bar, then Permissions, and allow `JavaScript JIT`.</li><li>Tor Browser: Use the `Standard` security level.</li></ul></p>");
+						}
+						</script><noscript><p>JavaScript appears disabled!<br><ul><li>Chromium & Mulch: Tap the lock in the URL bar, then Permissions, and allow `JavaScript`.</li><li>Tor Browser: Use the `Standard` security level.</li></ul></p></noscript>
 					</div>
 					<div class="section" id="thirdPartySearch">
 						<h3>Third Party Search<a href="#thirdPartySearch">¶</a></h3>
