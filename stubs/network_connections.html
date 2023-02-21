@@ -1,6 +1,11 @@
 				<div class="card fluid">
 					<h2>Network Connections<a href="#connections">¶</a></h2>
-					<p>Here is a list of expected network connections for security/verification purposes.</p>
+					<p>Here is a list of expected network connections for security/verification purposes.
+					<br>Address key:<ul>
+							<li>✅ - should not contain any of the following: personal information, device identifiers, or other persistent identifiers.</li>
+							<li>❌ - known to contain personal information or identifiers.</li>
+							<li>❓ - has not been sufficiently reviewed</li>
+					</ul></p>
 					<div class="section" id="connections">
 						<h3 id="carrier">Carrier Services<a href="#carrier">¶</a><small>Connections to a cellular carrier if/when a SIM is inserted.</small></h3>
 						<p>Note: These connections are largely routed over the cellular interface and when routed over the Wi-Fi interface will bypass any used VPN even with `Block connections` enabled.</p>
@@ -23,10 +28,10 @@
 						<div>
 							<p>Fallback: Quad9 - <a href="/pages/privacy_policy#dns">privacy policy</a></p>
 							<ul>
-								<li>9.9.9.9</li>
-								<li>149.112.112.112</li>
-								<li>2620:fe::fe</li>
-								<li>2620:fe::9</li>
+								<li>✅ 9.9.9.9</li>
+								<li>✅ 149.112.112.112</li>
+								<li>✅ 2620:fe::fe</li>
+								<li>✅ 2620:fe::9</li>
 							</ul>
 						</div>
 
@@ -40,15 +45,15 @@
 						<div>
 							<p>Default: Google - <a href="/pages/privacy_policy#googleConnectivityChecks">privacy policy</a></p>
 							<ul>
-								<li>http://connectivitycheck.gstatic.com/generate_204</li>
-								<li>https://www.google.com/generate_204</li>
-								<li>http://www.google.com/gen_204</li>
-								<li>http://play.googleapis.com/generate_204</li>
+								<li>✅ http://connectivitycheck.gstatic.com/generate_204</li>
+								<li>✅ https://www.google.com/generate_204</li>
+								<li>✅ http://www.google.com/gen_204</li>
+								<li>✅ http://play.googleapis.com/generate_204</li>
 							</ul>
 							<p>Optional: DivestOS - <a href="/pages/privacy_policy#fpConnectivityChecks">privacy policy</a></p>
 							<ul>
-								<li>http://divestos.org/generate_204</li>
-								<li>https://divestos.org/generate_204</li>
+								<li>✅ http://divestos.org/generate_204</li>
+								<li>✅ https://divestos.org/generate_204</li>
 							</ul>
 						</div>
 
@@ -57,7 +62,7 @@
 						<div>
 							<p>Default: volunteer pool - <a href="/pages/privacy_policy#ntp">privacy policy</a><p>
 							<ul>
-								<li>2.android.pool.ntp.org</li>
+								<li>✅ 2.android.pool.ntp.org</li>
 							</ul>
 						</div>
 
@@ -66,13 +71,13 @@
 						<div>
 							<p>Qualcomm devices</p>
 							<ul>
-								<li>https://{,xtra}path[1-9].izatcloud.net/xtra{,2,3grc}.bin</li>
+								<li>✅ https://{,xtra}path[1-9].izatcloud.net/xtra{,2,3grc}.bin</li>
 							</ul>
 							<p>Broadcom devices such as Samsung Exynos, Google Tensor, and NVIDIA Tegra</p>
 							<ul>
-								<li>https://gllto.glpals.com/7day/v5/latest/lto2.dat</li>
-								<li>https://gllto.glpals.com/rto/v1/latest/rto.dat</li>
-								<li>https://gllto.glpals.com/rtistatus4.dat</li>
+								<li>✅ https://gllto.glpals.com/7day/v5/latest/lto2.dat</li>
+								<li>✅ https://gllto.glpals.com/rto/v1/latest/rto.dat</li>
+								<li>✅ https://gllto.glpals.com/rtistatus4.dat</li>
 							</ul>
 						</div>
 
@@ -88,7 +93,7 @@
 						<div>
 							<p>Fallback: Google - <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></p>
 							<ul>
-								<li>tls://supl.google.com:727X</li>
+								<li>❌ tls://supl.google.com:727X - Includes MCC and MNC.</li>
 							</ul>
 						</div>
 
@@ -97,9 +102,9 @@
 						<div>
 							<p>DivestOS - <a href="/pages/privacy_policy#systemUpdater">privacy policy</a></p>
 							<ul>
-								<li>https://divestos.org/updater.php?base=$BASE&device=$DEVICE&inc=$BUILD_ID</li>
-								<li>https://divestos.org/mirror.php?base=$BASE&file=$FILE</li>
-								<li>https://divestos.org/builds/$BASE/$DEVICE/divested-$VERSION-$DATE-dos-$DEVICE(-$INCREMENTAL).zip</li>
+								<li>✅ https://divestos.org/updater.php?base=$BASE&device=$DEVICE&inc=$BUILD_ID</li>
+								<li>✅ https://divestos.org/mirror.php?base=$BASE&file=$FILE</li>
+								<li>✅ https://divestos.org/builds/$BASE/$DEVICE/divested-$VERSION-$DATE-dos-$DEVICE(-$INCREMENTAL).zip</li>
 							</ul>
 						</div>
 
@@ -112,7 +117,7 @@
 						<div>
 							<p>Google - <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></p>
 							<ul>
-								<li>https://remoteprovisioning.googleapis.com</li>
+								<li>❓ https://remoteprovisioning.googleapis.com</li>
 							</ul>
 						</div>
 
@@ -123,13 +128,13 @@
 						<p>Purpose: Used to browse, install, and update apps.<br>Note: Can be disabled in F-Droid > Settings.</p>
 						<div>
 							<ul>
-								<li>https://f-droid.org/repo/ - <a href="/pages/privacy_policy#fdroid">privacy policy</a></li>
-								<li>https://divestos.org/fdroid/official/ - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
-								<li>https://divestos.org/fdroid/webview/ - removed in 2023-02 update - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
-								<li>https://divestos.org/fdroid/unofficial/ - default disabled - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
-								<li>https://guardianproject.info/fdroid/ - default disabled - <a href="https://guardianproject.info/2016/05/04/data-usage-and-protection-policies/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
-								<li>https://apt.izzysoft.de/fdroid/ - default disabled - <a href="https://android.izzysoft.de/impressum.php" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
-								<li>https://fdroid.bromite.org/fdroid/ - default disabled - <a href="https://www.bromite.org/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
+								<li>✅ https://f-droid.org/repo/ - <a href="/pages/privacy_policy#fdroid">privacy policy</a></li>
+								<li>✅ https://divestos.org/fdroid/official/ - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
+								<li>✅ https://divestos.org/fdroid/webview/ - removed in 2023-02 update - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
+								<li>✅ https://divestos.org/fdroid/unofficial/ - default disabled - <a href="/pages/privacy_policy#fpRepos">privacy policy</a></li>
+								<li>✅ https://guardianproject.info/fdroid/ - default disabled - <a href="https://guardianproject.info/2016/05/04/data-usage-and-protection-policies/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
+								<li>✅ https://apt.izzysoft.de/fdroid/ - default disabled - <a href="https://android.izzysoft.de/impressum.php" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
+								<li>✅ https://fdroid.bromite.org/fdroid/ - default disabled - <a href="https://www.bromite.org/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></li>
 							</ul>
 						</div>
 
@@ -138,24 +143,35 @@
 						<div>
 							<p>Mozilla - <a href="https://www.mozilla.org/en-US/privacy/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></p>
 							<ul>
-								<li>https://content-signature-2.cdn.mozilla.net - Used for <a href="https://github.com/mozilla-services/autograph" target="_blank" rel="nofollow noopener noreferrer">signing/verification</a> of all other requests.</li>
-								<li>https://firefox.settings.services.mozilla.com - Used for altering various browser settings on demand and to apply monkeypatches for critical issues.</li>
-								<li>https://firefox-settings-attachments.cdn.mozilla.net - Used for miscellaneous databases.</li>
+								<li>✅ https://content-signature-2.cdn.mozilla.net - Used for <a href="https://github.com/mozilla-services/autograph" target="_blank" rel="nofollow noopener noreferrer">signing/verification</a> of all other requests.</li>
+								<li>✅ https://firefox.settings.services.mozilla.com - Used for altering various browser settings on demand and to apply monkeypatches for critical issues.</li>
+								<li>❓ https://firefox-settings-attachments.cdn.mozilla.net - Used for miscellaneous databases.</li>
+								<li>✅ https://shavar.services.mozilla.com - Used for various databases and primary indexes.</li>
+								<li>✅ https://tracking-protection.cdn.mozilla.net - Used for Enhanced Tracking Protection (ETP) blocklists.</li>
 								<br>
-								<li>https://shavar.services.mozilla.com - Used for Safe Browsing databases.</li>
-								<li>https://tracking-protection.cdn.mozilla.net - Used for Enhanced Tracking Protection (ETP) blocklists.</li>
-								<br>
-								<li>https://addons.mozilla.org - Used for add-on browsing.</li>
-								<li>https://blocked.cdn.mozilla.net - Used for add-on revocation checks and for reporting abusive add-ons.</li>
-								<li>https://services.addons.mozilla.org - Used for add-on downloads.</li>
-								<li>https://versioncheck.addons.mozilla.org - Used to determine if installed add-ons need updating.</li>
+								<li>✅ https://addons.mozilla.org - Used for add-on browsing.</li>
+								<li>❓ https://blocked.cdn.mozilla.net - Used for add-on revocation checks and for reporting abusive add-ons.</li>
+								<li>✅ https://services.addons.mozilla.org - Used for add-on downloads.</li>
+								<li>✅ https://versioncheck.addons.mozilla.org - Used to determine if installed add-ons need updating. Includes CPU type.</li>
 							</ul>
 							<p>Additionals</p>
 							<ul>
-								<li>https://duckduckgo.com - Default search engine - <a href="https://duckduckgo.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a> - Can be changed via Settings > Search.</li>
-								<li>Auto completion for a chosen search engine is performed by default. Can be disabled via Settings > Search > Show search suggestions.</li>
+								<li>❓ https://duckduckgo.com - Default search engine - <a href="https://duckduckgo.com/privacy" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a> - Can be changed via Settings > Search.</li>
+								<li>✅ Auto completion for a chosen search engine is performed by default. Can be disabled via Settings > Search > Show search suggestions.</li>
 								<br>
-								<li>Online Certificate Status Protocol (OCSP) servers may be queried to determine certificate revocation status when certificate stapling isn't used or to confirm a <a href="https://blog.mozilla.org/security/tag/crlite/" target="_blank" rel="nofollow noopener noreferrer">CRLite</a> match.</li>
+								<li>✅ Online Certificate Status Protocol (OCSP) servers may be queried to determine certificate revocation status when certificate stapling isn't used or to confirm a <a href="https://blog.mozilla.org/security/tag/crlite/" target="_blank" rel="nofollow noopener noreferrer">CRLite</a> match.</li>
+							</ul>
+						</div>
+
+						<h3 id="mulch">Mulch<a href="#mulch">¶</a></h3>
+						<p>Mulch disables the majority of the typical Chromium requests and has no explicit telemetry.</p>
+						<div>
+							<p>Google - <a href="https://www.google.com/chrome/privacy/" target="_blank" rel="nofollow noopener noreferrer">privacy policy</a></p>
+							<ul>
+								<li>❓ https://update.googleapis.com - Used for altering various browser settings and to check for newer internal databases and extensions. Includes CPU type, amount of RAM, and major OS version.</li>
+								<li>✅ http://edgedl.gvt1.com - Used to download internal databases and extensions.</li>
+								<li>✅ https://translate.googleapis.com - Used to download a language mapping/index. Likely an unused leftover that needs to be removed.</li>
+								<li>✅ appassets.androidplatform.net - <a href="https://developer.android.com/reference/androidx/webkit/WebViewAssetLoader" target="_blank" rel="nofollow noopener noreferrer">DNS request only</a> - Used by the WebView widget when accessing local resources.</li>
 							</ul>
 						</div>
 
@@ -164,10 +180,8 @@
 						<div>
 							<p>DivestOS - <a href="/pages/privacy_policy#hypatia">privacy policy</a></p>
 							<ul>
-								<li>https://divested.dev/MalwareScannerSignatures/*.h*b.gz</li>
+								<li>✅ https://divested.dev/MalwareScannerSignatures/*.h*b.gz</li>
 							</ul>
 						</div>
-
-						<h3 id="mulch">Mulch<a href="#mulch">¶</a><small>Analysis Pending</small></h3>
 					</div>
 				</div>
