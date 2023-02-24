@@ -153,3 +153,8 @@ Not Covered (nuanced or needs research/sources)
 - E2EE isn't offered on their Nextcloud instance, citing data loss concerns
  - leaking user data to other users: https://community.e.foundation/t/service-announcement-26-may/41252/27
  - https://en.wikipedia.org/wiki//e/OS#Data_leakage_incident
+
+
+See something wrong? Open an issue or merge request:
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/e.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/misc/e.txt

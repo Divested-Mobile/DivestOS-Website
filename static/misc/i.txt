@@ -111,3 +111,8 @@ Devices Sales
 - Other devices may also be end of life, check them yourself
 
 - Devices are arguably overpriced
+
+
+See something wrong? Open an issue or merge request:
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/i.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/misc/i.txt
