@@ -9,8 +9,8 @@ Preface:
 - This document has been refreshed a handful of times, but it is quite time consuming to keep updated
 
 See something wrong? Open an issue or merge request:
-- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/appsec.txt
-- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/misc/appsec.txt
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/appsec.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/appsec.txt
 
 Libraries:
 - iText

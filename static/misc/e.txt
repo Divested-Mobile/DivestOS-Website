@@ -156,5 +156,5 @@ Not Covered (nuanced or needs research/sources)
 
 
 See something wrong? Open an issue or merge request:
-- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/e.txt
-- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/misc/e.txt
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/e.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/e.txt

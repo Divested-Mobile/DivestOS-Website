@@ -3,7 +3,18 @@ rm -rf output;
 cp -r --reflink=auto static output;
 mkdir output/pages;
 
-alias asmpage='bwrap --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload php assemble_pages.php';
+#workaround hmalloc on host
+if command -v bwrap &> /dev/null; then
+	alias asmpage='bwrap --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload php assemble_pages.php';
+else
+	alias asmpage='php assemble_pages.php';
+fi;
+#helper
+if command -v firejail &> /dev/null; then
+	alias fjnn='firejail --net=none';
+else
+	alias fjnn='';
+fi;
 
 declare -a staticPages=("about" "bootloader" "broken" "browsers" "bug_reporting" "build" "community" "faq" "functionality_tables" "history" "home" "messengers" "network_connections" "news" "our_apps" "patch_counts" "patch_levels" "post_install" "privacy_policy" "recommended_apps" "saving_data" "screenshots_dark" "screenshots" "search" "technical_details" "terms_of_service" "troubleshooting" "verified_boot_hashes");
 
@@ -20,4 +31,8 @@ asmpage devices LineageOS true > "output/pages/devices_golden.html";
 
 ln -sf pages/home.html output/index.html;
 
-firejail --net=none pagefind --source output/pages;
+if command -v pagefind &> /dev/null; then
+	fjnn pagefind --source output/pages;
+else
+	echo "pagefind is unavailable, not generating search index"
+fi;

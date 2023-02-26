@@ -11,6 +11,7 @@ Content Blocker
  - https://en.wikipedia.org/wiki/Snort_(software)
 
 - Uses and redistributes lists which are licensed against commercial use (NC) or redistribution (ALL RIGHTS RESERVED)
+ - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/staging/iode-snort/domains-black
  - They even note these licenses of the lists they use here
   - https://iode.tech/en/iodeos-en/
 
@@ -114,5 +115,5 @@ Devices Sales
 
 
 See something wrong? Open an issue or merge request:
-- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/i.txt
-- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/misc/i.txt
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/i.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/i.txt

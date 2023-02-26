@@ -1,4 +1,4 @@
-last updated: 2023/02/23
+last updated: 2023/02/26
 
 disclosure: Mulch is a DivestOS project
 
@@ -70,7 +70,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-110.0.5481.154	2023/02/22	48ksv		2023/02/22	2023/02/23	25ksv				48ksv
+110.0.5481.154	2023/02/22	48ksv		2023/02/22	2023/02/23	25ksv		pending		48ksv
 110.0.5481.65	2023/02/13			2023/02/14	2023/02/15	pending		2023/02/17
 110.0.5481.64	2023/02/07			2023/02/07	2023/02/07			2023/02/09
 110.0.5481.61	2023/02/01			2023/02/01	2023/02/02
@@ -196,5 +196,5 @@ Notes:
 There is a Firefox equivalent of this table here: https://divestos.org/misc/ffa-dates.txt
 
 See something wrong? Open an issue or merge request:
-- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/ch-dates.txt
-- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/misc/ch-dates.txt
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/ch-dates.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/ch-dates.txt

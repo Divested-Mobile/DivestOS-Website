@@ -1,4 +1,4 @@
-last updated: 2023/02/23
+last updated: 2023/02/26
 
 disclosure: Mull is a DivestOS project
 
@@ -161,5 +161,5 @@ Useful links:
 There is a Chromium equivalent of this table here: https://divestos.org/misc/ch-dates.txt
 
 See something wrong? Open an issue or merge request:
-- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/misc/ffa-dates.txt
-- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/misc/ffa-dates.txt
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/ffa-dates.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/ffa-dates.txt
