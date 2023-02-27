@@ -56,7 +56,13 @@
 										<li>Reboot to the bootloader</li>
 									</ol>
 								</li>
-								<li>If fastboot.zip available: <code>$ fastboot update divested-version-date-dos-device-fastboot.zip</code></li>
+								<li>If fastboot.zip available: <code>$ fastboot update divested-version-date-dos-device-fastboot.zip</code>
+									<ul>
+										<li>If you receive a board mismatch:</li>
+										<li>First try: using <code>$ fastboot update --force [...].zip</code></li>
+										<li>If that doesn't work: edit the android-info.txt file in the .zip file to match your board</li>
+									</ul>
+								</li>
 								<li>If recovery.img available: <code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
 								<li>If 'A/B Sync' (copy-partitions.zip) is available and NOT striked out: <code>$ adb sideload copy-partitions-device.zip</a></code></li>
