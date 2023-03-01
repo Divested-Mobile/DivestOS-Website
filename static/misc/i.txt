@@ -42,7 +42,7 @@ System
  - See https://divestos.org/misc/a-dates.txt
 
 - Likely falls behind updates
- - Today is 2023/02/27, yet there is no February 2023 update for FP4
+ - Today is 2023/03/01, yet there is no February 2023 update for FP4
   - Check archive.org for https://github.com/iodeOS/ota/releases/tag/v4-FP4
  - Occasional 2-3 month gaps without updates
   - Check archive.org for https://github.com/iodeOS/ota/releases/tag/v3-FP4
