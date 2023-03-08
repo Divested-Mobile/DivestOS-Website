@@ -1,11 +1,12 @@
-last updated: 2023/03/06
+last updated: 2023/03/07
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
-111.0.5563.49		2023/03/02	?
+111.0.5563.58		2023/03/06	40, 1 critical		https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop.html
+111.0.5563.49		2023/03/02				https://chromereleases.googleblog.com/2023/03/early-stable-update-for-android.html
 110.0.5481.154		2023/02/22	10, 1 critical		https://chromereleases.googleblog.com/2023/02/stable-channel-desktop-update_22.html
 110.0.5481.65		2023/02/13				https://chromium.googlesource.com/chromium/src/+log/110.0.5481.64..110.0.5481.65?pretty=fuller&n=10000
 110.0.5481.64		2023/02/07				https://chromium.googlesource.com/chromium/src/+log/110.0.5481.61..110.0.5481.64?pretty=fuller&n=10000
@@ -71,7 +72,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-111.0.5563.49	2023/03/02	48+ksv		2023/03/02	2023/03/02	25+ksv				48+ksv
+111.0.5563.58	2023/03/06	88ksv		2023/03/06	2023/03/07	65ksv		40ksv		88ksv
+111.0.5563.49	2023/03/02			2023/03/02	2023/03/02
 110.0.5481.154	2023/02/22			2023/02/22	2023/02/23			2023/02/27
 110.0.5481.65	2023/02/13			2023/02/14	2023/02/15	pending		2023/02/17
 110.0.5481.64	2023/02/07			2023/02/07	2023/02/07			2023/02/09
@@ -132,11 +134,11 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		111.0.5563.49				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		111.0.5563.58				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
-- GrapheneOS Vanadium	111.0.5563.49				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	111.0.5563.49				https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	111.0.5563.58				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	111.0.5563.58				https://gitlab.com/divested-mobile/mulch
 - CarbonROM, †2, 12	96.0.4664.111, 12 is not shipping yet?	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
 - OmniROM, †2, 11	96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master

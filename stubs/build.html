@@ -7,17 +7,18 @@
 						<ul>
 							<li>For builds under 3 hours you'll want to have at least a powerful quad core processor, 32GB of RAM, and a 7200RPM drive.</li>
 							<li>For builds under an hour you'll want to have a processor that gets a score of 30k+ or higher on <a href="https://www.cpubenchmark.net/cpu_list.php" target="_blank" rel="nofollow noopener noreferrer">Passmark</a>, 64GB of RAM, and a large SSD.</li>
+							<li>Note: CFI enabled kernels will fail to compile with less than 64GB of RAM.</li>
 							<li>It may be possible to get by with 16GB + zram, regardless zram is recommended in all cases.</li>
 							<li>If you plan on building in a virtual machine, in terms of performance: KVM > Hyper-V > VMWare > VirtualBox</li>
 							<li>You'll need a lot of available free space on your drives</li>
 							<ul>
-								<li>Source Code: 200GB + ~3GB per device</li>
+								<li>Source Code: 200GB + ~5GB per device</li>
 								<li>~100GB per device for building</li>
 								<li>~10GB per device for optional ccache</li>
-								<li>~1-4GB for each resulting build</li>
-								<li>~4-8GB for two target-files for a device to optionally generate incremental updates</li>
+								<li>~4GB for each resulting build</li>
+								<li>~10GB for two target-files for a device to optionally generate incremental updates</li>
 								<li>Cheap: ~$60 2TB 7200RPM HDD (non-SMR)</li>
-								<li>Fast: ~$120 1TB SSD (MLC/"enterprise" preferred)</li>
+								<li>Fast: ~$150 2TB SSD (MLC/"enterprise" preferred)</li>
 								<li>If you plan on having multiple versions available btrfs+zstd:1+duperemove is strongly recommended.</li>
 							</ul>
 						</ul>
@@ -27,19 +28,20 @@
 					<div class="section" id="deps">
 						<h3>Installing Dependencies<a href="#deps">¶</a></h3>
 						<p>Run the few commands below to get your system up to date and install all necessary dependencies. Of note the DivestOS build scripts are only tested on Fedora.</p>
-						<h4>On Fedora (strongly recommended)</h4>
+						<h4>On Fedora Workstation/Server (strongly recommended)</h4>
 							<p>The latest Fedora release is recommended.</p>
 							<pre><code>sudo dnf update;
 
-sudo dnf install @development-tools android-tools automake bc bison bzip2 bzip2-libs ccache curl dpkg-dev flex gcc gcc-c++ git git-lfs glibc-devel.{x86_64,i686} gnupg gperf ImageMagick ImageMagick-c++-devel ImageMagick-devel java-1.8.0-openjdk java-1.8.0-openjdk-devel libgcc.{x86_64,i686} libstdc++.{x86_64,i686} libX11-devel.{x86_64,i686} libxml2-devel libXrandr.{x86_64,i686} libXrender.{x86_64,i686} libxslt lz4-libs lzop make maven mesa-libGL-devel.{x86_64,i686} ncurses ncurses-compat-libs ncurses-devel.{x86_64,i686} ninja-build openssl-devel optipng jpegoptim perl-Digest-MD5-File perl-Switch pngcrush python python2-virtualenv python3 python3-mako python-mako python-markdown python-networkx readline-devel.{x86_64,i686} rsync schedtool SDL squashfs-tools syslinux-devel unzip wxGTK xml2 xz-lzma-compat zip zlib zlib-devel.{x86_64,i686} vim-common vboot-utils;
+sudo dnf install @development-tools android-tools automake bc bison bzip2 bzip2-libs ccache curl dpkg-dev flex gcc gcc-c++ git git-lfs glibc-devel.{x86_64,i686} gnupg gperf ImageMagick ImageMagick-c++-devel ImageMagick-devel java-1.8.0-openjdk java-1.8.0-openjdk-devel libgcc.{x86_64,i686} libstdc++.{x86_64,i686} libX11-devel.{x86_64,i686} libxml2-devel libXrandr.{x86_64,i686} libXrender.{x86_64,i686} libxslt lz4-libs lzop make maven mesa-libGL-devel.{x86_64,i686} ncurses ncurses-compat-libs ncurses-devel.{x86_64,i686} ninja-build openssl-devel optipng jpegoptim perl-Digest-MD5-File perl-Switch pngcrush python python3-virtualenv python3 python3-mako python-mako python-markdown python-networkx readline-devel.{x86_64,i686} rsync schedtool SDL squashfs-tools syslinux-devel unzip wxGTK xml2 xz-lzma-compat zip zlib zlib-devel.{x86_64,i686} vim-common vboot-utils mozilla-fira-mono-fonts mozilla-fira-sans-fonts;
 
+mkdir ~/bin
 curl https://storage.googleapis.com/git-repo-downloads/repo >> ~/bin/repo;
 chmod a+x ~/bin/repo;
 sudo ln -sf /usr/share/crypto-policies/LEGACY/java.txt /etc/crypto-policies/back-ends/java.config;</code></pre>
 						<h4>On Arch Linux (not recommended)</h4>
 							<p>@p4block has created a handy metapackage for installing the necessary dependencies, use your favorite AUR helper to install it. There is also a more minimal one included in our build repository that you can install with makepkg.</p>
 							<pre><code>sudo pacman -Syu;
-aurman -S lineageos-devel firejail;
+aurman -S lineageos-devel firejail ttf-fira-mono ttf-fira-sans;
 sudo paccache -rk0;</code></pre>
 						<h4>On Ubuntu (not recommended)</h4>
 							<p>Ubuntu <strike>18.04</strike> is recommended, newer should work fine with little change.</p>
@@ -58,37 +60,64 @@ sudo apt clean;</code></pre>
 firejail --profile=/etc/firejail/aosp.profile bash;</code></pre>
 						<h4>Checking out the code</h4>
 						<p>Okay, now you'll want to create the workspace. This is highly recommended to be on a separate drive from your system drive. Bash or a similar shell is required.</p>
-						<pre><code>umask 0022;
+						<pre><code>umask 0022; #correctness
+
+#Git setup
+git config --global user.name "Your Name";
+git config --global user.email "you@example.com";
+
+#Clone
 git clone https://gitlab.com/divested-mobile/divestos-build.git DivestOS;
 cd DivestOS;
-git submodule update --init --recursive; #must have git-lfs installed
+
+#Submodules
+sed -i 's|git@gitlab.com:|https://gitlab.com/|' .git/config .gitmodules; #Fixup
+git submodule update --init --recursive; #Must have git-lfs installed
+
+#Basic directories
 mkdir -p Build/LineageOS-20.0/.repo/local_manifests Builds Signing_Keys .Signing_Keys;
-gocryptfs -init .Signing_Keys;
-gocryptfs .Signing_Keys/ Signing_Keys/;
+
+#Encrypted key storage
+gocryptfs -init .Signing_Keys; #Create the vault
+gocryptfs .Signing_Keys/ Signing_Keys/; #Mount the vault
+
+#Update settings
 nano Scripts/init.sh; #Choose your options and update paths
+nano Generate_Signing_Keys.sh; #Update description
+
 cd Build/LineageOS-20.0;
+
+#Add the initial manifest
 cat ../../Manifests/Manifest_LAOS-20.0.xml > .repo/local_manifests/local_manifest.xml;
+
+#Add the vendor blobs!
+##You must find these repos yourself. Extracting them is NOT correct.
+##20.0 changed from per-vendor to per-device.
+nano .repo/local_manifests/local_manifest.xml;
+
+#Download!
 repo init -u https://github.com/LineageOS/android.git -b lineage-20.0;
 repo sync; #This part will take a while
 
 #Some systems have python3 set as default, the build scripts require python2
-virtualenv venv --python=python2; #not necessary for 18.1 and higher
-
+virtualenv venv --python=python2; #Not necessary for 20.0 and higher
 
 #Generate signing keys
 source ../../Scripts/init.sh;
-nano Generate_Signing_Keys.sh; #Update description
-source build/envsetup.sh && breakfast lineage_sailfish-user && make -j20 generate_verity_key; #edit device if not available, can be any
-sh Generate_Signing_Keys.sh $device; #repeat as needed for other devices
+awk -i inplace '!/enforce-product-packages-exist-internal/' vendor/lineage/config/common.mk; #Workaround for 20.0+ only
+source build/envsetup.sh && breakfast lineage_sailfish-user && make -j20 generate_verity_key; #Edit device if not available, can be any
+mkdir -p "$DOS_SIGNING_KEYS/NEW";
+sh ../../Scripts/Generate_Signing_Keys.sh $device; #Repeat as needed for other devices
+mv -v $DOS_SIGNING_KEYS/NEW/* "$DOS_SIGNING_KEYS/"; #Move the new keys into place
 </code></pre>
 					<h4>Setting up ccache (Optional)</h4>
 						<p>Use of ccache is highly recommended, it's an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
-						<pre><code>mkdir ccache;
-echo "export USE_CCACHE=1;" >> .bashrc;
-echo "export CCACHE_COMPRESS=1;" >> .bashrc;
-echo "export CCACHE_COMPRESSLEVEL=1;" >> .bashrc;
-echo "export CCACHE_EXEC=/usr/bin/ccache;" >> .bashrc;
-echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY];" >> .bashrc;
+						<pre><code>mkdir ccache; #Pick a place
+echo "export USE_CCACHE=1;" >> ~/.bashrc;
+echo "export CCACHE_COMPRESS=1;" >> ~/.bashrc;
+echo "export CCACHE_COMPRESSLEVEL=1;" >> ~/.bashrc;
+echo "export CCACHE_EXEC=/usr/bin/ccache;" >> ~/.bashrc;
+echo "export CCACHE_DIR=[PATH TO CCACHE DIRECTORY];" >> ~/.bashrc; #The place you chose
 source ~/.bashrc;
 ccache -M 128GB; #Optionally set a size limit</code></pre>
 					</div>
@@ -111,14 +140,21 @@ ccache -M 128GB; #Optionally set a size limit</code></pre>
 						<pre><code>cd Build/LineageOS-20.0;
 source venv/bin/activate; #Only for python3 default systems, not needed for 18.1 and higher
 source ../../Scripts/init.sh;
+
+#Undo any previous changes
 resetWorkspace;
+rm -rf packages/apps/Fennec_DOS-Shim/ vendor/divested/ vendor/fdroid_prebuilt/ packages/apps/SupportDivestOS/; #Remove remenants
+rm -rf out; #Remove the last build, keep to speedup builds at cost of cruft
+
+#Apply the changes
 patchWorkspace;
+
+#Compile!
 buildDevice [device]; #or buildAll for all supported devices</code></pre>
 						<p>Afterwards you should have flashable zips located in $DOS_BUILDS</p>
 					</div>
 					<div class="section" id="install">
 						<h3>Installing<a href="#install">¶</a></h3>
-						<p>(Optional) Flash the recovery: <code>fastboot flash recovery divested*$device-recovery.img;</code></p>
-						<p>Reboot into recovery on your device and <code>$ adb sideload divested*$device.zip;</code></p>
+						<p>Follow the appropriate steps for your device listed <a href="/pages/bootloader" target="_blank">here</a>.</p>
 					</div>
 				</div>
