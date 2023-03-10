@@ -23,7 +23,8 @@
 							</ul>
 						</ul>
 						<p>Second you'll want to have a fast Internet connection to download the source code and OS dependencies, 100Mbps is recommended.
-						<br>Lastly you'll need to have an excellent cooling solution, your computer will be running at full load for quite some time.</p>
+						<br>Lastly you'll need to have an excellent cooling solution, your computer will be running at full load for quite some time.
+						<br>There is a video of this process from start to finish <a href="https://divested.dev/pages/videos#divestos-compile_quick_start" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
 					</div>
 					<div class="section" id="deps">
 						<h3>Installing Dependencies<a href="#deps">¶</a></h3>
@@ -83,7 +84,7 @@ gocryptfs .Signing_Keys/ Signing_Keys/; #Mount the vault
 
 #Update settings
 nano Scripts/init.sh; #Choose your options and update paths
-nano Generate_Signing_Keys.sh; #Update description
+nano Scripts/Generate_Signing_Keys.sh; #Update description
 
 cd Build/LineageOS-20.0;
 
@@ -106,9 +107,11 @@ virtualenv venv --python=python2; #Not necessary for 20.0 and higher
 source ../../Scripts/init.sh;
 awk -i inplace '!/enforce-product-packages-exist-internal/' vendor/lineage/config/common.mk; #Workaround for 20.0+ only
 source build/envsetup.sh && breakfast lineage_sailfish-user && make -j20 generate_verity_key; #Edit device if not available, can be any
-mkdir -p "$DOS_SIGNING_KEYS/NEW";
 sh ../../Scripts/Generate_Signing_Keys.sh $device; #Repeat as needed for other devices
-mv -v $DOS_SIGNING_KEYS/NEW/* "$DOS_SIGNING_KEYS/"; #Move the new keys into place
+mv -nv $DOS_SIGNING_KEYS/NEW/* "$DOS_SIGNING_KEYS/"; #Move the new keys into place
+
+#TODO: document how to include firmware
+#TODO: document openssl1.1 requirement for avb signing?
 </code></pre>
 					<h4>Setting up ccache (Optional)</h4>
 						<p>Use of ccache is highly recommended, it's an easy way to dramatically reduce build time and power usage. This is extremely recommended to be on a separate drive from your system drive and your build drive.</p>
@@ -148,6 +151,12 @@ rm -rf out; #Remove the last build, keep to speedup builds at cost of cruft
 
 #Apply the changes
 patchWorkspace;
+
+#Verify the changes applied
+##There should be nine `[SCRIPT COMPLETE]` lines on 15.1 through 20.0 and ten on 14.1
+##Check output for keywords like: err, fatal, fail, cannot, no such file, already applied, 3way, skip
+##Check output for yellow or red text
+##Real example outputs will be provided in the future
 
 #Compile!
 buildDevice [device]; #or buildAll for all supported devices</code></pre>
