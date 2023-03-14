@@ -74,7 +74,7 @@ createTable() {
 	#yellow: non-eol branches
 	if [[ $versionStripped == "20.0" ]]; then
 		versionStyle="style=\"color:#4CAF50;\"";
-	elif [[ $versionStripped == "17.1" ]] || [[ $versionStripped == "18.1" ]] || [[ $versionStripped == "19.1" ]]; then
+	elif [[ $versionStripped == "18.1" ]] || [[ $versionStripped == "19.1" ]]; then
 		versionStyle="style=\"color:#FFC107;\"";
 	else
 		versionStyle="style=\"color:#F44336;\"";
@@ -86,7 +86,7 @@ createTable() {
 	vASB=$(getVendorPatchLevel $version $devicePath)
 	#green: keep 4 months + 1 future
 	#yellow: previous year
-	if [[ $vASB == "2023-03"* ]] || [[ $vASB == "2023-02"* ]] || [[ $vASB == "2023-01"* ]] || [[ $vASB == "2022-12"* ]] || [[ $vASB == "2022-11"* ]]; then
+	if [[ $vASB == "2023-04"* ]] || [[ $vASB == "2023-03"* ]] || [[ $vASB == "2023-02"* ]] || [[ $vASB == "2023-01"* ]] || [[ $vASB == "2022-12"* ]]; then
 		vASBStyle="style=\"color:#4CAF50;\"";
 	elif [[ $vASB == "2022-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
