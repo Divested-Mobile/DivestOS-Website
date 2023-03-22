@@ -6,6 +6,53 @@
 					<?php print(file_get_contents("stubs/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2023-03">
+						<h3>March 22nd 2023 Update<a href="#2023-03">¶</a></h3>
+						<h4>Special Announcement</h4>
+						<ul>
+							<li>Tad (SkewedZeppelin) was <a href="https://www.fsf.org/news/free-software-awards-winners-announced-eli-zaretskii-tad-skewedzeppelin-gnu-jami" target="_blank" rel="nofollow noopener noreferrer">granted the 2022 'Outstanding New Free Software Contributor' award</a> by the Free Software Foundation.</li>
+						</ul>
+						<h4>System Updates</h4>
+						<ul>
+							<li>15.1 and 16.0 release candidate #1 March ASB builds were published on March 23rd.</li>
+							<li>17.1 and 20.0 release candidate #1 March ASB builds were published on March 21st and 22nd respectively.</li>
+							<li>An issue with system services not having doze exemptions applied to their background tasks has been fixed thanks to a patch from GrapheneOS. This should fix notifications for Messaging and Etar on 18.1 and higher.</li>
+							<li>18.1 and 19.1 release candidate #1 March ASB builds were published on March 18th.</li>
+							<li>15.1, 16.0, and 17.1 rebuilds were published on March 18th.</li>
+							<li>14.1 release candidate #1 March ASB builds were published on March 14th.</li>
+							<li>15.1 and 16.0 release candidate #1 February ASB builds were published on February 19th.</li>
+							<li>20.0 now adds Tor Browser and Briar to the VPN killswitch bypass list when Orbot is used, thanks to a modified patch from CalyxOS. See <a href="https://github.com/guardianproject/orbot/pull/514#issuecomment-962503626" target="_blank" rel="nofollow noopener noreferrer">here for more information</a>.</li>
+							<li>18.1 and higher now fully disables NTP when `Set time automatically` is disabled in Settings, thanks to a patch from GrapheneOS. Typical AOSP continues to poll NTP even when this is off.</li>
+						</ul>
+						<h4>Workspace Updates</h4>
+						<ul>
+							<li>The build scripts have had many robustness improvements.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>An experimental 20.0 based avicii build is now available with firmware included. If your bootloader is unlocked you should be able to in-place upgrade from 17.1. If your bootloader is locked, you must backup and unlock first.</li>
+							<li>instantnoodle* failed to compile for the March update due to space constraints of its /system partition, builds may or may not return for it.</li>
+							<li>kebab failed to compile for the February update due to space constraints of its /system partition, builds may or may not return for it.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Hypatia now has a new database from <a href="https://echap.eu.org/" target="_blank" rel="nofollow noopener noreferrer">Echap</a> for finding known stalkerware.</li>
+							<li>Updated Mull to 110.1.0-1, 111.0.0-1, and 111.1.0-1, has 1, 20, and 0 security fixes respectively.</li>
+							<li>Updated Mulch (WebView) to Chromium 110.0.5481.154-1, 111.0.5563.49-1, 111.0.5563.58-1, and 111.0.5563.116-1, has 10, -, 40, and 8 security fixes respectively.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>There is now a version of the build guide in video form <a href="https://divested.dev/pages/videos#divestos-compile_quick_start" target="_blank" rel="nofollow noopener noreferrer">here</a>.</li>
+							<li>The build guide has been updated with more information and some fixes.</li>
+							<li>The website now features a full-text search thanks to the <a href="https://pagefind.app/" target="_blank" rel="nofollow noopener noreferrer">Pagefind</a> library!</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>AOSP 10.0/17.1 now appears to be end-of-life.</li>
+							<li>Google took an extra week from the 6th to 13th to publish the March security bulletin.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2023-02">
 						<h3>February 18th 2023 Update<a href="#2023-02">¶</a></h3>
 						<h4>System Updates</h4>
@@ -42,7 +89,6 @@
 							<li>The entire DivestOS.org website is now completely static for improved performance and security.</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2023-01.2">
 						<h3>January 23rd 2023 Update<a href="#2023-01.2">¶</a></h3>
 						<h4>System Updates</h4>

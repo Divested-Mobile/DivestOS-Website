@@ -43,7 +43,7 @@ getVendorPatchLevel() {
 		elif [ $1 == "LineageOS-19.1" ]; then
 			level="2022-07";
 		elif [ $1 == "LineageOS-20.0" ]; then
-			level="2023-02";
+			level="2023-03";
 		else
 			level="Unknown";
 		fi;
@@ -128,6 +128,7 @@ createTable apollo LineageOS-14.1 amazon/apollo amazon/hdx-common amazon/hdx-com
 createTable aura LineageOS-20.0 razer/aura razer/sdm845;
 createTable aurora LineageOS-20.0 sony/tama-common sony/sdm845 sony/aurora;
 createTable avicii LineageOS-17.1 oneplus/avicii oneplus/sm7250;
+createTable avicii LineageOS-20.0 oneplus/avicii oneplus/sm7250;
 createTable axon7 LineageOS-15.1 zte/axon7 zte/msm8996;
 createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974 oppo/common oppo/msm8974-common;
 createTable barbet LineageOS-20.0 google/redbull google/redbull google/barbet;
