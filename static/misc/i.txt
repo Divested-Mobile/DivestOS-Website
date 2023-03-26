@@ -5,6 +5,7 @@ General
 - Was proprietary for its first two years
 
 - Forked apps reusing the original package IDs
+ - Prevents users from using the real versions
  - https://github.com/iodeOS/fdroid/issues/1#issuecomment-1308925420
 
 
@@ -86,6 +87,15 @@ System
 - Uses 1.x.pool.ntp.org which lacks IPv6 support
  - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/00b53c7e0993b7174c81fc48873ec7a02948795e/overlay/frameworks/base/core/res/res/values/config.xml#L50
  - https://github.com/abh/ntppool/pull/176
+
+- Includes the proprietary Magic Earth app for navigation
+ - Despite FOSS user friendly alternatives existing such as OSMAnd and Organic Maps
+
+
+microG
+======
+- microG misconceptions
+ - See https://divestos.org/misc/mg.txt
 
 
 Website

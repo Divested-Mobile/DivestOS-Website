@@ -60,7 +60,7 @@ getKernelVersion() {
 	patcherPath="Scripts/$1/CVE_Patchers/android_kernel_$(echo $2 | sed 's/\//_/').sh";
 	if [ -f "$patcherPath" ]; then
 		patchCount=$(cat "$patcherPath" | wc -l);
-		patchCount=$(($patchCount-4))
+		patchCount=$(($patchCount-6))
 		patchCount=" + $patchCount patches";
 	fi;
 	echo -n "$version$patchCount";

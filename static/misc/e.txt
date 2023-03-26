@@ -15,6 +15,7 @@ Web Browser & System WebView
 ============================
 - Currently shipping Chromium 108.0.5359.156 from 2022/12/12 with 96 known security vulnerabilities
  - 2023/02/06: The cycle starts again
+ - history: https://divestos.org/misc/ch-dates.txt
 
 - [FIXED] Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 306 known security vulnerabilities
  - 2023/02/06: they shipped 108.0.5359.156 to users in v1.8.1, however at time of writing that is two major versions behind
@@ -72,6 +73,9 @@ PDF Viewer
 
 microG
 ======
+- microG misconceptions
+ - See https://divestos.org/misc/mg.txt
+
 - Phones home to Google out of box, despite being "degoogled"
  - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L9
 
@@ -118,6 +122,11 @@ Sentry Tracker
 
 Device Sales
 ============
+- Sells their `Murena One` phone which uses the 5+ year old MT6771 system-on-chip from February 2018
+ - https://murena.com/shop/smartphones/brand-new/murena-one/
+ - https://en.wikichip.org/wiki/mediatek/helio/mt6771
+ - This is the same SoC used in the `Brax Phone` and `Simple Phone`
+
 - Sells devices like the Samsung Galaxy S9 which lacks VoLTE under custom operating systems
  - Many carriers are phasing out 2G/3G, making VoLTE mandatory for placing and receiving phone calls
  - https://web.archive.org/web/20221203154649/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
@@ -133,9 +142,27 @@ Device Sales
  - 2+ years old!: https://web.archive.org/web/20221203154521/https://community.e.foundation/t/my-e-exit-interview/45687/8
 
 
+Cloud Services
+==============
+- E2EE isn't offered on their Nextcloud instance, citing data loss concerns, yet they leaked user data to other users
+ - https://community.e.foundation/t/service-announcement-26-may/41252/27
+ - https://en.wikipedia.org/wiki//e/OS#Data_leakage_incident
+ - Nextcloud Server Side Encryption (SSE) is NOT secure as they can trivally record your password on login-flow and decrypt your files
+  - https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/encryption_configuration.html
+   - "The encryption app does not protect your data if your Nextcloud server is compromised, and it does not prevent Nextcloud administrators from reading user’s files."
+   - Furthermore it doesn't encrypt file or folder names
+    - "It encrypts only the contents of files, and not filenames and directory structures."
+  - SSE was demonstrated as useless in the leak
+
+- Trackers in their newsletter
+ - https://web.archive.org/web/20221203154857/https://community.e.foundation/t/tracker-into-the-e-foundation-letter/38178
+
+- Website requires JavaScript
+
+
 Weather [DEPRECATED]
 ====================
-- Performs requests over HTTP
+- Performs requests over HTTP, leaking your location to any observer
  - https://gitlab.e.foundation/e/os/Weather/-/blob/2c623c7a9b4a341dd3fb6a2545e84ebf850d780b/app/src/main/java/foundation/e/weather/utils/Constants.java#L73
 
 
@@ -147,12 +174,6 @@ Not Covered (nuanced or needs research/sources)
 - IMSI to SUPL
 - Which SUPL server is default? (for example many "degoogled" systems use supl.vodafone.com... which is just a CNAME to Google)
 - Signature spoofing support, with no restrictions
-- Website requires JavaScript
-- Trackers in their newsletter
- - https://web.archive.org/web/20221203154857/https://community.e.foundation/t/tracker-into-the-e-foundation-letter/38178
-- E2EE isn't offered on their Nextcloud instance, citing data loss concerns
- - leaking user data to other users: https://community.e.foundation/t/service-announcement-26-may/41252/27
- - https://en.wikipedia.org/wiki//e/OS#Data_leakage_incident
 
 
 See something wrong? Open an issue or merge request:

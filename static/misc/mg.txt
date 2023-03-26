@@ -1,0 +1,23 @@
+last updated: 2023/03/24
+
+microG
+======
+- microG misconception #1: "it doesn't connect to Google servers"
+ - yes it does
+  - https://github.com/microg/GmsCore/blob/master/firebase-auth/core/src/main/kotlin/org/microg/gms/firebase/auth/IdentityToolkitClient.kt#L35
+  - https://github.com/microg/GmsCore/blob/master/play-services-basement/src/main/java/org/microg/gms/gcm/GcmConstants.java#L92
+  - https://github.com/microg/GmsCore/blob/master/play-services-core/src/main/java/org/microg/gms/auth/AuthRequest.java#L35
+  - https://github.com/microg/GmsCore/blob/master/play-services-core/src/main/java/org/microg/gms/checkin/CheckinClient.java#L50
+  - https://github.com/microg/GmsCore/blob/master/play-services-core/src/main/java/org/microg/gms/gcm/RegisterRequest.java#L37
+  - https://github.com/microg/GmsCore/blob/master/play-services-core/src/main/java/org/microg/gms/people/PeopleManager.java#L44
+  - https://github.com/microg/GmsCore/blob/master/play-services-core/src/main/kotlin/org/microg/gms/auth/appcert/AppCertManager.kt#L99
+  - https://github.com/microg/GmsCore/blob/master/play-services-droidguard/core/src/main/kotlin/org/microg/gms/droidguard/core/HandleProxyFactory.kt#L217
+  - https://github.com/microg/GmsCore/blob/master/play-services-safetynet/core/src/main/java/org/microg/gms/safetynet/Attestation.java#L155
+
+- microG misconception #2: "it is a fully open source replacement"
+ - every app talking to microG does so using the full proprietary Google Play Services library
+
+
+See something wrong? Open an issue or merge request:
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/mg.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/mg.txt
