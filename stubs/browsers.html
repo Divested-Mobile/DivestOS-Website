@@ -1,7 +1,7 @@
 				<div class="card fluid">
 					<h2>Browser Comparison Table</h2>
 					<p>All of the available browsers have each of their own faults as documented in the table below.<br>These tables primarily cover the default/out-of-box settings unless otherwise noted. Recommend settings to change are noted at the bottom of the page.<br>While DivestOS includes a Gecko based browser for privacy reasons, Chromium based browsers have many security advantages. It is up to the user to choose their preference.</p>
-					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Fennec F-Droid <strong>is Fenix based, not Fennec based</strong> despite its name.</p>
+					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Fennec F-Droid is Fenix based, not Fennec based despite its name.</p>
 					<p>Both lists are sorted by order of recommendation, closer to the top the more we'd recommend.<br>For more detailed privacy related technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.<br>Extra reading on <a href="https://grapheneos.org/usage#web-browsing" target="_blank" rel="nofollow noopener noreferrer">mobile browsers</a>, an overview of <a href="https://github.com/privacyguides/privacyguides.org/discussions/1797#discussioncomment-3721547" target="_blank" rel="nofollow noopener noreferrer">fingerprint-resistance approaches</a>, an in-depth <a href="https://arxiv.org/pdf/2112.15561.pdf" target="_blank" rel="nofollow noopener noreferrer">security comparison of the leading engines</a>, and a fun <a href="https://contrachrome.com/ContraChrome_en.pdf" target="_blank" rel="nofollow noopener noreferrer">webcomic against the Chromium monoculture</a>.<br>Release comparisons are also available for <a href="/misc/ffa-dates.txt" target="_blank">Firefox</a> and <a href="/misc/ch-dates.txt" target="_blank">Chromium</a>.</p>
 					<p>Disclosure: Mull and Mulch, noted below, are projects of DivestOS.<br>Disclosure: DivestOS helps maintain `Fennec F-Droid` and has small contributions (commits) to Firefox, FOSS Browser, and Lightning.</p>
 					<p>Last updated: 2023/04/02</p>
@@ -44,7 +44,7 @@
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strongest</td>
-									<td data-label="Content Blocker" style="color:#4CAF50;">uBlock Origin</td>
+									<td data-label="Content Blocker" style="color:#4CAF50;">uBlock Origin (see note)</td>
 									<td data-label="Maintained">Within a month</td>
 								</tr>
 								<tr>
@@ -129,6 +129,15 @@
 									<td data-label="Maintained">Within two months</td>
 								</tr>
 								<tr>
+									<td data-label="Name"><a href="https://vanadium.app" target="_blank" rel="nofollow noopener noreferrer">Vanadium</a></td>
+									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
+									<td data-label="Content Blocker" style="color:#f44336;">No</td>
+									<td data-label="Maintained">Within a day</td>
+								</tr>
+								<tr>
 									<td data-label="Name"><a href="/pages/our_apps#mulch" target="_blank" rel="nofollow noopener noreferrer">Mulch</a></td>
 									<td data-label="FOSS" style="color:#FFC107;">Proprietary Libraries</td>
 									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
@@ -204,7 +213,7 @@
 					<div class="section" id="tuning">
 						<h3>Recommend Settings to Change<a href="#tuning">¶</a></h3>
 						<p>Some of these settings may not be available or may already be set depending on browser.</p>
-						<h4 id="tuningFenix">Mull/Tor Browser/Fennec F-Droid/Firefox/Iceraven<a href="#tuningFenix">¶</a></h4>
+						<h4 id="tuningFenix">Mull/Fennec F-Droid/Firefox/Iceraven<a href="#tuningFenix">¶</a></h4>
 						<ul>
 							<li>Settings > Homepage > Sponsored shortcuts > Disabled</li>
 							<li>Settings > Homepage > Thought-provoking stories > Disabled</li>
@@ -235,8 +244,9 @@
 						<h4 id="tuningTorBrowser">Tor Browser<a href="#tuningTorBrowser">¶</a></h4>
 						<ul>
 							<li>Settings > Security Level > Safer</li>
+							<li>Usage of uBlock Origin may provide privacy and security benefits but it and other changes are <strong>not</strong> recommended by the Tor Project.</li>
 						</ul>
-						<h4 id="tuningChromium">Mulch/Vanadium/Bromite/Chromium/Chrome/Edge/Vivaldi<a href="#tuningChromium">¶</a></h4>
+						<h4 id="tuningChromium">Mulch/Vanadium/Bromite/Chromium<a href="#tuningChromium">¶</a></h4>
 						<ul>
 							<li>Settings > Privacy and security > Always use secure connections > Enabled</li>
 							<li>Settings > Privacy and security > WebRTC IP handling policy > Disable non-proxied UDP</li>
@@ -245,7 +255,7 @@
 							<li>Settings > Site Settings > JavaScript JIT > Blocked</li>
 							<li>Navigate to chrome://flags > Darken websites checkbox in themes setting > Enabled > Relaunch</li>
 						</ul>
-						<h4 id="tuningChrome">Chromium/Chrome<a href="#tuningChrome">¶</a></h4>
+						<h4 id="tuningChrome">Chromium<a href="#tuningChrome">¶</a></h4>
 						<ul>
 							<li>Settings > Google services > Help improve Chrome's features and performance > Disabled</li>
 							<li>Settings > Google services > Make searches and browsing better > Disabled</li>
@@ -276,39 +286,6 @@
 						<h4 id="tuningLightning">Lightning<a href="#tuningLightning">¶</a></h4>
 						<ul>
 							<li>Settings > Ad Block Settings > Block ads > Enabled</li>
-						</ul>
-						<hr>
-						<h4 id="tuningEdge">Microsoft Edge<a href="#tuningEdge">¶</a></h4>
-						<ul>
-							<li>Settings > Privacy and security > Diagnostic data > Optional diagnostic data > Disabled</li>
-							<li>Settings > Privacy and security > Tracking prevention > Strict</li>
-							<li>Settings > Privacy and security > Block ads > Block ads > Enabled</li>
-							<li>Settings > Privacy and security > Block ads > Allow acceptable ads > Disabled</li>
-							<li>Settings > General > Shopping > Disabled</li>
-							<li>Settings > Notifications > Disable all</li>
-							<li>Settings > New tab page > Detect my location with GPS > Disabled</li>
-						</ul>
-						<h4 id="tuningOpera">Opera<a href="#tuningOpera">¶</a></h4>
-						<ul>
-							<li>Settings > VPN > Disabled</li>
-							<li>Settings > Data savings > Disabled</li>
-							<li>Settings > Ad blocking > Allow Acceptable Ads™ > Disabled</li>
-							<li>Settings > Tracker blocking > Enabled</li>
-							<li>Settings > Start page > News > Personalization > Disable all</li>
-							<li>Settings > Privacy & security > Data collection > Disable all</li>
-							<li>Settings > Search > Suggested sites > Disabled</li>
-							<li>Settings > Search > Trending searches > Disabled</li>
-						</ul>
-						<h4 id="tuningVivaldi">Vivaldi<a href="#tuningVivaldi">¶</a></h4>
-						<ul>
-							<li>Settings > Tracker and Ad Blocking > Block Trackers and Ads</li>
-							<li>Settings > Tracker and Ad Blocking > Manage Tracker Blocking Sources > Enable all</li>
-							<li>Settings > Privacy and security > Broadcast IP for best WebRTC performance > Disabled</li>
-						</ul>
-						<h4 id="tuningYandex">Yandex<a href="#tuningYandex">¶</a></h4>
-						<ul>
-							<li>Settings > Ad blocking > Intrusive ad blocking > Enabled</li>
-							<li>Settings > Make the app better > Disabled</li>
 						</ul>
 					</div>
 				</div>
