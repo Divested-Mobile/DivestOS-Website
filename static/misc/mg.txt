@@ -1,8 +1,8 @@
-last updated: 2023/03/24
+last updated: 2023/04/04
 
 microG
 ======
-- microG misconception #1: "it doesn't connect to Google servers"
+- microG misconception #1: "it doesn't connect to Google servers" & "it spoofs your country"
  - yes it does
   - https://github.com/microg/GmsCore/blob/master/firebase-auth/core/src/main/kotlin/org/microg/gms/firebase/auth/IdentityToolkitClient.kt#L35
   - https://github.com/microg/GmsCore/blob/master/play-services-basement/src/main/java/org/microg/gms/gcm/GcmConstants.java#L92
@@ -17,6 +17,15 @@ microG
 - microG misconception #2: "it is a fully open source replacement"
  - every app talking to microG does so using the full proprietary Google Play Services library
 
+- microG misconception #3: "it is just a normal app" & "it isn't privileged"
+  - https://gitlab.com/CalyxOS/platform_prebuilts_calyx_microg/-/blob/android13/Android.mk#L8
+  - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/Android.mk#L24
+  - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/staging/prebuilts/GmsCore/Android.mk#L37
+  - https://github.com/MSe1969/android_prebuilts_prebuiltapks/blob/master/GmsCore/Android.mk#L24
+
+- Has unclear potential to leak location to apps without location permission
+  - "Fused Locations: Does not honor AppOps!"
+   - https://github.com/microg/GmsCore/wiki/Implementation-Status
 
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/mg.txt

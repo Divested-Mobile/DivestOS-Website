@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The deets<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2023-03-21</p>
+						<p>Last updated: 2023-04-05</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -210,6 +210,7 @@
 							<li>T: Perform additional boot-time checks on system package updates (GrapheneOS)</li>
 							<li>T: Replace agnss.goog with the Broadcom PSDS server (heavily based off of a GrapheneOS patch)</li>
 							<li>R/S/T: DeviceIdleJobsController: don't ignore whitelisted system apps (GrapheneOS)</li>
+							<li>P/Q/R/S/T: Don't crash apps that depend on missing Gservices provider (GrapheneOS)</li>
 							<li>S/T: Revert "Null safe package name in AppOps writeState" (GrapheneOS)</li>
 							<li>S/T: appops: skip ops for invalid null package during state serialization (GrapheneOS)</li>
 							<li>Q/R/S/T: Add a setting for forcibly disabling SUPL (GrapheneOS)</li>
@@ -220,7 +221,7 @@
 							<li>Q/R: Restore the Sensors Off tile (DivestOS)</li>
 							<li>P/Q/R: More 'Private DNS' options (based off of a CalyxOS patch)</li>
 							<!--<li>P/Q/R/S: Add Open Camera to aux camera allowlist</li>-->
-							<li>Remove CompanionDeviceManager, used to support Android Wear</li>
+							<!--<li>Remove CompanionDeviceManager, used to support Android Wear</li>-->
 							<li>N/O/Q: Remove Osu, Automatic Wi-Fi connection non-sense</li>
 							<li>Remove PrintRecommendationService, Creates popups to install proprietary print apps</li>
 							<li>Set animation scales to 0.5</li>
@@ -297,6 +298,7 @@
 							<li>Q/R/S/T: Backups are not sent to Google (GrapheneOS)</li>
 							<li>!N: Don't prompt to add account when creating a contact (CalyxOS)</li>
 							<li>Use common intent for directions instead of Google Maps URL (GrapheneOS)</li>
+							<li>!N: Add basic support for vCard 4.0 (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_apps_Dialer</h5>
 						<ul>
@@ -432,6 +434,7 @@
 							<li>S/T: Add support for always generating new random MAC (GrapheneOS)</li>
 							<li>S: Fix MAC address leak after SSR (AOSP)</li>
 							<li>S: WifiService: Capture BackendBusyException in MacRandomization (CodeAurora)</li>
+							<li>T: wifi: resurrect mWifiLinkLayerStatsSupported counter (sassmann)</li>
 						</ul>
 						<h5>android_packages_providers_DownloadProvider</h5>
 						<ul>

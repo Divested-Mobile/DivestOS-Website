@@ -1,11 +1,11 @@
-last updated: 2023/04/03
+last updated: 2023/04/05
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
-112.0.5615.48		2023/03/29				https://chromereleases.googleblog.com/2023/03/early-stable-update-for-android_01850485126.html
+112.0.5615.48		2023/03/29	16			https://chromereleases.googleblog.com/2023/04/stable-channel-update-for-desktop.html
 111.0.5563.116		2023/03/21	8			https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop_21.html
 111.0.5563.58		2023/03/06	40, 1 critical		https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop.html
 111.0.5563.49		2023/03/02				https://chromereleases.googleblog.com/2023/03/early-stable-update-for-android.html
@@ -74,7 +74,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-112.0.5615.48	2023/03/29	96+ksv		2023/03/29	2023/03/30					96+ksv
+112.0.5615.48	2023/03/29	112ksv		2023/03/29	2023/03/30	pending		2023/04/04	112ksv
 111.0.5563.116	2023/03/21			2023/03/21	2023/03/22	2023/03/31	2023/03/22
 111.0.5563.58	2023/03/06			2023/03/06	2023/03/07	2023/03/14	2023/03/10
 111.0.5563.49	2023/03/02			2023/03/02	2023/03/02
@@ -159,7 +159,8 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- CalyxOS		111.0.5563.115				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- uazo's Bromite Fork	112.0.5615.48				https://github.com/uazo/bromite-buildtools/releases
+- CalyxOS		112.0.5615.48				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			108.0.5359.156, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 - lin-microG		108.0.5359.156, Bromite prebuilts	https://github.com/MSe1969/android_external_bromite-webview
