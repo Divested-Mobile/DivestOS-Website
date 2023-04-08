@@ -1,4 +1,4 @@
-last updated: 2023/04/06
+last updated: 2023/04/08
 
 disclosure: Mulch is a DivestOS project
 
@@ -143,8 +143,9 @@ OS Current Versions
 Standalone:
 - GrapheneOS Vanadium	112.0.5615.48				https://github.com/GrapheneOS/Vanadium/commits/main
 - DivestOS/Mulch	112.0.5615.48				https://gitlab.com/divested-mobile/mulch
-- CarbonROM, †2, 12	96.0.4664.111, 12 is not shipping yet?	https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
-- OmniROM, †2, 11	96.0.4664.54				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/staging
+- CarbonROM, †2, 12	96.0.4664.111				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
+- CarbonROM, †2, 13	107.0.5304.54 				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-11.0_r7
+- OmniROM, †2, 13	108.0.5359.109				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:

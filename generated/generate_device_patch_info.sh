@@ -127,7 +127,6 @@ createTable angler LineageOS-15.1 huawei/angler huawei/angler;
 createTable apollo LineageOS-14.1 amazon/apollo amazon/hdx-common amazon/hdx-common;
 createTable aura LineageOS-20.0 razer/aura razer/sdm845;
 createTable aurora LineageOS-20.0 sony/tama-common sony/sdm845 sony/aurora;
-createTable avicii LineageOS-17.1 oneplus/avicii oneplus/sm7250;
 createTable avicii LineageOS-20.0 oneplus/avicii oneplus/sm7250;
 createTable axon7 LineageOS-15.1 zte/axon7 zte/msm8996;
 createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974 oppo/common oppo/msm8974-common;
@@ -174,7 +173,6 @@ createTable flounder LineageOS-15.1 htc/flounder htc/flounder;
 createTable flounder_lte LineageOS-15.1 htc/flounder_lte htc/flounder htc/flounder;
 createTable flox LineageOS-18.1 asus/flox google/msm;
 createTable FP2 LineageOS-18.1 fairphone/FP2 fairphone/msm8974;
-createTable FP3 LineageOS-19.1 fairphone/FP3 fairphone/sdm632; #superseded
 createTable FP3 LineageOS-20.0 fairphone/FP3 fairphone/sdm632;
 createTable FP4 LineageOS-20.0 fairphone/FP4 fairphone/sm7225;
 createTable fugu LineageOS-15.1 asus/fugu asus/fugu;
