@@ -6,6 +6,47 @@
 					<?php print(file_get_contents("stubs/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2023-04">
+						<h3>April 17th 2023 Update<a href="#2023-04">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>18.1 and 20.0 release candidate #1 April ASB builds were published on April 16th and 17th respectively.</li>
+							<li>19.1 release candidate #2 April ASB builds were published on April 15th with 3 additional security fixes.</li>
+							<li>14.1 and 19.1 release candidate #1 April ASB builds were published on April 12th.</li>
+							<li>18.1 and 19.1 rebuilds were published on April 2nd.</li>
+							<li>16.0 rebuilds were published on April 1st.</li>
+							<li>14.1, 15.1, and 17.1 release candidate #2 March ASB builds were published on April 1st, they contain 1, 1, and 2 additional security fixes.</li>
+							<li>Apps that check for but do not require Google Services Framework should now work without crashing on 16.0 and higher thanks to a patch from GrapheneOS.</li>
+							<li>A workaround has been applied to silence some Wi-Fi driver related log spam on 20.0 for select devices (FP3).</li>
+							<li>CompanionDeviceManager has been restored on 15.1 and higher which should improve compatibility with some Wearable apps.</li>
+						</ul>
+						<h4>Roster Updates</h4>
+						<ul>
+							<li>santoni/land 16.0 has been replaced by a unified Mi8937 20.0. A wipe will be required due to signing key change.</li>
+							<li>20.0 additions: crownlte, pro1x</li>
+							<li>19.1 to 20.0: cheryl, mata, FP3</li>
+							<li>17.1 to 20.0: avicii, star*lte</li>
+							<li>17.1 to 18.1: griffin</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Hypatia now uses signed databases for improved security/trust. Users MUST refresh databases after updating as the new version refuses to load older unsigned databases.</li>
+							<li>Updated Mull to 112.0.0-1, has 56 security fixes.</li>
+							<li>Updated Mulch (WebView) to Chromium 112.0.5615.48-1 and 112.0.5615.101-1, has 16 and 2 security fixes respectively.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>Supporting files (eg. avb keys and copy-parts), while already being effectively signed, now have GPG .asc signatures available too.</li>
+							<li>Devices with broken bootloaders are now documented <a href="/pages/faq#deviceBootloader" target="_blank">here</a>.</li>
+							<li>The Browsers page now has a list of recommended settings to change for improved privacy & security.</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>Users are strongly recommended to use the official F-Droid client if they are not already, as the others currently lack mirror support and delta index updates along with other issues (eg. not maintained, no localization support, no download cache/resumption support).</li>
+							<li>A <a href="https://mirror-ro1.divested.dev" target="_blank" rel="nofollow noopener noreferrer">mirror</a> has been added to reduce load on the primary web server. More <a href="https://divested.dev/pages/infrastructure#mirror.divested.dev" target="_blank" rel="nofollow noopener noreferrer">mirrors</a> will hopefully be added soon. Please <a href="https://divested.dev/donate" target="_blank" rel="nofollow noopener noreferrer">donate</a> to cover their added costs.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2023-03">
 						<h3>March 22nd 2023 Update<a href="#2023-03">¶</a></h3>
 						<h4>Special Announcement</h4>
@@ -52,7 +93,6 @@
 							<li>Google took an extra week from the 6th to 13th to publish the March security bulletin.</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2023-02">
 						<h3>February 18th 2023 Update<a href="#2023-02">¶</a></h3>
 						<h4>System Updates</h4>
