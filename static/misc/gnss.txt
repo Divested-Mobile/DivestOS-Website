@@ -1,3 +1,5 @@
+last updated: 2023/04/26
+
 - GNSS is any of GPS (US), GLONASS (RU), Beidou (CN), and Galileo (EU): https://en.wikipedia.org/wiki/GNSS
 	- GNSS satellites can be further helped via SBAS (eg. land towers or ocean buoys): https://en.wikipedia.org/wiki/GNSS_augmentation
 - GNSS TTFF is slow due to the data rates and distances: https://en.wikipedia.org/wiki/Time_to_first_fix
@@ -38,9 +40,10 @@
 	- Android uses supl.google.com as a fallback SUPL server.
 		- Carrier config or SIM card can override this.
 		- An emergency call can also override this.
-			- This functionality may have been abused by carriers to gather accurate locations when not actually in an emergency call.
+			- This functionality may have been abused (by carriers) to gather accurate locations when not actually in an emergency call: https://nvd.nist.gov/vuln/detail/CVE-2018-9526
 		- supl.google.com only supports MSB.
 		- GrapheneOS provides a proxy override for this since 2023/03/04: https://grapheneos.org/releases#2023030400
+		- Some aftermarket systems change the fallback to supl.vodafone.com which is actually just a CNAME to supl.google.com.
 	- Some aftermarket systems allow the user to disable use of SUPL:
 		- GrapheneOS since 2023-02-10: https://grapheneos.org/releases#2023021000
 		- DivestOS 17.1+ since 2023-02-11: https://divestos.org/pages/news#2023-02
@@ -61,8 +64,11 @@
 		- The PSDS server is typically defined by the GPS stack.
 			- This is usually xtrapath[1-9].izatcloud.net.
 			- The Android system could override the server chosen.
+				- As of 2023/04/26 no aftermarket systems override or proxy these requests.
 		- The PSDS requests are performed by the GPS stack, specifically xtra-daemon.
 		- The PSDS requests have a User-Agent containing Android version, device manufacture & model, carrier, and chipset serial number: https://www.qualcomm.com/site/privacy/services
+			- With `strings` this can be seen grep'ing for: `/sys/devices/soc0/serial_number` and `XTRA_UA`
+			- With source code access this can be seen as: setXtraUserAgent(), proc(), saveUserAgentString(), and getChipsetSerialNo()
 		- DivestOS explicitly removes most of the Qualcomm location stack, including the PSDS handling, since 2017/01.
 
 
