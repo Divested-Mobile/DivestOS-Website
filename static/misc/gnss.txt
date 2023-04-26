@@ -1,0 +1,71 @@
+- GNSS is any of GPS (US), GLONASS (RU), Beidou (CN), and Galileo (EU): https://en.wikipedia.org/wiki/GNSS
+	- GNSS satellites can be further helped via SBAS (eg. land towers or ocean buoys): https://en.wikipedia.org/wiki/GNSS_augmentation
+- GNSS TTFF is slow due to the data rates and distances: https://en.wikipedia.org/wiki/Time_to_first_fix
+- GNSS TTFF can be sped up by using PSDS or A-GPS.
+
+
+- While waiting for a GNSS lock or when an accurate location isn't necessary a NLP can be used instead.
+	- NLP does not reduce the GNSS TTFF.
+	- NLP typically works by using Wi-Fi access points against a database of their locations and can be very accurate.
+	- Examples of NLP are Google Play Services, Qualcomm IZat, and microG's UnifiedNlp.
+		- Google and Qualcomm NLP handling performs lookups on their servers allowing them to effectively know your location.
+		- UnifiedNlp has both online (eg. Ichnaea) and offline (eg. Deja Vu) databases.
+	- Google NLP
+		- Can be avoided by not having Google Play Services
+		- Likely is tied to your Google account
+	- Qualcomm NLP
+		- Is typically opt-in
+		- Is not on all Qualcomm devices as they charge vendors extra to license it
+		- Includes lots of additional personal or device information: https://www.qualcomm.com/site/privacy/services
+		- DivestOS explicitly removes most of the Qualcomm location stack, including this NLP, since 2017/01.
+
+
+- A-GPS has control plane and user plane (SUPL)
+	- Control plane handling won't be covered here due to needing more research.
+	- SUPL MSA works by the client sending the server everything it knows so the server can calculate location.
+		- This mode allows the server to effectively know your location.
+		- DivestOS has disabled MSA since 2018/08/08
+	- SUPL MSB works by the server sending everything it knows to the client so the client can calculate location.
+	- SUPL (MSB) requests on Android typically include the IMSI, MCC, and MNC.
+		- Kuketz publicized the IMSI issue first on 2018/10/04: https://www.kuketz-blog.de/android-imsi-leaking-bei-gps-positionsbestimmung/
+		- Many aftermarket systems do not include the IMSI:
+			- MSe1969 authored the original patch sometime around or before 2018/10/29
+			- DivestOS since 2019/06/02: https://gitlab.com/divested-mobile/divestos-build/-/commit/bb72bccbe
+			- GrapheneOS since 2023/01/25: https://grapheneos.org/releases#2023012500
+			- CalyxOS since 2023/03/16: https://calyxos.org/news/2023/03/16/march-update/
+			- LineageOS 20.0 since 2023/03/12: https://review.lineageos.org/c/LineageOS/android_frameworks_base/+/350287
+			- iodéOS since ???
+	- Android uses supl.google.com as a fallback SUPL server.
+		- Carrier config or SIM card can override this.
+		- An emergency call can also override this.
+			- This functionality may have been abused by carriers to gather accurate locations when not actually in an emergency call.
+		- supl.google.com only supports MSB.
+		- GrapheneOS provides a proxy override for this since 2023/03/04: https://grapheneos.org/releases#2023030400
+	- Some aftermarket systems allow the user to disable use of SUPL:
+		- GrapheneOS since 2023-02-10: https://grapheneos.org/releases#2023021000
+		- DivestOS 17.1+ since 2023-02-11: https://divestos.org/pages/news#2023-02
+		- CalyxOS since 2023/03/16: https://calyxos.org/news/2023/03/16/march-update/
+		- iodéOS since ???
+
+
+- PSDS is an almanac of the current satellites and their paths
+	- This is typically a static request for a file.
+	- Broadcom GPS chips (eg. Samsung Exynos, Google Tensor, and NVIDIA Tegra)
+		- The PSDS server is typically defined by the carrier config.
+			- Tensor devices use agnss.goog.
+			- Others use the plain gllto.glpals.com.
+			- GrapheneOS provides a proxy for this request since 2022/04/19: https://grapheneos.org/releases#2022041900
+		- The PSDS requests are performed by the Android system (frameworks/base), not the GPS stack.
+		- These PSDS requests are not known to contain any personal or device information.
+	- Qualcomm GPS chips
+		- The PSDS server is typically defined by the GPS stack.
+			- This is usually xtrapath[1-9].izatcloud.net.
+			- The Android system could override the server chosen.
+		- The PSDS requests are performed by the GPS stack, specifically xtra-daemon.
+		- The PSDS requests have a User-Agent containing Android version, device manufacture & model, carrier, and chipset serial number: https://www.qualcomm.com/site/privacy/services
+		- DivestOS explicitly removes most of the Qualcomm location stack, including the PSDS handling, since 2017/01.
+
+
+See something wrong? Open an issue or merge request:
+- https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/gnss.txt
+- https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/gnss.txt
