@@ -1,4 +1,4 @@
-last updated: 2023/04/26
+last updated: 2023/04/28
 
 - Acronyms:
 	- GNSS		global navigation satellite system		https://en.wikipedia.org/wiki/Satellite_navigation
@@ -35,12 +35,15 @@ last updated: 2023/04/26
 		- DivestOS explicitly removes most of the Qualcomm location stack, including this NLP, since 2017/01.
 
 
-- A-GPS has control plane and user plane (SUPL)
+- A-GPS has control plane and user plane (SUPL).
 	- Control plane handling won't be covered here due to needing more research.
+	- SUPL is a two-way street, as in the server and client can ask each other to do things.
+	- SUPL can provide the almanac as well as ephemeris data.
 	- SUPL MSA works by the client sending the server everything it knows so the server can calculate location.
 		- This mode allows the server to effectively know your location.
 		- DivestOS has disabled MSA since 2018/08/08
 	- SUPL MSB works by the server sending everything it knows to the client so the client can calculate location.
+	- SUPL requests may contain visible cell towers and their signal strengths.
 	- SUPL (MSB) requests on Android typically include the IMSI, MCC, and MNC.
 		- Kuketz publicized the IMSI issue first on 2018/10/04: https://www.kuketz-blog.de/android-imsi-leaking-bei-gps-positionsbestimmung/
 		- Many aftermarket systems do not include the IMSI:
@@ -65,7 +68,8 @@ last updated: 2023/04/26
 		- iodéOS since ???
 
 
-- PSDS is an almanac of the current satellites and their paths
+- PSDS is used to download the almanac of the current satellites and their paths.
+	- Fetching this file over the Internet is much quicker than waiting for it to be slowly broadcasted.
 	- This is typically a static request for a file.
 	- Broadcom GPS chips (eg. Samsung Exynos, Google Tensor, and NVIDIA Tegra)
 		- The PSDS server is typically defined by the carrier config.
