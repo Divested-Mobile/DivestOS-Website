@@ -15,7 +15,7 @@ last updated: 2023/04/28
 - GNSS is any of GPS (US), GLONASS (RU), Beidou (CN), and Galileo (EU).
 	- GNSS satellites can be further helped via SBAS (eg. land towers or ocean buoys).
 - GNSS TTFF is slow due to the data rates and distances.
-- GNSS TTFF can be sped up by using PSDS or A-GPS.
+- GNSS TTFF can be sped up by using PSDS or A-GNSS.
 
 
 - While waiting for a GNSS lock or when an accurate location isn't necessary a NLP can be used instead.
@@ -35,7 +35,7 @@ last updated: 2023/04/28
 		- DivestOS explicitly removes most of the Qualcomm location stack, including this NLP, since 2017/01.
 
 
-- A-GPS has control plane and user plane (SUPL).
+- A-GNSS has control plane and user plane (SUPL).
 	- Control plane handling won't be covered here due to needing more research.
 	- SUPL is a two-way street, as in the server and client can ask each other to do things.
 	- SUPL can provide the almanac as well as ephemeris data.
@@ -89,6 +89,8 @@ last updated: 2023/04/28
 			- "Qualcomm GNSS Assistance Service": https://www.qualcomm.com/site/privacy/services
 			- With `strings` this can be seen grep'ing for: `/sys/devices/soc0/serial_number` and `XTRA_UA`
 			- With source code access this can be seen as: setXtraUserAgent(), proc(), saveUserAgentString(), and getChipsetSerialNo()
+		- The PSDS requests may be performed over plain-HTTP, especially if they were before 2018 or so
+			- https://nvd.nist.gov/vuln/detail/CVE-2016-5341
 		- DivestOS explicitly removes most of the Qualcomm location stack, including the PSDS handling, since 2017/01.
 
 
