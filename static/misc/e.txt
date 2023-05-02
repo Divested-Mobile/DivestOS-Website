@@ -122,6 +122,11 @@ Sentry Tracker
 
 Device Sales
 ============
+- Pays Google for search ads
+ - https://community.e.foundation/t/e-on-google-ads/49047 or https://archive.is/qy6w1
+ - Thinks it would even be OK to use donated money for that too
+  - https://community.e.foundation/t/e-on-google-ads/49047/4
+
 - Sells their `Murena One` phone which uses the 5+ year old MT6771 system-on-chip from February 2018
  - https://murena.com/shop/smartphones/brand-new/murena-one/
  - https://en.wikichip.org/wiki/mediatek/helio/mt6771

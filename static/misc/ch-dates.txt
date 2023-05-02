@@ -1,4 +1,4 @@
-last updated: 2023/04/30
+last updated: 2023/05/02
 
 disclosure: Mulch is a DivestOS project
 
@@ -77,7 +77,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-113.0.5672.62	2023/04/26	122+ksv		2023/04/26	2023/04/27			pending		122+ksv
+113.0.5672.62	2023/04/26	122+ksv		2023/04/26	2023/04/27			2023/05/01	122+ksv
 112.0.5615.136	2023/04/18			2023/04/18	2023/04/19	2023/04/21	2023/04/20
 112.0.5615.101	2023/04/14			2023/04/14	2023/04/15	2023/04/17
 112.0.5615.48	2023/03/29			2023/03/29	2023/03/30	2023/04/10	2023/04/04
@@ -166,8 +166,8 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- uazo's Bromite Fork	112.0.5615.138				https://github.com/uazo/bromite-buildtools/releases
-- CalyxOS		112.0.5615.135				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- uazo's Bromite Fork	113.0.5672.63				https://github.com/uazo/bromite-buildtools/releases
+- CalyxOS		113.0.5672.61				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			108.0.5359.156, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 - lin-microG		108.0.5359.156, Bromite prebuilts	https://github.com/MSe1969/android_external_bromite-webview
