@@ -85,7 +85,7 @@ last updated: 2023/05/03
 			- The Android system could override the server chosen.
 				- As of 2023/04/30 no aftermarket systems override or proxy these requests.
 		- The PSDS requests are performed by the GPS stack, specifically xtra-daemon.
-		- The PSDS requests have a User-Agent containing Android version, device manufacture & model, carrier, and chipset serial number.
+		- The PSDS requests have a User-Agent containing Android version, device manufacturer & model, carrier, and chipset serial number.
 			- "Qualcomm GNSS Assistance Service": https://www.qualcomm.com/site/privacy/services
 			- With `strings` this can be seen grep'ing for: `/sys/devices/soc0/serial_number` and `XTRA_UA`
 			- With source code access this can be seen as: setXtraUserAgent(), proc(), saveUserAgentString(), and getChipsetSerialNo()
