@@ -1,4 +1,4 @@
-last updated: 2023/04/30
+last updated: 2023/05/03
 
 - Acronyms:
 	- GNSS		global navigation satellite system		https://en.wikipedia.org/wiki/Satellite_navigation
@@ -93,6 +93,7 @@ last updated: 2023/04/30
 			- https://nvd.nist.gov/vuln/detail/CVE-2016-5341
 		- DivestOS explicitly removes most of the Qualcomm location stack, including the PSDS handling, since 2017/01.
 		- GrapheneOS removes serial number access to xtra-daemon since 2023/04/29: https://grapheneos.org/releases#2023042900
+		- CalyxOS has pending patches to remove serial number access: https://review.calyxos.org/q/Ie3195c473e0589fc2cb35cb7ffbd4bf0092b0b59
 
 
 See something wrong? Open an issue or merge request:
