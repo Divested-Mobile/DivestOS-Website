@@ -1,0 +1,59 @@
+last updated: 2023/05/05
+
+20.0
+	essential/mata/proprietary-files.txt
+	fairphone/FP3/proprietary-files.txt
+	fairphone/FP4/proprietary-files.txt
+	fxtec/pro1/proprietary-files.txt
+	fxtec/pro1x/proprietary-files.txt
+	google/barbet/proprietary-files-vendor.txt
+	google/bonito/bonito/proprietary-files-vendor.txt
+	google/bonito/sargo/proprietary-files-vendor.txt
+	google/bramble/proprietary-files-vendor.txt
+	google/coral/coral/proprietary-files-vendor.txt
+	google/coral/flame/proprietary-files-vendor.txt
+	google/crosshatch/blueline/proprietary-files-vendor.txt
+	google/crosshatch/crosshatch/proprietary-files-vendor.txt
+	google/muskie/lineage-proprietary-files-vendor.txt
+	google/redfin/proprietary-files-vendor.txt
+	google/sunfish/proprietary-files-vendor.txt
+	google/taimen/lineage-proprietary-files-vendor.txt
+	oneplus/avicii/proprietary-files.txt
+	oneplus/msm8998-common/proprietary-files.txt
+	oneplus/sdm845-common/proprietary-files.txt
+	oneplus/sm8150-common/proprietary-files.txt
+	oneplus/sm8250-common/proprietary-files.txt
+	oneplus/sm8350-common/proprietary-files.txt
+	razer/aura/proprietary-files.txt
+	razer/cheryl/proprietary-files.txt
+	sony/tama-common/proprietary-files.txt
+	xiaomi/beryllium/proprietary-files.txt
+	xiaomi/mithorium-common/proprietary-files-qc-vndr.txt
+
+19.1
+	sony/nile-common/proprietary-files.txt
+	xiaomi/sm8150-common/proprietary-files.txt
+	xiaomi/sm8250-common/proprietary-files.txt
+
+18.1
+	google/marlin/marlin/device-proprietary-files-vendor.txt
+	google/marlin/sailfish/device-proprietary-files-vendor.txt
+	lge/msm8996-common/proprietary-files.txt
+	motorola/griffin/proprietary-files.txt
+	oneplus/oneplus3/proprietary-files.txt
+	xiaomi/sdm660-common/proprietary-files.txt
+	zuk/msm8996-common/proprietary-files.txt
+
+17.1
+	xiaomi/sm6150-common/proprietary-files.txt
+	yandex/Amber/proprietary-files-qc.txt
+
+16.0
+	no matches
+
+15.1
+	lge/msm8996-common/proprietary-files-qc.txt
+	zte/axon7/proprietary-files-qc.txt
+
+14.1
+	no matches

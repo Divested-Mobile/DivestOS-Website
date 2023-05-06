@@ -1,0 +1,34 @@
+last updated: 2023/05/05
+
+20.0
+	no matches
+
+19.1
+	no matches
+
+18.1
+	fairphone/FP2/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	htc/msm8974-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	lge/g2-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	lge/g3-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	nextbit/ether/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	oppo/msm8974-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	samsung/msm8974-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	samsung/serrano-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+
+17.1
+	motorola/clark/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	motorola/msm8916-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	oneplus/oneplus2/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	wileyfox/crackling/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+
+16.0
+	wileyfox/kipper/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	zuk/ham/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+
+15.1
+	asus/msm8916-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+	nextbit/ether/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp
+
+14.1
+	lge/g4-common/gps/loc_api/libloc_api_50001/LocEngAdapter.cpp

@@ -1,0 +1,44 @@
+last updated: 2023/05/05
+
+20.0
+	essential/mata via qcom/sepolicy-legacy-um
+	fairphone/FP3 via qcom/sepolicy-legacy-um
+	fxtec/pro1 via qcom/sepolicy-legacy-um
+	google/bonito/sepolicy/vendor/qcom/common/hal_gnss_qti.te
+	google/coral/sepolicy/vendor/qcom/common/hal_gnss_qti.te
+	google/coral/sepolicy/vendor/qcom/common/location.te
+	google/crosshatch/sepolicy/vendor/qcom/common/hal_gnss_qti.te
+	google/redbull/sepolicy/vendor/qcom/common/hal_gnss_qti.te
+	google/redbull/sepolicy/vendor/qcom/common/location.te
+	google/sunfish/sepolicy/vendor/qcom/common/hal_gnss_qti.te
+	google/sunfish/sepolicy/vendor/qcom/common/location.te
+	google/wahoo/sepolicy/vendor/hal_gnss_qti.te
+	oneplus/msm8998-common via qcom/sepolicy-legacy-um
+	qcom/sepolicy-legacy-um/legacy/vendor/common/hal_gnss_qti.te
+	qcom/sepolicy-legacy-um/legacy/vendor/common/location.te
+	razer/cheryl via qcom/sepolicy-legacy-um
+	xiaomi/mithorium-common via qcom/sepolicy-legacy-um
+
+19.1
+	sony/nile-common via qcom/sepolicy-legacy-um
+	qcom/sepolicy-legacy-um/legacy/vendor/common/hal_gnss_qti.te
+	qcom/sepolicy-legacy-um/legacy/vendor/common/location.te
+
+18.1
+	google/marlin/sepolicy/hal_gnss.te
+	lge/mako/sepolicy/vendor/hal_gnss_default.te
+	moto/shamu/sepolicy/hal_gnss_default.te
+	samsung/jf-common/sepolicy/vendor/hal_gnss_default.te
+	samsung/msm8930-common/sepolicy/vendor/hal_gnss_default.te
+
+17.1
+	no matches
+
+16.0
+	samsung/apq8084-common/sepolicy/common/hal_gnss_default.te
+
+15.1
+	moto/shamu/sepolicy/hal_gnss_default.te
+
+14.1
+	no matches
