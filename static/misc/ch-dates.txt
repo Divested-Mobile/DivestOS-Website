@@ -1,4 +1,4 @@
-last updated: 2023/05/03
+last updated: 2023/05/07
 
 disclosure: Mulch is a DivestOS project
 
@@ -78,7 +78,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-113.0.5672.77	2023/05/02	137ksv		2023/05/02	2023/05/03	15ksv		0ksv		137ksv
+113.0.5672.77	2023/05/02	137ksv		2023/05/02	2023/05/03	2023/05/07	0ksv		137ksv
 113.0.5672.62	2023/04/26			2023/04/26	2023/04/27			2023/05/01
 112.0.5615.136	2023/04/18			2023/04/18	2023/04/19	2023/04/21	2023/04/20
 112.0.5615.101	2023/04/14			2023/04/14	2023/04/15	2023/04/17
@@ -157,7 +157,7 @@ Standalone:
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS, †2		112.0.5615.136				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
+- LineageOS, †2		113.0.5672.77				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - MoKee, †2, 12.1	108.0.5359.128, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
 - OmniROM, †2, 13	108.0.5359.109, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
