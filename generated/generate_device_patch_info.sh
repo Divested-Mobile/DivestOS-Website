@@ -121,7 +121,9 @@ createTable() {
 }
 
 createTable akari LineageOS-20.0 sony/tama-common sony/sdm845 sony/akari;
+createTable akatsuki LineageOS-20.0 sony/tama-common sony/sdm845 sony/akatsuki;
 createTable alioth LineageOS-19.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
+createTable apollon LineageOS-19.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/apollon;
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 createTable angler LineageOS-15.1 huawei/angler huawei/angler;
 createTable apollo LineageOS-14.1 amazon/apollo amazon/hdx-common amazon/hdx-common;
@@ -132,6 +134,10 @@ createTable axon7 LineageOS-15.1 zte/axon7 zte/msm8996;
 createTable bacon LineageOS-18.1 oneplus/bacon oppo/msm8974 oppo/common oppo/msm8974-common;
 createTable barbet LineageOS-20.0 google/redbull google/redbull google/barbet;
 createTable beryllium LineageOS-20.0 xiaomi/sdm845-common xiaomi/sdm845;
+createTable dipper LineageOS-20.0 xiaomi/sdm845-common xiaomi/sdm845;
+createTable equuleus LineageOS-20.0 xiaomi/sdm845-common xiaomi/sdm845;
+createTable polaris LineageOS-20.0 xiaomi/sdm845-common xiaomi/sdm845;
+createTable ursa LineageOS-20.0 xiaomi/sdm845-common xiaomi/sdm845;
 createTable bluejay LineageOS-20.0 google/gs101 google/gs101/private/gs-google google/bluejay;
 createTable blueline LineageOS-20.0 google/crosshatch google/msm-4.9 google/crosshatch/blueline;
 createTable bonito LineageOS-20.0 google/bonito google/msm-4.9 google/bonito/bonito;
@@ -210,6 +216,7 @@ createTable jfltevzw LineageOS-18.1 samsung/jfltevzw samsung/jf samsung/jf-commo
 createTable jfltexx LineageOS-18.1 samsung/jfltexx samsung/jf samsung/jf-common;
 createTable kccat6 LineageOS-16.0 samsung/kccat6 samsung/apq8084 samsung/apq8084-common;
 createTable kebab LineageOS-20.0 oneplus/sm8250-common oneplus/sm8250 oneplus/kebab oneplus/common;
+createTable lemonades LineageOS-20.0 oneplus/sm8250-common oneplus/sm8250 oneplus/lemonades oneplus/common;
 createTable kipper LineageOS-16.0 wileyfox/kipper cyanogen/msm8916 cyanogen/msm8916-common;
 createTable klte LineageOS-18.1 samsung/klte-common samsung/msm8974 samsung/klte samsung/msm8974-common;
 createTable lavender LineageOS-18.1 xiaomi/lavender xiaomi/sdm660 xiaomi/sdm660-common;
@@ -263,6 +270,8 @@ createTable v1awifi LineageOS-14.1 samsung/v1awifi samsung/exynos5420 samsung/ex
 createTable vayu LineageOS-19.1 xiaomi/sm8150-common xiaomi/sm8150 xiaomi/vayu;
 createTable victara LineageOS-18.1 motorola/victara motorola/msm8974;
 createTable voyager LineageOS-19.1 sony/nile-common sony/sdm660 sony/voyager;
+createTable kirin LineageOS-19.1 sony/nile-common sony/sdm660 sony/kirin;
+createTable mermaid LineageOS-19.1 sony/nile-common sony/sdm660 sony/mermaid;
 createTable vs985 LineageOS-18.1 lge/g3-common lge/g3 lge/vs985;
 createTable vs995 LineageOS-18.1 lge/v20-common lge/msm8996 lge/msm8996-common lge/vs995;
 createTable walleye LineageOS-20.0 google/wahoo google/wahoo google/muskie;

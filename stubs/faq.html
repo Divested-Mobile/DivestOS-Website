@@ -59,18 +59,18 @@
 						</ul>
 
 						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
-						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only update_engine devices have incrementals generated.<br>As of 2023/05/07 that is: <code>'akari, alioth, Amber, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, lemonade, lemonadep, marlin, mata, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c'</code></p>
+						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only update_engine devices have incrementals generated.<br>As of 2023/05/07 that is: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, kirin, lemonade, lemonadep, lemonades, marlin, mata, mermaid, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
 
 						<h4 id="randomMAC">What devices support Wi-Fi MAC randomization?<a href="#randomMAC">¶</a></h4>
-						<p>As of 2023/05/07: <code>akari, alioth, Amber, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, discovery, dumpling, enchilada, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, lavender, lemonade, lemonadep, lmi, mata, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
+						<p>As of 2023/05/07: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, dipper, discovery, dumpling, enchilada, equuleus, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, kirin, lavender, lemonade, lemonadep, lemonades, lmi, mata, mermaid, oriole, panther, pioneer, polaris, pro1, pro1x, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, ursa, vayu, voyager, walleye, xz2c</code></p>
 
 						<h4 id="kernelCFI">What devices have CFI enabled kernels?<a href="#kernelCFI">¶</a></h4>
 						<p>As of 2023/05/07:</p>
 						<ul>
 							<li>CFI enabled: none yet</li>
 							<li>CFI and SCS enabled: blueline/crosshatch, bonito/sargo, coral/flame/sunfish, bramble/redfin/barbet, oriole/raven/bluejay, cheetah/panther, FP4, lemonade*</li>
-							<li>CFI supported, but not enabled: akari/aurora/xz2c, avicii, cheryl, beryllium, davinci, FP3</li>
-							<li>CFI and SCS supported, but not enabled: alioth/lmi, guacamole*/hotdog*, vayu, instantnoodle*/kebab</li>
+							<li>CFI supported, but not enabled: akari/akatsuki/aurora/xz2c, avicii, cheryl, beryllium/dipper/equuleus/polaris/ursa, davinci, FP3</li>
+							<li>CFI and SCS supported, but not enabled: alioth/apollon/lmi, guacamole*/hotdog*, vayu, instantnoodle*/kebab</li>
 							<li>CFI supported, but tested non-functional as is: enchilada/fajita</li>
 						</ul>
 
@@ -80,14 +80,14 @@
 							<li>jemalloc for 32-bit and 64-bit: all 14.1 and 15.1 devices</li>
 							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 16.0 devices</li>
 							<li>scudo for 32-bit and hardened_malloc for 64-bit: all 17.1, 18.1, 19.1, and 20.0 devices</li>
-							<li>Exception: These devices use jemalloc for 32-bit instead of scudo: akari/aurora/xz2c, cheryl, klte</li>
+							<li>Exception: These devices use jemalloc for 32-bit instead of scudo: akari/akatsuki/aurora/xz2c, cheryl, klte</li>
 						</ul>
 
 						<h4 id="deviceBootloader">What devices are known to have faulty/insecure bootloaders?<a href="#deviceBootloader">¶</a></h4>
 						<p>These are vendor limitations and apply to any OS. This list must be assumed incomplete. As of 2023/05/07:</p>
 						<ul>
 							<li>Can't be relocked (with a custom OS): <a href="https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/" target="_blank" rel="nofollow noopener noreferrer">OnePlus 7 and newer</a>, Motorola, Samsung, Xiaomi</li>
-							<li>EDL access <a href="https://github.com/bkerler/loaders" target="_blank" rel="nofollow noopener noreferrer">available</a>: axolotl, FP2, FP3, bacon, oneplus2, oneplus3/t, cheeseburger/dumpling, enchilada/fajita, hotdog*/guacamole*, avicii, instantnoodle*/kebab, lemonade*</li>
+							<li>EDL access <a href="https://github.com/bkerler/loaders" target="_blank" rel="nofollow noopener noreferrer">available</a>: axolotl, FP2, FP3, bacon, oneplus2, oneplus3/t, cheeseburger/dumpling, enchilada/fajita, hotdog*/guacamole*, avicii, instantnoodle*/kebab/lemonades, lemonade*</li>
 							<li>Trusts test-keys for verified boot: enchilada/fajita, FP3, <a href="https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/11" target="_blank" rel="nofollow noopener noreferrer">FP4</a></li>
 							<li>Qualcomm Secure Boot disabled: <a href="https://forum.shiftphones.com/threads/vollstaendiges-backup-ueber-qualcomm-edl-mode.4777/#post-44656" target="_blank" rel="nofollow noopener noreferrer">axolotl</a>, FP2, <a href="https://forum.fairphone.com/uploads/default/original/3X/9/b/9b6fee6021b919e855b5258f76de9738d5b04995.jpeg" target="_blank" rel="nofollow noopener noreferrer">FP3</a></li>
 							<li>Has alternate manufacture mode available (eg. <a href="https://github.com/steadfasterX/lglaf" target="_blank" rel="nofollow noopener noreferrer">LAF</a>): mako, LG G2, LG G3, LG G4</li>
