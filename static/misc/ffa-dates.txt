@@ -155,6 +155,7 @@ Notes:
 - Not all security issues impact the Android version
 - This tracks dates the version was committed to a repository, *not* the date it was pushed out to users.
 - If anyone wants to make a merge request that sorts the columns, it'd be much appreciated.
+- Iceraven and iodéOS Browser do not appear to actually compile Gecko from source.
 
 Useful links:
 - https://www.mozilla.org/en-US/security/advisories
