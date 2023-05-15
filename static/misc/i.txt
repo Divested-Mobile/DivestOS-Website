@@ -19,6 +19,9 @@ Content Blocker
  - They even note these licenses of the lists they use here
   - https://iode.tech/en/iodeos-en/
 
+- Runs as root
+ - https://gitlab.com/iode/os/public/blocker/iode-snort/-/blob/staging/iode-snort.rc#L23
+
 - Is in C++, likely has memory safety issues
  - https://gitlab.com/iode/os/public/blocker/iode-snort
 
