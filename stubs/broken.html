@@ -96,6 +96,7 @@
 						</ul>
 						<h4 id="bugs">Bugs<a href="#bugs">¶</a></h4>
 						<ul>
+							<li>15.1 will bootloop if a pin/password/pattern is not set or is removed/unset. [???]<a href="https://github.com/Divested-Mobile/DivestOS-Build/issues/154" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>Flutter-based apps may show graphical artifacting on older (msm8974 era) devices.</li>
 							<li>Older Unity engine games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w (optional/required) enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
@@ -123,10 +124,6 @@
 						<h4 id="d852">d852<a href="#d852">¶</a></h4>
 						<ul>
 							<li>Sensors will not work unless you have a hybrid v220k modem which requires an a10b bootloader. [firmware]</li>
-						</ul>
-						<h4 id="dragon">dragon<a href="#dragon">¶</a></h4>
-						<ul>
-							<li>(reported) Will bootloop if a pin/password/pattern is not set or is unset. [???]</li>
 						</ul>
 						<h4 id="fp4">FP4<a href="#fp4">¶</a></h4>
 						<ul>
@@ -217,6 +214,10 @@
 							<li>Camera is non-functional. [upstream blobs?]</li>
 							<li>Encryption is not supported. [upstream device tree?]</li>
 							<li>GPS is non-functional. [deblobber]</li>
+						</ul>
+						<h4 id="oneplus5">cheeseburger/dumpling<a href="#oneplus5">¶</a></h4>
+						<ul>
+							<li>20.0 won't automatically update the recovery. [selinux?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/24" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 						</ul>
 						<h4 id="pixel2">taimen/walleye<a href="#pixel2">¶</a></h4>
 						<ul>

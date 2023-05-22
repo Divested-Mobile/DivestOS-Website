@@ -59,13 +59,13 @@
 						</ul>
 
 						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
-						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only update_engine devices have incrementals generated.<br>As of 2023/05/07 that is: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, kirin, lemonade, lemonadep, lemonades, marlin, mata, mermaid, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
+						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only update_engine devices have incrementals generated.<br>As of 2023/05/22 that is: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, kirin, lemonade, lemonadep, lemonades, marlin, mata, mermaid, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
 
 						<h4 id="randomMAC">What devices support Wi-Fi MAC randomization?<a href="#randomMAC">¶</a></h4>
-						<p>As of 2023/05/07: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, dipper, discovery, dumpling, enchilada, equuleus, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, jasmine_sprout, kebab, kirin, lavender, lemonade, lemonadep, lemonades, lmi, mata, mermaid, oriole, panther, pioneer, platina, polaris, pro1, pro1x, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, twolip, ursa, vayu, voyager, walleye, wayne, whyred, xz2c</code></p>
+						<p>As of 2023/05/22: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, dipper, discovery, dumpling, enchilada, equuleus, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, jasmine_sprout, kebab, kirin, lavender, lemonade, lemonadep, lemonades, lmi, mata, mermaid, oriole, panther, pioneer, platina, polaris, pro1, pro1x, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, twolip, ursa, vayu, voyager, walleye, wayne, whyred, xz2c</code></p>
 
 						<h4 id="kernelCFI">What devices have CFI enabled kernels?<a href="#kernelCFI">¶</a></h4>
-						<p>As of 2023/05/07:</p>
+						<p>As of 2023/05/22:</p>
 						<ul>
 							<li>CFI enabled: none yet</li>
 							<li>CFI and SCS enabled: blueline/crosshatch, bonito/sargo, coral/flame/sunfish, bramble/redfin/barbet, oriole/raven/bluejay, cheetah/panther, FP4, lemonade*</li>
@@ -75,7 +75,7 @@
 						</ul>
 
 						<h4 id="mallocUse">What memory allocator is used?<a href="#mallocUse">¶</a></h4>
-						<p>As of 2023/05/07:</p>
+						<p>As of 2023/05/22:</p>
 						<ul>
 							<li>jemalloc for 32-bit and 64-bit: all 14.1 and 15.1 devices</li>
 							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 16.0 devices</li>
@@ -84,7 +84,7 @@
 						</ul>
 
 						<h4 id="deviceBootloader">What devices are known to have faulty/insecure bootloaders?<a href="#deviceBootloader">¶</a></h4>
-						<p>These are vendor limitations and apply to any OS. This list must be assumed incomplete. As of 2023/05/07:</p>
+						<p>These are vendor limitations and apply to any OS. This list must be assumed incomplete. As of 2023/05/22:</p>
 						<ul>
 							<li>Can't be relocked (with a custom OS): <a href="https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/" target="_blank" rel="nofollow noopener noreferrer">OnePlus 7 and newer</a>, Motorola, Samsung, Xiaomi</li>
 							<li>EDL access <a href="https://github.com/bkerler/loaders" target="_blank" rel="nofollow noopener noreferrer">available</a>: axolotl, FP2, FP3, bacon, oneplus2, oneplus3/t, cheeseburger/dumpling, enchilada/fajita, hotdog*/guacamole*, avicii, instantnoodle*/kebab/lemonades, lemonade*</li>
@@ -102,7 +102,7 @@
 						</ul>
 
 						<h4 id="volteTested">What devices is VoLTE known to be working on assuming everything else is in-place?<a href="#volteTested">¶</a></h4>
-						<p>As of 2023/05/07: <code>bluejay, cheeseburger, fajita, mata, taimen, FP3</code><br>Can be assumed working: <code>dumpling, enchilada, walleye</code></p>
+						<p>As of 2023/05/22: <code>bluejay, cheeseburger, fajita, mata, taimen, FP3</code><br>Can be assumed working: <code>dumpling, enchilada, walleye</code></p>
 
 						<h4 id="noVolte">My device has LTE without VoLTE but my carrier has phased out 2G/3G calling, what can I do?<a href="#noVolte">¶</a></h4>
 						<ul>
@@ -117,7 +117,7 @@
 						<p>No, there is no support in AOSP for running on traditional desktop/laptop computers. It is recommended you instead use <a href="https://getfedora.org/" target="_blank" rel="nofollow noopener noreferrer">Fedora</a> with our <a href="https://divested.dev/pages/software#brace" target="_blank" rel="nofollow noopener noreferrer">Brace</a> package.</p>
 
 						<h4 id="supportOfficial">Can you support X device, that does have an official LineageOS port?<a href="#supportOfficial">¶</a></h4>
-						<p>If there is enough demand, yes.</p>
+						<p>If there is enough demand, yes. The list of already requested devices is tracked <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/TODO-device_additions" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
 
 						<h4 id="supportUnofficial">Can you support X device, that doesn't have an (un)official LineageOS port?<a href="#supportUnofficial">¶</a></h4>
 						<p>No.</p>
@@ -151,6 +151,27 @@
 							<li>If you're using Tor via Orbot's VPN mode and want an app to access Onion Services you must disable Private DNS.</li>
 							<li>Otherwise you should consider what you value more: the content blocker or ensuring the VPN handles DNS.</li>
 							<li>In the case you do use Private DNS with Tor or a real VPN, the Private DNS host will not learn your true IP as the requests will be routed over the VPN slot.</li>
+						</ul>
+
+						<h4 id="appCompat">So Google apps and other proprietary apps won't work at all?<a href="#appCompat">¶</a></h4>
+						<p>Many apps will work just fine. Status of some apps is documented <a href="/pages/functionality_tables#apps">here</a></p>
+						<ul>
+							<li>Google Maps does work on DivestOS.</li>
+							<li>Google apps that mandate Google login won't work.</li>
+							<li>Apps that hard depend on Play Services won't work.</li>
+							<li>Apps that depend on SafetyNet won't work.</li>
+							<li>Apps that depend on DRM won't work.</li>
+							<li>Apps that use Play Asset Delivery won't work.</li>
+							<li>Apps that depend on FCM/GCM without a fallback won't have notifications.</li>
+							<li>Apps that Aurora Store labels as "GSF dependent" may actually work just fine.</li>
+							<li>Android Auto won't work.</li>
+							<li>Some games will be broken by the hardened memory allocator, pick a 32-bit device in the Aurora `spoof manager` instead.</li>
+						</ul>
+						<p>If you have an app that isn't working and doesn't contain an error message covering the above (SafetyNet/DRM/Play), try:</p>
+						<ul>
+							<li>Allowing self debugging: Settings > Security > Enable native code debugging > checked</li>
+							<li>Disabling the content blocker: Settings > Security > Disable DNS content blocker > checked (if this fixes it please report so it can be excluded from list)</li>
+							<li>Joining the <a href="/pages/community#chat">chat</a> and asking for help.</li>
 						</ul>
 
 						<h4 id="btCodecs">What Bluetooth audio codecs are available (if supported by device)?<a href="#btCodecs">¶</a></h4>
