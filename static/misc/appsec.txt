@@ -22,13 +22,11 @@ Libraries:
 				- Reference: https://github.com/AdrienPoupa/AttestationDeplacement/blob/3.7.0/app/build.gradle#L42
 				- Report: https://github.com/AdrienPoupa/AttestationDeplacement/issues/131
 					- Repository was archived after reporting
-			- PDF Converter 8.8.1:
-				- Reference: https://github.com/Swati4star/Images-to-PDF/blob/8.8.1/app/build.gradle#L98
-				- Report: https://github.com/Swati4star/Images-to-PDF/issues/1083
-				- Fix pending: https://github.com/Swati4star/Images-to-PDF/pull/1097
 			- PDF Creator 3.8:
 				- Reference: https://github.com/scoute-dich/PDFCreator/blob/v3.8/app/build.gradle#L34
 				- Repository archived, not reported
+		- Projects to keep an eye on:
+			- https://github.com/Swati4star/Images-to-PDF/
 	- com.itextpdf:itextg:5.5.6 from 2015-05-08
 		- Status: Has ~5 known security issues
 		- Dependent Apps:
