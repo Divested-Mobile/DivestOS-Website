@@ -1,4 +1,4 @@
-last updated: 2023/05/30
+last updated: 2023/06/02
 
 disclosure: Mulch is a DivestOS project
 
@@ -82,8 +82,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-114.0.5735.58	2023/05/30	165ksv		2023/05/30	2023/05/31					165ksv
-114.0.5735.53	2023/05/24			2023/05/24	2023/05/25			pending
+114.0.5735.58	2023/05/30	165ksv		2023/05/30	2023/05/31			2023/06/01	165ksv
+114.0.5735.53	2023/05/24			2023/05/24	2023/05/25
 113.0.5672.163	2023/05/23			2023/05/23	2023/05/23	2023/05/26
 113.0.5672.132	2023/05/16			2023/05/16	2023/05/17	2023/05/19	2023/05/18
 113.0.5672.77	2023/05/02			2023/05/02	2023/05/03	2023/05/07
@@ -176,8 +176,8 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- uazo's Bromite Fork	113.0.5672.127				https://github.com/uazo/bromite-buildtools/releases
-- CalyxOS		113.0.5672.131				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- uazo's Bromite Fork	114.0.5735.91				https://github.com/uazo/bromite-buildtools/releases
+- CalyxOS		114.0.5735.57				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			108.0.5359.156, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 - lin-microG		108.0.5359.156, Bromite prebuilts	https://github.com/MSe1969/android_external_bromite-webview
@@ -208,7 +208,7 @@ Notes:
 - Not all security issues impact the Android version
 - This tracks dates the version was committed to a repository, *not* the date it was pushed out to users or shipped in a system image.
   - DivestOS pushes updates same day via an F-Droid repository.
-  - GrapheneOS ships them out rapidly within a day or two via their Seamless Updater.
+  - GrapheneOS ships them out rapidly via their Apps app.
   - CalyxOS primarily pushes out updates via the monthly system updates.
     Users can opt-in to the CalyxOS testing F-Droid repository for quicker updates.
   - Bromite pushes updates via an F-Droid repository, but is sometimes a few days behind the version available via GitHub Releases.
