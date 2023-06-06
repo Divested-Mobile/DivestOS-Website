@@ -102,6 +102,7 @@ last updated: 2023/06/02
 		- GrapheneOS has a toggle since 2023/05/05: https://grapheneos.org/releases#2023050500
 		- CalyxOS has a toggle since 2023/06/02: https://calyxos.org/news/2023/06/02/feature-update/
 			- LineageOS has this same SUPL/PSDS/XTRA toggle pending: https://review.lineageos.org/q/topic:agps
+				- DivestOS & iodéOS should have this toggle on 20.0 after it merges
 
 
 See something wrong? Open an issue or merge request:
