@@ -1,4 +1,4 @@
-last updated: 2023/06/02
+last updated: 2023/06/08
 
 - Acronyms:
 	- GNSS		global navigation satellite system		https://en.wikipedia.org/wiki/Satellite_navigation
@@ -65,7 +65,7 @@ last updated: 2023/06/02
 		- GrapheneOS since 2023/02/10: https://grapheneos.org/releases#2023021000
 		- DivestOS 17.1+ since 2023/02/11: https://divestos.org/pages/news#2023-02
 		- CalyxOS since 2023/03/16: https://calyxos.org/news/2023/03/16/march-update/
-			- LineageOS has this same SUPL/PSDS/XTRA toggle pending: https://review.lineageos.org/q/topic:agps
+			- LineageOS has this same SUPL/PSDS/XTRA toggle since 2023/06/06: https://review.lineageos.org/q/topic:agps
 		- iodéOS since 2023/02/11?
 
 
@@ -101,8 +101,8 @@ last updated: 2023/06/02
 	- Some aftermarket systems allow the user to disable use of PSDS & XTRA:
 		- GrapheneOS has a toggle since 2023/05/05: https://grapheneos.org/releases#2023050500
 		- CalyxOS has a toggle since 2023/06/02: https://calyxos.org/news/2023/06/02/feature-update/
-			- LineageOS has this same SUPL/PSDS/XTRA toggle pending: https://review.lineageos.org/q/topic:agps
-				- DivestOS & iodéOS should have this toggle on 20.0 after it merges
+			- LineageOS has this same SUPL/PSDS/XTRA toggle since 2023/06/06: https://review.lineageos.org/q/topic:agps
+				- DivestOS & iodéOS also inherit this toggle on 20.0
 
 
 See something wrong? Open an issue or merge request:

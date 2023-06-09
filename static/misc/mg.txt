@@ -27,6 +27,18 @@ microG
   - "Fused Locations: Does not honor AppOps!"
    - https://github.com/microg/GmsCore/wiki/Implementation-Status
 
+- Signature spoofing permission is often poorly implemented:
+  - Reference implementation used by iodéOS and /e/OS let the user grant spoofing to any app for any signature
+   - https://gitlab.e.foundation/e/os/android_frameworks_base/-/commit/8489270582746fcd6ba50f21650f82b4616ca5f7
+   - https://gitlab.com/iode/os/public/lineage/frameworks_base/-/commit/93421e9d8ae96d077804b1ebd8cc64c934e1be09
+   - https://github.com/lineageos4microg/docker-lineage-cicd/blob/master/src/signature_spoofing_patches/android_frameworks_base-S.patch
+  - Typical "restricted" signature spoofing just restricts to `platform` signed apps
+   - https://github.com/lin19-microG/android_frameworks_base/commit/c69d4adc8ba99f4df1134b1019e3a9eb69aeb636
+  - CalyxOS has a permission check only used by their GmsCore fork, a package ID check, and only allows spoofing Google signature
+   - https://review.calyxos.org/c/CalyxOS/platform_frameworks_base/+/12670
+  - Here is an example of checking both microG certificate hash and only allows spoofing Google signature
+   - https://github.com/dylangerdaly/platform_frameworks_base/commit/b58aa11631fadab3309a1d9268118bd9f2c2a79f
+
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/mg.txt
 - https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/mg.txt
