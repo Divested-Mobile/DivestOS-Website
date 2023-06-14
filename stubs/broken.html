@@ -5,7 +5,7 @@
 						<h3>Apps<a href="#appIssues">¶</a></h3>
 						<h4 id="mull">Mull<a href="#mull">¶</a></h4>
 						<ul>
-							<li>On DivestOS 19.1 and 20.0 the initial install of Mull will not have Internet access, go to its `App info` screen then `Mobile data & Wi-Fi` and enable `Allow network access`.</li>
+							<li>On DivestOS 19.1 and 20.0 the initial install of Mull will not have Internet access, go to its `App info` screen then `Mobile data & Wi-Fi` and enable `Allow network access`. [help wanted]</li>
 							<li>Dark mode for websites is disabled due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>Refresh rate is capped to 60hz due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>If audio/video content fails to play in private tabs navigate to <code>about:config</code> and change <code>browser.privatebrowsing.forceMediaMemoryCache</code> to false, this is however a privacy risk.</li>
@@ -68,7 +68,7 @@
 						</ul>
 						<h4 id="papercuts">Papercuts<a href="#papercuts">¶</a></h4>
 						<ul>
-							<li>Block encrypted devices will fail to shutdown from secure boot screen on 18.1. Force power off via power button to workaround.</li>
+							<li>Block encrypted devices will fail to shutdown from secure boot screen on 18.1. Force power off via power button to workaround. [help wanted]</li>
 							<li>Bluetooth phone calls may not work.</li>
 							<li>Devices with less than 2GB of RAM *will* likely out-of-memory more often than usual. [various]</li>
 							<li>Disabling Storage Manager is strongly recommended, it may choose to delete your old files after 90 days otherwise.</li>
@@ -76,18 +76,18 @@
 							<li>If `fastboot update` fails on identifying device you can try the force option, otherwise extract the zip and `fastboot flash` each partition manually.</li>
 							<li>If Seedvault is set to backup to a USB flash drive and it is later plugged in, the automatically started backup may fail. If so, you must invoke the backup manually. [upstream]</li>
 							<li>If you have banking or game apps that do not work, ensure the `Enable native code debugging` toggle is enabled in Settings > Security. Such apps use ptrace as a form of crude anti-tamper mechanism.</li>
-							<li>MediaProvider error toast on some boots of <=16.0. [permission issue?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>MediaProvider error toast on some boots of <=16.0. [permission issue?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/3" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a>[help wanted]</li>
 							<li>Most devices may take up to the full 12.5 minutes to acquire a GPS lock. Locks will often be quicker, especially if recently locked. Please test using GPSTest app with *clear* and *direct* line of sky. [deblobber]<a href="https://f-droid.org/en/packages/com.android.gpstest.osmdroid" target="_blank" rel="nofollow noopener noreferrer">[link]</a></li>
 							<li>Mull is not installed by default, only an empty shim/placeholder is. F-Droid will prompt you to "update" it on first run which will install it.</li>
 							<li>Phone call audio is distorted sometimes until speaker phone is toggled. [deblobber?]</li>
 							<li>Recovery will not be updated on each boot on 14.1. [upstream]</li>
 							<li>Search in Trebuchet when a work profile is available may cause the view to wrongly switch.</li>
-							<li>The OLED screen protection mechanism may push the clock off the screen for a minute every now and then.</li>
+							<li>The OLED screen protection mechanism may push the clock off the screen for a minute every now and then. [help wanted]</li>
 							<li>The changelog link in the Updater links to the LineageOS changelog for your device. However devices Lineage no longer compiles for don't have such a page.</li>
-							<li>The secondary user logout button on the lockscreen will overlap the unlock icon on some devices.</li>
-							<li>Trebuchet, the launcher, on older versions will randomly enter a half-broken state where you cannot long press any apps. Force stop Trebuchet from Settings or reboot to fix.</li>
+							<li>The secondary user logout button on the lockscreen will overlap the unlock icon on some devices. [help wanted]</li>
+							<li>Trebuchet, the launcher, on older versions will randomly enter a half-broken state where you cannot long press any apps. Force stop Trebuchet from Settings or reboot to fix. [help wanted]</li>
 							<li>TWRP (which isn't supported) often cannot decrypt/unlock /data due to it being incompatible/outdated.</li>
-							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>Updater JSON parsing error on 14.1. [upstream?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/2" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a>[help wanted]</li>
 							<li>`Wallpapers & Styles` may crash after upgrading to 20.0 from 19.1, clear it's app data to fix.</li>
 							<li>`Wallpapers & Styles` may not show homescreen icon previews if grid size is greater than 5x5.</li>
 							<li>`Wallpapers & Styles` will not show wallpaper previews if not granted `Music and audio` permission in addition to `Photos and videos` on 20.0.</li>
@@ -96,13 +96,10 @@
 						</ul>
 						<h4 id="bugs">Bugs<a href="#bugs">¶</a></h4>
 						<ul>
-							<li>15.1 will bootloop if a pin/password/pattern is not set or is removed/unset. [???]<a href="https://github.com/Divested-Mobile/DivestOS-Build/issues/154" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
-							<li>Flutter-based apps may show graphical artifacting on older (msm8974 era) devices.</li>
+							<li>15.1 will bootloop if a pin/password/pattern is not set or is removed/unset. [???]<a href="https://github.com/Divested-Mobile/DivestOS-Build/issues/154" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a>[help wanted]</li>
+							<li>Flutter-based apps may show graphical artifacting on older (msm8974 era) devices. [help wanted]</li>
 							<li>Older Unity engine games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
 							<li>Select older devices running 17.1/10 or higher will fail to connect to 802.11w (optional/required) enabled Wi-Fi networks due to lack of PMF support. [hardware]</li>
-							<li>Special permissions of apps may be randomly reset after reboots on 19.1 and higher. This is an unknown and widespread issue affecting many other operating systems. [upstream]</li>
-							<li><strike>'Developer options' will crash on 15.1 due to null PDB handle. Likely fixed in late 2022-02 builds</strike></li>
-							<li><strike>Fenix based browsers such as a 'Mull' or 'Fennec F-Droid' might cause a reboot on launch. Please report your device if it does to be fixed.</strike></li>
 						</ul>
 					</div>
 					<div class="section" id="devices">
@@ -114,7 +111,7 @@
 						</ul>
 						<h4 id="beryllium">beryllium and maybe dipper/equuleus/polaris/ursa<a href="#beryllium">¶</a></h4>
 						<ul>
-							<li>(confirmed report) Camera is non-functional. [kernel]</li>
+							<li>(confirmed report) Camera is non-functional. [kernel][help wanted]</li>
 						</ul>
 						<h4 id="clark">clark<a href="#clark">¶</a></h4>
 						<ul>
@@ -131,20 +128,20 @@
 						</ul>
 						<h4 id="g3-common">d850/d851/d852/d855/f400/ls990/vs985/G3<a href="#g3-common">¶</a></h4>
 						<ul>
-							<li>Wi-Fi tethering may not work. [???]</li>
-							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?]</li>
+							<li>Wi-Fi tethering may not work. [???][help wanted]</li>
+							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?][help wanted]</li>
 							<li>Device will often fail on reboot and become unresponsive, requiring the battery to be pulled. [hardware]</li>
 						</ul>
 						<h4 id="g5-common">h830/h850/rs988/G5<a href="#g5-common">¶</a></h4>
 						<ul>
-							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?]</li>
+							<li>Bluetooth likely won't start due to missing MAC address. [hwaddrs selinux? /misc corrupt?][help wanted]</li>
 							<li>(unconfirmed) NFC doesn't work. [???]</li>
 							<li>(unconfirmed) GPS doesn't work. [???]</li>
 							<li>(unconfirmed) Torch doesn't work. [???]</li>
 						</ul>
 						<h4 id="davinci">davinci<a href="#davinci">¶</a></h4>
 						<ul>
-							<li>FM radio causes reboot on headphone plug/unplug, app can be disabled as workaround. [???]</li>
+							<li>FM radio causes reboot on headphone plug/unplug, app can be disabled as workaround. [???][help wanted]</li>
 						</ul>
 						<h4 id="op6-common">enchilada/fajita<a href="#op6-common">¶</a></h4>
 						<ul>
@@ -154,6 +151,8 @@
 						<ul>
 							<li>(reported) Having fingerprints registered can cause the sensor to trigger at random causing the screen to flicker green. [???]</li>
 							<li>Second SIM non-functional. [disabled, some variants lack the necessary firmware]</li>
+							<li>Automatic brightness may not be available. [???]</li>
+							<li>Charge history may not be available. [???]</li>
 						</ul>
 						<h4 id="flox">flox<a href="#flox">¶</a></h4>
 						<ul>
@@ -167,23 +166,23 @@
 						</ul>
 						<h4 id="hammerhead">hammerhead<a href="#hammerhead">¶</a></h4>
 						<ul>
-							<li>15.1: Wi-Fi tethering doesn't work. [???]</li>
+							<li>15.1: Wi-Fi tethering doesn't work. [???][help wanted]</li>
 							<li>16.0: Camera, Bluetooth, and Wi-Fi tethering doesn't work. [???]</li>
 						</ul>
 						<h4 id="s7-common">herolte/hero2lte/S7<a href="#s7-common">¶</a></h4>
 						<ul>
-							<li>(reported) bootloops. [???]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/62" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
+							<li>(reported) bootloops. [???]<a href="https://forum.f-droid.org/t/divestos-an-aftermarket-system/10105/62" target="_blank" rel="nofollow noopener noreferrer">[report]</a>[help wanted]</li>
 						</ul>
 						<h4 id="s3-common">i9300/i9305/S3<a href="#s3-common">¶</a></h4>
 						<ul>
-							<li>No web browsers open at all. [kernel? memory?]</li>
-							<li>USB MTP is likely not functioning. [SELinux?]</li>
-							<li>NFC is likely not functioning. [SELinux?]</li>
-							<li>(reported) SIM card detection issues. Likely fixed in 2021-06 build. [SELinux]<a href="https://github.com/divestos/divestos/issues/1" target="_blank" rel="nofollow noopener noreferrer">[report]</a></li>
+							<li>No web browsers open at all. [kernel? memory?][help wanted]</li>
+							<li>USB MTP is likely not functioning. [SELinux?][help wanted]</li>
+							<li>NFC is likely not functioning. [SELinux?][help wanted]</li>
+							<li>(reported) SIM card detection issues. Likely fixed in 2021-06 build. [SELinux]<a href="https://github.com/divestos/divestos/issues/1" target="_blank" rel="nofollow noopener noreferrer">[report]</a>[help wanted]</li>
 						</ul>
 						<h4 id="lavender">lavender and maybe jasmine_sprout/platina/twolip/wayne/whyred<a href="#lavender">¶</a></h4>
 						<ul>
-							<li>Recovery doesn't update on system update due to missing install-recovery.sh. [upstream]<a href="https://gist.github.com/SkewedZeppelin/504c0a197c39ea0be59dcb813e3b303a" target="_blank" rel="nofollow noopener noreferrer">[repro script]</a></li>
+							<li>Recovery doesn't update on system update due to missing install-recovery.sh. [upstream]<a href="https://gist.github.com/SkewedZeppelin/504c0a197c39ea0be59dcb813e3b303a" target="_blank" rel="nofollow noopener noreferrer">[repro script]</a>[help wanted]</li>
 						</ul>
 						<h4 id="klte">klte and maybe hlte<a href="#klte">¶</a></h4>
 						<ul>
@@ -192,7 +191,7 @@
 						</ul>
 						<h4 id="m8">m8/m8d<a href="#m8">¶</a></h4>
 						<ul>
-							<li>Screen artifacting when using video camera. [???]</li>
+							<li>Screen artifacting when using video camera. [???][help wanted]</li>
 						</ul>
 						<h4 id="maguro">maguro/toro/toroplus<a href="#maguro">¶</a></h4>
 						<ul>
@@ -206,8 +205,12 @@
 						</ul>
 						<h4 id="mata">mata<a href="#mata">¶</a></h4>
 						<ul>
-							<li>Images will often fail to install via recovery. [fstab /vendor/firmware_mnt]</li>
+							<li>Images will often fail to install via recovery. [fstab /vendor/firmware_mnt][help wanted]</li>
 							<li>Speaker phone volume cannot be changed from maximum.</li>
+						</ul>
+						<h4 id="moto-msm8916-common">harpia/merlin/osprey/surnia<a href="#moto-msm8916-common">¶</a></h4>
+						<ul>
+							<li>Recovery doesn't boot, use TWRP instead. [defconfig?][help wanted]</li>
 						</ul>
 						<h4 id="nexn900">nex/n900<a href="#nexn900">¶</a></h4>
 						<ul>
@@ -217,7 +220,7 @@
 						</ul>
 						<h4 id="oneplus5">cheeseburger/dumpling<a href="#oneplus5">¶</a></h4>
 						<ul>
-							<li>20.0 won't automatically update the recovery. [selinux?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/24" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>
+							<li>20.0 won't automatically update the recovery. [selinux?]<a href="https://gitlab.com/divested-mobile/divestos-build/-/issues/24" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a>[help wanted]</li>
 						</ul>
 						<h4 id="pixel2">taimen/walleye<a href="#pixel2">¶</a></h4>
 						<ul>

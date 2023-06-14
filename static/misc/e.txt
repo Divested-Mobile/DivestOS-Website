@@ -13,7 +13,7 @@ Nice Aspects
 
 Web Browser & System WebView
 ============================
-- Currently shipping Chromium 108.0.5359.156 from 2022/12/12 with 167 known security vulnerabilities
+- Currently shipping Chromium 108.0.5359.156 from 2022/12/12 with 172 known security vulnerabilities
  - 2023/02/06: The cycle starts again
  - history: https://divestos.org/misc/ch-dates.txt
 
