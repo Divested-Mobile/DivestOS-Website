@@ -123,6 +123,7 @@ createTable() {
 createTable akari LineageOS-20.0 sony/tama-common sony/sdm845 sony/akari;
 createTable akatsuki LineageOS-20.0 sony/tama-common sony/sdm845 sony/akatsuki;
 createTable alioth LineageOS-19.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
+createTable alioth LineageOS-20.0 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
 createTable apollon LineageOS-19.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/apollon;
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 createTable angler LineageOS-15.1 huawei/angler huawei/angler;
@@ -232,6 +233,7 @@ createTable lemonade LineageOS-20.0 oneplus/sm8350-common oneplus/sm8350 oneplus
 createTable lemonadep LineageOS-20.0 oneplus/sm8350-common oneplus/sm8350 oneplus/lemonadep oplus/common;
 createTable lentislte LineageOS-16.0 samsung/lentislte samsung/apq8084 samsung/apq8084-common;
 createTable lmi LineageOS-19.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/lmi;
+createTable lmi LineageOS-20.0 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/lmi;
 createTable ls990 LineageOS-18.1 lge/g3-common lge/g3 lge/ls990;
 createTable ls997 LineageOS-19.1 lge/v20-common lge/msm8996 lge/msm8996-common lge/ls997;
 createTable m7 LineageOS-14.1 htc/m7 htc/msm8960 htc/m7-common htc/msm8960-common;
