@@ -3,6 +3,9 @@ last updated: 2023/02/24
 General
 =======
 - Was proprietary for its first two years
+ - Made open source in November of 2022
+ - Occasional gaps where they don't push sources
+  - such as the three month delay after their March 2023 update
 
 - Forked apps reusing the original package IDs
  - Prevents users from using the real versions
@@ -14,9 +17,9 @@ Content Blocker
 - Called Snort which is likely a trademark violation of Cisco's Snort IDS/IPS
  - https://en.wikipedia.org/wiki/Snort_(software)
 
-- Uses and redistributes lists which are licensed against commercial use (NC) or redistribution (ALL RIGHTS RESERVED)
+- Uses and redistributes blocklists which are licensed against commercial use (NC) or redistribution (ALL RIGHTS RESERVED)
  - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/staging/iode-snort/domains-black
- - They even note these licenses of the lists they use here
+ - They even note these licenses of the blocklists they use here
   - https://iode.tech/en/iodeos-en/
 
 - Runs as root
@@ -24,6 +27,10 @@ Content Blocker
 
 - Is in C++, likely has memory safety issues
  - https://gitlab.com/iode/os/public/blocker/iode-snort
+
+- Now has an additional premium subscription feature
+ - https://iode.tech/en/news/iodeos-premium-launch/
+ - This now even moreso is a direct violation of the non-commercial blocklists they are using
 
 
 Browser
