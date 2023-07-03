@@ -23,10 +23,29 @@
 							<li><mark>Fastboot from build-tools 34 appears to be broken, suggest using 33.0.3 for now.</mark></li>
 							<li>Arch Linux: <code>sudo pacman -S android-tools android-udev</code></li>
 							<li>Fedora: <code>sudo dnf install android-tools</code></li>
-							<li>Debian: <code>sudo apt install android-tools-adb android-tools-fastboot</code></li>
-							<li>Linux: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
-							<li>macOS: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
-							<li>Windows: Download ADB from <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="nofollow noopener noreferrer">here</a> and extract it</li>
+							<li>Debian (severly outdated): <code>sudo apt install android-tools-adb android-tools-fastboot</code></li>
+							<li>Linux:
+								<ol>
+									<li><code>curl -O https://dl.google.com/android/repository/platform-tools_r33.0.3-linux.zip</code></li>
+									<li><code>echo 'ab885c20f1a9cb528eb145b9208f53540efa3d26258ac3ce4363570a0846f8f7  platform-tools_r33.0.3-linux.zip' | sha256sum -c</code></li>
+									<li><code>bsdtar xvf platform-tools_r33.0.3-linux.zip</code></li>
+								</ol>
+							</li>
+							<li>macOS:
+								<ol>
+									<li><code>curl -O https://dl.google.com/android/repository/platform-tools_r33.0.3-darwin.zip</code></li>
+									<li><code>echo 'SHA256 (platform-tools_r33.0.3-darwin.zip) = 84acbbd2b2ccef159ae3e6f83137e44ad18388ff3cc66bb057c87d761744e595' | shasum -c</code></li>
+									<li><code>tar xvf platform-tools_r33.0.3-darwin.zip</code></li>
+								</ol>
+							</li>
+							<li>Windows:
+								<ol>
+									<li><code>curl -O https://dl.google.com/android/repository/platform-tools_r33.0.3-windows.zip</code></li>
+									<li><code>(Get-FileHash platform-tools_r33.0.3-windows.zip).hash -eq "1e59afd40a74c5c0eab0a9fad3f0faf8a674267106e0b19921be9f67081808c2"</code></li>
+									<li><code>tar xvf platform-tools_r33.0.3-windows.zip</code></li>
+								</ol>
+							</li>
+							<li>Credit to GrapheneOS <a href="https://grapheneos.org/install/cli#standalone-platform-tools" target="_blank" rel="nofollow noopener noreferrer">for the above commands</a> to download and verify the platform tools.</li>
 						</ul>
 						<h4 id="prereqPhone">On your phone<a href="#prereqPhone">¶</a></h4>
 						<ol>
@@ -89,6 +108,7 @@
 								<li>After install of a properly signed system you must verify boot, verify functionality, verify update support, and verify the ability to factory reset.</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
 								<li>AVB devices only, flash the custom key slot if you didn't earlier.</li>
+								<li>Ensure <code>$ fastboot flashing get_unlock_ability</code> is NOT zero, it MUST be one! Do NOT continue if zero!</li>
 								<li><code>$ fastboot oem lock</code> or <code>$ fastboot flashing lock</code></li>
 								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes (broken update, broken touchscreen, etc.).</li>
 							</ol>

@@ -1,21 +1,11 @@
 last updated: 2022/12/03
 
-Nice Aspects
-============
-- Publishes sources and largely develops in open
-- Largely credits the projects they fork
-- Friendly and active forum
-- Wide device support
-- Reasonable pricing for cloud service
-- Reasonable markup for device sales
-- Maybe the most successful company trying to sell an aftermarket mobile OS to the general public
-
-
 Web Browser & System WebView
 ============================
 - Currently shipping Chromium 108.0.5359.156 from 2022/12/12 with 176 known security vulnerabilities
  - 2023/02/06: The cycle starts again
  - history: https://divestos.org/misc/ch-dates.txt
+ - 2023/06/30: claims to be "state of the art" in security: https://community.e.foundation/t/49507/21
 
 - [FIXED] Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 306 known security vulnerabilities
  - 2023/02/06: they shipped 108.0.5359.156 to users in v1.8.1, however at time of writing that is two major versions behind
@@ -69,6 +59,7 @@ Advanced Privacy
 PDF Viewer
 ==========
 - See https://divestos.org/misc/appsec.txt
+ - (not updated since 2016, dozens of known security issues)
 
 
 microG

@@ -1,4 +1,4 @@
-last updated: 2023/06/29
+last updated: 2023/07/03
 
 disclosure: Mulch is a DivestOS project
 
@@ -85,7 +85,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-114.0.5735.196	2023/06/26	176ksv		2023/06/27	2023/06/27			2023/06/27	176ksv
+114.0.5735.196	2023/06/26	176ksv		2023/06/27	2023/06/27	pending		2023/06/27	176ksv
 114.0.5735.131	2023/06/13			2023/06/13	2023/06/13	2023/06/16	2023/06/14
 114.0.5735.61	2023/06/05			2023/06/05	2023/06/05	2023/06/09	2023/06/07
 114.0.5735.58	2023/05/30			2023/05/30	2023/05/31	2023/06/05	2023/06/01
