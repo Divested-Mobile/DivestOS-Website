@@ -225,17 +225,17 @@
 					</div>
 
 					<div class="section">
-						<h3 id="appCompatbility">Application Compatbility<a href="#appCompatbility">¶</a></h3>
+						<h3 id="appCompatibility">Application Compatibility<a href="#appCompatibility">¶</a></h3>
 
 						<h4 id="appCompat">So Google apps and other proprietary apps won't work at all?<a href="#appCompat">¶</a></h4>
 						<p>Many apps will work just fine. Status of some apps is documented <a href="/pages/functionality_tables#apps">here</a></p>
 						<ul>
-							<li>Google apps that mandate Google login won't work, but may work with <a href="#microgEnable">microG enabled</a>.</li>
 							<li>Apps that hard depend on Play Services won't work, but may work with <a href="#microgEnable">microG enabled</a>.</li>
+							<li>Apps that depend on FCM/GCM without a fallback won't have notifications, but may work with <a href="#microgEnable">microG enabled</a>.</li>
+							<li>Apps that mandate Google login won't work, but may work with <a href="#microgEnable">microG enabled</a>.</li>
 							<li>Apps that depend on SafetyNet won't work.</li>
 							<li>Apps that depend on DRM won't work.</li>
-							<li>Apps that use Play Asset Delivery won't work.</li>
-							<li>Apps that depend on FCM/GCM without a fallback won't have notifications, but may work with <a href="#microgEnable">microG enabled</a>.</li>
+							<li>Apps that depend on Play Asset Delivery won't work.</li>
 							<li>Apps that Aurora Store labels as "GSF dependent" may actually work just fine.</li>
 							<li>Android Auto won't work.</li>
 							<li>Some games will be broken by the hardened memory allocator, pick a 32-bit device in the Aurora `spoof manager` instead.</li>
@@ -258,12 +258,13 @@
 						<ul>
 							<li>The 'Google device registration' and 'Google SafetyNet' options WILL make microG connect to Google servers.</li>
 							<li>The 'Cloud Messaging' option WILL make microG maintain a persistent connection to Google servers.</li>
+							<li>The 'Cloud Messaging' option does NOT require a Google account.</li>
 							<li>The 'Google SafetyNet' option WILL download and execute proprietary obfuscated code from Google and is strongly NOT recommended.</li>
 							<li>While microG itself is open source, any apps talking to it will do so using the proprietary Google Play Services library.</li>
 						</ul>
 
 						<h4 id="microgEnable">How do I enable microG?<a href="#microgEnable">¶</a></h4>
-						<p>microG is NOT suppored and NOT recommended, however it can work in an unprivileged fashion on DivestOS 17.1 and higher after the July 2023 update.</p>
+						<p>microG is NOT supported and NOT recommended, however it can work in an unprivileged fashion on DivestOS 17.1 and higher after the July 2023 update.</p>
 						<ol>
 							<li>Open F-Droid, Settings, Repositories, and enable the 'microG' repo.</li>
 							<li>In F-Droid search for and install the following apps: microG Services Core, microG Services Framework Proxy, FakeStore.</li>
@@ -275,7 +276,7 @@
 						<p>Depending on the apps you want to use there are a few different ways you can use microG.</p>
 						<ul>
 							<li>Some apps will work with microG simply installed without any Google connections, in this case it is strongly recommended to <a href="#networkControl">revoke Network permission</a> from the microG app.</li>
-							<li>Some apps need push notifications, for them you must let microG maintain a persistent identifiable connection to Google. Enable 'Google device registration' and 'Cloud Messaging' in microG. An account is NOT required here.</li>
+							<li>Some apps need push notifications via Google, for them you must let microG maintain a persistent identifiable connection to Google. Enable 'Google device registration' and 'Cloud Messaging' in microG.</li>
 							<li>Some apps require a captcha to be performed by the user, for them you can enable the 'Google SafetyNet' option.</li>
 							<li>Some apps require SafetyNet to work, while the option to enable it exists it will not work in the unprivileged mode that DivestOS uses.</li>
 						</ul>
