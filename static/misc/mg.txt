@@ -13,31 +13,46 @@ microG
   - https://github.com/microg/GmsCore/blob/master/play-services-core/src/main/kotlin/org/microg/gms/auth/appcert/AppCertManager.kt#L99
   - https://github.com/microg/GmsCore/blob/master/play-services-droidguard/core/src/main/kotlin/org/microg/gms/droidguard/core/HandleProxyFactory.kt#L217
   - https://github.com/microg/GmsCore/blob/master/play-services-safetynet/core/src/main/java/org/microg/gms/safetynet/Attestation.java#L155
+ - DivestOS addresses this by noting it when the user opts-in
+
 
 - microG misconception #2: "it is a fully open source replacement"
  - every app talking to microG does so using the full proprietary Google Play Services library
+ - DivestOS addresses this by noting it when the user opts-in
+
 
 - microG misconception #3: "it is just a normal app" & "it isn't privileged"
-  - https://gitlab.com/CalyxOS/platform_prebuilts_calyx_microg/-/blob/android13/Android.mk#L8
-  - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/Android.mk#L24
-  - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/staging/prebuilts/GmsCore/Android.mk#L37
-  - https://github.com/MSe1969/android_prebuilts_prebuiltapks/blob/master/GmsCore/Android.mk#L24
+ - https://gitlab.com/CalyxOS/platform_prebuilts_calyx_microg/-/blob/android13/Android.mk#L9
+ - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/Android.mk#L24
+ - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/staging/prebuilts/GmsCore/Android.mk#L37
+ - https://github.com/MSe1969/android_prebuilts_prebuiltapks/blob/master/GmsCore/Android.mk#L24
+ - DivestOS addresses this by not installing it at all, keeping it a normal user app, and has no automatically granted permissions
+
 
 - Has unclear potential to leak location to apps without location permission
-  - "Fused Locations: Does not honor AppOps!"
-   - https://github.com/microg/GmsCore/wiki/Implementation-Status
+ - "Fused Locations: Does not honor AppOps!"
+  - https://github.com/microg/GmsCore/wiki/Implementation-Status
+ - DivestOS addresses this by not granting location provider permissions
+
 
 - Signature spoofing permission is often poorly implemented:
-  - Reference implementation used by iodéOS and /e/OS let the user grant spoofing to any app for any signature
-   - https://gitlab.e.foundation/e/os/android_frameworks_base/-/commit/8489270582746fcd6ba50f21650f82b4616ca5f7
-   - https://gitlab.com/iode/os/public/lineage/frameworks_base/-/commit/93421e9d8ae96d077804b1ebd8cc64c934e1be09
-   - https://github.com/lineageos4microg/docker-lineage-cicd/blob/master/src/signature_spoofing_patches/android_frameworks_base-S.patch
-  - Typical "restricted" signature spoofing just restricts to `platform` signed apps
-   - https://github.com/lin19-microG/android_frameworks_base/commit/c69d4adc8ba99f4df1134b1019e3a9eb69aeb636
-  - CalyxOS has a permission check only used by their GmsCore fork, a package ID check, and only allows spoofing Google signature
-   - https://review.calyxos.org/c/CalyxOS/platform_frameworks_base/+/12670
-  - Here is an example of checking both microG certificate hash and only allows spoofing Google signature
-   - https://github.com/dylangerdaly/platform_frameworks_base/commit/b58aa11631fadab3309a1d9268118bd9f2c2a79f
+ - Reference implementation used by L4M, iodéOS, and /e/OS let the user grant spoofing to any app for any signature
+  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/commit/8489270582746fcd6ba50f21650f82b4616ca5f7
+  - https://gitlab.com/iode/os/public/lineage/frameworks_base/-/commit/93421e9d8ae96d077804b1ebd8cc64c934e1be09
+  - https://github.com/lineageos4microg/docker-lineage-cicd/blob/master/src/signature_spoofing_patches/android_frameworks_base-S.patch
+
+ - Typical "restricted" signature spoofing just restricts to `platform` signed apps
+  - https://github.com/lin19-microG/android_frameworks_base/commit/c69d4adc8ba99f4df1134b1019e3a9eb69aeb636
+
+ - CalyxOS has a permission check only used by their GmsCore fork, a package ID check, and only allows spoofing the Google signature
+  - https://review.calyxos.org/c/CalyxOS/platform_frameworks_base/+/12670
+
+ - Here is an example of checking both microG certificate hash and only allows spoofing the Google signature
+  - https://github.com/dylangerdaly/platform_frameworks_base/commit/b58aa11631fadab3309a1d9268118bd9f2c2a79f
+
+ - DivestOS is opt-in, checks microG package ID + targetSdk + versionCode + certificate hash, and only allows spoofing the Google signature
+  - https://github.com/Divested-Mobile/DivestOS-Build/blob/master/Patches/LineageOS-20.0/android_frameworks_base/0036-Hardened-signature-spoofing.patch
+
 
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/mg.txt

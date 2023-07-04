@@ -85,7 +85,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-114.0.5735.196	2023/06/26	176ksv		2023/06/27	2023/06/27	pending		2023/06/27	176ksv
+114.0.5735.196	2023/06/26	176ksv		2023/06/27	2023/06/27	2023/07/03	2023/06/27	176ksv
 114.0.5735.131	2023/06/13			2023/06/13	2023/06/13	2023/06/16	2023/06/14
 114.0.5735.61	2023/06/05			2023/06/05	2023/06/05	2023/06/09	2023/06/07
 114.0.5735.58	2023/05/30			2023/05/30	2023/05/31	2023/06/05	2023/06/01
@@ -171,7 +171,7 @@ Standalone:
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS, †2		114.0.5735.131				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
+- LineageOS, †2		114.0.5735.196				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - MoKee, †2, 12.1	108.0.5359.128, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
 - OmniROM, †2, 13	108.0.5359.109, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
