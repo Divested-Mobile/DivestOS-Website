@@ -1,4 +1,4 @@
-last updated: 2022/12/03
+last full update: 2022/12/03
 
 Web Browser & System WebView
 ============================
@@ -68,10 +68,13 @@ microG
  - See https://divestos.org/misc/mg.txt
 
 - Phones home to Google out of box, despite being "degoogled"
- - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L9
+ - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L3
 
 - Enables Safetynet checks by default which downloads and executes obfuscated proprietary code from Google
- - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L13-14
+ - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/microg.xml#L7-8
+
+- Installed as a privileged system app with escalated permissions
+ - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/Android.mk#L24
 
 
 System
@@ -98,6 +101,10 @@ System
 
 - Includes the proprietary Magic Earth app for navigation
  - Despite FOSS user friendly alternatives existing such as OSMAnd and Organic Maps
+
+- Allows arbitrary apps to spoof any signature
+ - This is used to support microG but is an insecure implementation
+ - https://gitlab.e.foundation/e/os/android_frameworks_base/-/commit/8489270582746fcd6ba50f21650f82b4616ca5f7
 
 
 Sentry Tracker

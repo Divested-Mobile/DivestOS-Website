@@ -192,11 +192,11 @@ AOSP related:
 - AOSP, 7.1.2		52.7243.100				https://android.googlesource.com/platform/external/chromium-webview/+log/android-7.1.2_r39
 - AOSP, 8.1		61.0.3163.98				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-8.1.0_r93
 - AOSP, 9		66.0.3359.158				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-9.0.0_r76
-- AOSP, 10		74.0.3729.186				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-10.0.0_r73
-- AOSP, 11		83.0.4103.120				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-11.0.0_r62
-- AOSP, 12		91.0.4472.114				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-12.0.0_r42
+- AOSP, 10		74.0.3729.186				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-10.0.0_r75
+- AOSP, 11		83.0.4103.120				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-11.0.0_r69
+- AOSP, 12		91.0.4472.114				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-12.0.0_r49
 - AOSP, 12.1		95.0.4638.74				https://android.googlesource.com/platform/external/chromium-webview/+log/android-12.1.0_r27
-- AOSP, 13		101.0.4951.61				https://android.googlesource.com/platform/external/chromium-webview/+log/android-13.0.0_r16
+- AOSP, 13		109.0.5414.123				https://android.googlesource.com/platform/external/chromium-webview/+log/android-13.0.0_r63
 - ArrowOS, †1, 12.1	AOSP prebuilts				https://github.com/ArrowOS/android_manifest/blob/arrow-12.1/default.xml
 - DotOS, †1, 11/12.1	AOSP prebuilts				https://github.com/DotOS/manifest
 - HavocOS, †1, 11/12.1	AOSP prebuilts				https://github.com/Havoc-OS/android_manifest

@@ -97,7 +97,7 @@ last updated: 2023/06/08
 		- DivestOS has removed the User-Agent from source-built libloc since 2023/05/05
 		- GrapheneOS removes serial number access and User-Agent from xtra-daemon since 2023/04/29: https://grapheneos.org/releases#2023042900
 		- CalyxOS removes serial number access since 2023/06/02: https://calyxos.org/news/2023/06/02/feature-update/
-			- LineageOS has this same patchset pending: https://review.lineageos.org/q/I6254ef6e160ff0d3c3ce2e51f20f557e75826dff
+			- LineageOS has this same patchset since 2023/06/09: https://review.lineageos.org/q/I6254ef6e160ff0d3c3ce2e51f20f557e75826dff
 	- Some aftermarket systems allow the user to disable use of PSDS & XTRA:
 		- GrapheneOS has a toggle since 2023/05/05: https://grapheneos.org/releases#2023050500
 		- CalyxOS has a toggle since 2023/06/02: https://calyxos.org/news/2023/06/02/feature-update/
