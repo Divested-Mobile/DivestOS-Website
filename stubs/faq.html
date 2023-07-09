@@ -142,6 +142,18 @@
 							<li>Have an unused device? Please consider donating it for better test coverage.</li>
 						</ul>
 
+						<h4 id="otaUpdate">Are OTA updates available?<a href="#otaUpdate">¶</a></h4>
+						<p>All devices have OTA updates via the Updater app accessible via Settings.</p>
+
+						<h4 id="otaUpdateAll">Do I need to install every update the Updater shows?<a href="#otaUpdateAll">¶</a></h4>
+						<p>No, just the latest one.</p>
+
+						<h4 id="otaUpdateSmall">Why does Updater show this tiny update?<a href="#otaUpdateSmall">¶</a></h4>
+						<p>That is an incremental OTA, you should prefer them over the full updates when available.</p>
+
+						<h4 id="incrementalOTA">What are incremental/delta OTA updates?<a href="#incrementalOTA">¶</a></h4>
+						<p>They are OTA updates that only contain the files changed from the last update, which makes them much smaller to download.</p>
+
 						<h4 id="internalDB">What internal databases are updated?<a href="#internalDB">¶</a></h4>
 						<p>AOSP has many internal databases that are often neglected on older versions, however we <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Update_Commons.sh" target="_blank" rel="nofollow noopener noreferrer">provide updates</a> for them as follows.</p>
 						<ul>
@@ -227,10 +239,9 @@
 						<h4 id="appCompat">So Google apps and other proprietary apps won't work at all?<a href="#appCompat">¶</a></h4>
 						<p>Many apps will work just fine. Status of some apps is documented <a href="/pages/functionality_tables#apps">here</a></p>
 						<ul>
-							<!-- , but may work with <a href="#microgEnable">microG enabled</a> -->
-							<li>Apps that hard depend on Play Services won't work.</li>
-							<li>Apps that depend on FCM/GCM without a fallback won't have notifications.</li>
-							<li>Apps that mandate Google login won't work.</li>
+							<li>Apps that hard depend on Play Services won't work, but may work with <a href="#microgEnable">microG enabled</a>.</li>
+							<li>Apps that depend on FCM/GCM without a fallback won't have notifications, but may work with <a href="#microgEnable">microG enabled</a>.</li>
+							<li>Apps that mandate Google login won't work, but may work with <a href="#microgEnable">microG enabled</a>.</li>
 							<li>Apps that depend on SafetyNet won't work.</li>
 							<li>Apps that depend on DRM won't work.</li>
 							<li>Apps that depend on Play Asset Delivery won't work.</li>
@@ -252,7 +263,7 @@
 							<li>Try to find an <i>official</i> version of the app on the Amazon or Huawei app store. These are unlikely to have any Google dependencies. Be careful as both stores have many fake/impostor apps.</li>
 						</ul>
 
-						<!--<h4 id="microgNotes">Anything important I should know about microG?<a href="#microgNotes">¶</a></h4>
+						<h4 id="microgNotes">Anything important I should know about microG?<a href="#microgNotes">¶</a></h4>
 						<ul>
 							<li>The 'Google device registration' and 'Google SafetyNet' options WILL make microG connect to Google servers.</li>
 							<li>The 'Cloud Messaging' option WILL make microG maintain a persistent connection to Google servers.</li>
@@ -277,7 +288,7 @@
 							<li>Some apps need push notifications via Google, for them you must let microG maintain a persistent identifiable connection to Google. Enable 'Google device registration' and 'Cloud Messaging' in microG.</li>
 							<li>Some apps require a captcha to be performed by the user, for them you can enable the 'Google SafetyNet' option.</li>
 							<li>Some apps require SafetyNet to work, while the option to enable it exists it will not work in the unprivileged mode that DivestOS uses.</li>
-						</ul>-->
+						</ul>
 					</div>
 
 					<div class="section">
