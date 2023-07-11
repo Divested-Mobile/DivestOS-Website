@@ -89,7 +89,7 @@ System
   - https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/2
 
 - Includes proprietary Google Widevine DRM on nearly all devices
- - https://gitlab.e.foundation/e/devices/android_device_fairphone_FP4/-/blob/7b2f827428830ad08e6c6aea4f32c69206d41c54/proprietary-files.txt#L373-378
+ - https://gitlab.e.foundation/e/devices/android_device_fairphone_FP4/-/blob/119e5d6fd7891ea02389a5e4fce5ad651774954e/proprietary-files.txt#L360-365
  - Even advertises Netflix on the website, see the third carousel image in the third phone mockup down
   - https://web.archive.org/web/20220720210209/https://e.foundation/e-os/
 
@@ -100,7 +100,7 @@ System
  - https://www.ntppool.org/en/vendors.html
 
 - Includes the proprietary Magic Earth app for navigation
- - Despite FOSS user friendly alternatives existing such as OSMAnd and Organic Maps
+ - Despite FOSS user friendly alternatives existing such as OsmAnd and Organic Maps
 
 - Allows arbitrary apps to spoof any signature
  - This is used to support microG but is an insecure implementation

@@ -8,100 +8,138 @@
 							<thead>
 								<tr>
 									<th>Name</th>
+									<th>Critical</th>
 									<th>Status</th>
-									<th>Information</th>
+									<th>Blobs Required</th>
+									<th>Blobs Removed</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">Accelerometer/Gyro</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Some devices utilize blobs for sensors</td>
+									<td data-label="Blobs Required">Some devices</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">Audio</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Some audio blobs are removed</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">Some are</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">Bluetooth</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Some devices utilize blobs for Bluetooth</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr>
 									<td data-label="Name">Camera</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No camera blobs are removed</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">Cell Service</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Many radio blobs are removed, but is kept fully functional</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">Some are</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">Compass</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No blobs are required for the compass</td>
+									<td data-label="Blobs Required">Some devices</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">GPS</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Many location blobs are removed, but is kept fully functional</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">Many are</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr>
 									<td data-label="Name">GPU</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No GPU blobs are removed</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr>
 									<td data-label="Name">HW Audio Decoding</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No DSP/Hexagon blobs are removed</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr>
 									<td data-label="Name">HW Encryption</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Some TrustZone/Keystore blobs are removed</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">Some debug tools are</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">HW Packet Processor</td>
+									<td data-label="Critical">Nice to have</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No blobs are required for Qualcomm's IPA</td>
+									<td data-label="Blobs Required">Yes, but sources seem available</td>
+									<td data-label="Blobs Removed">Some debug tools are</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr>
 									<td data-label="Name">HW Video Decoding</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No Venus blobs are removed</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr>
 									<td data-label="Name">IR Transceiver</td>
+									<td data-label="Critical">Nice to have</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No IR blobs are removed</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">Light Sensor</td>
+									<td data-label="Critical">Nice to have</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No blobs are required for the light sensor</td>
+									<td data-label="Blobs Required">Some devices</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">NFC</td>
+									<td data-label="Critical">Nice to have</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Some devices utilize blobs for NFC</td>
+									<td data-label="Blobs Required">Some devices</td>
+									<td data-label="Blobs Removed">Some are</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">Proximity Sensor</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">No blobs are required for the proximity sensor</td>
+									<td data-label="Blobs Required">Some devices</td>
+									<td data-label="Blobs Removed">No</td>
 								</tr>
-								<tr style="--table-body-fore-color: #4CAF50;">
+								<tr>
 									<td data-label="Name">Wi-Fi</td>
+									<td data-label="Critical">Yes</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Some devices utilize blobs for Wi-Fi</td>
+									<td data-label="Blobs Required">Yes</td>
+									<td data-label="Blobs Removed">Many are</td>
 								</tr>
-								<tr style="--table-body-fore-color: #FFC107;">
+								<tr>
 									<td data-label="Name">Wireless Charging</td>
+									<td data-label="Critical">Nice to have</td>
 									<td data-label="Status">Depends</td>
-									<td data-label="Information">All Qualcomm WiPower blobs are removed, newer devices utilizing WiPower will not work</td>
+									<td data-label="Blobs Required">Some devices</td>
+									<td data-label="Blobs Removed">WiPower blobs are</td>
 								</tr>
 							</tbody>
 						</table>
@@ -120,7 +158,7 @@
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">Android Auto</td>
 									<td data-label="Status">Does not work</td>
-									<td data-label="Information">No Play Services</td>
+									<td data-label="Information">Requires Play Services</td>
 								</tr>
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">AudioFX</td>
@@ -130,25 +168,24 @@
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">Chromecast</td>
 									<td data-label="Status">Does not work</td>
-									<td data-label="Information">No Play Services</td>
+									<td data-label="Information">Requires Play Services</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr style="--table-body-fore-color: #4CAF50;">
 									<td data-label="Name">Device Encryption</td>
 									<td data-label="Status">Works</td>
-									<td data-label="Information">Some TrustZone/Keystore blobs are removed</td>
+									<td data-label="Information">Encryption is a must-have</td>
 								</tr>
 								<tr style="--table-body-fore-color: #4CAF50;">
 									<td data-label="Name">DRM/HDCP</td>
-									<td data-label="Status">Does not work</td>
-									<td data-label="Information">All DRM and HDCP blobs are removed</td>
+									<td data-label="Status">Purposely Removed</td>
+									<td data-label="Information">DRM is harmful to the user</td>
 								</tr>
 								<tr style="--table-body-fore-color: #f44336;">
-									<td data-label="Name">Google SafetyNet</td>
-									<!--<td data-label="Status">Depends</td>-->
+									<td data-label="Name">Google Safetynet</td>
 									<td data-label="Status">Does not work</td>
-									<td data-label="Information">No Play Services</td>
+									<td data-label="Information">Requires Play Services</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr style="--table-body-fore-color: #4CAF50;">
 									<td data-label="Name">IMS/VoLTE</td>
 									<td data-label="Status">Works</td>
 									<td data-label="Information">Select IMS blobs are removed, but is kept working</td>
@@ -156,17 +193,17 @@
 								<tr style="--table-body-fore-color: #f44336;">
 									<td data-label="Name">VoWiFi/Wi-Fi Calling</td>
 									<td data-label="Status">Does not work</td>
-									<td data-label="Information">All VoWiFi blobs are removed</td>
+									<td data-label="Information">Removed due to privacy/security concerns</td>
 								</tr>
-								<tr style="--table-body-fore-color: #673AB7;">
+								<tr style="--table-body-fore-color: #4CAF50;">
 									<td data-label="Name">Qualcomm aptX</td>
 									<td data-label="Status">Works</td>
 									<td data-label="Information">On devices where it is available</td>
 								</tr>
-								<tr style="--table-body-fore-color: #f44336;">
+								<tr style="--table-body-fore-color: #4CAF50;">
 									<td data-label="Name">RCS</td>
-									<td data-label="Status">Does not work</td>
-									<td data-label="Information">All RCS blobs are removed</td>
+									<td data-label="Status">Purposely Removed</td>
+									<td data-label="Information">RCS is a fundamentally broken replacement</td>
 								</tr>
 								<tr style="--table-body-fore-color: #4CAF50;">
 									<td data-label="Name">Tethering (BT/USB/Wi-Fi)</td>

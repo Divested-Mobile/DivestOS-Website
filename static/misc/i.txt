@@ -102,7 +102,7 @@ System
  - https://github.com/abh/ntppool/pull/176
 
 - Includes the proprietary Magic Earth app for navigation
- - Despite FOSS user friendly alternatives existing such as OSMAnd and Organic Maps
+ - Despite FOSS user friendly alternatives existing such as OsmAnd and Organic Maps
 
 - Allows arbitrary apps to spoof any signature
  - This is used to support microG but is an insecure implementation
