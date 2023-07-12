@@ -59,13 +59,13 @@
 						</ul>
 
 						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
-						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only update_engine devices have incrementals generated.<br>As of 2023/07/03 that is: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, kirin, lemonade, lemonadep, lemonades, marlin, mata, mermaid, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
+						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only update_engine devices have incrementals generated.<br>As of 2023/07/12 that is: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, kirin, lemonade, lemonadep, lemonades, marlin, mata, mermaid, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
 
 						<h4 id="randomMAC">What devices support Wi-Fi MAC randomization?<a href="#randomMAC">¶</a></h4>
-						<p>As of 2023/07/03: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, dipper, discovery, dumpling, enchilada, equuleus, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, jasmine_sprout, kebab, kirin, lavender, lemonade, lemonadep, lemonades, lmi, mata, mermaid, oriole, panther, pioneer, platina, polaris, pro1, pro1x, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, twolip, ursa, vayu, voyager, walleye, wayne, whyred, xz2c</code></p>
+						<p>As of 2023/07/12: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, dipper, discovery, dumpling, enchilada, equuleus, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, jasmine_sprout, kebab, kirin, lavender, lemonade, lemonadep, lemonades, lmi, mata, mermaid, oriole, panther, pioneer, platina, polaris, pro1, pro1x, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, twolip, ursa, vayu, voyager, walleye, wayne, whyred, xz2c</code></p>
 
 						<h4 id="kernelCFI">What devices have CFI enabled kernels?<a href="#kernelCFI">¶</a></h4>
-						<p>As of 2023/07/03:</p>
+						<p>As of 2023/07/12:</p>
 						<ul>
 							<li>CFI enabled: none yet</li>
 							<li>CFI and SCS enabled: blueline/crosshatch, bonito/sargo, coral/flame/sunfish, bramble/redfin/barbet, oriole/raven/bluejay, cheetah/panther, FP4, lemonade*</li>
@@ -75,7 +75,7 @@
 						</ul>
 
 						<h4 id="mallocUse">What memory allocator is used?<a href="#mallocUse">¶</a></h4>
-						<p>As of 2023/07/03:</p>
+						<p>As of 2023/07/12:</p>
 						<ul>
 							<li>jemalloc for 32-bit and 64-bit: all 14.1 and 15.1 devices</li>
 							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 16.0 devices</li>
@@ -84,7 +84,7 @@
 						</ul>
 
 						<h4 id="deviceBootloader">What devices are known to have faulty/insecure bootloaders?<a href="#deviceBootloader">¶</a></h4>
-						<p>These are vendor limitations and apply to any OS. This list must be assumed incomplete. As of 2023/07/03:</p>
+						<p>These are vendor limitations and apply to any OS. This list must be assumed incomplete. As of 2023/07/12:</p>
 						<ul>
 							<li>Can't be relocked (with a custom OS): <a href="https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/" target="_blank" rel="nofollow noopener noreferrer">OnePlus 7 and newer</a>, Motorola, Samsung, Xiaomi</li>
 							<li>EDL access <a href="https://github.com/bkerler/loaders" target="_blank" rel="nofollow noopener noreferrer">available</a>: axolotl, FP2, FP3, bacon, oneplus2, oneplus3/t, cheeseburger/dumpling, enchilada/fajita, hotdog*/guacamole*, avicii, instantnoodle*/kebab/lemonades, lemonade*</li>
@@ -103,7 +103,7 @@
 						</ul>
 
 						<h4 id="volteTested">What devices is VoLTE known to be working on assuming everything else is in-place?<a href="#volteTested">¶</a></h4>
-						<p>As of 2023/07/03: <code>bluejay, cheeseburger, fajita, mata, taimen, FP3</code><br>Can be assumed working: <code>dumpling, enchilada, walleye</code></p>
+						<p>As of 2023/07/12: <code>bluejay, cheeseburger, fajita, mata, taimen, FP3</code><br>Can be assumed working: <code>dumpling, enchilada, walleye</code></p>
 
 						<h4 id="noVolte">My device has LTE without VoLTE but my carrier has phased out 2G/3G calling, what can I do?<a href="#noVolte">¶</a></h4>
 						<ul>
@@ -185,6 +185,40 @@
 							<li>20.0 has not yet received a port of it.</li>
 						</ul>
 
+						<h4 id="reduceMemoryUsage">Background apps keep dying! How can I reduce memory usage?<a href="#reduceMemoryUsage">¶</a></h4>
+						<ul>
+							<li>Uninstall apps you rarely use.</li>
+							<li>Reduce the number of background apps running.</li>
+							<li>Close out of apps that you aren't using by swiping them away in the app switcher.</li>
+							<li>Use the built-in network controls in favor of VPN-based firewall apps.</li>
+							<li>Use the built-in content blocker or `Private DNS` with an adblocking DNS resolver instead of a VPN-based adblock app.</li>
+							<li>Use the built-in home launcher instead of a third-party launcher. On modern Android the app switcher/overview is handled by the launcher (Quickstep) and most replacement launchers do not actually implement this, which results in both launchers always running.</li>
+							<li>Try to consolidate messaging apps, as an example <a href="https://f-droid.org/packages/eu.siacs.conversations/" target="_blank" rel="nofollow noopener noreferrer">Conversations</a> can talk XMPP, IRC via Biboumi, Matrix via Bifrost, and PSTN via jmp.chat. Conversations can even be a push notification provider for apps supporting <a href="https://unifiedpush.org/users/apps/" target="_blank" rel="nofollow noopener noreferrer">UnifiedPush</a>, which can let them pause entirely.</li>
+							<li>Use lighter or more efficient apps such as:<ul>
+								<li>Organic Maps instead of OsmAnd, the former uses pre-rendered bitmaps vs the latter's rendered vector maps</li>
+								<li>K-9 Mail instead of FairEmail, as the latter always keeps the WebView process loaded</li>
+								<li>Conversations instead of Cheogram, as the latter seems to have severe memory leaks</li>
+								<li>Wireguard instead of OpenVPN in VPN apps</li>
+							</ul></li>
+							<li>If you use a work profile, pause it when not needed.</li>
+							<li>Work profile apps like Shelter and Insular have options to "freeze" individual apps entirely, use it for infrequently used apps.</li>
+							<li>Main profile apps can also be "frozen" via apps like SuperFreezZ or Hail, but may cause issues.</li>
+							<li>If you use secondary user profiles, use the `End Session` button to completely stop them when not needed.</li>
+							<li>At the direct cost of security you can consider installing 32-bit variants of apps.</li>
+							<li>Disable the `secure app spawning` feature in Settings > Security.</li>
+							<li>Try to reboot your device once every three days to workaround any latent memory leaks.</li>
+							<li>Do not bother with "booster" or "cleaner" apps.</li>
+							<li>In your web browser, close out of tabs that are no longer needed.</li>
+							<li>In your web browser, only keep extensions that you really need. We only recommend uBlock Origin.</li>
+							<li>If you use uBlock Origin, consider enabling the `Ignore generic cosmetic filters` option.</li>
+							<li>Use the right tool for the job. Web browsers are great, but sometimes using a dedicated app really is more efficient, such as:<ul>
+								<li>using a unit/currency converter app instead of searching it.</li>
+								<li>watching YouTube in NewPipe instead of their website.</li>
+							</ul></li>
+							<li>Use an appropriate resolution wallpaper. While that 8K wallpaper may be breathtaking, it only wastes resources when your screen is a fraction of the resolution. <a href="/images/Black-100x100.png" target="_blank">Here</a> is an all black smallest possible PNG for this.</li>
+							<li>Prefer lower resolution video if available. Watching 2K/4K/8K requires more memory for processing and buffering which is just a waste when your screen is only five inches.</li>
+						</ul>
+
 						<h4 id="altDroid">Should I use an alternative F-Droid client?<a href="#altDroid">¶</a></h4>
 						<p>It is not recommend to use an alternative client due to how DivestOS utilizes its own F-Droid repos for updates. Additionally most alternative clients lack mirror support for downloads, incremental index database downloads, or any metadata localization support. If you do want to use one anyway, you MUST do the following:</p>
 						<ul>
@@ -254,6 +288,7 @@
 						<ul>
 							<li>Allowing self debugging: Settings > Security > Enable native code debugging > checked</li>
 							<li>Disabling the content blocker: Settings > Security > Disable DNS content blocker > checked (if this fixes it please report so it can be excluded from list)</li>
+							<li>Try installing the APK with the source spoofed to the Play Store: <code>adb push example.apk /data/local/tmp && adb shell pm install -i "com.android.vending" -r /data/local/tmp/exmaple.apk</code></li>
 							<li>Joining the <a href="/pages/community#chat">chat</a> and asking for help.</li>
 						</ul>
 						<p>There are also alternative ways to use an incompatible app:</p>
@@ -279,6 +314,7 @@
 							<li>In F-Droid search for and install the latest version of the following apps: microG Services Core, microG Services Framework Proxy, FakeStore.</li>
 							<li>Open system Settings, Security, and toggle on the 'microG enablement' option.</li>
 							<li>microG will now work.</li>
+							<li>Note: apps with targetSDK 31+ may require that microG be installed via <code>adb push example.apk /data/local/tmp && adb shell pm install --force-queryable /data/local/tmp/example.apk</code></li>
 						</ol>
 
 						<h4 id="microgOptions">How should I configure microG?<a href="#microgOptions">¶</a></h4>

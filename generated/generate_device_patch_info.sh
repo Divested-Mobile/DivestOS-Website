@@ -43,7 +43,7 @@ getVendorPatchLevel() {
 		elif [ $1 == "LineageOS-19.1" ]; then
 			level="2022-07";
 		elif [ $1 == "LineageOS-20.0" ]; then
-			level="2023-05";
+			level="2023-07";
 		else
 			level="Unknown";
 		fi;
@@ -86,7 +86,7 @@ createTable() {
 	vASB=$(getVendorPatchLevel $version $devicePath)
 	#green: keep 4 months + 1 future
 	#yellow: previous year
-	if [[ $vASB == "2023-05"* ]] || [[ $vASB == "2023-04"* ]] || [[ $vASB == "2023-03"* ]] || [[ $vASB == "2023-02"* ]] || [[ $vASB == "2023-01"* ]]; then
+	if [[ $vASB == "2023-08"* ]] || [[ $vASB == "2023-07"* ]] || [[ $vASB == "2023-06"* ]] || [[ $vASB == "2023-05"* ]] || [[ $vASB == "2023-04"* ]]; then
 		vASBStyle="style=\"color:#4CAF50;\"";
 	elif [[ $vASB == "2022-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
@@ -122,7 +122,6 @@ createTable() {
 
 createTable akari LineageOS-20.0 sony/tama-common sony/sdm845 sony/akari;
 createTable akatsuki LineageOS-20.0 sony/tama-common sony/sdm845 sony/akatsuki;
-createTable alioth LineageOS-19.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
 createTable alioth LineageOS-20.0 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/alioth;
 createTable apollon LineageOS-19.1 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/apollon;
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
