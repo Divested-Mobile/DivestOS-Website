@@ -8,7 +8,7 @@
 						<ul>
 							<li>Carrier branding</li>
 							<li>No access to fastboot and/or requiring to create an account</li>
-							<li>Less than 4GB of RAM</li>
+							<li>Less than 6GB of RAM</li>
 							<li>Less than 64GB of storage</li>
 							<li>Less than a 2000mAh battery</li>
 							<li>Released before 2017</li>
@@ -17,7 +17,7 @@
 						</ul>
 						<p>And for the best experience:</p>
 						<ul>
-							<li>At least 6GB of RAM</li>
+							<li>At least 8GB of RAM</li>
 							<li>At least 128GB of storage</li>
 							<li>At least an SD845 SoC</li>
 							<li>At least kernel 4.9, preferably newer.</li>
@@ -81,6 +81,21 @@
 							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 16.0 devices</li>
 							<li>scudo for 32-bit and hardened_malloc for 64-bit: all 17.1, 18.1, 19.1, and 20.0 devices</li>
 							<li>Exception: These devices use jemalloc for 32-bit instead of scudo: akari/akatsuki/aurora/xz2c, cheryl, klte, hlte</li>
+						</ul>
+
+						<h4 id="lowram">Why does DivestOS enable low_ram mode when Google only recommends it for <=2GB devices?<a href="#lowram">¶</a></h4>
+						<p>The OnePlus 3 released with Android 6.0 and had 6GB of RAM. The first generation Google Pixel released with Android 7.0 and had 4GB of RAM. Running Android 11 on a device that released with Android 4.2 and 2GB of RAM is much more usable when the system isn't hogging all the resources.</p>
+
+						<h4 id="lowramMode">What devices have low_ram mode set?<a href="#lowramMode">¶</a></h4>
+						<p>As of 2023/07/13</p>
+						<ul>
+							<li>14.1: <3GB</li>
+							<li>15.1: <3GB</li>
+							<li>16.0: <3GB</li>
+							<li>17.1: <3GB</li>
+							<li>18.1: <4GB</li>
+							<li>19.1: <6GB</li>
+							<li>20.0: <6GB</li>
 						</ul>
 
 						<h4 id="deviceBootloader">What devices are known to have faulty/insecure bootloaders?<a href="#deviceBootloader">¶</a></h4>
@@ -183,6 +198,20 @@
 							<li><a href="https://review.lineageos.org/q/topic:bt-sbc-hd-dualchannel" target="_blank" rel="nofollow noopener noreferrer">15.1</a>, <a href="https://review.lineageos.org/q/topic:bt-sbc-hd-dualchannel-pie" target="_blank" rel="nofollow noopener noreferrer">16.0</a>, and <a href="https://review.lineageos.org/q/topic:eleven-bt-sbc-hd-dualchannel" target="_blank" rel="nofollow noopener noreferrer">18.1</a> have it in the per-device Bluetooth settings menu.</li>
 							<li><a href="https://review.lineageos.org/q/topic:ten-bt-sbc-hd-dualchannel" target="_blank" rel="nofollow noopener noreferrer">17.1</a> and <a href="https://review.lineageos.org/q/topic:twelve-bt-sbc-hd-dualchannel" target="_blank" rel="nofollow noopener noreferrer">19.1</a> had incomplete patches made, and not merged.</li>
 							<li>20.0 has not yet received a port of it.</li>
+						</ul>
+
+						<h4 id="lowramChanges">What changes does low_ram mode incur?<a href="#lowramChanges">¶</a></h4>
+						<ul>
+							<li>On 14.1 through 16.0 jemalloc is set to svelte mode.</li>
+							<li>Picture in picture support is disabled.</li>
+							<li>Multi-window support is disabled.</li>
+							<li>Split-screen support is disabled.</li>
+							<li>Live wallpaper support is disabled.</li>
+							<li>Secondary displays are mirrored instead of extended.</li>
+							<li>The auto-rotate hint is disabled.</li>
+							<li>The GPU will be avoided for certain tasks.</li>
+							<li>Various graphics throughout the system will be rendered at a lower resolution.</li>
+							<li>Some animations and effects are disabled.</li>
 						</ul>
 
 						<h4 id="reduceMemoryUsage">Background apps keep dying! How can I reduce memory usage?<a href="#reduceMemoryUsage">¶</a></h4>
@@ -288,7 +317,7 @@
 						<ul>
 							<li>Allowing self debugging: Settings > Security > Enable native code debugging > checked</li>
 							<li>Disabling the content blocker: Settings > Security > Disable DNS content blocker > checked (if this fixes it please report so it can be excluded from list)</li>
-							<li>Try installing the APK with the source spoofed to the Play Store: <code>adb push example.apk /data/local/tmp && adb shell pm install -i "com.android.vending" -r /data/local/tmp/exmaple.apk</code></li>
+							<li>Try installing the APK with the source spoofed to the Play Store: <code>adb push example.apk /data/local/tmp && adb shell pm install -i "com.android.vending" -r /data/local/tmp/example.apk</code></li>
 							<li>Joining the <a href="/pages/community#chat">chat</a> and asking for help.</li>
 						</ul>
 						<p>There are also alternative ways to use an incompatible app:</p>
@@ -310,16 +339,17 @@
 						<h4 id="microgEnable">How do I enable microG?<a href="#microgEnable">¶</a></h4>
 						<p>microG is NOT supported and NOT recommended, however it can work in an unprivileged fashion on DivestOS 17.1 and higher after the July 2023 update.</p>
 						<ol>
+							<li>Open system Settings, Security, and toggle on the 'microG enablement' option. This MUST be done before installing.</li>
 							<li>Open F-Droid, Settings, Repositories, and enable the 'microG' repo. If it isn't listed you can <a href="https://microg.org/download.html" target="_blank" rel="nofollow noopener noreferrer">add it manually</a>.</li>
 							<li>In F-Droid search for and install the latest version of the following apps: microG Services Core, microG Services Framework Proxy, FakeStore.</li>
-							<li>Open system Settings, Security, and toggle on the 'microG enablement' option.</li>
 							<li>microG will now work.</li>
-							<li>Note: apps with targetSDK 31+ may require that microG be installed via <code>adb push example.apk /data/local/tmp && adb shell pm install --force-queryable /data/local/tmp/example.apk</code></li>
+							<li>[fixed in August 2023 update] Note for 18.1+: apps with targetSDK 30+ may require that microG be installed via <code>adb push example.apk /data/local/tmp && adb shell pm install --force-queryable /data/local/tmp/example.apk</code></li>
 						</ol>
 
 						<h4 id="microgOptions">How should I configure microG?<a href="#microgOptions">¶</a></h4>
 						<p>Depending on the apps you want to use there are a few different ways you can use microG.</p>
 						<ul>
+							<li>[added in August 2023 update] Some apps don't need microG but check that they were installed via Play, in this case you only need FakeStore and to install the app via `Aurora Store` or `Obtainium`. This mechanism only works on 18.1+ currently, adb workaround still necessary on older versions.</li>
 							<li>Some apps will work with microG simply installed without any Google connections, in this case it is strongly recommended to <a href="#networkControl">revoke Network permission</a> from the microG app.</li>
 							<li>Some apps need push notifications via Google, for them you must let microG maintain a persistent identifiable connection to Google. Enable 'Google device registration' and 'Cloud Messaging' in microG.</li>
 							<li>Some apps require a captcha to be performed by the user, for them you can enable the 'Google SafetyNet' option.</li>
