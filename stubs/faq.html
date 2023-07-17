@@ -145,6 +145,17 @@
 						<h4 id="bugReport">I found a bug! Where do I report it?<a href="#bugReport">¶</a></h4>
 						<p>Please see the <a href="/pages/bug_reporting">bug reporting</a> page.</p>
 
+						<h4 id="backups">How do I backup my system?<a href="#backups">¶</a></h4>
+						<ul>
+							<li>On 18.1 and higher Seedvault is included which should be used to backup user apps that allow it. Using Seedvault to a flash drive over OTG is strongly recommended, but be sure to plug it in occasionally to actually ensure recent backups are available.</li>
+							<li>Note: Seedvault can be unreliable, doesn't support work profiles or secondary users, and the file backup option will squash directory hirearchies.</li>
+							<li>Many apps have their own backup function, you should use this if Seedvault is unable to backup the app, as a backup backup, or if you're on a version without Seedvault.</li>
+							<li>From here you can copy all of internal storage (documents, downloads, pictures/videos) which should also include the Seedvault folder (if you didn't use OTG) along with any app specific exports. You can either use USB MTP or with some setup you can use Syncthing to a remote computer.</li>
+						</ul>
+
+						<h4 id="backupApps">What apps have their own backup mechanism?<a href="#backupApps">¶</a></h4>
+						<p>The following list is largely user contributed, nor do we necessarily endorse or recommend any of the following apps.<br>Also note some apps only prompt the share menu which can't actually directly save to a file, you can use <a href="https://f-droid.org/en/packages/name.lmj001.savetodevice/" target="_blank" rel="nofollow noopener noreferrer">this app</a> in that case.<br>See the full list <a href="/misc/app-backup.txt" target="_blank">here</a>!</p>
+
 						<h4 id="releaseTesting">What devices do you test on before release?<a href="#releaseTesting">¶</a></h4>
 						<ul>
 							<li>14.1: toroplus</li>
@@ -381,6 +392,9 @@
 							<li>For completely denying an app access to networking functions entirely, revoke the Network permission: App info > Permissions > Network</li>
 							<li>For blocking ads/trackers: that is already done via the built-in content filter and there is nothing to configure.</li>
 						</ul>
+
+						<h4 id="stableMAC">How to set a stable MAC address for a specific Wi-Fi network?<a href="#stableMAC">¶</a></h4>
+						<p>Settings > Network & internet > Internet > Tap the gear next to the specific Wi-Fi network > Privacy > Use per-network randomized MAC.</p>
 					</div>
 
 					<div class="section">

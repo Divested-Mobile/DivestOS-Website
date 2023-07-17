@@ -1,0 +1,66 @@
+AdAway
+Aegis
+AFWall+
+AnkiDroid
+AntennaPod
+AnySoftKeyboard
+App Manager
+AVNC
+Badreads
+Birday
+c:geo
+Contacts: Settings > Export
+Conversations & forks: Settings > Create backup
+Counter
+Drip
+FairEmail
+Firefox & forks: Settings > Sync and save your data
+FlorisBoard
+Gadgetbridge
+Goodtime
+Infinity
+Joplin
+K-9 Mail
+KeePassDX
+KISS Launcher
+Kotatsu
+Librera
+Linkbox
+Loop Habit Tracker: Setting > Export full backup
+MediLog
+MovieDB
+My Expenses
+Neo Backup
+NetGuard
+NewPipe: Settings > Content > Export database
+Open Camera
+OpenTracks
+Orgzly
+OsmAnd: Settings > (Scroll down) > Export to file > Check at least `Settings` & `My Places` > Continue > Save as file
+Photok
+QKSMS
+Quillpad
+RCX
+RedReader: Settings > Backup/Restore > Backup preferences
+RevolutionIRC
+RunnerUp
+Seeker
+SeriesGuide
+Signal: Settings > Chats > Chat backups > Turn on
+Silence
+Simple Mobile Tools Calendar
+Simple Mobile Tools Contacts
+Simple Mobile Tools Gallery
+Simple Time Tracker
+Syncthing
+Tasks.org
+Threema
+Time Cop
+TimeR Machine
+TimeTable
+TrackerControl
+Track & Graph
+usageDirect
+ViMusic
+WhatsApp
+YTDLnis
