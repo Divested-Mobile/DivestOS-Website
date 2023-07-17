@@ -128,7 +128,7 @@ Device Sales
 - Sells their `Murena One` phone which uses the 5+ year old MT6771 system-on-chip from February 2018
  - https://murena.com/shop/smartphones/brand-new/murena-one/
  - https://en.wikichip.org/wiki/mediatek/helio/mt6771
- - This is the same SoC used in the `Brax Phone` and `Simple Phone`
+ - This is the same SoC used in the `Brax Phone` and `Simple [Mobile Tools] Phone`
 
 - Sells devices like the Samsung Galaxy S9 which lacks VoLTE under custom operating systems
  - Many carriers are phasing out 2G/3G, making VoLTE mandatory for placing and receiving phone calls
