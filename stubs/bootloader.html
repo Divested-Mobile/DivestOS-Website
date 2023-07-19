@@ -61,7 +61,8 @@
 					<div class="section" id="fastboot">
 						<h3>Fastboot (generic)<a href="#fastboot">¶</a></h3>
 						<ul>
-							<h4 id="fastbootUnlocking">Unlocking<a href="#fastbootUnlocking">¶</a></h4>
+							<h4 id="fastbootUnlocking">Unlock & Install<a href="#fastbootUnlocking">¶</a></h4>
+							<p>Device specific steps are available via the "Install Method" link on the <a href="/pages/devices">Device Downloads</a> page.</p>
 							<ol>
 								<li>Backup your device.</li>
 								<li>Open the Phone app and type <code>*#*#2432546#*#*</code>, do not hit call</li>
@@ -89,10 +90,10 @@
 								<li>If 'A/B Sync' (copy-partitions.zip) is available and NOT striked out: <code>$ adb sideload copy-partitions-device.zip</a></code></li>
 								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>While still in the recovery perform a factory reset</li>
-								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot then something is wrong. Do not let it sit for more than 10 minutes!</li>
 								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
 							</ol>
-							<h4 id="fastbootLocking">Locking<a href="#fastbootLocking">¶</a></h4>
+							<h4 id="fastbootLocking">Re-locking<a href="#fastbootLocking">¶</a></h4>
 							<div class="section" id="lockwarning">
 								<div class="card fluid error">
 									<h5>WARNING!<a href="#lockwarning">¶</a></h5>
@@ -108,7 +109,7 @@
 							<ol>
 								<li>After install of a properly signed system you must verify boot, verify functionality, verify update support, and verify the ability to factory reset.</li>
 								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
-								<li>AVB devices only, flash the custom key slot if you didn't earlier.</li>
+								<li>AVB devices only: flash the custom key slot if you didn't earlier.</li>
 								<li>Ensure <code>$ fastboot flashing get_unlock_ability</code> is NOT zero, it MUST be one! Do NOT continue if zero!</li>
 								<li><code>$ fastboot oem lock</code> or <code>$ fastboot flashing lock</code></li>
 								<li>It is recommended to keep 'Allow OEM unlocking' checked under 'Developer options' in Settings for recovery purposes (broken update, broken touchscreen, etc.).</li>
@@ -178,7 +179,7 @@
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
 								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>While still in the recovery perform a factory reset</li>
-								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot then something is wrong. Do not let it sit for more than 10 minutes!</li>
 								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
 							</ol>
 						</ul>
@@ -201,7 +202,7 @@
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
 								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
 								<li>While still in the recovery perform a factory reset</li>
-								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
+								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot then something is wrong. Do not let it sit for more than 10 minutes!</li>
 								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
 							</ol>
 						</ul>
