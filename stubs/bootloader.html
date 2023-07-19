@@ -49,6 +49,7 @@
 						</ul>
 						<h4 id="prereqPhone">On your phone<a href="#prereqPhone">¶</a></h4>
 						<ol>
+							<li>These steps are only necessary for devices that don't use fastboot-based install methods!</li>
 							<li>Open the 'Settings' app</li>
 							<li>Navigate to the 'About' page</li>
 							<li>Tap on the field labeled 'Build number' 7 times</li>
@@ -58,7 +59,7 @@
 						</ol>
 					</div>
 					<div class="section" id="fastboot">
-						<h3>Fastboot<a href="#fastboot">¶</a></h3>
+						<h3>Fastboot (generic)<a href="#fastboot">¶</a></h3>
 						<ul>
 							<h4 id="fastbootUnlocking">Unlocking<a href="#fastbootUnlocking">¶</a></h4>
 							<ol>
@@ -114,65 +115,20 @@
 							</ol>
 						</ul>
 					</div>
-					<div class="section" id="fastbootLGE">
-						<h3>Fastboot (LGE)<a href="#fastbootLGE">¶</a></h3>
-						<ul>
-							<li>Devices Supported: Select LGE Phones</li>
-							<li>LGE has their own unlocking method, and prevents most devices from being unlocked.</li>
-							<ol>
-								<li>First check <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
-								<li>Create an LG Developer account</li>
-								<li>Backup your device.</li>
-								<li>Note down your IMEI (From original box or from Settings -> About -> Status)</li>
-								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
-								<li><code>$ fastboot oem device-id</code></li>
-								<li>Combine the two lines</li>
-								<li>Paste it into the site along with the IMEI</li>
-								<li>Click 'Confirm'</li>
-								<li>Wait a few minutes for an email</li>
-								<li>Save the unlock.bin from the email and keep it for future use</li>
-								<li><code>$ fastboot flash unlock unlock.bin</code></li>
-								<li><code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
-								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
-								<li>While still in the recovery perform a factory reset</li>
-								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
-								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
-							</ol>
-						</ul>
-					</div>
-					<div class="section" id="fastbootMotorola">
-						<h3>Fastboot (Motorola)<a href="#fastbootMotorola">¶</a></h3>
-						<ul>
-							<li>Devices Supported: Select Motorola Phones</li>
-							<li>Motorola also has their own unlocking method, and prevents some devices from being unlocked.</li>
-							<ol>
-								<li>First check <a href="https://mobilesupport.lenovo.com/us/en/solution/MS87215" target="_blank" rel="nofollow noopener noreferrer">here</a> to see if your device "qualifies"</li>
-								<li>If it does, click the 'Unlock' link for your device</li>
-								<li>Create a Motorola or Google account</li>
-								<li>Backup your device.</li>
-								<li>Reboot to the bootloader via key combination or <code>$ adb reboot bootloader</code></li>
-								<li><code>$ fastboot oem get_unlock_data</code></li>
-								<li>Use the little tool on the site to format the above output</li>
-								<li>Paste it into the field</li>
-								<li>Click 'Request Unlock Key' and then 'I Agree'</li>
-								<li>Wait a few minutes for an email</li>
-								<li>Copy the code from the email and save it for future use</li>
-								<li><code>$ fastboot oem unlock [KEY FROM EMAIL]</code></li>
-								<li><code>$ fastboot flash recovery divested-version-date-dos-device-recovery.img</code></li>
-								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
-								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
-								<li>While still in the recovery perform a factory reset</li>
-								<li>Reboot into DivestOS. If it takes more than 10 minutes to boot something is wrong. Do not let it sit for more than 10 minutes!</li>
-								<li>There are monthly updates. You MUST read the News page and backup your device before each update.</li>
-							</ol>
-						</ul>
-					</div>
 					<div class="section" id="warning2">
 						<div class="card fluid error">
 							<h3>WARNING!<a href="#destructionwarning">¶</a></h3>
 							<p>From here on all of the following methods can very easily and irreversibly destroy your device!</p>
 						</div>
+					</div>
+					<div class="section" id="heimdall">
+						<h3>Heimdall<a href="#heimdall">¶</a></h3>
+						<ul>
+							<li>Devices Supported: Select Samsung devices</li>
+							<ol>
+								<li>[TO BE COMPLETED]</li>
+							</ol>
+						</ul>
 					</div>
 					<div class="section" id="lgUP">
 						<h3>LG UP<a href="#lgUP">¶</a></h3>
@@ -190,15 +146,6 @@
 						<ul>
 							<li>Devices Supported: Select LG devices</li>
 							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
-							<ol>
-								<li>[TO BE COMPLETED]</li>
-							</ol>
-						</ul>
-					</div>
-					<div class="section" id="heimdall">
-						<h3>Heimdall<a href="#heimdall">¶</a></h3>
-						<ul>
-							<li>Devices Supported: Select Samsung devices</li>
 							<ol>
 								<li>[TO BE COMPLETED]</li>
 							</ol>
