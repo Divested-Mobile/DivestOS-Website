@@ -84,18 +84,18 @@
 						</ul>
 
 						<h4 id="lowram">Why does DivestOS enable low_ram mode when Google only recommends it for <=2GB devices?<a href="#lowram">¶</a></h4>
-						<p>The OnePlus 3 released with Android 6.0 and had 6GB of RAM. The first generation Google Pixel released with Android 7.0 and had 4GB of RAM. Running Android 11 on a device that released with Android 4.2 and 2GB of RAM is much more usable when the system isn't hogging all the resources.</p>
+						<p>The OnePlus 3 released with Android 6.0 and had 6GB of RAM. Running Android 11 on a device that released with Android 4.2 and 2GB of RAM is much more usable when the system isn't hogging all the resources.</p>
 
 						<h4 id="lowramMode">What devices have low_ram mode set?<a href="#lowramMode">¶</a></h4>
 						<p>As of 2023/07/13</p>
 						<ul>
-							<li>14.1: <3GB</li>
-							<li>15.1: <3GB</li>
-							<li>16.0: <3GB</li>
+							<li>14.1: <2GB</li>
+							<li>15.1: <2GB</li>
+							<li>16.0: <2GB</li>
 							<li>17.1: <3GB</li>
-							<li>18.1: <4GB</li>
-							<li>19.1: <6GB</li>
-							<li>20.0: <6GB</li>
+							<li>18.1: <3GB</li>
+							<li>19.1: <4GB</li>
+							<li>20.0: <4GB</li>
 						</ul>
 
 						<h4 id="deviceBootloader">What devices are known to have faulty/insecure bootloaders?<a href="#deviceBootloader">¶</a></h4>
@@ -223,6 +223,7 @@
 							<li>The GPU will be avoided for certain tasks.</li>
 							<li>Various graphics throughout the system will be rendered at a lower resolution.</li>
 							<li>Some animations and effects are disabled.</li>
+							<li>File previews are disabled in the Files app and file picker.</li>
 						</ul>
 
 						<h4 id="reduceMemoryUsage">Background apps keep dying! How can I reduce memory usage?<a href="#reduceMemoryUsage">¶</a></h4>
@@ -354,13 +355,13 @@
 							<li>Open F-Droid, Settings, Repositories, and enable the 'microG' repo. If it isn't listed you can <a href="https://microg.org/download.html" target="_blank" rel="nofollow noopener noreferrer">add it manually</a>.</li>
 							<li>In F-Droid search for and install the latest version of the following apps: microG Services Core, microG Services Framework Proxy, FakeStore.</li>
 							<li>microG will now work.</li>
-							<li>[fixed in August 2023 update] Note for 18.1+: apps with targetSDK 30+ may require that microG be installed via <code>adb push example.apk /data/local/tmp && adb shell pm install --force-queryable /data/local/tmp/example.apk</code></li>
+							<li>[fixed in late July 2023 update] Note for 18.1+: apps with targetSDK 30+ may require that microG be installed via <code>adb push example.apk /data/local/tmp && adb shell pm install --force-queryable /data/local/tmp/example.apk</code></li>
 						</ol>
 
 						<h4 id="microgOptions">How should I configure microG?<a href="#microgOptions">¶</a></h4>
 						<p>Depending on the apps you want to use there are a few different ways you can use microG.</p>
 						<ul>
-							<li>[added in August 2023 update] Some apps don't need microG but check that they were installed via Play, in this case you only need FakeStore and to install the app via `Aurora Store` or `Obtainium`. This mechanism only works on 18.1+ currently, adb workaround still necessary on older versions.</li>
+							<li>[added in late July 2023 update] Some apps don't need microG but check that they were installed via Play, in this case you only need FakeStore and to install the app via `Aurora Store` or `Obtainium`. This mechanism only works on 18.1+ currently, adb workaround still necessary on older versions.</li>
 							<li>Some apps will work with microG simply installed without any Google connections, in this case it is strongly recommended to <a href="#networkControl">revoke Network permission</a> from the microG app.</li>
 							<li>Some apps need push notifications via Google, for them you must let microG maintain a persistent identifiable connection to Google. Enable 'Google device registration' and 'Cloud Messaging' in microG.</li>
 							<li>Some apps require a captcha to be performed by the user, for them you can enable the 'Google SafetyNet' option.</li>

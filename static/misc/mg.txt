@@ -32,7 +32,7 @@ microG
 - Has unclear potential to leak location to apps without location permission
  - "Fused Locations: Does not honor AppOps!"
   - https://github.com/microg/GmsCore/wiki/Implementation-Status
- - DivestOS addresses this by not granting location provider permissions
+ - DivestOS addresses this by not granting any location permissions
 
 
 - Signature spoofing permission is often poorly implemented:

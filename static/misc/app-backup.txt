@@ -12,6 +12,7 @@ c:geo
 Contacts: Settings > Export
 Conversations & forks: Settings > Create backup
 Counter
+Delta Labs
 Drip
 FairEmail
 Firefox & forks: Settings > Sync and save your data
@@ -27,16 +28,20 @@ Kotatsu
 Librera
 Linkbox
 Loop Habit Tracker: Setting > Export full backup
+Markor
 MediLog
 MovieDB
 My Expenses
 Neo Backup
 NetGuard
 NewPipe: Settings > Content > Export database
+Obtainium
 Open Camera
+OpenKeychain
 OpenTracks
 Orgzly
 OsmAnd: Settings > (Scroll down) > Export to file > Check at least `Settings` & `My Places` > Continue > Save as file
+personalDNSfilter
 Photok
 QKSMS
 Quillpad
