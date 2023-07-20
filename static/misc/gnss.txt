@@ -1,4 +1,4 @@
-last updated: 2023/06/08
+last updated: 2023/07/20
 
 - Acronyms:
 	- GNSS		global navigation satellite system		https://en.wikipedia.org/wiki/Satellite_navigation
@@ -10,6 +10,9 @@ last updated: 2023/06/08
 	- SUPL		secure user plane location			https://en.wikipedia.org/wiki/Assisted_GPS#SUPL
 	- MSA		mobile station assisted				https://en.wikipedia.org/wiki/Assisted_GPS#Modes_of_operation
 	- MSB		mobile station based				https://en.wikipedia.org/wiki/Assisted_GPS#Modes_of_operation
+	- RRLP		radio resource location services protocol	https://en.wikipedia.org/wiki/Radio_resource_location_services_protocol
+	- LPP		location positioning protocol			https://www.rohde-schwarz.com/br/file/LTE_LBS_White_Paper.pdf
+	- LPPE		LPP extensions
 
 
 - GNSS is any of GPS (US), GLONASS (RU), Beidou (CN), and Galileo (EU).
@@ -35,13 +38,20 @@ last updated: 2023/06/08
 		- DivestOS explicitly removes most of the Qualcomm location stack, including this NLP, since 2017/01.
 
 
-- A-GNSS has control plane and user plane (SUPL).
-	- Control plane handling won't be covered here due to needing more research.
+- A-GNSS control plane (needs more research/verification)
+	- These are protocols such as RRLP, LPP, and LPPE
+	- RRLP is a basic signal strength based mechanism to determine location
+	- LPP extends that by taking into account the extra antennas that LTE has and their angles
+	- LPPE extends that with extra sensor data like barometer and visible Wi-Fi networks
+	- DivestOS has disabled LPP and LPPE since 2023/07/10: https://divestos.org/pages/news#2023-07
+
+
+- A-GNSS user plane (SUPL)
 	- SUPL is a two-way street, as in the server and client can ask each other to do things.
 	- SUPL can provide the almanac as well as ephemeris data.
 	- SUPL MSA works by the client sending the server everything it knows so the server can calculate location.
 		- This mode allows the server to effectively know your location.
-		- DivestOS has disabled MSA since 2018/08/08
+		- DivestOS has disabled MSA since 2018/08/08: https://gitlab.com/divested-mobile/divestos-build/-/commit/bf717204e3ecabb1c87201929fedc0ab9a4632cf
 	- SUPL MSB works by the server sending everything it knows to the client so the client can calculate location.
 	- SUPL requests may contain visible cell towers and their signal strengths.
 	- SUPL (MSB) requests on Android typically include the IMSI, MCC, and MNC.
@@ -66,6 +76,7 @@ last updated: 2023/06/08
 		- DivestOS 17.1+ since 2023/02/11: https://divestos.org/pages/news#2023-02
 		- CalyxOS since 2023/03/16: https://calyxos.org/news/2023/03/16/march-update/
 			- LineageOS has this same SUPL/PSDS/XTRA toggle since 2023/06/06: https://review.lineageos.org/q/topic:agps
+				- DivestOS & iodéOS also inherit this toggle on 20.0
 		- iodéOS since 2023/02/11?
 
 
@@ -76,7 +87,7 @@ last updated: 2023/06/08
 		- The PSDS server is typically defined by the carrier config.
 			- Tensor devices use agnss.goog.
 			- Others use the plain gllto.glpals.com.
-				- DivestOS overrides Tensor to this as well.
+				- DivestOS overrides Tensor to this as well since 2023/01/20: https://gitlab.com/divested-mobile/divestos-build/-/commit/9558a7d0e9a8de04c7c9b5c4c5cb637834ed52dc
 			- GrapheneOS provides a proxy for this request since 2022/04/19: https://grapheneos.org/releases#2022041900
 		- The PSDS requests are performed by the Android system (frameworks/base), not the GPS stack.
 		- These PSDS requests are not known to contain any personal or device information.
@@ -84,7 +95,7 @@ last updated: 2023/06/08
 		- The PSDS server is typically defined by the GPS stack.
 			- This is usually xtrapath[1-9].izatcloud.net.
 			- The Android system could override the server chosen.
-				- As of 2023/04/30 no aftermarket systems override or proxy these requests.
+				- GrapheneOS provides a proxy override for this since 2023/05/05: https://grapheneos.org/releases#2023050500
 		- The PSDS requests are performed by the GPS stack, specifically xtra-daemon or libloc.
 		- The PSDS requests have a User-Agent containing Android version, device manufacturer & model, carrier, and chipset serial number.
 			- "Qualcomm GNSS Assistance Service": https://www.qualcomm.com/site/privacy/services
@@ -103,6 +114,11 @@ last updated: 2023/06/08
 		- CalyxOS has a toggle since 2023/06/02: https://calyxos.org/news/2023/06/02/feature-update/
 			- LineageOS has this same SUPL/PSDS/XTRA toggle since 2023/06/06: https://review.lineageos.org/q/topic:agps
 				- DivestOS & iodéOS also inherit this toggle on 20.0
+
+
+- TODO
+	- cover geofencing
+		- DivestOS has disabled geofencing since 2018/09/19: https://gitlab.com/divested-mobile/divestos-build/-/commit/289b110d8f9644ccf1fc17388120d4e9bad886f3
 
 
 See something wrong? Open an issue or merge request:
