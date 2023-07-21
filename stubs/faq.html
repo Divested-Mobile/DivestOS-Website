@@ -59,13 +59,13 @@
 						</ul>
 
 						<h4 id="incrementalSupport">What devices support incremental/delta OTA updates?<a href="#incrementalSupport">¶</a></h4>
-						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only update_engine devices have incrementals generated.<br>As of 2023/07/12 that is: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, kirin, lemonade, lemonadep, lemonades, marlin, mata, mermaid, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
+						<p>Previously all devices were supported, however there were issues on many legacy devices failing to properly apply them leaving the install in an inconsistent state. Now only update_engine devices have incrementals generated.<br>As of 2023/07/21 that is: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, bluejay, blueline, bonito, bramble, cheetah, cheryl, coral, crosshatch, davinci, discovery, enchilada, fajita, flame, FP3, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, kebab, kirin, lemonade, lemonadep, lemonades, marlin, mata, mermaid, oriole, panther, pioneer, pro1, pro1x, raven, redfin, sailfish, sargo, sunfish, taimen, vayu, voyager, walleye, xz2c</code></p>
 
 						<h4 id="randomMAC">What devices support Wi-Fi MAC randomization?<a href="#randomMAC">¶</a></h4>
-						<p>As of 2023/07/12: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, dipper, discovery, dumpling, enchilada, equuleus, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, jasmine_sprout, kebab, kirin, lavender, lemonade, lemonadep, lemonades, lmi, mata, mermaid, oriole, panther, pioneer, platina, polaris, pro1, pro1x, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, twolip, ursa, vayu, voyager, walleye, wayne, whyred, xz2c</code></p>
+						<p>As of 2023/07/21: <code>akari, akatsuki, alioth, Amber, apollon, aura, aurora, avicii, barbet, beryllium, bluejay, blueline, bonito, bramble, cheeseburger, cheetah, cheryl, coral, crosshatch, davinci, dipper, discovery, dumpling, enchilada, equuleus, fajita, flame, FP4, guacamole, guacamoleb, hotdog, hotdogb, instantnoodle, instantnoodlep, jasmine_sprout, kebab, kirin, lavender, lemonade, lemonadep, lemonades, lmi, mata, mermaid, oriole, panther, pioneer, platina, polaris, pro1, pro1x, raven, redfin, sargo, star2lte, starlte, sunfish, taimen, twolip, ursa, vayu, voyager, walleye, wayne, whyred, xz2c</code></p>
 
 						<h4 id="kernelCFI">What devices have CFI enabled kernels?<a href="#kernelCFI">¶</a></h4>
-						<p>As of 2023/07/12:</p>
+						<p>As of 2023/07/21:</p>
 						<ul>
 							<li>CFI enabled: none yet</li>
 							<li>CFI and SCS enabled: blueline/crosshatch, bonito/sargo, coral/flame/sunfish, bramble/redfin/barbet, oriole/raven/bluejay, cheetah/panther, FP4, lemonade*</li>
@@ -75,7 +75,7 @@
 						</ul>
 
 						<h4 id="mallocUse">What memory allocator is used?<a href="#mallocUse">¶</a></h4>
-						<p>As of 2023/07/12:</p>
+						<p>As of 2023/07/21:</p>
 						<ul>
 							<li>jemalloc for 32-bit and 64-bit: all 14.1 and 15.1 devices</li>
 							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 16.0 devices</li>
@@ -99,7 +99,7 @@
 						</ul>
 
 						<h4 id="deviceBootloader">What devices are known to have faulty/insecure bootloaders?<a href="#deviceBootloader">¶</a></h4>
-						<p>These are vendor limitations and apply to any OS. This list must be assumed incomplete. As of 2023/07/12:</p>
+						<p>These are vendor limitations and apply to any OS. This list must be assumed incomplete. As of 2023/07/21:</p>
 						<ul>
 							<li>Can't be relocked (with a custom OS): <a href="https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/" target="_blank" rel="nofollow noopener noreferrer">OnePlus 7 and newer</a>, Motorola, Samsung, Xiaomi</li>
 							<li>EDL access <a href="https://github.com/bkerler/loaders" target="_blank" rel="nofollow noopener noreferrer">available</a>: axolotl, FP2, FP3, bacon, oneplus2, oneplus3/t, cheeseburger/dumpling, enchilada/fajita, hotdog*/guacamole*, avicii, instantnoodle*/kebab/lemonades, lemonade*</li>
@@ -118,7 +118,7 @@
 						</ul>
 
 						<h4 id="volteTested">What devices is VoLTE known to be working on assuming everything else is in-place?<a href="#volteTested">¶</a></h4>
-						<p>As of 2023/07/12: <code>bluejay, cheeseburger, fajita, mata, taimen, FP3</code><br>Can be assumed working: <code>dumpling, enchilada, walleye</code></p>
+						<p>As of 2023/07/21: <code>bluejay, cheeseburger, fajita, mata, taimen, FP3</code><br>Can be assumed working: <code>dumpling, enchilada, walleye</code></p>
 
 						<h4 id="noVolte">My device has LTE without VoLTE but my carrier has phased out 2G/3G calling, what can I do?<a href="#noVolte">¶</a></h4>
 						<ul>
@@ -365,13 +365,12 @@
 							<li>Open F-Droid, Settings, Repositories, and enable the 'microG' repo. If it isn't listed you can <a href="https://microg.org/download.html" target="_blank" rel="nofollow noopener noreferrer">add it manually</a>.</li>
 							<li>In F-Droid search for and install the latest version of the following apps: microG Services Core, microG Services Framework Proxy, FakeStore.</li>
 							<li>microG will now work.</li>
-							<li>[fixed in late July 2023 update] Note for 18.1+: apps with targetSDK 30+ may require that microG be installed via <code>adb push example.apk /data/local/tmp && adb shell pm install --force-queryable /data/local/tmp/example.apk</code></li>
 						</ol>
 
 						<h4 id="microgOptions">How should I configure microG?<a href="#microgOptions">¶</a></h4>
 						<p>Depending on the apps you want to use there are a few different ways you can use microG.</p>
 						<ul>
-							<li>[added in late July 2023 update] Some apps don't need microG but check that they were installed via Play, in this case you only need FakeStore and to install the app via `Aurora Store` or `Obtainium`. This mechanism only works on 18.1+ currently, adb workaround still necessary on older versions.</li>
+							<li>Some apps don't need microG but check that they were installed via Play, in this case you only need FakeStore and to install the app via `Aurora Store` or `Obtainium`. This mechanism only works on 18.1+ currently, adb workaround still necessary on older versions.</li>
 							<li>Some apps will work with microG simply installed without any Google connections, in this case it is strongly recommended to <a href="#networkControl">revoke Network permission</a> from the microG app.</li>
 							<li>Some apps need push notifications via Google, for them you must let microG maintain a persistent identifiable connection to Google. Enable 'Google device registration' and 'Cloud Messaging' in microG.</li>
 							<li>Some apps require a captcha to be performed by the user, for them you can enable the 'Google SafetyNet' option.</li>

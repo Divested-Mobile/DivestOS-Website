@@ -1,4 +1,4 @@
-last updated: 2023/04/04
+last updated: 2023/07/21
 
 microG
 ======
@@ -37,7 +37,11 @@ microG
   - https://github.com/dylangerdaly/platform_frameworks_base/commit/b58aa11631fadab3309a1d9268118bd9f2c2a79f
 
  - DivestOS is opt-in, checks microG package ID + targetSdk + versionCode + certificate hash, and only allows spoofing the Google signature
-  - https://github.com/Divested-Mobile/DivestOS-Build/blob/master/Patches/LineageOS-20.0/android_frameworks_base/0036-Hardened-signature-spoofing.patch
+  - https://github.com/Divested-Mobile/DivestOS-Build/blob/master/Patches/LineageOS-20.0/android_frameworks_base/0036-Unprivileged_microG_Handling.patch
+  - https://github.com/Divested-Mobile/DivestOS-Build/blob/master/Patches/LineageOS-19.1/android_frameworks_base/0031-Unprivileged_microG_Handling.patch
+  - https://github.com/Divested-Mobile/DivestOS-Build/blob/master/Patches/LineageOS-18.1/android_frameworks_base/0024-Unprivileged_microG_Handling.patch
+  - https://github.com/Divested-Mobile/DivestOS-Build/blob/master/Patches/LineageOS-17.1/android_frameworks_base/0021-Unprivileged_microG_Handling.patch
+  - https://github.com/Divested-Mobile/DivestOS-Build/blob/master/Patches/LineageOS-16.0/android_frameworks_base/0021-Unprivileged_microG_Handling.patch
 
 
 See something wrong? Open an issue or merge request:
