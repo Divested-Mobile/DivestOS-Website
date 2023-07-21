@@ -13,10 +13,11 @@ microG
 
 
 - microG misconception #3: "it is just a normal app" & "it isn't privileged"
- - https://gitlab.com/CalyxOS/platform_prebuilts_calyx_microg/-/blob/android13/Android.mk#L9
- - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/Android.mk#L24
- - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/staging/prebuilts/GmsCore/Android.mk#L37
- - https://github.com/MSe1969/android_prebuilts_prebuiltapks/blob/master/GmsCore/Android.mk#L24
+ - Some OS distribute microG as a privileged app for tighter system integration, even though that's not required to use microG and is not desirable from security perspective.
+  - https://gitlab.com/CalyxOS/platform_prebuilts_calyx_microg/-/blob/android13/Android.mk#L9
+  - https://gitlab.e.foundation/e/os/android_prebuilts_prebuiltapks_lfs/-/blob/main/GmsCore/Android.mk#L24
+  - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/staging/prebuilts/GmsCore/Android.mk#L37
+  - https://github.com/MSe1969/android_prebuilts_prebuiltapks/blob/master/GmsCore/Android.mk#L24
  - DivestOS addresses this by not installing it at all, keeping it a normal user app, and has no automatically granted permissions
 
 
