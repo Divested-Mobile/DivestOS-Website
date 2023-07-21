@@ -4,6 +4,7 @@ last updated: 2023/07/20
 	- GNSS		global navigation satellite system		https://en.wikipedia.org/wiki/Satellite_navigation
 	- A-GNSS	assisted GNSS					https://en.wikipedia.org/wiki/Assisted_GNSS
 	- SBAS		satellite based augmentation systems		https://en.wikipedia.org/wiki/GNSS_augmentation
+	- GBAS		ground based augmentation systems		https://en.wikipedia.org/wiki/GNSS_augmentation
 	- TTFF		time to first fix				https://en.wikipedia.org/wiki/Time_to_first_fix
 	- NLP		network location provider			https://en.wikipedia.org/wiki/Wi-Fi_positioning_system
 	- PSDS		predicted satellite data service
@@ -16,7 +17,8 @@ last updated: 2023/07/20
 
 
 - GNSS is any of GPS (US), GLONASS (RU), Beidou (CN), and Galileo (EU).
-	- GNSS satellites can be further helped via SBAS (eg. land towers or ocean buoys).
+	- GNSS satellites can be further helped via SBAS and GBAS.
+		- These are land towers or ocean buoys or even alternative satellites systems.
 - GNSS TTFF is slow due to the data rates and distances.
 - GNSS TTFF can be sped up by using PSDS or A-GNSS.
 
@@ -43,7 +45,7 @@ last updated: 2023/07/20
 	- RRLP is a basic signal strength based mechanism to determine location
 	- LPP extends that by taking into account the extra antennas that LTE has and their angles
 	- LPPE extends that with extra sensor data like barometer and visible Wi-Fi networks
-	- DivestOS has disabled LPP and LPPE since 2023/07/10: https://divestos.org/pages/news#2023-07
+	- DivestOS has disabled LPP and LPPE since 2023/07/10: https://gitlab.com/divested-mobile/divestos-build/-/commit/f699e1bc86ff433d25dce3c8bda341fdcb8dc786
 
 
 - A-GNSS user plane (SUPL)
@@ -60,7 +62,9 @@ last updated: 2023/07/20
 			- MSe1969 authored the original patch sometime around or before 2018/10/29
 			- DivestOS since 2019/06/02: https://gitlab.com/divested-mobile/divestos-build/-/commit/bb72bccbe
 			- GrapheneOS since 2023/01/25: https://grapheneos.org/releases#2023012500
+				- DivestOS sent MSe1969's patch to GrapheneOS on 2021/08/08: https://github.com/GrapheneOS/platform_frameworks_base/pull/87
 			- CalyxOS since 2023/03/16: https://calyxos.org/news/2023/03/16/march-update/
+				- DivestOS sent MSe1969's patch to CalyxOS on 2021/08/08: https://gitlab.com/CalyxOS/calyxos/-/issues/618
 			- LineageOS 20.0 since 2023/03/12: https://review.lineageos.org/c/LineageOS/android_frameworks_base/+/350287
 			- iodéOS since late 2021/early 2022?
 	- Android uses supl.google.com as a fallback SUPL server.
@@ -73,7 +77,7 @@ last updated: 2023/07/20
 		- Some aftermarket systems change the fallback to supl.vodafone.com which is actually just a CNAME to supl.google.com.
 	- Some aftermarket systems allow the user to disable use of SUPL:
 		- GrapheneOS since 2023/02/10: https://grapheneos.org/releases#2023021000
-		- DivestOS 17.1+ since 2023/02/11: https://divestos.org/pages/news#2023-02
+		- DivestOS 17.1+ since 2023/02/11: https://gitlab.com/divested-mobile/divestos-build/-/commit/49f5f1c6740eb36153af2cb8032322dcca7df84b
 		- CalyxOS since 2023/03/16: https://calyxos.org/news/2023/03/16/march-update/
 			- LineageOS has this same SUPL/PSDS/XTRA toggle since 2023/06/06: https://review.lineageos.org/q/topic:agps
 				- DivestOS & iodéOS also inherit this toggle on 20.0
@@ -117,8 +121,16 @@ last updated: 2023/07/20
 
 
 - TODO
-	- cover geofencing
+	- Geofencing
 		- DivestOS has disabled geofencing since 2018/09/19: https://gitlab.com/divested-mobile/divestos-build/-/commit/289b110d8f9644ccf1fc17388120d4e9bad886f3
+	- OMA-DM
+		- DivestOS has removed OMA-DM blobs since 2017/01/25: https://gitlab.com/divested-mobile/divestos-build/-/commit/80a20859845e5cb4b071138d15929f2b8b11b2e2
+		- GrapheneOS has removed OMA-DM blobs since 2017/02/13: https://github.com/GrapheneOS-Archive/android-prepare-vendor/commit/ea4b42c617991607970471f6eee2615f29570dc4
+		- CalyxOS since ???
+	- CarrierLocationServices
+		- DivestOS has removed CarrierLocation blobs since 2020/10/20: https://gitlab.com/divested-mobile/divestos-build/-/commit/0958df7de54fde71ba4ecb742bf76d80424d652d
+		- GrapheneOS since ???
+		- CalyxOS since ???
 
 
 See something wrong? Open an issue or merge request:

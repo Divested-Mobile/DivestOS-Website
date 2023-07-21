@@ -6,8 +6,44 @@
 					<?php print(file_get_contents("stubs/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2023-07.2">
+						<h3>July 21st 2023 Update<a href="#2023-07.2">¶</a><small>Slicked</small></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>20.0 rebuilds were published July 21st.</li>
+							<li>19.1 rebuilds were published July 19th.</li>
+							<li>14.1, 15.1, 16.0, 17.1, and 18.1 rebuilds were published July 18th.</li>
+							<li>On 18.1 and higher microG enablement has been improved and is considered complete.
+								<ul>
+									<li>microG is now set forceQueryable so that modern apps can actually interact with it. You must have the enablement toggle ON before installing microG for this to work.</li>
+									<li>Apps installed via Aurora Store or Obtainium will have their install source spoofed to Play Store. This is a runtime option and doesn't require re-installing apps.</li>
+								</ul>
+							</li>
+							<li>Open Camera has been dropped as it doesn't seem to work on the lock screen anymore.</li>
+							<li>Work profiles are now available for devices in low_ram mode.</li>
+							<li>17.1 and higher now let you disable user apps via their "App info" screen, thanks to a patch from GrapheneOS.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>low_ram is now enabled on more devices to better maintain usability as they age as <a href="/pages/faq#lowram" target="_blank">noted here</a>.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Updated Mull to 115.2.1-1.</li>
+							<li>Updated Mulch to 115.0.5790.85-1 and 115.0.5790.136-1, has - and 20 security fixes.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>Devices using fastboot for installs now have their exact steps available linked via downloads page. This improvement should hopefully reduce friction for new users.</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>@ElCorzo has added a basic Dockerfile to setup Fedora with the required dependencies to compile DivestOS, try it out via the included `Container/{build,run}-image-podman.sh` scripts!</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2023-07">
-						<h3>July 12th 2023 Update<a href="#2023-07">¶</a></h3>
+						<h3>July 12th 2023 Update<a href="#2023-07">¶</a><small>Angle me not!</small></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>20.0 release candidate #1 July ASB builds were published on July 12th.</li>
@@ -33,9 +69,8 @@
 							<li>Our grant application, to cover server costs and devices for testing, submitted to FUTO back in January was declined. Still waiting for a response from our application to NLnet.</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2023-06.2">
-						<h3>June 22nd 2023 Update<a href="#2023-06.2">¶</a></h3>
+						<h3>June 22nd 2023 Update<a href="#2023-06.2">¶</a><small>Treacheation Revocation</small></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>20.0 release candidate #2 June ASB builds were published June 22nd with June PSB and QPR3 patches included.</li>
@@ -56,7 +91,7 @@
 						</ul>
 					</div>
 					<div class="section" id="2023-06">
-						<h3>June 14th 2023 Update<a href="#2023-06">¶</a></h3>
+						<h3>June 14th 2023 Update<a href="#2023-06">¶</a><small>Insgesamt setzt DivestOS die Messlatte ziemlich hoch.</small></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>20.0 release candidate #1 partial June ASB builds were published on June 14th. QPR3/June PSB was delayed eight days, and will be a few more days for LineageOS to merge.</li>
@@ -75,7 +110,7 @@
 						</ul>
 					</div>
 					<div class="section" id="2023-05.2">
-						<h3>May 31st 2023 Update<a href="#2023-05.2">¶</a></h3>
+						<h3>May 31st 2023 Update<a href="#2023-05.2">¶</a><small>Timber me doodads</small></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>14.1, 15.1, 16.0, and 17.1 rebuilds were published on May 30th.</li>
@@ -106,7 +141,7 @@
 						</ul>
 					</div>
 					<div class="section" id="2023-05">
-						<h3>May 8th 2023 Update<a href="#2023-05">¶</a></h3>
+						<h3>May 8th 2023 Update<a href="#2023-05">¶</a><small>100% synthetic cereal</small></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>15.1 release candidate #1 May ASB builds were published on May 8th.</li>
@@ -156,7 +191,7 @@
 						</ul>
 					</div>
 					<div class="section" id="2023-04">
-						<h3>April 17th 2023 Update<a href="#2023-04">¶</a></h3>
+						<h3>April 17th 2023 Update<a href="#2023-04">¶</a><small>Emblazoned</small></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>18.1 and 20.0 release candidate #1 April ASB builds were published on April 16th and 17th respectively.</li>
@@ -197,7 +232,7 @@
 						</ul>
 					</div>
 					<div class="section" id="2023-03">
-						<h3>March 22nd 2023 Update<a href="#2023-03">¶</a></h3>
+						<h3>March 22nd 2023 Update<a href="#2023-03">¶</a><small>Agnudekret!</small></h3>
 						<h4>Special Announcement</h4>
 						<ul>
 							<li>Tad (SkewedZeppelin) was <a href="https://www.fsf.org/news/free-software-awards-winners-announced-eli-zaretskii-tad-skewedzeppelin-gnu-jami" target="_blank" rel="nofollow noopener noreferrer">granted the 2022 'Outstanding New Free Software Contributor' award</a> by the <a href="https://www.fsf.org" target="_blank" rel="nofollow noopener noreferrer">Free Software Foundation</a>.</li>
@@ -243,7 +278,7 @@
 						</ul>
 					</div>
 					<div class="section" id="2023-02">
-						<h3>February 18th 2023 Update<a href="#2023-02">¶</a></h3>
+						<h3>February 18th 2023 Update<a href="#2023-02">¶</a><small>Supple of SUPL</small></h3>
 						<h4>System Updates</h4>
 						<ul>
 							<li>Users who only had the `DivestOS WebView` repo in their F-Droid client are strongly recommended to add the `DivestOS Official` repo in order to keep receiving out-of-band WebView updates.</li>
