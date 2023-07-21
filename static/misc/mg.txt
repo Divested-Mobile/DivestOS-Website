@@ -20,12 +20,6 @@ microG
  - DivestOS addresses this by not installing it at all, keeping it a normal user app, and has no automatically granted permissions
 
 
-- Has unclear potential to leak location to apps without location permission
- - "Fused Locations: Does not honor AppOps!"
-  - https://github.com/microg/GmsCore/wiki/Implementation-Status
- - DivestOS addresses this by not granting any location permissions
-
-
 - Signature spoofing permission is often poorly implemented:
  - Reference implementation used by L4M, iodéOS, and /e/OS let the user grant spoofing to any app for any signature
   - https://gitlab.e.foundation/e/os/android_frameworks_base/-/commit/8489270582746fcd6ba50f21650f82b4616ca5f7
