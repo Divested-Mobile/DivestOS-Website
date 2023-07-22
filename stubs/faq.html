@@ -339,7 +339,7 @@
 						<ul>
 							<li>Allowing self debugging: Settings > Security > Enable native code debugging > checked</li>
 							<li>Disabling the content blocker: Settings > Security > Disable DNS content blocker > checked (if this fixes it please report so it can be excluded from list)</li>
-							<li>Try installing the APK with the source spoofed to the Play Store: <code>adb push example.apk /data/local/tmp && adb shell pm install -i "com.android.vending" -r /data/local/tmp/example.apk</code></li>
+							<li>17.1 and lower only: Try installing the APK with the source spoofed to the Play Store: <code>adb push example.apk /data/local/tmp && adb shell pm install -i "com.android.vending" -r /data/local/tmp/example.apk</code></li>
 							<li>Joining the <a href="/pages/community#chat">chat</a> and asking for help.</li>
 						</ul>
 						<p>There are also alternative ways to use an incompatible app:</p>
@@ -351,8 +351,8 @@
 
 						<h4 id="microgNotes">Anything important I should know about microG?<a href="#microgNotes">¶</a></h4>
 						<ul>
-							<li>The 'Google device registration' and 'Google SafetyNet' options WILL make microG connect to Google servers.</li>
-							<li>The 'Cloud Messaging' option WILL make microG maintain a persistent connection to Google servers.</li>
+							<li>The 'Google device registration' and 'Google SafetyNet' options WILL make microG connect to <a href="https://github.com/microg/GmsCore/wiki/Google-Network-Connections" target="_blank" rel="nofollow noopener noreferrer">Google servers</a>.</li>
+							<li>The 'Cloud Messaging' option WILL make microG maintain a persistent connection to <a href="https://github.com/microg/GmsCore/wiki/Google-Network-Connections" target="_blank" rel="nofollow noopener noreferrer">Google servers</a>.</li>
 							<li>The 'Cloud Messaging' option does NOT require a Google account.</li>
 							<li>The 'Google SafetyNet' option WILL download and execute proprietary obfuscated code from Google and is strongly NOT recommended.</li>
 							<li>While microG itself is open source, any apps talking to it will do so using the proprietary Google Play Services library.</li>
@@ -361,10 +361,12 @@
 						<h4 id="microgEnable">How do I enable microG?<a href="#microgEnable">¶</a></h4>
 						<p>microG is NOT supported and NOT recommended, however it can work in an unprivileged fashion on DivestOS 17.1 and higher after the July 2023 update.</p>
 						<ol>
-							<li>Open system Settings, Security, and toggle on the 'microG enablement' option. This MUST be done before installing.</li>
+							<li>Note: microG on DivestOS is only visible to other apps in the same profile as itself.</li>
+							<li>Open system Settings, Security, and toggle on the 'microG enablement' option.</li>
 							<li>Open F-Droid, Settings, Repositories, and enable the 'microG' repo. If it isn't listed you can <a href="https://microg.org/download.html" target="_blank" rel="nofollow noopener noreferrer">add it manually</a>.</li>
 							<li>In F-Droid search for and install the latest version of the following apps: microG Services Core, microG Services Framework Proxy, FakeStore.</li>
 							<li>microG will now work.</li>
+							<li>Tip: If you didn't flip the toggle on before installing, simply flip it on and reboot.</li>
 						</ol>
 
 						<h4 id="microgOptions">How should I configure microG?<a href="#microgOptions">¶</a></h4>
@@ -374,7 +376,7 @@
 							<li>Some apps will work with microG simply installed without any Google connections, in this case it is strongly recommended to <a href="#networkControl">revoke Network permission</a> from the microG app.</li>
 							<li>Some apps need push notifications via Google, for them you must let microG maintain a persistent identifiable connection to Google. Enable 'Google device registration' and 'Cloud Messaging' in microG.</li>
 							<li>Some apps require a captcha to be performed by the user, for them you can enable the 'Google SafetyNet' option.</li>
-							<li>Some apps require SafetyNet to work, while the option to enable it exists it will not work in the unprivileged mode that DivestOS uses.</li>
+							<li>Some apps require SafetyNet to work, while the option to enable it currently exists it will not work in the unprivileged mode that DivestOS uses and will be removed in a future update.</li>
 						</ul>
 					</div>
 

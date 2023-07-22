@@ -6,7 +6,7 @@
 							<h3>WARNING!<a href="#generalwarning">¶</a></h3>
 							<ul>
 								<li>Unlocking your bootloader will wipe your device!</li>
-								<li>Locking your bootloader on most newer devices will also wipe your device!</li>
+								<li>Locking your bootloader on most newer (2016) devices will also wipe your device!</li>
 								<li>Please backup all of your contacts, photos, files, apps, keys, etc. first!</li>
 							</ul>
 						</div>
@@ -15,7 +15,6 @@
 						<h3>Prerequisites<a href="#prereq">¶</a></h3>
 						<p>You are strongly encouraged to read, or at least skim, through the entire website. It has an abundance of information that will answer many questions and help set expectations of what is and is not provided. Failure to do so will only be a detriment to yourself and waste the time of others.</p>
 						<p>Research for information surrounding your specific device model.<br>It is strongly recommended to be running the latest factory images before switching, especially if relocking. However notably some devices must be running an old version to allow installation of alternative systems.</p>
-						<p>You'll need ADB access in order to attempt any of the methods below.</p>
 						<p>Run the below <code>fastboot</code> commands at the <i>bootloader</i> menu (via key combination), not to be confused with <i>fastbootd</i> which is part of the recovery.</p>
 						<p>You must backup your device.</p>
 						<h4 id="prereqComputer">On your computer<a href="#prereqComputer">¶</a></h4>
@@ -49,7 +48,7 @@
 						</ul>
 						<h4 id="prereqPhone">On your phone<a href="#prereqPhone">¶</a></h4>
 						<ol>
-							<li>These steps are only necessary for devices that don't use fastboot-based install methods!</li>
+							<li><mark>These steps are only necessary for devices that don't use fastboot-based install methods!</mark></li>
 							<li>Open the 'Settings' app</li>
 							<li>Navigate to the 'About' page</li>
 							<li>Tap on the field labeled 'Build number' 7 times</li>
@@ -62,7 +61,7 @@
 						<h3>Fastboot (generic)<a href="#fastboot">¶</a></h3>
 						<ul>
 							<h4 id="fastbootUnlocking">Unlock & Install<a href="#fastbootUnlocking">¶</a></h4>
-							<p>Device specific steps are available via the "Install Method" link on the <a href="/pages/devices">Device Downloads</a> page.</p>
+							<p><mark>Device specific steps are available via the "Install Method" link on the <a href="/pages/devices"  style="color:black;">Device Downloads</a> page.</mark></p>
 							<ol>
 								<li>Backup your device.</li>
 								<li>Open the Phone app and type <code>*#*#2432546#*#*</code>, do not hit call</li>
@@ -126,6 +125,7 @@
 						<h3>Heimdall<a href="#heimdall">¶</a></h3>
 						<ul>
 							<li>Devices Supported: Select Samsung devices</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed.</li>
 							<ol>
 								<li>[TO BE COMPLETED]</li>
 							</ol>
@@ -135,7 +135,7 @@
 						<h3>LG UP<a href="#lgUP">¶</a></h3>
 						<ul>
 							<li>Devices Supported: Select LG devices</li>
-							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed.</li>
 							<ol>
 								<li>Windows is required for this. KVM USB passthrough has been confirmed to work.</li>
 								<li>[TO BE COMPLETED]</li>
@@ -146,7 +146,7 @@
 						<h3>LG LAF<a href="#lgLAF">¶</a></h3>
 						<ul>
 							<li>Devices Supported: Select LG devices</li>
-							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough). It is easy, but can be tedious.</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed.</li>
 							<ol>
 								<li>[TO BE COMPLETED]</li>
 							</ol>
@@ -157,10 +157,9 @@
 						<ul>
 							<li>Devices Supported: Kindle Fire HDX 7/8 2014 (apollo/thor)</li>
 							<li>Credit/Source: <a href="https://forum.xda-developers.com/showpost.php?p=71430759&postcount=736" target="_blank" rel="nofollow noopener noreferrer">@draxie</a></li>
-							<li>This method is simple, but dangerous.</li>
-							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed.</li>
 							<ol>
-								<li>Windows is required for this. KVM USB pass through has been confirmed to work</li>
+								<li>Windows is required for this. KVM USB passthrough has been confirmed to work</li>
 								<li>Download dd from <a href="http://www.chrysocome.net/downloads/dd-0.5.zip" target="_blank" rel="nofollow noopener noreferrer">here</a></li>
 								<li>Backup your device.</li>
 								<li>Connect your device</li>
@@ -172,9 +171,9 @@
 								<li><code>> fastboot -i 0x1949 erase aboot</code></li>
 								<li><code>> fastboot -i 0x1949 reboot</code></li>
 								<li><code>> dd of=\\?\Device\Harddisk[DiskIndex]\Partition6 if=aboot_vuln.mbn</code></li>
-								<li><code>> dd of=\\?\Device\Harddisk[DiskIndex]\Partition18 if=twrp_cubed.img</code></li>
+								<li><code>> dd of=\\?\Device\Harddisk[DiskIndex]\Partition18 if=divested-version-date-dos-device-recovery.img</code></li>
 								<li>If you get the error "Error reading file: 87 The parameter is incorrect", ignore it</li>
-								<li>Wait a few minutes</li>
+								<li>Wait two minutes</li>
 								<li>Force the device off by holding the power button</li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
 								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>
@@ -188,16 +187,16 @@
 						<h3>Kernel Exploit<a href="#exploit">¶</a></h3>
 						<ul>
 							<li>This method works by first getting root, then overriding the recovery.</li>
-							<li>This is not a bootloader unlock, but a way to get a custom recovery installed (which is good enough).</li>
+							<li>This is not a bootloader unlock, but a way to get a custom recovery installed.</li>
 							<ol>
 								<li>Download the following apps: <a href="https://forum.xda-developers.com/showthread.php?t=1044765" target="_blank" rel="nofollow noopener noreferrer">GingerBreak (CVE-2011-1823)</a>, <a href="https://towelroot.com/tr.apk" target="_blank" rel="nofollow noopener noreferrer">Towelroot (CVE-2014-3153)</a>, <a href="https://forum.xda-developers.com/showthread.php?t=3525120" target="_blank" rel="nofollow noopener noreferrer">croowt (CVE-2016-5195)</a></li>
 								<li>Backup your device.</li>
 								<li><code>$ adb install *.apk</code></li>
-								<li><code>$ adb push recovery.img /sdcard/recovery.img</code></li>
+								<li><code>$ adb push divested-version-date-dos-device-recovery.img /sdcard/recovery.img</code></li>
 								<li>Attempt to gain root using each app</li>
 								<li><code>$ adb shell</code></li>
 								<li><code>$$ su</code></li>
-								<li><code>$$ dd if=/sdcard/divested-version-date-dos-device-recovery.img of=/dev/block/bootdevice/by-name/recovery</code></li>
+								<li><code>$$ dd if=/sdcard/recovery.img of=/dev/block/bootdevice/by-name/recovery</code></li>
 								<li>The output path in the above command may be different.</li>
 								<li>Reboot to recovery (use volume buttons to navigate if on or key combination if off)</li>
 								<li>Choose "Apply update", then "Apply from ADB", and <code>$ adb sideload divested-version-date-dos-device.zip</code></li>

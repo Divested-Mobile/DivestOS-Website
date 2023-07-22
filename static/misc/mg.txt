@@ -1,15 +1,16 @@
-last updated: 2023/07/21
+last updated: 2023/07/22
 
 microG
 ======
 - microG misconception #1: "it doesn't connect to Google servers" & "it spoofs your country"
  - yes it does, see https://github.com/microg/GmsCore/wiki/Google-Network-Connections
- - DivestOS addresses this by noting it when the user opts-in
+ - DivestOS addresses this by noting it on the website and when the user opts-in
 
 
 - microG misconception #2: "it is a fully open source replacement"
  - every app talking to microG does so using the full proprietary Google Play Services library
- - DivestOS addresses this by noting it when the user opts-in
+ - microG can additionally download and execute proprietary programs from Google for Safetynet support
+ - DivestOS addresses this by noting it on the website and when the user opts-in and blocks the use of Safetynet
 
 
 - microG misconception #3: "it is just a normal app" & "it isn't privileged"
