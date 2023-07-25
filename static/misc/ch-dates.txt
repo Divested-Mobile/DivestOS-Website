@@ -1,4 +1,4 @@
-last updated: 2023/07/23
+last updated: 2023/07/25
 
 disclosure: Mulch is a DivestOS project
 
@@ -87,7 +87,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-115.0.5790.136	2023/07/20	196ksv		2023/07/20	2023/07/20	pending		pending		196ksv
+115.0.5790.136	2023/07/20	196ksv		2023/07/20	2023/07/20	2023/07/24	2023/07/24	196ksv
 115.0.5790.85	2023/07/12			2023/07/12	2023/07/13			2023/07/18
 114.0.5735.196	2023/06/26			2023/06/27	2023/06/27	2023/07/03	2023/06/27
 114.0.5735.131	2023/06/13			2023/06/13	2023/06/13	2023/06/16	2023/06/14
@@ -175,7 +175,7 @@ Standalone:
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS, †2		114.0.5735.196				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
+- LineageOS, †2		115.0.5790.136				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - MoKee, †2, 12.1	108.0.5359.128, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
 - OmniROM, †2, 13	108.0.5359.109, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
@@ -187,7 +187,7 @@ Lineage related:
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
 - Cromite		115.0.5790.98				https://github.com/uazo/bromite-buildtools/releases
-- CalyxOS		115.0.5790.85				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- CalyxOS		115.0.5790.136				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			108.0.5359.156, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 - lin-microG		108.0.5359.156, Bromite prebuilts	https://github.com/MSe1969/android_external_bromite-webview

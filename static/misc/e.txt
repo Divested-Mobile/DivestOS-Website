@@ -3,6 +3,7 @@ last full update: 2022/12/03
 Web Browser & System WebView
 ============================
 - Currently shipping Chromium 108.0.5359.156 from 2022/12/12 with 196 known security vulnerabilities
+ - 2023/07/20: work in progress rebase onto Cromite: https://gitlab.e.foundation/e/os/browser/-/commits/master-v115
  - 2023/02/06: The cycle starts again
  - history: https://divestos.org/misc/ch-dates.txt
  - 2023/06/30: claims to be "state of the art" in security: https://community.e.foundation/t/49507/21
