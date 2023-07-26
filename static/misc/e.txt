@@ -108,6 +108,31 @@ System
  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/commit/8489270582746fcd6ba50f21650f82b4616ca5f7
 
 
+OTA License Key System
+======================
+- Upcoming /e/OS version 1.15 adds a license key system for OTA updates
+ - The generated ID cannot be reset by the user
+ - The generated ID is sent with all OTA check and download requests
+ - https://gitlab.e.foundation/e/os/backlog/-/issues/1214
+ - https://gitlab.e.foundation/e/os/backlog/-/issues/1215
+ - A13
+  - https://gitlab.e.foundation/e/os/android_packages_apps_Updater/-/merge_requests/136
+  - https://gitlab.e.foundation/e/os/android_packages_apps_Settings/-/merge_requests/176
+  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/152
+ - A12
+  - https://gitlab.e.foundation/e/os/android_packages_apps_Updater/-/merge_requests/135
+  - https://gitlab.e.foundation/e/os/android_packages_apps_Settings/-/merge_requests/175
+  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/153
+ - A11
+  - https://gitlab.e.foundation/e/os/android_packages_apps_Updater/-/merge_requests/134
+  - https://gitlab.e.foundation/e/os/android_packages_apps_Settings/-/merge_requests/174
+  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/154
+ - A10
+  - https://gitlab.e.foundation/e/os/android_packages_apps_Updater/-/merge_requests/133
+  - https://gitlab.e.foundation/e/os/android_packages_apps_Settings/-/merge_requests/173
+  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/155
+
+
 Sentry Tracker
 ==============
 - Opt-in and with a disclaimer:
