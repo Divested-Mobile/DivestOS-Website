@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The deets<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2023-05-07</p>
+						<p>Last updated: 2023-07-27</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -210,6 +210,7 @@
 							<li>T: Perform additional boot-time checks on system package updates (GrapheneOS)</li>
 							<li>T: Replace agnss.goog with the Broadcom PSDS server (heavily based off of a GrapheneOS patch)</li>
 							<li>R/S/T: DeviceIdleJobsController: don't ignore whitelisted system apps (GrapheneOS)</li>
+							<li>Q/R/S/T: Unprivileged microG handling (DivestOS)</li>
 							<li>P/Q/R/S/T: Don't crash apps that depend on missing Gservices provider (GrapheneOS)</li>
 							<li>S/T: Revert "Null safe package name in AppOps writeState" (GrapheneOS)</li>
 							<li>S/T: appops: skip ops for invalid null package during state serialization (GrapheneOS)</li>
@@ -233,7 +234,7 @@
 						</ul>
 						<h5>android_frameworks_libs_net</h5>
 						<ul>
-							<li>S/T: More 'Private DNS' options (heavily based off of a CalyxOS patch)</li>
+							<li>S: More 'Private DNS' options (heavily based off of a CalyxOS patch)</li>
 						</ul>
 						<h5>android_frameworks_libs_systemui</h5>
 						<ul>
@@ -245,6 +246,7 @@
 							<li>P/Q/R/S/T: Require OTHER_SENSORS permission for sensors (GrapheneOS)</li>
 							<li>S/T: Protect step sensors with OTHER_SENSORS permission for targetSdk<29 apps (GrapheneOS)</li>
 							<li>R: Fix use-after-free in adbd_auth (GrapheneOS)</li>
+							<li>!N/!O: Allow Work Profiles in low_ram mode</li>
 						</ul>
 						<!--<h5>android_frameworks_opt_net_ims</h5>
 						<ul>
@@ -308,6 +310,10 @@
 							<li>Disable RLP</li>
 							<li>S/T: temporary workaround for black screen on incoming calls https://gitlab.com/LineageOS/issues/android/-/issues/4632</li>
 						</ul>
+						<h5>android_packages_apps_ImsServiceEntitlement</h5>
+						<ul>
+							<li>T: Delay FCM registration until it's actually required (CalyxOS)</li>
+						</ul>
 						<h5>android_packages_apps_SetupWizard</h5>
 						<ul>
 							<li>Remove silly carrier restrictions</li>
@@ -370,6 +376,8 @@
 							<li>N/O/P/Q: Increase default max password length to 64 (GrapheneOS)</li>
 							<li>Q/R/S/T: Add LTE-only mode option (GrapheneOS)</li>
 							<li>Q/R/S/T: Add a toggle for forcibly disabling SUPL (GrapheneOS)</li>
+							<li>Q/R/S/T: Add a toggle for microG enablement (heavily based off of a GrapheneOS patch)</li>
+							<li>Q/R/S/T: Add an ability to disable non-system apps from the "App info" screen (GrapheneOS)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
 							<li>Disable "Instant Apps"</li>
 							<li>Always reset animation scales to 0.5</li>
@@ -417,7 +425,7 @@
 							<li>S/T: Skip reportNetworkConnectivity() when permission is revoked (GrapheneOS)</li>
 							<li>T: Enforce INTERNET permission per-uid instead of per-appId (GrapheneOS)</li>
 							<li>T: Don't crash INTERNET-unaware apps that try to access NsdManager (GrapheneOS)</li>
-							<li>S/T: More 'Private DNS' options (based off of a CalyxOS patch)</li>
+							<li>S: More 'Private DNS' options (based off of a CalyxOS patch)</li>
 						</ul>
 						<h5>android_packages_modules_DnsResolver</h5>
 						<ul>
@@ -464,6 +472,11 @@
 							<li>N: Cherrypick 242134: avrc_bld_get_attrs_rsp - fix attribute length position off by one (cprhokie)</li>
 							<li>R: Cherrypick topic a2dp-master-fixes (AOSP)</li>
 							<li>Q/R/S: Add alloc_size attributes to the allocator (GrapheneOS)</li>
+						</ul>
+						<h5>android_system_ca-certificates</h5>
+						<ul>
+							<li>Sync with AOSP/master</li>
+							<li>Remove untrusted certificates</li>
 						</ul>
 						<h5>android_system_core</h5>
 						<ul>
