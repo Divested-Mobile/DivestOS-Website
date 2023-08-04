@@ -101,12 +101,42 @@
 						<h4 id="deviceBootloader">What devices are known to have faulty/insecure bootloaders?<a href="#deviceBootloader">¶</a></h4>
 						<p>These are vendor limitations and apply to any OS. This list must be assumed incomplete. As of 2023/07/21:</p>
 						<ul>
-							<li>Can't be relocked (with a custom OS): <a href="https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/" target="_blank" rel="nofollow noopener noreferrer">OnePlus 7 and newer</a>, Motorola, Samsung, Xiaomi</li>
-							<li>EDL access <a href="https://github.com/bkerler/loaders" target="_blank" rel="nofollow noopener noreferrer">available</a>: axolotl, FP2, FP3, bacon, oneplus2, oneplus3/t, cheeseburger/dumpling, enchilada/fajita, hotdog*/guacamole*, avicii, instantnoodle*/kebab/lemonades, lemonade*</li>
-							<li>Trusts test-keys for verified boot: enchilada/fajita, FP3, <a href="https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/11" target="_blank" rel="nofollow noopener noreferrer">FP4</a></li>
-							<li>Qualcomm Secure Boot disabled: <a href="https://forum.shiftphones.com/threads/vollstaendiges-backup-ueber-qualcomm-edl-mode.4777/#post-44656" target="_blank" rel="nofollow noopener noreferrer">axolotl</a>, FP2, <a href="https://forum.fairphone.com/uploads/default/original/3X/9/b/9b6fee6021b919e855b5258f76de9738d5b04995.jpeg" target="_blank" rel="nofollow noopener noreferrer">FP3</a></li>
-							<li>Qualcomm Crashdump enabled: enchilada/fajita</li>
-							<li>Has alternate manufacture mode available (eg. <a href="https://github.com/steadfasterX/lglaf" target="_blank" rel="nofollow noopener noreferrer">LAF</a>): mako, LG G2, LG G3, LG G4</li>
+							<li>Trusts test-keys for verified boot:
+								<ul>
+									<li>Impact: Combined with the ability to write to system partitions this may allow an attacker to write data that will pass verified boot checks.</li>
+									<li>Affected Devices: enchilada/fajita, FP3, <a href="https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/11" target="_blank" rel="nofollow noopener noreferrer">FP4</a></li>
+								</ul>
+							</li>
+							<li>Can't be relocked (with a custom OS):
+								<ul>
+									<li>Impact: When unlocked, an attacker can trivally flash partitions without risk of erasing user-data. Additionally verified boot is only enforcing when locked. Verified boot raises the barrier of local attacks and helps mitigate persistence of remote attacks.</li>
+									<li>Affected Devices: <a href="https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/" target="_blank" rel="nofollow noopener noreferrer">OnePlus 7 and newer</a>, Motorola, Samsung, Xiaomi</li>
+								</ul>
+							</li>
+							<li>EDL access <a href="https://github.com/bkerler/loaders" target="_blank" rel="nofollow noopener noreferrer">available</a>:
+								<ul>
+									<li>Impact: Allows replacing partitions at will. Can even allow dumping entire RAM (including secrets) and/or partition (including userdata) contents.</li>
+									<li>Affected Devices: axolotl, FP2, FP3, bacon, oneplus2, oneplus3/t, cheeseburger/dumpling, enchilada/fajita, hotdog*/guacamole*, avicii, instantnoodle*/kebab/lemonades, lemonade*</li>
+								</ul>
+							</li>
+							<li>Qualcomm Crashdump enabled:
+								<ul>
+									<li>Impact: When combined with EDL access this allows dumping complete RAM contents at runtime without any restrictions.</li>
+									<li>Affected Devices: enchilada/fajita</li>
+								</ul>
+							</li>
+							<li>Qualcomm Secure Boot disabled:
+								<ul>
+									<li>Impact: This allows replacing ALL partitions, including the bootloader itself, when combined with EDL access. This directly undermines all other signature checks and verified boot.</li>
+									<li>Affected Devices: <a href="https://forum.shiftphones.com/threads/vollstaendiges-backup-ueber-qualcomm-edl-mode.4777/#post-44656" target="_blank" rel="nofollow noopener noreferrer">axolotl</a>, FP2, <a href="https://forum.fairphone.com/uploads/default/original/3X/9/b/9b6fee6021b919e855b5258f76de9738d5b04995.jpeg" target="_blank" rel="nofollow noopener noreferrer">FP3</a></li>
+								</ul>
+							</li>
+							<li>Has alternate manufacture mode available (eg. <a href="https://github.com/steadfasterX/lglaf" target="_blank" rel="nofollow noopener noreferrer">LAF</a>):
+								<ul>
+									<li>Impact: Allows replacing partitions at will.</li>
+									<li>Affected Devices: mako, LG G2, LG G3, LG G4</li>
+								</ul>
+							</li>
 						</ul>
 
 						<h4 id="volte">Why does VoLTE not work on my device?<a href="#volte">¶</a></h4>

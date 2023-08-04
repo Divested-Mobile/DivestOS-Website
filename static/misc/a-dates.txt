@@ -1,7 +1,7 @@
-last updated: 2023/08/01
+last updated: 2023/08/04
 
 Android		GrapheneOS	DivestOS 14.1	DivestOS 15.1	DivestOS 16.0	DivestOS 17.1	DivestOS 18.1	DivestOS 19.1	DivestOS 20.0	CalyxOS		/e/OS
-2023-07-05	2023-07-05	2023-07-08	2023-07-08	2023-07-08	2023-07-08	2023-07-09	2023-07-09	2023-07-12	2023-07-06
+2023-07-05	2023-07-05	2023-07-08	2023-07-08	2023-07-08	2023-07-08	2023-07-09	2023-07-09	2023-07-12	2023-07-06	23ksv
 2023-06-05	2023-06-07	2023-06-09	2023-06-10	2023-06-10	2023-06-10	2023-06-09	2023-06-09	2023-06-14	2023-06-08	2023-07-26
 2023-05-01	2023-05-01	2023-05-06	2023-05-08	2023-05-07	2023-05-07	2023-05-07	2023-05-07	2023-05-06	2023-05-02	2023-06-20
 2023-04-10	2023-04-11	2023-04-12	2023-04-19	2023-04-19	2023-04-29	2023-04-16	2023-04-15	2023-04-17	2023-04-12	2023-05-15
@@ -34,6 +34,7 @@ Android		GrapheneOS	DivestOS 14.1	DivestOS 15.1	DivestOS 16.0	DivestOS 17.1	Dive
 2021-01-04	2021-01-05	[		2021-01-10 through 2021-01-14		]							2021-01-26	2021-01-27
 
 Notes:
+- The cumulative count of known security vulnerabilities (ksv) is noted if behind
 - Final dates, not earlier RC or test builds
 - DivestOS 14.1/15.1/16.0/17.1, based on Android 7/8/9/10 respectively, are END OF LIFE and receive patches on best effort basis
 - For ease of maintenance, the /e/OS column only tracks dates of the earliest branch that received the update
