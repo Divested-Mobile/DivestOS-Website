@@ -43,7 +43,8 @@ Advanced Privacy
 ================
 - Routes users over Tor without actually mentioning it is Tor, only an "IP scrambler"
 
-- Includes the proprietary Mapbox library
+- [FIXED] Includes the proprietary Mapbox library
+ - 2023/05/02: Replaced with Maplibre: https://gitlab.e.foundation/e/os/advanced-privacy/-/commit/91f28f1639b6b2e382f68fbd651cd24b8255d3a6
  - https://gitlab.e.foundation/e/os/advanced-privacy/-/blob/d4136b0fd1246a3dc30b721b1dfbf0853115c0ff/dependencies.gradle#L115-118
  - https://github.com/mapbox/mapbox-gl-native-android/commit/165dd987cfc33bfb67ffa1ee09fe551b70e427f0
  - With a tracker: https://community.e.foundation/t/advanced-privacy-blocks-trackers-from-e-system/41799

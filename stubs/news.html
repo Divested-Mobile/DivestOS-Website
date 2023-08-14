@@ -6,6 +6,42 @@
 					<?php print(file_get_contents("stubs/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2023-08">
+						<h3>August 8th 2023 Update<a href="#2023-08">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>20.0 release candidate #1 August ASB builds were published on August 14th.</li>
+							<li>18.1 and 19.1 release candidate #1 August ASB builds were published on August 10th.</li>
+							<li>14.1, 15.1, 16.0, and 17.1 release candidate #1 August ASB builds were published on August 9th.</li>
+							<li>The additional repos file for F-Droid had a typo which caused a crash when interacting with the microG repo, please clear your F-Droid app data after installing this update if you were affected. Only new installs after the first July update are impacted.</li>
+							<li>On 20.0 the ImsServiceEntitlement package will now only try to register for FCM (via Play Services/microG) if required by the carrier, thanks to a patch from CalyxOS.</li>
+							<li>19.1 has the GrapheneOS Camera again, it was accidentally removed when removing Open Camera on <18.1.</li>
+						</ul>
+						<h4>Device Updates</h4>
+						<ul>
+							<li>Newly added 18.1 hammerhead needs repartitioning via <a href="https://forum.xda-developers.com/t/recovery-unofficial-twrp-hh-for-nexus-5-hammerhead-discontinued.4047653/#post-81711545" target="_blank" rel="nofollow noopener noreferrer">this guide</a>. This process wipes the device, you MUST backup first.</li>
+						</ul>
+						<h4>Roster Updates</h4>
+						<ul>
+							<li>18.1 additions: debx</li>
+							<li>15.1 to 18.1: hammerhead (thanks to <a href="https://github.com/z3DD3r" target="_blank" rel="nofollow noopener noreferrer">@z3DD3r</a>)</li>
+							<li>Older versions of duplicated devices have been dropped:</li>
+							<li>19.1 drops: alioth</li>
+							<li>16.0 drops: hammerhead</li>
+							<li>15.1 drops: deb, flo, shamu, ether</li>
+							<li>14.1 drops: clark</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>There have been numerous reports of freezing and loading issues on the past few versions of Mull. The only common denominator we found appears to be the 'Dark Reader' extension, please disable it if you encounter such issues. And as a reminder we do NOT recommend any extensions except for uBlock Origin. In receiving feedback for this issue, numerous people have mentioned using extensions that are useless or downright harmful as is <a href="https://github.com/arkenfox/user.js/wiki/4.1-Extensions#-dont-bother" target="_blank" rel="nofollow noopener noreferrer">documented here</a>.</li>
+							<li>Updated Mulch to 116.0.5845.78-1, has - security fixes.</li>
+							<li>Updated Mull to 116.2.0-1, adds back Google as a search engine.</li>
+							<li>IR Remote now has a Skymaster/Veon remote thanks to Roman Luitko.</li>
+							<li>Updated Mull to 116.0.0-1, has 19 security fixes. Additionally 116.0.0-2 was released to fix a branding issue and 116.0.0-3 was released which removed a prebuilt (but open-source) binary usage.</li>
+							<li>Updated Mulch to 115.0.5790.138-1 and 115.0.5790.166-1, has 0 and 17 security fixes respectively.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
 					<div class="section" id="2023-07.2">
 						<h3>July 21st 2023 Update<a href="#2023-07.2">¶</a><small>Slicked</small></h3>
 						<h4>System Updates</h4>
@@ -41,7 +77,6 @@
 							<li>@ElCorzo has added a basic Dockerfile to setup Fedora with the required dependencies to compile DivestOS, try it out via the included `Container/{build,run}-image-podman.sh` scripts!</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2023-07">
 						<h3>July 12th 2023 Update<a href="#2023-07">¶</a><small>Angle me not!</small></h3>
 						<h4>System Updates</h4>
