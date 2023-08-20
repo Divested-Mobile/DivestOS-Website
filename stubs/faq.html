@@ -322,6 +322,23 @@
 						<h4 id="theming">Will you add that one theme engine?<a href="#theming">¶</a></h4>
 						<p>No.</p>
 
+						<h4 id="sandbox">How can I sandbox my apps?<a href="#sandbox">¶</a></h4>
+						<p>All apps on Android are already sandboxed. If you want to be able to grant less-trustworthy apps permissions that they demand such as contacts or files access then install them in a work profile (eg. Shelter). This would let them access any saved contacts or files in the work profile but not of your true main user. So be sure to not actually store any sensitive information in the work profile!</p>
+
+						<h4 id="hardwareID">Can apps access hardware identifiers like the serial number or IMEI?<a href="#hardwareID">¶</a></h4>
+						<p>Android 10 and higher prohibits all user apps from accessing: serial number, Wi-Fi & Bluetooth MAC addresses, IMEI, and IMSI. DivestOS 16.0 and higher also ensures apps with a lower targetSdk cannot access the serial number.</p>
+
+						<h4 id="proprietary">Does DivestOS contain proprietary code?<a href="#proprietary">¶</a></h4>
+						<p>Yes. All of the devices have hundreds to thousands of proprietary blobs used for hardware enablement. This applies to every aftermarket Android OS and every known shipping Android device. However unlike other systems, DivestOS goes to a great extent to remove proprietary blobs that are not truly necessary as is <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">handled here</a>.</p>
+
+						<h4 id="proprietaryLeftovers">Does DivestOS still contain non-device specific proprietary code?<a href="#proprietaryLeftovers">¶</a></h4>
+						<p>Yes. Of note: GrapheneOS, CalyxOS, LineageOS, and others contain these too.</p>
+						<ul>
+							<li>Chromium/Mulch contains Google Play Services and Firebase libraries. Removal of this would noticeable slow down updates leaving users exposed to known security issues for longer.</li>
+							<li>ImsServiceEntitlement on A12/19.1 and higher contains Google Play Services and Firebase libraries. Removal of this would break calling functionality on select carriers that utilize FCM for IMS enablement. However, DivestOS still plans on removing this.</li>
+							<li>The Car DebuggingRestrictionController on A12/19.1 and higher contains Google Play Services and Firebase libraries. Removal of this from DivestOS is pending for the September 2023 release.</li>
+						</ul>
+
 						<h4 id="rootSupport">Why isn't root included/supported?<a href="#rootSupport">¶</a></h4>
 						<p>DivestOS does not support or encourage the use of root or runtime modification frameworks.
 						<br>Such tools will break the following functions:
@@ -440,6 +457,15 @@
 
 						<h4 id="stableMAC">How to set a stable MAC address for a specific Wi-Fi network?<a href="#stableMAC">¶</a></h4>
 						<p>Settings > Network & internet > Internet > Tap the gear next to the specific Wi-Fi network > Privacy > Use per-network randomized MAC.</p>
+
+						<h4 id="dualVPN">How can I use two VPNs at once?<a href="#dualVPN">¶</a></h4>
+						<p>You cannot chain VPNs, but you can route different apps through different VPNs via the work profile feature enabled through an app like Shelter. Your main profile can have one VPN, and your work profile another. This is very useful for eg. main profile through Orbot/Tor and work profile via a trusted or self-hosted VPN.</p>
+
+						<h4 id="workVPN">Why won't my work profile use my main profile VPN?<a href="#workVPN">¶</a></h4>
+						<p>Profiles are completely separate in that regard. You must setup your preferred VPN in the work profile too.</p>
+
+						<h4 id="tetherVPN">Can I route connected hotspot devices via the VPN?<a href="#tetherVPN">¶</a></h4>
+						<p>Yes, you can route them via the main profile VPN. Enable this in Settings > Network & internet > Hotspot & tethering > Allow clients to use VPNs.</p>
 					</div>
 
 					<div class="section">
