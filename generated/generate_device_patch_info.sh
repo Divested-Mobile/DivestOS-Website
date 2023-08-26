@@ -240,6 +240,7 @@ createTable manta LineageOS-14.1 samsung/manta samsung/manta;
 createTable marlin LineageOS-18.1 google/marlin google/marlin google/marlin/marlin;
 createTable mata LineageOS-20.0 essential/mata essential/msm8998;
 createTable Mi8937 LineageOS-20.0 xiaomi/Mi8937 xiaomi/msm8937 xiaomi/mithorium-common;
+createTable Mi8917 LineageOS-20.0 xiaomi/Mi8937 xiaomi/msm8937 xiaomi/mithorium-common;
 createTable merlin LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/merlin;
 createTable n5100 LineageOS-14.1 samsung/n5100 samsung/smdk4412 samsung/smdk4412-common samsung/kona-common;
 createTable n5110 LineageOS-14.1 samsung/n5110 samsung/smdk4412 samsung/smdk4412-common samsung/kona-common;
