@@ -20,6 +20,18 @@
 						<h4>Apollo/Thor: Boot-looping into recovery</h4>
 						<p>If you installed a system update with a recovery that doesn't know where the /misc partition is the update flag will never be cleared. The fix is to run the following<br><code>$ fastboot format misc</code></p>
 					</div>
+					<div class="section" id="boot">
+						<h3>Boot Issues<a href="#boot">¶</a></h3>
+
+						<h4>Device booting fully and then rebooting</h4>
+						<p>You can boot into safe mode by holding Volume Up the moment the 'DivestOS' animation starts. Release it when after it vibrates once. After booted it will say "SAFE MODE" in the bottom left.</p>
+
+						<h4>In CRASHDUMP mode</h4>
+						<p>Hold Volume Up + Power button for 10 seconds to exit.</p>
+
+						<h4>No longer booting after update</h4>
+						<p>On A/B devices the system will automatically fall back to the alternate slot after 7 failed boots.</p>
+					</div>
 					<div class="section" id="other">
 						<h3>Other Issues<a href="#other">¶</a></h3>
 

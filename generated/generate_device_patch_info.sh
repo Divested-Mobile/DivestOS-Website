@@ -127,6 +127,7 @@ createTable apollon LineageOS-20.0 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/apo
 createTable Amber LineageOS-17.1 yandex/Amber yandex/sdm660;
 createTable angler LineageOS-15.1 huawei/angler huawei/angler;
 createTable apollo LineageOS-14.1 amazon/apollo amazon/hdx-common amazon/hdx-common;
+createTable athene LineageOS-14.1 motorola/athene motorola/msm8952;
 createTable aura LineageOS-20.0 razer/aura razer/sdm845;
 createTable aurora LineageOS-20.0 sony/tama-common sony/sdm845 sony/aurora;
 createTable avicii LineageOS-20.0 oneplus/avicii oneplus/sm7250;
