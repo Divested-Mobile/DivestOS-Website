@@ -1,12 +1,13 @@
-last full update: 2022/12/03
+last full update: 2023/09/01
 
 Web Browser & System WebView
 ============================
 - Currently shipping Chromium 108.0.5359.156 from 2022/12/12 with 245 known security vulnerabilities
  - 2023/07/26: work in progress rebase onto Cromite: https://gitlab.e.foundation/e/os/cromite/-/commits/master
+ - 2023/06/30: claims to be "state of the art" in security: https://community.e.foundation/t/49507/21
  - 2023/02/06: The cycle starts again
  - history: https://divestos.org/misc/ch-dates.txt
- - 2023/06/30: claims to be "state of the art" in security: https://community.e.foundation/t/49507/21
+ - Note: simply using another browser doesn't mitigate this, the WebView is used by nearly all apps displaying web content
 
 - [FIXED] Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 306 known security vulnerabilities
  - 2023/02/06: they shipped 108.0.5359.156 to users in v1.8.1, however at time of writing that is two major versions behind
@@ -17,11 +18,6 @@ Web Browser & System WebView
   - previously: https://gitlab.e.foundation/e/backlog/-/issues/2180
  - https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
  - history: https://divestos.org/misc/ch-dates.txt
- - Note: simply using another browser doesn't mitigate this, the WebView is used by nearly all apps displaying web content
-
-- [Invalidated] Disables the Bromite patch which enables use of HTTPS by default
- - https://gitlab.e.foundation/e/os/browser/-/commit/f89382c8229a256ab6949dda75dce87e5ccb6def
- - Upstream (Bromite) later actually removed this too
 
 
 App Lounge
@@ -91,11 +87,11 @@ System
   - https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/2
 
 - Includes proprietary Google Widevine DRM on nearly all devices
- - https://gitlab.e.foundation/e/devices/android_device_fairphone_FP4/-/blob/119e5d6fd7891ea02389a5e4fce5ad651774954e/proprietary-files.txt#L360-365
+ - https://gitlab.e.foundation/e/devices/android_device_fairphone_FP4/-/blob/b9208868b30db917dc4ff5ac14a6b47b03675bb7/proprietary-files.txt#L368-373
  - Even advertises Netflix on the website, see the third carousel image in the third phone mockup down
   - https://web.archive.org/web/20220720210209/https://e.foundation/e-os/
 
-- Directly uses non-vendored pool.ntp.org address for NTP
+- [CHECKME] Directly uses non-vendored pool.ntp.org address for NTP
  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/38
  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/39
  - https://gitlab.e.foundation/e/os/android_frameworks_base/-/merge_requests/37
@@ -158,11 +154,13 @@ Device Sales
  - This is the same SoC used in the `Brax Phone` and `Simple [Mobile Tools] Phone`
 
 - Sells devices like the Samsung Galaxy S9 which lacks VoLTE under custom operating systems
+ - 2023/09/01: GS9 appears to be no longer sold, others may still have VoLTE compatibility issues
  - Many carriers are phasing out 2G/3G, making VoLTE mandatory for placing and receiving phone calls
  - https://web.archive.org/web/20221203154649/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
  - https://community.e.foundation/t/samsung-s9-currently-unusable-in-usa-without-volte/39255
 
 - Sells devices that are END OF LIFE, like the Galaxy S9
+ - 2023/09/01: GS9 appears to be no longer sold, others may be EOL
  - EOL devices cannot receive any firmware/blob security updates
  - https://web.archive.org/web/20221203154649/https://murena.com/shop/smartphones/premium-refurbished/murena-galaxy-s9-refurbished/
  - https://9to5google.com/2022/04/04/samsung-galaxy-s9-android-updates-drop-support/
@@ -184,7 +182,7 @@ Cloud Services
     - "It encrypts only the contents of files, and not filenames and directory structures."
   - SSE was demonstrated as useless in the leak
 
-- Trackers in their newsletter
+- [FIXED] Trackers in their newsletter
  - https://web.archive.org/web/20221203154857/https://community.e.foundation/t/tracker-into-the-e-foundation-letter/38178
 
 - Website requires JavaScript

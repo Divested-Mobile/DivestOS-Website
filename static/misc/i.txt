@@ -1,4 +1,4 @@
-last full update: 2023/02/24
+last full update: 2023/09/01
 
 General
 =======
@@ -23,7 +23,7 @@ Content Blocker
   - https://iode.tech/en/iodeos-en/
 
 - Runs as root
- - https://gitlab.com/iode/os/public/blocker/iode-snort/-/blob/staging/iode-snort.rc#L23
+ - https://gitlab.com/iode/os/public/blocker/iode-snort/-/blob/staging/iode-snort.rc#L8
 
 - Is in C++, likely has memory safety issues
  - https://gitlab.com/iode/os/public/blocker/iode-snort
@@ -66,39 +66,18 @@ System
  - However they do allow use of Bromite, Mulch, and Vanadium which is nice
   - https://forum.fairphone.com/t/fp4-very-privacy-friendly-custom-rom-iodeos/81070/256
 
-- Uses supl.vodafone.com for fallback SUPL
- - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/00b53c7e0993b7174c81fc48873ec7a02948795e/overlay/packages/apps/CarrierConfig/res/xml/vendor.xml#L4
- - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/00b53c7e0993b7174c81fc48873ec7a02948795e/overlay/frameworks/base/core/res/res/values/config.xml#L26
- - This is a CNAME to supl.google.com
-  - https://mxtoolbox.com/SuperTool.aspx?action=cname%3asupl.vodafone.com&run=toolpage
-  - https://forum.fairphone.com/t/supl-vodafone-com-supl-google-com/92855
- - At least it doesn't send IMSI to SUPL
-  - https://gitlab.com/iode/ota/-/issues/20
-  - https://news.ycombinator.com/item?id=25068578#25082714
-
-- Enables SUPL MSA mode
- - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/00b53c7e0993b7174c81fc48873ec7a02948795e/overlay/packages/apps/CarrierConfig/res/xml/vendor.xml#L6
- - MSA mode is bad for privacy as it calculates location on the server's end instead of on-device
-  - https://en.wikipedia.org/wiki/A-GPS#Modes_of_operation
-  - Mode 3 is 1 (MSB) + 2 (MSA)
-  - Good news is that supl.google.com doesn't support MSA, but any carrier specificed override may
-
 - Hosts update metadata on GitLab and updates on GitHub instead of their own servers
  - https://gitlab.com/iode/ota
  - https://github.com/iodeOS/ota/releases
  - https://gitlab.com/iode/os/public/lineage/packages_apps_Updater/-/commit/97334f33a7eead51e85648a09f9a178ec46926a0
 
 - Uses Quad9's unsecured DNS endpoint
- - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/00b53c7e0993b7174c81fc48873ec7a02948795e/overlay/frameworks/base/core/res/res/values/config.xml#L47
+ - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/483981cab421fe07b689311dfa00297b07bcb7d3/overlay/frameworks/base/core/res/res/values/config.xml#L30
  - https://www.quad9.net/support/faq
   - "No security blocklist, no DNSSEC, No EDNS Client-Subnet sent"
 
-- Directly uses non-vendored pool.ntp.org address for NTP
- - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/00b53c7e0993b7174c81fc48873ec7a02948795e/overlay/frameworks/base/core/res/res/values/config.xml#L25
- - https://www.ntppool.org/en/vendors.html
-
 - Uses 1.x.pool.ntp.org which lacks IPv6 support
- - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/00b53c7e0993b7174c81fc48873ec7a02948795e/overlay/frameworks/base/core/res/res/values/config.xml#L50
+ - https://gitlab.com/iode/os/public/lineage/vendor_extra/-/blob/483981cab421fe07b689311dfa00297b07bcb7d3/overlay/frameworks/base/core/res/res/values/config.xml#L32
  - https://github.com/abh/ntppool/pull/176
 
 - Includes the proprietary Magic Earth app for navigation
@@ -106,7 +85,7 @@ System
 
 - Allows arbitrary apps to spoof any signature
  - This is used to support microG but is an insecure implementation
- - https://gitlab.com/iode/os/public/lineage/frameworks_base/-/commit/93421e9d8ae96d077804b1ebd8cc64c934e1be09
+ - https://gitlab.com/iode/os/public/lineage/frameworks_base/-/commit/4464ed16cca95ecaf48362f85ef90f365f2f08ef
 
 
 microG
@@ -127,11 +106,11 @@ Website
 
 Devices Sales
 =============
-- Sells the Google Pixel 3, 4, 5, and 6 for 279€, 359, and 449€, and 519€ respectively
+- Sells the Google Pixel 3, 4, 5, and 6 for 279€, 329, and 379€, and 439€ respectively
  - The 3 and 4 are END OF LIFE and receive no security updates
- - The 5 has seven months left of support
+ - The 5 has one month left of support
  - https://endoflife.date/pixel
- - A brand new Pixel 6a is only 459€ from Google and regularly goes on sale
+ - A brand new Pixel 6a is only 349€ from Google and regularly goes on sale
   - https://store.google.com/fr/category/phones?hl=fr
   - Also supported until July 2027
 
@@ -142,8 +121,6 @@ Devices Sales
 - Sells the OnePlus 9 which has no bootloader locking support
  - To be fair most of the other devices they sell (eg. Samsung, Sony) have no locking support either.
  - https://calyxos.org/news/2022/07/06/oneplus-android-12-relock-issue/
- - LineageOS also dropped support due to severe issues
-  - https://github.com/LineageOS/hudson/commit/1cf941cc0fdb7392c388373b3fdfecb3ed8501b1
 
 - Other devices may also be end of life, check them yourself
 
