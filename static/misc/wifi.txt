@@ -19,11 +19,11 @@ bullhead	2015	866		150		mull crashes at end
 flounder	2014	866		130
 bacon		2014	433		100
 hammerhead	2013	433		90
+m8		2014	433		80
 thor		2013	300		100		page reloads at end
 athene		2016	150		80
 klte		2014	144		70		5GHz broken?
 d852		2014	144		40		5GHz broken?
 mako		2013	72		45
 flox		2013	TODO
-m8		2014	86		11		broken?
 toroplus	2011	65		25

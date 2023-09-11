@@ -4,13 +4,16 @@
 					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Fennec F-Droid is Fenix based, not Fennec based despite its name.</p>
 					<p>Both lists are sorted by order of coverage. Only browsers marked with a ★ are actually recommended.<br>For more detailed privacy related technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.<br>Extra reading on <a href="https://grapheneos.org/usage#web-browsing" target="_blank" rel="nofollow noopener noreferrer">mobile browsers</a>, an overview of <a href="https://github.com/privacyguides/privacyguides.org/discussions/1797#discussioncomment-3721547" target="_blank" rel="nofollow noopener noreferrer">fingerprint-resistance approaches</a>, an in-depth <a href="https://arxiv.org/pdf/2112.15561.pdf" target="_blank" rel="nofollow noopener noreferrer">security comparison of the leading engines</a>, and a fun <a href="https://contrachrome.com/ContraChrome_en.pdf" target="_blank" rel="nofollow noopener noreferrer">webcomic against the Chromium monoculture</a>.<br>Release comparisons are also available for <a href="/misc/ffa-dates.txt" target="_blank">Firefox</a> and <a href="/misc/ch-dates.txt" target="_blank">Chromium</a>.</p>
 					<p>Disclosure: Mull and Mulch, noted below, are projects of DivestOS.<br>Disclosure: DivestOS helps maintain `Fennec F-Droid` and additionally has <a href="/pages/about#contributions" target="_blank">small contributions</a> (commits) to others such as Firefox, FOSS Browser, and Lightning.</p>
-					<p>Last updated: 2023/08/19</p>
+					<p>Last updated: 2023/09/07</p>
 					<hr>
 					<h4 id="processIsolation">What is per-site process isolation?<a href="#processIsolation">¶</a></h4>
 					<p>Per-site process isolation is a powerful security feature that seeks to limit exposure of a malicious website/script abusing a security vulnerability.<br>Firefox calls per-site process isolation <a href="https://wiki.mozilla.org/Project_Fission" target="_blank" rel="nofollow noopener noreferrer">Fission</a> and is enabled by default on desktop. Fission is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1610822" target="_blank" rel="nofollow noopener noreferrer">not yet</a> enabled by default on Android, and when manually enabled it results in a severely degraded/broken experience. Furthermore Firefox on Android does <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565196" target="_blank" rel="nofollow noopener noreferrer">not</a> take advantage of Android's <a href="https://developer.android.com/guide/topics/manifest/service-element" target="_blank" rel="nofollow noopener noreferrer">isolatedProcess</a> flag for completely confining application services.<br>Standalone Chromium based browsers strictly isolate websites to their own process.</p>
 					<p>The lack of per-site process isolation means a successful exploit is likely able to gain more access (to other site data/browser settings/passwords) without needing a second exploit. It would still need an Android system/kernel exploit to further escape the system sandbox. It is an important hardening feature, but the browser isn't completely insecure without it assuming it is up-to-date and that you aren't on the receiving end of targeted/zero-day attacks. Furthermore (in Chromium) with isolated renderer processes there is still <a href="https://security.googleblog.com/2022/09/use-after-freedom-miracleptr.html" target="_blank" rel="nofollow noopener noreferrer">some inherent</a> attack surface of the main process that can allow a single exploit, just like in Firefox.</p>
 					<h4 id="dataIsolation">What is per-site data isolation?<a href="#dataIsolation">¶</a></h4>
 					<p>The goal of per-site data isolation is to prevent say a third party script from being able to store data and use that to track you across many websites, instead any data set will be keyed to the website it was set from. This concept is further detailed <a href="https://github.com/michaelkleber/privacy-model" target="_blank" rel="nofollow noopener noreferrer">here</a>.<br>Firefox calls per-site data isolation `dynamic first party isolation` (dFPI). Firefox and Focus enable dFPI by default.<br>Chromium calls per-site data isolation (network) state partitioning and is not enabled by default.</p>
+					<hr>
+					<!--<h4 id="jitUsage">What is the JavaScript JIT?<a href="#jitUsage">¶</a></h4>
+					<p>TODO</p>-->
 					<hr>
 					<h3>Full Fledged Browsers</h3>
 					<div class="section" id="fenix-based">
@@ -25,6 +28,7 @@
 									<th>Per-Site Process Isolation <small>(Security)</small></th>
 									<th>Fingerprinting Protection <small>(Privacy)</small></th>
 									<th>Content Blocker <small>(Privacy)</small></th>
+									<th>JIT State <small>(Security)</small></th>
 									<th>Maintained <small>(Security)</small></th>
 								</tr>
 							</thead>
@@ -36,6 +40,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
 									<td data-label="Maintained">Within two days</td>
 								</tr>
 								<tr>
@@ -45,6 +50,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strongest</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">uBlock Origin (see note)</td>
+									<td data-label="JIT State" style="color:#4CAF50;">Disabled on Safer+</td>
 									<td data-label="Maintained">Within a month</td>
 								</tr>
 								<tr>
@@ -54,6 +60,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
@@ -63,6 +70,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
@@ -72,6 +80,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
+									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
@@ -81,6 +90,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
+									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
 									<td data-label="Maintained">Within two months</td>
 								</tr>
 								<tr>
@@ -90,6 +100,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#f44336;">No</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">uBlock Origin</td>
+									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
 									<td data-label="Maintained" style="color:red;">4+ years behind</td>
 								</tr>
 							</tbody>
@@ -106,6 +117,7 @@
 									<th>Per-Site Process Isolation <small>(Security)</small></th>
 									<th>Fingerprinting Protection <small>(Privacy)</small></th>
 									<th>Content Blocker <small>(Privacy)</small></th>
+									<th>JIT State <small>(Security)</small></th>
 									<th>Maintained <small>(Security)</small></th>
 								</tr>
 							</thead>
@@ -117,7 +129,18 @@
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Strong</td>
+									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
 									<td data-label="Maintained">Yes</td>
+								</tr>
+								<tr>
+									<td data-label="Name"><a href="https://www.cromite.org" target="_blank" rel="nofollow noopener noreferrer">Cromite</a></td>
+									<td data-label="FOSS" style="color:#4CAF50;">Yes: <a href="https://github.com/uazo/cromite/blob/master/build/patches/Remove-binary-blob-integrations.patch" target="_blank" rel="nofollow noopener noreferrer">1</a></td>
+									<td data-label="Per-Site Data Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
+									<td data-label="Fingerprinting Protection" style="color:#FFC107;">Enhanced</td>
+									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
+									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
+									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
 									<td data-label="Name"><a href="https://vanadium.app" target="_blank" rel="nofollow noopener noreferrer">Vanadium</a></td>
@@ -126,6 +149,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#f44336;">No</td>
+									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
 									<td data-label="Maintained">Within a day</td>
 								</tr>
 								<tr>
@@ -135,6 +159,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#f44336;">No</td>
+									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
 									<td data-label="Maintained">Within two days</td>
 								</tr>
 								<tr>
@@ -144,6 +169,7 @@
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#f44336;">No</td>
+									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
@@ -153,7 +179,8 @@
 									<td data-label="Per-Site Process Isolation" style="color:#4CAF50;">Strong</td>
 									<td data-label="Fingerprinting Protection" style="color:#FFC107;">Enhanced</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
-									<td data-label="Maintained" style="color:red;">9+ months behind</td>
+									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
+									<td data-label="Maintained" style="color:red;">10+ months behind</td>
 								</tr>
 							</tbody>
 						</table>
