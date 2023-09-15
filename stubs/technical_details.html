@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The deets<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2023-07-27</p>
+						<p>Last updated: 2023-09-15</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -109,6 +109,7 @@
 							<li>!N: Use -fwrapv at a minimum (GrapheneOS)</li>
 							<li>Add correct keys to recovery for OTA verification (DivestOS)</li>
 							<li>R/S/T: GRAPHENE_EXEC=true: Add exec-based spawning support (GrapheneOS)</li>
+							<li>O/P/Q/R/S: Fix VB 1.0 failure due to openssl output format change</li>
 							<li>Enable auto-add-overlay for packages, this allows the vendor overlay to easily work across all branches.</li>
 							<li>Q/R/S: Disable APEX</li>
 							<li>T: Only enable APEX on 6th/7th gen Pixel devices (GrapheneOS)</li>
@@ -152,6 +153,10 @@
 						<ul>
 							<li>O/P/Q: Add back Makefiles</li>
 							<li>P/Q: Fix build under Pie</li>
+						</ul>
+						<h5>android_external_webp</h5>
+						<ul>
+							<li>R/S/T: Fix OOB write in BuildHuffmanTable</li>
 						</ul>
 						<h5>android_frameworks_av</h5>
 						<ul>
@@ -211,6 +216,11 @@
 							<li>T: Replace agnss.goog with the Broadcom PSDS server (heavily based off of a GrapheneOS patch)</li>
 							<li>R/S/T: DeviceIdleJobsController: don't ignore whitelisted system apps (GrapheneOS)</li>
 							<li>Q/R/S/T: Unprivileged microG handling (heavily based off of a CalyxOS patch)</li>
+							<li>T: Filter select package queries for GMS (CalyxOS)</li>
+							<li>T: Do not auto-grant Camera permission to the eUICC LPA UI app (GrapheneOS)</li>
+							<li>T: Add hooks for modifying PackageManagerService behavior (GrapheneOS)</li>
+							<li>T: Integrate Google's EuiccSupportPixel package (GrapheneOS)</li>
+							<li>R/S/T: SystemUI: Require unlocking to use sensitive QS tiles (GrapheneOS)</li>
 							<li>P/Q/R/S/T: Don't crash apps that depend on missing Gservices provider (GrapheneOS)</li>
 							<li>S/T: Revert "Null safe package name in AppOps writeState" (GrapheneOS)</li>
 							<li>S/T: appops: skip ops for invalid null package during state serialization (GrapheneOS)</li>
@@ -304,7 +314,7 @@
 						</ul>
 						<h5>android_packages_apps_Dialer</h5>
 						<ul>
-							<li>P/Q/R/S/T: Add a privacy warning banner to calls (CalyxOS)</li>
+							<li>P/Q/R/S: Add a privacy warning banner to calls (CalyxOS)</li>
 							<li>Disable FLP</li>
 							<li>Disable PLP</li>
 							<li>Disable RLP</li>
@@ -336,6 +346,10 @@
 							<li>Disable NFC by default</li>
 							<li>Disable NDEF Push by default</li>
 							<li>P/Q/R/S/T: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+						</ul>
+						<h5>android_packages_apps_OpenEUICC</h5>
+						<ul>
+							<li>T: Hacky fix for misidentifying physical SIM (DivestOS)</li>
 						</ul>
 						<h5>android_packages_apps_PackageInstaller</h5>
 						<ul>
@@ -377,6 +391,7 @@
 							<li>Q/R/S/T: Add LTE-only mode option (GrapheneOS)</li>
 							<li>Q/R/S/T: Add a toggle for forcibly disabling SUPL (GrapheneOS)</li>
 							<li>Q/R/S/T: Add a toggle for microG enablement (heavily based off of a GrapheneOS patch)</li>
+							<li>T: Add a toggle for OpenEUICC enablement (heavily based off of a GrapheneOS patch)</li>
 							<li>Q/R/S/T: Add an ability to disable non-system apps from the "App info" screen (GrapheneOS)</li>
 							<li>Never disable secure start-up when enabling an accessibility service</li>
 							<li>Disable "Instant Apps"</li>
@@ -432,6 +447,7 @@
 							<li>S/T: Sort and cache hosts file data for fast lookup (tdm)</li>
 							<li>S/T: Support wildcards in cached hosts file (tdm)</li>
 							<li>R/S/T: Add a toggle to disable /etc/hosts lookup (DivestOS)</li>
+							<li>T: Reuse align_ptr in hosts_cache (danielk43)</li>
 						</ul>
 						<h5>android_packages_modules_NetworkStack</h5>
 						<ul>
