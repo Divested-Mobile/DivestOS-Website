@@ -511,6 +511,17 @@
 							<li>Network location providers, such as Play and UnifiedNlp, do not make GPS acquire a lock quicker.</li>
 						</ul>
 
+						<h4 id="compileTime">How long does it take to compile all supported devices?<a href="#compileTime">¶</a></h4>
+						<p>As of 2023/09/18, it takes a bit over two days on an all NVME, 64GB RAM, Ryzen 7950X system.</p>
+
+						<h4 id="compileTimeDiff">Why do older branches compile quicker?<a href="#compileTimeDiff">¶</a></h4>
+						<ul>
+							<li>Older branches often have fewer 64-bit devices. This means only 32-bit code has to be compiled as opposed to 32-bit and 64-bit code.</li>
+							<li>Older branches have less features/apps, which means less code to compile.</li>
+							<li>Older branches have fewer devices that need to be compiled.</li>
+							<li>Older branches compile with fewer compile-time sanitizers or optimizations.</li>
+						</ul>
+
 						<h4 id="preloading">I want to sell devices with DivestOS preloaded, what should I know?<a href="#preloading">¶</a></h4>
 						<p>Selling devices with official builds of DivestOS installed is OKAY and within the license. Some preferred suggestions:</p>
 						<ul>
