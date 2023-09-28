@@ -1,10 +1,11 @@
-last updated: 2023/09/23
+last updated: 2023/09/27
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+117.0.5938.140		2023/09/27	10, 1 wild		https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_27.html
 117.0.5938.60		2023/09/11	16, 1 wild, 1 critical	https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_12.html
 117.0.5938.44		2023/09/06				https://chromereleases.googleblog.com/2023/09/early-stable-update-for-desktop.html
 116.0.5845.172		2023/09/05	4			https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop.html
@@ -96,7 +97,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-117.0.5938.60	2023/09/11	265ksv		2023/09/12	2023/09/12	2023/09/16	2023/09/13	265ksv
+117.0.5938.140	2023/09/27	275ksv		pending		compiling					275ksv
+117.0.5938.60	2023/09/11			2023/09/12	2023/09/12	2023/09/16	2023/09/13
 117.0.5938.44	2023/09/06			2023/09/06	2023/09/07
 116.0.5845.172	2023/09/05			2023/09/05	2023/09/06			2023/09/06
 116.0.5845.163	2023/08/29			2023/08/30	2023/08/30	2023/09/01	2023/08/30
@@ -182,7 +184,7 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		117.0.5938.60				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		117.0.5938.140				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
 - GrapheneOS Vanadium	117.0.5938.60				https://github.com/GrapheneOS/Vanadium/commits/main
@@ -204,7 +206,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- Cromite		117.0.5938.89				https://github.com/uazo/cromite/releases
+- Cromite		117.0.5938.92				https://github.com/uazo/cromite/releases
 - CalyxOS		117.0.5938.60				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			108.0.5359.156, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master

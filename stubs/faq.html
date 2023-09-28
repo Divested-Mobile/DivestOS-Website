@@ -139,6 +139,9 @@
 							</li>
 						</ul>
 
+						<h4 id="availableEUICC">What devices have eSIM support?<a href="#availableEUICC">¶</a></h4>
+						<p>As of 2023/09/27: Pixel 4 series and newer, along with the Fairphone 4</p>
+
 						<h4 id="volte">Why does VoLTE not work on my device?<a href="#volte">¶</a></h4>
 						<ul>
 							<li>VoLTE does not work on any Samsung or LGE devices under aftermarket systems.</li>
@@ -294,6 +297,19 @@
 							<li>Prefer lower resolution video if available. Watching 2K/4K/8K requires more memory for processing and buffering which is just a waste when your screen is only five inches.</li>
 						</ul>
 
+						<h4 id="activateEUICC">How do I add an eSIM? (if supported by device)<a href="#activateEUICC">¶</a></h4>
+						<ul>
+							<li>Settings > Security > Enable eUICC management > enabled.</li>
+							<li>Reboot your device.</li>
+							<li>You should now have an app 'OpenEUICC' in your launcher.</li>
+							<li>Note: OpenEUICC buttons may not be visible if the system dark mode is enabled.</li>
+							<li>If it says 'No eUICC found', then you need to tap the top right 3dot and enable "Dual SIM", then reboot.</li>
+							<li>Tap the add button.</li>
+							<li>If you received a QR code, then tap the barcode scanner button in top right, and scan it.</li>
+							<li>If you received only a server and activation code, input it into the respective fields, and tap the checkbox to continue.</li>
+							<li>After a few moments your eSIM should be provisioned and start working.</li>
+						</ul>
+
 						<h4 id="talkbackRestricted">How do I allow TalkBack on DivestOS 20.0?<a href="#talkbackRestricted">¶</a></h4>
 						<ul>
 							<li>Settings > Accessibility > TalkBack > Try to open > Shows "Restricted Setting"</li>
@@ -416,6 +432,7 @@
 							<li>Open system Settings, Security, and toggle on the 'microG enablement' option.</li>
 							<li>Open F-Droid, Settings, Repositories, and enable the 'microG' repo. If it isn't listed you can <a href="https://microg.org/download.html" target="_blank" rel="nofollow noopener noreferrer">add it manually</a>.</li>
 							<li>In F-Droid search for and install the latest version of the following apps: microG Services Core, microG Services Framework Proxy, FakeStore.</li>
+							<li>Note: F-Droid will NOT suggest the latest version of microG as it is marked a beta, but that beta is mandatory. You must scroll down to the versions and manually choose it.</li>
 							<li>microG will now work.</li>
 							<li>Tip: If you didn't flip the toggle on before installing, simply flip it on and reboot.</li>
 						</ol>
