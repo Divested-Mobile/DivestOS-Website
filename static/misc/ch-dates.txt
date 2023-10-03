@@ -1,10 +1,11 @@
-last updated: 2023/09/28
+last updated: 2023/10/03
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+117.0.5938.?		2023/10/03	1			https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop.html
 117.0.5938.140		2023/09/27	10, 1 wild		https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_27.html
 117.0.5938.60		2023/09/11	16, 1 wild, 1 critical	https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_12.html
 117.0.5938.44		2023/09/06				https://chromereleases.googleblog.com/2023/09/early-stable-update-for-desktop.html
@@ -97,7 +98,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-117.0.5938.140	2023/09/27	275ksv		2023/09/28	2023/09/28			2023/09/28	275ksv
+117.0.5938.140	2023/09/27	275ksv		2023/09/28	2023/09/28	2023/10/02	2023/09/28	275ksv
 117.0.5938.60	2023/09/11			2023/09/12	2023/09/12	2023/09/16	2023/09/13
 117.0.5938.44	2023/09/06			2023/09/06	2023/09/07
 116.0.5845.172	2023/09/05			2023/09/05	2023/09/06			2023/09/06
@@ -195,7 +196,7 @@ Standalone:
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS, †2		117.0.5938.60				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
+- LineageOS, †2		117.0.5938.140				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - MoKee, †2, 12.1	108.0.5359.128, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
 - OmniROM, †2, 13	108.0.5359.109, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
@@ -206,7 +207,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- Cromite		117.0.5938.92				https://github.com/uazo/cromite/releases
+- Cromite		117.0.5938.140				https://github.com/uazo/cromite/releases
 - CalyxOS		117.0.5938.140				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			108.0.5359.156, downstream Bromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master

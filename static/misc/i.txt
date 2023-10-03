@@ -41,7 +41,7 @@ Browser
  - https://gitlab.com/iode/os/apps/iode-browser-components
 
 - Doesn't compile GeckoView from source
- - Google Play Serivces library is included
+ - proprietary Google Play Serivces library is included
   - https://divestos.org/images/IodeBrowser-GMS.png
  - Mozilla's Google Safe Browsing API key is included, see section 4.4
   - https://www.kuketz-blog.de/iodeos-datenschutzfreundlich-aber-abstriche-bei-der-sicherheit-custom-roms-teil3/
