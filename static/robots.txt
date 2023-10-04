@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: *.apk
+Disallow: *.bin
+Disallow: *.img
+Disallow: *.zip
+Disallow: /apks/
+Disallow: /assets/
+Disallow: /builds/
+Disallow: /fdroid/
+Disallow: /generated/
+Disallow: /mirrorutils/
+Disallow: /testing/
