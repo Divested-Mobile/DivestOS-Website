@@ -167,7 +167,7 @@
 						<p>No, there is no support in AOSP for running on traditional desktop/laptop computers. It is recommended you instead use <a href="https://getfedora.org/" target="_blank" rel="nofollow noopener noreferrer">Fedora</a> with our <a href="https://divested.dev/pages/software#brace" target="_blank" rel="nofollow noopener noreferrer">Brace</a> package.</p>
 
 						<h4 id="supportOfficial">Can you support X device, that does have an official LineageOS port?<a href="#supportOfficial">¶</a></h4>
-						<p>If there is enough demand, yes. The list of already requested devices is tracked <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/TODO-device_additions" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
+						<p>If there is enough demand, yes. The list of already requested devices is tracked <a href="https://codeberg.org/divested-mobile/divestos-build/src/branch/master/TODO-device_additions" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
 
 						<h4 id="supportUnofficial">Can you support X device, that doesn't have an (un)official LineageOS port?<a href="#supportUnofficial">¶</a></h4>
 						<p>No.</p>
@@ -218,7 +218,7 @@
 						<p>Devices that use update_engine (they install while in the Updater app) should take 10-20 minutes to install, although may take longer if using other apps, and will pause entirely if the screen is off. Devices that reboot to the recovery to install should be less than 5 minutes, but may be up to 10 minutes old very old devices.</p>
 
 						<h4 id="internalDB">What internal databases are updated?<a href="#internalDB">¶</a></h4>
-						<p>AOSP has many internal databases that are often neglected on older versions, however we <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Update_Commons.sh" target="_blank" rel="nofollow noopener noreferrer">provide updates</a> for them as follows.</p>
+						<p>AOSP has many internal databases that are often neglected on older versions, however we <a href="https://codeberg.org/divested-mobile/divestos-build/src/branch/master/Scripts/Update_Commons.sh" target="_blank" rel="nofollow noopener noreferrer">provide updates</a> for them as follows.</p>
 						<ul>
 							<li>14.1+: LineageOS contributors cloud from latest LineageOS version. Provides accurate credits viewable in Settings.</li>
 							<li>14.1+: Timezone Databases from latest available. Provides accurate time/offsets for different regions.</li>
@@ -348,7 +348,7 @@
 						<p>Android 10 and higher prohibits all user apps from accessing: serial number, Wi-Fi & Bluetooth MAC addresses, IMEI, and IMSI. DivestOS 16.0 and higher also ensures apps with a lower targetSdk cannot access the serial number.</p>
 
 						<h4 id="proprietary">Does DivestOS contain proprietary code?<a href="#proprietary">¶</a></h4>
-						<p>Yes. All of the devices have hundreds to thousands of proprietary blobs used for hardware enablement. This applies to every aftermarket Android OS and every known shipping Android device. However unlike other systems, DivestOS goes to a great extent to remove proprietary blobs that are not truly necessary as is <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">handled here</a>.</p>
+						<p>Yes. All of the devices have hundreds to thousands of proprietary blobs used for hardware enablement. This applies to every aftermarket Android OS and every known shipping Android device. However unlike other systems, DivestOS goes to a great extent to remove proprietary blobs that are not truly necessary as is <a href="https://codeberg.org/divested-mobile/divestos-build/src/branch/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">handled here</a>.</p>
 
 						<h4 id="proprietaryLeftovers">Does DivestOS still contain non-device specific proprietary code?<a href="#proprietaryLeftovers">¶</a></h4>
 						<p>Yes. Of note: GrapheneOS, CalyxOS, LineageOS, and others contain these too.</p>
@@ -377,7 +377,7 @@
 								<li>Data Spoofing: You can run apps in a work profile via <a href="https://f-droid.org/en/packages/net.typeblog.shelter" target="_blank" rel="nofollow noopener noreferrer">Shelter</a>/<a href="https://f-droid.org/en/packages/com.oasisfeng.island.fdroid" target="_blank" rel="nofollow noopener noreferrer">Insular</a> or in a separate user profile to minimize data available to apps when granted related permissions.</li>
 								<li>Backup: DivestOS includes <a href="https://calyxinstitute.org/projects/seedvault-encrypted-backup-for-android" target="_blank" rel="nofollow noopener noreferrer">SeedVault</a> on Q/R/S/T for backing up apps and their data to Nextcloud or USB OTG.</li>
 								<li>Overclocking: Most mobile system-on-chips have their RAM stacked above the processor. Heat kills. Overclocking can and will reduce the life-span of your device.</li>
-								<li>App Removal: Modern AOSP already lets you strictly disable most system installed apps. Furthermore DivestOS already includes <a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">far fewer</a> system apps compared to most other operating systems.</li>
+								<li>App Removal: Modern AOSP already lets you strictly disable most system installed apps. Furthermore DivestOS already includes <a href="https://codeberg.org/divested-mobile/divestos-build/src/branch/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">far fewer</a> system apps compared to most other operating systems.</li>
 								<li>Battery Saving: Modern AOSP lets you prohibit apps from running in the background completely and has more advanced idle battery saving features.</li>
 								<li>Battery Analysis: You can use <a href="https://developer.android.com/topic/performance/power/setup-battery-historian" target="_blank" rel="nofollow noopener noreferrer">Battery Historian</a> via ADB for extremely detailed battery usage reports.</li>
 							</ul>
@@ -492,7 +492,7 @@
 						<h3 id="freedom">Freedom<a href="#freedom">¶</a></h3>
 
 						<h4 id="proprietary-git">Why are you hosting on GitHub.com and GitLab.com if they are proprietary?<a href="#proprietary-git">¶</a></h4>
-						<p>Because a lot of people have existing accounts on them which reduces the barrier to entry for contributing. You are otherwise free to e-mail patches to us if you prefer.</p>
+						<p>Because a lot of people have existing accounts on them which reduces the barrier to entry for contributing. You are otherwise free to contribute via Codeberg or e-mail patches to us if you prefer.</p>
 
 						<h4 id="slowDeath">Why are you wasting your time with Android? It's clear that Google has been slowly killing AOSP every release!<a href="#slowDeath">¶</a></h4>
 						<p>Android is a legitimately fantastic operating system and no other mobile platform has as many open source apps as it does. F-Droid as of February 2023 has over 4,000 FOSS apps!</p>
