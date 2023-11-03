@@ -220,7 +220,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- Cromite		118.0.5993.118				https://github.com/uazo/cromite/releases
+- Cromite		119.0.6045.106				https://github.com/uazo/cromite/releases
 - CalyxOS		119.0.6045.66				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			117.0.5938.156, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
