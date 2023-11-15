@@ -2,14 +2,18 @@ last full update: 2023/09/01
 
 Web Browser & System WebView
 ============================
-- Currently shipping Chromium 108.0.5359.156 from 2022/12/12 with 296 known security vulnerabilities
+- Currently shipping Chromium 117.0.5938.153 from 2023/10/03 with 42 known security vulnerabilities
+ - 2023/11/14: The cycle starts again
+ - history: https://divestos.org/misc/ch-dates.txt
+ - Note: simply using another browser doesn't mitigate this, the WebView is used by nearly all apps displaying web content
+
+- [FIXED] Currently shipping Chromium 108.0.5359.156 from 2022/12/12 with 296 known security vulnerabilities
+ - 2023/11/14: they shipped 117.0.5938.153 to users in v1.17, however at the time of writing that is two major versions behind
  - 2023/10/16: they finally updated to 117.0.5938.153, but not available to users until v1.17 (eta Nov. 2023?)
  - 2023/09/21: a second WIP rebase to 116.0.5845.163: https://gitlab.e.foundation/e/os/browser/-/commits/1321-master-upstream
  - 2023/07/26: work in progress rebase onto Cromite 115.0.5790.136: https://gitlab.e.foundation/e/os/cromite/-/commits/master
  - 2023/06/30: claims to be "state of the art" in security: https://community.e.foundation/t/49507/21
  - 2023/02/06: The cycle starts again
- - history: https://divestos.org/misc/ch-dates.txt
- - Note: simply using another browser doesn't mitigate this, the WebView is used by nearly all apps displaying web content
 
 - [FIXED] Currently shipping Chromium 100.0.4896.57 from 2022/03/29 with 306 known security vulnerabilities
  - 2023/02/06: they shipped 108.0.5359.156 to users in v1.8.1, however at time of writing that is two major versions behind
@@ -19,7 +23,6 @@ Web Browser & System WebView
   - currently: https://gitlab.e.foundation/e/backlog/-/issues/5986
   - previously: https://gitlab.e.foundation/e/backlog/-/issues/2180
  - https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
- - history: https://divestos.org/misc/ch-dates.txt
 
 
 App Lounge
