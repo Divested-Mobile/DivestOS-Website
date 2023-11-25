@@ -179,6 +179,28 @@
 						<h4 id="bugReport">I found a bug! Where do I report it?<a href="#bugReport">¶</a></h4>
 						<p>Please see the <a href="/pages/bug_reporting">bug reporting</a> page.</p>
 
+						<h4 id="location">How is location handled?<a href="#location">¶</a></h4>
+						<p>DivestOS takes some more extreme care with location compared to most other systems and doesn't work how most people expect.</p>
+						<ul>
+							<li>GPS is the only provider of location.</li>
+							<li>GPS should lock within two minutes when outdoors and within 10 minutes indoors. Maximum GPS TTFF is 12.5 minutes due to their orbit and transmission rate.</li>
+							<li>Tablets or other devices without GPS support have no mechanism to obtain location.</li>
+							<li>Network (cell tower, Wi-Fi, Bluetooth beacon) based location providers such as Google Play Services, Qualcomm IZat, and microG/UnifiedNlp are not supported.</li>
+							<li>Enabling the location provider in microG/UnifiedNlp will not do anything as it does not have permission to be a system location provider.</li>
+							<li>The primary reason for not supporting network location providers is that they effectively divulge your location to third-parties (eg. Google/Qualcomm/Apple/Mozilla) every time they are used. The alternative offline databases are too small to be realistically effective.</li>
+							<li>On Tensor devices both PSDS and SUPL can be used to speedup GPS TTFF. It is recommended to disable SUPL on these devices.</li>
+							<li>On newer Qualcomm devices (ones that'd typically use xtra-daemon) SUPL is the only mechanism to obtain the almanac to speedup GPS TTFF. PSDS is not supported. It is not recommended to disable SUPL on these devices as it will cause very long lock times.</li>
+							<li>On older Qualcomm devices (ones that'd typically use libloc) PSDS may work in addition to SUPL to speedup GPS TTFF. It is recommended to disable SUPL on these devices.</li>
+							<li>On 20.0 and higher you can disable PSDS and SUPL in Settings > Location > Use assisted GPS. This setting will still allow them during emergency calls.</li>
+							<li>On 17.1 and higher you can disable SUPL in Settings > Location > Force disable SUPL. This setting will not allow it even during emergency calls.</li>
+							<li>On pre 17.1 you can disable SUPL by removing the `supl` APN type from your chosen APN preset.</li>
+							<li>DivestOS furthermore disables use of SUPL MSA-A as well as LPP and LPPe.</li>
+							<li>There is a more technical explanation of <a href="/misc/gnss.txt" target="_blank">this here</a>.</li>
+						</ul>
+
+						<h4 id="mallocBenefit">What is the benefit of a security focused memory allocator?<a href="#mallocBenefit">¶</a></h4>
+						<p>The primary possible benefits of security focused memory allocators are the ability to make attacks harder through out of line metadata, greater randomness, double free detection, use after free detection, invalid free detection, 1-byte buffer over or underflow detection, and some write after free detection, as well as zero on free to reduce data lifetime. Not all memory allocators provide these features. There is a <a href="https://github.com/struct/isoalloc/blob/master/SECURITY_COMPARISON.MD" target="_blank" rel="nofollow noopener noreferrer">comparison table here</a>.</p>
+
 						<h4 id="backups">How do I backup my system?<a href="#backups">¶</a></h4>
 						<ul>
 							<li>On 17.1 and higher Seedvault is included which should be used to backup user apps that allow it. Using Seedvault to a flash drive over OTG is strongly recommended, but be sure to plug it in occasionally to actually ensure recent backups are available.</li>
