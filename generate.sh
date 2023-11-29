@@ -3,7 +3,12 @@ rm -rf output;
 cp -r --reflink=auto static output;
 mkdir output/pages;
 
-alias asmpage='php assemble_pages.php';
+#workaround hmalloc on host
+if command -v bwrap &> /dev/null; then
+       alias asmpage='bwrap --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload php assemble_pages.php';
+else
+       alias asmpage='php assemble_pages.php';
+fi;
 
 #helper
 if command -v firejail &> /dev/null; then

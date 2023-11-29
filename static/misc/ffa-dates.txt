@@ -1,8 +1,9 @@
-last updated: 2023/11/25
+last updated: 2023/11/29
 
 disclosure: Mull is a DivestOS project
 
 Version		Mull		Iceraven	Firefox		Fennec F-Droid		iodéOS Browser		Security Bugfix Count	Security Advisory
+120.0.1		skipped				2023/11/28				2023/11/28
 120.0.0		2023/11/21	2023/11/24	2023/11/21	2023/11/21		2023/11/21		19			https://www.mozilla.org/en-US/security/advisories/mfsa2023-49/
 119.1.1		skipped		2023/11/10	2023/11/09				2023/11/09
 119.1.0		2023/11/07	2023/11/07	2023/11/07	2023/11/08
@@ -197,3 +198,4 @@ There is a Chromium equivalent of this table here: https://divestos.org/misc/ch-
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/ffa-dates.txt
 - https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/ffa-dates.txt
+- https://codeberg.org/divested-mobile/divestos-website/src/branch/master/static/misc/ffa-dates.txt

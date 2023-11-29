@@ -11,6 +11,7 @@ Preface:
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/appsec.txt
 - https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/appsec.txt
+- https://codeberg.org/divested-mobile/divestos-website/src/branch/master/static/misc/appsec.txt
 
 Libraries:
 - iText

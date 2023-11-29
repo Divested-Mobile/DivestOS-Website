@@ -130,3 +130,4 @@ Devices Sales
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/i.txt
 - https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/i.txt
+- https://codeberg.org/divested-mobile/divestos-website/src/branch/master/static/misc/i.txt

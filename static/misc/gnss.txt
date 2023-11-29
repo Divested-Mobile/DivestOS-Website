@@ -136,3 +136,4 @@ last updated: 2023/07/20
 See something wrong? Open an issue or merge request:
 - https://gitlab.com/Divested-Mobile/DivestOS-Website/-/blob/master/static/misc/gnss.txt
 - https://github.com/Divested-Mobile/DivestOS-Website/blob/master/static/misc/gnss.txt
+- https://codeberg.org/divested-mobile/divestos-website/src/branch/master/static/misc/gnss.txt
