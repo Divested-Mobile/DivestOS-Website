@@ -1,4 +1,4 @@
-divestos.org/index.php divestos.org
+divestos.org/index.php? divestos.org
 divestos.org/index.php?page=about divestos.org/pages/about
 divestos.org/index.php?page=bootloader divestos.org/pages/bootloader
 divestos.org/index.php?page=broken divestos.org/pages/broken
@@ -31,3 +31,4 @@ divestos.org/index.php?page=technical_details divestos.org/pages/technical_detai
 divestos.org/index.php?page=terms_of_service divestos.org/pages/terms_of_service
 divestos.org/index.php?page=troubleshooting divestos.org/pages/troubleshooting
 divestos.org/index.php?page=verified_boot_hashes divestos.org/pages/verified_boot_hashes
+divestos.org/pages/devices_golden? divestos.org/pages/devices?golden=true

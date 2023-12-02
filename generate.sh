@@ -24,8 +24,8 @@ do
 	asmpage "$page" > "output/pages/$page.html";
 done;
 
-asmpage devices LineageOS false > "output/pages/devices.html";
-asmpage devices LineageOS true > "output/pages/devices_golden.html";
+asmpage "devices" > "output/pages/devices.php";
+sed -i 's/\[PHP INCLUDER\]/<?php include "..\/gen_devices.php" ?>/' "output/pages/devices.php";
 
 #gzip -k output/pages/*.html output/assets/css/*.css;
 #brotli -k output/pages/*.html output/assets/css/*.css;
