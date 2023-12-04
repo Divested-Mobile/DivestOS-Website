@@ -183,7 +183,7 @@
 						<p>DivestOS takes some more extreme care with location compared to most other systems and doesn't work how most people expect.</p>
 						<ul>
 							<li>GPS is the only provider of location.</li>
-							<li>GPS should lock within two minutes when outdoors and within 10 minutes indoors. Maximum GPS TTFF is 12.5 minutes due to their orbit and transmission rate.</li>
+							<li>GPS should lock within 2 minutes when outdoors and within 10 minutes indoors. Maximum GPS TTFF is 12.5 minutes due to their orbit and transmission rate.</li>
 							<li>Tablets or other devices without GPS support have no mechanism to obtain location.</li>
 							<li>Network (cell tower, Wi-Fi, Bluetooth beacon) based location providers such as Google Play Services, Qualcomm IZat, and microG/UnifiedNlp are not supported.</li>
 							<li>Enabling the location provider in microG/UnifiedNlp will not do anything as it does not have permission to be a system location provider.</li>
@@ -194,7 +194,7 @@
 							<li>On 20.0 and higher you can disable PSDS and SUPL in Settings > Location > Use assisted GPS. This setting will still allow them during emergency calls.</li>
 							<li>On 17.1 and higher you can disable SUPL in Settings > Location > Force disable SUPL. This setting will not allow it even during emergency calls.</li>
 							<li>On pre 17.1 you can disable SUPL by removing the `supl` APN type from your chosen APN preset.</li>
-							<li>DivestOS furthermore disables use of SUPL MSA-A as well as LPP and LPPe.</li>
+							<li>DivestOS furthermore disables use of SUPL MSA as well as LPP and LPPe.</li>
 							<li>There is a more technical explanation of <a href="/misc/gnss.txt" target="_blank">this here</a>.</li>
 						</ul>
 
