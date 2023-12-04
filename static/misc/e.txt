@@ -2,7 +2,8 @@ last full update: 2023/09/01
 
 Web Browser & System WebView
 ============================
-- Currently shipping Chromium 117.0.5938.153 from 2023/10/03 with 42 known security vulnerabilities
+- Currently shipping Chromium 117.0.5938.153 from 2023/10/03 with 50 known security vulnerabilities
+ - 2023/12/04: they updated to 119.0.6045.200, but not available to users until v1.19? (eta Jan. 2023?)
  - 2023/11/14: The cycle starts again
  - history: https://divestos.org/misc/ch-dates.txt
  - Note: simply using another browser doesn't mitigate this, the WebView is used by nearly all apps displaying web content
