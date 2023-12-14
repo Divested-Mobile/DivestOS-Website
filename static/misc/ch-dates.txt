@@ -1,10 +1,11 @@
-last updated: 2023/12/12
+last updated: 2023/12/14
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+120.0.6099.115		2023/12/12	9			https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop_12.html
 120.0.6099.43		2023/11/30	10			https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop.html
 119.0.6045.193		2023/11/28	7, 1 wild		https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_28.html
 119.0.6045.163		2023/11/14	4			https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_14.html
@@ -108,7 +109,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-120.0.6099.43	2023/11/30	336ksv		2023/11/30	2023/11/30	pending		2023/12/06
+120.0.6099.115	2023/12/12	345+ksv		2023/12/12	2023/12/12	30+ksv		2023/12/13	19+ksv
+120.0.6099.43	2023/11/30			2023/11/30	2023/11/30	pending		2023/12/06
 119.0.6045.193	2023/11/28			2023/11/28	2023/11/28			2023/11/29	2023/12/04
 119.0.6045.163	2023/11/14			2023/11/14	2023/11/15			2023/11/17
 119.0.6045.134	2023/11/08			2023/11/08	2023/11/08	2023/11/15
@@ -206,11 +208,11 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		120.0.6099.43				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		120.0.6099.115				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
-- GrapheneOS Vanadium	120.0.6099.43				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	120.0.6099.43, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	120.0.6099.115				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	120.0.6099.115, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 - CarbonROM, †2, 12	96.0.4664.111				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
 - CarbonROM, †2, 13	107.0.5304.54				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-11.0_r7
 - OmniROM, †2, 13	108.0.5359.109				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
