@@ -2,8 +2,23 @@
 						<h3>XXX Update<a href="#XXXX-XX">¶</a></h3>
 						<h4>App Updates</h4>
 						<ul>
-							<li>Hypatia now has an extra malware database with 60k+ signatures from <a href="https://bazaar.abuse.ch/" target="_blank" rel="nofollow noopener noreferrer">MalwareBazaar by abuse.ch</a>.</li>
+							<li>Hypatia 3.0 has been released:<ul>
+								<li>Every single version of Hypatia before 3.0 is fundamentally broken.</li>
+								<li>SHA1 hash calculation was broken since the beginning, it is now fixed.</li>
+								<li>Handling of MD5 and SHA1 hashes was broken since the beginning, it is now fixed and many sanity checks have been added.</li>
+								<li>Some entries from the ESET database were fixed up</li>
+								<li>A new malware database with 700k+ signatures from <a href="https://bazaar.abuse.ch/" target="_blank" rel="nofollow noopener noreferrer">MalwareBazaar by abuse.ch</a> has been added.</li>
+								<li>HashMaps for signatures have been replaced with bloom filters. This is much more compact and memory efficient.</li>
+								<li>Pre-processed bloom filters are downloaded directly from the server, removing any decompression/sorting/conversion steps for faster loading.</li>
+								<li>All databases are now always enabled. No more database choice.</li>
+								<li>Fixup for scanning apps on Android 11 and higher.</li>
+								<li>Many downloader improvements.</li>
+								<li>Self-test function has been added.</li>
+								<li>Actions to lookup, delete/uninstall, or ignore detections.</li>
+								<li>Fully tested on Android 7.1.2, 8.1.0, 10, 11, and 13.</li>
+								<li>Stats for the new database <a href="https://divested.dev/MalwareScannerSignatures/" target="_blank" rel="nofollow noopener noreferrer">are here</a>.</li>
+							</ul></li>
 							<li>Updated Mull to 121.0.0-1, has 27 security fixes. This update <a href="https://gitlab.com/relan/fennecbuild/-/issues/34" target="_blank" rel="nofollow noopener noreferrer">now features</a> basic WebAuthn when microG is installed thanks to @relan and the microG project.</li>
-							<li>Updated Mulch to 120.0.6099.115-1, has 9 security fixes.</li>
+							<li>Updated Mulch to 120.0.6099.115-1 and 120.0.6099.144-1, has 9 and 1 security fixes respectively.</li>
 						</ul>
 					</div>
