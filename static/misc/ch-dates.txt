@@ -1,10 +1,11 @@
-last updated: 2023/12/26
+last updated: 2024/01/05
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+120.0.6099.193		2024/01/03	6			https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop.html
 120.0.6099.144		2023/12/20	1, 1 wild		https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop_20.html
 120.0.6099.115		2023/12/12	9			https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop_12.html
 120.0.6099.43		2023/11/30	10			https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop.html
@@ -110,7 +111,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-120.0.6099.144	2023/12/20	346ksv		2023/12/20	2023/12/20	pending		2023/12/22	20ksv
+120.0.6099.193	2024/01/03	dead		2024/01/03	2024/01/03			2024/01/04	26ksv
+120.0.6099.144	2023/12/20	346+ksv		2023/12/20	2023/12/20	2023/12/28	2023/12/22
 120.0.6099.115	2023/12/12			2023/12/12	2023/12/12	2023/12/15	2023/12/13
 120.0.6099.43	2023/11/30			2023/11/30	2023/11/30			2023/12/06
 119.0.6045.193	2023/11/28			2023/11/28	2023/11/28			2023/11/29	2023/12/04
@@ -210,18 +212,18 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		120.0.6099.144				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		120.0.6099.193				https://chromiumdash.appspot.com/releases?platform=Android
 
 Standalone:
-- GrapheneOS Vanadium	120.0.6099.144				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	120.0.6099.144, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	120.0.6099.193				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	120.0.6099.193, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 - CarbonROM, †2, 12	96.0.4664.111				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
 - CarbonROM, †2, 13	107.0.5304.54				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-11.0_r7
 - OmniROM, †2, 13	108.0.5359.109				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
-- LineageOS, †2		120.0.6099.115				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
+- LineageOS, †2		120.0.6099.144				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - MoKee, †2, 12.1	108.0.5359.128, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
 - OmniROM, †2, 13	108.0.5359.109, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
 - ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
@@ -232,8 +234,8 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- Cromite		120.0.6099.144				https://github.com/uazo/cromite/releases
-- CalyxOS		120.0.6099.144				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- Cromite		120.0.6099.199				https://github.com/uazo/cromite/releases
+- CalyxOS		120.0.6099.193				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			119.0.6045.200, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 - Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
 - lin-microG		108.0.5359.156, Bromite prebuilts	https://github.com/MSe1969/android_external_bromite-webview
