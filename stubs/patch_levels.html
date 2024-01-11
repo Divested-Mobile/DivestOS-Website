@@ -11,32 +11,11 @@
 								<li>the vendor ASB patch level, see <a href="https://www.qualcomm.com/company/product-security/bulletins" target="_blank" rel="nofollow noopener noreferrer">Qualcomm</a></li>
 								<li>and lastly the <a href="https://www.kernel.org" target="_blank" rel="nofollow noopener noreferrer">Linux kernel</a> version</li>
 							</ol>
-						Briefly for each operating system:
-							<ul>
-								<li><a href="https://grapheneos.org" target="_blank" rel="nofollow noopener noreferrer">GrapheneOS</a>, with the exception of the Pixel 4 series, strictly only supports devices that have all parts updated.</li>
-								<li><a href="https://calyxos.org" target="_blank" rel="nofollow noopener noreferrer">CalyxOS</a>, with the exception of the Pixel 3/4 series and other non-Pixel devices, in theory only supports devices that have all parts updated.</li>
-								<li><a href="https://lineageos.org" target="_blank" rel="nofollow noopener noreferrer">LineageOS</a> can help with 1, 2, 3, and usually 5, but if a device is out of support by its manufacturer it cannot help with 4.</li>
-								<li>DivestOS, being Lineage based helps with 1, 2, 3, can minimize 4 via the <a href="https://codeberg.org/divested-mobile/divestos-build/src/branch/master/Scripts/Common/Deblob.sh" target="_blank" rel="nofollow noopener noreferrer">deblobber</a>, and improve 5 significantly using the <a href="https://codeberg.org/divested-mobile/cve_checker" target="_blank" rel="nofollow noopener noreferrer">CVE auto-patcher</a>.</li>
-								<li>Any of the above operating systems will be an improvement for any device that is no longer receiving support from its manufacturer if they continue to offer monthly updates with at least some parts covered.</li>
-							</ul>
-						Furthermore GrapheneOS is a substantially hardened operating system. DivestOS includes some of the security features from GrapheneOS along with its own.<br>Such hardening changes can prevent exploitation of both known and unknown issues and are not found in LineageOS, CalyxOS, or most other aftermarket systems.<br><br>If you are choosing an operating system for security the order is GrapheneOS, then DivestOS, then official LineageOS, with the choice depending on what device you have or can acquire/afford.<br>At the potential cost of freedom and/or privacy, you may even want to consider the stock OS as long as it is not end-of-life.</p>
+						</p>
 
-						<h3 id="others">What about this other OS?<a href="#others">¶</a></h3>
-						<ul>
-							<li>CalyxOS occasionally falls behind updates (see <a href="/misc/ch-dates.txt" target="_blank">1</a> and <a href="/misc/a-dates.txt" target="_blank">2</a>), has no added hardening features, and primarily only supports Pixels which are better supported by GrapheneOS.</li>
-							<li><a href="https://e.foundation" target="_blank" rel="nofollow noopener noreferrer">/e/OS</a> has many severe issues as documented <a href="/misc/e.txt" target="_blank">here</a>.</li>
-							<li><a href="https://iode.tech" target="_blank" rel="nofollow noopener noreferrer">iodéOS</a> has numerous issues as documented <a href="/misc/i.txt" target="_blank">here</a>.</li>
-							<li><a href="https://ubports.com" target="_blank" rel="nofollow noopener noreferrer">UBports</a>, based on Ubuntu 20.04, lacks <a href="https://github.com/ubports/ubuntu-touch/issues/178" target="_blank" rel="nofollow noopener noreferrer">encryption support</a>, retains many of the Android components via <a href="https://halium.org/" target="_blank" rel="nofollow noopener noreferrer">Halium</a>, and uses <a href="https://github.com/ubports/ubuntu-touch/issues/1566" target="_blank" rel="nofollow noopener noreferrer">unpatched & end of life kernels</a> in many of its featured devices.</li>
-							<li><a href="https://replicant.us" target="_blank" rel="nofollow noopener noreferrer">Replicant</a> 6.0, based on LineageOS-13.0, hasn't received any security patches in <a href="https://git.replicant.us/replicant/build/commit/?id=4ff5dd802bf2006d17111e519c2bf83a85d85fd6" target="_blank" rel="nofollow noopener noreferrer">years</a> and the devices run decade+ old Linux 3.0 kernels.</li>
-							<li><a href="https://leos-gsi.de" target="_blank" rel="nofollow noopener noreferrer">LeOS GSI</a> has occasional <a href="https://github.com/LeOS-GSI/patches" target="_blank" rel="nofollow noopener noreferrer">source code</a> without license declarations available and was <a href="https://forum.fairphone.com/t/leos-a-phh-aosp-based-gsi-custom-rom/81863/50" target="_blank" rel="nofollow noopener noreferrer">bundling</a> a modified proprietary `Phone/Dialer` app. The Dialer sitaution was addressed quickly after being pointed out.</li>
-							<li>Proprietary aftermarket systems should be avoided as they generally do not provide enough additional value over the existing open source options that are available.</li>
-							<li>GSIs should be avoided, they do not provide the kernel or vendor components and cannot utilize many security features.</li>
-							<li>Lastly many aftermarket systems often do not provide consistent and timely updates to the system WebView component as documented <a href="/misc/ch-dates.txt" target="_blank">here</a>. This is a security critical component of the system not included in the ASB that is frequently overlooked and/or ignored.</li>
-							<li>See also this <a href="https://eylenburg.github.io/android_comparison.htm" target="_blank" rel="nofollow noopener noreferrer">independent comparison of systems here.</a></li>
-						</ul>
 
 						<h3 id="secure">Does DivestOS make my device secure?<a href="#secure">¶</a></h3>
-						<p>The short answer: No.<br>The long answer is that DivestOS is likely the best harm reduction option if your device is no longer in support by its manufacturer or vendor.<br>Any project or product claiming they make end-of-life devices secure should be rigorously scrutinized.<br>If you want a reasonably secure and well-maintained device, please acquire a newer Pixel (6/6a/7) that is fully supported by GrapheneOS and use it instead.<br>Lastly it must be noted that privacy and security go hand-in-hand, there is a fundamental limit of how much privacy you can achieve if you do not have security backing it up.</p>
+						<p>The short answer: No.<br>The long answer is that DivestOS is likely the best harm reduction option if your device is no longer in support by its manufacturer or vendor.<br>Any project or product claiming they make end-of-life devices secure should be rigorously scrutinized.<br>Lastly it must be noted that privacy and security go hand-in-hand, there is a fundamental limit of how much privacy you can achieve if you do not have security backing it up.</p>
 					</div>
 					<div class="section" id="branchPatchLevels">
 						<h3>Branches<a href="#branchPatchLevels">¶</a></h3>

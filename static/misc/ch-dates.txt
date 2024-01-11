@@ -216,21 +216,12 @@ OS Current Versions
 ===================
 - latest stable		120.0.6099.210				https://chromiumdash.appspot.com/releases?platform=Android
 
-Standalone:
+Vanadium related:
 - GrapheneOS Vanadium	120.0.6099.210				https://github.com/GrapheneOS/Vanadium/commits/main
 - DivestOS/Mulch	120.0.6099.210, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
-- CarbonROM, †2, 12	96.0.4664.111				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-10.0
-- CarbonROM, †2, 13	107.0.5304.54				https://github.com/CarbonROM/android_external_chromium-webview/commits/cr-11.0_r7
-- OmniROM, †2, 13	108.0.5359.109				https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
-- Ungoogled Chromium	99.0.4844.51				https://github.com/ungoogled-software/ungoogled-chromium-android/commits/master
 
 Lineage related:
 - LineageOS, †2		120.0.6099.144				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
-- MoKee, †2, 12.1	108.0.5359.128, LineageOS prebuilts	https://github.com/MoKee/android_external_chromium-webview_prebuilt_arm64
-- OmniROM, †2, 13	108.0.5359.109, LineageOS prebuilts	https://gitlab.com/omnirom/android_packages_apps_OmniChromium/-/commits/android-13.0
-- ArrowOS, †1, 11	96.0.4664.104, LineageOS prebuilts	https://github.com/ArrowOS/android_external_chromium-webview
-- CarbonROM, †2, 11	tracks LineageOS/master			https://github.com/CarbonROM/android/blob/cr-9.0/carbon-aosp.xml
-- crDroid, †2, 11/12.1	tracks LineageOS/master			https://github.com/crdroidandroid/android/blob/12.1/snippets/lineage.xml
 - iodéOS		tracks LineageOS/master			https://gitlab.com/iode/os/public/manifests/android/-/blob/v4-staging/snippets/lineage.xml
 - Replicant		???
 
@@ -239,10 +230,8 @@ Bromite related:
 - Cromite		120.0.6099.199				https://github.com/uazo/cromite/releases
 - CalyxOS		120.0.6099.193				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			119.0.6045.200, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
-- Vostok		105.0.5195.41, Bromite prebuilts	https://gitlab.com/vostok/external_chromium-webview/-/commits/master
-- lin-microG		108.0.5359.156, Bromite prebuilts	https://github.com/MSe1969/android_external_bromite-webview
 
-AOSP related:
+AOSP:
 - AOSP, 7.1.2		52.7243.100				https://android.googlesource.com/platform/external/chromium-webview/+log/android-7.1.2_r39
 - AOSP, 8.1		61.0.3163.98				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-8.1.0_r93
 - AOSP, 9		66.0.3359.158				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-9.0.0_r76
@@ -251,13 +240,6 @@ AOSP related:
 - AOSP, 12		91.0.4472.114				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-12.0.0_r49
 - AOSP, 12.1		95.0.4638.74				https://android.googlesource.com/platform/external/chromium-webview/+log/android-12.1.0_r27
 - AOSP, 13		109.0.5414.123				https://android.googlesource.com/platform/external/chromium-webview/+log/android-13.0.0_r63
-- ArrowOS, †1, 12.1	AOSP prebuilts				https://github.com/ArrowOS/android_manifest/blob/arrow-12.1/default.xml
-- DotOS, †1, 11/12.1	AOSP prebuilts				https://github.com/DotOS/manifest
-- HavocOS, †1, 11/12.1	AOSP prebuilts				https://github.com/Havoc-OS/android_manifest
-- Paranoid, †2, 12?	AOSP prebuilts				https://github.com/AOSPA/manifest
-- PixelExp, †1, 11/12.1	AOSP prebuilts				https://github.com/PixelExperience/manifest
-- ProtonAOSP, †1, 12.1	AOSP prebuilts				https://github.com/ProtonAOSP/android_manifest
-- StagOS, †1, 11/12.1	AOSP prebuilts				https://github.com/StagOS/manifest
 
 
 Notes:
@@ -275,9 +257,6 @@ Notes:
     Users can choose to use FFUpdater to get GitHub release notifications.
   - Users with Google Apps would have Google Chrome+Google WebView pushed via Play Store updates, notably however Google does staged rollouts.
   - /e/OS appears to hold releases and only ships them once per stable release.
-- Bromite has diverged from shipping stable release versions and often ships pre-release or LTS versions instead.
-  These do not align cleanly with the table here, and makes it hard to determine how many security issues actually impact it.
-  examples: https://github.com/bromite/bromite/discussions/2421
 
 There is a Firefox equivalent of this table here: https://divestos.org/misc/ffa-dates.txt
 
