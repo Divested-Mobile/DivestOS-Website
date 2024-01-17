@@ -45,7 +45,7 @@ getVendorPatchLevel() {
 		elif [ $1 == "LineageOS-20.0" ]; then
 			level="2023-09";
 		elif [ $1 == "LineageOS-21.0" ]; then
-			level="2023-12";
+			level="2024-01";
 		else
 			level="Unknown";
 		fi;
@@ -88,9 +88,9 @@ createTable() {
 	vASB=$(getVendorPatchLevel $version $devicePath)
 	#green: keep 4 months + 1 future
 	#yellow: previous year
-	if [[ $vASB == "2024-01"* ]] || [[ $vASB == "2023-12"* ]] || [[ $vASB == "2023-11"* ]] || [[ $vASB == "2023-10"* ]] || [[ $vASB == "2023-09"* ]]; then
+	if [[ $vASB == "2024-02"* ]] || [[ $vASB == "2024-01"* ]] || [[ $vASB == "2023-12"* ]] || [[ $vASB == "2023-11"* ]] || [[ $vASB == "2023-10"* ]]; then
 		vASBStyle="style=\"color:#4CAF50;\"";
-	elif [[ $vASB == "2022-"* ]]; then
+	elif [[ $vASB == "2023-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
 	else
 		vASBStyle="style=\"color:#F44336;\"";
@@ -99,9 +99,9 @@ createTable() {
 	kernelVersion=$(getKernelVersion $version $kernelPath);
 	#green: non-eol branches
 	#yellow: most recent and externally supported branches
-	if [[ $kernelVersion == "4.1"* ]] || [[ $kernelVersion == "5."* ]] || [[ $kernelVersion == "6."* ]]; then
+	if [[ $kernelVersion == "4.19."* ]] || [[ $kernelVersion == "5."* ]] || [[ $kernelVersion == "6."* ]]; then
 		kernelStyle="style=\"color:#4CAF50;\"";
-	elif [[ $kernelVersion == "4.4."* ]] || [[ $kernelVersion == "4.9."* ]]; then
+	elif [[ $kernelVersion == "4.4."* ]] || [[ $kernelVersion == "4.9."* ]] || [[ $kernelVersion == "4.14."* ]]; then
 		kernelStyle="style=\"color:#FFC107;\"";
 	else
 		kernelStyle="style=\"color:#F44336;\"";
