@@ -5,12 +5,13 @@
 						<h3>Apps<a href="#appIssues">¶</a></h3>
 						<h4 id="mull">Mull<a href="#mull">¶</a></h4>
 						<ul>
-							<li>On DivestOS 19.1 and 20.0 the initial install of Mull may not have Internet access, go to its `App info` screen then `Mobile data & Wi-Fi` and enable `Allow network access`. [help wanted]</li>
+							<li>On DivestOS 19.1 and 20.0 the initial install of Mull may not have Internet access, go to its `App info` screen then `Mobile data & Wi-Fi` and enable `Allow network access`. [likely fixed]</li>
 							<li>Only uBlock Origin is recommended and supported.</li>
 							<li>Dark Reader is known to be incompatible with the Mull changes and will cause significant breakage/slowdowns.</li>
 							<li>Dark mode for websites is disabled due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>Refresh rate is capped to 60hz due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>If audio/video content fails to play in private tabs navigate to <code>about:config</code> and change <code>browser.privatebrowsing.forceMediaMemoryCache</code> to false, this is however a privacy risk.</li>
+							<li>Mull disables the JavaScript JIT to increase security at the cost of slowing down webapps, complex websites, and the PDF viewer. Navigate to <code>about:config</code> and change <code>javascript.options.ion</code> and <code>javascript.options.baselinejit</code> to true to restore their performance.</li>
 							<li>Mull has strict certificate revocation checks. The CA revocation servers are frequently down/blocked/inaccessible and will result in a "Secure Connection Failed" error. Navigate to <code>about:config</code> and change <code>security.OCSP.require</code> to false, this is however a security and privacy risk.</li>
 							<li>Mull requires safe renegotiation for connections. Some few websites do not support this and will result in a "Secure Connection Failed" error. Navigate to <code>about:config</code> and change <code>security.ssl.require_safe_negotiation</code> to false, this is however a security and privacy risk.</li>
 							<li>Mull has strict certificate pinning. If you are using a proxy or VPN that does HTTPS manipulation you'll encounter a "Secure Connection Failed" error. Navigate to <code>about:config</code> and change <code>security.cert_pinning.enforcement_level</code> from 2 to 1, this is however a security and privacy risk.</li>
