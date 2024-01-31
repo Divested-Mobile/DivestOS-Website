@@ -1,10 +1,11 @@
-last updated: 2024/01/29
+last updated: 2024/01/31
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+121.0.6167.143		2024/01/30	4, 1 critical		https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_30.html
 121.0.6167.101		2024/01/23	17			https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_23.html
 121.0.6167.71		2024/01/17				https://chromereleases.googleblog.com/2024/01/early-stable-for-desktop.html
 120.0.6099.230		2024/01/16	4, 1 wild		https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_16.html
@@ -115,7 +116,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-121.0.6167.101	2024/01/23			2024/01/23	2024/01/24	pending		2024/01/25	48ksv
+121.0.6167.143	2024/01/30			2024/01/30	2024/01/30
+121.0.6167.101	2024/01/23			2024/01/23	2024/01/24	2024/01/30	2024/01/25	48ksv
 121.0.6167.71	2024/01/17			2024/01/17	2024/01/18
 120.0.6099.230	2024/01/16			2024/01/16	2024/01/16	2024/01/20	2024/01/18
 120.0.6099.210	2024/01/09			2024/01/09	2024/01/09			2024/01/10
@@ -220,14 +222,14 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		121.0.6167.101				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		121.0.6167.143				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	121.0.6167.101				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	121.0.6167.101, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	121.0.6167.143				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	121.0.6167.143, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
-- LineageOS, †2		120.0.6099.230				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
+- LineageOS, †2		121.0.6167.101				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - iodéOS		tracks LineageOS/master			https://gitlab.com/iode/os/public/manifests/android/-/blob/v4-staging/snippets/lineage.xml
 - Replicant		???
 
