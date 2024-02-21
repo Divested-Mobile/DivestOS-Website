@@ -1,10 +1,11 @@
-last updated: 2024/02/19
+last updated: 2024/02/21
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+122.0.6261.64		2024/02/20	12			https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_20.html
 122.0.6261.43		2024/02/14				https://chromereleases.googleblog.com/2024/02/early-stable-update-for-desktop.html
 121.0.6167.178		2024/02/13	1			https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_13.html
 121.0.6167.164		2024/02/06	3			https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop.html
@@ -119,7 +120,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-122.0.6261.43	2024/02/14			2024/02/14	2022/02/15					1ksv
+122.0.6261.64	2024/02/20			2024/02/20	2024/02/21			pending		13ksv
+122.0.6261.43	2024/02/14			2024/02/14	2022/02/15
 121.0.6167.178	2024/02/13			2024/02/13	2024/02/13			2024/02/13
 121.0.6167.164	2024/02/06			2024/02/06	2024/02/07	2024/02/13	2024/02/06	2024/02/15
 121.0.6167.143	2024/01/30			2024/01/30	2024/01/30			2024/02/06
@@ -228,11 +230,11 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		122.0.6261.43				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		122.0.6261.64				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	122.0.6261.43				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	122.0.6261.43, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	122.0.6261.64				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	122.0.6261.64, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		121.0.6167.101				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
