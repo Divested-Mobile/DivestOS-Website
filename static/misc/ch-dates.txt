@@ -1,4 +1,4 @@
-last updated: 2024/02/29
+last updated: 2024/03/02
 
 disclosure: Mulch is a DivestOS project
 
@@ -245,7 +245,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- Cromite		122.0.6261.70				https://github.com/uazo/cromite/releases
+- Cromite		122.0.6261.94				https://github.com/uazo/cromite/releases
 - CalyxOS		122.0.6261.90				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			121.0.6167.164, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
