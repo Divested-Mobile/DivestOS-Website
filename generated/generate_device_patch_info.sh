@@ -76,7 +76,7 @@ createTable() {
 	#yellow: non-eol branches
 	if [[ $versionStripped == "21.0" ]]; then
 		versionStyle="style=\"color:#4CAF50;\"";
-	elif [[ $versionStripped == "18.1" ]] || [[ $versionStripped == "19.1" ]] || [[ $versionStripped == "20.0" ]]; then
+	elif [[ $versionStripped == "19.1" ]] || [[ $versionStripped == "20.0" ]]; then
 		versionStyle="style=\"color:#FFC107;\"";
 	else
 		versionStyle="style=\"color:#F44336;\"";
