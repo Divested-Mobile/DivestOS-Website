@@ -1,11 +1,11 @@
-last updated: 2024/03/12
+last updated: 2024/03/14
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
-123.0.6312.40		2024/03/13
+123.0.6312.40		2024/03/13				https://chromereleases.googleblog.com/2024/03/early-stable-update-for-desktop.html
 122.0.6261.119		2024/03/12	3			https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_12.html
 122.0.6261.105		2024/03/05	3			https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop.html
 122.0.6261.90		2024/02/27	4			https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_27.html
@@ -124,7 +124,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-123.0.6312.40	2024/03/13			2023/03/13	compiling		6ksv		3ksv		23ksv
+123.0.6312.40	2024/03/13			2023/03/13	2023/03/14	6ksv		3ksv		23ksv
 122.0.6261.119	2024/03/12			2023/03/12	2023/03/12
 122.0.6261.105	2024/03/05			2024/03/05	2024/03/05	pending		2024/03/07
 122.0.6261.90	2024/02/27			2024/02/27	2024/02/28	2024/03/01	2024/02/28
@@ -242,7 +242,7 @@ OS Current Versions
 
 Vanadium related:
 - GrapheneOS Vanadium	123.0.6312.40				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	122.0.6261.119, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- DivestOS/Mulch	123.0.6312.40, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		122.0.6261.90				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
@@ -251,7 +251,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- Cromite		122.0.6261.112				https://github.com/uazo/cromite/releases
+- Cromite		122.0.6261.128				https://github.com/uazo/cromite/releases
 - CalyxOS		122.0.6261.105				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			121.0.6167.164, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
