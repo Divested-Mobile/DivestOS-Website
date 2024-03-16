@@ -452,7 +452,7 @@
 							<li>Note: microG on DivestOS is only visible to other apps in the same profile as itself.</li>
 							<li>Open system Settings, Security, and toggle on the 'microG enablement' option.</li>
 							<li>Open F-Droid, Settings, Repositories, and enable the 'microG' repo. If it isn't listed you can <a href="https://microg.org/download.html" target="_blank" rel="nofollow noopener noreferrer">add it manually</a>.</li>
-							<li>In F-Droid search for and install the latest version of the following apps: microG Services Core, microG Services Framework Proxy, FakeStore.</li>
+							<li>In F-Droid search for and install the latest version of the following apps: microG Services Core, microG Services Framework Proxy, microG Companion/FakeStore.</li>
 							<li>Note: F-Droid will NOT suggest the latest version of microG as it is marked a beta, but that beta is mandatory. You must scroll down to the versions and manually choose it.</li>
 							<li>microG will now work.</li>
 							<li>Tip: If you didn't flip the toggle on before installing, simply flip it on and reboot.</li>
@@ -461,7 +461,7 @@
 						<h4 id="microgOptions">How should I configure microG?<a href="#microgOptions">¶</a></h4>
 						<p>Depending on the apps you want to use there are a few different ways you can use microG.</p>
 						<ul>
-							<li>Some apps don't need microG but check that they were installed via Play, in this case you only need FakeStore and to install the app via `Aurora Store` (via session installer) or `Obtainium`. This mechanism only works on 18.1+ currently, adb workaround still necessary on older versions.</li>
+							<li>Some apps don't need microG but check that they were installed via Play, in this case you only need microG Companion/FakeStore and to install the app via `Aurora Store` (via session installer) or `Obtainium`. This mechanism only works on 18.1+ currently, adb workaround still necessary on older versions.</li>
 							<li>Some apps will work with microG simply installed without any Google connections, in this case it is strongly recommended to <a href="#networkControl">revoke Network permission</a> from the microG app.</li>
 							<li>Some apps need push notifications via Google, for them you must let microG maintain a persistent identifiable connection to Google. Enable 'Google device registration' and 'Cloud Messaging' in microG.</li>
 							<li>Some apps require a captcha to be performed by the user, for them you can enable the 'Google SafetyNet' option.</li>
