@@ -33,7 +33,7 @@ sed -i 's/\[PHP INCLUDER\]/<?php include "..\/gen_devices.php" ?>/' "output/page
 ln -sf pages/home.html output/index.html;
 
 if command -v pagefind &> /dev/null; then
-	fjnn pagefind --source output/pages;
+	fjnn pagefind --site output/pages;
 else
 	echo "pagefind is unavailable, not generating search index"
 fi;

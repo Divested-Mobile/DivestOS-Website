@@ -1,5 +1,5 @@
-				<link href="/pages/_pagefind/pagefind-ui.css" rel="stylesheet">
-				<script src="/pages/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+				<link href="/pages/pagefind/pagefind-ui.css" rel="stylesheet">
+				<script src="/pages/pagefind/pagefind-ui.js" type="text/javascript"></script>
 				<div class="card fluid">
 					<h2>Search</h2>
 					<p>Here you can search for anything on this website.</p>
@@ -21,7 +21,7 @@
 						})();
 						if (supported) {
 							window.addEventListener('DOMContentLoaded', (event) => {
-								new PagefindUI({ element: "#search", showImages: false });
+								new PagefindUI({ element: "#search", showImages: false, showSubResults: true });
 							});
 						} else {
 							document.write("<p>WebAssembly appears disabled!<br><ul><li>Firefox & Mull: Set <code>javascript.options.wasm</code> to true via <code>about:config</code>.</li><li>Mulch: Tap the Lock in the URL bar, then Permissions, and allow `JavaScript JIT`.</li><li>Tor Browser: Use the `Standard` security level.</li></ul></p>");
