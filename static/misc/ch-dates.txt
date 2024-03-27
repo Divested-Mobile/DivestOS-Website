@@ -1,10 +1,11 @@
-last updated: 2024/03/25
+last updated: 2024/03/26
 
 disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+123.0.6312.80		2024/03/26	7, 1 critical		https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_26.html
 123.0.6312.40		2024/03/13	12			https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_19.html
 122.0.6261.119		2024/03/12	3			https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_12.html
 122.0.6261.105		2024/03/05	3			https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop.html
@@ -124,7 +125,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-123.0.6312.40	2024/03/13			2024/03/13	2024/03/14	12ksv		2024/03/25	35ksv
+123.0.6312.80	2024/03/26			2024/03/26	2024/03/26	19ksv				42ksv
+123.0.6312.40	2024/03/13			2024/03/13	2024/03/14			2024/03/25
 122.0.6261.119	2024/03/12			2024/03/12	2024/03/12	2024/03/18	2024/03/18
 122.0.6261.105	2024/03/05			2024/03/05	2024/03/05			2024/03/07
 122.0.6261.90	2024/02/27			2024/02/27	2024/02/28	2024/03/01	2024/02/28
@@ -238,11 +240,11 @@ Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		123.0.6312.40				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		123.0.6312.80				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	123.0.6312.40				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	123.0.6312.40, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	123.0.6312.80				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	123.0.6312.80, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		122.0.6261.119				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
