@@ -1,4 +1,6 @@
-last updated: 2024/03/27
+last updated: 2024/03/29
+
+note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
 disclosure: Mull is a DivestOS project
 

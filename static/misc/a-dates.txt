@@ -1,4 +1,6 @@
-last updated: 2024/03/27
+last updated: 2024/03/29
+
+note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
 Android		GrapheneOS	DivestOS 14.1	DivestOS 15.1	DivestOS 16.0	DivestOS 17.1	LineageOS 17.1	DivestOS 18.1	LineageOS 18.1	DivestOS 19.1	LineageOS 19	DivestOS 20.0	LineageOS 20	CalyxOS		/e/OS
 2024-03-04	2024-03-06	2024-03-09	2024-03-15	2024-03-13	2024-03-15			2024-03-13	closed		2024-03-09	2024-03-16	2024-03-13	2024-03-16	2024-03-08	13ksv
