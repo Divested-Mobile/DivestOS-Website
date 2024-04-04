@@ -34,3 +34,4 @@ divestos.org/index.php?page=verified_boot_hashes divestos.org/pages/verified_boo
 divestos.org/pages/devices_golden? divestos.org/pages/devices?golden=true
 divestos.org/misc/e.txt? eylenburg.github.io/android_comparison.htm
 divestos.org/misc/i.txt? eylenburg.github.io/android_comparison.htm
+divestos.org/misc/a-dates.txt? divestos.org/pages/patch_history

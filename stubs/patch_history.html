@@ -1,0 +1,771 @@
+				<div class="card fluid">
+					<h2>Patch History</h2>
+					<p>Below are dates of when each system shipped a given patch level.<br>A historical comparison of patch counts for DivestOS is available <a href="/pages/patch_counts" target="_blank">here</a>, along with patch levels <a href="/pages/patch_levels" target="_blank">here</a>.</p>
+					<p>Notes:
+					<ul>
+						<li>The cumulative count of known security vulnerabilities (ksv) is noted if behind</li>
+						<li>Final dates, not earlier RC or test builds</li>
+						<li>DivestOS 14.1/15.1/16.0/17.1/18.1, based on Android 7/8/9/10/11 respectively, are END OF LIFE and receive patches on best effort basis</li>
+						<li>For ease of maintenance, the iodeOS and /e/OS row only tracks dates of the earliest branch that received the update</li>
+						<li>Quarterly platform updates may result in PSB being a week or two behind the ASB, delaying projects from updating</li>
+						<li>LineageOS ships the monthly ASB on different days of the week depending on the device. So your device may be late up to 7 days</li>
+					</ul></p>
+					<p>Useful links:
+					<ul>
+						<li>https://source.android.com/security/bulletin</li>
+						<li>https://divestos.org/pages/news</li>
+						<li>https://grapheneos.org/releases#changelog</li>
+						<li>https://calyxos.org/news</li>
+						<li>https://review.lineageos.org</li>
+						<li>curl "https://gitlab.com/iode/static/-/raw/main/posts.json?ref_type=heads" | grep -i -e "security" -e "\"date\"" posts.json | less -S</li>
+						<li>https://gitlab.e.foundation/e/os/releases/-/releases</li>
+					</ul></p>
+					<div class="section" id="aftermarketPatchHistory">
+						<h3>Systems<a href="#aftermarketPatchHistory">¶</a></h3>
+						<p>Last updated: 2024-04-03</p>
+						<table class="striped horizontal" style="max-height: 100%;">
+							<thead>
+								<tr>
+									<th>Android</th>
+									<th>GrapheneOS</th>
+									<th>DivestOS 14.1</th>
+									<th>DivestOS 15.1</th>
+									<th>DivestOS 16.0</th>
+									<th>DivestOS 17.1</th>
+									<th>LineageOS 17.1</th>
+									<th>DivestOS 18.1</th>
+									<th>LineageOS 18.1</th>
+									<th>DivestOS 19.1</th>
+									<th>LineageOS 19</th>
+									<th>DivestOS 20.0</th>
+									<th>LineageOS 20</th>
+									<th>CalyxOS</th>
+									<th>iodeOS</th>
+									<th>/e/OS</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-label="Android">2024-04-01</td>
+									<td data-label="GrapheneOS">2024-04-02</td>
+									<td data-label="DivestOS 14.1">waiting</td>
+									<td data-label="DivestOS 15.1">waiting</td>
+									<td data-label="DivestOS 16.0">waiting</td>
+									<td data-label="DivestOS 17.1">waiting</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">waiting</td>
+									<td data-label="LineageOS 18.1">closed</td>
+									<td data-label="DivestOS 19.1">waiting</td>
+									<td data-label="LineageOS 19">waiting</td>
+									<td data-label="DivestOS 20.0">waiting</td>
+									<td data-label="LineageOS 20">waiting</td>
+									<td data-label="CalyxOS">waiting</td>
+									<td data-label="iodeOS">21ksv</td>
+									<td data-label="/e/OS">21ksv</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2024-03-04</td>
+									<td data-label="GrapheneOS">2024-03-06</td>
+									<td data-label="DivestOS 14.1">2024-03-09</td>
+									<td data-label="DivestOS 15.1">2024-03-15</td>
+									<td data-label="DivestOS 16.0">2024-03-13</td>
+									<td data-label="DivestOS 17.1">2024-03-15</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2024-03-13</td>
+									<td data-label="LineageOS 18.1">closed</td>
+									<td data-label="DivestOS 19.1">2024-03-09</td>
+									<td data-label="LineageOS 19">2024-03-16</td>
+									<td data-label="DivestOS 20.0">2024-03-13</td>
+									<td data-label="LineageOS 20">2024-03-16</td>
+									<td data-label="CalyxOS">2024-03-08</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS" style="color:red;">BEHIND</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2024-02-05</td>
+									<td data-label="GrapheneOS">2024-02-05</td>
+									<td data-label="DivestOS 14.1">2024-02-08</td>
+									<td data-label="DivestOS 15.1">2024-02-09</td>
+									<td data-label="DivestOS 16.0">2024-02-09</td>
+									<td data-label="DivestOS 17.1">2024-02-09</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2024-02-08</td>
+									<td data-label="LineageOS 18.1">2024-02-14</td>
+									<td data-label="DivestOS 19.1">2024-02-07</td>
+									<td data-label="LineageOS 19">2024-02-14</td>
+									<td data-label="DivestOS 20.0">2024-02-12</td>
+									<td data-label="LineageOS 20">2024-02-13</td>
+									<td data-label="CalyxOS">2024-02-08</td>
+									<td data-label="iodeOS">2024-02-24</td>
+									<td data-label="/e/OS">2024-03-27</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2024-01-03</td>
+									<td data-label="GrapheneOS">2024-01-04</td>
+									<td data-label="DivestOS 14.1">2024-01-06</td>
+									<td data-label="DivestOS 15.1">2024-01-09</td>
+									<td data-label="DivestOS 16.0">2024-01-09</td>
+									<td data-label="DivestOS 17.1">2024-01-09</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2024-01-08</td>
+									<td data-label="LineageOS 18.1">2024-01-18</td>
+									<td data-label="DivestOS 19.1">2024-01-08</td>
+									<td data-label="LineageOS 19">2024-01-18</td>
+									<td data-label="DivestOS 20.0">2024-01-08</td>
+									<td data-label="LineageOS 20">2024-01-10</td>
+									<td data-label="CalyxOS">2024-01-06</td>
+									<td data-label="iodeOS">2024-01-25</td>
+									<td data-label="/e/OS">2024-02-23</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-12-04</td>
+									<td data-label="GrapheneOS">2023-12-04</td>
+									<td data-label="DivestOS 14.1">2023-12-07</td>
+									<td data-label="DivestOS 15.1">2023-12-12</td>
+									<td data-label="DivestOS 16.0">2023-12-12</td>
+									<td data-label="DivestOS 17.1">2023-12-11</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-12-11</td>
+									<td data-label="LineageOS 18.1">2023-12-14</td>
+									<td data-label="DivestOS 19.1">2023-12-09</td>
+									<td data-label="LineageOS 19">2023-12-14</td>
+									<td data-label="DivestOS 20.0">2023-12-07</td>
+									<td data-label="LineageOS 20">2023-12-11</td>
+									<td data-label="CalyxOS">2023-12-11</td>
+									<td data-label="iodeOS">2023-12-21</td>
+									<td data-label="/e/OS">2024-01-15</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-11-06</td>
+									<td data-label="GrapheneOS">2023-11-07</td>
+									<td data-label="DivestOS 14.1">2023-11-11</td>
+									<td data-label="DivestOS 15.1">2023-11-13</td>
+									<td data-label="DivestOS 16.0">2023-11-13</td>
+									<td data-label="DivestOS 17.1">2023-11-13</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-11-13</td>
+									<td data-label="LineageOS 18.1">2023-11-15</td>
+									<td data-label="DivestOS 19.1">2023-11-12</td>
+									<td data-label="LineageOS 19">2023-11-15</td>
+									<td data-label="DivestOS 20.0">2023-11-11</td>
+									<td data-label="LineageOS 20">2023-11-12</td>
+									<td data-label="CalyxOS">2023-11-09</td>
+									<td data-label="iodeOS">2023-11-25</td>
+									<td data-label="/e/OS">2023-12-11</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-10-02</td>
+									<td data-label="GrapheneOS">2023-10-03</td>
+									<td data-label="DivestOS 14.1">2023-10-05</td>
+									<td data-label="DivestOS 15.1">2023-10-09</td>
+									<td data-label="DivestOS 16.0">2023-10-09</td>
+									<td data-label="DivestOS 17.1">2023-10-09</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-10-08</td>
+									<td data-label="LineageOS 18.1">2023-10-09</td>
+									<td data-label="DivestOS 19.1">2023-10-08</td>
+									<td data-label="LineageOS 19">2023-10-09</td>
+									<td data-label="DivestOS 20.0">2023-10-05</td>
+									<td data-label="LineageOS 20">2023-10-09</td>
+									<td data-label="CalyxOS">2023-10-03</td>
+									<td data-label="iodeOS">2023-10-31</td>
+									<td data-label="/e/OS">2023-11-14</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-09-05</td>
+									<td data-label="GrapheneOS">2023-09-06</td>
+									<td data-label="DivestOS 14.1">2023-09-08</td>
+									<td data-label="DivestOS 15.1">2023-09-11</td>
+									<td data-label="DivestOS 16.0">2023-09-11</td>
+									<td data-label="DivestOS 17.1">2023-09-11</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-09-11</td>
+									<td data-label="LineageOS 18.1">2023-09-13</td>
+									<td data-label="DivestOS 19.1">2023-09-08</td>
+									<td data-label="LineageOS 19">2023-09-18</td>
+									<td data-label="DivestOS 20.0">2023-09-08</td>
+									<td data-label="LineageOS 20">2023-09-18</td>
+									<td data-label="CalyxOS">2023-09-07</td>
+									<td data-label="iodeOS">2023-09-28</td>
+									<td data-label="/e/OS">2023-10-24</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-08-07</td>
+									<td data-label="GrapheneOS">2023-08-07</td>
+									<td data-label="DivestOS 14.1">2023-08-09</td>
+									<td data-label="DivestOS 15.1">2023-08-09</td>
+									<td data-label="DivestOS 16.0">2023-08-09</td>
+									<td data-label="DivestOS 17.1">2023-08-09</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-08-10</td>
+									<td data-label="LineageOS 18.1">2023-08-12</td>
+									<td data-label="DivestOS 19.1">2023-08-10</td>
+									<td data-label="LineageOS 19">2023-08-12</td>
+									<td data-label="DivestOS 20.0">2023-08-14</td>
+									<td data-label="LineageOS 20">2023-08-12</td>
+									<td data-label="CalyxOS">2023-08-10</td>
+									<td data-label="iodeOS">2023-08-28</td>
+									<td data-label="/e/OS">2023-09-18</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-07-05</td>
+									<td data-label="GrapheneOS">2023-07-05</td>
+									<td data-label="DivestOS 14.1">2023-07-08</td>
+									<td data-label="DivestOS 15.1">2023-07-08</td>
+									<td data-label="DivestOS 16.0">2023-07-08</td>
+									<td data-label="DivestOS 17.1">2023-07-08</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-07-09</td>
+									<td data-label="LineageOS 18.1">2023-07-11</td>
+									<td data-label="DivestOS 19.1">2023-07-09</td>
+									<td data-label="LineageOS 19">2023-07-11</td>
+									<td data-label="DivestOS 20.0">2023-07-12</td>
+									<td data-label="LineageOS 20">2023-07-13</td>
+									<td data-label="CalyxOS">2023-07-06</td>
+									<td data-label="iodeOS">2023-08-01</td>
+									<td data-label="/e/OS">2023-08-20</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-06-05</td>
+									<td data-label="GrapheneOS">2023-06-07</td>
+									<td data-label="DivestOS 14.1">2023-06-09</td>
+									<td data-label="DivestOS 15.1">2023-06-10</td>
+									<td data-label="DivestOS 16.0">2023-06-10</td>
+									<td data-label="DivestOS 17.1">2023-06-10</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-06-09</td>
+									<td data-label="LineageOS 18.1">2023-06-11</td>
+									<td data-label="DivestOS 19.1">2023-06-09</td>
+									<td data-label="LineageOS 19">2023-06-10</td>
+									<td data-label="DivestOS 20.0">2023-06-14</td>
+									<td data-label="LineageOS 20">2023-06-20</td>
+									<td data-label="CalyxOS">2023-06-08</td>
+									<td data-label="iodeOS">2023-06-29</td>
+									<td data-label="/e/OS">2023-07-26</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-05-01</td>
+									<td data-label="GrapheneOS">2023-05-01</td>
+									<td data-label="DivestOS 14.1">2023-05-06</td>
+									<td data-label="DivestOS 15.1">2023-05-08</td>
+									<td data-label="DivestOS 16.0">2023-05-07</td>
+									<td data-label="DivestOS 17.1">2023-05-07</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-05-07</td>
+									<td data-label="LineageOS 18.1">2023-05-09</td>
+									<td data-label="DivestOS 19.1">2023-05-07</td>
+									<td data-label="LineageOS 19">2023-05-08</td>
+									<td data-label="DivestOS 20.0">2023-05-06</td>
+									<td data-label="LineageOS 20">2023-05-04</td>
+									<td data-label="CalyxOS">2023-05-02</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2023-06-20</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-04-10</td>
+									<td data-label="GrapheneOS">2023-04-11</td>
+									<td data-label="DivestOS 14.1">2023-04-12</td>
+									<td data-label="DivestOS 15.1">2023-04-19</td>
+									<td data-label="DivestOS 16.0">2023-04-19</td>
+									<td data-label="DivestOS 17.1">2023-04-29</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-04-16</td>
+									<td data-label="LineageOS 18.1">2023-04-17</td>
+									<td data-label="DivestOS 19.1">2023-04-15</td>
+									<td data-label="LineageOS 19">2023-04-17</td>
+									<td data-label="DivestOS 20.0">2023-04-17</td>
+									<td data-label="LineageOS 20">2023-04-16</td>
+									<td data-label="CalyxOS">2023-04-12</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2023-05-15</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-03-13</td>
+									<td data-label="GrapheneOS">2023-03-13</td>
+									<td data-label="DivestOS 14.1">2023-03-14</td>
+									<td data-label="DivestOS 15.1">2023-03-23</td>
+									<td data-label="DivestOS 16.0">2023-03-23</td>
+									<td data-label="DivestOS 17.1">2023-03-21</td>
+									<td data-label="LineageOS 17.1">closed</td>
+									<td data-label="DivestOS 18.1">2023-03-18</td>
+									<td data-label="LineageOS 18.1">2023-03-22</td>
+									<td data-label="DivestOS 19.1">2023-03-18</td>
+									<td data-label="LineageOS 19">2023-03-22</td>
+									<td data-label="DivestOS 20.0">2023-03-22</td>
+									<td data-label="LineageOS 20">2023-03-19</td>
+									<td data-label="CalyxOS">2023-03-16</td>
+									<td data-label="iodeOS">2023-04-02</td>
+									<td data-label="/e/OS">2023-04-17</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-02-06</td>
+									<td data-label="GrapheneOS">2023-02-06</td>
+									<td data-label="DivestOS 14.1">2023-02-08</td>
+									<td data-label="DivestOS 15.1">2023-02-19</td>
+									<td data-label="DivestOS 16.0">2023-02-19</td>
+									<td data-label="DivestOS 17.1">2023-02-11</td>
+									<td data-label="LineageOS 17.1">2023-02-17</td>
+									<td data-label="DivestOS 18.1">2023-02-12</td>
+									<td data-label="LineageOS 18.1">2023-02-17</td>
+									<td data-label="DivestOS 19.1">2023-02-18</td>
+									<td data-label="LineageOS 19">2023-02-17</td>
+									<td data-label="DivestOS 20.0">2023-02-14</td>
+									<td data-label="LineageOS 20">2023-02-13</td>
+									<td data-label="CalyxOS">2023-02-08</td>
+									<td data-label="iodeOS">2023-02-20</td>
+									<td data-label="/e/OS">2023-03-13</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2023-01-03</td>
+									<td data-label="GrapheneOS">2023-01-03</td>
+									<td data-label="DivestOS 14.1">2023-01-06</td>
+									<td data-label="DivestOS 15.1">2023-01-08</td>
+									<td data-label="DivestOS 16.0">2023-01-08</td>
+									<td data-label="DivestOS 17.1">2023-01-07</td>
+									<td data-label="LineageOS 17.1">2023-01-14</td>
+									<td data-label="DivestOS 18.1">2023-01-08</td>
+									<td data-label="LineageOS 18.1">2023-01-10</td>
+									<td data-label="DivestOS 19.1">2023-01-08</td>
+									<td data-label="LineageOS 19">2023-01-10</td>
+									<td data-label="DivestOS 20.0">2023-01-09</td>
+									<td data-label="LineageOS 20">2023-01-08</td>
+									<td data-label="CalyxOS">2023-01-05</td>
+									<td data-label="iodeOS">2023-02-06</td>
+									<td data-label="/e/OS">2023-02-06</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-12-05</td>
+									<td data-label="GrapheneOS">2022-12-06</td>
+									<td data-label="DivestOS 14.1">2022-12-10</td>
+									<td data-label="DivestOS 15.1">2022-12-12</td>
+									<td data-label="DivestOS 16.0">2022-12-12</td>
+									<td data-label="DivestOS 17.1">2022-12-09</td>
+									<td data-label="LineageOS 17.1">2022-12-17</td>
+									<td data-label="DivestOS 18.1">2022-12-09</td>
+									<td data-label="LineageOS 18.1">2022-12-11</td>
+									<td data-label="DivestOS 19.1">2022-12-10</td>
+									<td data-label="LineageOS 19">2022-12-11</td>
+									<td data-label="DivestOS 20.0">2022-12-11</td>
+									<td data-label="LineageOS 20">2022-12-09</td>
+									<td data-label="CalyxOS">2022-12-09</td>
+									<td data-label="iodeOS">2022-12-16</td>
+									<td data-label="/e/OS" style="color:red;">BEHIND</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-11-07</td>
+									<td data-label="GrapheneOS">2022-11-08</td>
+									<td data-label="DivestOS 14.1">2022-11-13</td>
+									<td data-label="DivestOS 15.1">2022-11-14</td>
+									<td data-label="DivestOS 16.0">2022-11-13</td>
+									<td data-label="DivestOS 17.1">2022-11-11</td>
+									<td data-label="LineageOS 17.1">2022-11-13</td>
+									<td data-label="DivestOS 18.1">2022-11-11</td>
+									<td data-label="LineageOS 18.1">2022-11-12</td>
+									<td data-label="DivestOS 19.1">2022-11-12</td>
+									<td data-label="LineageOS 19">2022-11-12</td>
+									<td data-label="DivestOS 20.0">2022-11-13</td>
+									<td data-label="LineageOS 20">2022-11-08</td>
+									<td data-label="CalyxOS">2022-11-10</td>
+									<td data-label="iodeOS">2022-11-24</td>
+									<td data-label="/e/OS">2023-01-16</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-10-03</td>
+									<td data-label="GrapheneOS">2022-10-03</td>
+									<td data-label="DivestOS 14.1">2022-10-14</td>
+									<td data-label="DivestOS 15.1">2022-10-19</td>
+									<td data-label="DivestOS 16.0">2022-10-19</td>
+									<td data-label="DivestOS 17.1">2022-10-07</td>
+									<td data-label="LineageOS 17.1">2022-10-09</td>
+									<td data-label="DivestOS 18.1">2022-10-08</td>
+									<td data-label="LineageOS 18.1">2022-10-09</td>
+									<td data-label="DivestOS 19.1">2022-10-09</td>
+									<td data-label="LineageOS 19">2022-10-09</td>
+									<td data-label="DivestOS 20.0">2022-10-16</td>
+									<td data-label="LineageOS 20">2022-10-04</td>
+									<td data-label="CalyxOS">2022-10-07</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2022-11-30</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-09-06</td>
+									<td data-label="GrapheneOS">2022-09-06</td>
+									<td data-label="DivestOS 14.1">2022-09-11</td>
+									<td data-label="DivestOS 15.1">2022-09-11</td>
+									<td data-label="DivestOS 16.0">2022-09-10</td>
+									<td data-label="DivestOS 17.1">2022-09-08</td>
+									<td data-label="LineageOS 17.1">2022-09-10</td>
+									<td data-label="DivestOS 18.1">2022-09-09</td>
+									<td data-label="LineageOS 18.1">2022-09-10</td>
+									<td data-label="DivestOS 19.1">2022-09-08</td>
+									<td data-label="LineageOS 19">2022-09-10</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">2022-09-13</td>
+									<td data-label="CalyxOS">2022-09-10</td>
+									<td data-label="iodeOS">2022-10-17</td>
+									<td data-label="/e/OS">2022-11-02</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-08-01</td>
+									<td data-label="GrapheneOS">2022-08-05</td>
+									<td data-label="DivestOS 14.1">2022-08-05</td>
+									<td data-label="DivestOS 15.1">2022-08-13</td>
+									<td data-label="DivestOS 16.0">2022-08-08</td>
+									<td data-label="DivestOS 17.1">2022-08-06</td>
+									<td data-label="LineageOS 17.1">2022-08-10</td>
+									<td data-label="DivestOS 18.1">2022-08-07</td>
+									<td data-label="LineageOS 18.1">2022-08-10</td>
+									<td data-label="DivestOS 19.1">2022-08-08</td>
+									<td data-label="LineageOS 19">2022-08-10</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2022-09-02</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2022-09-26</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-07-06</td>
+									<td data-label="GrapheneOS">2022-07-06</td>
+									<td data-label="DivestOS 14.1">2022-07-09</td>
+									<td style="color:red;">BEHIND</td data-label="DivestOS 15.1">
+									<td data-label="DivestOS 16.0">2022-07-15</td>
+									<td data-label="DivestOS 17.1">2022-07-10</td>
+									<td data-label="LineageOS 17.1">2022-07-14</td>
+									<td data-label="DivestOS 18.1">2022-07-11</td>
+									<td data-label="LineageOS 18.1">2022-07-13</td>
+									<td data-label="DivestOS 19.1">2022-07-13</td>
+									<td data-label="LineageOS 19">2022-07-12</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2022-07-08</td>
+									<td data-label="iodeOS">2022-07-26</td>
+									<td data-label="/e/OS">2022-08-29</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-06-06</td>
+									<td data-label="GrapheneOS">2022-06-07</td>
+									<td data-label="DivestOS 14.1">2022-06-12</td>
+									<td style="color:red;">BEHIND</td data-label="DivestOS 15.1">
+									<td data-label="DivestOS 16.0">2022-06-15</td>
+									<td data-label="DivestOS 17.1">2022-06-12</td>
+									<td data-label="LineageOS 17.1">2022-06-24</td>
+									<td data-label="DivestOS 18.1">2022-06-13</td>
+									<td data-label="LineageOS 18.1">2022-06-13</td>
+									<td data-label="DivestOS 19.1">2022-06-14</td>
+									<td data-label="LineageOS 19">2022-06-11</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2022-06-08</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2022-07-27</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-05-02</td>
+									<td data-label="GrapheneOS">2022-05-03</td>
+									<td data-label="DivestOS 14.1">2022-05-09</td>
+									<td style="color:red;">BEHIND</td data-label="DivestOS 15.1">
+									<td data-label="DivestOS 16.0">2022-05-08</td>
+									<td data-label="DivestOS 17.1">2022-05-08</td>
+									<td data-label="LineageOS 17.1">2022-05-13</td>
+									<td data-label="DivestOS 18.1">2022-05-09</td>
+									<td data-label="LineageOS 18.1">2022-05-10</td>
+									<td data-label="DivestOS 19.1">2022-05-11</td>
+									<td data-label="LineageOS 19">2022-05-10</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2022-05-04</td>
+									<td data-label="iodeOS">2022-06-03</td>
+									<td data-label="/e/OS">2022-06-28</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-04-04</td>
+									<td data-label="GrapheneOS">2022-04-04</td>
+									<td data-label="DivestOS 14.1">2022-04-08</td>
+									<td style="color:red;">BEHIND</td data-label="DivestOS 15.1">
+									<td data-label="DivestOS 16.0">2022-04-09</td>
+									<td data-label="DivestOS 17.1">2022-04-07</td>
+									<td data-label="LineageOS 17.1">2022-04-15</td>
+									<td data-label="DivestOS 18.1">2022-04-08</td>
+									<td data-label="LineageOS 18.1">2022-04-12</td>
+									<td data-label="DivestOS 19.1">2022-04-06</td>
+									<td data-label="LineageOS 19">2022-04-09</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2022-04-05</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2022-05-31</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-03-07</td>
+									<td data-label="GrapheneOS">2022-03-08</td>
+									<td data-label="DivestOS 14.1">2022-03-10</td>
+									<td style="color:red;">BEHIND</td data-label="DivestOS 15.1">
+									<td data-label="DivestOS 16.0">2022-03-19</td>
+									<td data-label="DivestOS 17.1">2022-03-11</td>
+									<td data-label="LineageOS 17.1">2022-03-18</td>
+									<td data-label="DivestOS 18.1">2022-03-14</td>
+									<td data-label="LineageOS 18.1">2022-03-13</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2022-03-14</td>
+									<td data-label="iodeOS">2022-04-12</td>
+									<td data-label="/e/OS" style="color:red;">BEHIND</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-02-07</td>
+									<td data-label="GrapheneOS">2022-02-08</td>
+									<td data-label="DivestOS 14.1">2022-02-24</td>
+									<td data-label="DivestOS 15.1">2022-02-24</td>
+									<td data-label="DivestOS 16.0">2022-02-24</td>
+									<td data-label="DivestOS 17.1">2022-02-11</td>
+									<td data-label="LineageOS 17.1">2022-02-16</td>
+									<td data-label="DivestOS 18.1">2022-02-13</td>
+									<td data-label="LineageOS 18.1">2022-02-16</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2022-02-11</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2022-03-15</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2022-01-04</td>
+									<td data-label="GrapheneOS">2022-01-05</td>
+									<td data-label="DivestOS 14.1">2022-01-19</td>
+									<td data-label="DivestOS 15.1">2022-01-28</td>
+									<td data-label="DivestOS 16.0">2022-01-12</td>
+									<td data-label="DivestOS 17.1">2022-01-12</td>
+									<td data-label="LineageOS 17.1">2022-01-22</td>
+									<td data-label="DivestOS 18.1">2022-01-16</td>
+									<td data-label="LineageOS 18.1">2022-01-20</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2022-01-19</td>
+									<td data-label="iodeOS">2022-02-01</td>
+									<td data-label="/e/OS">2022-02-22</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-12-06</td>
+									<td data-label="GrapheneOS">2021-12-07</td>
+									<td data-label="DivestOS 14.1">2021-12-17</td>
+									<td data-label="DivestOS 15.1">2021-12-17</td>
+									<td data-label="DivestOS 16.0">2021-12-17</td>
+									<td data-label="DivestOS 17.1">2021-12-13</td>
+									<td data-label="LineageOS 17.1">2021-12-16</td>
+									<td data-label="DivestOS 18.1">2021-12-13</td>
+									<td data-label="LineageOS 18.1">2021-12-14</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td style="color:red;">BEHIND</td data-label="CalyxOS">
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2022-01-20</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-11-01</td>
+									<td data-label="GrapheneOS">2021-11-01</td>
+									<td data-label="DivestOS 14.1">2021-11-06</td>
+									<td data-label="DivestOS 15.1">2021-11-09</td>
+									<td data-label="DivestOS 16.0">2021-11-06</td>
+									<td data-label="DivestOS 17.1">2021-11-06</td>
+									<td data-label="LineageOS 17.1">2021-11-08</td>
+									<td data-label="DivestOS 18.1">2021-11-07</td>
+									<td data-label="LineageOS 18.1">2021-11-07</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-11-08</td>
+									<td data-label="iodeOS">2021-11-08</td>
+									<td data-label="/e/OS">2021-12-16</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-10-04</td>
+									<td data-label="GrapheneOS">2021-10-05</td>
+									<td data-label="DivestOS 14.1">2021-10-07</td>
+									<td data-label="DivestOS 15.1">2021-10-07</td>
+									<td data-label="DivestOS 16.0">2021-10-07</td>
+									<td data-label="DivestOS 17.1">2021-10-07</td>
+									<td data-label="LineageOS 17.1">2021-10-09</td>
+									<td data-label="DivestOS 18.1">2021-10-10</td>
+									<td data-label="LineageOS 18.1">2021-10-09</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-10-08</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS" style="color:red;">BEHIND</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-09-07</td>
+									<td data-label="GrapheneOS">2021-09-08</td>
+									<td data-label="DivestOS 14.1">2021-09-12</td>
+									<td data-label="DivestOS 15.1">2021-09-12</td>
+									<td data-label="DivestOS 16.0">2021-09-12</td>
+									<td data-label="DivestOS 17.1">2021-09-12</td>
+									<td data-label="LineageOS 17.1">2021-09-16</td>
+									<td data-label="DivestOS 18.1">2021-09-14</td>
+									<td data-label="LineageOS 18.1">2021-09-12</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-09-09</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS">2021-10-28</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-08-02</td>
+									<td data-label="GrapheneOS">2021-08-03</td>
+									<td data-label="DivestOS 14.1">2021-08-06</td>
+									<td data-label="DivestOS 15.1">2021-08-06</td>
+									<td data-label="DivestOS 16.0">2021-08-06</td>
+									<td data-label="DivestOS 17.1">2021-08-06</td>
+									<td data-label="LineageOS 17.1">2021-08-08</td>
+									<td data-label="DivestOS 18.1">2021-08-07</td>
+									<td data-label="LineageOS 18.1">2021-08-06</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-08-05</td>
+									<td data-label="iodeOS">2021-08-28</td>
+									<td data-label="/e/OS">2021-08-18</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-07-07</td>
+									<td data-label="GrapheneOS">2021-07-07</td>
+									<td data-label="DivestOS 14.1">2021-07-12</td>
+									<td data-label="DivestOS 15.1">2021-07-18</td>
+									<td data-label="DivestOS 16.0">2021-07-17</td>
+									<td data-label="DivestOS 17.1">2021-07-13</td>
+									<td data-label="LineageOS 17.1">2021-07-13</td>
+									<td data-label="DivestOS 18.1">2021-07-14</td>
+									<td data-label="LineageOS 18.1">2021-07-12</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-07-09</td>
+									<td data-label="iodeOS">2021-07-29</td>
+									<td data-label="/e/OS" style="color:red;">BEHIND</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-06-06</td>
+									<td data-label="GrapheneOS">2021-06-08</td>
+									<td data-label="DivestOS 14.1">2021-06-12</td>
+									<td data-label="DivestOS 15.1">2021-06-11</td>
+									<td data-label="DivestOS 16.0">2021-06-11</td>
+									<td data-label="DivestOS 17.1">2021-06-12</td>
+									<td data-label="LineageOS 17.1">2021-06-14</td>
+									<td data-label="DivestOS 18.1">2021-06-15</td>
+									<td data-label="LineageOS 18.1">2021-06-14</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-06-10</td>
+									<td data-label="iodeOS" style="color:red;">BEHIND</td>
+									<td data-label="/e/OS" style="color:red;">BEHIND</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-05-03</td>
+									<td data-label="GrapheneOS">2021-05-04</td>
+									<td data-label="DivestOS 14.1">2021-05-08</td>
+									<td data-label="DivestOS 15.1">2021-05-08</td>
+									<td data-label="DivestOS 16.0">2021-05-08</td>
+									<td data-label="DivestOS 17.1">2021-05-09</td>
+									<td data-label="LineageOS 17.1">2021-05-09</td>
+									<td data-label="DivestOS 18.1">2021-05-10</td>
+									<td data-label="LineageOS 18.1">2021-05-08</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-05-06</td>
+									<td data-label="iodeOS">2021-05-27</td>
+									<td data-label="/e/OS">2021-06-10</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-04-05</td>
+									<td data-label="GrapheneOS">2021-04-05</td>
+									<td data-label="DivestOS 14.1">2021-04-11</td>
+									<td data-label="DivestOS 15.1">2021-04-11</td>
+									<td data-label="DivestOS 16.0">2021-04-11</td>
+									<td data-label="DivestOS 17.1">2021-04-12</td>
+									<td data-label="LineageOS 17.1">2021-04-11</td>
+									<td data-label="DivestOS 18.1">2021-04-13</td>
+									<td data-label="LineageOS 18.1">2021-04-10</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-04-08</td>
+									<td data-label="iodeOS">Unknown</td>
+									<td data-label="/e/OS" style="color:red;">BEHIND</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-03-01</td>
+									<td data-label="GrapheneOS">2021-03-02</td>
+									<td data-label="DivestOS 14.1">2021-03-08</td>
+									<td data-label="DivestOS 15.1">2021-03-08</td>
+									<td data-label="DivestOS 16.0">2021-03-08</td>
+									<td data-label="DivestOS 17.1">2021-03-08</td>
+									<td data-label="LineageOS 17.1">2021-03-07</td>
+									<td data-label="DivestOS 18.1">N/A</td>
+									<td data-label="LineageOS 18.1">2021-03-06</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-03-04</td>
+									<td data-label="iodeOS">Unknown</td>
+									<td data-label="/e/OS">2021-04-14</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-02-01</td>
+									<td data-label="GrapheneOS">2021-02-02</td>
+									<td data-label="DivestOS 14.1">2021-02-08</td>
+									<td data-label="DivestOS 15.1">2021-02-08</td>
+									<td data-label="DivestOS 16.0">2021-02-08</td>
+									<td data-label="DivestOS 17.1">2021-02-08</td>
+									<td data-label="LineageOS 17.1">2021-02-06</td>
+									<td data-label="DivestOS 18.1">N/A</td>
+									<td data-label="LineageOS 18.1">2021-02-06</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-02-03</td>
+									<td data-label="iodeOS">Unknown</td>
+									<td data-label="/e/OS">2021-03-15</td>
+								</tr>
+								<tr>
+									<td data-label="Android">2021-01-04</td>
+									<td data-label="GrapheneOS">2021-01-05</td>
+									<td data-label="DivestOS 14.1">2021-01-14</td>
+									<td data-label="DivestOS 15.1">2021-01-14</td>
+									<td data-label="DivestOS 16.0">2021-01-14</td>
+									<td data-label="DivestOS 17.1">2021-01-14</td>
+									<td data-label="LineageOS 17.1">2021-01-14</td>
+									<td data-label="DivestOS 18.1">N/A</td>
+									<td data-label="LineageOS 18.1">2021-01-06</td>
+									<td data-label="DivestOS 19.1">N/A</td>
+									<td data-label="LineageOS 19">N/A</td>
+									<td data-label="DivestOS 20.0">N/A</td>
+									<td data-label="LineageOS 20">N/A</td>
+									<td data-label="CalyxOS">2021-01-26</td>
+									<td data-label="iodeOS">Unknown</td>
+									<td data-label="/e/OS">2021-01-27</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>

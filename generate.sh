@@ -17,7 +17,7 @@ else
 	alias fjnn='';
 fi;
 
-declare -a staticPages=("about" "bootloader" "broken" "browsers" "bug_reporting" "build" "community" "faq" "functionality_tables" "history" "home" "messengers" "network_connections" "news" "our_apps" "patch_counts" "patch_levels" "post_install" "privacy_policy" "recommended_apps" "saving_data" "screenshots_dark" "screenshots" "search" "technical_details" "terms_of_service" "troubleshooting" "verified_boot_hashes");
+declare -a staticPages=("about" "bootloader" "broken" "browsers" "bug_reporting" "build" "community" "faq" "functionality_tables" "history" "home" "messengers" "network_connections" "news" "our_apps" "patch_counts" "patch_history" "patch_levels" "post_install" "privacy_policy" "recommended_apps" "saving_data" "screenshots_dark" "screenshots" "search" "technical_details" "terms_of_service" "troubleshooting" "verified_boot_hashes");
 
 for page in "${staticPages[@]}"
 do
