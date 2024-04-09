@@ -45,7 +45,7 @@ getVendorPatchLevel() {
 		elif [ $1 == "LineageOS-20.0" ]; then
 			level="2023-09";
 		elif [ $1 == "LineageOS-21.0" ]; then
-			level="2024-02";
+			level="2024-04";
 		else
 			level="Unknown";
 		fi;
@@ -88,7 +88,7 @@ createTable() {
 	vASB=$(getVendorPatchLevel $version $devicePath)
 	#green: keep 4 months + 1 future
 	#yellow: previous year
-	if [[ $vASB == "2024-03"* ]] || [[ $vASB == "2024-02"* ]] || [[ $vASB == "2024-01"* ]] || [[ $vASB == "2023-12"* ]] || [[ $vASB == "2023-11"* ]]; then
+	if [[ $vASB == "2024-05"* ]] || [[ $vASB == "2024-04"* ]] || [[ $vASB == "2024-03"* ]] || [[ $vASB == "2024-02"* ]] || [[ $vASB == "2024-01"* ]]; then
 		vASBStyle="style=\"color:#4CAF50;\"";
 	elif [[ $vASB == "2023-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
@@ -119,7 +119,7 @@ createTable() {
 
 	nameStripped=$(echo -n $name | sed 's|/||g');
 
-	echo -e '<tr>\n\t<td data-label="Device">'$name$allGreen'</td>\n\t<td data-label="Version" '$versionStyle'>'$versionStripped'</td>\n\t<td data-label="V-ASB" '$vASBStyle'>'$vASB'</td>\n\t<td data-label="Kernel" '$kernelStyle'><a href="https://gitlab.com/divested-mobile/divestos-build/-/blob/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer" style="color: inherit; text-decoration: none;">'$kernelVersion'</td>\n</tr>';
+	echo -e '<tr>\n\t<td data-label="Device">'$name$allGreen'</td>\n\t<td data-label="Version" '$versionStyle'>'$versionStripped'</td>\n\t<td data-label="V-ASB" '$vASBStyle'>'$vASB'</td>\n\t<td data-label="Kernel" '$kernelStyle'><a href="https://codeberg.org/divested-mobile/divestos-build/src/branch/master/Scripts/'$version'/CVE_Patchers/android_kernel_'$kernelName'.sh" target="_blank" rel="nofollow noopener noreferrer" style="color: inherit; text-decoration: none;">'$kernelVersion'</td>\n</tr>';
 }
 
 createTable akari LineageOS-20.0 sony/tama-common sony/sdm845 sony/akari;
