@@ -16,7 +16,7 @@
 					<div class="section" id="details">
 						<h3>The deets<a href="#details">¶</a></h3>
 						<p>In order to reduce the need for maintenance of this page, minor tweaks and fixes are not documented; please check the source code for complete details about all the changes made.</p>
-						<p>Last updated: 2023-09-15</p>
+						<p>Last updated: 2024-04-14</p>
 						<h4 id="workspace">Workspace<a href="#workspace">¶</a></h4>
 						<ul>
 							<li>Many unneeded repositories are removed from the repo manifests</li>
@@ -221,6 +221,7 @@
 							<li>T: Add hooks for modifying PackageManagerService behavior (GrapheneOS)</li>
 							<li>T: Integrate Google's EuiccSupportPixel package (GrapheneOS)</li>
 							<li>R/S/T: SystemUI: Require unlocking to use sensitive QS tiles (GrapheneOS)</li>
+							<li>S/T: Put bare minimum metadata in screenshots (CalyxOS)</li>
 							<li>P/Q/R/S/T: Don't crash apps that depend on missing Gservices provider (GrapheneOS)</li>
 							<li>S/T: Revert "Null safe package name in AppOps writeState" (GrapheneOS)</li>
 							<li>S/T: appops: skip ops for invalid null package during state serialization (GrapheneOS)</li>
@@ -300,9 +301,17 @@
 							<li>DEBLOBBER_REMOVE_AUDIOFX=true: Remove AudioFX</li>
 							<li>Various rebranding</li>
 						</ul>
+						<h5>android_packages_apps_Aperture</h5>
+						<ul>
+							<li>T: Fix invisible buttons</li>
+						</ul>
 						<h5>android_packages_apps_Bluetooth</h5>
 						<ul>
 							<li>P/Q/R/S: GRAPHENE_CONSTIFY=true: Constify JNINativeMethod tables (GrapheneOS)</li>
+						</ul>
+						<h5>android_packages_apps_CellBroadcastReceiver</h5>
+						<ul>
+							<li>T: Allow toggling presidential alerts (GrapheneOS)</li>
 						</ul>
 						<h5>android_packages_apps_Contacts</h5>
 						<ul>
@@ -340,6 +349,11 @@
 							<li>Remove analytics (DivestOS)</li>
 							<li>Various rebranding</li>
 							<li>Update LineageOS contributors cloud</li>
+						</ul>
+						<h5>android_packages_apps_Messaging</h5>
+						<ul>
+							<li>Handle null case (GrapheneOS)</li>
+							<li>!N/!T: Add notification channels where missing (LineageOS)</li>
 						</ul>
 						<h5>android_packages_apps_Nfc</h5>
 						<ul>
@@ -519,7 +533,7 @@
 						<ul>
 							<li>N: Cherrypick 248600: Restrict access to timing information in /proc (AndoridHardening)</li>
 							<li>Fix -user builds for LGE devices (DivestOS)</li>
-							<li>P/Q/R: Allow ignoring neverallows under -user</li>
+							<li>!N: Allow ignoring neverallows under -user</li>
 							<li>label protected_{fifos,regular} as proc_security (GrapheneOS)</li>
 							<li>Q/R/S/T: Allow init to control kernel.yama.ptrace_scope (GrapheneOS)</li>
 							<li>Q/R/S/T: Allow system to use persist.native_debug (GrapheneOS)</li>
