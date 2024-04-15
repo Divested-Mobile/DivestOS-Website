@@ -2,8 +2,8 @@
 					<h2>Messenger Comparison Table</h2>
 					<p>This is not intended to be an extremely comprehensive list, but enough to get a grasp on the situation.</p>
 					<p>The only client for now that we recommend is Conversations, a top notch XMPP client, fully supports the OMEMO XEP, is easy on the battery, and doesn't force you into a walled garden. It is not the easiest thing getting your friends and family to switch apps, so at the very least any apps with end-to-end encryption (E2EE) support should always be preferred over apps without.<br>Remember to <a href="https://gultsch.de/trust.html" target="_blank" rel="nofollow noopener noreferrer">always verify</a> your partner's E2EE keys when possible, as it is arguably useless otherwise.<!--Some implementations also store whether or not a key is trusted server side, which can allow the server to MITM regardless if you verified your contact's keys.--></p>
-					<p>For a much larger list of messengers see this <a href="https://www.freie-messenger.de/en/systemvergleich/" target="_blank" rel="nofollow noopener noreferrer">overview</a> and their <a href="https://www.freie-messenger.de/en/warumnicht/" target="_blank" rel="nofollow noopener noreferrer">"Why Not?" list</a>.</p>
-					<p>Last updated: 2023/09/17</p>
+					<p>For a much larger list of messengers see this <a href="https://www.messenger-matrix.de/" target="_blank" rel="nofollow noopener noreferrer">overview by Kuketz'</a>, or <a href="https://www.freie-messenger.de/en/systemvergleich/" target="_blank" rel="nofollow noopener noreferrer">overview by *IM*</a>, and their <a href="https://www.freie-messenger.de/en/warumnicht/" target="_blank" rel="nofollow noopener noreferrer">"Why Not?" list</a>.</p>
+					<p>Last updated: 2024/04/15</p>
 					<div class="section">
 						<table class="striped horizontal" style="max-height: 100%;">
 							<thead>
@@ -18,6 +18,7 @@
 									<th>Encryption</th>
 									<th>E2EE by Default</th>
 									<th>E2EE uses PFS</th>
+									<th>E2EE is Quantum Resistant</th>
 									<th>Desktop Client</th>
 									<th>Web Client</th>
 									<th>File Sharing</th>
@@ -42,6 +43,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + <a href="https://en.wikipedia.org/wiki/OMEMO" target="_blank" rel="nofollow noopener noreferrer">OMEMO</a> E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">In private chats</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -62,6 +64,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + <a href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/olm.md" target="_blank" rel="nofollow noopener noreferrer">Olm</a>/<a href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/megolm.md" target="_blank" rel="nofollow noopener noreferrer">Megolm</a> E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">In private chats</td>
 									<td data-label="E2EE uses PFS" style="color:#FFC107;">1:1 chats only?</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -82,6 +85,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#4CAF50;">Yes</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client">No</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -102,6 +106,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#4CAF50;">Yes</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client">No</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -122,6 +127,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="E2EE uses PFS">Unknown</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client">No</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -142,6 +148,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">In private chats</td>
 									<td data-label="E2EE uses PFS" style="color:#f44336;">No</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client">No</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -162,6 +169,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + OpenPGP E2EE</td>
 									<td data-label="E2EE by Default" style="color:#FFC107;">To contacts with AutoCrypt</td>
 									<td data-label="E2EE uses PFS" style="color:#f44336;">No</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -182,6 +190,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">Custom E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#673AB7;">WIP</td>
 									<td data-label="Web Client">No</td>
 									<td data-label="File Sharing" style="color:#FFC107;">Images Only</td>
@@ -202,6 +211,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">Signal E2EE</td>
 									<td data-label="E2EE by Default" style="color:#FFC107;">To contacts with Silence</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#f44336;">No</td>
 									<td data-label="Web Client">No</td>
 									<td data-label="File Sharing" style="color:#FFC107;">Images Only</td>
@@ -222,6 +232,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -242,6 +253,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -262,6 +274,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
 									<td data-label="E2EE by Default" style="color:#f44336;">No</td>
 									<td data-label="E2EE uses PFS" style="color:#FFC107;">Per 100/msgs in secret chats</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -282,6 +295,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
 									<td data-label="E2EE by Default" style="color:#4CAF50;">Always</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -300,8 +314,9 @@
 									<td data-label="Federated" style="color:#f44336;">No</td>
 									<td data-label="Decentralized">No</td>
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Signal E2EE</td>
-									<td data-label="E2EE by Default" style="color:#f44336;">No</td>
+									<td data-label="E2EE by Default" style="color:#f44336;">For 1:1</td>
 									<td data-label="E2EE uses PFS" style="color:#4CAF50;">Yes</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#f44336;">No</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -322,6 +337,7 @@
 									<td data-label="Encryption" style="color:#673AB7;">TLS</td>
 									<td data-label="E2EE by Default" style="color:#f44336;">No</td>
 									<td data-label="E2EE uses PFS">N/A</td>
+									<td data-label="E2EE is Quantum Resistant">N/A</td>
 									<td data-label="Desktop Client" style="color:#f44336;">No</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
@@ -342,6 +358,7 @@
 									<td data-label="Encryption" style="color:#4CAF50;">TLS + Custom E2EE</td>
 									<td data-label="E2EE by Default" style="color:#f44336;">No</td>
 									<td data-label="E2EE uses PFS">Unknown</td>
+									<td data-label="E2EE is Quantum Resistant" style="color:#f44336;">No</td>
 									<td data-label="Desktop Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="Web Client" style="color:#4CAF50;">Yes</td>
 									<td data-label="File Sharing" style="color:#4CAF50;">Yes</td>
