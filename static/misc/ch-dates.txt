@@ -1,4 +1,4 @@
-last updated: 2024/04/16
+last updated: 2024/04/17
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -7,7 +7,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
-124.0.6367.54		2024/04/15				https://chromereleases.googleblog.com/2024/04/chrome-beta-for-android-update_15.html
+124.0.6367.54		2024/04/15	23			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_16.html
 124.0.6367.42		2024/04/11				https://chromereleases.googleblog.com/2024/04/chrome-for-android-update_11.html
 123.0.6312.118		2024/04/10	3			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_10.html
 123.0.6312.99		2024/04/02	3			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop.html
@@ -131,9 +131,9 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Bromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-124.0.6367.54	2024/04/15			2024/04/15	2024/04/16	25+ksv		3+ksv		48+ksv
+124.0.6367.54	2024/04/15			2024/04/15	2024/04/16	48+ksv		23+ksv		71+ksv
 124.0.6367.42	2024/04/11			2024/04/11	2024/04/12
-123.0.6312.118	2024/04/10			2024/04/10	2024/04/10			pending
+123.0.6312.118	2024/04/10			2024/04/10	2024/04/10			2024/04/17
 123.0.6312.99	2024/04/02			2024/04/02	2024/04/02			2024/04/02
 123.0.6312.80	2024/03/26			2024/03/26	2024/03/26			2024/03/29
 123.0.6312.40	2024/03/13			2024/03/13	2024/03/14			2024/03/25
@@ -264,7 +264,7 @@ Lineage related:
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
 - Cromite		123.0.6312.122				https://github.com/uazo/cromite/releases
-- CalyxOS		123.0.6312.99				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- CalyxOS		123.0.6312.118				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			121.0.6167.164, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
 AOSP:
