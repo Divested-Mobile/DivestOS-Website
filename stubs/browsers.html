@@ -11,7 +11,8 @@
 					<p>The lack of per-site process isolation means a successful exploit is likely able to gain more access (to other site data/browser settings/passwords) without needing a second exploit. It would still need an Android system/kernel exploit to further escape the system sandbox. It is an important hardening feature, but the browser isn't completely insecure without it assuming it is up-to-date and that you aren't on the receiving end of targeted/zero-day attacks. Furthermore (in Chromium) with isolated renderer processes there is still <a href="https://security.googleblog.com/2022/09/use-after-freedom-miracleptr.html" target="_blank" rel="nofollow noopener noreferrer">some inherent</a> attack surface of the main process that can allow a single exploit, just like in Firefox.</p>
 					<h4 id="dataIsolation">What is per-site data isolation?<a href="#dataIsolation">¶</a></h4>
 					<p>The goal of per-site data isolation is to prevent say a third party script from being able to store data and use that to track you across many websites, instead any data set will be keyed to the website it was set from. This concept is further detailed <a href="https://github.com/michaelkleber/privacy-model" target="_blank" rel="nofollow noopener noreferrer">here</a>.<br>Firefox calls per-site data isolation `dynamic first party isolation` (dFPI). Firefox and Focus enable dFPI by default.<br>Chromium calls per-site data isolation (network) state partitioning and is not enabled by default.</p>
-					<hr>
+					<h4 id="safeBrowsing">What is Safe Browsing?<a href="#safeBrowsing">¶</a></h4>
+					<p><a href="https://safebrowsing.google.com" target="_blank" rel="nofollow noopener noreferrer">Safe Browsing</a> is a collaborative service offered by Google since 2005 that blocks known malicious websites in real-time. Chromium-based browsers on Android require real Google Play Services to be available for the "Standard protection" mode to function, however the "Enhanced protection" mode functions even without Play Services available. Gecko-based browsers on Android do not require Play Services to function, but they do require a Mozilla API key. You can test its operation on <a href="https://testsafebrowsing.appspot.com" target="_blank" rel="nofollow noopener noreferrer">this page here</a> and you can manually lookup a website <a href="https://transparencyreport.google.com/safe-browsing/search" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
 					<!--<h4 id="jitUsage">What is the JavaScript JIT?<a href="#jitUsage">¶</a></h4>
 					<p>TODO</p>-->
 					<hr>
@@ -29,6 +30,7 @@
 									<th>Fingerprinting Protection <small>(Privacy)</small></th>
 									<th>Content Blocker <small>(Privacy/Security)</small></th>
 									<th>JIT State <small>(Security)</small></th>
+									<th>Safe Browsing <small>(Safety)</small></th>
 									<th>Maintained <small>(Security)</small></th>
 								</tr>
 							</thead>
@@ -41,6 +43,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
 									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
+									<td data-label="Safe Browsing" style="color:#f44336;">No</td>
 									<td data-label="Maintained">Within two days</td>
 								</tr>
 								<tr>
@@ -51,6 +54,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strongest</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">uBlock Origin (see note)</td>
 									<td data-label="JIT State" style="color:#4CAF50;">Disabled on Safer+</td>
+									<td data-label="Safe Browsing" style="color:#f44336;">No</td>
 									<td data-label="Maintained">Within a month</td>
 								</tr>
 								<tr>
@@ -61,6 +65,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
 									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
+									<td data-label="Safe Browsing" style="color:#f44336;">No</td>
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
@@ -71,6 +76,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
 									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
+									<td data-label="Safe Browsing" style="color:#4CAF50;">Yes</td>
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
@@ -81,6 +87,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
+									<td data-label="Safe Browsing" style="color:#4CAF50;">Yes</td>
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
@@ -91,6 +98,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#673AB7;">Very basic</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + uBlock Origin</td>
 									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
+									<td data-label="Safe Browsing" style="color:#4CAF50;">Yes</td>
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
@@ -101,6 +109,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">uBlock Origin</td>
 									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
+									<td data-label="Safe Browsing">Unknown</td>
 									<td data-label="Maintained" style="color:red;">4+ years behind</td>
 								</tr>
 							</tbody>
@@ -130,6 +139,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#4CAF50;">Strong</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Strong</td>
 									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
+									<td data-label="Safe Browsing" style="color:#FFC107;">If GMS available</td>
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
@@ -140,6 +150,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#FFC107;">Enhanced</td>
 									<td data-label="Content Blocker" style="color:#4CAF50;">Basic + Adblock Plus</td>
 									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
+									<td data-label="Safe Browsing" style="color:#f44336;">No</td>
 									<td data-label="Maintained">Within a week</td>
 								</tr>
 								<tr>
@@ -150,6 +161,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
+									<td data-label="Safe Browsing" style="color:#FFC107;">If GMS available</td>
 									<td data-label="Maintained">Within a day</td>
 								</tr>
 								<tr>
@@ -160,6 +172,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#f44336;">No</td>
 									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
+									<td data-label="Safe Browsing" style="color:#FFC107;">If GMS available</td>
 									<td data-label="Maintained">Within two days</td>
 								</tr>
 								<tr>
@@ -170,6 +183,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#f44336;">No</td>
 									<td data-label="Content Blocker" style="color:#f44336;">No</td>
 									<td data-label="JIT State" style="color:#FFC107;">Enabled</td>
+									<td data-label="Safe Browsing" style="color:#FFC107;">If GMS available</td>
 									<td data-label="Maintained">Yes</td>
 								</tr>
 								<tr>
@@ -180,6 +194,7 @@
 									<td data-label="Fingerprinting Protection" style="color:#FFC107;">Enhanced</td>
 									<td data-label="Content Blocker" style="color:#FFC107;">Basic</td>
 									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
+									<td data-label="Safe Browsing" style="color:#f44336;">No</td>
 									<td data-label="Maintained" style="color:red;">10+ months behind</td>
 								</tr>
 							</tbody>
@@ -187,7 +202,7 @@
 					</div>
 					<div class="section" id="webview">
 						<h3>WebView Browsers<a href="#webview">¶</a></h3>
-						<p>These browsers <b>must</b> be combined with an <a href="/misc/ch-dates.txt" target="_blank">up to date</a> WebView provider to be secure.<br>If you are on stock/OEM version of Android or have Google Apps installed, you are likely using the Google/Chrome WebView with extra telemetry.<br>While WebView browsers utilize the Chromium WebView, they cannot offer any per-site process isolation.<br>Using any WebView-based browser is largely not recommended as they are inherently limited due to the WebView merely being a widget for adding web content to an app and are not intended to create a full browser experience.</p>
+						<p>These browsers <b>must</b> be combined with an <a href="/misc/ch-dates.txt" target="_blank">up to date</a> WebView provider to be secure.<br>If you are on stock/OEM version of Android or have Google Apps installed, you are likely using the Google/Chrome WebView with extra telemetry.<br>While WebView browsers utilize the Chromium WebView, they cannot offer any per-site process isolation.<br>Using any WebView-based browser is largely not recommended as they are inherently limited due to the WebView merely being a widget for adding web content to an app and are not intended to create a full browser experience.<br>Safe Browsing is available if Google Play Services is installed & available, if the WebView provider supports it (most do), and if both the user and the app have not opted-out of it.</p>
 						<table class="striped" style="max-height: 100%;">
 							<thead>
 								<tr>
