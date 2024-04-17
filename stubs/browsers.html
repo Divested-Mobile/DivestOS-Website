@@ -4,7 +4,7 @@
 					<p>Fennec based browsers should not be considered for use, as upstream no longer receives security updates. Please use a Fenix based browser instead.<br>Fennec F-Droid is Fenix based, not Fennec based despite its name.</p>
 					<p>Both lists are sorted by order of coverage. Only browsers marked with a ★ are actually recommended.<br>For more detailed privacy related technical information please reference the <a href="https://privacytests.org/android.html" target="_blank" rel="nofollow noopener noreferrer">PrivacyTests</a> website.<br>Extra reading on <a href="https://grapheneos.org/usage#web-browsing" target="_blank" rel="nofollow noopener noreferrer">mobile browsers</a>, an overview of <a href="https://github.com/privacyguides/privacyguides.org/discussions/1797#discussioncomment-3721547" target="_blank" rel="nofollow noopener noreferrer">fingerprint-resistance approaches</a>, an in-depth <a href="https://arxiv.org/pdf/2112.15561.pdf" target="_blank" rel="nofollow noopener noreferrer">security comparison of the leading engines</a>, a fun <a href="https://contrachrome.com/ContraChrome_en.pdf" target="_blank" rel="nofollow noopener noreferrer">webcomic against the Chromium monoculture</a>, as well as why <a href="https://www.cisa.gov/sites/default/files/publications/Capacity_Enhancement_Guide-Securing_Web_Browsers_and_Defending_Against_Malvertising-Guidance_for_Non-Federal_Organizations.pdf" target="_blank" rel="nofollow noopener noreferrer">content blockers are critical for security</a>.<br>Release comparisons are also available for <a href="/misc/ffa-dates.txt" target="_blank">Firefox</a> and <a href="/misc/ch-dates.txt" target="_blank">Chromium</a>.</p>
 					<p>Disclosure: Mull and Mulch, noted below, are projects of DivestOS.<br>Disclosure: DivestOS helps maintain `Fennec F-Droid` and additionally has <a href="/pages/about#contributions" target="_blank">small contributions</a> (commits) to others such as Firefox, FOSS Browser, and Lightning.</p>
-					<p>Last updated: 2024/02/20</p>
+					<p>Last updated: 2024/04/17</p>
 					<hr>
 					<h4 id="processIsolation">What is per-site process isolation?<a href="#processIsolation">¶</a></h4>
 					<p>Per-site process isolation is a powerful security feature that seeks to limit exposure of a malicious website/script abusing a security vulnerability.<br>Firefox calls per-site process isolation <a href="https://wiki.mozilla.org/Project_Fission" target="_blank" rel="nofollow noopener noreferrer">Fission</a> and is enabled by default on desktop. Fission is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1610822" target="_blank" rel="nofollow noopener noreferrer">not yet</a> enabled by default on Android, and when manually enabled it results in a severely degraded/broken experience. Furthermore Firefox on Android does <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565196" target="_blank" rel="nofollow noopener noreferrer">not</a> take advantage of Android's <a href="https://developer.android.com/guide/topics/manifest/service-element" target="_blank" rel="nofollow noopener noreferrer">isolatedProcess</a> flag for completely confining application services.<br>Standalone Chromium based browsers strictly isolate websites to their own process.</p>
@@ -12,7 +12,7 @@
 					<h4 id="dataIsolation">What is per-site data isolation?<a href="#dataIsolation">¶</a></h4>
 					<p>The goal of per-site data isolation is to prevent say a third party script from being able to store data and use that to track you across many websites, instead any data set will be keyed to the website it was set from. This concept is further detailed <a href="https://github.com/michaelkleber/privacy-model" target="_blank" rel="nofollow noopener noreferrer">here</a>.<br>Firefox calls per-site data isolation `dynamic first party isolation` (dFPI). Firefox and Focus enable dFPI by default.<br>Chromium calls per-site data isolation (network) state partitioning and is not enabled by default.</p>
 					<h4 id="safeBrowsing">What is Safe Browsing?<a href="#safeBrowsing">¶</a></h4>
-					<p><a href="https://safebrowsing.google.com" target="_blank" rel="nofollow noopener noreferrer">Safe Browsing</a> is a collaborative service offered by Google since 2005 that blocks known malicious websites in real-time. Chromium-based browsers on Android require real Google Play Services to be available for the "Standard protection" mode to function, however the "Enhanced protection" mode functions even without Play Services available. Gecko-based browsers on Android do not require Play Services to function, but they do require a Mozilla API key. You can test its operation on <a href="https://testsafebrowsing.appspot.com" target="_blank" rel="nofollow noopener noreferrer">this page here</a> and you can manually lookup a website <a href="https://transparencyreport.google.com/safe-browsing/search" target="_blank" rel="nofollow noopener noreferrer">here</a>.</p>
+					<p><a href="https://safebrowsing.google.com" target="_blank" rel="nofollow noopener noreferrer">Safe Browsing</a> is a collaborative service offered by Google since 2005 that blocks known malicious websites in real-time. Chromium-based browsers on Android require real Google Play Services to be available for the "Standard protection" mode to function, however the "Enhanced protection" mode functions even without Play Services available. Gecko-based browsers on Android do not require Play Services to function, but they do require a Mozilla API key. You can test its operation on <a href="https://testsafebrowsing.appspot.com" target="_blank" rel="nofollow noopener noreferrer">this page here</a> and you can manually lookup a website <a href="https://transparencyreport.google.com/safe-browsing/search" target="_blank" rel="nofollow noopener noreferrer">here</a>.<br>Regardless of the availability, users should additionally use a protective DNS like Quad9 or DNS0 and a strong content blocker if available.</p>
 					<!--<h4 id="jitUsage">What is the JavaScript JIT?<a href="#jitUsage">¶</a></h4>
 					<p>TODO</p>-->
 					<hr>
@@ -127,6 +127,7 @@
 									<th>Fingerprinting Protection <small>(Privacy)</small></th>
 									<th>Content Blocker <small>(Privacy/Security)</small></th>
 									<th>JIT State <small>(Security)</small></th>
+									<th>Safe Browsing <small>(Safety)</small></th>
 									<th>Maintained <small>(Security)</small></th>
 								</tr>
 							</thead>
@@ -254,7 +255,7 @@
 					</div>
 					<div class="section" id="tuning">
 						<h3>Recommend Settings to Change<a href="#tuning">¶</a></h3>
-						<p>Some of these settings may not be available or may already be set depending on browser.</p>
+						<p>Some of these settings may not be available or may already be set depending on browser.<br>The cowboy 🤠 emoji is used to denote settings recommended for advanced/less annoyed users.</p>
 						<h4 id="tuningFenix">Mull/Fennec F-Droid/Firefox/Iceraven<a href="#tuningFenix">¶</a></h4>
 						<ul>
 							<li>Homepage > Sponsored shortcuts > Disabled</li>
@@ -262,6 +263,9 @@
 							<li>Homepage > Sponsored stories > Disabled</li>
 							<li>HTTPS-Only Mode > Enable in all tabs</li>
 							<li>Enhanced Tracking Protection > Strict</li>
+							<li>Enhanced Tracking Protection > Tell websites not to share & sell data > Enabled</li>
+							<li>Site permissions > DRM-controlled content > Blocked</li>
+							<li>Delete browsing data on quit > Enabled & check all boxes below 🤠</li>
 							<li>Add-ons > uBlock Origin > Add (& Allow in private browsing)</li>
 							<li>Add-ons > uBlock Origin > Settings > Filter lists > Ignore generic cosmetic filters > Disabled (but leave enabled if you have less than 4GB of RAM)</li>
 							<li>Add-ons > uBlock Origin > Settings > Filter lists > Enable/check all non-regional lists > Save & Update</li>
@@ -279,7 +283,12 @@
 						</ul>
 						<h4 id="tuningFirefoxFocus">Firefox Focus/Klar<a href="#tuningFirefoxFocus">¶</a></h4>
 						<ul>
+							<li>Privacy & Security > Block ad trackers > Enabled</li>
+							<li>Privacy & Security > Block analytic trackers > Enabled</li>
+							<li>Privacy & Security > Block social trackers > Enabled</li>
 							<li>Privacy & Security > Block other content trackers > Enabled</li>
+							<li>Privacy & Security > Block potentially dangerous and deceptive sites > Enabled</li>
+							<li>Privacy & Security > HTTPS-Only Mode > Enabled</li>
 							<li>Privacy & Security > Send usage data > Disabled</li>
 							<li>Privacy & Security > Studies > Disabled</li>
 						</ul>
@@ -288,16 +297,19 @@
 							<li>Security Level > Safer</li>
 							<li>Usage of uBlock Origin may provide privacy and security benefits but it and other changes are <strong>not</strong> recommended by the Tor Project.</li>
 						</ul>
-						<h4 id="tuningChromium">Mulch/Vanadium/Bromite/Chromium<a href="#tuningChromium">¶</a></h4>
+						<h4 id="tuningChromium">Mulch/Vanadium/Cromite/Chromium<a href="#tuningChromium">¶</a></h4>
 						<ul>
+							<li>Privacy and security > Clear browsing data > At Startup > Check all boxes below 🤠</li>
+							<li>Privacy and security > Safe Browsing > Standard protection</li>
 							<li>Privacy and security > Always use secure connections > Enabled</li>
 							<li>Privacy and security > WebRTC IP handling policy > Disable non-proxied UDP</li>
 							<li>Privacy and security > Preload pages > No preloading</li>
+							<li>Privacy and security > Close (all open) tabs on exit > Enabled 🤠</li>
 							<li>Site Settings > Motion sensors > Blocked</li>
 							<li>Site Settings > JavaScript JIT > Blocked</li>
 							<li>Site settings > Protected content > Blocked</li>
 							<li>Site settings > Auto-verify > Disabled</li>
-							<li>Navigate to chrome://flags > Darken websites checkbox in themes setting > Enabled > Relaunch</li>
+							<!--<li>Navigate to chrome://flags > Darken websites checkbox in themes setting > Enabled > Relaunch</li>-->
 						</ul>
 						<h4 id="tuningChrome">Chromium<a href="#tuningChrome">¶</a></h4>
 						<ul>
@@ -311,18 +323,27 @@
 						<h4 id="tuningBrave">Brave<a href="#tuningBrave">¶</a></h4>
 						<ul>
 							<li>Brave Shields & privacy > Block trackers & ads > Aggressive</li>
+							<li>Brave Shields & privacy > Auto-redirect tracking URLs > Enabled</li>
 							<li>Brave Shields & privacy > Upgrade connections to HTTPS > Require all connections to use HTTPS (strict)</li>
 							<li>Brave Shields & privacy > Block Fingerprinting > Fingerprinting blocked (strict, may break sites)</li>
 							<li>Brave Shields & privacy > Prevent fingerprinting via language settings > Enabled</li>
+							<li>Brave Shields & privacy > Forget me when I close this site > Enabled 🤠</li>
+							<li>Brave Shields & privacy > Clear data on exit > Enabled 🤠</li>
 							<li>Brave Shields & privacy > Allow Facebook logins and embedded posts > Disabled</li>
 							<li>Brave Shields & privacy > Allow Twitter embedded tweets > Disabled</li>
+							<li>Brave Shields & privacy > Allow LinkedIn embedded posts > Disabled</li>
 							<li>Brave Shields & privacy > WebRTC IP handling policy > Disable non-proxied UDP</li>
+							<li>Brave Shields & privacy > Safe Browsing > Standard protecion</li>
 							<li>Brave Shields & privacy > Allow sites to check if you have payment methods saved > Disabled</li>
 							<li>Brave Shields & privacy > Unstoppable Domains > Resolve Method > Disabled</li>
 							<li>Brave Shields & privacy > Ethereum Name Service > Resolve Method > Disabled</li>
 							<li>Brave Shields & privacy > Ethereum Name Service > ENS offchain lookup > Disabled</li>
 							<li>Brave Shields & privacy > Solana Name Service > Resolve Method > Disabled</li>
 							<li>Brave Shields & privacy > IPFS Gateway > Disabled</li>
+							<li>Brave Shields & privacy > Block cookie consent notices > Enabled</li>
+							<li>Brave Shields & privacy > Block 'Switch to App' Notices > Enabled</li>
+							<!--<li>Brave Shields & privacy > Send a "Do Not Track" request > Enabled</li>-->
+							<li>Brave Shields & privacy > Close tabs on exit > Enabled 🤠</li>
 							<li>Brave Shields & privacy > Allow privacy-preserving product analytics > Disabled</li>
 							<li>Brave Shields & privacy > Automatically send diagnostic reports > Disabled</li>
 							<li>Brave Shields & privacy > Automatically send daily usage ping to Brave > Disabled</li>
@@ -343,6 +364,11 @@
 						<h4 id="tuningLightning">Lightning<a href="#tuningLightning">¶</a></h4>
 						<ul>
 							<li>Ad Block Settings > Block ads > Enabled</li>
+							<li>Privacy Settings > Block 3rd party cookies > Enabled</li>
+							<li>Privacy Settings > Clear cache on exit > Enabled 🤠</li>
+							<li>Privacy Settings > Clear history on exit > Enabled 🤠</li>
+							<li>Privacy Settings > Clear cookies on exit > Enabled 🤠</li>
+							<li>Privacy Settings > Clear web storage on exit > Enabled 🤠</li>
 						</ul>
 					</div>
 				</div>
