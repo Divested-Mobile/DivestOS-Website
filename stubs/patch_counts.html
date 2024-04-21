@@ -1,6 +1,6 @@
 				<div class="card fluid">
 					<h2>Patch Counts</h2>
-					<p>Below are counts and links to the corresponding ASB patchsets included in each branch every month.<br>A historical comparison of operating system patch levels is available <a href="/pages/patch_history" target="_blank">here</a>, along with patch levels <a href="/pages/patch_levels" target="_blank">here</a>.</p>
+					<p>Below are counts and links to the corresponding ASB patchsets included in each branch every month.<br>Users on stock may expect to be OK given that they still receive Google Play System updates, however as demonstrated below these updates provide very few security fixes and should not be relied on.<br>A historical comparison of operating system patch levels is available <a href="/pages/patch_history" target="_blank">here</a>, along with patch levels <a href="/pages/patch_levels" target="_blank">here</a>.</p>
 					<p>Notes:
 					<ul>
 						<li>First column are CVE counts</li>
@@ -18,8 +18,8 @@
 						<li>z: noted as abused in wild</li>
 						<li>x: number of the system patches available as an APEX update via Google Play system updates, primarily applicable to stock systems. noted to demonstate the ineffectiveness of it.</li>
 					</ul></p>
-					<div class="section" id="branchPatchCounts">
-						<h3>Branches<a href="#branchPatchCounts">¶</a></h3>
+					<div class="section" id="monthlyPatchCounts">
+						<h3>Monthly Counts<a href="#monthlyPatchCounts">¶</a></h3>
 						<p>Last updated: 2024-04-20</p>
 						<table class="striped" style="max-height: 100%;">
 							<thead>
@@ -447,6 +447,76 @@
 	<td></td>
 	<td></td>
 </tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="section" id="aggregatePatchCounts">
+						<h3>Aggregated Yearly Counts<a href="#aggregatePatchCounts">¶</a></h3>
+						<p>Last updated: 2024-04-21</p>
+						<table class="striped" style="max-height: 100%;">
+							<thead>
+								<tr>
+									<th>Year</th>
+									<th>ASB</th>
+									<th>Google Play</th>
+									<th>14.1</th>
+									<th>15.1</th>
+									<th>16.0</th>
+									<th>17.1</th>
+									<th>18.1</th>
+									<th>19.1</th>
+									<th>20.0</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-label="Year">2024</td>
+									<td data-label="ASB">46</td>
+									<td data-label="Google Play">1</td>
+									<td data-label="14.1">20</td>
+									<td data-label="15.1">20</td>
+									<td data-label="16.0">25</td>
+									<td data-label="17.1">37</td>
+									<td data-label="18.1">43</td>
+									<td data-label="19.1">50</td>
+									<td data-label="20.0">51</td>
+								</tr>
+								<tr>
+									<td data-label="Year">2023</td>
+									<td data-label="ASB">275</td>
+									<td data-label="Google Play">26</td>
+									<td data-label="14.1">83</td>
+									<td data-label="15.1">100</td>
+									<td data-label="16.0">138</td>
+									<td data-label="17.1">235</td>
+									<td data-label="18.1">251</td>
+									<td data-label="19.1">285</td>
+									<td data-label="20.0">80 + merges</td>
+								</tr>
+								<tr>
+									<td data-label="Year">2022</td>
+									<td data-label="ASB">207</td>
+									<td data-label="Google Play">14</td>
+									<td data-label="14.1">81</td>
+									<td data-label="15.1">107</td>
+									<td data-label="16.0">148</td>
+									<td data-label="17.1">205</td>
+									<td data-label="18.1">226</td>
+									<td data-label="19.1">134 + merges</td>
+									<td data-label="20.0">merges</td>
+								</tr>
+								<tr>
+									<td data-label="Year">2021</td>
+									<td data-label="ASB">193</td>
+									<td data-label="Google Play">19</td>
+									<td data-label="14.1">92</td>
+									<td data-label="15.1">136</td>
+									<td data-label="16.0">157</td>
+									<td data-label="17.1">211</td>
+									<td data-label="18.1">60 + merges</td>
+									<td data-label="19.1">N/A</td>
+									<td data-label="20.0">N/A</td>
+								</tr>
 							</tbody>
 						</table>
 					</div>
