@@ -110,6 +110,7 @@
 						</ul>
 						<h4 id="bugs">Bugs<a href="#bugs">¶</a></h4>
 						<ul>
+							<li>There have been reports of new Bluetooth connections being automatically granted contacts permission even when not chosen during pairing. This may be a UI issue when the device requires a PIN to be entered, as opposed to simply confirmed, where the code defaults the permission on but the user interface shows it off. It is recommended to toggle this contacts option during pairing as a possible workaround, and confirm it is disabled after pairing. Please take extra caution if the connecting device is Internet connected such as many modern cars are. Users should also review this permission for all existing paired devices.</li>
 							<li>15.1 will bootloop if a pin/password/pattern is not set or is removed/unset. [???]<a href="https://github.com/Divested-Mobile/DivestOS-Build/issues/154" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a>[help wanted]</li>
 							<li>Flutter-based apps may show graphical artifacting on older (msm8974 era) devices. [help wanted]</li>
 							<li>Older Unity engine games will likely crash on 16.0+ due to the hardened memory allocator. A workaround is to install the 32-bit variant of the app. [Unity engine bug]<a href="https://issuetracker.unity3d.com/issues/android-il2cpp-empty-project-crashes-on-launch-with-using-memoryadresses-from-more-than-16gb-of-memory-messages" target="_blank" rel="nofollow noopener noreferrer">[tracking]</a></li>

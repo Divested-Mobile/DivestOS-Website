@@ -2,6 +2,7 @@
 						<h3>XXX Update<a href="#2024-05">¶</a></h3>
 						<h4>System Updates</h4>
 						<ul>
+							<li>Tensor devices now mandate TLSv1.2 for SUPL connections thanks to a patch from GrapheneOS.</li>
 							<li>Many of the kernel CVE patches have been better versioned to reduce wrongly applied patches. Although none were actually found.</li>
 						</ul>
 						<h4>App Updates</h4>
@@ -20,6 +21,7 @@
 						</ul>
 						<h4>Other Updates</h4>
 						<ul>
+							<li>There have been reports of new Bluetooth connections being automatically granted contacts permission even when not chosen during pairing. This may be a UI issue when the device requires a PIN to be entered, as opposed to simply confirmed, where the code defaults the permission on but the user interface shows it off. It is recommended to toggle this contacts option during pairing as a possible workaround, and confirm it is disabled after pairing. Please take extra caution if the connecting device is Internet connected such as many modern cars are. Users should also review this permission for all existing paired devices.</li>
 							<li>Reminder that all 16.0+ users should take advantage of the Private DNS feature and set it to the recommended Quad9 (dns.quad9.net) or DNS0 (zero.dns0.eu) resolvers.</li>
 						</ul>
 					</div>
