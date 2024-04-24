@@ -7,6 +7,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+124.0.6367.82		2024/04/23
 124.0.6367.54		2024/04/15	23			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_16.html
 124.0.6367.42		2024/04/11				https://chromereleases.googleblog.com/2024/04/chrome-for-android-update_11.html
 123.0.6312.118		2024/04/10	3			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_10.html
@@ -131,6 +132,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
+124.0.6367.82	2024/04/23			2024/04/23	pending
 124.0.6367.54	2024/04/15	2024/04/19	2024/04/15	2024/04/16	48ksv		2024/04/19	23ksv
 124.0.6367.42	2024/04/11			2024/04/11	2024/04/12
 123.0.6312.118	2024/04/10	2024/04/13	2024/04/10	2024/04/10			2024/04/17	2024/04/19
@@ -250,10 +252,10 @@ Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		124.0.6367.54				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		124.0.6367.82				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	124.0.6367.54				https://github.com/GrapheneOS/Vanadium/commits/main
+- GrapheneOS Vanadium	124.0.6367.82				https://github.com/GrapheneOS/Vanadium/commits/main
 - DivestOS/Mulch	124.0.6367.54, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
