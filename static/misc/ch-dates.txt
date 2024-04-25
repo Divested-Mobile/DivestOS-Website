@@ -1,4 +1,4 @@
-last updated: 2024/04/24
+last updated: 2024/04/25
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -7,7 +7,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
-124.0.6367.82		2024/04/23				https://chromium.googlesource.com/chromium/src/+log/124.0.6367.54..124.0.6367.82?pretty=fuller&n=10000
+124.0.6367.82		2024/04/23	4			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_24.html
 124.0.6367.54		2024/04/15	23			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_16.html
 124.0.6367.42		2024/04/11				https://chromereleases.googleblog.com/2024/04/chrome-for-android-update_11.html
 123.0.6312.118		2024/04/10	3			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_10.html
@@ -132,7 +132,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-124.0.6367.82	2024/04/23			2024/04/23	2024/04/24	48+ksv				23+ksv
+124.0.6367.82	2024/04/23			2024/04/23	2024/04/24	52ksv				27ksv
 124.0.6367.54	2024/04/15	2024/04/19	2024/04/15	2024/04/16			2024/04/19
 124.0.6367.42	2024/04/11			2024/04/11	2024/04/12
 123.0.6312.118	2024/04/10	2024/04/13	2024/04/10	2024/04/10			2024/04/17	2024/04/19
@@ -267,7 +267,7 @@ Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
 - Cromite		124.0.6367.60				https://github.com/uazo/cromite/releases
 - CalyxOS		124.0.6367.54				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
-- /e/OS			123.0.6312.118, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
+- /e/OS			123.0.6312.122, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
 AOSP:
 - AOSP, 7.1.2		52.7243.100				https://android.googlesource.com/platform/external/chromium-webview/+log/android-7.1.2_r39
@@ -275,9 +275,9 @@ AOSP:
 - AOSP, 9		66.0.3359.158				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-9.0.0_r76
 - AOSP, 10		74.0.3729.186				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-10.0.0_r75
 - AOSP, 11		83.0.4103.120				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-11.0.0_r69
-- AOSP, 12		91.0.4472.114				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-12.0.0_r49
+- AOSP, 12		91.0.4472.114				https://android.googlesource.com/platform/external/chromium-webview/+log/android-security-12.0.0_r58
 - AOSP, 12.1		95.0.4638.74				https://android.googlesource.com/platform/external/chromium-webview/+log/android-12.1.0_r27
-- AOSP, 13		109.0.5414.123				https://android.googlesource.com/platform/external/chromium-webview/+log/android-13.0.0_r63
+- AOSP, 13		109.0.5414.123				https://android.googlesource.com/platform/external/chromium-webview/+log/android-13.0.0_r83
 
 
 Notes:
