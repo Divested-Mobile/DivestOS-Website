@@ -1,4 +1,4 @@
-last updated: 2024/05/01
+last updated: 2024/05/02
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -133,8 +133,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-124.0.6367.113	2024/04/30			2024/04/30	2024/05/01	54ksv				29ksv
-124.0.6367.82	2024/04/23	2024/04/29	2024/04/23	2024/04/24	pending		2024/04/25
+124.0.6367.113	2024/04/30			2024/04/30	2024/05/01			pending		29ksv
+124.0.6367.82	2024/04/23	2024/04/29	2024/04/23	2024/04/24	2024/05/02	2024/04/25
 124.0.6367.54	2024/04/15	2024/04/19	2024/04/15	2024/04/16			2024/04/19
 124.0.6367.42	2024/04/11			2024/04/11	2024/04/12
 123.0.6312.118	2024/04/10	2024/04/13	2024/04/10	2024/04/10			2024/04/17	2024/04/19
@@ -261,7 +261,7 @@ Vanadium related:
 - DivestOS/Mulch	124.0.6367.113, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
-- LineageOS, †2		122.0.6261.119				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
+- LineageOS, †2		124.0.6367.82				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
 - iodéOS		tracks LineageOS/master			https://gitlab.com/iode/os/public/manifests/android/-/blob/v4-staging/snippets/lineage.xml
 - Replicant		???
 
