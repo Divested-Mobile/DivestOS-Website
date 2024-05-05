@@ -11,6 +11,7 @@
 							<li>Dark Reader is known to be incompatible with the Mull changes and will cause significant breakage/slowdowns.</li>
 							<li>Dark mode for websites is disabled due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>Refresh rate is capped to 60hz due to resist fingerprinting. Please do not disable RFP.</li>
+							<li>Multitouch gestures will not work due to resist fingerprinting. Please do not disable RFP.</li>
 							<li>If audio/video content fails to play in private tabs navigate to <code>about:config</code> and change <code>browser.privatebrowsing.forceMediaMemoryCache</code> to false, this is however a privacy risk.</li>
 							<li>Mull disables the JavaScript JIT to increase security at the cost of slowing down webapps, complex websites, and the PDF viewer. Navigate to <code>about:config</code> and change <code>javascript.options.ion</code> and <code>javascript.options.baselinejit</code> to true to restore their performance.</li>
 							<li>Mull has strict certificate revocation checks. The CA revocation servers are frequently down/blocked/inaccessible and will result in a "Secure Connection Failed" error. Navigate to <code>about:config</code> and change <code>security.OCSP.require</code> to false, this is however a security and privacy risk.</li>
