@@ -175,6 +175,7 @@ createTable enchilada LineageOS-20.0 oneplus/sdm845-common oneplus/sdm845 oneplu
 createTable ether LineageOS-18.1 nextbit/ether nextbit/msm8992;
 createTable f400 LineageOS-18.1 lge/g3-common lge/g3 lge/f400;
 createTable fajita LineageOS-20.0 oneplus/sdm845-common oneplus/sdm845 oneplus/fajita;
+createTable felix LineageOS-20.0 google/gs101 google/gs201/private/gs-google google/felix;
 createTable flame LineageOS-20.0 google/coral google/msm-4.14 google/coral/flame;
 createTable flounder LineageOS-15.1 htc/flounder htc/flounder;
 createTable flounder_lte LineageOS-15.1 htc/flounder_lte htc/flounder htc/flounder;
