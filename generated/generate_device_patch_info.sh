@@ -175,7 +175,7 @@ createTable enchilada LineageOS-20.0 oneplus/sdm845-common oneplus/sdm845 oneplu
 createTable ether LineageOS-18.1 nextbit/ether nextbit/msm8992;
 createTable f400 LineageOS-18.1 lge/g3-common lge/g3 lge/f400;
 createTable fajita LineageOS-20.0 oneplus/sdm845-common oneplus/sdm845 oneplus/fajita;
-createTable felix LineageOS-20.0 google/gs101 google/gs201/private/gs-google google/felix;
+createTable felix LineageOS-20.0 google/gs201 google/gs201/private/gs-google google/felix;
 createTable flame LineageOS-20.0 google/coral google/msm-4.14 google/coral/flame;
 createTable flounder LineageOS-15.1 htc/flounder htc/flounder;
 createTable flounder_lte LineageOS-15.1 htc/flounder_lte htc/flounder htc/flounder;
@@ -235,7 +235,7 @@ createTable lmi LineageOS-20.0 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/lmi;
 createTable lmi LineageOS-20.0 xiaomi/sm8250-common xiaomi/sm8250 xiaomi/lmi;
 createTable ls990 LineageOS-18.1 lge/g3-common lge/g3 lge/ls990;
 createTable ls997 LineageOS-20.0 lge/v20-common lge/msm8996 lge/msm8996-common lge/ls997;
-createTable lynx LineageOS-20.0 google/gs101 google/gs201/private/gs-google google/lynx;
+createTable lynx LineageOS-20.0 google/gs201 google/gs201/private/gs-google google/lynx;
 createTable m7 LineageOS-14.1 htc/m7 htc/msm8960 htc/m7-common htc/msm8960-common;
 createTable m8d LineageOS-18.1 htc/m8-common htc/msm8974 htc/m8d htc/msm8974-common;
 createTable m8 LineageOS-18.1 htc/m8-common htc/msm8974 htc/m8 htc/msm8974-common;
@@ -272,7 +272,7 @@ createTable star2lte LineageOS-20.0 samsung/exynos9810-common samsung/exynos9810
 createTable sunfish LineageOS-20.0 google/sunfish google/msm-4.14;
 createTable surnia LineageOS-17.1 motorola/msm8916-common motorola/msm8916 motorola/surnia;
 createTable taimen LineageOS-20.0 google/wahoo google/wahoo google/muskie;
-createTable tangorpro LineageOS-20.0 google/gs101 google/gs201/private/gs-google google/tangorpro;
+createTable tangorpro LineageOS-20.0 google/gs201 google/gs201/private/gs-google google/tangorpro;
 createTable thor LineageOS-14.1 amazon/thor amazon/hdx-common amazon/hdx-common;
 createTable toro LineageOS-14.1 samsung/toro samsung/tuna samsung/tuna;
 createTable toroplus LineageOS-14.1 samsung/toroplus samsung/tuna samsung/tuna;
