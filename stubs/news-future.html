@@ -6,7 +6,7 @@
 							<li>15.1 now uses the GrapheneOS hardened memory allocator. hmalloc only ever officially supported Android 9 and this required a small handful of backports + tweaks, but was totally worth it.</li>
 							<li>20.0 now includes the latest version of OpenEUICC.</li>
 							<li>Nearly all (ASB) cherry-picks from LineageOS's Gerrit instance have been imported directly into the repository and verified to apply. 14.1 and 17.1 additionally gained 1 and 2 patches respectively.</li>
-							<li>15.1, 17.1, 18.1, 19.1 and 20.0 all now use the latest A14 version of the hardened_malloc library.</li>
+							<li>All devices shipping the hardened_malloc have been updated to the latest A14 revision of the hardened_malloc library.</li>
 							<li>There was a vote going on to replace the default wallpaper in DivestOS. <a href="/pages/wallpaper-2024">See choices and results here</a>.</li>
 							<li>Tensor devices now mandate TLSv1.2 for SUPL connections thanks to a patch from GrapheneOS.</li>
 							<li>Many of the kernel CVE patches have been better versioned to reduce wrongly applied patches. Although none were actually found.</li>
@@ -17,12 +17,13 @@
 						</ul>
 						<h4>App Updates</h4>
 						<ul>
+							<li>Databases for Hypatia have been adjusted to reduce false positive rate as the bloom flters were previously too filled.</li>
 							<li>Mulch 124.0.6367.113-1 and Mull 125.3.0-2 now use X25519Kyber768 when supported for added post-quantum security. You can read more about this <a href="https://blog.chromium.org/2023/08/protecting-chrome-traffic-with-hybrid.html" target="_blank" rel="nofollow noopener noreferrer">here</a> and <a href="https://blog.cloudflare.com/post-quantum-for-all/" target="_blank" rel="nofollow noopener noreferrer">here</a> and also <a href="https://pq.cloudflareresearch.com/" target="_blank" rel="nofollow noopener noreferrer">test it here</a>.</li>
 							<li>Updated Mull to <a href="https://www.mozilla.org/en-US/firefox/android/125.0/releasenotes/" target="_blank" rel="nofollow noopener noreferrer">125.3.0</a>, has 18 security fixes. This release was delayed 13 days due to numerous compilation issues.</li>
 							<li>@lucasmz has added/updated Portuguese translations to Carrion, Extirpater, GMaps WV, Hypatia, and MotionLock!</li>
 							<li>Hypatia has received newly added Galician translations from @ghose, updated German translations from @thereisnoanderson, and updated Italian translations from @Tomoms!</li>
 							<li>IRRemote has received additional remotes and support for JSON backed remotes thanks to Stéphane Lenclud!</li>
-							<li>Updated Mulch to 123.0.6312.118-1, 124.0.6367.42-1, 124.0.6367.54-1, 124.0.6367.82-1, 124.0.6367.113-1, 124.0.6367.159-1, and 125.0.6422.35-1, has 3, -, 23, 4, 2, 2, and - security fixes respectively.</li>
+							<li>Updated Mulch to 123.0.6312.118-1, 124.0.6367.42-1, 124.0.6367.54-1, 124.0.6367.82-1, 124.0.6367.113-1, 124.0.6367.159-1, 125.0.6422.35-1, and 125.0.6422.46-1, has 3, -, 23, 4, 2, 2, -, and 1 security fixes respectively.</li>
 						</ul>
 						<h4>Website Updates</h4>
 						<ul>
