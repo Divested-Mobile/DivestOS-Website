@@ -1,0 +1,21 @@
+				<div class="card centero fluid">
+					<h2>F-Droid.org Stats</h2>
+					<p>Rough stats generated using Thore's scripts: https://gitlab.com/thgoebel/fdroid-metrics</p>
+					<div class="section">
+						<div class="row">
+<?php
+
+$images = glob("static/images/fdroidstats-divest/*.{jpg,jpeg,gif,png,bmp}", GLOB_BRACE);
+foreach ($images as $image) {
+	echo '<div class="card centero large"><div class="section"></div><h3>' . basename($image) . '</h3><img class="section media" style="height:auto;" loading="lazy" src="/images/fdroidstats-divest/' . rawurlencode(basename($image)) . '"/></div>';
+}
+
+$images = glob("static/images/fdroidstats/*.{jpg,jpeg,gif,png,bmp}", GLOB_BRACE);
+foreach ($images as $image) {
+	echo '<div class="card centero large"><div class="section"></div><h3>' . basename($image) . '</h3><img class="section media" style="height:auto;" loading="lazy" src="/images/fdroidstats/' . rawurlencode(basename($image)) . '"/></div>';
+}
+
+?>
+						</div>
+					</div>
+				</div>
