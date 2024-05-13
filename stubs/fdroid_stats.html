@@ -1,19 +1,22 @@
-				<div class="card centero fluid">
+				<div class="card centero fluid" data-pagefind-ignore="all">
 					<h2>F-Droid.org Stats</h2>
-					<p>Rough stats generated using Thore's scripts: https://gitlab.com/thgoebel/fdroid-metrics</p>
-					<div class="section">
-						<div class="row">
+					<p>Rough stats generated using Thore's scripts: https://gitlab.com/thgoebel/fdroid-metrics<br>Only counts direct downloads from F-Droid.org.<br>Does NOT count downloads from mirrors or DivestOS.org<br>Last updated: 2024/05/13</p>
+					<div class="section" data-pagefind-ignore="all">
+						<div class="row" data-pagefind-ignore="all">
 <?php
 
-$images = glob("static/images/fdroidstats-divest/*.{jpg,jpeg,gif,png,bmp}", GLOB_BRACE);
+$images = glob("static/images/fdroidstats/*.png");
+natsort($images);
+$images = array_reverse($images);
+$rankCounter = 1;
 foreach ($images as $image) {
-	echo '<div class="card centero large"><div class="section"></div><h3>' . basename($image) . '</h3><img class="section media" style="height:auto;" loading="lazy" src="/images/fdroidstats-divest/' . rawurlencode(basename($image)) . '"/></div>';
+	$friendlyName = substr(basename($image), 0, -4);
+	$average = substr($friendlyName, 0, strpos($friendlyName, "-"));
+	$friendlyName = substr($friendlyName, strpos($friendlyName, "-") + 1);
+	echo '<div class="card centero large"><a href="/images/fdroidstats/' . rawurlencode(basename($image)) . '" class="button" target="_blank" rel="nofollow noopener noreferrer"># ' . $rankCounter . '<br>' . $friendlyName . '<br>Weekly Average: ' . $average . '</a></div>';
+	$rankCounter++;
 }
 
-$images = glob("static/images/fdroidstats/*.{jpg,jpeg,gif,png,bmp}", GLOB_BRACE);
-foreach ($images as $image) {
-	echo '<div class="card centero large"><div class="section"></div><h3>' . basename($image) . '</h3><img class="section media" style="height:auto;" loading="lazy" src="/images/fdroidstats/' . rawurlencode(basename($image)) . '"/></div>';
-}
 
 ?>
 						</div>
