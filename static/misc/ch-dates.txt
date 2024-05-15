@@ -1,4 +1,4 @@
-last updated: 2024/05/14
+last updated: 2024/05/15
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -7,6 +7,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+125.0.6422.53		2024/05/15				https://chromereleases.googleblog.com/2024/05/chrome-beta-for-android-update_15.html
 125.0.6422.35		2024/05/08				https://chromereleases.googleblog.com/2024/05/chrome-for-android-update_8.html
 124.0.6367.179		2024/05/13	1, 1 wild		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_13.html
 124.0.6367.171		2024/05/09	1, 1 wild		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_9.html
@@ -137,7 +138,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-125.0.6422.35	2024/05/08			2024/05/08	2024/05/09	6+ksv		pending		35+ksv
+125.0.6422.53	2024/05/15			2024/05/15	pending		6+ksv				35+ksv
+125.0.6422.35	2024/05/08			2024/05/08	2024/05/09			pending
 124.0.6367.179	2024/05/13
 124.0.6367.171	2024/05/09	2024/05/11							2024/05/10
 124.0.6367.159	2024/05/07			2024/05/07	2024/05/07			2024/05/07
@@ -262,10 +264,10 @@ Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		124.0.6367.179				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		125.0.6422.53				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	125.0.6422.35				https://github.com/GrapheneOS/Vanadium/commits/main
+- GrapheneOS Vanadium	125.0.6422.53				https://github.com/GrapheneOS/Vanadium/commits/main
 - DivestOS/Mulch	125.0.6422.46, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
