@@ -15,6 +15,12 @@
 					<p><a href="https://safebrowsing.google.com" target="_blank" rel="nofollow noopener noreferrer">Safe Browsing</a> is a collaborative service offered by Google since 2005 that blocks known malicious websites in real-time. Both Chromium and Firefox based browsers require a Google API key to download the databases, many forks do not include these. Chromium-based browsers on Android require real Google Play Services to be available for the "Standard protection" mode to function, however the "Enhanced protection" mode appears to always function even without Play Services or an API key. Gecko-based browsers on Android do not require Play Services to function. You can test its operation on <a href="https://testsafebrowsing.appspot.com" target="_blank" rel="nofollow noopener noreferrer">this page here</a> and you can manually lookup a website <a href="https://transparencyreport.google.com/safe-browsing/search" target="_blank" rel="nofollow noopener noreferrer">here</a>.<br>Safe Browsing in Chromium-based browsers is also far more effective/functional, especially in the "Enhanced protection" mode, however it comes at the cost of privacy concerns.<br>Regardless of the availability, users should additionally use a protective DNS like Quad9 (dns.quad9.net) or DNS0 (zero.dns0.eu) and a strong content blocker if available.</p>
 					<!--<h4 id="jitUsage">What is the JavaScript JIT?<a href="#jitUsage">¶</a></h4>
 					<p>TODO</p>-->
+					<h4 id="otherThings">Anything else I should know?<a href="#otherThings">¶</a></h4>
+					<ul>
+						<li>CFI enabled: Vanadium, Mulch</li>
+						<li>MTE enabled (if capable device): Vanadium, Mulch</li>
+						<li>Quantum resistant key agreement: Vanadium, Mulch, Mull</li>
+					</ul>
 					<hr>
 					<h3>Full Fledged Browsers</h3>
 					<div class="section" id="fenix-based">
@@ -46,7 +52,7 @@
 									<td data-label="Forced HTTPS" style="color:#4CAF50;">Yes</td>
 									<td data-label="JIT State" style="color:#4CAF50;">Disabled</td>
 									<td data-label="Safe Browsing" style="color:#f44336;">No</td>
-									<td data-label="Maintained">Within a week</td>
+									<td data-label="Maintained">Within two days</td>
 								</tr>
 								<tr>
 									<td data-label="Name"><a href="https://www.torproject.org" target="_blank" rel="nofollow noopener noreferrer">Tor Browser</a> ★</td>
