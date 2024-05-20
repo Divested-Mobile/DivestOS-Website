@@ -88,9 +88,9 @@ createTable() {
 	vASB=$(getVendorPatchLevel $version $devicePath)
 	#green: keep 4 months + 1 future
 	#yellow: previous year
-	if [[ $vASB == "2024-05"* ]] || [[ $vASB == "2024-04"* ]] || [[ $vASB == "2024-03"* ]] || [[ $vASB == "2024-02"* ]] || [[ $vASB == "2024-01"* ]]; then
+	if [[ $vASB == "2024-06"* ]] || [[ $vASB == "2024-05"* ]] || [[ $vASB == "2024-04"* ]] || [[ $vASB == "2024-03"* ]] || [[ $vASB == "2024-02"* ]]; then
 		vASBStyle="style=\"color:#4CAF50;\"";
-	elif [[ $vASB == "2023-"* ]]; then
+	elif [[ $vASB == "2024-"* ]] || [[ $vASB == "2023-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
 	else
 		vASBStyle="style=\"color:#F44336;\"";
