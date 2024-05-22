@@ -7,6 +7,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+125.0.6422.72		2024/05/21	6			https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_21.html
 125.0.6422.53		2024/05/15	9,  1 wild, 1 critical	https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_15.html
 125.0.6422.35		2024/05/08				https://chromereleases.googleblog.com/2024/05/chrome-for-android-update_8.html
 124.0.6367.179		2024/05/13	1,  1 wild		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_13.html
@@ -138,7 +139,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-125.0.6422.53	2024/05/15	2024/05/20	2024/05/15	2024/05/15	pending		2024/05/17	45ksv
+125.0.6422.72	2024/05/21			2024/05/21	2024/05/22					51ksv
+125.0.6422.53	2024/05/15	2024/05/20	2024/05/15	2024/05/15	pending		2024/05/17
 125.0.6422.35	2024/05/08			2024/05/08	2024/05/09
 124.0.6367.179	2024/05/13
 124.0.6367.171	2024/05/09	2024/05/11							2024/05/10
@@ -264,11 +266,11 @@ Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		125.0.6422.53				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		125.0.6422.72				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	125.0.6422.53				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	125.0.6422.53, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	125.0.6422.72				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	125.0.6422.72, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		124.0.6367.82				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
