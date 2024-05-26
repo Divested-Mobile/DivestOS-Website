@@ -1,4 +1,4 @@
-last updated: 2024/05/24
+last updated: 2024/05/26
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -203,7 +203,7 @@ Notes:
 
 Useful links:
 - https://www.mozilla.org/en-US/security/advisories
-- https://github.com/mozilla-mobile/fenix/releases
+- https://hg.mozilla.org/releases/mozilla-release/tags
 - https://gitlab.com/divested-mobile/mull-fenix
 - https://gitlab.com/divested-mobile/mull
 - https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.mozilla.fennec_fdroid.yml
