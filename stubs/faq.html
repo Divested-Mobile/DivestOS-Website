@@ -300,7 +300,7 @@
 							</ul></li>
 							<li>If you use a work profile, pause it when not needed.</li>
 							<li>Work profile apps like Shelter and Insular have options to "freeze" individual apps entirely, use it for infrequently used apps.</li>
-							<li>Main profile apps can also be "frozen" via apps like SuperFreezZ or Hail, but may cause issues.</li>
+							<li>Main profile apps can be disabled on 17.1 and higher from app info and also be "frozen" via apps like SuperFreezZ or Hail on older versions, but may cause issues.</li>
 							<li>If you use secondary user profiles, use the `End Session` button to completely stop them when not needed.</li>
 							<li>At the direct cost of security you can consider installing 32-bit variants of apps.</li>
 							<li>Disable the `secure app spawning` feature in Settings > Security.</li>
@@ -479,7 +479,7 @@
 
 						<h4 id="privateDNSwVPN">Should I use Private DNS when using a VPN/Tor?<a href="#privateDNSwVPN">¶</a></h4>
 						<ul>
-							<li>If you want to use the built-in content blocker of DivestOS you must enable Private DNS.</li>
+							<li>If you want to use the built-in content blocker of DivestOS with a VPN you must enable Private DNS.</li>
 							<li>If you use NetGuard/RethinkDNS/DNS66/Blokada or any VPN provider with a built-in content blocker you should disable Private DNS.</li>
 							<li>If you're using Tor via Orbot's VPN mode and want an app to access Onion Services you must disable Private DNS.</li>
 							<li>Otherwise you should consider what you value more: the content blocker or ensuring the VPN handles DNS.</li>
@@ -491,6 +491,15 @@
 							<li>For simply blocking an app from say using mobile data, use the built-in data restrictions: App info > Mobile data & Wi-fi</li>
 							<li>For completely denying an app access to networking functions entirely, revoke the Network permission: App info > Permissions > Network</li>
 							<li>For blocking ads/trackers: that is already done via the built-in content filter and there is nothing to configure.</li>
+						</ul>
+
+						<h4 id="contentBlockerEnabled">When is the content blocker enforcing?<a href="#contentBlockerEnabled">¶</a></h4>
+						<ul>
+							<li>Disabled by user: permissive</li>
+							<li>Not disabled by user: enforcing</li>
+							<li>No VPN used: enforcing</li>
+							<li>16.0+: VPN in use and Private DNS set other than Off or Automatic: enforcing</li>
+							<li>14.1 & 15.1: VPN in use: permissive</li>
 						</ul>
 
 						<h4 id="contentBlocker">XYZ website is blocked! How do I disable the content blocker?<a href="#contentBlocker">¶</a></h4>
