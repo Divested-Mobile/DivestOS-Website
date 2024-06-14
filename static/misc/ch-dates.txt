@@ -1,4 +1,4 @@
-last updated: 2024/06/13
+last updated: 2024/06/14
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -7,6 +7,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+126.0.6478.71		2024/06/13				https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_13.html
 126.0.6478.50		2024/06/11	21			https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop.html
 126.0.6478.40		2024/06/05				https://chromereleases.googleblog.com/2024/06/chrome-beta-for-android-update.html
 125.0.6422.165		2024/06/04				https://chromereleases.googleblog.com/2024/06/chrome-for-android-update.html
@@ -144,7 +145,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-126.0.6478.50	2024/06/11	2024/06/13	2024/06/11	2024/06/12			2024/06/12	84ksv
+126.0.6478.71	2024/06/13			2024/06/14	2024/06/14			pending		84ksv
+126.0.6478.50	2024/06/11	2024/06/13	2024/06/11	2024/06/12			2024/06/12
 126.0.6478.40	2024/06/05					2024/06/05
 125.0.6422.165	2024/06/04			2024/06/04	2024/06/05	2024/06/08	2024/06/05
 125.0.6422.147	2024/05/30	2024/06/01	2024/05/30	2024/05/30			2024/05/31
@@ -276,11 +278,11 @@ Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		126.0.6478.50				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		126.0.6478.71				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	126.0.6478.50				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	126.0.6478.50, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	126.0.6478.71				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	126.0.6478.71, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		125.0.6422.165				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64

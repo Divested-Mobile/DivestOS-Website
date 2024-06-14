@@ -73,9 +73,12 @@
 						<p>As of 2024/06/01:</p>
 						<ul>
 							<li>jemalloc for 32-bit and 64-bit: all 14.1 and 15.1 devices</li>
-							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 16.0 and 17.1 devices</li>
+							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 15.1, 16.0 and 17.1 devices</li>
 							<li>scudo for 32-bit and hardened_malloc for 64-bit: all 18.1, 19.1, and 20.0 devices</li>
-							<li>Exception: These devices use jemalloc for 32-bit instead of scudo: akari/akatsuki/aurora/xz2c, cheryl, klte, hlte</li>
+							<li>Exceptions:<ul>
+									<li>These devices use jemalloc for 32-bit instead of scudo: akari/akatsuki/aurora/xz2c, cheryl, klte, hlte</li>
+									<li>These devices use jemalloc for 32-bit and 64-bit: flounder*</li>
+							</ul></li>
 						</ul>
 
 						<h4 id="lowram">Why does DivestOS enable low_ram mode when Google only recommends it for <=2GB devices?<a href="#lowram">¶</a></h4>
