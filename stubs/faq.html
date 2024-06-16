@@ -72,7 +72,7 @@
 						<h4 id="mallocUse">What memory allocator is used?<a href="#mallocUse">¶</a></h4>
 						<p>As of 2024/06/01:</p>
 						<ul>
-							<li>jemalloc for 32-bit and 64-bit: all 14.1 and 15.1 devices</li>
+							<li>jemalloc for 32-bit and 64-bit: all 14.1 devices</li>
 							<li>jemalloc for 32-bit and hardened_malloc for 64-bit: all 15.1, 16.0 and 17.1 devices</li>
 							<li>scudo for 32-bit and hardened_malloc for 64-bit: all 18.1, 19.1, and 20.0 devices</li>
 							<li>Exceptions:<ul>
@@ -519,6 +519,30 @@
 
 						<h4 id="tetherVPN">Can I route connected hotspot devices via the VPN?<a href="#tetherVPN">¶</a></h4>
 						<p>Yes, you can route them via the main profile VPN. Enable this in Settings > Network & internet > Hotspot & tethering > Allow clients to use VPNs.</p>
+
+						<h4 id="primaryBlocked">Why can't I access DivestOS.org (or divested.dev)?<a href="#primaryBlocked">¶</a></h4>
+						<ul>
+							<li>The primary web servers are rarely down.</li>
+							<li>In order to manage resource usage the divested.dev web servers block hundreds of million of IP addresses via dozens of static blocklists and dynamic log analysis via our <a href="https://codeberg.org/divested/scfw3" target="_blank" rel="nofollow noopener noreferrer">SCFW3</a> tool.</li>
+							<li>Tor exit nodes are exempted.</li>
+							<li>Some consumer VPNs may be unintentionally blocked.</li>
+							<li>Enabling/using IPv6 is strongly recommended.</li>
+							<li>You can check your IP address reputation via the following websites:<ul>
+								<li><a href="https://app.crowdsec.net/cti" target="_blank" rel="nofollow noopener noreferrer">CrowdSec CTI</a></li>
+								<li><a href="https://www.virustotal.com/gui/home/search" target="_blank" rel="nofollow noopener noreferrer">VirusTotal</a></li>
+								<li><a href="https://www.apivoid.com/tools/ip-reputation-check" target="_blank" rel="nofollow noopener noreferrer">APIVoid</a></li>
+								<li><a href="https://www.talosintelligence.com/reputation_center" target="_blank" rel="nofollow noopener noreferrer">Cisco Talos</a></li>
+								<li><a href="https://www.akamai.com/us/en/clientrep-lookup" target="_blank" rel="nofollow noopener noreferrer">Akamai</a></li>
+								<li><a href="https://multirbl.valli.org/lookup" target="_blank" rel="nofollow noopener noreferrer">Valli MultiRBL</a></li>
+								<li><a href="https://www.hackedip.org" target="_blank" rel="nofollow noopener noreferrer">Hacked IP</a></li>
+								<li><a href="https://www.dshield.org/ipinfo" target="_blank" rel="nofollow noopener noreferrer">Internet Storm Center</a></li>
+							</ul></li>
+							<li>Additional website mirrors are listed at the footer of the webpage.</li>
+							<li>Additional F-Droid mirrors are listed <a href="/pages/our_apps#repos">here</a>.</li>
+							<li>divested.dev is accessible via the eeyo.re Cloudflare mirror.</li>
+							<li>divestos.org is accessible via the divestos.eeyo.re Cloudflare mirror.</li>
+							<li>F-Droid, Carrion, Hypatia, and the DivestOS Updater all have support for these mirrors.</li>
+						</ul>
 					</div>
 
 					<div class="section">
