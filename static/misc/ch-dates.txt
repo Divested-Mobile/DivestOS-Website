@@ -1,4 +1,4 @@
-last updated: 2024/06/24
+last updated: 2024/06/25
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -147,7 +147,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-126.0.6478.122	2024/06/24			2024/06/24	pending		32ksv				95ksv
+126.0.6478.122	2024/06/24			2024/06/24	2024/06/25	32ksv		2024/06/25	95ksv
 126.0.6478.110	2024/06/18	2024/06/20	2024/06/18	2024/06/19	pending		2024/06/20
 126.0.6478.71	2024/06/13			2024/06/14	2024/06/14			2024/06/14
 126.0.6478.50	2024/06/11	2024/06/13	2024/06/11	2024/06/12			2024/06/12
@@ -286,7 +286,7 @@ OS Current Versions
 
 Vanadium related:
 - GrapheneOS Vanadium	126.0.6478.122				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	126.0.6478.110, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- DivestOS/Mulch	126.0.6478.122, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		125.0.6422.165				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
@@ -296,7 +296,7 @@ Lineage related:
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
 - Cromite		126.0.6478.115				https://github.com/uazo/cromite/releases
-- CalyxOS		126.0.6478.110				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- CalyxOS		126.0.6478.122				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
 - /e/OS			123.0.6312.122, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
 AOSP:
