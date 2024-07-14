@@ -1,4 +1,4 @@
-last updated: 2024/07/13
+last updated: 2024/07/14
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -211,6 +211,7 @@ Useful links:
 - https://hg.mozilla.org/releases/mozilla-release/tags
 - https://gitlab.com/divested-mobile/mull-fenix
 - https://gitlab.com/divested-mobile/mull
+- https://gitlab.com/relan/fennecbuild
 - https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.mozilla.fennec_fdroid.yml
 - https://github.com/fork-maintainers/iceraven-browser
 - https://gitlab.com/iode/os/apps/iodebrowser
