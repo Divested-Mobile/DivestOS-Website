@@ -1,4 +1,4 @@
-last updated: 2024/07/15
+last updated: 2024/07/16
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -7,6 +7,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
+126.0.6478.186		2024/07/16	10			https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop.html
 126.0.6478.122		2024/06/24	5			https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_24.html
 126.0.6478.110		2024/06/18	6			https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_18.html
 126.0.6478.71		2024/06/13				https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_13.html
@@ -147,7 +148,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-126.0.6478.122	2024/06/24	2024/06/26	2024/06/24	2024/06/25	pending		2024/06/26	95ksv
+126.0.6478.186	2024/07/16			2024/07/16	pending						105ksv
+126.0.6478.122	2024/06/24	2024/06/26	2024/06/24	2024/06/25	pending		2024/06/26
 126.0.6478.110	2024/06/18	2024/06/20	2024/06/18	2024/06/19			2024/06/20
 126.0.6478.71	2024/06/13			2024/06/14	2024/06/14			2024/06/14
 126.0.6478.50	2024/06/11	2024/06/13	2024/06/11	2024/06/12			2024/06/12
@@ -282,10 +284,10 @@ Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		126.0.6478.122				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		126.0.6478.186				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	126.0.6478.122				https://github.com/GrapheneOS/Vanadium/commits/main
+- GrapheneOS Vanadium	126.0.6478.186				https://github.com/GrapheneOS/Vanadium/commits/main
 - DivestOS/Mulch	126.0.6478.122, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
