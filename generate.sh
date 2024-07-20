@@ -4,10 +4,10 @@ cp -r --reflink=auto static output;
 mkdir output/pages;
 
 #workaround hmalloc on host
-if command -v falsebwrap &> /dev/null; then
-       alias asmpage='bwrap --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload php assemble_pages.php';
+if command -v bwrap &> /dev/null && [ -f /etc/ld.so.preload ]; then
+	alias asmpage='bwrap --dev-bind / / --ro-bind /dev/null /etc/ld.so.preload php assemble_pages.php';
 else
-       alias asmpage='php assemble_pages.php';
+	alias asmpage='php assemble_pages.php';
 fi;
 
 #helper
