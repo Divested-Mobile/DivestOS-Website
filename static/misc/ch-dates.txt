@@ -1,4 +1,4 @@
-last updated: 2024/07/26
+last updated: 2024/07/27
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -152,9 +152,9 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-127.0.6533.64	2024/07/23	2024/07/25	2024/07/23	2024/07/24	66ksv				129ksv
+127.0.6533.64	2024/07/23	2024/07/25	2024/07/23	2024/07/24	pending				129ksv
 126.0.6478.186	2024/07/16	2024/07/18	2024/07/16	2024/07/17			2024/07/19
-126.0.6478.122	2024/06/24	2024/06/26	2024/06/24	2024/06/25	pending		2024/06/26
+126.0.6478.122	2024/06/24	2024/06/26	2024/06/24	2024/06/25			2024/06/26
 126.0.6478.110	2024/06/18	2024/06/20	2024/06/18	2024/06/19			2024/06/20
 126.0.6478.71	2024/06/13			2024/06/14	2024/06/14			2024/06/14
 126.0.6478.50	2024/06/11	2024/06/13	2024/06/11	2024/06/12			2024/06/12
