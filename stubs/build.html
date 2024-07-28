@@ -94,7 +94,10 @@ cat ../../Manifests/Manifest_LAOS-20.0.xml > .repo/local_manifests/local_manifes
 #Add the vendor blobs!
 ##You must find these repos yourself. Extracting them is NOT correct.
 ##20.0 changed from per-vendor to per-device.
-nano .repo/local_manifests/local_manifest.xml;
+githuborg=""  # put the correct github organization here
+sed -i "/github/s/\[COLOUR IN THE LINES\]/$githuborg/g" .repo/local_manifests/local_manifest.xml
+gitlaborg=""  # put the correct gitlab organization here
+sed -i "/gitlab/s/\[COLOUR IN THE LINES\]/$gitlaborg/g" .repo/local_manifests/local_manifest.xml
 
 #Download!
 repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs;
