@@ -18,7 +18,7 @@
 $SBNR_GEN_DARKMODE = false;
 
 //Utils
-//Credit (CC BY-SA 3.0): https://stackoverflow.com/a/6225706
+//Credit (CC BY-SA 3.0): https://stackoverflow.com/a/6225706 https://stackoverflow.com/a/10423788
 function minifyWhitespace($buffer) {
 	$search = array(
 	'/\>[^\S ]+/s',     // strip whitespaces after tags, except space
@@ -34,7 +34,15 @@ function minifyWhitespace($buffer) {
 	''
 	);
 
-	$buffer = preg_replace($search, $replace, $buffer);
+	$blocks = preg_split('/(<\/?pre[^>]*>)/', $buffer, null, PREG_SPLIT_DELIM_CAPTURE);
+	$buffer = '';
+	foreach($blocks as $i => $block)
+	{
+		if($i % 4 == 2)
+			$buffer .= $block; //break out <pre>...</pre> with \n's
+		else
+			$buffer .= preg_replace($search, $replace, $block);
+	}
 
 	return $buffer;
 }
