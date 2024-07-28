@@ -38,10 +38,11 @@ function minifyWhitespace($buffer) {
 	$buffer = '';
 	foreach($blocks as $i => $block)
 	{
-		if($i % 4 == 2)
+		if($i % 4 == 2) {
 			$buffer .= $block; //break out <pre>...</pre> with \n's
-		else
+		} else {
 			$buffer .= preg_replace($search, $replace, $block);
+		}
 	}
 
 	return $buffer;
