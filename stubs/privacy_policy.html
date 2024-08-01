@@ -1,5 +1,5 @@
 				<div class="card fluid">
-					<h2>Privacy Policy (2024-07-01)</h2>
+					<h2>Privacy Policy (2024-07-31)</h2>
 					<p>History of this privacy policy can be viewed: <a href="https://codeberg.org/divested-mobile/divestos-website/blame/branch/master/stubs/privacy_policy.html" target="_blank" rel="nofollow noopener noreferrer">Codeberg</a>, <a href="https://github.com/Divested-Mobile/DivestOS-Website/blame/master/stubs/privacy_policy.html" target="_blank" rel="nofollow noopener noreferrer">GitHub</a>, <a href="https://gitlab.com/divested-mobile/divestos-website/-/blame/master/stubs/privacy_policy.html" target="_blank" rel="nofollow noopener noreferrer">GitLab</a></p>
 					<div class="section" id="fpCollect">
 						<h3>What data we (Divested Computing Group) collect<a href="#fpCollect">¶</a></h3>
@@ -68,6 +68,16 @@
 								<li>What else will it be used for: Nothing else</li>
 								<li>How to anonymize: Install Orbot and enable 'Download over Tor'</li>
 								<li>Example: <code>[IP Address] - - [Timestamp] "GET /MalwareScannerSignatures/hypatia-sha1-bloom.bin HTTP/1.1" 304 - "-" "Hypatia"</code></li>
+							</ul>
+							<li id="carrion">App: Carrion<a href="#carrion">¶</a></li>
+							<ul>
+								<li>What is received: Complaint Number Database Requests, IP Address</li>
+								<li>How often: Manually</li>
+								<li>Why it is received: Used to serve complaint number databases</li>
+								<li>When it will be deleted: Web server logs are kept for no longer than two weeks</li>
+								<li>What else will it be used for: Nothing else</li>
+								<li>How to anonymize: Install Orbot and set it to handle Carrion</li>
+								<li>Example: <code>[IP Address] - - [Timestamp] "GET complaint_numbers.txt.gz HTTP/1.1" 304 - "-" "Carrion"</code></li>
 							</ul>
 							<li id="xmpp">Chat rooms (MUC) available on xmpp:konvers.me<a href="#xmpp">¶</a></li>
 							<ul>
