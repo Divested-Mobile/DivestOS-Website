@@ -1,4 +1,4 @@
-last updated: 2024/07/30
+last updated: 2024/07/31
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -9,7 +9,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Release Notes
-127.0.6533.84		2024/07/30
+127.0.6533.84		2024/07/30	3,  1 critical		https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_30.html
 127.0.6533.64		2024/07/23	24			https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_23.html
 127.0.6533.51		2024/07/17				https://chromereleases.googleblog.com/2024/07/chrome-for-android-update_17.html
 126.0.6478.186		2024/07/16	10			https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop.html
@@ -153,8 +153,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-127.0.6533.84	2024/07/30			2024/07/30	pending						129ksv
-127.0.6533.64	2024/07/23	2024/07/25	2024/07/23	2024/07/24	pending
+127.0.6533.84	2024/07/30			2024/07/30	2024/07/30	69ksv		pending		132ksv
+127.0.6533.64	2024/07/23	2024/07/25	2024/07/23	2024/07/24	pending		2024/07/31
 126.0.6478.186	2024/07/16	2024/07/18	2024/07/16	2024/07/17			2024/07/19
 126.0.6478.122	2024/06/24	2024/06/26	2024/06/24	2024/06/25			2024/06/26
 126.0.6478.110	2024/06/18	2024/06/20	2024/06/18	2024/06/19			2024/06/20
@@ -295,7 +295,7 @@ OS Current Versions
 
 Vanadium related:
 - GrapheneOS Vanadium	127.0.6533.84				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	127.0.6533.64, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- DivestOS/Mulch	127.0.6533.84, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		125.0.6422.165				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
@@ -305,7 +305,7 @@ Lineage related:
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
 - Cromite		127.0.6533.73				https://github.com/uazo/cromite/releases
-- CalyxOS		126.0.6478.186				https://review.calyxos.org/q/project:CalyxOS/platform_prebuilts_calyx_chromium_arm64
+- CalyxOS		127.0.6533.64				https://review.calyxos.org/q/project:CalyxOS/lfs_prebuilts_calyx_chromium_arm64
 - /e/OS			123.0.6312.122, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
 AOSP:
