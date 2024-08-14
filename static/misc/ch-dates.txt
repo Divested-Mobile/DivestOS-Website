@@ -8,146 +8,146 @@ disclosure: Mulch is a DivestOS project
 
 Chromium History
 ================
-Version			Date		Security Bugfix Count	Release Notes
-127.0.6533.103		2024/08/06	5,  1 critical		https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop.html
-127.0.6533.84		2024/07/30	3,  1 critical		https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_30.html
-127.0.6533.64		2024/07/23	24			https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_23.html
-127.0.6533.51		2024/07/17				https://chromereleases.googleblog.com/2024/07/chrome-for-android-update_17.html
-126.0.6478.186		2024/07/16	10			https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop.html
-126.0.6478.122		2024/06/24	5			https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_24.html
-126.0.6478.110		2024/06/18	6			https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_18.html
-126.0.6478.71		2024/06/13				https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_13.html
-126.0.6478.50		2024/06/11	21			https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop.html
-126.0.6478.40		2024/06/05				https://chromereleases.googleblog.com/2024/06/chrome-beta-for-android-update.html
-125.0.6422.165		2024/06/04				https://chromereleases.googleblog.com/2024/06/chrome-for-android-update.html
-125.0.6422.147		2024/05/30	11			https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_30.html
-125.0.6422.113		2024/05/23	1,  1 wild		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_23.html
-125.0.6422.72		2024/05/21	6			https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_21.html
-125.0.6422.53		2024/05/15	9,  1 wild, 1 critical	https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_15.html
-125.0.6422.35		2024/05/08				https://chromereleases.googleblog.com/2024/05/chrome-for-android-update_8.html
-124.0.6367.179		2024/05/13	1,  1 wild		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_13.html
-124.0.6367.171		2024/05/09	1,  1 wild		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_9.html
-124.0.6367.159		2024/05/07	2			https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_7.html
-124.0.6367.113		2024/04/30	2			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_30.html
-124.0.6367.82		2024/04/23	4,  1 critical		https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_24.html
-124.0.6367.54		2024/04/15	23, 1 critical		https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_16.html
-124.0.6367.42		2024/04/11				https://chromereleases.googleblog.com/2024/04/chrome-for-android-update_11.html
-123.0.6312.118		2024/04/10	3			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_10.html
-123.0.6312.99		2024/04/02	3			https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop.html
-123.0.6312.80		2024/03/26	7,  1 critical		https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_26.html
-123.0.6312.40		2024/03/13	12			https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_19.html
-122.0.6261.119		2024/03/12	3			https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_12.html
-122.0.6261.105		2024/03/05	3			https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop.html
-122.0.6261.90		2024/02/27	4			https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_27.html
-122.0.6261.64		2024/02/20	12			https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_20.html
-122.0.6261.43		2024/02/14				https://chromereleases.googleblog.com/2024/02/early-stable-update-for-desktop.html
-121.0.6167.178		2024/02/13	1			https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_13.html
-121.0.6167.164		2024/02/06	3			https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop.html
-121.0.6167.143		2024/01/30	4,  1 critical		https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_30.html
-121.0.6167.101		2024/01/23	17			https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_23.html
-121.0.6167.71		2024/01/17				https://chromereleases.googleblog.com/2024/01/early-stable-for-desktop.html
-120.0.6099.230		2024/01/16	4,  1 wild		https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_16.html
-120.0.6099.210		2024/01/09	1			https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_9.html
-120.0.6099.193		2024/01/03	6			https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop.html
-120.0.6099.144		2023/12/20	1,  1 wild		https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop_20.html
-120.0.6099.115		2023/12/12	9			https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop_12.html
-120.0.6099.43		2023/11/30	10			https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop.html
-119.0.6045.193		2023/11/28	7,  1 wild		https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_28.html
-119.0.6045.163		2023/11/14	4			https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_14.html
-119.0.6045.134		2023/11/08	1			https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html
-119.0.6045.66		2023/10/30	15			https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_31.html
-119.0.6045.53		2023/10/25				https://chromereleases.googleblog.com/2023/10/early-stable-update-for-android_01005299231.html
-118.0.5993.111		2023/10/24	2			https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_24.html
-118.0.5993.80		2023/10/16	1			https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_17.html
-118.0.5993.65		2023/10/10	20, 1 critical		https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_10.html
-118.0.5993.48		2023/10/04				https://chromereleases.googleblog.com/2023/10/early-stable-update-for-desktop.html
-117.0.5938.153		2023/10/03	1			https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop.html
-117.0.5938.140		2023/09/27	10, 1 wild		https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_27.html
-117.0.5938.60		2023/09/11	16, 1 wild, 1 critical	https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_12.html
-117.0.5938.44		2023/09/06				https://chromereleases.googleblog.com/2023/09/early-stable-update-for-desktop.html
-116.0.5845.172		2023/09/05	4			https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop.html
-116.0.5845.163		2023/08/29	1			https://chromereleases.googleblog.com/2023/08/stable-channel-update-for-desktop_29.html
-116.0.5845.114		2023/08/22	5			https://chromereleases.googleblog.com/2023/08/chrome-desktop-stable-update.html
-116.0.5845.92		2023/08/14	26			https://chromereleases.googleblog.com/2023/08/stable-channel-update-for-desktop_15.html
-116.0.5845.78		2023/08/09				https://chromereleases.googleblog.com/2023/08/early-stable-update-for-desktop.html
-115.0.5790.166		2023/08/02	17			https://chromereleases.googleblog.com/2023/08/stable-channel-update-for-desktop.html
-115.0.5790.138		2023/07/25				https://chromium.googlesource.com/chromium/src/+log/115.0.5790.136..115.0.5790.138?pretty=fuller&n=10000
-115.0.5790.136		2023/07/18	20			https://chromereleases.googleblog.com/2023/07/stable-channel-update-for-desktop.html
-115.0.5790.85		2023/07/12				https://chromereleases.googleblog.com/2023/07/early-stable-update-for-android.html
-114.0.5735.196		2023/06/26	4			https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop_26.html
-114.0.5735.131		2023/06/13	5,  1 critical		https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop_13.html
-114.0.5735.61		2023/06/05	2,  1 wild		https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop.html
-114.0.5735.58		2023/05/30	16			https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop_30.html
-114.0.5735.53		2023/05/24				https://chromereleases.googleblog.com/2023/05/early-stable-update-for-desktop.html
-113.0.5672.163		2023/05/23				https://chromium.googlesource.com/chromium/src/+log/113.0.5672.132..113.0.5672.163?pretty=fuller&n=10000
-113.0.5672.132		2023/05/16	12, 1 critical		https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop_16.html
-113.0.5672.77		2023/05/02				https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop.html
-113.0.5672.62		2023/04/26	15			https://chromereleases.googleblog.com/2023/04/early-stable-update-for-android.html
-112.0.5615.136		2023/04/18	8,  1 wild		https://chromereleases.googleblog.com/2023/04/stable-channel-update-for-desktop_18.html
-112.0.5615.101		2023/04/14	2,  1 wild		https://chromereleases.googleblog.com/2023/04/stable-channel-update-for-desktop_14.html
-112.0.5615.48		2023/03/29	16			https://chromereleases.googleblog.com/2023/04/stable-channel-update-for-desktop.html
-111.0.5563.116		2023/03/21	8			https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop_21.html
-111.0.5563.58		2023/03/06	41, 1 critical		https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop.html
-111.0.5563.49		2023/03/02				https://chromereleases.googleblog.com/2023/03/early-stable-update-for-android.html
-110.0.5481.154		2023/02/22	10, 1 critical		https://chromereleases.googleblog.com/2023/02/stable-channel-desktop-update_22.html
-110.0.5481.65		2023/02/13				https://chromium.googlesource.com/chromium/src/+log/110.0.5481.64..110.0.5481.65?pretty=fuller&n=10000
-110.0.5481.64		2023/02/07				https://chromium.googlesource.com/chromium/src/+log/110.0.5481.61..110.0.5481.64?pretty=fuller&n=10000
-110.0.5481.61		2023/02/01	15			https://chromereleases.googleblog.com/2023/02/stable-channel-update-for-desktop.html
-109.0.5414.118		2023/01/24	6			https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop_24.html
-109.0.5414.86		2023/01/10	17			https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop.html
-108.0.5359.128		2022/12/12	8			https://chromereleases.googleblog.com/2022/12/stable-channel-update-for-desktop_13.html
-108.0.5359.79		2022/12/02	1,  1 wild		https://chromereleases.googleblog.com/2022/12/stable-channel-update-for-desktop.html
-108.0.5359.61		2022/11/29	28			https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop_29.html
-107.0.5304.141		2022/11/24	1,  1 wild		https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop_24.html
-107.0.5304.105		2022/11/08	10			https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop.html
-107.0.5304.91		2022/10/27	1,  1 wild		https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_27.html
-107.0.5304.54		2022/10/25	14			https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_25.html
-106.0.5249.126		2022/10/13				https://chromium.googlesource.com/chromium/src/+log/106.0.5249.118..106.0.5249.126?pretty=fuller&n=10000
-106.0.5249.118		2022/10/11	6			https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_11.html
-106.0.5249.79		2022/09/30	3			https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_30.html
-106.0.5249.65		2022/09/27	24			https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_27.html
-105.0.5195.136		2022/09/14	11			https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_14.html
-105.0.5195.124		2022/09/13				https://chromium.googlesource.com/chromium/src/+log/105.0.5195.79..105.0.5195.124?pretty=fuller&n=10000
-105.0.5195.79		2022/09/05				https://chromium.googlesource.com/chromium/src/+log/105.0.5195.77..105.0.5195.79?pretty=fuller&n=10000
-105.0.5195.77		2022/09/02	1,  1 wild		https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop.html
-105.0.5195.68		2022/08/30	24, 1 critical		https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_30.html
-104.0.5112.97		2022/08/16	12, 1 wild, 1 critical	https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_16.html
-104.0.5112.69		2022/08/02	27			https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop.html
-103.0.5060.129		2022/07/19				https://chromereleases.googleblog.com/2022/07/chrome-for-android-update_01510389319.html
-103.0.5060.71		2022/07/04	3,  1 wild		https://chromereleases.googleblog.com/2022/07/chrome-for-android-update.html
-103.0.5060.70		2022/06/29				https://chromium.googlesource.com/chromium/src/+log/103.0.5060.53..103.0.5060.70?pretty=fuller&n=10000
-103.0.5060.53		2022/06/21	13, 1 critical		https://chromereleases.googleblog.com/2022/06/stable-channel-update-for-desktop_21.html
-102.0.5005.125		2022/06/13	7			https://chromereleases.googleblog.com/2022/06/stable-channel-update-for-desktop.html
-102.0.5005.99		2022/06/07				https://chromereleases.googleblog.com/2022/06/chrome-for-android-update.html
-102.0.5005.78		2022/05/28				https://chromereleases.googleblog.com/2022/05/chrome-for-android-update_28.html
-102.0.5005.59		2022/05/24	32, 1 critical		https://chromereleases.googleblog.com/2022/05/stable-channel-update-for-desktop_24.html
-101.0.4951.61		2022/05/09	13			https://chromereleases.googleblog.com/2022/05/chrome-for-android-update.html
-101.0.4951.41		2022/04/26	29			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_26.html
-100.0.4896.127		2022/04/14	2,  1 wild		https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_14.html
-100.0.4896.88		2022/04/11	12			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_11.html
-100.0.4896.79		2022/04/04	1			https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop.html
-100.0.4896.58		2022/03/29	28			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
-99.0.4844.88		2022/03/25	1,  1 wild		https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_25.html
-99.0.4844.73		2022/03/15	11, 1 critical		https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_15.html
-99.0.4844.58		2022/03/03				https://chromium.googlesource.com/chromium/src/+log/99.0.4844.48..99.0.4844.58?pretty=fuller&n=10000
-99.0.4844.48		2022/03/01	28			https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop.html
-98.0.4758.101		2022/02/14	11, 1 wild		https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop_14.html
-98.0.4758.87		2022/02/01	27			https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop.html
-97.0.4692.98		2022/01/19	26, 1 critical		https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop_19.html
-97.0.4692.87		2022/01/11				https://chromium.googlesource.com/chromium/src/+log/97.0.4692.70..97.0.4692.87?pretty=fuller&n=10000
-97.0.4692.70		2022/01/04	38, 1 critical		https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop.html
-96.0.4664.104		2021/12/13	5,  1 wild, 1 critical	https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop_13.html
-96.0.4664.92		2021/12/06	22			https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop.html
-96.0.4664.45		2021/11/15	25			https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html
-95.0.4638.74		2021/11/02	9,  2 wild		https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_28.html
-95.0.4638.50		2021/10/19	19			https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_19.html
-94.0.4606.85		2021/10/11				https://chromium.googlesource.com/chromium/src/+log/94.0.4606.80..94.0.4606.85?pretty=fuller&n=10000
-94.0.4606.80		2021/10/07	4			https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop.html
-94.0.4606.71		2021/09/30	4,  2 wild		https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_30.html
-94.0.4606.61		2021/09/23	1,  1 wild		https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_24.html
-94.0.4606.50		2021/09/21	18			https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_21.html
-93.0.4577.82		2021/09/13	10, 2 wild		https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop.html
-93.0.4577.62		2021/08/31	27			https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop_31.html
+Version			Date		Security Bugfix Count	Payout		Release Notes
+127.0.6533.103		2024/08/06	5,  1 critical		$18,000+	https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop.html
+127.0.6533.84		2024/07/30	3,  1 critical		$?		https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_30.html
+127.0.6533.64		2024/07/23	24			$47,500+	https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_23.html
+127.0.6533.51		2024/07/17						https://chromereleases.googleblog.com/2024/07/chrome-for-android-update_17.html
+126.0.6478.186		2024/07/16	10			$34,500+	https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop.html
+126.0.6478.122		2024/06/24	5			$14,000+	https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_24.html
+126.0.6478.110		2024/06/18	6			$27,000+	https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_18.html
+126.0.6478.71		2024/06/13						https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_13.html
+126.0.6478.50		2024/06/11	21			$168,615+	https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop.html
+126.0.6478.40		2024/06/05						https://chromereleases.googleblog.com/2024/06/chrome-beta-for-android-update.html
+125.0.6422.165		2024/06/04						https://chromereleases.googleblog.com/2024/06/chrome-for-android-update.html
+125.0.6422.147		2024/05/30	11			$7,000+		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_30.html
+125.0.6422.113		2024/05/23	1,  1 wild				https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_23.html
+125.0.6422.72		2024/05/21	6			$26,000+	https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_21.html
+125.0.6422.53		2024/05/15	9,  1 wild, 1 critical	$8,000+		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_15.html
+125.0.6422.35		2024/05/08						https://chromereleases.googleblog.com/2024/05/chrome-for-android-update_8.html
+124.0.6367.179		2024/05/13	1,  1 wild				https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_13.html
+124.0.6367.171		2024/05/09	1,  1 wild				https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_9.html
+124.0.6367.159		2024/05/07	2			$?		https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_7.html
+124.0.6367.113		2024/04/30	2			$3,000+		https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_30.html
+124.0.6367.82		2024/04/23	4,  1 critical		$16,000+	https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_24.html
+124.0.6367.54		2024/04/15	23, 1 critical		$80,000+	https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_16.html
+124.0.6367.42		2024/04/11						https://chromereleases.googleblog.com/2024/04/chrome-for-android-update_11.html
+123.0.6312.118		2024/04/10	3			$41,000		https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop_10.html
+123.0.6312.99		2024/04/02	3			$10,000		https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop.html
+123.0.6312.80		2024/03/26	7,  1 critical		$10,000+	https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_26.html
+123.0.6312.40		2024/03/13	12			$22,000		https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_19.html
+122.0.6261.119		2024/03/12	3			$?		https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_12.html
+122.0.6261.105		2024/03/05	3			$25,000		https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop.html
+122.0.6261.90		2024/02/27	4			$14,000		https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_27.html
+122.0.6261.64		2024/02/20	12			$35,000		https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_20.html
+122.0.6261.43		2024/02/14						https://chromereleases.googleblog.com/2024/02/early-stable-update-for-desktop.html
+121.0.6167.178		2024/02/13	1					https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_13.html
+121.0.6167.164		2024/02/06	3			$5,000+		https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop.html
+121.0.6167.143		2024/01/30	4,  1 critical		$33,000		https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_30.html
+121.0.6167.101		2024/01/23	17			$46,000+	https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_23.html
+121.0.6167.71		2024/01/17						https://chromereleases.googleblog.com/2024/01/early-stable-for-desktop.html
+120.0.6099.230		2024/01/16	4,  1 wild		$17,000+	https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_16.html
+120.0.6099.210		2024/01/09	1			$?		https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_9.html
+120.0.6099.193		2024/01/03	6			$40,000+	https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop.html
+120.0.6099.144		2023/12/20	1,  1 wild				https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop_20.html
+120.0.6099.115		2023/12/12	9			$50,000		https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop_12.html
+120.0.6099.43		2023/11/30	10			$30,000		https://chromereleases.googleblog.com/2023/12/stable-channel-update-for-desktop.html
+119.0.6045.193		2023/11/28	7,  1 wild		$55,000		https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_28.html
+119.0.6045.163		2023/11/14	4			$10,000		https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_14.html
+119.0.6045.134		2023/11/08	1					https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html
+119.0.6045.66		2023/10/30	15			$53,500+	https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_31.html
+119.0.6045.53		2023/10/25						https://chromereleases.googleblog.com/2023/10/early-stable-update-for-android_01005299231.html
+118.0.5993.111		2023/10/24	2			$3,000		https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_24.html
+118.0.5993.80		2023/10/16	1					https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_17.html
+118.0.5993.65		2023/10/10	20, 1 critical		$29,500+	https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_10.html
+118.0.5993.48		2023/10/04						https://chromereleases.googleblog.com/2023/10/early-stable-update-for-desktop.html
+117.0.5938.153		2023/10/03	1			$8,000		https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop.html
+117.0.5938.140		2023/09/27	10, 1 wild		$2,000+		https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_27.html
+117.0.5938.60		2023/09/11	16, 1 wild, 1 critical	$34,500+	https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_12.html
+117.0.5938.44		2023/09/06						https://chromereleases.googleblog.com/2023/09/early-stable-update-for-desktop.html
+116.0.5845.172		2023/09/05	4			$?		https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop.html
+116.0.5845.163		2023/08/29	1			$?		https://chromereleases.googleblog.com/2023/08/stable-channel-update-for-desktop_29.html
+116.0.5845.114		2023/08/22	5			$15,000		https://chromereleases.googleblog.com/2023/08/chrome-desktop-stable-update.html
+116.0.5845.92		2023/08/14	26			$63,000		https://chromereleases.googleblog.com/2023/08/stable-channel-update-for-desktop_15.html
+116.0.5845.78		2023/08/09						https://chromereleases.googleblog.com/2023/08/early-stable-update-for-desktop.html
+115.0.5790.166		2023/08/02	17			$123,000	https://chromereleases.googleblog.com/2023/08/stable-channel-update-for-desktop.html
+115.0.5790.138		2023/07/25						https://chromium.googlesource.com/chromium/src/+log/115.0.5790.136..115.0.5790.138?pretty=fuller&n=10000
+115.0.5790.136		2023/07/18	20			$34,000		https://chromereleases.googleblog.com/2023/07/stable-channel-update-for-desktop.html
+115.0.5790.85		2023/07/12						https://chromereleases.googleblog.com/2023/07/early-stable-update-for-android.html
+114.0.5735.196		2023/06/26	4			$35,000		https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop_26.html
+114.0.5735.131		2023/06/13	5,  1 critical		$3,000+		https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop_13.html
+114.0.5735.61		2023/06/05	2,  1 wild				https://chromereleases.googleblog.com/2023/06/stable-channel-update-for-desktop.html
+114.0.5735.58		2023/05/30	16			$75,500		https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop_30.html
+114.0.5735.53		2023/05/24						https://chromereleases.googleblog.com/2023/05/early-stable-update-for-desktop.html
+113.0.5672.163		2023/05/23						https://chromium.googlesource.com/chromium/src/+log/113.0.5672.132..113.0.5672.163?pretty=fuller&n=10000
+113.0.5672.132		2023/05/16	12, 1 critical		$11,000+	https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop_16.html
+113.0.5672.77		2023/05/02				$30,500		https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop.html
+113.0.5672.62		2023/04/26	15					https://chromereleases.googleblog.com/2023/04/early-stable-update-for-android.html
+112.0.5615.136		2023/04/18	8,  1 wild		$20,000		https://chromereleases.googleblog.com/2023/04/stable-channel-update-for-desktop_18.html
+112.0.5615.101		2023/04/14	2,  1 wild				https://chromereleases.googleblog.com/2023/04/stable-channel-update-for-desktop_14.html
+112.0.5615.48		2023/03/29	16			$27,500+	https://chromereleases.googleblog.com/2023/04/stable-channel-update-for-desktop.html
+111.0.5563.116		2023/03/21	8			$25,000+	https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop_21.html
+111.0.5563.58		2023/03/06	41, 1 critical		$95,000+	https://chromereleases.googleblog.com/2023/03/stable-channel-update-for-desktop.html
+111.0.5563.49		2023/03/02						https://chromereleases.googleblog.com/2023/03/early-stable-update-for-android.html
+110.0.5481.154		2023/02/22	10, 1 critical		$78,000+	https://chromereleases.googleblog.com/2023/02/stable-channel-desktop-update_22.html
+110.0.5481.65		2023/02/13						https://chromium.googlesource.com/chromium/src/+log/110.0.5481.64..110.0.5481.65?pretty=fuller&n=10000
+110.0.5481.64		2023/02/07						https://chromium.googlesource.com/chromium/src/+log/110.0.5481.61..110.0.5481.64?pretty=fuller&n=10000
+110.0.5481.61		2023/02/01	15			$26,500		https://chromereleases.googleblog.com/2023/02/stable-channel-update-for-desktop.html
+109.0.5414.118		2023/01/24	6			$31,500+	https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop_24.html
+109.0.5414.86		2023/01/10	17			$39,000+	https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop.html
+108.0.5359.128		2022/12/12	8			$17,500+	https://chromereleases.googleblog.com/2022/12/stable-channel-update-for-desktop_13.html
+108.0.5359.79		2022/12/02	1,  1 wild				https://chromereleases.googleblog.com/2022/12/stable-channel-update-for-desktop.html
+108.0.5359.61		2022/11/29	28			$79,000+	https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop_29.html
+107.0.5304.141		2022/11/24	1,  1 wild				https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop_24.html
+107.0.5304.105		2022/11/08	10			$45,000+	https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop.html
+107.0.5304.91		2022/10/27	1,  1 wild		$?		https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_27.html
+107.0.5304.54		2022/10/25	14			$63,000+	https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_25.html
+106.0.5249.126		2022/10/13						https://chromium.googlesource.com/chromium/src/+log/106.0.5249.118..106.0.5249.126?pretty=fuller&n=10000
+106.0.5249.118		2022/10/11	6			$38,000+	https://chromereleases.googleblog.com/2022/10/stable-channel-update-for-desktop_11.html
+106.0.5249.79		2022/09/30	3			$17,000		https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_30.html
+106.0.5249.65		2022/09/27	24			$43,000+	https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_27.html
+105.0.5195.136		2022/09/14	11			$18,000+	https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_14.html
+105.0.5195.124		2022/09/13						https://chromium.googlesource.com/chromium/src/+log/105.0.5195.79..105.0.5195.124?pretty=fuller&n=10000
+105.0.5195.79		2022/09/05						https://chromium.googlesource.com/chromium/src/+log/105.0.5195.77..105.0.5195.79?pretty=fuller&n=10000
+105.0.5195.77		2022/09/02	1,  1 wild		$?		https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop.html
+105.0.5195.68		2022/08/30	24, 1 critical		$72,500+	https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_30.html
+104.0.5112.97		2022/08/16	12, 1 wild, 1 critical	$29,000+	https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop_16.html
+104.0.5112.69		2022/08/02	27			$95,000+	https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop.html
+103.0.5060.129		2022/07/19						https://chromereleases.googleblog.com/2022/07/chrome-for-android-update_01510389319.html
+103.0.5060.71		2022/07/04	3,  1 wild		$7,500+		https://chromereleases.googleblog.com/2022/07/chrome-for-android-update.html
+103.0.5060.70		2022/06/29						https://chromium.googlesource.com/chromium/src/+log/103.0.5060.53..103.0.5060.70?pretty=fuller&n=10000
+103.0.5060.53		2022/06/21	13, 1 critical		$45,000		https://chromereleases.googleblog.com/2022/06/stable-channel-update-for-desktop_21.html
+102.0.5005.125		2022/06/13	7			$10,000+	https://chromereleases.googleblog.com/2022/06/stable-channel-update-for-desktop.html
+102.0.5005.99		2022/06/07						https://chromereleases.googleblog.com/2022/06/chrome-for-android-update.html
+102.0.5005.78		2022/05/28						https://chromereleases.googleblog.com/2022/05/chrome-for-android-update_28.html
+102.0.5005.59		2022/05/24	32, 1 critical		$75,500+	https://chromereleases.googleblog.com/2022/05/stable-channel-update-for-desktop_24.html
+101.0.4951.61		2022/05/09	13			$16,000+	https://chromereleases.googleblog.com/2022/05/chrome-for-android-update.html
+101.0.4951.41		2022/04/26	29			$91,500+	https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_26.html
+100.0.4896.127		2022/04/14	2,  1 wild				https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_14.html
+100.0.4896.88		2022/04/11	12			$30,500+	https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_11.html
+100.0.4896.79		2022/04/04	1			$16,000		https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop.html
+100.0.4896.58		2022/03/29	28			$51,000+	https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_29.html
+99.0.4844.88		2022/03/25	1,  1 wild		$?		https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_25.html
+99.0.4844.73		2022/03/15	11, 1 critical		$39,000+	https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop_15.html
+99.0.4844.58		2022/03/03						https://chromium.googlesource.com/chromium/src/+log/99.0.4844.48..99.0.4844.58?pretty=fuller&n=10000
+99.0.4844.48		2022/03/01	28			$114,500+	https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop.html
+98.0.4758.101		2022/02/14	11, 1 wild		$36,000+	https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop_14.html
+98.0.4758.87		2022/02/01	27			$91,000+	https://chromereleases.googleblog.com/2022/02/stable-channel-update-for-desktop.html
+97.0.4692.98		2022/01/19	26, 1 critical		$108,000+	https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop_19.html
+97.0.4692.87		2022/01/11						https://chromium.googlesource.com/chromium/src/+log/97.0.4692.70..97.0.4692.87?pretty=fuller&n=10000
+97.0.4692.70		2022/01/04	38, 1 critical		$70,000+	https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop.html
+96.0.4664.104		2021/12/13	5,  1 wild, 1 critical	$10,000+	https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop_13.html
+96.0.4664.92		2021/12/06	22			$50,000+	https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop.html
+96.0.4664.45		2021/11/15	25			$53,500+	https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html
+95.0.4638.74		2021/11/02	9,  2 wild		$23,500		https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_28.html
+95.0.4638.50		2021/10/19	19			$74,500+	https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop_19.html
+94.0.4606.85		2021/10/11						https://chromium.googlesource.com/chromium/src/+log/94.0.4606.80..94.0.4606.85?pretty=fuller&n=10000
+94.0.4606.80		2021/10/07	4			$28,000		https://chromereleases.googleblog.com/2021/10/stable-channel-update-for-desktop.html
+94.0.4606.71		2021/09/30	4,  2 wild		$20,000+	https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_30.html
+94.0.4606.61		2021/09/23	1,  1 wild				https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_24.html
+94.0.4606.50		2021/09/21	18			$61,500+	https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop_21.html
+93.0.4577.82		2021/09/13	10, 2 wild		$30,000+	https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop.html
+93.0.4577.62		2021/08/31	27			$136,500+	https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop_31.html
 
 
 OS History
