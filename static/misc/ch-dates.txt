@@ -1,4 +1,4 @@
-last updated: 2024/08/15
+last updated: 2024/08/16
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -296,7 +296,7 @@ OS Current Versions
 - latest stable		127.0.6533.103				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	127.0.6533.103				https://github.com/GrapheneOS/Vanadium/commits/main
+- GrapheneOS Vanadium	127.0.6533.104				https://github.com/GrapheneOS/Vanadium/commits/main
 - DivestOS/Mulch	127.0.6533.103, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
