@@ -1,4 +1,4 @@
-last updated: 2024/08/18
+last updated: 2024/08/19
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -219,6 +219,7 @@ Useful links:
 - https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.mozilla.fennec_fdroid.yml
 - https://github.com/fork-maintainers/iceraven-browser
 - https://gitlab.com/iode/os/apps/iodebrowser
+- https://gitlab.iode.tech/os/apps/iodebrowser
 - https://github.com/iodeOS/fdroid
 
 There is a Chromium equivalent of this table here: https://divestos.org/misc/ch-dates.txt
