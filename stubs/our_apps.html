@@ -146,4 +146,17 @@
 						</ul></p>
 						<a href="https://divestos.org/apks/official/fdroid/repo?fingerprint=E4BE8D6ABFA4D9D4FEEF03CDDA7FF62A73FD64B75566F6DD4E5E577550BE8467" target="_blank" rel="nofollow noopener noreferrer"><img class="section media" style="height:auto;" src="/images/divestos-official-fdroid-repo.png" title="DivestOS Official F-Droid Repository QR Code" alt="DivestOS Official F-Droid Repository QR Code" integrity="sha384-lUeaGeGMw1TaFS5FwN7R6Rzz9xZnq5vOsEBBLXIpajoYcvoW3UwC+SK5TvKpfOVx"/></a>
 					</div>
+					<?php if(filesize("generated/direct_apk_downloads.html") > 0) : ?>
+					<div class="section" id="directDownloads">
+						<h3>Direct APK Downloads<a href="#directDownloads">¶</a></h3>
+						<p>Use of these direct links are not recommended. Please use the official F-Droid client with the above repo added instead.</p>
+						<div class="collapse">
+							<input type="checkbox" id="collapse-section-direct" aria-hidden="true">
+							<label for="collapse-section-direct" aria-hidden="true" style="max-width:6em;">Links</label>
+							<div style="max-height:100%;">
+								<?php print(file_get_contents("generated/direct_apk_downloads.html")); ?>
+							</div>
+						</div>
+					</div>
+					<?php endif; ?>
 				</div>
