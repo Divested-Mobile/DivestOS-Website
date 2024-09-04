@@ -22,6 +22,7 @@
 							<li>Arch Linux: <code>sudo pacman -S android-tools android-udev</code></li>
 							<li>Fedora: <code>sudo dnf install android-tools</code></li>
 							<li>Debian (severely outdated): <code>sudo apt install android-tools-adb android-tools-fastboot</code></li>
+							<li>NixOS: <code>nix-shell -p android-tools</code> as root to have proper access to USB devices or follow <a href="https://nixos.wiki/wiki/Android#adb_setup">docs for persistent installation of adb</a> with proper udev configuration.</li>
 							<li>Linux:
 								<ol>
 									<li><code>curl -O https://dl.google.com/android/repository/platform-tools_r33.0.3-linux.zip</code></li>
