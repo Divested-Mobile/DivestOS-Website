@@ -1,4 +1,4 @@
-last updated: 2024/09/13
+last updated: 2024/09/14
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -9,6 +9,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Payout		Release Notes
+129.0.6668.38		2024/09/11						https://chromereleases.googleblog.com/2024/09/early-stable-update-for-desktop.html
 128.0.6613.146		2024/09/11	5			$26,000		https://chromereleases.googleblog.com/2024/09/stable-channel-update-for-desktop_10.html
 128.0.6613.127		2024/09/04	4			$7,000		https://chromereleases.googleblog.com/2024/09/stable-channel-update-for-desktop.html
 128.0.6613.99		2024/08/28	4			$?		https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_28.html
@@ -159,7 +160,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-128.0.6613.146	2024/09/11			2024/09/11	2024/09/12	13ksv				9ksv
+129.0.6668.38	2024/09/11	2024/09/14					13ksv				9ksv
+128.0.6613.146	2024/09/11			2024/09/11	2024/09/12
 128.0.6613.127	2024/09/04	2024/09/04	2024/09/04	2024/09/04	pending		2024/09/07
 128.0.6613.99	2024/08/28	2024/08/30	2024/08/28	2024/08/28			2024/09/04	2024/09/11
 128.0.6613.88	2024/08/21	2024/08/28	2024/08/21	2024/08/22	2024/08/25
@@ -316,7 +318,7 @@ Lineage related:
 
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
-- Cromite		128.0.6613.120				https://github.com/uazo/cromite/releases
+- Cromite		129.0.6668.42				https://github.com/uazo/cromite/releases
 - CalyxOS		128.0.6613.127				https://review.calyxos.org/q/project:CalyxOS/lfs_prebuilts_calyx_chromium_arm64
 - /e/OS			128.0.6613.106, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
