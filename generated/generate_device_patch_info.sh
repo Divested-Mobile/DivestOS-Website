@@ -45,7 +45,7 @@ getVendorPatchLevel() {
 		elif [ $1 == "LineageOS-20.0" ]; then
 			level="2023-09";
 		elif [ $1 == "LineageOS-21.0" ]; then
-			level="2024-08";
+			level="2024-09";
 		else
 			level="Unknown";
 		fi;
@@ -88,7 +88,7 @@ createTable() {
 	vASB=$(getVendorPatchLevel $version $devicePath)
 	#green: keep 4 months + 1 future
 	#yellow: previous year
-	if [[ $vASB == "2024-09"* ]] || [[ $vASB == "2024-08"* ]] || [[ $vASB == "2024-07"* ]] || [[ $vASB == "2024-06"* ]] || [[ $vASB == "2024-05"* ]]; then
+	if [[ $vASB == "2024-10"* ]] || [[ $vASB == "2024-09"* ]] || [[ $vASB == "2024-08"* ]] || [[ $vASB == "2024-07"* ]] || [[ $vASB == "2024-06"* ]]; then
 		vASBStyle="style=\"color:#4CAF50;\"";
 	elif [[ $vASB == "2024-"* ]] || [[ $vASB == "2023-"* ]]; then
 		vASBStyle="style=\"color:#FFC107;\"";
