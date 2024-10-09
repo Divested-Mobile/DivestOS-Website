@@ -1,10 +1,12 @@
-last updated: 2024/10/08
+last updated: 2024/10/09
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
 disclosure: Mull is a DivestOS project
 
 Version		Mull		Iceraven	Firefox		Fennec F-Droid		iodéOS Browser		Security Bugfix Count	Security Advisory
+131.0.2		pending				2024/10/09							1ksv			https://www.mozilla.org/en-US/security/advisories/mfsa2024-51/
+131.0.1		skipped				2024/10/08
 131.0.0		2024/10/02	2024/10/01	2024/10/01	40ksv			2024/10/02		25			https://www.mozilla.org/en-US/security/advisories/mfsa2024-46/
 130.0.1				2024/09/18	2024/09/17				2024/09/17		1			https://www.mozilla.org/en-US/security/advisories/mfsa2024-45/
 130.0.0				2024/09/05	2024/09/03				2024/08/04		14			https://www.mozilla.org/en-US/security/advisories/mfsa2024-39/
