@@ -164,7 +164,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-129.0.6668.100	2024/10/08			2024/10/08	2024/10/08	7ksv		pending		7ksv
+129.0.6668.100	2024/10/08	3ksv		2024/10/08	2024/10/08	7ksv		pending		7ksv
 129.0.6668.81	2024/10/01	2024/10/04	2024/10/01	2024/10/02			2024/10/03
 129.0.6668.70	2024/09/24	2024/09/28	2024/09/24	2024/09/24	2024/09/27			2024/10/03
 129.0.6668.54	2024/09/17	2024/09/19	2024/09/17	2024/09/17			2024/09/24
