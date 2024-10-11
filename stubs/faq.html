@@ -188,7 +188,7 @@
 							<li>GPS should lock within 2 minutes when outdoors and within 10 minutes indoors. Maximum GPS TTFF is 12.5 minutes due to their orbit and transmission rate.</li>
 							<li>Tablets or other devices without GPS support have no mechanism to obtain location.</li>
 							<li>Network (cell tower, Wi-Fi, Bluetooth beacon) based location providers such as Google Play Services, Qualcomm IZat, and microG/UnifiedNlp are not supported.</li>
-							<li>Enabling the location provider in microG/UnifiedNlp will not do anything as it does not have permission to be a system location provider.</li>
+							<li>Enabling the location provider in microG/UnifiedNlp will not help in most cases as it does not have permission to be a system location provider. It can however provide location to some apps that also utilize the proprietary Play Services library for location handling.</li>
 							<li>The primary reason for not supporting network location providers is that they effectively divulge your location to third-parties (eg. Google/Qualcomm/Apple/Mozilla) every time they are used. The alternative offline databases are too small to be realistically effective.</li>
 							<li>On Tensor devices both PSDS and SUPL can be used to speedup GPS TTFF. It is recommended to disable SUPL on these devices.</li>
 							<li>On newer Qualcomm devices (ones that'd typically use xtra-daemon) SUPL is the only mechanism to obtain the almanac to speedup GPS TTFF. PSDS is not supported. It is not recommended to disable SUPL on these devices as it will cause very long lock times.</li>
