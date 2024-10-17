@@ -6,6 +6,49 @@
 					<?php print(file_get_contents("stubs/news-future.html")); ?>
 					<?php endif; ?>
 					<h2>Current News</h2>
+					<div class="section" id="2024-10">
+						<h3>October 17th 2024 Update<a href="#2024-10">¶</a></h3>
+						<h4>System Updates</h4>
+						<ul>
+							<li>15.1, 16.0, and 17.1 release candidate #1 October ASB builds were published on October 17th.</li>
+							<li>18.1 release candidate #1 October ASB builds were published on October 14th.</li>
+							<li>14.1 rebuilds were published on October 14th, with additional kernel security fixes.</li>
+							<li>19.1 release candidate #2 October ASB builds were published on October 13th, with 4 additional security fixes.</li>
+							<li>19.1 and 20.0 release candidate #1 October ASB builds were published on October 13th.</li>
+							<li>All Linux 4.9 and higher Qualcomm devices have been patched against CVE-2024-43047.</li>
+							<li>The CVE patcher has been improved to better handle Qualcomm's kernel module patches, resulting in numerous additional Wi-Fi, audio, and camera patches applied.</li>
+							<li>14.1 release candidate #1 October ASB builds were published on October 8th.</li>
+							<li>A new version of Fossify Gallery has been released, but DivestOS cannot update to it due to it increasing in size from 16MB to 42MB which prevents it from fitting on the system partition of many devices.</li>
+						</ul>
+						<h4>App Updates</h4>
+						<ul>
+							<li>Updated Mull to 131.0.2 and 131.0.3, has 1 and 1 security fixes respectively.</li>
+							<li>Updated Mull to <a href="https://www.mozilla.org/en-US/firefox/android/131.0/releasenotes/" target="_blank" rel="nofollow noopener noreferrer">131.0.0</a>, has 14+1+25 security fixes from the previous 129.0.2 release. In order to resolve the compilation issue introduced in 130, Mull is now compiled using Mozilla's prebuilt clang toolchain. This however is incompatible with the F-Droid.org inclusion criteria, so these updates (for now at least) will only be available via the DivestOS.org F-Droid repository. Please note, while this adds a prebuilt dependency, the result does still remain FOSS.</li>
+							<li>Updated Mulch to 129.0.6668.54, 129.0.6668.70, 129.0.6668.81, 129.0.6668.100, and 130.0.6723.58, has 9, 5, 4, 3, and 17 security fixes respectively.</li>
+						</ul>
+						<h4>Website Updates</h4>
+						<ul>
+							<li>The F-Droid.org stats have been updated, <a href="/pages/fdroid_stats" target="_blank">results here</a>.</li>
+						</ul>
+						<h4>Other Updates</h4>
+						<ul>
+							<li>Kuketz has released a writeup on Fennec F-Droid and our Mull as part of their browser series: <a href="https://www.kuketz-blog.de/fennec-und-mull-sichere-und-datenschutzfreundliche-android-browser-teil-5/" target="_blank" rel="nofollow noopener noreferrer">Original German</a>, <a href="https://www-kuketz--blog-de.translate.goog/fennec-und-mull-sichere-und-datenschutzfreundliche-android-browser-teil-5/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US" target="_blank" rel="nofollow noopener noreferrer">Google Translated English</a></li>
+							<li>Mandatory step to fix F-Droid repository priority to ensure app updates for DivestOS: F-Droid > Settings > Repositories > Long-press and drag 'DivestOS Official' above 'F-Droid'.</li>
+						</ul>
+					</div>
+					<h2>Past News</h2>
+					<div class="section" id="bromite-expiration-notice">
+						<h3>PSA: expiration of bromite.org<a href="#bromite-expiration-notice">¶</a></h3>
+						<p>Earlier this year in April we noticed that Bromite.org was set to expire on October 10th 2024 and reached out to various projects. We recently reached out again in early September to better response and all affected apps should have requests removed or replaced before expiration. Upon expiry it will be possible for a malicious actor to take over the domain to enumerate users, block legitimate web content, or potentially exploit the browsers. Below are steps you can take as a user to ensure you are mitigated.</p>
+						<p>Update as of 2024/10/12: bromite.org did <a href="https://gitlab.com/CalyxOS/calyxos/-/issues/2679#note_2152976581" target="_blank" rel="nofollow noopener noreferrer">fully expire</a> for a few hours and was pointed to a parked domain page, however it <a href="https://github.com/uazo/cromite/issues/1510#issuecomment-2408625100" target="_blank" rel="nofollow noopener noreferrer">appears</a> to have been renewed until October 2025. It is unlikely it was automatically renewed as it wouldn't of lapsed in that case, so Carl is likely still around to some extent.</p>
+						<ul>
+							<li>Users of Bromite: it hasn't been updated in over two years, please switch to Cromite</li>
+							<li>Users of Bromite who can't switch to a newer Chromium: Please consider a Firefox browser instead. Otherwise ensure you disable automatic update checks and replace the content filter link.</li>
+							<li>Users of Cromite: please update to 129.0.6668.90</li>
+							<li>Users of CalyxOS: please update to the <a href="https://calyxos.org/news/2024/09/25/september-feature-update/" target="_blank" rel="nofollow noopener noreferrer">September 2024 Feature Update</a></li>
+							<li>Users of /e/OS: please update to <a href="https://gitlab.e.foundation/e/os/releases/-/releases/v2.4-t" target="_blank" rel="nofollow noopener noreferrer">v2.4</a></li>
+						</ul>
+					</div>
 					<div class="section" id="2024-09">
 						<h3>September 15th 2024 Update<a href="#2024-09">¶</a></h3>
 						<h4>System Updates</h4>
@@ -36,7 +79,6 @@
 							<li>Bounty payout amounts were added to ch-dates.txt</li>
 						</ul>
 					</div>
-					<h2>Past News</h2>
 					<div class="section" id="2024-08">
 						<h3>August 17th 2024 Update<a href="#2024-08">¶</a></h3>
 						<h4>System Updates</h4>
