@@ -1,4 +1,4 @@
-last updated: 2024/10/18
+last updated: 2024/10/19
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -166,7 +166,7 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-130.0.6723.58	2024/10/15	2024/10/17	2024/10/15	2024/10/15	24ksv		pending		24ksv
+130.0.6723.58	2024/10/15	2024/10/17	2024/10/15	2024/10/15	24ksv		2024/10/18	24ksv
 130.0.6723.40	2024/10/09
 129.0.6668.100	2024/10/08	2024/10/10	2024/10/08	2024/10/08			2024/10/09
 129.0.6668.81	2024/10/01	2024/10/04	2024/10/01	2024/10/02			2024/10/03
@@ -331,7 +331,7 @@ Lineage related:
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
 - Cromite		130.0.6723.59				https://github.com/uazo/cromite/releases
-- CalyxOS		129.0.6668.100				https://review.calyxos.org/q/project:CalyxOS/lfs_prebuilts_calyx_chromium_arm64
+- CalyxOS		130.0.6723.58				https://review.calyxos.org/q/project:CalyxOS/lfs_prebuilts_calyx_chromium_arm64
 - /e/OS			129.0.6668.71, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
 AOSP:
