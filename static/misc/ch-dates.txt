@@ -9,6 +9,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Payout		Release Notes
+130.0.6723.102		2024/11/05	2			$?		https://chromereleases.googleblog.com/2024/11/stable-channel-update-for-desktop.html
 130.0.6723.86		2024/10/29	2,  1 critical		$?		https://chromereleases.googleblog.com/2024/10/stable-channel-update-for-desktop_29.html
 130.0.6723.73		2024/10/22	3			$?		https://chromereleases.googleblog.com/2024/10/stable-channel-update-for-desktop_22.html
 130.0.6723.58		2024/10/15	17			$72,000+	https://chromereleases.googleblog.com/2024/10/stable-channel-update-for-desktop_15.html
@@ -168,7 +169,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-130.0.6723.86	2024/10/29	5ksv		2024/10/29	2024/10/29	2ksv		2024/10/30	5ksv
+130.0.6723.102	2024/11/05	7ksv		2024/11/05	2024/11/06	4ksv		2024/11/06	7ksv
+130.0.6723.86	2024/10/29			2024/10/29	2024/10/29			2024/10/30
 130.0.6723.73	2024/10/22			2024/10/22	2024/10/23	2024/10/25	2024/10/30
 130.0.6723.58	2024/10/15	2024/10/17	2024/10/15	2024/10/15			2024/10/18	2024/11/04
 130.0.6723.40	2024/10/09
@@ -321,11 +323,11 @@ Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		130.0.6723.86				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		130.0.6723.102				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	130.0.6723.86				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	130.0.6723.86, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	130.0.6723.102				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	130.0.6723.102, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		130.0.6723.73				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
@@ -335,7 +337,7 @@ Lineage related:
 Bromite related:
 - Bromite		108.0.5359.156				https://github.com/bromite/bromite/commits/master
 - Cromite		130.0.6723.67				https://github.com/uazo/cromite/releases
-- CalyxOS		130.0.6723.86				https://review.calyxos.org/q/project:CalyxOS/lfs_prebuilts_calyx_chromium_arm64
+- CalyxOS		130.0.6723.102				https://review.calyxos.org/q/project:CalyxOS/lfs_prebuilts_calyx_chromium_arm64
 - /e/OS			130.0.6723.67, downstream Cromite	https://gitlab.e.foundation/e/os/browser/-/commits/master
 
 AOSP:
