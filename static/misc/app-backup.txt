@@ -17,6 +17,9 @@ Drip
 FairEmail
 Firefox & forks: Settings > Sync and save your data
 FlorisBoard
+Fossify Calendar
+Fossify Contacts
+Fossify Gallery
 Gadgetbridge
 Goodtime
 Infinity
