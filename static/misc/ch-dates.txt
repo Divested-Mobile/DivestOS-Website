@@ -1,4 +1,4 @@
-last updated: 2024/12/10
+last updated: 2024/12/11
 
 note: please view without line wrapping, eg. Firefox > about:config > plain_text.wrap_long_lines > false
 
@@ -9,6 +9,7 @@ disclosure: Mulch is a DivestOS project
 Chromium History
 ================
 Version			Date		Security Bugfix Count	Payout		Release Notes
+131.0.6778.135		2024/12/10	3			$55,000+	https://chromereleases.googleblog.com/2024/12/stable-channel-update-for-desktop_10.html
 131.0.6778.104		2024/12/03	4			$8,000		https://chromereleases.googleblog.com/2024/12/stable-channel-update-for-desktop.html
 131.0.6778.81		2024/11/19	3,  1 critical		$8,000		https://chromereleases.googleblog.com/2024/11/stable-channel-update-for-desktop_19.html
 131.0.6778.39		2024/11/12	12			$1,000+		https://chromereleases.googleblog.com/2024/11/stable-channel-update-for-desktop_12.html
@@ -172,7 +173,8 @@ OS History
 ==========
 note: the cumulative count of known security vulnerabilities (ksv) is noted if behind
 Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
-131.0.6778.104	2024/12/03	2024/12/06	2024/12/03	2024/12/03	4ksv		2024/12/04	26ksv
+131.0.6778.135	2024/12/10	3ksv		2024/12/10	2024/12/11	7ksv		3ksv		29ksv
+131.0.6778.104	2024/12/03	2024/12/06	2024/12/03	2024/12/03			2024/12/04
 131.0.6778.81	2024/11/19	2024/11/21	2024/11/19	2024/11/19	2024/11/27
 131.0.6778.39	2024/11/12	2024/11/16	2024/11/12	2024/11/13			2024/11/20
 130.0.6723.102	2024/11/05	2024/11/08	2024/11/05	2024/11/06			2024/11/06
@@ -329,11 +331,11 @@ Version		Chromium	Cromite		Vanadium	Mulch		LineageOS	CalyxOS		/e/OS
 
 OS Current Versions
 ===================
-- latest stable		131.0.6778.104				https://chromiumdash.appspot.com/releases?platform=Android
+- latest stable		131.0.6778.135				https://chromiumdash.appspot.com/releases?platform=Android
 
 Vanadium related:
-- GrapheneOS Vanadium	131.0.6778.104				https://github.com/GrapheneOS/Vanadium/commits/main
-- DivestOS/Mulch	131.0.6778.108, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
+- GrapheneOS Vanadium	131.0.6778.135				https://github.com/GrapheneOS/Vanadium/commits/main
+- DivestOS/Mulch	131.0.6778.135, downstream Vanadium	https://gitlab.com/divested-mobile/mulch
 
 Lineage related:
 - LineageOS, †2		131.0.6778.81				https://review.lineageos.org/q/project:LineageOS%252Fandroid_external_chromium-webview_prebuilt_arm64
